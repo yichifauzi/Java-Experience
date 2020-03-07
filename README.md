@@ -10,7 +10,7 @@ Download and unzip Java UI. Then move it to:
 ```
 #### Android
 ```
-"sdcard/games/com.mojang/resource_packs/"
+"root/sdcard/games/com.mojang/resource_packs/"
 ```
 #### IOS
 ```
