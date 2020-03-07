@@ -1,0 +1,16 @@
+{
+  "namespace": "pack_settings",
+
+  "screen@common_mcjava.base_screen": {
+    "force_render_below": false,
+    "$screen_content": "pack_settings_mcjava.pack_settings_screen_content_panel",
+    "$screen_background": "common_mcjava.dirt_background",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      }
+    ]
+  }
+}

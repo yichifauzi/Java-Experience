@@ -1,0 +1,22 @@
+/********************************************************
++*   (c) Mojang. All rights reserved                       *
++*   (c) Microsoft. All rights reserved.                   *
++*********************************************************/
+{
+  "namespace": "smoker",
+
+  "smoker_screen@furnace.furnace_screen": {
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "furnaces_mcjava.smoker_screen_content_panel",
+        "$screen_background": "common_mcjava.screen_container_background"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "furnaces_mcjava.smoker_screen_content_panel",
+        "$screen_background": "common_mcjava.screen_container_background"
+      }
+    ]
+  }
+}

@@ -1,0 +1,142 @@
+/* By @FMarquesPTO. All rights reserved. */
+{
+  "namespace": "progress_content_mcjava",
+
+  "worlds_content_panel": {
+    "type": "panel",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "size": [ 300, 107 ],
+    "offset": [ 6, "-14%" ],
+    "controls": [
+      {
+        "progress_title_text@progress.progress_title_text": {
+          "color": "white",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "shadow": true,
+          "offset": [ 0, 0 ]
+        }
+      },
+      {
+        "world_progress@progress_content_mcjava.world_progress": {
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle"
+        }
+      },
+      { "@progress_bar_text": {} },
+      { "@cancel_button": {} }
+    ]
+  },
+  
+  "dimension_content_panel": {
+    "type": "panel",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "size": [ 300, 107 ],
+    "offset": [ 6, "-14%" ],
+    "controls": [
+      {
+        "progress_title_text@progress.progress_title_text": {
+          "color": "white",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "shadow": true,
+          "text": "multiplayer.downloadingTerrain",
+          "offset": [ 0, 0 ]
+        }
+      }
+    ]
+  },
+
+  "save_content_panel": {
+    "type": "panel",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "size": [ 300, 107 ],
+    "offset": [ 6, "-14%" ],
+    "controls": [
+      {
+        "progress_title_text@progress.progress_title_text": {
+          "color": "white",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "shadow": true,
+          "text": "menu.savingLevel",
+          "offset": [ 0, 0 ]
+        }
+      }
+    ]
+  },
+
+  "progress_bar_text@progress.progress_screen_text": {
+    "size": [ "default", 20 ],
+    "max_size": [ "80%", 20 ],
+    "text": "#progress_text", 
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [0, 22],
+    "visible": "$show_loading_screens_tips",
+    "shadow": true,
+    "bindings": [
+      { "binding_name": "#progress_text" }
+    ]
+  },
+
+  "cancel_button@button_mcjava.button": {
+    "$pressed_button_name": "button.menu_exit",
+    "$button_text": "gui.cancel",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [ 0, 10],
+    "bindings": [
+      {
+        "binding_name": "#cancel_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "world_progress": {
+    "type": "panel",
+    "size": [ 90, 90 ],
+    "layer": 5,
+    "controls": [
+      {
+        "full_progress_bar_icon@progress_content_mcjava.full_world_progress": {
+          "layer": 4,
+          "bindings": [
+            {
+              "binding_name": "#loading_bar_percentage",
+              "binding_name_override": "#clip_ratio"
+            }
+          ]
+        }
+      },
+      {
+        "empty_progress_bar_icon": {
+          "type": "image",
+          "texture": "src/assets/img/white",
+          "size": ["100%", "100%"],
+          "color": "black",
+          "layer": 1
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#loading_bar_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "full_world_progress": {
+    "type": "image",
+    "texture": "src/assets/img/world_loading_center",
+    "clip_direction": "left",
+    "size": ["100%", "100%"],
+    "clip_pixelperfect": true,
+    "layer": 4
+  }
+}

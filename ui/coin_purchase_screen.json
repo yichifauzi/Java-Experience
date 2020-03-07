@@ -1,0 +1,20 @@
+/********************************************************
++*   (c) Mojang. All rights reserved                       *
++*   (c) Microsoft. All rights reserved.                   *
++*********************************************************/
+{
+  "namespace": "coin_purchase",
+
+  "coin_purchase_screen@common_mcjava.base_screen": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      }
+    ],
+    "force_render_below": false,
+    "$screen_content": "coin_purchase_mcjava.coin_purchase_screen_content_panel",
+    "$screen_background": "common_mcjava.dirt_background"
+  }
+}

@@ -1,0 +1,53 @@
+/********************************************************
++*   (c) Mojang. All rights reserved                       *
++*   (c) Microsoft. All rights reserved.                   *
++*********************************************************/
+{
+  "namespace": "disconnect",
+
+  "disconnect_screen@common_mcjava.base_screen": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_leave_screen",
+        "mapping_type": "global"
+      }
+    ],
+    "$screen_content": "disconnect_mcjava.disconnect_screen_content_panel",
+    "$screen_background": "common_mcjava.dirt_background"
+  },
+
+  "realms_disconnect_screen@disconnect.disconnect_screen": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_leave_screen",
+        "mapping_type": "global"
+      }
+    ],
+    "$screen_content": "disconnect_mcjava.realms_disconnect_screen_content_panel",
+    "$screen_background": "common_mcjava.dirt_background"
+  },
+
+  "realms_warning_screen@disconnect.disconnect_screen": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_leave_screen",
+        "mapping_type": "global"
+      }
+    ],
+    "$screen_content": "disconnect_mcjava.realms_warning_screen_content_panel",
+    "$screen_background": "common_mcjava.dirt_background"
+  }
+}

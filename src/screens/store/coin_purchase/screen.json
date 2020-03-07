@@ -1,0 +1,54 @@
+/* By @FMarquesPTO. All rights reserved. */
+{
+  "namespace": "coin_purchase_mcjava",
+
+  "coin_purchase_screen_content_panel": {
+    "type": "panel",
+    "controls": [
+      { "title@common_mcjava.title": { "text": "Purchase Coins"} },
+      {
+        "coin_purchase_grid": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": ["100% - 100px", "55%"],
+          "offset": [0, "-5%"],
+          "collection_name": "coin_purchase_grid",
+          "controls": [
+            {
+              "0@coin_purchase_content_mcjava.offer_grid_item": {
+                "$coins_bg": "src/assets/img/coins_1",
+                "collection_index": 0
+              }
+            },
+            {
+              "1@coin_purchase_content_mcjava.offer_grid_item": {
+                "$coins_bg": "src/assets/img/coins_2",
+                "collection_index": 1
+              }
+            },
+            {
+              "2@coin_purchase_content_mcjava.offer_grid_item": {
+                "$coins_bg": "src/assets/img/coins_3",
+                "collection_index": 2
+              }
+            },
+            {
+              "3@coin_purchase_content_mcjava.offer_grid_item": {
+                "$coins_bg": "src/assets/img/coins_4",
+                "collection_index": 3
+              }
+            },
+            {
+              "4@coin_purchase_content_mcjava.offer_grid_item": {
+                "$coins_bg": "src/assets/img/coins_5",
+                "collection_index": 4
+              }
+            }
+          ]
+        }
+      },
+      { "exit@common_mcjava.exit_button": { "anchor_from": "bottom_middle", "anchor_to": "bottom_middle", "offset": [0, -12] }},
+      { "popup_dialog_factory@common_mcjava.popup_dialog_factory": {} }
+    ]
+  }    
+}

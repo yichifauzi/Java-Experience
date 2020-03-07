@@ -1,0 +1,33 @@
+/********************************************************
++*   (c) Mojang. All rights reserved                       *
++*   (c) Microsoft. All rights reserved.                   *
++*********************************************************/
+{
+  "namespace": "start",
+
+  "start_screen@common_mcjava.base_screen": {
+    "button_mappings": [
+      {
+        "ignored": "(not $can_quit)",
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      },
+      {
+        "ignored": "(not $nx_os)",
+        "from_button_id": "button.controller_select",
+        "to_button_id": "button.menu_offline",
+        "mapping_type": "global"
+      },
+      {
+        "ignored": "(not $is_berwick)",
+        "from_button_id": "button.controller_secondary_select",
+        "to_button_id": "button.menu_crossplatform",
+        "mapping_type": "global"
+      }
+    ],
+    "$screen_content": "main_menu_mcjava.main_menu_screen_content_panel",
+    "$screen_background": "main_menu_mcjava.panorama_overlay",
+    "$popup_factory": ""
+  }
+}

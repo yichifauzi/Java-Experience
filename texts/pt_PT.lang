@@ -1,0 +1,474 @@
+##Pack Manifest
+Java UI=Java IU
+Made By @FMarquesPTO. Special Thx For @HawfHuman, @CrisXolt and all people in the world=Criado por @FMarquesPTO. Obrigado a @HawfHuman, @CrisXolt e a todas as pessoas no mundo
+
+##Gui
+gui.toTitle=Voltar para a tela do título
+gui.parenteses.left=(
+gui.parenteses.right=)
+gui.percentage=%
+gui.soon=Brevemente...
+
+##Popups
+popup.quitGame.question=Tens a certeza que queres sair?
+popup.deathConfirm.question=Tens a certeza que queres sair?
+popup.feedback.question=Queres dar alguma sugestação, feedback ou reportar bugs?
+popup.resetSettings.accessibility=Tens a certeza que queres resetar as definições de acessibilidade?
+popup.resetSettings.audio=Tens a certeza que queres resetar as definições de som?
+popup.resetSettings.video=Tens a certeza que queres resetar as definições de vídeo?
+popup.resetSettings.mouse=Tens a certeza que queres resetar as definições do rato?
+popup.resetSettings.controller=Tens a certeza que queres resetar as definições do controle?
+popup.resetSettings.touch=Tens a certeza que queres resetar as definições de toque?
+
+##Main Menu
+menu.play=Jogar
+menu.profile=Perfil
+menu.skins=Mudar Pele
+menu.store=Minecraft Loja
+menu.options=Definições...
+menu.quit=Sair do Jogo
+menu.savingLevel=A salvar o mundo
+menu.savingChunks=A salvar chunks
+menu.takeScreenshot=Capturar Tela
+menu.takeScreenshot.short=Capturar
+
+##Settings
+options.title=Definições
+options.accessibility=Definições de Acessibilidade...
+options.accessibility.title=Definições de Acessibilidade
+options.userProfile=Perfil...
+options.userProfile.title=Definições do Perfil do Usuário 
+options.sounds=Música & Sons...
+options.sounds.title=Definições de Música & Som
+options.video=Definições de Vídeo...
+options.video.title=Definições de Vídeo
+options.mouse=Rato...
+options.mouse_settings=Definições do Rato...
+options.mouse_settings.title=Definições do Rato
+options.language=Idioma...
+options.language.title=Idioma...
+options.languageWarning=As traduções podem não estar 100%% corretas
+options.controller=Controle...
+options.controller_settings=Definições do Controle...
+options.controller_settings.title=Definições do Controle
+options.resourcePacks=Pacotes de Recurso...
+options.resourcePacks.title=Escolha Pacote de Recurso
+options.touch=Toque...
+options.controls.title=Controles
+options.fov.format=%s
+options.fov.toggle=CV Dinâmico
+options.enableChatTextToSpeech=Narrador para Chat
+options.enableAutoPlatformTextToSpeech=Narrador para Text
+options.enableUITextToSpeech=Narrador para Sistema
+options.enableOpenChatMessage=Pode Mensagens do Chat
+options.sound=Volume
+options.music=Música
+options.graphics=Gráficos
+options.graphics.fancy=Bonitos
+options.graphics.fast=Rápidos
+options.transparentleaves=Folhas
+options.transparentleaves.fancy=Bonitos
+options.transparentleaves.fast=Rápidos
+options.box_selection=Seleção
+options.box_selection.outline=Contorno
+options.box_selection.highlight=Realçe
+options.renderclouds=Nuvens
+options.fancyskies=Céu
+options.fancyskies.fancy=Bonito
+options.fancyskies.fast=Rápido
+options.bubbleparticles=Partículas de Bolhas
+options.bubbleparticles.fancy=Bonitos
+options.bubbleparticles.fast=Rápidas
+options.maxFramerate=Max Framerate
+options.autoJump=Pulo Automático
+controls.reset=Resetar
+controls.resetAll=Resetar Chaves
+key.sprint=Correr
+key.forward=Andar para Trás
+key.left=Ir para a Esquerda
+key.back=Andar de Costas
+key.right=Ir para a Direita
+key.jump=Pular
+key.inventory=Abrir/Fechar Inventário
+key.drop=Dropar Item Selecionado
+key.chat=Abrir Chat
+key.sneak=Agachar
+key.attack=Atacar/Destruir
+key.use=Usar Item/Colocar Bloco
+key.pickItem=Pegar Bloco
+key.command=Abrir Comando
+key.togglePerspective=Mudar Câmera
+key.hotbar.1=Espaço 1 da barra rápida
+key.hotbar.2=Espaço 2 da barra rápida
+key.hotbar.3=Espaço 3 da barra rápida
+key.hotbar.4=Espaço 4 da barra rápida
+key.hotbar.5=Espaço 5 da barra rápida
+key.hotbar.6=Espaço 6 da barra rápida
+key.hotbar.7=Espaço 7 da barra rápida
+key.hotbar.8=Espaço 8 da barra rápida
+key.hotbar.9=Espaço 9 da barra rápida
+key.mobEffects=Efeitos de Montros
+key.tabLeft=Tab do Menu Esquerda
+key.tabRight=Tab do Menu Direita
+key.lookUpSlight=Olhar para Cima Ligeiramente
+key.lookDownSlight=Olhar para Baixo Ligeiramente
+key.lookUpRight=Olhar para Cima Direito
+key.lookUp=Olhar para Cima
+key.lookUpLeft=Olhar para Cima Esquerda
+key.lookRight=Olhar para a Direita
+key.lookCenter=Olhar para o Meio
+key.lookLeft=Olhar para a Esquerda
+key.lookDownRight=Olhar para Baixo Direita
+key.lookDown=Olhar para Baixo
+key.lookDownLeft=Olhar para Baixo Esquerda
+key.lookUpSmooth=Olhar para Cima Suavemente
+key.lookDownSmooth=Olhar para Baixo Suavemente
+key.lookLeftSmooth=Olhar para a Esquerda Suavemente
+key.lookRightSmooth=Olhar para a Direita Suavemente
+key.cycleItemLeft=Cycle Item Left
+key.cycleItemRight=Cycle Item Right
+key.categories.movement=Movimentp
+key.categories.misc=Diversos
+key.categories.multiplayer=Multi-jogador
+key.categories.gameplay=Jogatina
+key.categories.inventory=Inventário
+key.categories.additional=Adicional
+options.resetSettings=Resetar Definições
+options.difficulty=Dificuldade
+options.difficulty.peaceful=Pacífico
+options.difficulty.easy=Fácil
+options.difficulty.normal=Normal
+options.difficulty.hard=Díficil
+
+##Create World Upsell
+createWorldUpsell.title=Criar Novo Mundo ou Reino
+
+##World Templates
+worldTemplates.title=Modelos
+
+##Create New World & Edit World
+selectWorld.resultFolder=Vai ser salvo como:
+selectWorld.gameMode=Modo de Jogo
+selectWorld.gameMode.survival=Sobrevivência
+selectWorld.gameMode.survival.line1=Procurar recursos, contruir, ganhar
+selectWorld.gameMode.survival.line2=níveis, saúde e fome
+selectWorld.gameMode.creative=Criativo
+selectWorld.gameMode.creative.line1=Recursos ilimitados, vôo livre e
+selectWorld.gameMode.creative.line2=destruir blocos instantaniamente
+selectWorld.gameMode.spectator=Espectador
+selectWorld.gameMode.spectator.line1=Podes olhar mas não tocar
+selectWorld.gameMode.spectator.line2=
+selectWorld.gameMode.hardcore=Hardcore
+selectWorld.gameMode.hardcore.line1=Igual ao sobrevivência, trancado na dificuldade
+selectWorld.gameMode.hardcore.line2=mais díficil, e apenas uma vida
+selectWorld.gameMode.adventure=Aventura
+selectWorld.gameMode.adventure.line1=Igual ao sobrevivência, mas os blocos não podem
+selectWorld.gameMode.adventure.line2=ser adicionados ou removidos
+selectWorld.enterSeed=Semente para o gerador de mundos
+selectWorld.seedInfo=Deixar em branco para uma semente aleatória
+selectWorld.moreWorldOptions=Mais Opções de Mundo...
+selectWorld.mapType=Tipo de Mundo
+selectWorld.mapType.normal=Normal
+selectWorld.allowCommands=Permitir Trapaças
+selectWorld.allowCommands.info=Commandos como /gamemode, /experience
+selectWorld.hardcoreMode=Hardcore
+selectWorld.hardcoreMode.info= World is deleted upon death
+selectWorld.experimentalGameplay=Gameplay Experimental
+selectWorld.experimentalGameplay.info=Teste novas novidade vindo para o Minecraft
+selectWorld.forceUser.info=Forçar usuários a usar estes recursos para entrar
+selectWorld.bonusItems=Baú Bónus
+generator.default=Padrão
+generator.flat=Super Plano
+generator.small=Pequeno
+seedPicker.title=Escolher Semente
+seedPicker.use=Concluído
+
+createWorldScreen.gameMode.adventure=Modo Aventura
+createWorldScreen.gameMode.creative=Modo Criativo
+createWorldScreen.gameMode.survival=Modo Sobrevivência
+
+selectWorld.title=Escolher Mundo
+selectWorld.select=Jogar Mundo Selecionado
+selectWorld.create=Criar Novo Mundo
+selectWorld.import=Importar
+selectWorld.edit=Editar
+selectWorld.versionWarning=§cBackup this world because loading it in the beta could cause corruption!
+
+multiplayer.title=Jogar Multi-jogador
+selectServer.add=Adicionar Servidor
+
+##Add External Server
+addServer.title=Editar Informção do Servidor
+addServer.enterName=Nome do Servidor
+addServer.enterIp=Endereço do Servidor
+addServer.enterPort=Porta do Servidor
+addServer.add=Concluído
+selectServer.deleteButton=Deletar
+selectServer.playButton=Jogar
+
+##Loadings
+multiplayer.downloadingTerrain=A carregar terreno...
+
+##Pause Menu
+menu.game=Menu de Jogo
+menu.returnToGame=Voltar para o Jogo
+menu.permissions=Permissões
+menu.feedback=Feedback
+menu.sendFeedback=Dar Feedback
+menu.reportBugs=Reportar Bugs
+menu.playersList=Jogadores
+menu.returnToMenu=Salvar e Sair para o Título
+
+##Change Safe Zone
+safeZone.title=Mudar Zona Segura
+
+##Anvil
+container.repair=Reparar & Nomear
+container.repair.cost=Custo de Reparo: %1$d
+
+##Beacon
+block.minecraft.beacon.primary=Poder Primário
+block.minecraft.beacon.secondary=Poder Secundário
+
+##Cartography Table
+container.cartography_table=Mesa de Cartografia
+
+##Enchanting Table
+container.enchant=Encantar
+
+##Grindstone
+container.grindstone_title=Reparar & Desencantar
+
+##Loom
+container.loom=Tear
+
+##Stonecutter
+container.stonecutter=Cortador de Pedra
+
+##Villager Trade
+merchant.trades=Trocas
+
+##Book
+book.byAuthor=por
+book.signButton=Placa
+book.editTitle=Introduza título do livro:
+book.finalizeButton=Assinar e Fechar
+book.finalizeWarning=Aviso! Quando assinas um livro, ele não pode ser mais editado.
+
+##Command Block
+advMode.setCommand=Set Console Command for Block
+advMode.command=Console Command
+advMode.previousOutput=Previous Output
+advMode.mode.sequence=Chain
+advMode.mode.auto=Repeat
+advMode.mode.redstone=Impulse
+advMode.mode.conditional=Conditional
+advMode.mode.unconditional=Unconditional
+advMode.mode.redstoneTriggered=Needs Redstone
+advMode.mode.autoexec.bat=Always Active
+advMode.execOnFirstTick=Execute on First Tick
+
+##Content Log History
+contentLogHistory.title=Content Log History
+contentLogHistory.copyToClipBoard=Copy To ClipBoard
+
+##Death Menu
+deathScreen.respawn=Respawn
+deathScreen.titleScreen=Title screen
+deathScreen.title=You died!
+
+##In Bed
+multiplayer.stopSleeping=Deixar a Cama
+multiplayer.openChat=Abrir Chat
+
+##Sign
+sign.edit=Edit sign message
+
+##Store
+store.inventory.title=Inventário
+
+##idk ,-,
+
+itemGroup.building_blocks=Blocos de Construção
+itemGroup.decoration_blocks=Blocos Decorativos
+itemGroup.redstone=Redstone
+itemGroup.transportation=Transporte
+itemGroup.miscellaneous=Mistura
+itemGroup.safe_search=Procura Segura
+itemGroup.search_items=Procurar Itens
+itemGroup.foodstuffs=Comida
+itemGroup.tools=Ferramentas
+itemGroup.combat=Combate
+itemGroup.brewing=Poções
+itemGroup.survival_inventory=Inventário
+inventory.binSlot=Destruir Item
+
+##Items and Blocks Names
+item.skull.char.name=§eCabeça§f
+item.skull.creeper.name=§eCabeça de Creeper§f
+item.skull.dragon.name=§eCabeça de Dragão§f
+item.skull.player.name=§eCabeça de %s§f
+item.skull.skeleton.name=§eCrânio de Esqueleto§f
+item.skull.wither.name=§eCrânio de Esqueleto do Wither§f
+item.skull.zombie.name=§eCabeça de Zombie§f
+item.end_crystal.name=§bCristal do Fim§f
+item.elytra.name=§eElitra§f
+tile.beacon.name=§bSinalizador§f
+tile.conduit.name=§bCondutor§f
+item.experience_bottle.name=§eFrasco de Experiência§f
+item.netherStar.name=§eEstrela do Nether§f
+item.record.name=§bDisco de Música§f
+item.heart_of_the_sea.name=§eCoração do Mar§f
+item.banner_pattern.name=§eBanner Pattern§f
+item.golden_apple.name=§bMaça Dourada§f
+item.appleEnchanted.name=§5Maça Encantada Dourada§f
+potion.nightVision=§9Visão Noturna§f
+potion.invisibility=§9Invisibilidade§f
+potion.jump=§9Pulo§f
+potion.fireResistance=§9Resistência a Fogo§f
+potion.moveSpeed=§9Velocidade§f
+potion.waterBreathing=§9Respiração Aquática§f
+potion.weakness=§9Fraqueza§f
+potion.heal=§9Saúde Instantania§f
+potion.regeneration=§9Regeneração§f
+potion.damageBoost=§9Força§f
+potion.slowFalling=§9Queda Suave§f
+item.totem.name=§eTotem da Vida§f
+item.dragon_breath.name=§eBafo do Dragão§f
+tile.dragon_egg.name=§5Ovo de Dragão§f
+attribute.modifier.plus.0=§2+%d §2%s§f
+attribute.modifier.plus.1=§2+%d%% §2%s§f
+attribute.modifier.plus.2=§2+%d%% §2%s§f
+attribute.modifier.take.0=-%d %s§f
+attribute.modifier.take.1=-%d%% %s§f
+attribute.modifier.take.2=-%d%% %s§f
+
+tile.double_plant.grass.name=Erva Alta
+tile.snow.name=Bloco de Neve
+tile.snow_layer.name=Neve
+tile.brown_mushroom.name=Mushroom Steam
+tile.brown_mushroom_block.name=Brown Mushroom Block
+tile.red_mushroom.name=Mushroom
+tile.red_mushroom_block.name=Red Mushroom Block
+item.reeds.name=Cana-de-Açúcar
+tile.mob_spawner.name=Invocador
+tile.turtle_egg.name=Ovo de Tartaruga
+item.spawn_egg.entity.agent.name=Ovo de Invocação do Agente
+item.spawn_egg.entity.bee.name=Ovo de Invocação de Abelha
+item.spawn_egg.entity.cat.name=Ovo de Invocação de Gato
+item.spawn_egg.entity.chicken.name=Ovo de Invocação de Galinha
+item.spawn_egg.entity.cow.name=Ovo de Invocação de Vaca
+item.spawn_egg.entity.cod.name=Ovo de Invocação de Cod
+item.spawn_egg.entity.pufferfish.name=Ovo de Invocação de Pufferfish
+item.spawn_egg.entity.salmon.name=Ovo de Invocação de Salmão
+item.spawn_egg.entity.tropicalfish.name=Ovo de Invocação de Peixe Tropical
+item.spawn_egg.entity.pig.name=Ovo de Invocação de Porco
+item.spawn_egg.entity.sheep.name=Ovo de Invocação de Ovelha
+item.spawn_egg.entity.npc.name=Ovo de Invocação de NPC
+item.spawn_egg.entity.wolf.name=Ovo de Invocação de Lobo
+item.spawn_egg.entity.villager.name=Ovo de Invocação de Aldeão
+item.spawn_egg.entity.villager_v2.name=Ovo de Invocação de Aldeão
+item.spawn_egg.entity.vindicator.name=Ovo de Invocação de Vindicator
+item.spawn_egg.entity.mooshroom.name=Ovo de Invocação de Mooshroom
+item.spawn_egg.entity.squid.name=Ovo de Invocação de Lula
+item.spawn_egg.entity.rabbit.name=Ovo de Invocação de Coelho
+item.spawn_egg.entity.bat.name=Ovo de Invocação de Morcego
+item.spawn_egg.entity.ravager.name=Ovo de Invocação de Ravager
+item.spawn_egg.entity.iron_golem.name=Ovo de Invocação de Iron Golem
+item.spawn_egg.entity.snow_golem.name=Ovo de Invocação de Snow Golem
+item.spawn_egg.entity.ocelot.name=Ovo de Invocação de Ocelote
+item.spawn_egg.entity.parrot.name=Ovo de Invocação de Papagaio
+item.spawn_egg.entity.horse.name=Ovo de Invocação de Cavalo
+item.spawn_egg.entity.llama.name=Ovo de Invocação de Lama
+item.spawn_egg.entity.polar_bear.name=Ovo de Invocação de Urso Polar
+item.spawn_egg.entity.donkey.name=Ovo de Invocação de Burro
+item.spawn_egg.entity.mule.name=Ovo de Invocação de Mula
+item.spawn_egg.entity.skeleton_horse.name=Ovo de Invocação de Cavalo Esqueleto
+item.spawn_egg.entity.zombie_horse.name=Ovo de Invocação de Cavalo Zombie
+item.spawn_egg.entity.zombie.name=Ovo de Invocação de Zombie
+item.spawn_egg.entity.drowned.name=Ovo de Invocação de Afogado
+item.spawn_egg.entity.creeper.name=Ovo de Invocação de Creeper
+item.spawn_egg.entity.skeleton.name=Ovo de Invocação de Esqueleto
+item.spawn_egg.entity.spider.name=Ovo de Invocação de Aranha
+item.spawn_egg.entity.zombie_pigman.name=Ovo de Invocação de Porco Zombie
+item.spawn_egg.entity.slime.name=Ovo de Invocação de Slime
+item.spawn_egg.entity.enderman.name=Ovo de Invocação de Enderman
+item.spawn_egg.entity.silverfish.name=Ovo de Invocação de Silverfish
+item.spawn_egg.entity.cave_spider.name=Ovo de Invocação de Aranha de Caverna
+item.spawn_egg.entity.ghast.name=Ovo de Invocação de Ghast
+item.spawn_egg.entity.magma_cube.name=Ovo de Invocação de Cubo de Magma
+item.spawn_egg.entity.blaze.name=Ovo de Invocação de Blaze
+item.spawn_egg.entity.zombie_villager.name=Ovo de Invocação de Aldeão Zombie
+item.spawn_egg.entity.zombie_villager_v2.name=Ovo de Invocação de Aldeão Zombie
+item.spawn_egg.entity.witch.name=Ovo de Invocação de Bruxa
+item.spawn_egg.entity.stray.name=Ovo de Invocação de Stray
+item.spawn_egg.entity.husk.name=Ovo de Invocação de Husk
+item.spawn_egg.entity.wither_skeleton.name=Ovo de Invocação de Esqueleto do Wither
+item.spawn_egg.entity.guardian.name=Ovo de Invocação de Guardião
+item.spawn_egg.entity.elder_guardian.name=Ovo de Invocação de Elder Guardian
+item.spawn_egg.entity.shulker.name=Ovo de Invocação de Shulker
+item.spawn_egg.entity.endermite.name=Ovo de Invocação de Endermite
+item.spawn_egg.entity.evocation_illager.name=Ovo de Invocação de Evocador
+item.spawn_egg.entity.vex.name=Ovo de Invocação de Vex
+item.spawn_egg.entity.turtle.name=Ovo de Invocação de Tartaruga
+item.spawn_egg.entity.dolphin.name=Ovo de Invocação de Golfinho
+item.spawn_egg.entity.phantom.name=Ovo de Invocação de Phantom
+item.spawn_egg.entity.panda.name=Ovo de Invocação de Panda
+item.spawn_egg.entity.pillager.name=Ovo de Invocação de Saqueador
+item.spawn_egg.entity.fox.name=Ovo de Invocação de Raposa
+item.spawn_egg.entity.unknown.name=Ovo de Invocação
+item.spawn_egg.entity.wandering_trader.name=Ovo de Invocação de Wandering Trader
+item.cooked_beef.name=Bife
+tile.planks.acacia.name=Pranchas de Acácia
+tile.planks.big_oak.name=Pranchas de Carvalho Escuro
+tile.planks.birch.name=Pranchas de Eucalipto
+tile.planks.jungle.name=Pranchas de Jungle
+tile.planks.oak.name=Pranchas de Carvalho
+tile.planks.spruce.name=Pranchas de Pinheiro
+tile.oak_stairs.name=Escadas de Carvalho
+tile.acacia_stairs.name=Escadas de Acácia
+tile.birch_stairs.name=Escadas de Eucalipto
+tile.dark_oak_stairs.name=Escadas de Carvalho Escuro
+tile.jungle_stairs.name=Escadas de Jungle
+tile.spruce_stairs.name=Escadas de Pinheiro
+tile.wooden_slab.acacia.name=Laje de Acácia
+tile.wooden_slab.big_oak.name=Laje de Carvalho Escuro
+tile.wooden_slab.birch.name=Laje de Eucalipto
+tile.wooden_slab.jungle.name=Laje de Jungle
+tile.wooden_slab.oak.name=Laje de Carvalho
+tile.wooden_slab.spruce.name=Laje de Pinheiro
+tile.brick_block.name=Bricks
+tile.quartz_block.smooth.name=Smooth Quartz
+tile.nether_brick.name=Nether Bricks
+tile.red_nether_brick.name=Red Nether Bricks
+tile.clay.name=Argila
+tile.anvil.slightlyDamaged.name=Chipped Anvil
+tile.anvil.veryDamaged.name=Damaged Anvil
+tile.enchanting_table.name=Mesa de Encantamentos
+item.milk.name=Balde de Leite
+tile.end_portal_frame.name=End Portal Frame
+item.writable_book.name=Book and Quill
+item.redstone.name=Pó de Redstone
+tile.heavy_weighted_pressure_plate.name=Heavy Weighted Pressure Plate
+tile.light_weighted_pressure_plate.name=Light Weighted Pressure Plate
+tile.daylight_detector.name=Detentor de Luz Solar
+item.wheat_seeds.name=Sementes de Trigo
+item.melon.name=Fatia de Melancia
+item.speckled_melon.name=Glistering Melon Slice
+
+##How To Play
+howToPlay.title=Como Jogar
+howToPlay.controls=Controles
+howToPlay.hud=Hud
+howToPlay.inventory=Inventário
+howToPlay.crafting=Contruir
+
+##---
+## Realms
+##---
+
+mco.invites.title=Convides Esperando
+mco.invites.nopending=Sem Convites!
+mco.selectServer.info=O que são Reinos?
+mco.selectServer.close=Fechar
+mco.selectServer.popup=Realms is a safe, simple way to enjoy an online Minecraft world with up to ten friends at a time.   It supports loads of minigames and plenty of custom worlds! Only the owner of the realm needs to pay.

@@ -1,0 +1,277 @@
+/* By @FMarquesPTO. All rights reserved. */
+{
+  "namespace": "controller_mcjava",
+
+  "controller_content_panel": {
+    "type": "panel",
+    "controls": [
+      {
+        "controller_content_panel@common_mcjava.scroll_screen": {
+          "$top_content": "controller_mcjava.top_content",
+          "$top_content_size": ["100%", 44],
+          "$scrolling_content": "controller_mcjava.scroll_content",
+          "$bottom_content": "controller_mcjava.bottom_content",
+          "$popup_factory": "controller_mcjava.popup_dialog_factory",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "controller_settings_view",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      { "controller_settings@controller_mcjava.controller_settings": {} }
+    ]
+  },
+
+  "top_content": {
+    "type": "panel",
+    "controls": [
+      { "title@common_mcjava.title": { "offset": [0, 7], "text": "options.controls.title" } },
+      {
+        "stack_zero": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "size": [310, 20],
+          "offset": [0, 18],
+          "controls": [
+            { "controller_settings@controller_mcjava.controller_settings_button": {} },
+            { "fill@common_mcjava.hfill": {} },
+            { "auto_jump@controller_mcjava.auto_jump_toggle": { "size": [150, 20] } }
+          ]
+        }
+      }
+    ]
+  },
+
+  "scroll_content": {
+    "type": "stack_panel",
+    "size": [328, "100%c"],
+    "$keymapping_grid_dimension": "#gamepad_grid_dimension",
+    "$keymapping_collection": "gamepad_collection",
+    "$item_template": "controller_mcjava.controller_keymapping_item",
+    "controls": [
+      { "movement@controls_mcjava.keys_title": { "$keys_title": "Movement" } },
+      { "zero@controls_mcjava.keymapping_grid_item": { "$item_index": 0 } },
+      { "one@controls_mcjava.keymapping_grid_item": { "$item_index": 9 } },
+      { "two@controls_mcjava.keymapping_grid_item": { "$item_index": 10 } },
+      { "three@controls_mcjava.keymapping_grid_item": { "$item_index": 15 } },
+      { "four@controls_mcjava.keymapping_grid_item": { "$item_index": 16 } },
+      { "five@controls_mcjava.keymapping_grid_item": { "$item_index": 17 } },
+      { "six@controls_mcjava.keymapping_grid_item": { "$item_index": 18 } },
+      { "seven@controls_mcjava.keymapping_grid_item": { "$item_index": 11 } },
+      { "eight@controls_mcjava.keymapping_grid_item": { "$item_index": 12 } },
+      { "gameplay@controls_mcjava.keys_title": { "$keys_title": "Gameplay" } },
+      { "nine@controls_mcjava.keymapping_grid_item": { "$item_index": 2 } },
+      { "ten@controls_mcjava.keymapping_grid_item": { "$item_index": 19 } },
+      { "eleven@controls_mcjava.keymapping_grid_item": { "$item_index": 3 } },
+      { "inventory@controls_mcjava.keys_title": { "$keys_title": "Inventory" } },
+      { "twelve@controls_mcjava.keymapping_grid_item": { "$item_index": 1 } },
+      { "thirdteen@controls_mcjava.keymapping_grid_item": { "$item_index": 6 } },
+      { "fourteen@controls_mcjava.keymapping_grid_item": { "$item_index": 7 } },
+      { "fifteen@controls_mcjava.keymapping_grid_item": { "$item_index": 5 } },
+      { "sixteen@controls_mcjava.keymapping_grid_item": { "$item_index": 4 } },
+      { "multiplayer@controls_mcjava.keys_title": { "$keys_title": "Multiplayer" } },
+      { "seventeen@controls_mcjava.keymapping_grid_item": { "$item_index": 14 } },
+      { "eighteen@controls_mcjava.keymapping_grid_item": { "$item_index": 20 } },
+      { "miscellaneous@controls_mcjava.keys_title": { "$keys_title": "Miscellaneous" } },
+      { "nineteen@controls_mcjava.keymapping_grid_item": { "$item_index": 8 } },
+      { "twenty@controls_mcjava.keymapping_grid_item": { "$item_index": 13 } },
+      { "space_bottom@common_mcjava.vspace": {} }
+    ]
+  },
+
+  "bottom_content": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "size": [ 310, 20],
+    "offset": [ 0, -9 ],
+    "controls": [
+      { "reset@controller_mcjava.reset_button": {} },
+      { "fill@common_mcjava.hfill": {} },
+      {
+        "back@settings_mcjava.back_button": {
+          "$toggle_button_name": "navigation_tab",
+          "size": [150, 20]
+        }
+      }
+    ]
+  },
+
+  /* Content */
+
+  "popup_dialog_factory": {
+    "type": "factory",
+    "control_ids": {
+      "modal_dialog_popup": "@popup_mcjava.reset_controller_settings_modal"
+    }
+  },
+
+  "controller_settings@controller_settings_mcjava.controller_settings_content_panel": {
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "controller_settings_view",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "controller_settings_button@toggle_mcjava.toggle_button": {
+    "$toggle_name": "controller_settings",
+    "size": [150, 20],
+    "$toggle_index": 1,
+    "$toggle_button_name": "controller_settings",
+    "$toggle_button_text": "options.controller_settings",
+    "$toggle_control_name": "controller_settings_view",
+    "$focus_override_left": "FOCUS_OVERRIDE_STOP"
+  },
+
+  "auto_jump_toggle@toggle_mcjava.toggle": {
+    /*  "enabled": "(not $is_holographic and $is_living_room_mode)", */
+     "$toggle_text": "options.autoJump",
+     "$toggle_binding_name": "#controller_autojump",
+     "$toggle_enabled_binding_name": "#controller_autojump_enabled",
+     "$toggle_name": "controller_autojump",
+     "$focus_override_right": "FOCUS_OVERRIDE_STOP"
+   },
+  
+  "reset_button@button_mcjava.action_button": {
+    "$pressed_button_name": "button.reset_gamepad_bindings",
+    "$button_text": "controls.resetAll",
+    "size": [150, 20]
+  },
+
+  "controller_keymapping_item": {
+    "type": "panel",
+    "layer": 1,
+    "size": [ "100%", 20 ],
+    "controls": [
+      {
+        "option_info_label_control": {
+          "type": "panel",
+          "size": [ "100%", "100%" ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "controls": [
+            {
+              "keymapping_label_control": {
+                "type": "label",
+                "color": "white",
+                "size": [ "100%", "default" ],
+                "text_alignment": "left",
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "layer": 20,
+                "text": "#keymapping_name",
+                "bindings": [
+                  {
+                    "binding_name": "#keymapping_name",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$keymapping_collection"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "keymapping_button_0@controller_mcjava.image_binding_button": {
+          "$button_tts_header": "#audible_keymapping_name",
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [-87, 0],
+          "bindings": [
+            {
+              "binding_type": "collection_details",
+              "binding_collection_name": "$keymapping_collection"
+            },
+            {
+              "binding_name":  "#audible_keymapping_name",
+              "binding_type":  "collection",
+              "binding_collection_name": "$keymapping_collection"
+            }
+          ]
+        }
+      },
+      {
+        "keymapping_button_1@controller_mcjava.reset_binding_button": {
+          "$pressed_button_name": "button.reset_binding",
+          "$button_tts_header": "accessibility.settings.reset"
+        }
+      }
+    ]
+  },
+  
+  "image_binding_button@button_mcjava.button": {
+    "size": [75, 20],
+    "$pressed_button_name": "button.binding_button",
+    "$button_content": "controller_mcjava.image_binding_button_content",
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "$keymapping_collection"
+      }
+    ]
+  },
+
+  "image_binding_button_content@common_buttons.button_content_panel": {
+    "offset": [0, -0.5],
+    "controls": [
+      {
+        "base_icon_image": {
+          "type": "image",
+          "size": [ 19, 19 ],
+          "layer": 20,
+          "$gameplay_key_icon|default": "#binding_icon_sprite",
+          "bindings": [
+            {
+              "binding_name": "$gameplay_key_icon",
+              "binding_name_override": "#texture",
+              "binding_type": "collection",
+              "binding_collection_name": "$keymapping_collection"
+            }
+          ]
+        }
+      },
+      {
+        "default_label@common.new_button_label": {
+          "text": "#binding_button_text",
+          "color": [0.99, 0.99, 0.99],
+          "shadow": true,
+          "bindings": [
+            {
+              "binding_name": "#binding_button_text",
+              "binding_type": "collection",
+              "binding_collection_name": "$keymapping_collection"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  "reset_binding_button@button_mcjava.button": {
+    "layer": 1,
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "offset": [-27, 0],
+    "size": [50, 20],
+    "$button_text": "controls.reset",
+    "$pressed_button_name": "button.reset_binding",
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "$keymapping_collection"
+      }
+    ]
+  }
+}

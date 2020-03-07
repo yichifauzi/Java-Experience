@@ -1,0 +1,18 @@
+/* By @FMarquesPTO. All rights reserved. */
+{
+  "namespace": "dimension_progress_mcjava",
+
+  "overworld_progress_screen_content_panel": {
+    "type": "panel",
+    "controls": [
+      { "content@progress_content_mcjava.dimension_content_panel": {} },
+      { "popup_dialog_factory@progress.popup_dialog_factory": {} }
+    ]
+  },
+
+  "nether_progress_screen_content_panel@loadings_mcjava.overworld_progress_screen_content_panel": {
+  },
+
+  "the_end_progress_screen_content_panel@loadings_mcjava.overworld_progress_screen_content_panel": {
+  }
+}

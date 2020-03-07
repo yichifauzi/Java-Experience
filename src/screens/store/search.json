@@ -1,0 +1,38 @@
+/* By @FMarquesPTO. All rights reserved. */
+{
+  "namespace": "store_search_mcjava",
+
+  "store_search_screen_content_panel@store_content_mcjava.store_screen_content_panel": {
+    "$title_text": "Search",
+    "$top_content": "store_content_mcjava.search_top_content",
+    "$top_content_size": ["100%", 60],
+    "$scrolling_content": "store_search_mcjava.scroll_content"
+  },
+
+  "scroll_content": {
+    "type": "panel",
+    "size": ["100%", "100%c" ],
+    "controls": [
+      {
+        "trending_grid@store_trending_offers_list_mcjava.trending_rows_grid": {}
+      },
+      {
+        "item_list_panel": {
+          "type": "panel",
+          "size": [ "100%", "100%c" ],
+          "controls": [
+            {
+              "item_list_grid@store_offer_list_mcjava.store_offer_grid": {}
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "(not #trending_rows_visible)",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

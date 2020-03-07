@@ -1,0 +1,210 @@
+/* By @FMarquesPTO. All rights reserved. */
+{
+  "namespace": "toast_screen_mcjava",
+
+  "toast_screen_content_panel": {
+    "type": "panel",
+    "clips_children": true,
+    "factory": {
+      "name": "toast_factory",
+      "control_ids": {
+        "popup": "popup@toast_screen_mcjava.popup",
+        "splitscreen_join_popup": "splitscreen_join_popup@toast_screen.splitscreen_join_popup"
+      }
+    },
+    "controls": [
+      { "content_log_panel@content_log.content_log_panel": {} },
+      { "perf_turtle_panel@perf_turtle.perf_turtle_panel": {} }
+    ]
+  },
+
+  "popup@common.input_panel": {
+    "$toast_anchor_from|default": "top_right",
+    "$toast_anchor_to|default": "top_right",
+    "$toast_offset|default": [ 0, 0 ],
+    "anchor_from": "$toast_anchor_from",
+    "anchor_to": "$toast_anchor_to",
+    "size": [160, 32],
+    "offset": "@toast_screen_mcjava.popup_anim_start",
+    "$alpha_anims|default": [],
+    "controls": [
+      {
+        "background@toast_screen_mcjava.toast_background": {
+          "anims": "$alpha_anims"
+        }
+      },
+      {
+        "popup_content": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%", "100%" ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 6, 0 ],
+          "layer": 1,
+          "controls": [
+            {
+              "icon_padding": {
+                "layer": 1,
+                "type": "stack_panel",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "size": [ "100%c", "100%" ],
+                "factory": {
+                  "name": "toast_image_factory",
+                  "control_ids": {
+                    "xbox_icon": "@toast_screen_mcjava.xbox_icon",
+                    "third_party_achievement_icon": "@toast_screen_mcjava.third_party_achievement_icon",
+                    "third_party_invite_icon": "@toast_screen_mcjava.third_party_invite_icon",
+                    "icon_resource_pack": "@toast_screen_mcjava.resource_pack_icon",
+                    "key_art_image": "@toast_screen_mcjava.key_art_image"
+                  },
+                  "factory_variables": [
+                    "$hide_xbox_live_icon"
+                  ]
+                },
+                "bindings": [
+                  {
+                    "binding_type": "global",
+                    "binding_name": "#toast_icon_section_content",
+                    "binding_name_override": "#collection_length"
+                  }
+                ]
+              }
+            },
+            {
+              "text_padding": {
+                "type": "panel",
+                "size": [ 2, "100%" ],
+                "bindings": [
+                  {
+                    "binding_name": "#text_padding_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "text_panel": {
+                "type": "panel",
+                "size": [ "fill", "100%" ],
+                "controls": [
+                  {
+                    "text_stack_panel@toast_screen.text_stack_panel": {}
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /* Content */
+
+  "toast_background@common_mcjava.image": {
+    "texture": "assets/minecraft/textures/gui/toasts",
+    "uv": [0, 0],
+    "size": [160, 32],
+    "variables": "$toast_background_resol"
+  },
+
+  "popup_anim_wait": {
+    "anim_type": "wait",
+    "duration": "$display_time",
+    "next": "@toast_screen_mcjava.popup_anim_end"
+  },
+
+  "popup_anim_start": {
+    "anim_type": "offset",
+    "from": ["100%", 0 ],
+    "to": [0, 0],
+    "duration": "$transition_in_time",
+    "next": "@toast_screen_mcjava.popup_anim_wait"
+  },
+
+  "popup_anim_end": {
+    "anim_type": "offset",
+    "to": ["100%", 0 ],
+    "from": [0, 0],
+    "duration": "$transition_out_time",
+    "destroy_at_end": "popup",
+    "end_event": "toast_end"
+  },
+
+  "toast_image": {
+    "type": "image",
+    "size": [ 13, 13 ],
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "texture": "$toast_texture",
+    "layer": 1
+  },
+
+  "toast_icon": {
+    "type": "panel",
+    "size": [ "100%c", "100%" ],
+    "controls": [
+      {
+        "toast_icon@toast_screen.toast_image": {}
+      }
+    ]
+  },
+
+  "xbox_icon@toast_screen.toast_icon": {
+    "$toast_texture": "textures/ui/xbox4"
+  },
+
+  "third_party_invite_icon@toast_screen.toast_icon": {
+    "$toast_texture": "textures/ui/invite_third_party"
+  },
+
+  "third_party_achievement_icon@toast_screen.toast_icon": {
+    "$toast_texture": "textures/ui/achievement_third_party"
+  },
+
+  "resource_pack_icon": {
+    "type": "panel",
+    "size": [ "100%c", "100%" ],
+    "$icon_size|default": [ 16, 16 ],
+    "controls": [
+      {
+        "resource_pack_image": {
+          "type": "image",
+          "size": "$icon_size",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "layer": 1,
+          "texture": "#icon_path",
+          "zip_folder": "#icon_zip",
+          "texture_file_system": "#icon_file_system",
+          "bindings": [
+            {
+              "binding_name": "#icon_path",
+              "binding_name_override": "#texture"
+            },
+            {
+              "binding_name": "#icon_zip",
+              "binding_name_override": "#zip_folder"
+            },
+            {
+              "binding_name": "#icon_file_system",
+              "binding_name_override": "#texture_file_system"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "key_art_image@toast_screen.resource_pack_icon": {
+    "$icon_size": [ "177.78%y", 18 ]
+  },
+
+  "gamer_score_icon": {
+    "type": "image",
+    "texture": "textures/ui/gamerscore",
+    "size": [ 7, 7 ]
+  }
+}

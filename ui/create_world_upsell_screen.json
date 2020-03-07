@@ -1,0 +1,36 @@
+/********************************************************
++*   (c) Mojang. All rights reserved                       *
++*   (c) Microsoft. All rights reserved.                   *
++*********************************************************/
+{
+  "namespace": "create_world_upsell",
+
+  "create_world_upsell@common_mcjava.base_screen": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_tab_left",
+        "to_button_id": "button.menu_tab_left",
+        "mapping_type": "global",
+        "scope": "view"
+      },
+      {
+        "from_button_id": "button.menu_tab_right",
+        "to_button_id": "button.menu_tab_right",
+        "mapping_type": "global",
+        "scope": "view"
+      }
+    ],
+    "$screen_content": "create_world_upsell_mcjava.create_world_upsell_screen_content_panel",
+    "$screen_background": "common_mcjava.dirt_background"
+  },
+
+  "create_world_upsell_realms@create_world_upsell": {
+    "$screen_content": "create_world_upsell_mcjava.create_world_upsell_realms_screen_content_panel",
+    "$screen_background": "common_mcjava.dirt_background"
+  }
+}

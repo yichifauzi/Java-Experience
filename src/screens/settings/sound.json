@@ -1,0 +1,104 @@
+/* By @FMarquesPTO. All rights reserved. */
+{
+  "namespace": "sound_mcjava",
+
+  "sound_content_panel": {
+    "type": "panel",
+    "controls": [
+      { "title@common_mcjava.title": { "text": "options.sounds.title" } },
+      { "content_panel@sound_mcjava.content_panel": {} },
+      { "popup_dialog_factory@sound_mcjava.popup_dialog_factory": {} }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_button_name": "sound_view",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "content_panel": {
+    "type": "stack_panel",
+    "anchor_from": "center",
+    "anchor_to": "top_middle",
+    "size": [ 310, 195],
+    "offset": [ 0, "-36% + 4px" ],
+    "controls": [
+      {
+        "stack_zero@common_mcjava.stack": {
+          "controls": [
+            { "music@sound_mcjava.music_slider": {} },
+            { "fill@common_mcjava.hfill": {} },
+            { "sound@sound_mcjava.sound_slider": {} }
+          ]
+        }
+      },
+      { "space_zero@common_mcjava.vspace": {} },
+      {
+        "panel_zero@common_mcjava.panel": {
+          "controls": [
+            { "reset@sound_mcjava.reset_button": {} }
+          ]
+        }
+      },
+      { "space_one@common_mcjava.vspace": { "size": [0, 16] } },
+      {
+        "panel_one@common_mcjava.panel": {
+          "controls": [
+            { "back@settings_mcjava.back_button": {} }
+          ]
+        }
+      }
+    ]
+  },
+
+  /* Content */
+
+  "popup_dialog_factory": {
+    "type": "factory",
+    "control_ids": {
+      "modal_dialog_popup": "@popup_mcjava.reset_sounds_settings_modal"
+    }
+  },
+
+  "music_slider@slider_mcjava.slider": {
+    "$slider_text": "#music_volume_slider_label",
+    "$slider_name": "music_volume",
+    "$slider_value_binding_name": "#music_volume",
+    "$slider_tts_text_value": "#music_volume_text_value",
+    "$slider_enabled_binding_name": "#music_volume_enabled",
+    "$focus_override_up": "FOCUS_OVERRIDE_STOP",
+    "$ignore_percentage": false,
+    "$slider_text_bindings": [
+      {
+        "binding_name": "$slider_text"
+      }
+    ]
+  },
+
+  "sound_slider@slider_mcjava.slider": {
+    "$slider_text": "#sound_volume_slider_label",
+    "$slider_name": "sound_volume",
+    "$slider_value_binding_name": "#sound_volume",
+    "$slider_tts_text_value": "#sound_volume_text_value",
+    "$slider_enabled_binding_name": "#sound_volume_enabled",
+    "$ignore_percentage": false,
+    "$slider_text_bindings": [
+      {
+        "binding_name": "$slider_text"
+      }
+    ]
+  },
+
+  "reset_button@button_mcjava.action_button": {
+    "ignored": "(not $is_pregame)",
+    "size": [150, 20],
+    "$pressed_button_name": "button.reset_settings",
+    "$button_text": "options.resetSettings",
+    "property_bag": {
+      "reset_group": "audio"
+    }
+  }
+}

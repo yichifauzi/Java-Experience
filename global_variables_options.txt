@@ -1,0 +1,57 @@
+Global Variables Options ('MC Java UI/ui/_global_varibles.json')
+
+//En
+$hide_beta_text
+  Values: True/False (Boolean)
+  Hide Beta Top Middle Screen Text (FPS, Device Info, etc)
+
+$edition_logo
+  Values: java/cpp
+  If "java" is selected the "Java Edition" will appear in the bottom of the "Minecraft" title. If it is cpp, "C++ Edition" will appear
+
+$java_style
+  Values: Old/New
+  "New" for Recent UI style or "Old" to the old one (Just for now - Old Hovers)
+
+$recipe_book
+  Values: on/off
+  If your minecraft is laggy or you just want to get rid of recipe book just change to "off"
+
+$recipe_book_style
+  Values: pages/scrolling
+  If you want recipe book has pages like Java use "pages", if you want bedrock scrolling use "scrolling"
+
+$creative_inventoy_style
+  Values: java/bedrock
+  "java" -> 10 Tabs (Building Blocks/Decorative Blocks/Redstone/Transportation/Search Items/Miscellaneous/Foodstuffs/Tools/Combat/Brewing/Survival Inv)
+  "bedrock" -> 6 Tabs (Construction/Equipment/Items/Nature/Search/Survival Inv)
+    NOTE: If you make custom blocks or turn on Education Edition toggle, use "bedrock". Because the items will be messed up.
+          When you search something in "java" 's Search Items box, you need to clean it so that the items of other tabs doesn´t messed up.
+
+//PT
+$hide_beta_text
+  Valores: True/False (Boolean)
+  Esconder o texto do top da tela (FPS, Info do Aparelho , etc)
+
+$edition_logo
+  Valores: java/cpp
+  Se "java" esta selecionado o "Java Edition" aparece debaixo do titulo "Minecraft". Se está "cpp", "C++ Edition" aparece
+
+$java_style
+  Valores: Old/New
+  "New"(Novo) para o estilo recente da interface ou "Old"(Velho/Antigo) para o antigo (Por agora apenas - Antigos hovers)
+
+$recipe_book
+  Valores: on/off
+  Se o minecraft está a lagar ou apenas queres tirar aquele livro de receitas, muda para "off"
+
+$recipe_book_style
+  Valores: pages/scrolling
+  Se queres que o livro de receitas tenha páginas como no Java usa "pages", se preferes o scroll do bedrock usa "scrolling"
+
+$creative_inventoy_style
+  Valores: java/bedrock
+  "java" -> 10 Tabs (Blocos de Construção/Blocos Decorativos/Redstone/Transporte/Procuar Itens/Variáveis/Comidas/Ferramentas/Combate/Poções/Inv de Sobrevivência)
+  "bedrock" -> 6 Tabs (Construção/Equipamento/Itens/Natureza/Procurar/Inv de Sobrevivência)
+    NOTE: Se fazes blocos customizados ou ligaste Education Edition toggle, usa "bedrock". Porque os itens vão ficar todos doidos :)
+          Quando usas a box de procurar itens do "java", tens de apagar senão os itens vão de passar :|

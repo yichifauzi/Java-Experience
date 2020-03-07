@@ -1,0 +1,21 @@
+/********************************************************
++*   (c) Mojang. All rights reserved                       *
++*   (c) Microsoft. All rights reserved.                   *
++*********************************************************/
+{
+  "namespace": "toast_screen",
+
+  "toast_screen@common_mcjava.base_screen": {
+    "send_telemetry": false,
+    "screen_not_flushable": true,
+    "render_game_behind": true,
+    "is_showing_menu": false,
+    "is_modal": true,
+    "low_frequency_rendering": true,
+    "should_steal_mouse": false,
+    "render_only_when_topmost": false,
+    "screen_draws_last": true,
+    "$screen_content": "toast_screen_mcjava.toast_screen_content_panel",
+    "$screen_animations": []
+  }
+}

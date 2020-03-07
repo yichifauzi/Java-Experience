@@ -1,0 +1,118 @@
+/* By @FMarquesPTO. All rights reserved. */
+{
+  "namespace": "foodstuffs_tab_mcjava",
+
+  /* 1.16 */
+
+  /* 1.15 */
+
+  "1_15_foodstuffs_items_stack_panel": {
+    "type": "stack_panel",
+    "size": ["100%", "100%c"],
+
+    "$row_1_item_1": 360,
+    "$row_1_item_2": 650,
+    "$row_1_item_3": 649,
+    "$row_1_item_4": 444,
+    "$row_1_item_5": 643,
+    "$row_1_item_6": 361,
+    "$row_1_item_7": 362,
+    "$row_1_item_8": 448,
+    "$row_1_item_9": 449,
+
+    "$row_2_item_1": 450,
+    "$row_2_item_2": 451,
+    "$row_2_item_3": 647,
+    "$row_2_item_4": 648,
+    "$row_2_item_5": 656,
+    "$row_2_item_6": 654,
+    "$row_2_item_7": 364,
+    "$row_2_item_8": 657,
+    "$row_2_item_9": 445,
+
+    "$row_3_item_1": 644,
+    "$row_3_item_2": 443,
+    "$row_3_item_3": 642,
+    "$row_3_item_4": 461,
+    "$row_3_item_5": 464,
+    "$row_3_item_6": 358,
+    "$row_3_item_7": 356,
+    "$row_3_item_8": 653,
+    "$row_3_item_9": 357,
+
+    "$row_4_item_1": 655,
+    "$row_4_item_2": 447,
+    "$row_4_item_3": 646,
+    "$row_4_item_4": 652,
+    "$row_4_item_5": 446,
+    "$row_4_item_6": 645,
+    "$row_4_item_7": 355,
+    "$row_4_item_8": 651,
+    "$row_4_item_9": 366,
+
+    "$row_5_item_1": 895,
+
+    "controls": [ { "@foodstuffs_tab_mcjava.1_14_foodstuffs_items_stacker": {} } ]
+  },
+
+  /* 1.14 */
+
+  "1_14_foodstuffs_items_stack_panel": {
+    "type": "stack_panel",
+    "size": ["100%", "100%c"],
+
+    "$row_1_item_1": 360,
+    "$row_1_item_2": 649,
+    "$row_1_item_3": 648,
+    "$row_1_item_4": 444,
+    "$row_1_item_5": 642,
+    "$row_1_item_6": 361,
+    "$row_1_item_7": 362,
+    "$row_1_item_8": 448,
+    "$row_1_item_9": 449,
+
+    "$row_2_item_1": 450,
+    "$row_2_item_2": 451,
+    "$row_2_item_3": 646,
+    "$row_2_item_4": 647,
+    "$row_2_item_5": 655,
+    "$row_2_item_6": 653,
+    "$row_2_item_7": 364,
+    "$row_2_item_8": 655,
+    "$row_2_item_9": 445,
+
+    "$row_3_item_1": 643,
+    "$row_3_item_2": 443,
+    "$row_3_item_3": 641,
+    "$row_3_item_4": 461,
+    "$row_3_item_5": 464,
+    "$row_3_item_6": 358,
+    "$row_3_item_7": 356,
+    "$row_3_item_8": 652,
+    "$row_3_item_9": 357,
+
+    "$row_4_item_1": 654,
+    "$row_4_item_2": 447,
+    "$row_4_item_3": 645,
+    "$row_4_item_4": 651,
+    "$row_4_item_5": 446,
+    "$row_4_item_6": 644,
+    "$row_4_item_7": 355,
+    "$row_4_item_8": 650,
+    "$row_4_item_9": 366,
+
+    "$row_5_item_1": 891,
+
+    "controls": [ { "@foodstuffs_tab_mcjava.1_14_foodstuffs_items_stacker": {} } ]
+  },
+
+  "1_14_foodstuffs_items_stacker@new_creative_tabs_content_mcjava.stack": {
+    "controls": [
+      { "row_1@new_creative_tabs_content_mcjava.row": { "$index_one": "$row_1_item_1", "$index_two": "$row_1_item_2", "$index_three": "$row_1_item_3", "$index_four": "$row_1_item_4", "$index_five": "$row_1_item_5", "$index_six": "$row_1_item_6", "$index_seven": "$row_1_item_7", "$index_eight": "$row_1_item_8", "$index_nine": "$row_1_item_9" } },
+      { "row_2@new_creative_tabs_content_mcjava.row": { "$index_one": "$row_2_item_1", "$index_two": "$row_2_item_2", "$index_three": "$row_2_item_3", "$index_four": "$row_2_item_4", "$index_five": "$row_2_item_5", "$index_six": "$row_2_item_6", "$index_seven": "$row_2_item_7", "$index_eight": "$row_2_item_8", "$index_nine": "$row_2_item_9" } },
+      { "row_3@new_creative_tabs_content_mcjava.row": { "$index_one": "$row_3_item_1", "$index_two": "$row_3_item_2", "$index_three": "$row_3_item_3", "$index_four": "$row_3_item_4", "$index_five": "$row_3_item_5", "$index_six": "$row_3_item_6", "$index_seven": "$row_3_item_7", "$index_eight": "$row_3_item_8", "$index_nine": "$row_3_item_9" } },
+      { "row_4@new_creative_tabs_content_mcjava.row": { "$index_one": "$row_4_item_1", "$index_two": "$row_4_item_2", "$index_three": "$row_4_item_3", "$index_four": "$row_4_item_4", "$index_five": "$row_4_item_5", "$index_six": "$row_4_item_6", "$index_seven": "$row_4_item_7", "$index_eight": "$row_4_item_8", "$index_nine": "$row_4_item_9" } },
+      { "row_5@new_creative_tabs_content_mcjava.row": { "$index_one": "$row_5_item_1", "$template_two": "container_mcjava.none", "$template_three": "container_mcjava.none", "$template_four": "container_mcjava.none", "$template_five": "container_mcjava.none", "$template_six": "container_mcjava.none", "$template_seven": "container_mcjava.none", "$template_eight": "container_mcjava.none", "$template_nine": "container_mcjava.none" } }
+    ]
+  }
+}

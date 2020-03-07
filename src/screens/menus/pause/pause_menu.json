@@ -1,0 +1,433 @@
+/* By @FMarquesPTO. All rights reserved. */
+{
+  "namespace": "pause_menu_mcjava",
+  
+  "pause_menu_screen_content_panel": {
+    "type": "panel",
+    "controls": [
+      { "screen_background@common_mcjava.screen_background": {} }, 
+      {
+        "pause_menu@pause_menu_mcjava.pause_menu_content_panel": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "players_list_view",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "players_list@players_list_mcjava.players_list_screen_content_panel": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "players_list_view",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      { "popup_dialog_factory@pause_menu_mcjava.popup_dialog_factory": {} }
+    ]
+  },
+
+  "trialTime": {
+    "type": "custom",
+    "ignored": "(not $trial)",
+    "renderer": "trial_time_renderer",
+    "size": [ "default", 10 ],
+    "offset": [ -2, 2 ],
+    "layer": 3,
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "bindings": [
+      {
+        "binding_name": "#is_trial_version",
+        "binding_name_override": "#visible",
+        "binding_type": "global"
+      }
+    ]
+  },
+
+  "pause_menu_content_panel": {
+    "type": "panel",
+    "controls": [
+      { "title@common_mcjava.title": { "offset": [0, "7%"], "text": "Game Menu" } },
+      { "trialTime@pause_menu_mcjava.trialTime": {} },
+      { "menu@pause_menu_mcjava.menu_content_panel": {} }
+    ]
+  },
+
+  "menu_content_panel": {
+    "type": "stack_panel",
+    "size": [200, "100%c"],
+    "anchor_from": "center",
+    "anchor_to": "top_middle",
+    "offset": [0, "-24%"],
+    "focus_container": true,
+    "use_last_focus": true,
+    "controls": [
+      {
+        "return_panel@pause_menu_mcjava.base_button_box": {
+          "controls": [
+            { "return@pause_menu_mcjava.return_to_game_button": {} }
+          ]
+        }
+      },
+      { "space_zero@common_mcjava.vspace": {} },
+      {
+        "null_panel@pause_menu_mcjava.base_button_box": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "controls": [
+            { "change_skin_button@pause_menu_mcjava.change_skin_button": {} },
+            { "profile_button@pause_menu_mcjava.profile_button": {} },
+            { "fill_zero@common_mcjava.hfill": {} },
+            { "player_permission_button@pause_menu_mcjava.player_permission_button": {} }
+          ]
+        }
+      },
+      { "space_zero@common_mcjava.vspace": {} },
+      { "@pause_menu_mcjava.null_panel": {} },
+      { "space_zero@common_mcjava.vspace": {} },
+      {
+        "null_panel@pause_menu_mcjava.base_button_box": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "controls": [
+            { "settings_button@pause_menu_mcjava.settings_button": {} },
+            { "fill_zero@common_mcjava.hfill": {} },
+            { "players_list_button@pause_menu_mcjava.players_list_button": {} }
+          ]
+        }
+      },
+      { "space_zero@common_mcjava.vspace": {} },
+      {
+        "return_panel@pause_menu_mcjava.base_button_box": {
+          "controls": [
+            { "quit_button@pause_menu_mcjava.quit_button": {} },
+            { "buy_btn@pause_menu_mcjava.buy_button": { "offset": [0, 24] } }
+          ]
+        }
+      }
+    ]
+  },
+
+  "null_panel": {
+    "type": "stack_panel",
+    "size": [200, "100%c"],
+    "controls": [
+      {
+        "null_panel@pause_menu_mcjava.base_button_box": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "controls": [
+            { "feedback_button@pause_menu_mcjava.feedback_button": {} },
+            { "fill_zero@common_mcjava.hfill": {} },
+            {
+              "right": {
+                "type": "panel",
+                "size": ["100%c", 20],
+                "controls": [
+                  {
+                    "right": {
+                      "type": "panel",
+                      "size": [98, 20],
+                      "controls": [
+                        { "take_screenshot_button@pause_menu_mcjava.take_screenshot_button": {} }
+                      ],
+                      "bindings": [
+                        {
+                          "binding_name": "(not #server_store_button_visible)",
+                          "binding_name_override": "#visible",
+                          "binding_type": "global"
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "(not #show_clubs)",
+                    "binding_name_override": "#visible",
+                    "binding_type": "global"
+                  }
+                ]
+              }
+            },
+            {
+              "right": {
+                "type": "panel",
+                "size": [98, 20],
+                "controls": [
+                  { "feed_button@pause_menu_mcjava.feed_button": {} }
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#show_clubs",
+                    "binding_name_override": "#visible",
+                    "binding_type": "global"
+                  }
+                ]
+              }
+            },
+            {
+              "right": {
+                "type": "panel",
+                "size": [98, 20],
+                "controls": [
+                  { "server_store_button@pause_menu_mcjava.server_store_button": {} }
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#server_store_button_visible",
+                    "binding_name_override": "#visible",
+                    "binding_type": "global"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "fill_zero@common_mcjava.vspace": {
+          "bindings": [
+            {
+              "binding_name": "#server_store_button_visible",
+              "binding_name_override": "#visible",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "fill_zero@common_mcjava.vspace": {
+          "bindings": [
+            {
+              "binding_name": "#show_clubs",
+              "binding_name_override": "#visible",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "right": {
+          "type": "panel",
+          "size": [200, 20],
+          "controls": [
+            { "take_screenshot_button@pause_menu_mcjava.take_screenshot_button": { "$button_text": "menu.takeScreenshot", "size": [200, 20] } }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#server_store_button_visible",
+              "binding_name_override": "#visible",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "right": {
+          "type": "panel",
+          "size": [200, 20],
+          "controls": [
+            { "take_screenshot_button@pause_menu_mcjava.take_screenshot_button": { "$button_text": "menu.takeScreenshot", "size": [200, 20] } }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#show_clubs",
+              "binding_name_override": "#visible",
+              "binding_type": "global"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /* Content */
+
+  "popup_dialog_factory": {
+    "type": "factory",
+    "control_ids": {
+      "modal_dialog_popup": "@popup_mcjava.feedback_modal"
+    }
+  },
+
+  "base_button_box": {
+    "type": "panel",
+    "size": [200, 20]
+  },
+
+  "server_store_button@pause_menu_mcjava.button_template": {
+    "size": [98, 20],
+    "ignored": "$is_secondary_client",
+    "$pressed_button_name": "button.menu_server_store",
+    "$button_text": "$server_store_button_text",
+    "bindings": [
+      {
+        "binding_name": "#server_store_button_visible",
+        "binding_name_override": "#visible",
+        "binding_type": "global"
+      }
+    ]
+  },
+
+  "feed_button@pause_menu_mcjava.button_template": {
+    "$pressed_button_name": "button.menu_feed",
+    "$focus_id": "button.menu_feed",
+    "$button_text": "pauseScreen.feed",
+    "size": [98, 20]
+  },
+
+  "change_skin_button@button_mcjava.button": {
+    "$disabled": "$nx_os",
+    "$pressed_button_name": "button.to_profile_or_skins_screen",
+    "$button_text": "menu.skins",
+    "size": [98, 20],
+    "bindings": [
+      {
+        "binding_name": "(not #persona_enabled)",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "profile_button@button_mcjava.button": {
+    "$pressed_button_name": "button.to_profile_or_skins_screen",
+    "$button_text": "menu.profile",
+    "size": [98, 20],
+    "bindings": [
+      {
+        "binding_name": "#persona_enabled",
+        "binding_name_override": "#visible"
+      },
+      {
+        "binding_name": "#can_change_skin",
+        "binding_name_override": "#enabled"
+      }
+    ]
+  },
+
+  "button_template@button_mcjava.button": {
+    "focus_identifier": "$pressed_button_name",
+    "focus_change_right": "$focus_override_right",
+    "focus_change_left": "$pressed_button_name"
+  },
+
+  "return_to_game_button@pause_menu_mcjava.button_template": {
+    "$pressed_button_name": "button.menu_continue",
+    "$button_text": "menu.returnToGame",
+    "$button_focus_precedence": 1,
+    "focus_change_up": "button.menu_quit",
+    "$focus_override_right": "change_skin_button"
+  },
+
+  "player_permission_button@button_mcjava.button": {
+    "size": [ 98, 20],
+    "$button_text": "Permission",
+    "$button_tts_header": "accessibility.pause.permissions",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_permission",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.menu_permission",
+        "mapping_type": "focused"
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "players_collection"
+      },
+      {
+        "binding_name": "#permissions_button_enabled",
+        "binding_name_override": "#enabled",
+        "binding_type":  "collection",
+        "binding_collection_name":  "players_collection"
+      }
+    ]
+  },
+
+  "players_list_button@toggle_mcjava.toggle_button": {
+    "$toggle_index": 1,
+    "size": [98, 20],
+    "$toggle_button_text": "Players",
+    "$toggle_control_name": "players_list_view",
+    "$toggle_button_name": "pause_menu"
+  },
+
+  "take_screenshot_button@button_mcjava.button": {
+    "$pressed_button_name": "button.screenshot",
+    "$button_tts_header": "key.screenshot",
+    "size": [ 98, 20],
+    "$button_text": "menu.takeScreenshot.short",
+    "sound_name": "random.screenshot"
+  },
+
+  "settings_button@pause_menu_mcjava.button_template": {
+    "$pressed_button_name": "button.menu_settings",
+    "$button_text": "menu.settings",
+    "size": [98, 20],
+    "$focus_override_right": "change_skin_button"
+  },
+
+  "feedback_button@pause_menu_mcjava.button_template": {
+    "$pressed_button_name": "button.menu_feedback",
+    "$button_text": "feedbackScreen.button",
+    "size": [98, 20],
+    "enabled": "(not $education_edition)"
+  },
+
+  "invite_players_button@button_mcjava.button": {
+    "$pressed_button_name": "button.menu_invite_players",
+    "$button_text": "pauseScreen.invite",
+    "size": [150, 20],
+    "bindings": [
+      {
+        "binding_name": "#invite_button_visible",
+        "binding_name_override": "#visible",
+        "binding_type": "global"
+      },
+      {
+        "binding_name": "#invite_button_enabled",
+        "binding_name_override": "#enabled"
+      }
+    ]
+  },
+
+  "quit_button@pause_menu_mcjava.button_template": {
+    "$pressed_button_name": "button.menu_quit",
+    "$button_text": "pauseScreen.quit",
+    "focus_change_down": "button.menu_continue",
+    "$focus_override_right": "change_skin_button",
+    "variables": [
+      {
+        "requires": "$is_secondary_client",
+        "$button_text": "pauseScreen.secondaryClientLeave"
+      }
+    ]
+  },
+
+  "buy_button@pause_menu_mcjava.button_template": {
+    "$pressed_button_name": "button.menu_buy_game",
+    "$button_text": "trial.pauseScreen.buyGame",
+    "ignored": "(not $trial or $is_secondary_client)",
+    "bindings": [
+      {
+        "binding_name": "#is_trial_version",
+        "binding_name_override": "#visible",
+        "binding_type": "global"
+      }
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+/********************************************************
++*   (c) Mojang. All rights reserved                       *
++*   (c) Microsoft. All rights reserved.                   *
++*********************************************************/
+{
+  "namespace": "anvil",
+
+  "anvil_screen@common_mcjava.inventory_screen_common": {
+    "$close_on_player_hurt|default": true,
+    "close_on_player_hurt": "$close_on_player_hurt",
+    "force_render_below": "$activate_force_render_below",
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "anvil_mcjava.anvil_screen_content_panel",
+        "$screen_background": "common_mcjava.screen_container_background"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "anvil_mcjava.anvil_screen_content_panel",
+        "$screen_background": "common_mcjava.screen_container_background"
+      }
+    ]
+  }
+}

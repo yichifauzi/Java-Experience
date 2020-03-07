@@ -1,0 +1,30 @@
+{
+  "namespace": "persona",
+  
+  "emote_wheel_screen@common_mcjava.base_screen": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_autocomplete",
+        "to_button_id": "button.rebind_mode",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.emote_selected",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.controller_secondary_select",
+        "to_button_id": "button.dressing_room",
+        "mapping_type": "global"
+      }
+    ],
+    "$screen_content": "emote_wheel_mcjava.emote_wheel_screen_content_panel",
+    "gamepad_cursor_deflection_mode":  true
+  }
+}

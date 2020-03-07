@@ -1,0 +1,16 @@
+{
+  "namespace": "invite",
+
+  "invite_screen@common_mcjava.base_screen": {
+    "type": "screen",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      }
+    ],
+    "$screen_content": "invite_mcjava.invite_screen_content_panel",
+    "$screen_bg_content": "common_mcjava.dirt_background"
+  }
+}

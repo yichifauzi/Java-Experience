@@ -1,0 +1,454 @@
+/* By @FMarquesPTO. All rights reserved. */
+{
+  "namespace": "toggle_mcjava",
+
+  "base_toggle": {
+    "type": "panel",
+    "size": [150, 20],
+    /* These states are for passing the button state to the button content */
+    "$checked_state|default": false,
+    "$unchecked_state|default": false,
+    "$checked_hover_state|default": false,
+    "$unchecked_hover_state|default": false,
+    "$unchecked_disabled_state|default": false,
+    "$checked_disabled_state|default": false,
+    /* Content */
+    "$toggle_type|default": "toggle_mcjava.toggle_state_panel",
+    "$toggle_content|default": "toggle_mcjava.toggle_text_panel",
+    "$toggle_background|default": "toggle_mcjava.resizing_toggle_background_panel",
+    "$texture_src|default": "assets/minecraft/textures/gui/widgets",
+    "$bg_unchecked_src|default": "button_mcjava.button_default",
+    "$bg_checked_src|default": "button_mcjava.button_default",
+    "$bg_unchecked_hover_src|default": "button_mcjava.button_hover",
+    "$bg_checked_hover_src|default": "button_mcjava.button_hover",
+    "$bg_unchecked_disabled_src|default": "button_mcjava.button_disabled",
+    "$bg_checked_disabled_src|default": "button_mcjava.button_disabled",
+    "$text_color|default": "$button_default_text_color",
+    "$text_disabled_color|default": "$button_disabled_text_color",
+    "$state_unchecked_text|default": "options.off",
+    "$state_checked_text|default": "options.on",
+    "controls": [
+      {
+        "base@common_mcjava.toggle": {
+          /* States */
+          "checked_locked_control": "checked_disabled",
+          "unchecked_locked_control": "unchecked_disabled",
+          "checked_locked_hover_control": "checked_disabled",
+          "unchecked_locked_hover_control": "unchecked_disabled",
+          /* #Ended */
+          "variables": [
+            {
+              "requires": "(not $toggle_enabled_binding_name or $disabled)",
+              "$toggle_enabled_binding_name": "#not_data_bound",
+              "$toggle_enabled_binding_type": "none"
+            }
+          ],
+          "$state_binding_name|default": "$toggle_binding_name",
+          "$enabled_binding_name|default": "$toggle_enabled_binding_name",
+          "$toggle_enabled_binding_type|default": "global",
+          "$binding_type": "global",
+          "$binding_condition": "once",
+          "$enable_directional_toggling": false,
+          /* Needs :/ */
+          "$toggle_bindings": [
+            {
+              "binding_type": "$toggle_binding_type",
+              "binding_condition": "$toggle_binding_condition",
+              "binding_collection_name": "$toggle_grid_collection_name",
+              "binding_name": "$state_binding_name",
+              "binding_name_override": "#toggle_state"
+            },
+            {
+              "binding_type": "$enabled_binding_type",
+              "binding_condition": "$toggle_enabled_binding_condition",
+              "binding_collection_name": "$toggle_grid_collection_name",
+              "binding_name": "$enabled_binding_name",
+              "binding_name_override": "#enabled"
+            },
+            {
+              "binding_type": "$toggle_collection_details_type",
+              "binding_collection_name": "$toggle_collection_detail_name"
+            },
+            {
+              "binding_type": "$toggle_tts_header_binding_type",
+              "binding_condition": "$toggle_tts_header_binding_condition",
+              "binding_collection_name": "$toggle_tts_header_binding_collection_name",
+              "binding_name": "$toggle_tts_header"
+            },
+            {
+              "binding_type": "$toggle_tts_value_binding_type",
+              "binding_condition": "$toggle_tts_value_binding_condition",
+              "binding_collection_name": "$toggle_tts_value_binding_collection_name",
+              "binding_name": "$toggle_tts_override_toggle_value"
+            },
+            {
+              "binding_type": "$toggle_tts_enabled_binding_type",
+              "binding_name": "#tts_enabled",
+              "binding_name_override": "#focus_enabled"
+            }
+          ],
+           /* #Ended */
+          "controls": [
+            {
+              "unchecked@$toggle_type": {
+                "$img_src": "$bg_unchecked_src",
+                "$toggle_state_text": "$state_unchecked_text",
+                "$unchecked_state": true,
+                "$toggle_state": "unchecked",
+                "layer": 2
+              }
+            },
+            {
+              "checked@$toggle_type": {
+                "$img_src": "$bg_checked_src",
+                "$toggle_state_text": "$state_checked_text",
+                "$checked_state": true,
+                "$toggle_state": "checked",
+                "layer": 3
+              }
+            },
+            {
+              "unchecked_hover@$toggle_type": {
+                "$img_src": "$bg_unchecked_hover_src",
+                "$toggle_state_text": "$state_unchecked_text",
+                "$unchecked_hover_state": true,
+                "$toggle_state": "unchecked_hover",
+                "layer": 3
+              }
+            },
+            {
+              "checked_hover@$toggle_type": {
+                "$img_src": "$bg_checked_hover_src",
+                "$toggle_state_text": "$state_checked_text",
+                "$checked_hover_state": true,
+                "$toggle_state": "checked_hover",
+                "layer": 4
+              }
+            },
+            {
+              "unchecked_disabled@$toggle_type": {
+                "$img_src": "$bg_unchecked_disabled_src",
+                "$text_color|default": "$text_disabled_color",
+                "$toggle_state_text": "$state_unchecked_text",
+                "$unchecked_disabled_state": true,
+                "$toggle_state": "unchecked_disabled",
+                "layer": 1
+              }
+            },
+            {
+              "checked_disabled@$toggle_type": {
+                "$img_src": "$bg_checked_disabled_src",
+                "$text_color|default": "$text_disabled_color",
+                "$toggle_state_text": "$state_checked_text",
+                "$unchecked_disabled_state": true,
+                "$toggle_state": "checked_disabled",
+                "layer": 1
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "base_toggle_button": {
+    "type": "panel",
+    "size": [150, 20],
+    /* These states are for passing the button state to the button content */
+    "$checked_state|default": false,
+    "$unchecked_state|default": false,
+    "$checked_hover_state|default": false,
+    "$unchecked_hover_state|default": false,
+    "$unchecked_disabled_state|default": false,
+    "$checked_disabled_state|default": false,
+    /* Content */
+    "$toggle_button_type|default": "toggle_mcjava.toggle_button_state_panel",
+    "$toggle_button_content|default": "toggle_mcjava.toggle_button_label",
+    "$toggle_button_background|default": "toggle_mcjava.resizing_toggle_button_background_panel",
+    "$texture_src|default": "assets/minecraft/textures/gui/widgets",
+    "$bg_unchecked_src|default": "button_mcjava.button_default",
+    "$bg_checked_src|default": "button_mcjava.button_default",
+    "$bg_unchecked_hover_src|default": "button_mcjava.button_hover",
+    "$bg_checked_hover_src|default": "button_mcjava.button_hover",
+    "$bg_unchecked_disabled_src|default": "button_mcjava.button_disabled",
+    "$bg_checked_disabled_src|default": "button_mcjava.button_disabled",
+    "$text_color|default": "$button_default_text_color",
+    "$text_disabled_color|default": "$button_disabled_text_color",
+    "controls": [
+      {
+        "$toggle_control_name@common_mcjava.toggle": {
+          /* States */
+          "checked_locked_control": "checked_disabled",
+          "unchecked_locked_control": "unchecked_disabled",
+          "checked_locked_hover_control": "checked_disabled",
+          "unchecked_locked_hover_control": "unchecked_disabled",
+          /* #Ended */
+          "toggle_group_forced_index": "$toggle_index",
+          "radio_toggle_group": "(not $toggle_button_ui)",
+          "toggle_name": "$toggle_button_name",
+          "$toggle_button_ui|default": false,
+          "$toggle_index|default": -1,
+          "$toggle_button_name|default": "",
+          "controls": [
+            {
+              "checked@$toggle_button_type": {
+                "$img_src": "$bg_checked_src",
+                "$checked_state": true,
+                "$toggle_button_state": "checked",
+                "layer": 3
+              }
+            },
+            {
+              "unchecked@$toggle_button_type": {
+                "$img_src": "$bg_unchecked_src",
+                "$unchecked_state": true,
+                "$toggle_button_state": "unchecked",
+                "layer": 3
+              }
+            },
+            {
+              "checked_hover@$toggle_button_type": {
+                "$img_src": "$bg_checked_hover_src",
+                "$text_color": "$text_default_color",
+                "$checked_hover_state": true,
+                "$toggle_button_state": "checked_hover",
+                "layer": 4
+              }
+            },
+            {
+              "unchecked_hover@$toggle_button_type": {
+                "$img_src": "$bg_unchecked_hover_src",
+                "$unchecked_hover_state": true,
+                "$toggle_button_state": "unchecked_hover",
+                "layer": 4
+              }
+            },
+            {
+              "checked_disabled@$toggle_button_type": {
+                "$img_src": "$bg_checked_disabled_src",
+                "$checked_disabled_state": true,
+                "$toggle_button_state": "checked_disabled",
+                "layer": 1
+              }
+            },
+            {
+              "unchecked_disabled@$toggle_button_type": {
+                "$img_src": "$bg_unchecked_disabled_src",
+                "$text_color": "$text_disabled_color",
+                "$unchecked_disabled_state": true,
+                "$toggle_button_state": "unchecked_disabled"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+
+  /* State Content */
+
+  "toggle_state_panel": {
+    "type": "panel",
+    "size": ["100%", "100%"],
+    "controls": [
+      { "$toggle_background@$toggle_background": {} },
+      {
+        "content": {
+          "type": "panel",
+          "size": "$toggle_content_size",
+          "$toggle_content_size|default": ["100%", "100%"],
+          "layer": 3,
+          "controls": [
+            { "$toggle_content@$toggle_content": {} }
+          ]
+        }
+      }
+    ]
+  },
+
+  "toggle_button_state_panel": {
+    "type": "panel",
+    "size": ["100%", "100%"],
+    "controls": [
+      { "$toggle_button_background@$toggle_button_background": {} },
+      {
+        "content": {
+          "type": "panel",
+          "size": "$toggle_button_content_size",
+          "$toggle_button_content_size|default": ["100%", "100%"],
+          "layer": 3,
+          "controls": [
+            { "$toggle_button_content@$toggle_button_content": {} }
+          ]
+        }
+      }
+    ]
+  },
+
+  "resizing_toggle_background_panel@button_mcjava.resizing_button_background_panel": {
+  },
+
+  "resizing_toggle_button_background_panel@button_mcjava.resizing_button_background_panel": {
+  },
+
+  "toggle_text_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%c", 10 ],
+    "offset": [0.5, 0],
+    "$toggle_text_color|default": "$text_color",
+    "$toggle_state_text_color|default": "$text_color",
+    "$text_max_size": [ "default", "default" ],
+    "$show_argument|default": true,
+    "controls": [
+      {
+        "toggle_label@button_mcjava.button_label": {
+          "text": "$toggle_text",
+          "color": "$toggle_text_color",
+          "bindings": "$toggle_text_bindings",
+          "visible": "$show_argument",
+          "$toggle_text_bindings|default": []
+        }
+      },
+      {
+        "space": {
+          "type": "label",
+          "text": ": ",
+          "visible": "$show_argument",
+          "shadow": true
+        }
+      },
+      {
+        "toggle_state_text@button_mcjava.button_label": {
+          "text": "$toggle_state_text",
+          "color": "$toggle_state_text_color",
+          "bindings": "$toggle_state_text_bindings",
+          "$toggle_toggle_state_text_bindings|default": []
+        }
+      }
+    ]
+  },
+
+  "toggle_button_label@button_mcjava.button_label": {
+    "text": "$toggle_button_text",
+    "bindings": "$text_bindings",
+    "$text_bindings|default": []
+  },
+
+  /* Toggles */
+
+  "toggle@toggle_mcjava.base_toggle": {
+    "$toggle_name|default": "",
+    "$toggle_text|default": ""
+  },
+
+  "toggle_button@toggle_mcjava.base_toggle_button": {
+    "$toggle_control_name|default": "this_thing",
+    "$toggle_button_text|default": ""
+  }
+}
+
+  /* "toggle_text_panel": {
+    "type": "panel",
+    "variables": [
+      {
+        "requires": "($toggle_type = boolean)",
+        "$toggle_text": "toggle_mcjava.boolean_toggle_text_panel"
+      },
+      {
+        "requires": "($toggle_type = multi)",
+        "$toggle_text": "toggle_mcjava.multi_toggle_text_panel"
+      },
+      {
+        "requires": "($toggle_type = alone)",
+        "$toggle_text": "toggle_mcjava.toggle_label"
+      }
+    ],
+    "$toggle_type|default": "boolean",
+    "$spacer|default": false,
+    "$space|default": " ",
+    "$argument_text|default": ": ",
+    "controls": [
+      { "$toggle_text@$toggle_text": {} }
+    ]
+  },
+
+  
+
+  "multi_toggle_text_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%c", 10 ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "offset": [0.5, 0],
+    "$label_text_color|default": "$text_color",
+    "$action_text_color|default": "$text_color",
+    "$action_bindings|default": [],
+    "$label_bindings|default": [],
+    "$action_text|default": "",
+    "controls": [
+      {
+        "option_label@toggle_mcjava.base_text": {
+          "text": "$option_label",
+          "color": "$label_text_color",
+          "bindings": "$label_bindings"
+        }
+      },
+      { "space@toggle_mcjava.space": {} },
+      { "argument@toggle_mcjava.argument": {} },
+      {
+        "action_text@toggle_mcjava.base_text": {
+          "text": "$action_text",
+          "color": "$action_text_color",
+          "bindings": "$action_bindings"
+        }
+      }
+    ]
+  },
+
+  "toggle_label@base_text": {
+    "offset": "$text_offset",
+    "anchor_from": "$text_anchor",
+    "anchor_to": "$text_anchor",
+    "max_size": "$text_max_size",
+    "text_alignment": "$text_alignment",
+    "$text_anchor|default": "center",
+    "$text_offset|default": [0.5, 0],
+    "$text_max_size|default": [ "100%", 10 ],
+    "$text_alignment|default": "center"
+  },
+
+  "base_text": {
+    "type": "label",
+    "text": "$option_label",
+    "color": "$text_color",
+    "font_type": "$text_font_type",
+    "font_size": "$text_font_size",
+    "font_scale_factor": "$text_font_scale",
+    "shadow": "$text_shadow",
+    "size": "$text_size",
+    "alpha": "$text_alpha",
+    "locked_alpha": "$text_locked_alpha",
+    "layer": "$text_zindex",
+    "$text_font_type|default": "default",
+    "$text_font_size|default": "normal",
+    "$text_font_scale|default": 1.0,
+    "$text_shadow|default": true,
+    "$text_size|default": [ "default", "default" ],
+    "$text_alpha|default": 1.0,
+    "$text_locked_alpha|default": 1.0,
+    "$text_zindex|default": 1.0
+  },
+
+  "space@toggle_mcjava.base_text": {
+    "text": "$space",
+    "ignored": "(not $spacer)"
+  },
+
+  "argument@toggle_mcjava.base_text": {
+    "text": "$argument_text",
+    "ignored": "$spacer"
+  }
+} */

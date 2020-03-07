@@ -1,0 +1,28 @@
+Hud - Improve Rainbow Jukebox Text
+
+Maybe
+  #slider_value for gui scale multioption
+  menu tab btn mapg
+  controller scope
+  property bags
+  source and target
+  book -> collection_index or toggle_name
+
+Textures
+  Move blocks and items to "assets/minecraft/textures/"
+
+Hardcore
+
+Death Menu -> Use Immediatly Respawn Bindings or try something else
+
+Slider -> Fix 8px
+
+Recipe Book Pages Numbers
+
+try grid_dimension/collection_index/lenght = 3 or >
+
+///////
+
+binding name = or not source property name
+
+Organize text_input.json file

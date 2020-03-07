@@ -1,0 +1,13 @@
+/********************************************************
++*   (c) Mojang. All rights reserved                    *
++*   (c) Microsoft. All rights reserved.                *
++********************************************************/
+
+{
+  "namespace": "braze",
+  
+  "braze_screen@common_mcjava.base_screen": {
+    "$screen_content": "braze_mcjava.braze_screen_content_panel",
+    "$screen_background": "common_mcjava.dirt_background"
+  }
+}

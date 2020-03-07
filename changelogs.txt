@@ -1,0 +1,80 @@
+v2.0.0
+Updated chat
+Removed 'v.' from Game Version
+Double click for worlds and servers
+Screenshot
+Changed backup warning from red to gold color
+Updated cretive inventory to 1.15
+Chat|Chat Settings
+Fixed layers
+Fixed villager trade2 images
+Fixed creative inventory scroll
+Fixed Realms buttons
+Some small screens
+Storage Managment
+Fixed some UI[ERROR]s
+...
+Moved all block and items textures to "assets/minecraft/textures/"
+Moved all items and items textures to "assets/minecraft/textures/"
+Removed Safe Zone. However, you can enabled for hud in "_global_variables.json" (It'll be for gamepad tooltips)
+Note:
+  .tga images and glass pane top are in "textures/block" and "textures/item"
+
+V1.4.0
+Play
+Store
+Resolutions
+Permissions
+Invite
+Realms Invitations
+
+V1.3.0
+World Create and Edit
+Settings
+Custom Popups for every settings section and pause menu
+Command Block
+Structure Block
+Pause Menu
+Seed Picker
+Content Log History
+End Poema
+Credits
+World Templates
+Create World Upsell
+
+V1.2.0
+Add External Server
+Book
+Disconnect
+Toast
+Mob Effects
+Chat
+Beacon
+Cartography Table
+Enchanting Table
+Loom
+Stonecutter
+Villager Trade 2 (and 1 ,-, idk why)
+
+V1.1.0
+Purple Border like or as, who knows, Java Edition
+Death
+In Bed
+Chests
+Redstone (Dispenser, Dropper and Hopper)
+Anvil
+Horse
+Furnace
+Brewing Stand
+Custom Popups for Main Menu and Death
+Loadings
+
+V1.0.0
+Font
+Texts (Only English and Portuguese)
+Splashes
+Click and Enchant Sounds
+Main Menu
+Hud
+Removed Beta Text
+Sign

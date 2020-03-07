@@ -1,0 +1,74 @@
+/* By @FMarquesPTO. All rights reserved. */
+{
+  "namespace": "tools_tab_mcjava",
+
+  "1_15_tools_items_stack_panel": {
+    "type": "stack_panel",
+    "size": ["100%", "100%c"],
+
+    "$row_1_item_1": 592,
+    "$row_1_item_2": 587,
+    "$row_1_item_3": 582,
+    "$row_1_item_4": 662,
+    "$row_1_item_5": 590,
+    "$row_1_item_6": 585,
+    "$row_1_item_7": 580,
+    "$row_1_item_8": 591,
+    "$row_1_item_9": 586,
+
+    "$row_2_item_1": 581,
+    "$row_2_item_2": 594,
+    "$row_2_item_3": 589,
+    "$row_2_item_4": 584,
+    "$row_2_item_5": 593,
+    "$row_2_item_6": 588,
+    "$row_2_item_7": 583,
+    "$row_2_item_8": 595,
+    "$row_2_item_9": 596,
+
+    "$row_3_item_1": 597,
+    "$row_3_item_2": 598,
+    "$row_3_item_3": 599,
+    "$row_3_item_4": 665,
+    "$row_3_item_5": 658,
+    "$row_3_item_6": 664,
+    "$row_3_item_7": 661,
+    "$row_3_item_8": 1008,
+    "$row_3_item_9": 1009,
+
+    "$row_4_item_1": 1010,
+    "$row_4_item_2": 1011,
+    "$row_4_item_3": 1012,
+    "$row_4_item_4": 1013,
+    "$row_4_item_5": 1014,
+    "$row_4_item_6": 1015,
+    "$row_4_item_7": 1016,
+    "$row_4_item_8": 1017,
+    "$row_4_item_9": 1018,
+
+    "$row_5_item_1": 1019,
+    "$row_5_item_2": 1029,
+    "$row_5_item_3": 1030,
+    "$row_5_item_4": 1031,
+    "$row_5_item_5": 1032,
+    "$row_5_item_6": 1033,
+    "$row_5_item_7": 1034,
+    "$row_5_item_8": 1037,
+    "$row_5_item_9": 663,
+
+    "$row_6_item_1": 1107,
+
+    "controls": [ { "s@tools_tab_mcjava.1_15_tools_items_stacker": {} } ]
+  },
+
+  "1_15_tools_items_stacker@new_creative_tabs_content_mcjava.stack": {
+    "controls": [
+      { "row_1@new_creative_tabs_content_mcjava.row": { "$index_one": "$row_1_item_1", "$index_two": "$row_1_item_2", "$index_three": "$row_1_item_3", "$index_four": "$row_1_item_4", "$index_five": "$row_1_item_5", "$index_six": "$row_1_item_6", "$index_seven": "$row_1_item_7", "$index_eight": "$row_1_item_8", "$index_nine": "$row_1_item_9" } },
+      { "row_2@new_creative_tabs_content_mcjava.row": { "$index_one": "$row_2_item_1", "$index_two": "$row_2_item_2", "$index_three": "$row_2_item_3", "$index_four": "$row_2_item_4", "$index_five": "$row_2_item_5", "$index_six": "$row_2_item_6", "$index_seven": "$row_2_item_7", "$index_eight": "$row_2_item_8", "$index_nine": "$row_2_item_9" } },
+      { "row_3@new_creative_tabs_content_mcjava.row": { "$index_one": "$row_3_item_1", "$index_two": "$row_3_item_2", "$index_three": "$row_3_item_3", "$index_four": "$row_3_item_4", "$index_five": "$row_3_item_5", "$index_six": "$row_3_item_6", "$index_seven": "$row_3_item_7", "$index_eight": "$row_3_item_8", "$index_nine": "$row_3_item_9" } },
+      { "row_4@new_creative_tabs_content_mcjava.row": { "$index_one": "$row_4_item_1", "$index_two": "$row_4_item_2", "$index_three": "$row_4_item_3", "$index_four": "$row_4_item_4", "$index_five": "$row_4_item_5", "$index_six": "$row_4_item_6", "$index_seven": "$row_4_item_7", "$index_eight": "$row_4_item_8", "$index_nine": "$row_4_item_9" } },
+      { "row_5@new_creative_tabs_content_mcjava.row": { "$index_one": "$row_5_item_1", "$index_two": "$row_5_item_2", "$index_three": "$row_5_item_3", "$index_four": "$row_5_item_4", "$index_five": "$row_5_item_5", "$index_six": "$row_5_item_6", "$index_seven": "$row_5_item_7", "$index_eight": "$row_5_item_8", "$index_nine": "$row_5_item_9" } },
+      { "row_5@new_creative_tabs_content_mcjava.row": { "$index_one": "$row_6_item_1", "$template_two": "container_mcjava.none", "$template_three": "container_mcjava.none", "$template_four": "container_mcjava.none", "$template_five": "container_mcjava.none", "$template_six": "container_mcjava.none", "$template_seven": "container_mcjava.none", "$template_eight": "container_mcjava.none", "$template_nine": "container_mcjava.none" } }
+    ]
+  }
+}

@@ -1,0 +1,154 @@
+/* By @FMarquesPTO. All rights reserved. */
+{
+  "namespace": "mouse_settings_mcjava",
+
+  "mouse_settings_content_panel@common_mcjava.scroll_screen": {
+    "$top_content": "mouse_settings_mcjava.top_content",
+    "$scrolling_content": "mouse_settings_mcjava.scroll_content",
+    "$bottom_content": "mouse_settings_mcjava.bottom_content"
+  },
+
+  "top_content": {
+    "type": "panel",
+    "controls": [
+      { "title@common_mcjava.title": { "offset": [0, 7], "text": "options.controls.title" } }
+    ]
+  },
+
+  "scroll_content": {
+    "type": "stack_panel",
+    "size": [310, "100%c"],
+    "controls": [
+      { "space_top@common_mcjava.vspace": {} },
+      {
+        "stack_zero@common_mcjava.stack": {
+          "controls": [
+            { "sensitivity@mouse_settings_mcjava.sensitivity_slider": {} },
+            { "fill@common_mcjava.hfill": {} },
+            { "invert_y_axis@mouse_settings_mcjava.invert_y_axis_toggle": {} }
+          ]
+        }
+      },
+      { "space_zero@common_mcjava.vspace": {} },
+      {
+        "stack_one@common_mcjava.stack": {
+          "ignored": "($is_holographic or $education_edition)",
+          "controls": [
+            { "full_keyboard_gameplay@mouse_settings_mcjava.full_keyboard_gameplay_toggle": {} },
+            { "fill@common_mcjava.hfill": {} }
+          ]
+        }
+      },
+      {
+        "stack_two@common_mcjava.stack": {
+          "ignored": "($is_holographic or not $education_edition)",
+          "controls": [
+            { "full_keyboard_gameplay@mouse_settings_mcjava.full_keyboard_gameplay_toggle": {} },
+            { "fill@common_mcjava.hfill": {} },
+            { "hide_keyboard_tooltips@mouse_settings_mcjava.hide_keyboard_tooltips_toggle": {} }
+          ]
+        }
+      },
+      {
+        "stack_three@common_mcjava.stack": {
+          "ignored": "(not $is_holographic or $education_edition)",
+          "controls": [
+            { "full_keyboard_gameplay@mouse_settings_mcjava.full_keyboard_gameplay_toggle": {} },
+            { "fill@common_mcjava.hfill": {} },
+            { "vr_sensitivity@mouse_settings_mcjava.vr_sensitivity_slider": {} }
+          ]
+        }
+      },
+      {
+        "stack_four@common_mcjava.stack": {
+          "ignored": "(not $is_holographic or not $education_edition)",
+          "controls": [
+            { "full_keyboard_gameplay@mouse_settings_mcjava.full_keyboard_gameplay_toggle": {} },
+            { "fill@common_mcjava.hfill": {} },
+            { "hide_keyboard_tooltips@mouse_settings_mcjava.hide_keyboard_tooltips_toggle": {} }
+          ]
+        }
+      },
+      { "space_bottom@common_mcjava.vspace": {} }
+    ]
+  },
+  
+  "bottom_content": {
+    "type": "panel",
+    "size": [ 200, 32],
+    "controls": [
+      { "back@mouse_settings_mcjava.mouse_button": { "offset": [0, -0.5] } }
+    ]
+  },
+
+  /* Content */
+
+  "mouse_button@toggle_mcjava.toggle_button": {
+    "$toggle_button_name": "mouse_settings",
+    "size": [200, 20],
+    "$toggle_index": 0,
+    "$toggle_button_text": "gui.done",
+    "$cancel_mapping": true,
+    "$toggle_control_name": "return"
+  },
+
+  "sensitivity_slider@slider_mcjava.slider": {
+    "$slider_text": "#keyboard_mouse_sensitivity_slider_label",
+    "$slider_name": "keyboard_mouse_sensitivity",
+    "$slider_value_binding_name": "#keyboard_mouse_sensitivity",
+    "$slider_tts_text_value": "#keyboard_mouse_sensitivity_text_value",
+    "$slider_enabled_binding_name": "#keyboard_mouse_sensitivity_enabled",
+    "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+    "$slider_text_bindings": [
+      {
+        "binding_name": "$slider_text"
+      }
+    ]
+  },
+
+  "vr_sensitivity_slider@slider_mcjava.slider": {
+    "$slider_text": "#vr_ui_mouse_sensitivity_slider_label",
+    "$slider_name": "vr_ui_mouse_sensitivity",
+    "$slider_value_binding_name": "#vr_ui_mouse_sensitivity",
+    "$slider_tts_text_value": "#vr_ui_mouse_sensitivity_text_value",
+    "$slider_enabled_binding_name": "#vr_ui_mouse_sensitivity_enabled",
+    "$slider_text_bindings": [
+      {
+        "binding_name": "$slider_text"
+      }
+    ]
+  },
+
+  "invert_y_axis_toggle@toggle_mcjava.toggle": {
+    "$toggle_text": "options.invertYAxis",
+    "$toggle_binding_name": "#keyboard_mouse_invert_y_axis",
+    "$toggle_enabled_binding_name": "#keyboard_mouse_invert_y_axis_enabled",
+    "$toggle_name": "keyboard_mouse_invert_y_axis",
+    "$focus_override_right": "FOCUS_OVERRIDE_STOP"
+  },
+
+  "toggle_crouch_toggle@toggle_mcjava.toggle": {
+    "ignored": true, // Remove this line when Options::TOGGLE_CROUCH actually affects crouch behavior (User Story 30117)
+    "$toggle_text": "options.toggleCrouch",
+    "$toggle_binding_name": "#keyboard_mouse_toggle_crouch",
+    "$toggle_enabled_binding_name": "#keyboard_mouse_toggle_crouch_enabled",
+    "$toggle_name": "keyboard_mouse_toggle_crouch"
+  },
+
+  "full_keyboard_gameplay_toggle@toggle_mcjava.toggle": {
+    "$toggle_text": "options.fullKeyboardGameplay",
+    "$toggle_binding_name": "#keyboard_show_full_keyboard_options",
+    "$toggle_enabled_binding_name": "#keyboard_show_full_keyboard_options_enabled",
+    "$toggle_name": "keyboard_show_full_keyboard_options",
+    "$focus_override_right": "FOCUS_OVERRIDE_STOP"
+  },
+
+  "hide_keyboard_tooltips_toggle@toggle_mcjava.toggle": {
+    "ignored": "(not $education_edition)",
+    "$toggle_text": "options.hideKeyboardTooltips",
+    "$toggle_binding_name": "#hide_keyboard_tooltips",
+    "$toggle_enabled_binding_name": "#hide_keyboard_tooltips_enabled",
+    "$toggle_name": "hide_keyboard_tooltips",
+    "$focus_override_right": "FOCUS_OVERRIDE_STOP"
+  }
+}

@@ -1,0 +1,28 @@
+/********************************************************
++*   (c) Mojang. All rights reserved                       *
++*   (c) Microsoft. All rights reserved.                   *
++*********************************************************/
+{
+  "store_data_driven_screen@common_store.store_base_screen": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.controller_secondary_select",
+        "to_button_id": "button.search",
+        "mapping_type": "global",
+        "ignored": "$is_on_3p_server"
+      },
+      {
+        "from_button_id": "button.controller_select",
+        "to_button_id": "button.coin_wallet",
+        "mapping_type": "global"
+      }
+    ],
+    "$screen_content": "store_home_mcjava.store_home_screen_content_panel",
+    "$screen_background": "common_mcjava.dirt_background"
+  }
+}

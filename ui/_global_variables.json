@@ -1,0 +1,93 @@
+{
+  //Debug (DO NOT TOUCH ^-^)
+  "$gversion": "v1.14",
+  "$aux_id_finder": false,
+  "$force_render_helpers": false,
+  "$activate_force_render_below": "(not $game_pad)",
+
+  //Options
+
+  "$edition_logo": "java",
+  "$show_loading_screens_tips": false,
+  "$hide_beta_text": true,
+  "$ignore_flying_item_renderer_on_touch": false,
+
+  "$java_style": "new",
+  "$recipe_book": "on",
+  "$recipe_book_style": "pages",
+  "$creative_inventoy_style": "java",
+
+  //Texts
+  "$game_name": "Minecraft",
+  "$version_text": "#version",
+  "$development_text": "#development_version",
+  "$copyright_text": "Copyright Mojang AB. Do not distribute!",
+
+  //Text Colors
+  "$button_default_text_color": [0.99, 0.99, 0.99],
+  "$button_hover_text_color": [0.99, 0.99, 0.62],
+  "$button_disabled_text_color": [0.62, 0.62, 0.62],
+  "$button_locked_text_color": "$button_disabled_text_color",
+
+  "$header_text_color": [1.0, 1.0, 1.0],
+  "$header_information_text_color": [0.62, 0.62, 0.62],
+  "$information_text_color": [1.0, 1.0, 1.0],
+  "$secondary_information_text_color": [0.50, 0.50, 0.50],
+
+  "$death_background_gradient_top_color": [ 0.313, 0, 0, 0.37 ],
+  "$death_background_gradient_bottom_color": [ 0.5, 0.188, 0.188, 0.627 ],
+
+  "$experience_bar_text_color": [0.50, 1.0, 0.50],
+  "$experience_bar_border_color": [0.0, 0.0, 0.0],
+
+  "$book_title_text_color": [0.0, 0.0, 0.0],
+  "$book_author_text_color": [0.7, 0.7, 0.7],
+  "$book_warning_text_color": [0.0, 0.0, 0.0],
+  "$book_page_number_text_color": [0.0, 0.0, 0.0],
+  "$book_page_text_color": [0.0, 0.0, 0.0],
+
+  "$container_header_text_color": [0.25, 0.25, 0.25],
+  "$inventory_text_color": [0.25, 0.25, 0.25],
+  "$highlight_slot_color": [1.0, 1.0, 1.0],
+  "$red_highlight_slot_color": [ 1.0, 0.46, 0.46 ],
+
+  "$anvil_cost_success_text_color": [0.49, 0.99, 0.125],
+  "$anvil_cost_fail_text_color": [0.99, 0.35, 0.37],
+
+  //(              16x / 32x/  64x/ 128x/ 256x)
+  //Resolutions | 256x /512x/1024x/2048x/4096x | Original Idea by @CrisXolt
+  "$anvil_resolution": "256x",
+  "$beacon_resolution": "256x",
+  "$brewing_stand_resolution": "256x",
+  "$cartography_table_resolution": "256x",
+  "$chest_resolution": "256x",
+  "$shulker_box_resolution": "256x",
+  "$crafting_table_resolution": "256x",
+  "$creative_inventory_resolution": "256x",
+  "$dispenser_resolution": "256x",
+  "$hopper_resolution": "256x",
+  "$inventory_resolution": "256x",
+  "$enchanting_table_resolution": "256x",
+  "$furnace_resolution": "256x",
+  "$blast_furnace_resolution": "256x",
+  "$smoker_resolution": "256x",
+  "$grindstone_resolution": "256x",
+  "$horse_resolution": "256x",
+  "$loom_resolution": "256x",
+  "$stonecutter_resolution": "256x",
+  "$villager_resolution": "256x",
+  "$villager2_resolution": "256x",
+
+  "$advancements_resolution": "256x",
+  "$title_resolution": "256x",
+  "$widgets_resolution": "256x",
+  "$accessibility_resolution": "256x",
+  "$book_resolution": "256x",
+  "$realms_resolution": "256x",
+  "$options_background_resolution": "256x",
+  "$recipe_book_resolution": "256x",
+  "$icons_resolution": "256x",
+  "$bars_resolution": "256x",
+  "$selections_resolution": "256x",
+  "$toasts_resolution": "256x"
+}

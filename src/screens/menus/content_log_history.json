@@ -1,0 +1,106 @@
+/* By @FMarquesPTO. All rights reserved. */
+{
+  "namespace": "content_log_history_mcjava",
+
+  "content_log_history_screen_content_panel": {
+    "type": "panel",
+    "controls": [
+      { "title@common_mcjava.title": { "text": "contentLogHistory.title" } },
+      { "scroll@content_log_history_mcjava.scroll": {} },
+      { "footer_content_panel@content_log_history_mcjava.footer_content_panel": {} }
+    ]
+  },
+
+  "scroll@scrolling_mcjava.scrolling_panel": {
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [0, 32],
+    "size": [ "100%", "100% - 64px"],
+    "$dirt_scroll": true,
+    "$jump_to_bottom_on_update": true,
+    "$always_handle_scrolling": true,
+    "$scrolling_content": "content_log_history_mcjava.scrolling_content"
+  },
+
+  "scrolling_content": {
+    "type": "stack_panel",
+    "size": [310, "100%c" ],
+    "layer": 20,
+    "controls": [
+      { "messages@content_log_history_mcjava.messages_stack_panel": {} }
+    ]
+  },
+
+  "messages_stack_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "$scrolling_content_anchor_from": "bottom_left",
+    "$scrolling_content_anchor_to": "bottom_left",
+    "collection_name": "content_log_message",
+    "size": [ "100%", "default" ],
+    "factory": {
+      "name": "messages_factory",
+      "control_name": "content_log_message@content_log_history_mcjava.content_log_message_panel"
+    },
+    "bindings": [
+      {
+        "binding_name": "#messages_size",
+        "binding_type": "global",
+        "binding_name_override": "#collection_length"
+      }
+    ]
+  },
+
+  "content_log_message": {
+    "type": "label",
+    "color": "white",
+    "shadow": true,
+    "localize": false,
+    "size": [ "100%", "default" ],
+    "text": "#text",
+    "bindings": [
+      {
+        "binding_type": "collection",
+        "binding_name": "#content_log_text",
+        "binding_name_override": "#text",
+        "binding_collection_name": "content_log_message"
+      }
+    ]
+  },
+
+  "content_log_message_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      { "content_log_message@content_log_history_mcjava.content_log_message": { } }
+    ]
+  },
+
+  "content_log_message_panel_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%cm" ],
+    "controls": [
+      {
+        "content_log_message_panel@content_log_history_mcjava.content_log_message_panel": {
+        }
+      }
+    ]
+  },
+
+  "footer_content_panel": {
+    "type": "panel",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "size": [310, 37],
+    "controls": [
+      { "clipboard@content_log_history_mcjava.clipboard_button": {"offset": [-77, 0]} },
+      { "exit@common_mcjava.exit_button": { "size": [150, 20], "offset": [77, 0] } }
+    ]
+  },
+
+  "clipboard_button@button_mcjava.button": {
+    "size": [150, 20],
+    "$pressed_button_name": "button.copy_to_clipboard",
+    "$button_text": "contentLogHistory.copyToClipBoard"
+  }
+}

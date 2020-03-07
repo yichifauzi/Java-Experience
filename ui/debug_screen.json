@@ -1,0 +1,21 @@
+/********************************************************
++*   (c) Mojang. All rights reserved                       *
++*   (c) Microsoft. All rights reserved.                   *
++*********************************************************/
+{
+  "namespace": "debug_screen",
+
+  "debug_screen@common_mcjava.base_screen": {
+    "send_telemetry": false,
+    "screen_not_flushable": true,
+    "render_game_behind": true,
+    "is_showing_menu": false,
+    "low_frequency_rendering": true,
+    "is_modal": true,
+    "should_steal_mouse": false,
+    "render_only_when_topmost": false,
+    "screen_draws_last": true,
+    "always_accepts_input": true,
+    "$screen_content": "debug_screen_mcjava.debug_screen_content_panel"
+  }
+}

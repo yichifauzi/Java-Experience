@@ -1,0 +1,19 @@
+/********************************************************
++*   (c) Mojang. All rights reserved                       *
++*   (c) Microsoft. All rights reserved.                   *
++*********************************************************/
+{
+  "namespace": "world_templates",
+
+  "world_templates_screen@common_mcjava.base_screen": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      }
+    ],
+    "$screen_content": "world_templates_mcjava.world_templates_picker_content_panel",
+    "$screen_background": "common_mcjava.dirt_background"
+  }
+}

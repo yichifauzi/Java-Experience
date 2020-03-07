@@ -1,0 +1,24 @@
+/********************************************************
++*   (c) Mojang. All rights reserved                       *
++*   (c) Microsoft. All rights reserved.                   *
++*********************************************************/
+{
+  "namespace": "trade",
+
+  "trade_screen@common_mcjava.inventory_screen_common": {
+    "$screen_bg_content": "common_mcjava.screen_container_background",
+    "force_render_below": "$activate_force_render_below",
+    "$close_on_player_hurt|default": true,
+    "close_on_player_hurt": "$close_on_player_hurt",
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "villager_trade_mcjava.villager_trade_screen_content_panel"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "villager_trade_mcjava.villager_trade_screen_content_panel"
+      }
+    ]
+  }
+}

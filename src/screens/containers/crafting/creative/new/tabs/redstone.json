@@ -1,0 +1,168 @@
+/* By @FMarquesPTO. All rights reserved. */
+{
+  "namespace": "redstone_tab_mcjava",
+
+  /* 1.16 */
+
+  /* 1.15 */
+
+  "1_15_redstone_items_stack_panel": {
+    "type": "stack_panel",
+    "size": ["100%", "100%c"],
+
+    "$row_1_item_1": 1103,
+    "$row_1_item_2": 870,
+    "$row_1_item_3": 1105,
+    "$row_1_item_4": 1104,
+    "$row_1_item_5": 1106,
+    "$row_1_item_6": 1079,
+    "$row_1_item_7": 1094,
+    "$row_1_item_8": 1088,
+    "$row_1_item_9": 1089,
+
+    "$row_2_item_1": 1090,
+    "$row_2_item_2": 1092,
+    "$row_2_item_3": 1093,
+    "$row_2_item_4": 1094,
+    "$row_2_item_5": 1078,
+    "$row_2_item_6": 1086,
+    "$row_2_item_7": 71,
+    "$row_2_item_8": 72,
+    "$row_2_item_9": 73,
+
+    "$row_3_item_1": 74,
+    "$row_3_item_2": 75,
+    "$row_3_item_3": 76,
+    "$row_3_item_4": 27,
+    "$row_3_item_5": 28,
+    "$row_3_item_6": 29,
+    "$row_3_item_7": 30,
+    "$row_3_item_8": 31,
+    "$row_3_item_9": 32,
+
+    "$row_4_item_1": 885,
+    "$row_4_item_2": 1087,
+    "$row_4_item_3": 1080,
+    "$row_4_item_4": 1081,
+    "$row_4_item_5": 1082,
+    "$row_4_item_6": 1083,
+    "$row_4_item_7": 1084,
+    "$row_4_item_8": 1085,
+    "$row_4_item_9": 847,
+
+    "$row_5_item_1": 1095,
+    "$row_5_item_2": 1096,
+    "$row_5_item_3": 1098,
+    "$row_5_item_4": 1077,
+    "$row_5_item_5": 1101,
+    "$row_5_item_6": 1102,
+    "$row_5_item_7": 77,
+    "$row_5_item_8": 1097,
+    "$row_5_item_9": 70,
+
+    "$row_6_item_1": 64,
+    "$row_6_item_2": 65,
+    "$row_6_item_3": 66,
+    "$row_6_item_4": 67,
+    "$row_6_item_5": 68,
+    "$row_6_item_6": 69,
+    "$row_6_item_7": 1099,
+    "$row_6_item_8": 1100,
+    "$row_6_item_9": 1076,
+
+    "$row_7_item_1": 844,
+
+    "controls": [ { "@redstone_tab_mcjava.1_14_redstone_items_stacker": {} } ]
+  },
+
+  /* 1.14 */
+
+  "1_14_redstone_items_stack_panel": {
+    "type": "stack_panel",
+    "size": ["100%", "100%c"],
+
+    "$row_1_item_1": 1098,
+    "$row_1_item_2": 1065,
+    "$row_1_item_3": 1063,
+    "$row_1_item_4": 1066,
+    "$row_1_item_5": 1067,
+    "$row_1_item_6": 667,
+    "$row_1_item_7": 1057,
+    "$row_1_item_8": 1068,
+    "$row_1_item_9": 1500,
+
+    "$row_2_item_1": 658,
+    "$row_2_item_2": 1070,
+    "$row_2_item_3": 1069,
+    "$row_2_item_4": 674,
+    "$row_2_item_5": 1058,
+    "$row_2_item_6": 1059,
+    "$row_2_item_7": 1060,
+    "$row_2_item_8": 1061,
+    "$row_2_item_9": 1062,
+
+    "$row_3_item_1": 658,
+    "$row_3_item_2": 1070,
+    "$row_3_item_3": 1069,
+    "$row_3_item_4": 674,
+    "$row_3_item_5": 1058,
+    "$row_3_item_6": 1059,
+    "$row_3_item_7": 1060,
+    "$row_3_item_8": 1061,
+    "$row_3_item_9": 1062,
+
+    "$row_4_item_1": 658,
+    "$row_4_item_2": 1070,
+    "$row_4_item_3": 1069,
+    "$row_4_item_4": 674,
+    "$row_4_item_5": 1058,
+    "$row_4_item_6": 1059,
+    "$row_4_item_7": 1060,
+    "$row_4_item_8": 1061,
+    "$row_4_item_9": 1062,
+
+    "$row_5_item_1": 658,
+    "$row_5_item_2": 1070,
+    "$row_5_item_3": 1069,
+    "$row_5_item_4": 674,
+    "$row_5_item_5": 1058,
+    "$row_5_item_6": 1059,
+    "$row_5_item_7": 1060,
+    "$row_5_item_8": 1061,
+    "$row_5_item_9": 1062,
+
+    "$row_6_item_1": 658,
+    "$row_6_item_2": 1070,
+    "$row_6_item_3": 1069,
+    "$row_6_item_4": 674,
+    "$row_6_item_5": 1058,
+    "$row_6_item_6": 1059,
+    "$row_6_item_7": 1060,
+    "$row_6_item_8": 1061,
+    "$row_6_item_9": 1062,
+
+    "$row_7_item_1": 658,
+    "$row_7_item_2": 1070,
+    "$row_7_item_3": 1069,
+    "$row_7_item_4": 674,
+    "$row_7_item_5": 1058,
+    "$row_7_item_6": 1059,
+    "$row_7_item_7": 1060,
+    "$row_7_item_8": 1061,
+    "$row_7_item_9": 1062,
+
+    "controls": [ { "@redstone_tab_mcjava.1_14_redstone_items_stacker": {} } ]
+  },
+
+  "1_14_redstone_items_stacker@new_creative_tabs_content_mcjava.stack": {
+    "controls": [
+      { "row_1@new_creative_tabs_content_mcjava.row": { "$index_one": "$row_1_item_1", "$index_two": "$row_1_item_2", "$index_three": "$row_1_item_3", "$index_four": "$row_1_item_4", "$index_five": "$row_1_item_5", "$index_six": "$row_1_item_6", "$index_seven": "$row_1_item_7", "$index_eight": "$row_1_item_8", "$index_nine": "$row_1_item_9" } },
+      { "row_2@new_creative_tabs_content_mcjava.row": { "$index_one": "$row_2_item_1", "$index_two": "$row_2_item_2", "$index_three": "$row_2_item_3", "$index_four": "$row_2_item_4", "$index_five": "$row_2_item_5", "$index_six": "$row_2_item_6", "$index_seven": "$row_2_item_7", "$index_eight": "$row_2_item_8", "$index_nine": "$row_2_item_9" } },
+      { "row_3@new_creative_tabs_content_mcjava.row": { "$index_one": "$row_3_item_1", "$index_two": "$row_3_item_2", "$index_three": "$row_3_item_3", "$index_four": "$row_3_item_4", "$index_five": "$row_3_item_5", "$index_six": "$row_3_item_6", "$index_seven": "$row_3_item_7", "$index_eight": "$row_3_item_8", "$index_nine": "$row_3_item_9" } },
+      { "row_4@new_creative_tabs_content_mcjava.row": { "$index_one": "$row_4_item_1", "$index_two": "$row_4_item_2", "$index_three": "$row_4_item_3", "$index_four": "$row_4_item_4", "$index_five": "$row_4_item_5", "$index_six": "$row_4_item_6", "$index_seven": "$row_4_item_7", "$index_eight": "$row_4_item_8", "$index_nine": "$row_4_item_9" } },
+      { "row_5@new_creative_tabs_content_mcjava.row": { "$index_one": "$row_5_item_1", "$index_two": "$row_5_item_2", "$index_three": "$row_5_item_3", "$index_four": "$row_5_item_4", "$index_five": "$row_5_item_5", "$index_six": "$row_5_item_6", "$index_seven": "$row_5_item_7", "$index_eight": "$row_5_item_8", "$index_nine": "$row_5_item_9" } },
+      { "row_6@new_creative_tabs_content_mcjava.row": { "$index_one": "$row_6_item_1", "$index_two": "$row_6_item_2", "$index_three": "$row_6_item_3", "$index_four": "$row_6_item_4", "$index_five": "$row_6_item_5", "$index_six": "$row_6_item_6", "$index_seven": "$row_6_item_7", "$index_eight": "$row_6_item_8", "$index_nine": "$row_6_item_9" } },
+      { "row_7@new_creative_tabs_content_mcjava.row": { "$index_one": "$row_7_item_1", "$template_two": "container_mcjava.none", "$template_three": "container_mcjava.none", "$template_four": "container_mcjava.none", "$template_five": "container_mcjava.none", "$template_six": "container_mcjava.none", "$template_seven": "container_mcjava.none", "$template_eight": "container_mcjava.none", "$template_nine": "container_mcjava.none" } }
+    ]
+  }
+}

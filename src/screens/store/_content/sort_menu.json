@@ -1,0 +1,126 @@
+/* By @FMarquesPTO. All rights reserved. */
+{
+  "namespace": "sort_menu_mcjava",
+
+  "sort_menu_screen_content_panel@common.modal_area_panel_base": {
+    "layer": 100,
+    "$menu_cancel_button_id": "button.close_sort_menu",
+    "$close_bg_exit_button_name": "button.close_sort_menu",
+    "controls": [
+      { "background@store_content_mcjava.exit_background": {} },
+      { "sort_menu_main@sort_menu_mcjava.sort_menu_content_panel": {} }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#sort_screen_visible",
+        "binding_name_override": "#modal"
+      }
+    ]
+  },
+
+  "sort_menu_content_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [126, "100%" ],
+    "anchor_to": "top_middle",
+    "anchor_from": "top_middle",
+    "visible": false,
+    "offset": [84, 19],
+    "layer": 2,
+    "controls": [
+      { "sort_menu_content@sort_menu_mcjava.sort_menu_content": {} }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#sort_menu_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "sort_menu_content": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100%", "100%" ],
+    "layer": 2,
+    "controls": [
+      { "close_menu_panel@sort_menu_mcjava.close_menu_panel": {} },
+      {
+        "sort_scrolling_content_panel@common_store.filter_sort_submenu_scrolling_panel_section": {
+          "$filter_sort_scrolling_panel_size": [ "100%", "100%" ],
+          "$scrolling_content": "sort_menu_mcjava.sort_menu_toggles"
+        }
+      }
+    ]
+  },
+
+  "close_menu_panel": {
+    "type": "panel",
+    "size": [ "100%", 20 ],
+    "controls": [
+      {
+        "first_button_main@button_mcjava.button": {
+          "type": "button",
+          "size": [20, 20],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "$button_content": "store_content_mcjava.sort_button_content_panel",
+          "$pressed_button_name": "button.close_sort_menu"
+        }
+      }
+    ]
+  },
+
+  "sort_menu_toggle_panel": {
+    "type": "panel",
+    "size": ["100%", 20],
+    "controls": [
+      {
+        "sort_menu_toggle@store_content_mcjava.filter_sort_toggle": {
+          "$ignore_content_toggle_image": true
+        }
+      }
+    ]
+  },
+
+  "sort_menu_toggles": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100%", "100%c" ],
+    "anchor_to": "top_right",
+    "anchor_from": "top_right",
+    "$filter_sort_prefix": "sort_menu",
+    "controls": [
+      {
+        "relevance_toggle_panel": {
+          "type": "panel",
+          "size": [ "100%", 20 ],
+          "controls": [
+            {
+              "relevance_toggle@sort_menu_mcjava.sort_menu_toggle_panel": {
+                "size": [ "100%", 20 ],
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle",
+                "$filter_sort_prefix": "sort_relevance"
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#relevance_toggle_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "sort_toggle_grid@store_content_mcjava.filter_sort_grid_panel": {
+          "$filter_sort_prefix": "sort_menu",
+          "$filter_sort_grid_size": [ "100%", "default" ],
+          "$filter_sort_grid_item": "sort_menu_mcjava.sort_menu_toggle_panel",
+          "$content_toggle_label": "#sort_toggle_label"
+        }
+      }
+    ]
+  }
+}

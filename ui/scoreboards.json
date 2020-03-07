@@ -1,0 +1,34 @@
+{
+  "namespace": "scoreboard",
+
+  "players_unscored_grid_list@scoreboard.players_grid_list": {
+    "factory": {
+      "name": "unscored_list_factory",
+      "control_name": "scoreboard.player_panel"
+    },
+    "bindings": [
+      {
+        "binding_name": "#unscored_list_size",
+        "binding_type": "global",
+        "binding_name_override": "#collection_length"
+      }
+    ],
+    "$sb_collection_name": "scoreboard_unscored_list_collection"
+  },
+
+  "players_scored_grid_list@scoreboard.players_grid_list": {
+    "factory": {
+      "name": "scored_list_factory",
+      "control_name": "scoreboard.player_panel"
+    },
+    "bindings": [
+      {
+        "binding_name": "#scored_list_size",
+        "binding_type": "global",
+        "binding_name_override": "#collection_length"
+      }
+    ],
+    "$sb_collection_name": "scoreboard_scored_list_collection",
+    "$has_score": true
+  }
+}

@@ -1,0 +1,12 @@
+/********************************************************
++*   (c) Mojang. All rights reserved                       *
++*   (c) Microsoft. All rights reserved.                   *
++*********************************************************/
+{
+  "namespace": "credits",
+
+  "credits_screen@common_mcjava.base_screen": {
+    "$screen_content": "end_poema_mcjava.end_poema_screen_content_panel",
+    "$screen_background": "end_poema_mcjava.dirt_background"
+  }
+}

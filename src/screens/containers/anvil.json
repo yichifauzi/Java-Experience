@@ -1,0 +1,250 @@
+/* By @FMarquesPTO. All rights reserved. */
+{
+  "namespace": "anvil_mcjava",
+
+  "anvil_screen_content_panel@container_mcjava.base_panel": {
+    "$container_bg": "anvil_mcjava.anvil_container_bg",
+    "$specified_content": "anvil_mcjava.anvil_content_panel",
+    "$texture_src": "assets/minecraft/textures/gui/container/anvil"
+  },
+
+  "anvil_content_panel": {
+    "type": "panel",
+    "controls": [
+      { "title@container_mcjava.title": { "offset": [61, 5], "text": "container.repair" } },
+      { "item_name@anvil_mcjava.item_name_editbox": {} },
+      { "input@anvil_mcjava.input_item_slot": {} },
+      { "material@anvil_mcjava.material_item_slot": {} },
+      { "cross_out@anvil_mcjava.cross_out_icon": {} },
+      { "result@anvil_mcjava.result_item_slot": {} },
+      { "fail@anvil_mcjava.fail_cost_label": {} },
+      { "success@anvil_mcjava.success_cost_label": {} }
+    ]
+  },
+
+  /* Content */
+
+  /* Images */
+
+  "anvil_container_bg@common_mcjava.image": {
+    "size": [176, 166],
+    "uv": [0, 0],
+    "variables": [
+      { "requires": "($anvil_resolution = 256x)", "$1": [176, 166] },
+      { "requires": "($anvil_resolution = 512x)", "$1": [352, 332] },
+      { "requires": "($anvil_resolution = 1024x)", "$1": [704, 664] },
+      { "requires": "($anvil_resolution = 2048x)", "$1": [1408, 1328] },
+      { "requires": "($anvil_resolution = 4096x)", "$1": [2816, 2656] }
+    ]
+  },
+
+  "indentbox_bg@common_mcjava.image": {
+    "size": [110, 16],
+    "variables": [
+      { "requires": "($anvil_resolution = 256x)", "$0": [0, 166], "$1": [110, 16] },
+      { "requires": "($anvil_resolution = 512x)", "$0": [0, 332], "$1": [220, 32] },
+      { "requires": "($anvil_resolution = 1024x)", "$0": [0, 664], "$1": [440, 64] },
+      { "requires": "($anvil_resolution = 2048x)", "$0": [0, 1328], "$1": [880, 128] },
+      { "requires": "($anvil_resolution = 4096x)", "$0": [0, 2656], "$1": [1760, 256] }
+    ]
+  },
+
+  "locked_indentbox_bg@common_mcjava.image": {
+    "size": [110, 16],
+    "variables": [
+      { "requires": "($anvil_resolution = 256x)", "$0": [0, 182], "$1": [110, 16] },
+      { "requires": "($anvil_resolution = 512x)", "$0": [0, 364], "$1": [220, 32] },
+      { "requires": "($anvil_resolution = 1024x)", "$0": [0, 728], "$1": [440, 64] },
+      { "requires": "($anvil_resolution = 2048x)", "$0": [0, 1456], "$1": [880, 128] },
+      { "requires": "($anvil_resolution = 4096x)", "$0": [0, 2912], "$1": [1760, 256] }
+    ]
+  },
+
+  /* #Ended */
+
+  "item_name_editbox@text_input_mcjava.text_input": {
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [59, 20],
+    "size": [110, 16],
+    "$bg_default_src": "anvil_mcjava.indentbox_bg",
+    "$bg_hover_src": "anvil_mcjava.indentbox_bg",
+    "$bg_pressed_src": "anvil_mcjava.indentbox_bg",
+    "$bg_disabled_src": "anvil_mcjava.locked_indentbox_bg",
+    "property_bag": {
+      "#property_field": "#item_name"
+    },
+    "max_length": 30,
+    "text_box_name": "#text_box_name",
+    "$text_edit_binding_name": "#text_box_item_name",
+    "$text_input_label_size": [ "default", 10 ]
+  },
+
+  "cross_out_icon@common_mcjava.image": {
+    "$texture_src": "assets/minecraft/textures/gui/container/anvil",
+    "size": [28, 21],
+    "variables": [
+      { "requires": "($anvil_resolution = 256x)", "$0": [176, 0], "$1": [28, 21] },
+      { "requires": "($anvil_resolution = 512x)", "$0": [352, 0], "$1": [220, 32] },
+      { "requires": "($anvil_resolution = 1024x)", "$0": [704, 0], "$1": [440, 64] },
+      { "requires": "($anvil_resolution = 2048x)", "$0": [1408, 0], "$1": [880, 128] },
+      { "requires": "($anvil_resolution = 4096x)", "$0": [2816, 0], "$1": [1760, 256] },
+      { "requires": "($anvil_resolution = 8192x)", "$0": [5632, 0], "$1": [3520, 512] }
+    ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [ 99, 45 ],
+    "bindings": [
+      {
+        "binding_name": "#cross_out_icon",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "anvil_item_slot@container_mcjava.container_slot": {
+    "anchor_from": "top_left",
+    "anchor_to": "top_left"
+  },
+
+  "input_item_slot@anvil_mcjava.anvil_item_slot": {
+    "offset": [ 26, 46 ],
+    "$item_collection_name": "anvil_input_items",
+    "$focus_id_binding_type": "none",
+    "$focus_id": "anvil_input",
+    "$focus_right_binding_type": "none",
+    "$focus_right": "anvil_material"
+  },
+
+  "material_item_slot@anvil_mcjava.anvil_item_slot": {
+    "offset": [ 75, 46 ],
+    "$item_collection_name": "anvil_material_items",
+    "$focus_id_binding_type": "none",
+    "$focus_id": "anvil_material",
+    "$focus_left_binding_type": "none",
+    "$focus_left": "anvil_input",
+    "$focus_right_binding_type": "none",
+    "$focus_right": "anvil_result"
+  },
+
+  "result_item_slot@anvil_mcjava.anvil_item_slot": {
+    "offset": [ 133, 46 ],
+    "$item_collection_name": "anvil_result_items",
+    "$button_ref": "anvil_mcjava.anvil_output_slot_button",
+    "$focus_id_binding_type": "none",
+    "$focus_id": "anvil_result",
+    "$focus_left_binding_type": "none",
+    "$focus_left": "anvil_material"
+  },
+
+  "anvil_output_slot_button@container_mcjava.container_slot_button_prototype": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.anvil_take_all_place_all",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.anvil_take_all_place_all",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_secondary_select",
+        "to_button_id": "button.anvil_take_all_place_all",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_select",
+        "to_button_id": "button.anvil_take_all_place_all",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_auto_place",
+        "to_button_id": "button.container_auto_place",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_secondary_select",
+        "to_button_id": "button.container_auto_place",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_inventory_drop",
+        "to_button_id": "button.drop_one",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_inventory_drop_all",
+        "to_button_id": "button.drop_all",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.anvil_coalesce_stack",
+        "mapping_type": "double_pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.anvil_coalesce_stack",
+        "mapping_type": "double_pressed"
+      },
+      {
+        "to_button_id": "button.container_slot_hovered",
+        "mapping_type": "pressed"
+      }
+    ]
+  },
+
+  "cost_label": {
+    "type": "label",
+    "shadow": true,
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "offset": [ -8, 67 ],
+    "color": "$anvil_cost_success_text_color",
+    "text": "#text",
+    "text_alignment": "right",
+    "layer": 10,
+    "controls": [
+      {
+        "background": {
+          "type": "image",
+          "texture": "src/assets/img/white",
+          "layer": -5,
+          "color": [0.3, 0.3, 0.3],
+          "alpha": 0.4,
+          "size": ["100% + 4px", "100% + 2px"]
+        }
+      }
+    ]
+  },
+
+  "fail_cost_label@anvil_mcjava.cost_label": {
+    "color": "$anvil_cost_fail_text_color",
+    "bindings": [
+      {
+        "binding_name": "#cost_text",
+        "binding_name_override": "#text"
+      },
+      {
+        "binding_name": "#cost_text_red",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "success_cost_label@anvil_mcjava.cost_label": {
+    "color": "$anvil_cost_success_text_color",
+    "bindings": [
+      {
+        "binding_name": "#cost_text",
+        "binding_name_override": "#text"
+      },
+      {
+        "binding_name": "#cost_text_green",
+        "binding_name_override": "#visible"
+      }
+    ]
+  }
+}

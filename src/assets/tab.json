@@ -1,0 +1,165 @@
+/* By @FMarquesPTO. All rights reserved. */
+{
+  "namespace": "tab_mcjava",
+
+  "tab": {
+    "type": "panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$tab_control_name|default": "tab",
+    "$tab_name": "",
+    "controls": [
+      {
+        "$tab_control_name@common_mcjava.toggle": {
+          /* These states are for passing the button state to the button content */
+          "$checked_state|default": false,
+          "$unchecked_state|default": false,
+          "$checked_hover_state|default": false,
+          "$unchecked_hover_state|default": false,
+          "$locked_state|default": false,
+          "$toggle_property_bag": {
+            "#hover_text": "gui.done"
+          },
+          "toggle_name": "$tab_name",
+          "$tab_type|default": "tab_mcjava.tab_state_panel",
+          "$tab_background|default": "tab_mcjava.tab_background_panel",
+          "$text_default_color|default": "$button_default_text_color",
+          "$text_locked_color|default": "$button_locked_text_color",
+          "radio_toggle_group": true,
+          "$toggle_tts_name": "accessibility.tab.tts.title",
+          "$toggle_tts_enabled_binding_type": "global",
+          "controls": [
+            {
+              "unchecked@$tab_type": {
+                "$img_src": "$bg_unchecked_src",
+                "$bg_zindex": -5,
+                "$text_color": "$text_default_color",
+                "$unchecked_state": true,
+                "layer": 1
+              }
+            },
+            {
+              "unchecked_hover@$tab_type": {
+                "$img_src": "$bg_unchecked_src",
+                "$bg_zindex": -5,
+                "$text_color": "$text_default_color",
+                "$unchecked_hover_state": true,
+                "layer": 3
+              }
+            },
+            {
+              "unchecked_locked@$tab_type": {
+                "$img_src": "$bg_locked_src",
+                "$bg_zindex": -5,
+                "$text_color": "$text_locked_color",
+                "$locked_state": true,
+                "layer": 1
+              }
+            },
+            {
+              "unchecked_locked_hover@$tab_type": {
+                "$img_src": "$bg_locked_src",
+                "$bg_zindex": -5,
+                "$text_color": "$text_locked_color",
+                "$locked_state": true,
+                "layer": 1
+              }
+            },
+            {
+              "checked@$tab_type": {
+                "$img_src": "$bg_checked_src",
+                "$text_color": "$text_default_color",
+                "$checked_state": true,
+                "layer": 3
+              }
+            },
+            {
+              "checked_hover@$tab_type": {
+                "$img_src": "$bg_checked_src",
+                "$text_color": "$text_default_color",
+                "$checked_hover_state": true,
+                "layer": 4
+              }
+            },
+            {
+              "checked_locked@$tab_type": {
+                "$img_src": "$bg_locked_src",
+                "$text_color": "$text_locked_color",
+                "$locked_state": true,
+                "layer": 1
+              }
+            },
+            {
+              "checked_locked_hover@$tab_type": {
+                "$img_src": "$bg_locked_src",
+                "$text_color": "$text_locked_color",
+                "$locked_state": true,
+                "layer": 1
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "tab_state_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "$show_hover_text|default": false,
+    "controls": [
+      {
+        "$img_src@$img_src": {
+          "layer": "$bg_zindex",
+          "$bg_zindex|default": 0
+        }
+      },
+      {
+        "hover_text@common_mcjava.hover_text": {
+          "controls": [
+            {
+              "@common_mcjava.base_hover_text": {
+                "ignored": "(not $show_hover_text)",
+                "visible": "($checked_hover_state or $unchecked_hover_state)"
+              }
+            }
+          ]
+        /* "j@common.hover_text": {
+          "visible": "($checked_hover_state or $unchecked_hover_state)",
+          "text": "Building Blocks",
+          "bindings": [
+            {
+              "binding_name": "gui.done",
+              "binding_name_override": "#hover_text"
+            }
+          ],
+          
+          "layer": 50,
+          "$t": "done",
+          "property_bag": {
+            "#hover_text": "#text"
+          } */
+        }
+      },
+      {
+        "content": {
+          "type": "panel",
+          "size": "$tab_content_size",
+          "$tab_content_size|default": ["100%", "100%"],
+          "layer": 3,
+          "controls": [
+            { "$tab_content@$tab_content": {} }
+          ]
+        }
+      }
+    ]
+  },
+
+  "tab_background_panel@common_mcjava.image": {
+    "type": "image",
+    "texture": "$bg_src",
+    "uv": "$bg_uv",
+    "uv_size": "$bg_uv_size",
+    "size": "$bg_uv_size"
+  }
+}

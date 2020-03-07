@@ -1,0 +1,15 @@
+/********************************************************
++*   (c) Mojang. All rights reserved                       *
++*   (c) Microsoft. All rights reserved.                   *
++*********************************************************/
+{
+  "namespace": "sign",
+
+  "sign_screen@common_mcjava.base_screen": {
+    "$screen_content": "sign_mcjava.sign_screen_content_panel",
+    "$screen_background": "common_mcjava.screen_background",
+    "$close_on_player_hurt|default": true,
+    "force_render_below": "$activate_force_render_below",
+    "close_on_player_hurt": "$close_on_player_hurt"
+  }
+}

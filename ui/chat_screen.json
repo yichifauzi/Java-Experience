@@ -1,0 +1,25 @@
+/********************************************************
++*   (c) Mojang. All rights reserved                       *
++*   (c) Microsoft. All rights reserved.                   *
++*********************************************************/
+{
+  "namespace": "chat",
+
+  "chat_screen@common_mcjava.base_screen": {
+    "close_on_player_hurt": true,
+    "force_render_below": true,
+    "$screen_content": "chat_mcjava.chat_screen_content_panel",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_exit",
+        "to_button_id": "button.chat_menu_cancel",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.chat_menu_cancel",
+        "mapping_type": "global"
+      }
+    ]
+  }
+}
