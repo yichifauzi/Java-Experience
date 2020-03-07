@@ -1,0 +1,21 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "§5Java UI",
+    "description": "Made By @FMarquesPTO. Special Thx For @HawfHuman, @CrisXolt and all people in the world",
+    "uuid": "27b70b26-7c46-4000-b609-b1ec9af644c3",
+    "version": [2, 0, 0],
+    "min_engine_version": [1, 14, 0]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "105c31fb-e785-4acc-b05b-4e2e57fc9f13",
+      "version": [2, 0, 0]
+    }
+  ],
+  "metadata": {
+    "authors": ["FMarquesPTO"],
+    "url": "https://twitter.com/FMarquesPTO"
+  }
+}
