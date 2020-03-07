@@ -4,7 +4,7 @@ This resource pack make your MC Bedrock looks like Minecraft Java Edition. Made 
 ## Installation
 Download and unzip Java UI. Then move it to:
 
-### Windows
+#### Windows
 ```
     "C:\Users\YOURNAME\AppData\Local\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\games\com.mojang\resource_packs"
 ```
