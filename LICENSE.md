@@ -1,6 +1,6 @@
-MIT License
+# MIT License
 
-Copyright (c) 2020 FMarquesPTO
+#### Copyright (c) 2020 FMarquesPTO
 
 If anyone wants to modify this pack and the associated
 documentation files, they must ask for permission and
