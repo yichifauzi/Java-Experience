@@ -1,5 +1,5 @@
 # MIT License
-##### (Adapted)
+##### Adapted to this situation
 
 #### Copyright (c) 2020 FMarquesPTO
 
