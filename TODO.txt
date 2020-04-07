@@ -1,3 +1,62 @@
+//Checked Files
+Toast
+Auto Save Info
+Screenshot
+Emote Wheel
+Disconnect
+Debug
+Change Safe Zone
+Braze
+Adhoc(s)
+Account Tranfer Error
+Chat
+Chat Settings
+Add External Server
+Book
+Command Block
+Content Log History
+Death Menu
+End Poem
+Bed Menu
+Mob Effect
+Sign
+Anvil
+Brewing Stand
+Chests
+Grindstone
+Enchanting Table
+Redstone(s)
+Furnace
+Horse
+Beacon
+Patch Notes
+Cartography Table
+Stonecutter
+Loom
+World Templates
+Seed Picker
+Create World Upsell
+Singleplayer
+Multiplayer
+Realms
+Villager Trade2
+Pause
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Hud - Improve Rainbow Jukebox Text
 
 Maybe
@@ -8,8 +67,6 @@ Maybe
   source and target
   book -> collection_index or toggle_name
 
-Textures
-  Move blocks and items to "assets/minecraft/textures/"
 
 Hardcore
 

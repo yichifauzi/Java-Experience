@@ -470,8 +470,7 @@
   }, */
 
   "offline_platform_friend_list_grid@invite.offline_platform_friend_list_grid": {
-    /* "type": "grid", */
-    "grid_item_template": "offline_platform_friend_grid_itemss"/* ,
+    "grid_item_template": "invite_mcjava.offline_platform_friend_grid_itemss",
     "grid_dimension_binding": "#offline_platform_friend_grid_dimension",
     "collection_name": "$collection_name",
     "$toggle_invite_name": "toggle_platform_invite_offline",
@@ -483,7 +482,7 @@
       {
         "binding_name": "#offline_platform_friend_grid_dimension"
       }
-    ] */
+    ]
   },
 
  /*  "online_platform_friend_grid_item@invite.platform_friend_grid_item_template": {
@@ -498,7 +497,7 @@
 
   "platform_friend_grid_item_template": {
     "type": "panel",
-    "size": [ "100%", 30],
+    "size": [ "100%", 36],
     "controls": [
       { "friend_button@invite_mcjava.platform_friend_button": {} }
     ]

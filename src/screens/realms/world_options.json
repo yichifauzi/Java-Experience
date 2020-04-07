@@ -1,0 +1,170 @@
+{
+  "namespace": "realm_world_options_mcjava",
+  
+  "world_options_content_panel": {
+    "type": "panel",
+    "controls": [
+      { "title@common_mcjava.title": { "text": "mco.configure.world.buttons.options" } },
+      { "content_panel@realm_world_options_mcjava.content_panel": {} }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_button_name": "options_view",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "content_panel": {
+    "type": "stack_panel",
+    "anchor_from": "center",
+    "anchor_to": "top_middle",
+    "size": [ 310, 195],
+    "offset": [ 0, "-36% + 4px" ],
+    "controls": [
+      {
+        "stack_zero@common_mcjava.stack": {
+          "controls": [
+            { "back@realm_world_options_mcjava.game_mode_panel": { } },
+            { "fill@common_mcjava.hfill": {} },
+            { "back@realm_world_options_mcjava.difficulty_panel": { } }
+          ]
+        }
+      },
+      { "space_zero@common_mcjava.vspace": { "size": [0, 4] } },
+      {
+        "stack_zero@common_mcjava.stack": {
+          "controls": [
+            { "back@realm_world_options_mcjava.allow_cheats_toggle": { } },
+            { "fill@common_mcjava.hfill": {} },
+            { "back@realm_world_options_mcjava.download_world_button": { } }
+          ]
+        }
+      },
+      { "space_zero@common_mcjava.vspace": { "size": [0, 4] } },
+      {
+        "stack_zero@common_mcjava.stack": {
+          "controls": [
+            { "back@realm_world_options_mcjava.upload_world_button": { } },
+            { "fill@common_mcjava.hfill": {} }
+          ]
+        }
+      },
+      { "space_zero@common_mcjava.vspace": { "size": [0, 36] } },
+      {
+        "stack_zero@common_mcjava.stack": {
+          "controls": [
+            { "back@configure_realm_mcjava.back_button": { "size": [150, 20], "$toggle_button_name": "options" } },
+            { "fill@common_mcjava.hfill": {} },
+            { "back@realm_world_options_mcjava.manage_feed_button": {} }
+          ]
+        }
+      }
+    ]
+  },
+
+  "download_world_button@button_mcjava.action_button": {
+    "size": [150, 20],
+    "$button_text": "realmsSettingsScreen.downloadWorldButton",
+    "$pressed_button_name": "menu_download_world",
+    "ignored": "(not $is_pregame)"
+  },
+
+  "upload_world_button@button_mcjava.action_button": {
+    "size": [150, 20],
+    "$button_text": "realmsSettingsScreen.uploadWorldButton",
+    "$pressed_button_name": "menu_upload_world",
+    "ignored": "(not $is_pregame)",
+    "bindings": [
+      {
+        "binding_name": "#upload_button_enabled",
+        "binding_name_override": "#enabled"
+      }
+    ]
+  },
+
+  "game_mode_panel@button_mcjava.radio_group_panel": {
+    "size": [150, 20],
+    "$toggle_enabled_binding_name": "#realms_game_mode_dropdown_enabled",
+    "$radio_button_text": "selectWorld.gameMode",
+    "controls": [
+      {
+        "survival@button_mcjava.radio_group_button": {
+          "size": [150, 20],
+          "$radio_action_text": "selectWorld.gameMode.survival",
+          "$this_action": "#world_game_mode_radio_survival",
+          "$next_action": "#world_game_mode_radio_creative"
+        }
+      },
+      {
+        "creative@button_mcjava.radio_group_button": {
+          "size": [150, 20],
+          "$radio_action_text": "selectWorld.gameMode.creative",
+          "$this_action": "#world_game_mode_radio_creative",
+          "$next_action": "#world_game_mode_radio_survival"
+        }
+      }
+    ]
+  },
+
+  "difficulty_panel@button_mcjava.radio_group_panel": {
+    "size": [150, 20],
+    "$toggle_enabled_binding_name": "#realms_difficulty_dropdown_enabled",
+    "$radio_button_text": "options.difficulty",
+    "controls": [
+      {
+        "peaceful@button_mcjava.radio_group_button": {
+          "$radio_action_text": "options.difficulty.peaceful",
+          "$this_action": "#world_difficulty_radio_peaceful",
+          "$next_action": "#world_difficulty_radio_easy"
+        }
+      },
+      {
+        "easy@button_mcjava.radio_group_button": {
+          "$radio_action_text": "options.difficulty.easy",
+          "$this_action": "#world_difficulty_radio_easy",
+          "$next_action": "#world_difficulty_radio_normal"
+        }
+      },
+      {
+        "normal@button_mcjava.radio_group_button": {
+          "$radio_action_text": "options.difficulty.normal",
+          "$this_action": "#world_difficulty_radio_normal",
+          "$next_action": "#world_difficulty_radio_hard"
+        }
+      },
+      {
+        "hard@button_mcjava.radio_group_button": {
+          "$radio_action_text": "options.difficulty.hard",
+          "$this_action": "#world_difficulty_radio_hard",
+          "$next_action": "#world_difficulty_radio_peaceful"
+        }
+      }
+    ]
+  },
+
+  "allow_cheats_toggle@toggle_mcjava.toggle": {
+    "$toggle_text": "selectWorld.cheats",
+    "$toggle_binding_name": "#allow_cheats",
+    "$toggle_enabled_binding_name": "#allow_cheats_enabled",
+    "$toggle_name": "allow_cheats"
+  },
+
+  "manage_feed_button@button_mcjava.action_button": {
+    "size": [150, 20],
+    "$button_text": "feed.manage_feed",
+    "$pressed_button_name": "menu_manage_feed",
+    "bindings": [
+      {
+        "binding_name": "#manage_feed_button_enabled",
+        "binding_name_override": "#enabled"
+      },
+      {
+        "binding_name": "#manage_feed_button_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  }
+}

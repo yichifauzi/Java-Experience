@@ -27,15 +27,18 @@
           "visible": "($hover_state or $pressed_state or $button_state = 'hover' or $button_state = 'pressed' or $unchecked_hover_state or $checked_hover_state or $tab_state = 'unchecked_hover' or $tab_state = 'checked_hover' or $radio_state = 'unchecked_hover' or $radio_state = 'checked_hover'  or $radio_group_state = 'unchecked_hover' or $radio_group_state = 'checked_hover')",
           "size": "$base_size",
           "$base_size|default": ["100%c + 6px", "100%c + 7px"],
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [9, -15],
+          "anchor_from": "$tooltip_orientation",
+          "anchor_to": "$tooltip_orientation",
+          "$tooltip_orientation|default": "top_left",
+          "offset": "$tooltip_offset",
+          "$tooltip_offset|default": [9, -15],
           "layer": -10,
           "controls": [
             {
               "label": {
                 "type": "label",
-                "offset": [0, -1],
+                "$tooltip_text_offset|default": [0, -1],
+                "offset": "$tooltip_text_offset",
                 "text": "$tooltip_text",
                 "size": "$text_size",
                 "color": "$hover_text_color",
@@ -58,7 +61,7 @@
     "texture": "textures/ui/purpleBorder"
   },
 
-  "tranparent_tooltip_bg": {
+  "transparent_tooltip_bg": {
     "type": "image",
     "texture": "src/assets/img/white",
     "color": [0, 0, 0],
@@ -75,6 +78,7 @@
   /* Transparent */
 
   "transparent_tooltip@tooltip_mcjava.base_tooltip": {
+    "$base_size": ["100%c + 6px", "100%c + 5px"],
     "$tooltip_text|default": "",
     "$tooltip_background": "tooltip_mcjava.transparent_tooltip_bg"
   }

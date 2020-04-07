@@ -348,12 +348,11 @@
   },
 
   "cell_recipe": {
-    "type": "panel"
-    //"texture": "textures/ui/none"
-   /*  "texture": "assets/minecraft/textures/gui/container/creative_inventory/tab_items",
+    "type": "image",
+    "texture": "assets/minecraft/textures/gui/container/creative_inventory/tab_items",
     "alpha": 1,
     "uv": [ 8, 17 ],
-    "uv_size": [ 18, 18 ] */
+    "uv_size": [ 18, 18 ]
   },
 
   "cell_recipe_default@creative_inventory_mcjava.cell_recipe": {
@@ -682,16 +681,23 @@
   /* Tabs */
 
   "creative_tab@tab_mcjava.tab": {
-    "$toggle_name": "navigation_tab",
+    "$tab_name": "navigation_tab",
     "$toggle_group_default_selected": "$construction_index",
     "$toggle_focus_enabled": false,
-    "$tab_bg_src": "assets/minecraft/textures/gui/container/creative_inventory/tabs",
+    "$texture_src": "assets/minecraft/textures/gui/container/creative_inventory/tabs",
     "$bg_uv_size": [28, 32],
     "anchor_from": "top_left",
     "$show_hover_text": true,
     "anchor_to": "top_left",
     "$tab_content": "creative_inventory_mcjava.item_renderer",
-    "size": [28, 32]
+    "size": [28, 32],
+    "variables": [
+      { "requires": "($creative_inventory_resolution = 256x)", "$1": [28, 32] },
+      { "requires": "($creative_inventory_resolution = 512x)", "$1": [56, 64] },
+      { "requires": "($creative_inventory_resolution = 1024x)","$1": [112, 128] },
+      { "requires": "($creative_inventory_resolution = 2048x)", "$1": [224, 256] },
+      { "requires": "($creative_inventory_resolution = 4096x)", "$1": [448, 512] }
+    ]
   },
 
   "item_renderer": {
@@ -718,9 +724,11 @@
   },
 
   "search_tab@creative_inventory_mcjava.creative_tab": {
+    "$bg_checked_src": "new_creative_inventory_content_mcjava.search_items_checked",
+    "$bg_unchecked_src": "new_creative_inventory_content_mcjava.search_items_unchecked",
     "$hover_text": "Search Items",
     "$item_id_aux": 22632576,
-    "$control_name": "search_view",
+    "$tab_control_name": "search_view",
     "$toggle_index": "$search_index",
     "anchor_from": "top_right",
     "anchor_to": "top_right",
@@ -735,9 +743,11 @@
   },
 
   "construction_tab@creative_inventory_mcjava.creative_tab": {
+    "$bg_checked_src": "new_creative_inventory_content_mcjava.building_blocks_checked",
+    "$bg_unchecked_src": "new_creative_inventory_content_mcjava.building_blocks_unchecked",
     "$hover_text": "Construction",
     "$item_id_aux": 3801088,
-    "$control_name": "construction_view",
+    "$tab_control_name": "construction_view",
     "$toggle_index": "$construction_index",
     "offset": [0, -28],
     "$bg_checked_uv": [0, 32],
@@ -751,9 +761,11 @@
   },
 
   "equipment_tab@creative_inventory_mcjava.creative_tab": {
+    "$bg_checked_src": "new_creative_inventory_content_mcjava.decoration_blocks_checked",
+    "$bg_unchecked_src": "new_creative_inventory_content_mcjava.decoration_blocks_unchecked",
     "$hover_text": "Equipment",
     "$item_id_aux": 16932576,
-    "$control_name": "equipment_view",
+    "$tab_control_name": "equipment_view",
     "$toggle_index": "$equipment_index",
     "offset": [29, -28],
     "$bg_checked_uv": [28, 32],
@@ -767,9 +779,11 @@
   },
 
   "items_tab@creative_inventory_mcjava.creative_tab": {
+    "$bg_checked_src": "new_creative_inventory_content_mcjava.redstone_checked",
+    "$bg_unchecked_src": "new_creative_inventory_content_mcjava.redstone_unchecked",
     "$hover_text": "Items",
     "$item_id_aux": 21701088,
-    "$control_name": "items_view",
+    "$tab_control_name": "items_view",
     "$toggle_index": "$items_index",
     "offset": [58, -28],
     "$bg_checked_uv": [56, 32],
@@ -783,9 +797,11 @@
   },
 
   "nature_tab@creative_inventory_mcjava.creative_tab": {
+    "$bg_checked_src": "new_creative_inventory_content_mcjava.transportation_checked",
+    "$bg_unchecked_src": "new_creative_inventory_content_mcjava.transportation_unchecked",
     "$hover_text": "Nature",
     "$item_id_aux": 17067040,
-    "$control_name": "nature_view",
+    "$tab_control_name": "nature_view",
     "$toggle_index": "$nature_index",
     "offset": [87, -28],
     "$bg_checked_uv": [84, 32],
@@ -799,9 +815,11 @@
   },
 
   "survival_inventory_tab@creative_inventory_mcjava.creative_tab": {
+    "$bg_checked_src": "new_creative_inventory_content_mcjava.survival_inventory_checked",
+    "$bg_unchecked_src": "new_creative_inventory_content_mcjava.survival_inventory_unchecked",
     "$hover_text": "Survival Inventory",
     "$item_id_aux": 3538944,
-    "$control_name": "survival_inventory_view",
+    "$tab_control_name": "survival_inventory_view",
     "$toggle_index": "$survival_inv_index",
     "anchor_from": "bottom_right",
     "$toggle_binding_type": "global",

@@ -9,6 +9,7 @@
   },
 
   "screen_world_create@settings_screen_base": {
+    "$realms_settings": false,
     "$screen_name": "world_create",
     "$is_world_create": true,
     "$is_world_edit": false,
@@ -19,6 +20,7 @@
   },
 
   "screen_template_create@settings_screen_base": {
+    "$realms_settings": false,
     "$is_world_create": true,
     "$is_world_edit": false,
     "$is_template": true,
@@ -28,6 +30,7 @@
   },
 
   "screen_world_edit@settings_screen_base": {
+    "$realms_settings": false,
     "$is_world_create": false,
     "$is_world_edit": true,
     "$in_game": false,
@@ -36,6 +39,7 @@
   },
 
   "screen_controls_and_settings@settings_screen_base": {
+    "$realms_settings": false,
     "$screen_name": "settings",
     "$in_game": false,
     "$is_world_create": false,
@@ -46,21 +50,23 @@
   },
 
   "screen_world_controls_and_settings@settings_screen_base": {
+    "$realms_settings": false,
     "$in_game": true,
     "$is_world_create": false,
     "$is_world_edit": false,
     "$screen_background": "common_mcjava.screen_background",
     "$screen_content": "settings_mcjava.settings_screen_content_panel",
     "$popup_factory": ""
-  }/* ,
+  },
 
   "screen_realm_controls_and_settings@settings_screen_base": {
-    "$screen_content": "realm_settings_mcjava.realm_full_settings_screen_content_panel",
+    "$realms_settings": true,
+    "$screen_content": "settings_mcjava.settings_screen_content_panel",
     "$screen_background": "common_mcjava.dirt_background"
   },
 
   "screen_realm_settings@settings_screen_base": {
-    "$screen_content": "realm_settings_mcjava.realm_settings_screen_content_panel",
+    "$screen_content": "configure_realm_mcjava.configure_realm_screen_content_panel",
     "$screen_background": "common_mcjava.dirt_background"
-  } */
+  }
 }

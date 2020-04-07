@@ -1,0 +1,347 @@
+{
+  "namespace": "realm_world_backups_mcjava",
+  
+  "world_backups_content_panel": {
+    "type": "panel",
+    "controls": [
+      { "title@common_mcjava.title": { "text": "mco.configure.world.backup" } },
+      { "content_panel@realm_world_backups_mcjava.backups_content_panel": {} }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_button_name": "backups_view",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "backups_content_panel": {
+    "type": "stack_panel",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "orientation": "horizontal",
+    "size": ["100%", "100% - 55px"],
+    "offset": [0, 40],
+    "controls": [
+      { "@left_panel": {} },
+      { "@right_panel": {} }
+    ]
+  },
+
+  "left_panel": {
+    "type": "panel",
+    "size": [ "fill", "100%"],
+    "controls": [
+      { "title@common_mcjava.title": { "text": "mco.configure.world.backup", "offset": [0, -12], "color": [0.62, 0.62, 0.62] } },
+      {
+        "selection_content_panel@resource_packs_mcjava.side_content_panel": {
+          "size": ["100%", "100%"],
+          "$scroll_bar_offset":["50% - 4px",0],
+          "$scrolling_content": "realm_world_backups_mcjava.scrolling_content"
+        }
+      }
+    ]
+  },
+
+  "scrolling_content": {
+    "type": "stack_panel",
+    "controls": [
+      { "@common_mcjava.vspace": {} },
+      { "@backup_grid": {} },
+      { "@common_mcjava.vspace": {} }
+    ]
+  },
+
+  "backup_grid": {
+    "type": "grid",
+    "size": [ "100%", "default" ],
+    "grid_item_template": "realm_world_backups_mcjava.backup_item_template",
+    "grid_dimension_binding": "#realms_backup_grid_dimension",
+    "$collection_binding_name": "realms_backup_collection",
+    "collection_name": "realms_backup_collection",
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "bindings": [
+      {
+        "binding_name": "#realms_backup_grid_dimension"
+      }
+    ]
+  },
+
+  "backup_item_template": {
+    "type": "panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ "100%", 36],
+    "controls": [
+      { "@realm_world_backups_mcjava.backup_grid_item_content": {} }
+    ]
+  },
+
+  "backup_grid_item_content": {
+    "type": "panel",
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "size": [270, 36],
+    "offset": [-18, 0],
+    "controls": [
+      { "backup_grid_item_name_and_time_since@realm_world_backups_mcjava.backup_grid_item_name_and_time_since": {} },
+      { "@download_item_button": {} },
+      { "@backup_item_button": {} }
+    ]
+  },
+
+  "download_item_button@common_mcjava.button": {
+    "$pressed_button_name": "button.backup_download",
+    "size": [15, 15],
+    "$tooltip_text": "Download",
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "offset": [-30, 0],
+    "controls": [
+      { "default@realm_world_backups_mcjava.realms_download_default": {} },
+      {
+        "hover": {
+          "type": "panel",
+          "controls": [
+            { "@realm_world_backups_mcjava.realms_download_hover": {} },
+            { "alpha_hover_text@tooltip_mcjava.transparent_tooltip": { "$hover_state": true } }
+          ]
+        }
+      },
+      {
+        "pressed": {
+          "type": "panel",
+          "controls": [
+            { "@realm_world_backups_mcjava.realms_download_hover": {} },
+            { "alpha_hover_text@tooltip_mcjava.transparent_tooltip": { "$hover_state": true } }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "realms_backup_collection"
+      }
+    ]
+  },
+
+  "backup_item_button@common_mcjava.button": {
+    "$pressed_button_name": "select_realm_backup",
+    "size": [15, 15],
+    "$tooltip_text": "Backup",
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "offset": [-50, 0],
+    "controls": [
+      { "default@realm_world_backups_mcjava.realms_backup_default": {} },
+      {
+        "hover": {
+          "type": "panel",
+          "controls": [
+            { "@realm_world_backups_mcjava.realms_backup_hover": {} },
+            { "alpha_hover_text@tooltip_mcjava.transparent_tooltip": { "$hover_state": true } }
+          ]
+        }
+      },
+      {
+        "pressed": {
+          "type": "panel",
+          "controls": [
+            { "@realm_world_backups_mcjava.realms_backup_hover": {} },
+            { "alpha_hover_text@tooltip_mcjava.transparent_tooltip": { "$hover_state": true } }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "$collection_binding_name"
+      },
+      {
+        "binding_type": "collection",
+        "binding_collection_name": "$collection_binding_name",
+        "binding_name": "#backup_item_button_enabled",
+        "binding_name_override": "#enabled"
+      }
+    ]
+  },
+
+  "realms_download_default": {
+    "type": "image",
+    "texture": "src/assets/img/download_realm",
+    "uv": [0, 0],
+    "uv_size": [15, 15],
+    "size": [15, 15]
+  },
+
+  "realms_download_hover": {
+    "type": "image",
+    "texture": "src/assets/img/download_realm",
+    "uv": [0, 15],
+    "uv_size": [15, 15],
+    "size": [15, 15]
+  },
+
+  "realms_backup_default": {
+    "type": "image",
+    "texture": "assets/realms/textures/gui/realms/plus_icon",
+    "uv": [0, 0],
+    "uv_size": [15, 15],
+    "size": [15, 15]
+  },
+
+  "realms_backup_hover": {
+    "type": "image",
+    "texture": "assets/realms/textures/gui/realms/plus_icon",
+    "uv": [0, 15],
+    "uv_size": [15, 15],
+    "size": [15, 15]
+  },
+
+  "backup_grid_item_name_and_time_since": {
+    "type": "stack_panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "orientation": "vertical",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "name_stack": {
+          "type": "stack_panel",
+          "size": ["100%", 10],
+          "orientation": "horizontal",
+          "controls": [
+            {
+              "time_since_text@realms_settings.label_text": {
+                "text": "Backup",
+                "size": [ "default", 10 ],
+                "color": "white"
+              }
+            },
+            {
+              "time_since_text@realms_settings.label_text": {
+                "text": " (",
+                "size": [ "default", 10 ],
+                "color": "white"
+              }
+            },
+            {
+              "time_since_text@realms_settings.label_text": {
+                "text": "#time_since_text",
+                "size": [ "default", 10 ],
+                "color": "white",
+                "bindings": [
+                  {
+                    "binding_name": "#time_since_text",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$collection_binding_name"
+                  }
+                ]
+              }
+            },
+            {
+              "time_since_text@realms_settings.label_text": {
+                "text": "gui.parenteses.right",
+                "size": [ "default", 10 ],
+                "color": "white"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "spacing_gap": {
+          "type": "panel",
+          "size": [ "100%", 2 ]
+        }
+      },
+      {
+        "desc_stack": {
+          "type": "stack_panel",
+          "size": ["100%", 10],
+          "orientation": "horizontal",
+          "controls": [
+            {
+              "version_text@realms_settings.label_text": {
+                "text": "#version_text",
+                "size": [ "default", 10 ],
+                "color": [0.62, 0.62, 0.62],
+                "bindings": [
+                  {
+                    "binding_name": "#version_text",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$collection_binding_name"
+                  }
+                ]
+              }
+            },
+            {
+              "time_since_text@realms_settings.label_text": {
+                "text": " ",
+                "size": [ "default", 10 ]
+              }
+            },
+            {
+              "size_text@realms_settings.label_text": {
+                "text": "#size_text",
+                "text_alignment": "right",
+                "size": [ "default", 10 ],
+                "color": [0.62, 0.62, 0.62],
+                "bindings": [
+                  {
+                    "binding_name": "#size_text",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$collection_binding_name"
+                  }
+                ]
+              }
+            },
+            {
+              "time_since_text@realms_settings.label_text": {
+                "text": " ",
+                "size": [ "default", 10 ]
+              }
+            },
+            {
+              "time_text@realms_settings.label_text": {
+                "text": "#time_text",
+                "text_alignment": "right",
+                "size": [ "default", 10 ],
+                "color": [0.62, 0.62, 0.62],
+                "bindings": [
+                  {
+                    "binding_name": "#time_text",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$collection_binding_name"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "right_panel": {
+    "type": "stack_panel",
+    "size": [ 150, "100%"],
+    "controls": [
+      { "@common_mcjava.vfill": {} },
+      {
+        "stack_zero@common_mcjava.stack": {
+          "controls": [
+            { "fill@common_mcjava.hfill": {} },
+            { "back@configure_realm_mcjava.back_button": { "$toggle_button_name": "backups", "$toggle_button_text": "gui.back", "size": [75, 20] } },
+            { "fill@common_mcjava.hfill": { "size": [14, 0]} }
+          ]
+        }
+      }
+    ]
+  }
+}

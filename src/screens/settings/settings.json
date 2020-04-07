@@ -6,6 +6,7 @@
     "type": "panel",
     "controls": [
       { "settings@settings_mcjava.settings_content_panel": {} },
+      { "realms@settings_mcjava.realms": { "ignored": "(not $realms_settings)" } },
       { "profile@settings_mcjava.profile": {} },
       { "sound@settings_mcjava.sound": {} },
       { "video@settings_mcjava.video": {} },
@@ -22,6 +23,13 @@
       { "game_settings@settings_mcjava.game_settings": { "ignored": "(not $in_game)" } }
     ],
     "$settings_bindings": [
+      {
+        "ignored": "(not $realms_settings)",
+        "binding_type": "view",
+        "source_control_name": "realms_view",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      },
       {
         "binding_type": "view",
         "source_control_name": "user_profile_view",
@@ -126,7 +134,8 @@
         "stack_one@common_mcjava.stack": {
           "controls": [
             { "debug_profile@settings_mcjava.debug_button": {} },
-            { "fill@common_mcjava.hfill": {} }
+            { "fill@common_mcjava.hfill": {} },
+            { "realms@settings_mcjava.realms_button": { "ignored": "(not $realms_settings)" } }
           ]
         }
       },
@@ -185,10 +194,9 @@
     ]
   },
 
-  /* Content */
 
   "title_text@common_mcjava.title": {
-    "text": "Options"
+    "text": "options.title"
   },
 
   "fov_slider@slider_mcjava.slider": {
@@ -263,6 +271,13 @@
     "visible": "(not $is_publish)"
   },
 
+  "realms_button@toggle_mcjava.toggle_button": {
+    "$toggle_index": 101,
+    "$toggle_button_text": "Realms...",
+    "$toggle_button_name": "navigation_tab",
+    "$toggle_control_name": "realms_view"
+  },
+
   "profile_button@toggle_mcjava.toggle_button": {
     "$toggle_index": "$profile_forced_index",
     "$toggle_button_text": "options.user_profile",
@@ -327,6 +342,17 @@
     "$toggle_button_text": "Game Settings...",
     "$toggle_button_name": "navigation_tab",
     "$toggle_control_name": "in_game_settings_view"
+  },
+
+  "realms@settings_realms_mcjava.realms_screen_content_panel": {
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "realms_view",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
   },
 
   "profile@user_profile_mcjava.user_profile_screen_content_panel": {

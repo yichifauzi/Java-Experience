@@ -1,0 +1,115 @@
+{
+  "namespace": "realm_subscriptions_mcjava",
+  
+  "subscriptions_content_panel": {
+    "type": "panel",
+    "controls": [
+      { "title@common_mcjava.title": { "text": "Subscriptions" } },
+      { "content_panel@realm_subscriptions_mcjava.content_panel": {} }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_button_name": "subscriptions_view",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "content_panel": {
+    "type": "stack_panel",
+    "anchor_from": "center",
+    "anchor_to": "top_middle",
+    "size": [202, 195],
+    "offset": [ 0, "-36% + 4px" ],
+    "controls": [
+      {
+        "stack_zero@common_mcjava.stack": {
+          "size": ["100%", 62],
+          "orientation": "vertical",
+          "controls": [
+            { "close@realm_subscriptions_mcjava.player_count_label": {} },
+            { "fill@common_mcjava.vfill": {} },
+            { "close@realm_subscriptions_mcjava.realm_duration_label": {} }
+          ]
+        }
+      },
+      { "fill@common_mcjava.vspace": { "size": [0, 18] } },
+      {
+        "stack_zero@common_mcjava.panel": {
+          "controls": [
+            { "close@realm_subscriptions_mcjava.manage_subscriptions_button": {} },
+            { "close@realm_subscriptions_mcjava.manage_subscription_button": {} }
+          ]
+        }
+      },
+      { "fill@common_mcjava.vspace": { "size": [0, 44] } },
+      {
+        "stack_zero@common_mcjava.panel": {
+          "controls": [
+            { "back@configure_realm_mcjava.back_button": { "$toggle_button_name": "subscriptions" } }
+          ]
+        }
+      }
+    ]
+  },
+
+  "manage_subscriptions_button@button_mcjava.action_button": {
+    "$button_text": "realmsSettingsScreen.manageSubscriptionsButton",
+    "$pressed_button_name": "menu_realms_manage_subscriptions",
+    "visible": "($realms_plus_on)",
+    "enabled": false
+  },
+
+  "manage_subscription_button@button_mcjava.action_button": {
+    "$button_text": "realmsSettingsScreen.manageSubscriptionButton",
+    "$pressed_button_name": "menu_realms_manage_subscription",
+    "enabled": false,
+    "bindings": [
+      {
+        "binding_name": "#manage_subscription_button_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "option_info_label": {
+    "type": "panel",
+    "size": ["100%", 24],
+    "controls": [
+      {
+        "binding": {
+          "type": "label",
+          "text": "$text",
+          "color": [0.62, 0.62, 0.62],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left"
+        }
+      },
+      {
+        "binding": {
+          "type": "label",
+          "text": "$text_binding_name",
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "bindings": [
+            {
+              "binding_name": "$text_binding_name"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "player_count_label@realm_subscriptions_mcjava.option_info_label": {
+    "$text": "realmsSettingsScreen.playerCountLabel",
+    "$text_binding_name": "#realm_player_count"
+  },
+
+  "realm_duration_label@realm_subscriptions_mcjava.option_info_label": {
+    "$text": "realmsSettingsScreen.realmDurationLabel",
+    "$text_binding_name": "#realm_duration_label"
+  }
+}

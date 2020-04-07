@@ -544,10 +544,52 @@
           "size": [ "100%", "100%" ],
           "layer": 2,
           "$overlay_alpha": 0,
+          "$button_collection_name": "$selected_pack_items",
           "controls": [
             { "selected_pack_minus_button@resource_packs_mcjava.selected_pack_minus_button": {} },
-            { "selected_pack_up_button@resource_packs_mcjava.selected_pack_up_button": {} },
-            { "selected_pack_down_button@resource_packs_mcjava.selected_pack_down_button": {} }
+            { "selected_pack_settings_button@resource_packs_mcjava.selected_pack_options_button": {} },
+            {
+              "horizontal_stack": {
+                "type": "stack_panel",
+                "size": [15, "100%"],
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "controls": [
+                  { "selected_pack_up_button@resource_packs_mcjava.selected_pack_up_button": {} },
+                  { "s@common_mcjava.vfill": {} },
+                  { "selected_pack_down_button@resource_packs_mcjava.selected_pack_down_button": {} }
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "collection",
+                    "binding_collection_name": "$button_collection_name",
+                    "binding_name": "(not #has_pack_settings)",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "horizontal_stack": {
+                "type": "stack_panel",
+                "size": [15, "100% + 5px"],
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle",
+                "controls": [
+                  { "selected_pack_up_button@resource_packs_mcjava.selected_pack_up_button": {} },
+                  { "s@common_mcjava.vfill": {} },
+                  { "selected_pack_down_button@resource_packs_mcjava.selected_pack_down_button": {} }
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "collection",
+                    "binding_collection_name": "$button_collection_name",
+                    "binding_name": "#has_pack_settings",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
           ]
         }
       },
@@ -656,5 +698,67 @@
     "$img_uv_size": [32, 32],
     "$visible_binding_name": "#can_move",
     "$enabled_binding_name": "(not $platform_locked)"
+  },
+
+  "selected_pack_options_button@common.button": {
+    "size": [11, 11],
+    "anchor_from": "right_middle",
+    "anchor_to": "right_middle",
+    "offset": [-3, 0],
+    "$pressed_button_name": "$button.pack_settings",
+    "layer": 20,
+    "controls": [
+      {
+        "default": {
+          "type": "panel",
+          "controls": [
+            {
+              "icon": {
+                "type": "image",
+                "texture": "src/assets/img/conf"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "hover": {
+          "type": "panel",
+          "controls": [
+            {
+              "icon": {
+                "type": "image",
+                "texture": "src/assets/img/confhover"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "pressed": {
+          "type": "panel",
+          "controls": [
+            {
+              "icon": {
+                "type": "image",
+                "texture": "src/assets/img/confhover"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "collection",
+        "binding_collection_name": "$button_collection_name",
+        "binding_name": "#has_pack_settings",
+        "binding_name_override": "#visible"
+      },
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "$button_collection_name"
+      }
+    ]
   }
 }

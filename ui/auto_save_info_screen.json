@@ -1,13 +1,1 @@
-/********************************************************
-+*   (c) Mojang. All rights reserved                       *
-+*   (c) Microsoft. All rights reserved.                   *
-+*********************************************************/
-{
-  "namespace": "auto_save_info",
-
-  "auto_save_info_screen@common_mcjava.base_screen": {
-    "$screen_content": "auto_save_info_mcjava.auto_save_info_screen_content_panel",
-    "$screen_background": "common_mcjava.dirt_background"
-  }
-}
-  
+{"namespace":"auto_save_info","auto_save_info_screen@common_mcjava.base_screen":{"$screen_content":"auto_save_info_mcjava.auto_save_info_screen_content_panel","$screen_background":"common_mcjava.dirt_background"}}

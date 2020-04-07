@@ -1,5 +1,5 @@
 {
-  "namespace": "pack_settings",
+  "namespace": "pack_settings"/* ,
 
   "screen@common_mcjava.base_screen": {
     "force_render_below": false,
@@ -12,5 +12,5 @@
         "mapping_type": "global"
       }
     ]
-  }
+  } */
 }

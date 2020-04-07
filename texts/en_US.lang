@@ -18,6 +18,7 @@ popup.resetSettings.controller=Are you sure yo want to reset the controller sett
 popup.resetSettings.touch=Dre you sure yo want to reset the touch settings?
 
 ##Main Menu
+menu.game=Game Menu
 menu.play=Play
 menu.profile=Profile
 menu.skins=Change Skin
@@ -26,8 +27,15 @@ menu.options=Options...
 menu.quit=Quit Game
 menu.savingLevel=Saving world
 menu.savingChunks=Saving chunks
+menu.returnToGame=Back to Game
+menu.permissions=Permissions
+menu.playersMenu=Players
 menu.takeScreenshot=Take Screenshot
+menu.sendFeedback=Give Feedback
+menu.invitePlayer=Invite Players
 menu.takeScreenshot.short=Screenshot
+menu.returnToMenu=Save and Quit to Title
+menu.disconnect=Disconnect
 
 ##Settings
 options.title=Options
@@ -148,11 +156,19 @@ options.difficulty.hard=Hard
 
 ##Create World Upsell
 createWorldUpsell.title=Create New World or Realm
+createWorldUpsell.newWorld=New World
+createWorldUpsell.newRealm=New Realm
 
 ##World Templates
 worldTemplates.title=Templates
+worldTemplates.world=World
+worldTemplates.realm=Realms
+worldTemplates.help=Help
 
 ##Create New World & Edit World
+selectWorld.create=Create New World
+selectWorld.edit=Edit World
+selectWorld.settings=Game Settings
 selectWorld.resultFolder=Will be saved with:
 selectWorld.gameMode=Game Mode
 selectWorld.gameMode.survival=Survival
@@ -484,8 +500,26 @@ mco.client.incompatible.msg.line1=Your client is not compatible with Realms.
 mco.client.incompatible.msg.line2=Please use the most recent version of Minecraft.
 mco.client.incompatible.msg.line3=Realms is not compatible with snapshot versions.
 
+mco.selectServer.configure=Configure realm
+mco.selectServer.leave=Leave realm
 mco.invites.title=Pending Invites
 mco.invites.nopending=No pending invites!
 mco.selectServer.info=What is Realms?
 mco.selectServer.close=Close
 mco.selectServer.popup=Realms is a safe, simple way to enjoy an online Minecraft world with up to ten friends at a time.   It supports loads of minigames and plenty of custom worlds! Only the owner of the realm needs to pay.
+
+realmsSettingsScreen.selectorSectionLabel=%s
+mco.configure.world.title=Configure realm:
+mco.configure.world.name=Realm name
+mco.configure.world.description=Realm description
+mco.configure.world.buttons.players=Players
+mco.configure.world.buttons.settings=Settings
+mco.configure.world.buttons.subscription=Subscription
+mco.configure.world.buttons.options=World options
+mco.configure.world.buttons.done=Done
+mco.configure.world.buttons.delete=Delete
+mco.configure.world.buttons.open=Open realm
+mco.configure.world.buttons.close=Close realm
+mco.configure.world.backup=World backups
+mco.configure.world.buttons.resetworld=Reset world
+mco.configure.world.subscription.title=Your subscription

@@ -12,7 +12,6 @@
 
   "creative_inventory_content_panel": {
     "type": "panel",
-    "ignored": "$aux_id_finder",
     "controls": [
       { "creative_inventory_content_panel@new_creative_inventory_mcjava.creative_inventory_content": {} },
       { "inventory_take_progress_icon_button@container_mcjava.inventory_take_progress_icon_button": {} },

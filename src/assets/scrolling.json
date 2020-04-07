@@ -18,6 +18,7 @@
     "layer": "$scrolling_layer",
     "$scrolling_layer|default": 1,
     "$static_background|default": "common.empty_panel",
+    "$scroll_viewport|default": "scrolling_mcjava.scroll_viewport",
     "controls": [
       {
         "scroll_mouse@scrolling_mcjava.scrolling_panel_base": {
@@ -83,7 +84,7 @@
           "anchor_to": "$scrolling_panel_anchor",
           "anchor_from": "$scrolling_panel_anchor",
           "controls": [
-            { "background_and_viewport@scrolling_mcjava.scroll_viewport": {} },
+            { "background_and_viewport@$scroll_viewport": {} },
             { "bar_and_track@scrolling_mcjava.scroll_bar_and_track": {} }
           ]
         }

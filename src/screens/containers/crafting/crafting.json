@@ -1,20 +1,13 @@
-/* By @FMarquesPTO. All rights reserved. */
+
 {
   "namespace": "crafting_mcjava",
   
   "inventory_screen_content_panel": {
     "type": "panel",
-    "$creative_inv_content|default": "creative_inventory_mcjava.creative_inventory_screen_content_panel",
-    "variables": [
-      {
-        "requires": "($creative_inventoy_style = java)",
-        "$creative_inv_content": "new_creative_inventory_mcjava.creative_inventory_screen_content_panel"
-      }
-    ],
     "controls": [
       { "container_gamepad_helpers@container_mcjava.invisible_exit_background": {} },
       {
-        "creative_mode@$creative_inv_content": {
+        "creative_mode@creative_inv_content": {
           "bindings": [
             {
               "binding_type": "global",
@@ -31,6 +24,82 @@
               "binding_type": "global",
               "binding_name": "(not #is_creative_mode)",
               "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "creative_inv_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "switch_button@toggle_mcjava.toggle_button": {
+          "$toggle_index": 100,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "size": [50, 20],
+          "$toggle_button_text": "Switch",
+          "$toggle_button_name": "new_ci",
+          "$toggle_control_name": "new_ci_view",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "new_ci_view",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "switch_again_button@toggle_mcjava.toggle_button": {
+          "$toggle_index": 101,
+          "$toggle_button_text": "Switch",
+          "$toggle_button_name": "new_ci",
+          "$toggle_control_name": "",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "size": [50, 20],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "new_ci_view",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "0": {
+          "type": "panel",
+          "controls": [
+            { "@creative_inventory_mcjava.creative_inventory_screen_content_panel": {} }
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "new_ci_view",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "1": {
+          "type": "panel",
+          "controls": [
+            { "@new_creative_inventory_mcjava.creative_inventory_screen_content_panel": {} }
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "new_ci_view",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
             }
           ]
         }
