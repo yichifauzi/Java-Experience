@@ -1,1 +1,86 @@
-{"namespace":"chest","small_chest_screen@common_mcjava.inventory_screen_common":{"$close_on_player_hurt|default":true,"close_on_player_hurt":"$close_on_player_hurt","force_render_below":"$activate_force_render_below","variables":[{"requires":"$desktop_screen","$screen_content":"chests_mcjava.small_chest_screen_content_panel","$screen_background":"common_mcjava.screen_container_background"},{"requires":"$pocket_screen","$screen_content":"chests_mcjava.small_chest_screen_content_panel","$screen_background":"common_mcjava.screen_container_background"}]},"large_chest_screen@common_mcjava.inventory_screen_common":{"$close_on_player_hurt|default":true,"close_on_player_hurt":"$close_on_player_hurt","force_render_below":"$activate_force_render_below","variables":[{"requires":"$desktop_screen","$screen_content":"chests_mcjava.large_chest_screen_content_panel","$screen_background":"common_mcjava.screen_container_background"},{"requires":"$pocket_screen","$screen_content":"chests_mcjava.large_chest_screen_content_panel","$screen_background":"common_mcjava.screen_container_background"}]},"ender_chest_screen@common_mcjava.inventory_screen_common":{"$close_on_player_hurt|default":true,"close_on_player_hurt":"$close_on_player_hurt","force_render_below":"$activate_force_render_below","variables":[{"requires":"$desktop_screen","$screen_content":"chests_mcjava.ender_chest_screen_content_panel","$screen_background":"common_mcjava.screen_container_background"},{"requires":"$pocket_screen","$screen_content":"chests_mcjava.ender_chest_screen_content_panel","$screen_background":"common_mcjava.screen_container_background"}]},"shulker_box_screen@chest.small_chest_screen":{"$close_on_player_hurt":true,"force_render_below":"$activate_force_render_below","variables":[{"requires":"$desktop_screen","$screen_content":"chests_mcjava.shulker_box_screen_content_panel","$screen_background":"common_mcjava.screen_container_background"},{"requires":"$pocket_screen","$screen_content":"chests_mcjava.shulker_box_screen_content_panel","$screen_background":"common_mcjava.screen_container_background"}]},"barrel_screen@chest.small_chest_screen":{"$close_on_player_hurt":true,"force_render_below":"$activate_force_render_below","variables":[{"requires":"$desktop_screen","$screen_content":"chests_mcjava.barrel_screen_content_panel","$screen_background":"common_mcjava.screen_container_background"},{"requires":"$pocket_screen","$screen_content":"chests_mcjava.barrel_screen_content_panel","$screen_background":"common_mcjava.screen_container_background"}]}}
+{
+  "small_chest_screen@common.inventory_screen_common": {
+    "$close_on_player_hurt|default": true,
+    "close_on_player_hurt": "$close_on_player_hurt",
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "chests_mcjava.small_chest_screen_content_panel",
+        "$screen_bg_content": "common.screen_background"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "chests_mcjava.small_chest_screen_content_panel",
+        "$screen_bg_content": "common.screen_background"
+      }
+    ]
+  },
+
+  "large_chest_screen@common.inventory_screen_common": {
+    "$close_on_player_hurt|default": true,
+    "close_on_player_hurt": "$close_on_player_hurt",
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "chests_mcjava.large_chest_screen_content_panel",
+        "$screen_bg_content": "common.screen_background"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "chests_mcjava.large_chest_screen_content_panel",
+        "$screen_bg_content": "common.screen_background"
+      }
+    ]
+  },
+
+  "ender_chest_screen@common.inventory_screen_common": {
+    "$close_on_player_hurt|default": true,
+    "close_on_player_hurt": "$close_on_player_hurt",
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "chests_mcjava.ender_chest_screen_content_panel",
+        "$screen_bg_content": "common.screen_background"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "chests_mcjava.ender_chest_screen_content_panel",
+        "$screen_bg_content": "common.screen_background"
+      }
+    ]
+  },
+
+  "shulker_box_screen@common.inventory_screen_common": {
+    "$close_on_player_hurt|default": true,
+    "close_on_player_hurt": "$close_on_player_hurt",
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "chests_mcjava.shulker_box_screen_content_panel",
+        "$screen_bg_content": "common.screen_background"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "chests_mcjava.shulker_box_screen_content_panel",
+        "$screen_bg_content": "common.screen_background"
+      }
+    ]
+  },
+
+  "barrel_screen@common.inventory_screen_common": {
+    "$close_on_player_hurt|default": true,
+    "close_on_player_hurt": "$close_on_player_hurt",
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "chests_mcjava.barrel_screen_content_panel",
+        "$screen_bg_content": "common.screen_background"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "chests_mcjava.barrel_screen_content_panel",
+        "$screen_bg_content": "common.screen_background"
+      }
+    ]
+  }
+}

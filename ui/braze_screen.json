@@ -1,1 +1,6 @@
-{"namespace":"braze","braze_screen@common_mcjava.base_screen":{"$screen_content":"braze_mcjava.braze_screen_content_panel","$screen_background":"common_mcjava.dirt_background"}}
+{
+  "braze_screen@common.base_screen": {
+    "$screen_content": "braze_mcjava.braze_screen_content_panel",
+    "$screen_bg_content": "screen_mcjava.dirt_background"
+  }
+}

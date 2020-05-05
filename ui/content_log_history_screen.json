@@ -1,1 +1,0 @@
-{"namespace":"content_log_history","content_log_history_screen@common_mcjava.base_screen":{"$screen_content":"content_log_history_mcjava.content_log_history_screen_content_panel","$screen_background":"common_mcjava.dirt_background","button_mappings":[{"from_button_id":"button.menu_cancel","to_button_id":"button.menu_exit","mapping_type":"global"}]}}

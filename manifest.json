@@ -1,16 +1,16 @@
 {
   "format_version": 2,
   "header": {
-    "name": "Java UI 2.0.0",
-    "description": "Made By @FMarquesPTO. Special Thx For @HawfHuman, @CrisXolt and all people in the world",
-    "uuid": "256051b2-59fa-4293-9c73-3358c1c55b94",
+    "name": "20e0Mb1Mn15Pat2tpIn001",
+    "description": "Java UI",
+    "uuid": "646041e3-098d-40a5-b75b-b6beb0a2692a",
     "version": [2, 0, 0],
     "min_engine_version": [1, 14, 0]
   },
   "modules": [
     {
       "type": "resources",
-      "uuid": "6cabb2e3-c730-4489-b9ed-af178a7bba1b",
+      "uuid": "a996e28e-7642-4048-a76f-9024a171672d",
       "version": [2, 0, 0]
     }
   ],

@@ -1,0 +1,204 @@
+{
+  "namespace": "switch_option_mcjava",
+
+  "perspective_panel@switch_option_panel": {
+    "size": [150, 20],
+    "$toggle_enabled_binding_name": "#third_person_dropdown_enabled",
+    "$switch_option_label": "options.perspective",
+    "$options": [
+      {
+        "peaceful@switch_option": {
+          "$option_action_text": "options.perspective.firstPerson",
+          "$this_action": "#thirdperson_radio_first",
+          "$next_action": "#thirdperson_radio_third_back"
+        }
+      },
+      {
+        "easy@switch_option": {
+          "$option_action_text": "options.perspective.thirdBack",
+          "$this_action": "#thirdperson_radio_third_back",
+          "$next_action": "#thirdperson_radio_third_front"
+        }
+      },
+      {
+        "normal@switch_option": {
+          "$option_action_text": "options.perspective.thirdFront",
+          "$this_action": "#thirdperson_radio_third_front",
+          "$next_action": "#thirdperson_radio_first"
+        }
+      }
+    ]
+  },
+
+  "switch_option_panel": {
+    "type": "panel",
+    "size": [150, 20],
+    "controls": "$options",
+    "$options|default": []
+  },
+
+  "switch_option": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_name": "$this_action",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "$switch_option_label|default": "",
+    "$option_action_text|default": "",
+    "$this_action|default": "",
+    "$next_action|default": "",
+    "controls": [
+      {
+        "base@option_toggle_mcjava.toggle_base": {
+          "variables": [
+            {
+              "requires": "(not $option_enabled_binding_name or not $enabled)",
+              "$toggle_enabled_binding_name": "#not_data_bound",
+              "$toggle_enabled_binding_type": "none"
+            }
+          ],
+          "$switch_option_state|default": "",
+          "$toggle_enabled_binding_name|default": "$option_enabled_binding_name",
+          "$toggle_state_binding_name|default": "$this_action",
+          "$option_enabled_binding_name|default": "",
+          "$toggle_enabled_binding_type|default": "global",
+          "toggle_name": "$next_action",
+          "enabled": "$enabled",
+          "$enabled|default": true,
+          "$toggle_binding_name|default": "$next_action",
+          "$toggle_state_binding_name": "$this_action",
+          "$binding_type": "global",
+          "$binding_condition": "once",
+          "$enable_directional_toggling": false,
+          "$content": "switch_option_mcjava.switch_option_text_panel",
+          "$unchecked_background|default": "resources_mcjava.button_default",
+          "$checked_background|default": "resources_mcjava.button_default",
+          "$unchecked_hover_background|default": "resources_mcjava.button_hover",
+          "$checked_hover_background|default": "resources_mcjava.button_hover",
+          "$checked_locked_background|default": "resources_mcjava.button_disabled",
+          "$unchecked_locked_background|default": "resources_mcjava.button_disabled",
+          "$content|default": "switch_option_mcjava.option_toggle_text_panel",
+          "controls": [
+            {
+              "unchecked@switch_option_mcjava.state_base": {
+                "$background": "$unchecked_background",
+                "$switch_option_state": "unchecked",
+                "layer": 2
+              }
+            },
+            {
+              "checked@switch_option_mcjava.state_base": {
+                "$background": "$checked_background",
+                "$switch_option_state": "checked",
+                "layer": 3
+              }
+            },
+            {
+              "unchecked_hover@switch_option_mcjava.state_base": {
+                "$background": "$unchecked_hover_background",
+                "$switch_option_state": "unchecked_hover",
+                "layer": 3
+              }
+            },
+            {
+              "checked_hover@switch_option_mcjava.state_base": {
+                "$background": "$checked_hover_background",
+                "$switch_option_state": "checked_hover",
+                "layer": 4
+              }
+            },
+            {
+              "unchecked_locked@switch_option_mcjava.state_base": {
+                "$background": "$unchecked_locked_background",
+                "$switch_option_state": "unchecked_locked",
+                "layer": 1
+              }
+            },
+            {
+              "unchecked_locked@switch_option_mcjava.state_base": {
+                "$background": "$checked_locked_background",
+                "$switch_option_state": "checked_locked",
+                "layer": 1
+              }
+            },
+            {
+              "unchecked_locked_hover@switch_option_mcjava.state_base": {
+                "$background": "$unchecked_locked_background",
+                "$switch_option_state": "unchecked_locked_hover",
+                "layer": 1
+              }
+            },
+            {
+              "unchecked_locked_hover@switch_option_mcjava.state_base": {
+                "$background": "$checked_locked_background",
+                "$switch_option_state": "checked_locked_hover",
+                "layer": 1
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  "state_base": {
+    "type": "panel",
+    "$tooltip_name|default": "none",
+    "controls": [
+      { "@tooltip_mcjava.tooltip": { "visible": "($switch_option_state = checked_hover or $switch_option_state = unchecked_hover or $switch_option_state = checked_locked_hover or $switch_option_state = unchecked_locked_hover)", "ignored": "($tooltip_name = 'none')" } },
+      { "@$background": {} },
+      { "@$background": {} },
+      { "@$content": {} }
+    ]
+  },
+
+  "switch_option_text_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": ["100%c", 10],
+    "offset": [0.5, 0],
+    "$option_text_color|default": "white",
+    "$action_text_color|default": "white",
+    "$option_locked_text_color": [0.62, 0.62, 0.62],
+    "$action_locked_text_color": [0.62, 0.62, 0.62],
+    "$text_max_size": [ "default", "default" ],
+    "$argument|default": true,
+    "variables": [
+      {
+        "requires": "($option_action_text = '' or $switch_option_label = '')",
+        "$argument": false
+      }
+    ],
+    "controls": [
+      {
+        "option_label@button_mcjava.button_label": {
+          "text": "$switch_option_label",
+          "color": "$option_text_color",
+          "locked_color": "$option_locked_text_color",
+          "bindings": "$option_text_bindings",
+          "$option_text_bindings|default": []
+        }
+      },
+      {
+        "space": {
+          "type": "label",
+          "text": ": ",
+          "shadow": true,
+          "visible": "$argument",
+          "layer": 10
+        }
+      },
+      {
+        "action_text@button_mcjava.button_label": {
+          "text": "$option_action_text",
+          "color": "$action_text_color",
+          "locked_color": "$action_locked_text_color",
+          "bindings": "$action_text_bindings",
+          "$action_text_bindings|default": []
+        }
+      }
+    ]
+  }
+}

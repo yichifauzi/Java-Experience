@@ -5,29 +5,16 @@
 {
   "namespace": "start",
 
-  "start_screen@common_mcjava.base_screen": {
-    "button_mappings": [
-      {
-        "ignored": "(not $can_quit)",
-        "from_button_id": "button.menu_cancel",
-        "to_button_id": "button.menu_exit",
-        "mapping_type": "global"
-      },
-      {
-        "ignored": "(not $nx_os)",
-        "from_button_id": "button.controller_select",
-        "to_button_id": "button.menu_offline",
-        "mapping_type": "global"
-      },
-      {
-        "ignored": "(not $is_berwick)",
-        "from_button_id": "button.controller_secondary_select",
-        "to_button_id": "button.menu_crossplatform",
-        "mapping_type": "global"
-      }
-    ],
+  "start_screen@common.base_screen": {
     "$screen_content": "main_menu_mcjava.main_menu_screen_content_panel",
-    "$screen_background": "main_menu_mcjava.panorama_overlay",
-    "$popup_factory": ""
+    "$screen_bg_content": "resources_mcjava.panorama_overlay"
   }
+  /* "button@button_mcjava.link_button": {
+    "size": [20, 20],
+    "$link": "https://aka.ms/minecraftfbbeta",
+    "$default_background": "resources_mcjava.feedback_button_default",
+    "$hover_background": "resources_mcjava.feedback_button_hover",
+    "$locked_background": "resources_mcjava.feedback_button_locked",
+    "$content": ""
+  } */
 }

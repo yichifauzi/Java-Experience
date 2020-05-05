@@ -1,1 +1,13 @@
-{"namespace":"patch_notes","patch_notes_screen@common_mcjava.base_screen":{"$screen_content":"patch_notes_mcjava.patch_notes_screen_content_panel","$screen_background":"common_mcjava.dirt_background","button_mappings":[{"from_button_id":"button.menu_cancel","to_button_id":"button.menu_exit","mapping_type":"global"}]}}
+{
+  "patch_notes_screen@common.base_screen": {
+    "$screen_content": "patch_notes_mcjava.patch_notes_screen_content_panel",
+    "$screen_bg_content": "screen_mcjava.dirt_background",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      }
+    ]
+  }
+}

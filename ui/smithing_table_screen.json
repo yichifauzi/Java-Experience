@@ -1,0 +1,18 @@
+{
+  "smithing_table_screen@common.inventory_screen_common": {
+    "$close_on_player_hurt|default": true,
+    "close_on_player_hurt": "$close_on_player_hurt",
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "smithing_table_mcjava.smithing_table_screen_content_panel",
+        "$screen_bg_content": "common.screen_background"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "smithing_table_mcjava.smithing_table_screen_content_panel",
+        "$screen_bg_content": "common.screen_background"
+      }
+    ]
+  }
+}

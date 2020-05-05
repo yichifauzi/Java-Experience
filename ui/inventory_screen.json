@@ -1,117 +1,99 @@
-/********************************************************
-+*   (c) Mojang. All rights reserved                       *
-+*   (c) Microsoft. All rights reserved.                   *
-+*********************************************************/
 {
-  "namespace": "crafting",
-
-  "inventory_screen_base@common_mcjava.inventory_screen_common": {
-    "button_mappings": [
-      {
-        "from_button_id": "button.menu_cancel",
-        "to_button_id": "button.menu_exit",
-        "mapping_type": "global"
-      },
-      {
-        "from_button_id": "button.menu_inventory_cancel",
-        "to_button_id": "button.menu_exit",
-        "mapping_type": "global"
-      },
-      {
-        "from_button_id": "button.menu_up",
-        "to_button_id": "button.menu_up",
-        "mapping_type": "global",
-        "scope": "view"
-      },
-      {
-        "from_button_id": "button.menu_down",
-        "to_button_id": "button.menu_down",
-        "mapping_type": "global",
-        "scope": "view"
-      },
-      {
-        "from_button_id": "button.menu_left",
-        "to_button_id": "button.menu_left",
-        "mapping_type": "global",
-        "scope": "view"
-      },
-      {
-        "from_button_id": "button.menu_right",
-        "to_button_id": "button.menu_right",
-        "mapping_type": "global",
-        "scope": "view"
-      },
-      {
-        "from_button_id": "button.menu_select",
-        "to_button_id": "button.cursor_drop_all",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.menu_secondary_select",
-        "to_button_id": "button.cursor_drop_one",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.menu_ok",
-        "to_button_id": "button.cursor_drop_all",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.controller_select",
-        "to_button_id": "button.clear_hotbar_or_drop",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.controller_secondary_select",
-        "to_button_id": "button.cursor_drop_all",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.menu_cancel",
-        "to_button_id": "button.search_bar_clear",
-        "mapping_type": "global"
-      },
-      {
-        "from_button_id": "button.menu_tab_left",
-        "to_button_id": "button.left_panel_tab_decrement",
-        "mapping_type": "global"
-      },
-      {
-        "from_button_id": "button.menu_tab_right",
-        "to_button_id": "button.left_panel_tab_increment",
-        "mapping_type": "global"
-      },
-      {
-        "from_button_id": "button.menu_alternate_tab_left",
-        "to_button_id": "button.layout_increment",
-        "mapping_type": "global"
-      },
-      {
-        "from_button_id": "button.menu_alternate_tab_right",
-        "to_button_id": "button.layout_decrement",
-        "mapping_type": "global"
-      },
-      {
-        "from_button_id": "button.controller_secondary_select_left",
-        "to_button_id": "button.shift_pane_focus",
-        "mapping_type": "global"
-      }
-    ]
-  },
-
   "crafting_screen@crafting.inventory_screen_base": {
     "send_telemetry": false,
     "$screen_content": "crafting_table_mcjava.crafting_table_screen_content_panel",
-    "$screen_background": "common_mcjava.screen_background",
+    "$screen_bg_content": "common.screen_background",
     "$close_on_player_hurt|default": true,
-    "force_render_below": true,
     "close_on_player_hurt": "$close_on_player_hurt"
   },
 
   "inventory_screen@crafting.inventory_screen_base": {
     "send_telemetry": false,
-    "$screen_content": "crafting_mcjava.inventory_screen_content_panel",
-    "$screen_background": "common_mcjava.screen_background",
-    "force_render_below": true
+    "$screen_content": "crafting.inv_panel",
+    "$screen_bg_content": "common.screen_background"
+  },
+
+  "inv_panel": {
+    "type": "panel",
+    "controls": [
+      {
+        "1@crafting.recipe_inventory_screen_content": {
+          "bindings": [
+            {
+              "binding_type": "global",
+              "binding_name": "#is_creative_mode",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "0@survival_inv_mcjava.survival_inv_screen_content_panel": {
+          "bindings": [
+            {
+              "binding_type": "global",
+              "binding_name": "(not #is_creative_mode)",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "crafting_screen_content": {
+    "type": "panel",
+    "controls": [
+      { "inventory_take_progress_icon_button@container_mcjava.inventory_take_progress_icon_button": {} },
+      { "inventory_selected_icon_button@container_mcjava.inventory_selected_icon_button": {} },
+      { "hold_icon@container_mcjava.inventory_take_progress_icon_button": {} },
+      {
+        "controller_gamepad_helpers_stack_panel": {
+          "type": "stack_panel",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "controls": [
+            { "container_gamepad_helpers_second_row@crafting.container_gamepad_helpers_second_row": {} },
+            {
+              "container_gamepad_helpers@common.container_gamepad_helpers": {
+                "$helper_x_control": "crafting.inventory_x_gamepad_helper",
+                "$helper_y_control": "crafting.inventory_y_gamepad_helper",
+                "$helper_a_control": "crafting.inventory_a_gamepad_helper"
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#gamepad_helper_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "flying_item_renderer@common.flying_item_renderer": {
+          "layer": 13,
+          "bindings": [
+            {
+              "binding_name": "#using_touch",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "game_tip@game_tip.game_tip_panel": {
+          "layer": 100,
+          "$offset|default": [ 0, 110 ],
+          "variables": [
+            {
+              "requires": "$game_pad",
+              "$offset": [ 0, "38%" ]
+            }
+          ],
+          "offset": "$offset"
+        }
+      }
+    ]
   }
 }

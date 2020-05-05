@@ -1,1 +1,13 @@
-{"namespace":"account_transfer_error","account_transfer_error_screen@common_mcjava.base_screen":{"button_mappings":[{"from_button_id":"button.menu_cancel","to_button_id":"button.menu_exit","mapping_type":"global"}],"$screen_content":"account_transfer_error_mcjava.account_transfer_error_screen_content_panel","$screen_background":"common_mcjava.dirt_background"}}
+{
+  "account_transfer_error_screen@common.base_screen": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      }
+    ],
+    "$screen_content": "account_transfer_error_mcjava.account_transfer_error_screen_content_panel",
+    "$screen_bg_content": "screen_mcjava.dirt_background"
+  }
+}

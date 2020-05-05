@@ -1,0 +1,61 @@
+{
+  "namespace": "redstone_mcjava",
+
+  "dispenser_screen_content_panel@container_mcjava.container_panel": {
+    "$container_bg": "resources_mcjava.dispenser_bg",
+    "$specified_content": "redstone_mcjava.dispenser_content_panel"
+  },
+
+  "dropper_screen_content_panel@redstone_mcjava.dispenser_screen_content_panel": {
+    "$container_bg": "resources_mcjava.dropper_bg"
+  },
+
+  "hopper_screen_content_panel@container_mcjava.container_panel": {
+    "$container_size": [176, 133],
+    "$container_bg": "resources_mcjava.hopper_bg",
+    "$specified_content": "redstone_mcjava.hopper_content_panel"
+  },
+
+  "dispenser_content_panel": {
+    "type": "panel",
+    "controls": [
+      {
+        "@container_mcjava.title": {
+          "offset": [0, 5],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle"
+        }
+      },
+      {
+        "grid@redstone_grid": {
+          "size": [54, 54],
+          "grid_dimensions": [3, 3],
+          "offset": [61, 16]
+        }
+      }
+    ]
+  },
+
+  "hopper_content_panel": {
+    "type": "panel",
+    "controls": [
+      { "@container_mcjava.title": { "offset": [8, 5] } },
+      {
+        "grid@redstone_grid": {
+          "size": [90, 18],
+          "grid_dimensions": [5, 1],
+          "offset": [43, 19]
+        }
+      }
+    ]
+  },
+
+  "redstone_grid": {
+    "type": "grid",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "collection_name": "container_items",
+    "grid_item_template": "container_mcjava.container_slot",
+    "$item_collection_name": "container_items"
+  }
+}

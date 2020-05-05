@@ -1,1 +1,9 @@
-{"namespace":"sign","sign_screen@common_mcjava.base_screen":{"$screen_content":"sign_mcjava.sign_screen_content_panel","$screen_background":"common_mcjava.screen_background","$close_on_player_hurt|default":true,"force_render_below":"$activate_force_render_below","close_on_player_hurt":"$close_on_player_hurt"}}
+{
+  "sign_screen@common.base_screen": {
+    "$screen_content": "sign_mcjava.sign_screen_content_panel",
+    "$screen_bg_content": "screen_mcjava.screen_background",
+    "$close_on_player_hurt|default": true,
+    "force_render_below": true,
+    "close_on_player_hurt": "$close_on_player_hurt"
+  }
+}

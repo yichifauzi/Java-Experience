@@ -1,13 +1,7 @@
-/********************************************************
-+*   (c) Mojang. All rights reserved                       *
-+*   (c) Microsoft. All rights reserved.                   *
-+*********************************************************/
 {
-  "namespace": "hud",
-
-  "hud_screen@common_mcjava.base_screen": {
+  "hud_screen@common.base_screen": {
     "is_showing_menu": false,
-    "should_steal_mouse": true, //you stealer
+    "should_steal_mouse": true,
     "low_frequency_rendering": true,
     "absorbs_input": false,
     "send_telemetry": false,

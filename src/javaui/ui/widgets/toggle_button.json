@@ -1,0 +1,104 @@
+{
+  "namespace": "toggle_button_mcjava",
+
+  "toggle_button": {
+    "type": "panel",
+    "size": [150, 20],
+    "$toggle_button_text|default": "toggle_button_text",
+    "$toggle_control_name|default": "this_thing",
+    "$toggle_button_state|default": "",
+    "$content": "toggle_button_mcjava.toggle_button_label",
+    "controls": [
+      {
+        "$toggle_control_name@option_toggle_mcjava.toggle_base": {
+          "$toggle_group|default": true,
+          "toggle_name": "$toggle_button_name",
+          "$toggle_button_type|default": "toggle_button_mcjava.state_base", 
+          "$checked_background": "resources_mcjava.button_default",
+          "$unchecked_background": "resources_mcjava.button_default",
+          "$checked_hover_background": "resources_mcjava.button_hover",
+          "$unchecked_hover_background": "resources_mcjava.button_hover",
+          "$checked_locked_background": "resources_mcjava.button_disabled",
+          "$unchecked_locked_background": "resources_mcjava.button_disabled",
+          "$toggle_controls": [
+            {
+              "checked@$toggle_button_type": {
+                "$background": "$checked_background",
+                "$toggle_button_state": "checked",
+                "layer": 3
+              }
+            },
+            {
+              "unchecked@$toggle_button_type": {
+                "$background": "$unchecked_background",
+                "$toggle_button_state": "unchecked",
+                "layer": 3
+              }
+            },
+            {
+              "checked_hover@$toggle_button_type": {
+                "$background": "$checked_hover_background",
+                "$toggle_button_state": "checked_hover",
+                "layer": 4
+              }
+            },
+            {
+              "unchecked_hover@$toggle_button_type": {
+                "$background": "$unchecked_hover_background",
+                "$toggle_button_state": "unchecked_hover",
+                "layer": 4
+              }
+            },
+            {
+              "checked_locked@$toggle_button_type": {
+                "$background": "$checked_locked_background",
+                "$toggle_button_state": "checked_locked",
+                "layer": 1
+              }
+            },
+            {
+              "unchecked_locked@$toggle_button_type": {
+                "$background": "$unchecked_locked_background",
+                "$toggle_button_state": "unchecked_locked",
+                "layer": 1
+              }
+            },
+            {
+              "checked_locked_hover@$toggle_button_type": {
+                "$background": "$checked_locked_background",
+                "$toggle_button_state": "checked_locked_hover",
+                "layer": 1
+              }
+            },
+            {
+              "unchecked_locked_hover@$toggle_button_type": {
+                "$background": "$unchecked_locked_background",
+                "$toggle_button_state": "unchecked_locked_hover",
+                "layer": 1
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "state_base": {
+    "type": "panel",
+    "$tooltip_name|default": "none",
+    "controls": [
+      { "@tooltip_mcjava.tooltip": { "visible": "($toggle_button_state = checked_hover or $toggle_button_state = unchecked_hover or $toggle_button_state = checked_locked_hover or $toggle_button_state = unchecked_locked_hover)", "ignored": "($tooltip_name = 'none')" } },
+      { "@$background": {} },
+      { "@$content": {} }
+    ]
+  },
+
+  "toggle_button_label@button_mcjava.button_label": {
+    "text": "$toggle_button_text",
+    "locked_color": "$locked_text_color",
+    "$text_color|default": "white",
+    "$locked_text_color|default": [0.62, 0.62, 0.62],
+    "bindings": "$text_bindings",
+    "$text_bindings|default": []
+  }
+}

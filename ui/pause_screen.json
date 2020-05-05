@@ -1,11 +1,5 @@
-/********************************************************
-+*   (c) Mojang. All rights reserved                       *
-+*   (c) Microsoft. All rights reserved.                   *
-+*********************************************************/
 {
-  "namespace": "pause",
-
-  "pause_screen@common_mcjava.base_screen": {
+  "pause_screen@common.base_screen": {
     "cache_screen": true,
     "button_mappings": [
       {
@@ -32,7 +26,6 @@
       }      
     ],
     "force_render_below": true,
-    "$popup_factory": "",
     "variables": [
       {
         "requires": "(not $education_edition)",

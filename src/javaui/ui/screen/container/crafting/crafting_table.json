@@ -1,0 +1,137 @@
+{
+  "namespace": "crafting_table_mcjava",
+
+  "crafting_table_screen_content_panel": {
+    "type": "panel",
+    "controls": [
+      { "@crafting.crafting_screen_content": {} },
+      {
+        "root_panel@common.root_panel": {
+          "size": [176, 166],
+          "layer": 1,
+          "controls": [
+            { "@resources_mcjava.crafting_table_bg": {} },
+            {
+              "screen_inventory": {
+                "type": "panel",
+                "layer": 2,
+                "$show_invlabel": false,
+                "controls": [
+                  { "@crafting_table_mcjava.crafting_table_content_panel": {} },
+                  { "inventory_grid_panel@container_mcjava.inventory_grid_panel": {} },
+                  { "hotbar_grid@container_mcjava.hotbar_grid": {} }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "crafting_table_content_panel": {
+    "type": "panel",
+    "controls": [
+      { "@survival_inv_mcjava.crafting_text": { "offset": [29, 5] } },
+      { "@crafting_table_mcjava.crafting_grid": {} },
+      {
+        "@survival_inv_mcjava.crafting_arrow_button": {
+          "size": [22, 15],
+          "offset": [90, 35]
+        }
+      },
+      { "@crafting_table_mcjava.output_slot": {} }
+    ]
+  },
+
+  "crafting_grid": {
+    "type": "grid",
+    "size": [54, 54],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [29, 16],
+    "grid_dimensions": [ 3, 3 ],
+    "collection_name": "crafting_input_items",
+    "controls": [
+      {
+        "crafting_input_item_top_left@survival_inv_mcjava.crafting_input_grid_item": {
+          "grid_position": [0, 0],
+          "$focus_id_binding_type": "none",
+          "$focus_id": "crafting_input_top_left",
+          "$focus_left_binding_type": "none"
+        }
+      },
+      {
+        "crafting_input_item_top_mid@survival_inv_mcjava.crafting_input_grid_item": {
+          "grid_position": [1, 0]
+        }
+      },
+      {
+        "crafting_input_item_top_right@survival_inv_mcjava.crafting_input_grid_item": {
+          "grid_position": [2, 0]
+        }
+      },
+      {
+        "crafting_input_item_mid_left@survival_inv_mcjava.crafting_input_grid_item": {
+          "grid_position": [0, 1],
+          "$focus_id_binding_type": "none",
+          "$focus_id": "crafting_input_mid_left",
+          "$focus_left_binding_type": "none"
+        }
+      },
+      {
+        "crafting_input_item_middle@survival_inv_mcjava.crafting_input_grid_item": {
+          "grid_position": [1, 1]
+        }
+      },
+      {
+        "crafting_input_item_mid_right@survival_inv_mcjava.crafting_input_grid_item": {
+          "grid_position": [2, 1]
+        }
+      },
+      {
+        "crafting_input_item_bot_left@survival_inv_mcjava.crafting_input_grid_item": {
+          "grid_position": [0, 2]
+        }
+      },
+      {
+        "crafting_input_item_bot_mid@survival_inv_mcjava.crafting_input_grid_item": {
+          "grid_position": [1, 2]
+        }
+      },
+      {
+        "crafting_input_item_bot_right@survival_inv_mcjava.crafting_input_grid_item": {
+          "grid_position": [2, 2],
+          "$focus_right_binding_type": "none",
+          "$focus_right": "crafting_output_item"
+        }
+      }
+    ]
+  },
+
+  "output_slot": {
+    "type": "grid",
+    "grid_dimensions": [ 1, 1 ],
+    "collection_name": "crafting_output_items",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [ 123, 34 ],
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "work_bench_output@survival_inv_mcjava.inventory_container_slot": {
+          "$item_collection_name": "crafting_output_items",
+          "$button_ref": "survival_inv_mcjava.output_no_coalesce_container_slot_button",
+          "$stack_count_binding_condition": "always",
+          "$item_renderer_binding_condition": "always",
+          "$background_images": "survival_inv_mcjava.crafting_slot_backgrounds",
+          "$focus_id_binding_type": "none",
+          "$red_cell_size": [24, 24],
+          "$focus_id": "crafting_output_item",
+          "$focus_right_binding_type": "none",
+          "$focus_right": "FOCUS_OVERRIDE_STOP"
+        }
+      }
+    ]
+  }
+}

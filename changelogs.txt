@@ -1,4 +1,29 @@
-v2.0.0
+vpre4-2.0.0
+Clean up.
+
+vpre3-2.0.0
+(Realm) Players section.
+Added "$fast_recipe_book".
+Added "$fast_settings_screen".
+Added "$fast_play_screen".
+Added Perspetive button for touch devices.
+Added default gamemode button.
+Store item details.
+Added Marketplace texture packs compatibility.
+Fixed Store Home category selection.
+Fixed Store filter and sort.
+Fixed three buttons popup panel. 
+Fixed apply and remove pack button not responding on touch.
+
+vpre2-2.0.0
+Added 1.16 Splash Textsf
+Unlocked (Realms) Players section. Not fully done. 
+Now "See More" (Custom Templates) shows on top right of the world templates screen.
+Fixed Recipe Book pages 
+Fixed panorama_overlay opacity
+Fixed version "v" text shadow still appearing.
+
+vpre1-2.0.0
 Updated chat
 Removed 'v.' from Game Version
 Double click for worlds and servers

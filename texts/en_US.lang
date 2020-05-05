@@ -38,6 +38,10 @@ menu.returnToMenu=Save and Quit to Title
 menu.disconnect=Disconnect
 
 ##Settings
+options.perspective=Perspective
+options.perspective.firstPerson=First Person
+options.perspective.thirdBack=Third Per. Back
+options.perspective.thirdFront=Third Per. Front
 options.title=Options
 options.accessibility=Accessibility Settings...
 options.accessibility.title=Accessibility Settings
@@ -171,6 +175,8 @@ selectWorld.edit=Edit World
 selectWorld.settings=Game Settings
 selectWorld.resultFolder=Will be saved with:
 selectWorld.gameMode=Game Mode
+selectWorld.gameModePlayer=Personal GMode
+selectWorld.gameMode.default=Default
 selectWorld.gameMode.survival=Survival
 selectWorld.gameMode.survival.line1=Search for resources, crafting, gain
 selectWorld.gameMode.survival.line2=levels, health and hunger

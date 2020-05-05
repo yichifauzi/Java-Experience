@@ -1,0 +1,222 @@
+{
+  "namespace": "screen_mcjava",
+
+  "empty_panel": {
+    "type": "panel"
+  },
+
+  "hfill": {
+    "type": "panel",
+    "size": ["fill", 0]
+  },
+
+  "vfill": {
+    "type": "panel",
+    "size": [0, "fill"]
+  },
+
+  "hspace": {
+    "type": "panel",
+    "size": [4, 0]
+  },
+
+  "vspace": {
+    "type": "panel",
+    "size": [0, 4]
+  },
+
+  "stack": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": ["100%", 20]
+  },
+
+  "panel": {
+    "type": "panel",
+    "size": ["100%", 20]
+  },
+
+  "scroll_screen": {
+    "type": "panel",
+    "size": ["100%", "100%"],
+    "$top_content_size|default": ["100%", 32],
+    "$middle_content_size|default": ["100%", "fill"],
+    "$bottom_content_size|default": ["100%", 32],
+    "$top_content|default": "",
+    "$bottom_content|default": "",
+    "$popup_factory|default": "",
+    "$dirt_scroll": true,
+    "$middle_clip_path|default": true,
+    "controls": [
+      { "dirt_background@screen_mcjava.dirt_background": {} },
+      {
+        "screen_stack": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": ["100%", "100%"],
+          "controls": [
+            {
+              "top_content_panel": {
+                "type": "panel",
+                "size": "$top_content_size",
+                "layer": 77,
+                "controls": [
+                  { "bg@screen_mcjava.dirt_background_panel": { "$bg_anchor": "top_left" } },
+                  { "$top_content@$top_content": {} }
+                ]
+              }
+            },
+            {
+              "middle_content_panel": {
+                "type": "panel",
+                "size": "$middle_content_size",
+                "clips_children": "$middle_clip_path",
+                "layer": 1,
+                "controls": [
+                  { "scrolling@scrolling_mcjava.scrolling_panel": {} }
+                ]
+              }
+            },
+            {
+              "bottom_content_panel": {
+                "type": "panel",
+                "size": "$bottom_content_size",
+                "layer": 77,
+                "controls": [
+                  { "bg@screen_mcjava.dirt_background_panel": { "$overlay_bg_size": ["100%", "100%"], "$bg_anchor": "bottom_left" } },
+                  { "$bottom_content@$bottom_content": {} }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      { "popup_dialog_factory@$popup_factory": {} }
+    ]
+  },
+
+  "dirt_background_panel": {
+    "type": "panel",
+    "size": ["100%", "100%"],
+    "clips_children": true,
+    "controls": [
+      {
+        "dirt_background@screen_mcjava.dirt_background": {
+          "size": "$overlay_bg_size",
+          "layer": -1,
+          "$overlay_bg_size|default": ["100%", "100%"],
+          "anchor_from": "$bg_anchor",
+          "anchor_to": "$bg_anchor"
+        }
+      }
+    ]
+  },
+
+  "title": {
+    "type": "label",
+    "shadow": true,
+    "color": "white",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [0, 12],
+    "layer": 10
+  },
+
+  "exit_button@button_mcjava.button": {
+    "$pressed_button_name": "button.menu_exit",
+    "$button_text": "gui.done"
+  },
+
+  "locked@button_mcjava.state_base": {
+    "$background": "resources_mcjava.button_disabled",
+    "size": [200, 20],
+    "$text_color": [0.62, 0.62, 0.62],
+    /* Text bindings */
+    "$content": "button_mcjava.button_label",
+    "$button_text_binding_type|default": "none",
+    "$button_binding_condition|default": "none",
+    "$button_text_grid_collection_name|default": ""
+  },
+
+  /* Screen Backgrounds */
+
+  "dirt_background": {
+    "type": "image",
+    "texture": "assets/minecraft/textures/gui/options_background",
+    "layer": -20,
+    "color": [0.246, 0.245, 0.245],
+    "tiled_scale": "$tiled",
+    "tiled": true,
+    "variables": [
+      { "requires": "($options_background_resolution = '256x')", "$tiled": [2, 2] },
+      { "requires": "($options_background_resolution = '512x')", "$tiled": [1, 1] },
+      { "requires": "($options_background_resolution = '1024x')", "$tiled": [0.5, 0.5] },
+      { "requires": "($options_background_resolution = '2048x')", "$tiled": [0.25, 0.25] },
+      { "requires": "($options_background_resolution = '4096x')", "$tiled": [0.125, 0.125] },
+      { "requires": "($options_background_resolution = '8192x')", "$tiled": [0.0625, 0.0625] }
+    ]
+  },
+  
+  "dark_dirt_background": {
+    "type": "panel",
+    "size": ["100%", 0 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "controls": [
+      {
+        "dirt_background@screen_mcjava.dirt_background": {
+          "size": [2560, 1620],
+          "offset": [0, -64],
+          "color": [0.125, 0.13, 0.13],
+          "layer": -10,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left"
+        }
+      }
+    ]
+  },
+
+  "window_background": {
+    "type": "image",
+    "texture": "src/javaui/resources/textures/white",
+    "color": "gray",
+    "ignored": "$is_holographic",
+    "alpha": 1
+  },
+
+  "screen_background": {
+    "type": "image",
+    "texture": "src/javaui/resources/textures/white",
+    "color": [0.005, 0.005, 0.005],
+    "ignored": "$is_holographic",
+    "$bg_alpha|default": 0.75,
+    "alpha": "$bg_alpha"
+  },
+
+  "screen_container_background": {
+    "type": "image",
+    "texture": "src/javaui/resources/textures/white",
+    "color": [0.05, 0.05, 0.05],
+    "ignored": "$is_holographic",
+    "$bg_alpha|default": 0.74,
+    "alpha": "$bg_alpha"
+  },
+
+  "shadow_top": {
+    "type": "image",
+    "texture": "src/javaui/resources/textures/shadow_top",
+    "size": [ "100%", 4 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "layer": 30
+  },
+
+  "shadow_bottom": {
+    "type": "image",
+    "texture": "src/javaui/resources/textures/shadow_bottom",
+    "size": [ "100%", 4 ],
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "layer": 30
+  }
+}

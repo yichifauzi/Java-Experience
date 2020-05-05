@@ -1,0 +1,74 @@
+{ "namespace": "tooltip_mcjava",
+
+  "tooltip": {
+    "type": "button",
+    "size": [0, 0],
+    "focus_enabled": false,
+    "focus_magnet_enabled": false,
+    "follows_cursor": true,
+    "always_handle_pointer": true,
+    "consume_event": false,
+    "layer": 120,
+    "controls": [
+      {
+        "bg": {
+          "type": "image",
+          "texture": "src/javaui/resources/textures/tooltip",
+          "size": ["100%c + 7px", "100%c + 6px"],
+          "offset": ["50%c + 8px", "50%c - 14px"],
+          "nineslice_size": 2,
+          "controls": [
+            {
+              "tooltip_text": {
+                "type": "stack_panel",
+                "size": ["100%cm", "100%c"],
+                "offset": [0, -0.5],
+                "controls": "$tooltip_controls",
+                "$tooltip_controls|default": [
+                  {
+                    "name@tooltip_mcjava.name": {
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "name": {
+    "type": "label",
+    "text": "$tooltip_name",
+    "$tooltip_name|default": "none",
+    "size": ["default", 10],
+    "shadow": true
+  },
+
+  "category": {
+    "type": "label",
+    "text": "$tooltip_category",
+    "$tooltip_category|default": "none",
+    "size": ["default", "default"],
+    "shadow": true,
+    "color": [0.329, 0.329, 0.988]
+  },
+
+  "description": {
+    "type": "label",
+    "text": "$tooltip_desc",
+    "$tooltip_desc|default": "none",
+    "size": ["default", "default"],
+    "shadow": true
+  },
+
+  "bottom": {
+    "type": "label",
+    "text": "$tooltip_bottom",
+    "$tooltip_bottom|default": "none",
+    "size": ["default", 10],
+    "color": [0.62, 0.62, 0.62],
+    "shadow": true
+  }
+}

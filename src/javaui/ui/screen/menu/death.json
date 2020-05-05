@@ -1,0 +1,138 @@
+{
+  "namespace": "death_menu_mcjava",
+
+  "death_menu_screen_content_panel": {
+    "type": "panel",
+    "controls": [
+      { "title@death_menu_mcjava.title_text": {} },
+      { "menu@death_menu_mcjava.menu_content_panel": {} },
+      { "locked_menu@death_menu_mcjava.menu_locked_content_panel": {} },
+      { "controller_a@bed_mcjava.a_button_panel": {} }/* ,
+      { "popup_dialog_factory@death_menu_mcjava.popup_dialog_factory": {} } */
+    ]
+  },
+
+  "menu_content_panel": {
+    "type": "stack_panel",
+    "size": [200, 44],
+    "offset": [0, "-5% - 0.5px"],
+    "anchor_from": "center",
+    "anchor_to": "top_middle",
+    "controls": [
+      { "respawn@death_menu_mcjava.respawn_button": {} },
+      { "space@screen_mcjava.vspace": {} },
+      { "quit@death_menu_mcjava.quit_button": {} }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#buttons_and_deathmessage_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "menu_locked_content_panel": {
+    "type": "stack_panel",
+    "size": [200, 44],
+    "offset": [0, "-5% - 0.5px"],
+    "anchor_from": "center",
+    "anchor_to": "top_middle",
+    "controls": [
+      { "respawn@death_menu_mcjava.respawn_locked_button": {} },
+      { "space@screen_mcjava.vspace": {} },
+      { "quit@death_menu_mcjava.quit_locked_button": {} }
+    ]
+  },
+
+  "popup_dialog_factory": {
+    "type": "factory",
+    "control_ids": {
+      "modal_dialog_popup": "@death_menu_mcjava.death_confirm_modal"
+    }
+  },
+
+  "title_text@screen_mcjava.title": {
+    "offset": [0, "15%"],
+    "text": "deathScreen.title",
+    "font_size": "large"
+  },
+
+  "background_gradient": {
+    "type": "custom",
+    "renderer": "gradient_renderer",
+    "color1": [0.313, 0, 0, 0.37],
+    "color2": [0.5, 0.188, 0.188, 0.627],
+    "ignored": "$is_holographic"
+  },
+
+  "respawn_button@button_mcjava.button": {
+    "$button_text": "deathScreen.respawn",
+    "$pressed_button_name": "button.respawn_button",
+    "bindings": [
+      {
+        "binding_name": "#respawn_enabled",
+        "binding_name_override": "#enabled"
+      }
+    ]
+  },
+
+  "quit_button@button_mcjava.button": {
+    "$button_text": "deathScreen.titleScreen",
+    "$pressed_button_name": "button.main_menu_button",
+    "variables": [
+      {
+        "requires": "$is_secondary_client",
+        "$button_text": "deathScreen.quit.secondaryClient"
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#quit_enabled",
+        "binding_name_override": "#enabled"
+      }
+    ]
+  },
+
+  "respawn_locked_button@screen_mcjava.locked": {
+    "$button_text": "deathScreen.respawn"
+  },
+
+  "quit_locked_button@screen_mcjava.locked": {
+    "$button_text": "deathScreen.titleScreen",
+    "variables": [
+      {
+        "requires": "$is_secondary_client",
+        "$button_text": "deathScreen.titleScreen"
+      }
+    ]
+  },
+
+  "death_confirm_modal": {
+    "type": "panel",
+    "controls": [
+      {
+        "modal_input@popup_dialog.modal_input_panel": {
+          "$show_black_background|default": false,
+          "controls": [
+            {
+              "menu_content_panel": {
+                "type": "stack_panel",
+                "size": [200, 44],
+                "offset": [0, "-5%"],
+                "anchor_from": "center",
+                "anchor_to": "top_middle",
+                "$left_button_text": "deathScreen.titleScreen",
+                "$cancel_button_text": "gui.back",
+                "controls": [
+                  { "respawn@popup_mcjava.modal_cancel_button": {} },
+                  { "space@screen_mcjava.vspace": {} },
+                  { "quit@popup_mcjava.modal_left_button": {} }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

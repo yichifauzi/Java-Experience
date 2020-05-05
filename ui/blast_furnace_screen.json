@@ -1,1 +1,18 @@
-{"namespace":"blast_furnace","blast_furnace_screen@furnace.furnace_screen":{"variables":[{"requires":"$desktop_screen","$screen_content":"furnaces_mcjava.blast_furnace_screen_content_panel","$screen_background":"common_mcjava.screen_container_background"},{"requires":"$pocket_screen","$screen_content":"furnaces_mcjava.blast_furnace_screen_content_panel","$screen_background":"common_mcjava.screen_container_background"}]}}
+{
+  "blast_furnace_screen@common.inventory_screen_common": {
+    "$close_on_player_hurt|default": true,
+    "close_on_player_hurt": "$close_on_player_hurt",
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "furnaces_mcjava.blast_furnace_screen_content_panel",
+        "$screen_bg_content": "common.screen_background"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "furnaces_mcjava.blast_furnace_screen_content_panel",
+        "$screen_bg_content": "common.screen_background"
+      }
+    ]
+  }
+}

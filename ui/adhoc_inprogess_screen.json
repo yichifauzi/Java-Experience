@@ -1,1 +1,6 @@
-{"namespace":"adhoc_inprogress","adhoc_inprogress_screen@common_mcjava.base_screen":{"$screen_content":"adhoc_inprogress_mcjava.adhoc_inprogress_screen_content_panel","$screen_background":"common_mcjava.dirt_background"}}
+{
+  "adhoc_inprogress_screen@common.base_screen": {
+    "$screen_content": "adhoc_inprogress_mcjava.adhoc_inprogress_screen_content_panel",
+    "$screen_bg_content": "screen_mcjava.dirt_background"
+  }
+}

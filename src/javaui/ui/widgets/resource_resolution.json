@@ -1,0 +1,36 @@
+//Original idea by @CrisXolt
+{ "namespace": "rsrc_resolution_mcjava",
+
+  "resource_panel": {
+    "type": "panel",
+    "clips_children": true,
+    "controls": [ { "@rsrc_resolution_mcjava.resource_base": {} } ]
+  },
+
+  "resource_image": {
+    "type": "image",
+    "texture": "$rsrc_location",
+    "$rsrc_location|default": "src/javaui/resources/textures/none",
+    "uv": "$uv",
+    "uv_size": "$uv_size",
+    "$uv|default": [0, 0],
+    "$uv_size|default": [0, 0],
+    "layer": 1
+  },
+
+  "resource_base": {
+    "type": "image",
+    "texture": "$rsrc_location",
+    "$rsrc_location|default": "src/javaui/resources/textures/none",
+    "size": "$base_size",
+    "$base_size|default": [256, 256],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": "$xy",
+    "$xy|default": [0, 0],
+    "controls": "$rsc_controls",
+    "bindings": "$rsc_bindings",
+    "$rsc_controls|default": [],
+    "$rsc_bindings|default": []
+  }
+}
