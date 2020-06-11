@@ -1,0 +1,140 @@
+/* By @FMarquesPTO. All rights reserved. */
+{
+  "namespace": "button_mcjava",
+
+  "button_base@common.button": {
+    "sound_name": "ui.button.click"
+  },
+
+  "button@button_mcjava.button_base": {
+    "locked_control": "locked",
+    "size": [200, 20],
+    "$button_state_panel|default": "button_mcjava.button_state_panel",
+    "$button_type_panel|default": "button_mcjava.button_label",
+    "$button_text_binding_type|default": "none",
+    "$button_binding_condition|default": "none",
+    "$button_text_grid_collection_name|default": "",
+    "$text_locked_color|default": "$button_locked_text_color",
+    "$default_button_bg|default": "resources.button_default",
+    "$hover_button_bg|default": "resources.button_hover",
+    "$pressed_button_bg|default": "resources.button_hover",
+    "$locked_button_bg|default": "resources.button_locked",
+    "$state|default": "",
+    "controls": [
+      {
+        "default@$button_state_panel": {
+          "$state": "default",
+          "$button_bg|default": "$default_button_bg",
+          "$text_color|default": "$button_default_text_color",
+          "layer": 2
+        }
+      },
+      {
+        "hover@$button_state_panel": {
+          "$state": "hover",
+          "$button_bg|default": "$hover_button_bg",
+          "$text_color|default": "$button_hover_text_color",
+          "layer": 3
+        }
+      },
+      {
+        "pressed@$button_state_panel": {
+          "$state": "pressed",
+          "$button_bg|default": "$pressed_button_bg",
+          "$text_color|default": "$button_pressed_text_color",
+          "layer": 4
+        }
+      },
+      {
+        "locked@$button_state_panel": {
+          "$state": "locked",
+          "$button_bg|default": "$locked_button_bg",
+          "$text_color|default": "$button_locked_text_color",
+          "layer": 1
+        }
+      }
+    ]
+  },
+
+  "action_button@button": {
+    "$pressed_button_name|default": "unset_button_name",
+    "$button_text|default": "unset $button_text"
+  },
+
+  "link_button@button": {
+    "$pressed_button_name": "button.menu_open_uri",
+    "$link|default": "",
+    "property_bag": {
+      "#hyperlink": "$link"
+    }
+  },
+
+  "action_link_button@action_button": {
+    "$pressed_button_name": "button.menu_open_uri",
+    "$link|default": "unset #hyperlink in property_bag",
+    "property_bag": {
+      "#hyperlink": "$link"
+    }
+  },
+
+  "button_state_panel": {
+    "type": "panel",
+    "$tooltip_name|default": "null",
+    "controls": [
+      {
+        "tooltip@tooltip_mcjava.tooltip": {
+          "visible": "($state = hover)",
+          "ignored": "($tooltip_name = null)"
+        }
+      },
+      { "bg@$button_bg": {} },
+      {
+        "content_panel": {
+          "type": "panel",
+          "size": "$content_panel_size",
+          "$content_panel_size|default": ["100% - 4px", "100% - 4px"],
+          "layer": 3,
+          "controls": [
+            { "content@$button_type_panel": {} }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_label": {
+    "type": "label",
+    "text": "$button_text",
+    "$button_text|default": "",
+    "color": "$text_color",
+    "locked_color": "$text_locked_color",
+    "font_type": "$font_type",
+    "$font_type|default": "default",
+    "font_size": "$button_font_size",
+    "$button_font_size|default": "normal",
+    "font_scale_factor": "$button_font_scale_factor",
+    "$button_font_scale_factor|default": 1.0,
+    "offset": "$button_text_offset",
+    "$button_text_offset|default": [0, 0],
+    "anchor_from": "$anchor",
+    "anchor_to": "$anchor",
+    "$anchor|default": "center",
+    "shadow": true,
+    "size": "$button_text_size",
+    "$button_text_size|default": ["default", "default"],
+    "max_size": "$button_text_max_size",
+    "$button_text_max_size|default": ["100%", 10],
+    "text_alignment": "$text_alignment",
+    "$text_alignment|default": "center",
+    "layer": 2,
+    "bindings": [
+      {
+        "binding_type": "$button_text_binding_type",
+        "binding_condition": "$button_binding_condition",
+        "binding_collection_name": "$button_text_grid_collection_name",
+        "binding_name": "$button_text",
+        "binding_name_override": "$button_text"
+      }
+    ]
+  }
+}

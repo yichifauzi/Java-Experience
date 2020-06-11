@@ -1,20 +1,5 @@
-/********************************************************
-+*   (c) Mojang. All rights reserved                       *
-+*   (c) Microsoft. All rights reserved.                   *
-+*********************************************************/
 {
-  "namespace": "start",
-
-  "start_screen@common.base_screen": {
-    "$screen_content": "main_menu_mcjava.main_menu_screen_content_panel",
-    "$screen_bg_content": "resources_mcjava.panorama_overlay"
+  "start_screen": {
+    "$screen_content": "main_menu_mcjava.main_menu_screen_content_panel"
   }
-  /* "button@button_mcjava.link_button": {
-    "size": [20, 20],
-    "$link": "https://aka.ms/minecraftfbbeta",
-    "$default_background": "resources_mcjava.feedback_button_default",
-    "$hover_background": "resources_mcjava.feedback_button_hover",
-    "$locked_background": "resources_mcjava.feedback_button_locked",
-    "$content": ""
-  } */
 }

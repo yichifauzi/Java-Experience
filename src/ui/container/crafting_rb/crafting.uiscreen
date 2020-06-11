@@ -1,0 +1,10 @@
+{
+  "namespace": "crafting_rb_mcjava",
+
+  "recipe_book_content_panel@common.root_panel": {
+    "size": [147, 166],
+    "controls": [
+      { "bg@resources.recipe_book_bg": {} }
+    ]
+  }
+}

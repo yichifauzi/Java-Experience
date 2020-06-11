@@ -1,0 +1,80 @@
+{
+  "namespace": "tooltip_mcjava",
+
+  "tooltip": {
+    "type": "button",
+    "size": [0, 0],
+    "focus_enabled": true,
+    "focus_magnet_enabled": false,
+    "follows_cursor": true,
+    "consume_hover_events": false,
+    "always_handle_pointer": true,
+    "consume_event": false,
+    "layer": 120,
+    "controls": [
+      {
+        "bg": {
+          "type": "image",
+          "texture": "src/core/resources/fmarquespto/textures/tooltip",
+          "size": ["100%c + 7px", "100%c + 6px"],
+          "offset": ["50%c + 8px", "50%c - 14px"],
+          "nineslice_size": 2,
+          "bindings": "$tooltip_bindings",
+          "$tooltip_bindings|default": [],
+          "$tooltip_variables|default": [],
+          "variables": "$tooltip_variables",
+          "controls": [
+            {
+              "tooltip_text": {
+                "type": "stack_panel",
+                "size": ["100%cm", "100%c"],
+                "offset": [0, -0.5],
+                "controls": "$tooltip_controls",
+                "layer": 10,
+                "$tooltip_controls|default": [
+                  { "name@tooltip_mcjava.name": {} }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "name": {
+    "type": "label",
+    "text": "$tooltip_name",
+    "$tooltip_name|default": "null",
+    "size": ["default", "default"],
+    "max_size": [180, "default"],
+    "shadow": true,
+    "bindings": [
+      {
+        "binding_name": "$tooltip_name"
+      }
+    ]
+  },
+
+  "category": {
+    "type": "label",
+    "text": "$tooltip_category",
+    "$tooltip_category|default": "",
+    "size": ["default", "default"],
+    "shadow": true
+  },
+
+  "desc": {
+    "type": "label",
+    "text": "$tooltip_desc",
+    "size": ["default", "default"],
+    "shadow": true
+  },
+
+  "bottom": {
+    "type": "label",
+    "text": "$tooltip_bottom",
+    "size": ["default", "default"],
+    "shadow": true
+  }
+}

@@ -1,0 +1,126 @@
+/* By @FMarquesPTO. All rights reserved. */
+{
+  "namespace": "toggle_button_mcjava",
+
+  "toggle_button": {
+    "type": "panel",
+    "size": [150, 20],
+    "$toggle_button_text|default": "toggle_button_text",
+    "$toggle_control_name|default": "this_thing",
+    "controls": [
+      { "$toggle_control_name@toggle_button_mcjava.toggle_button_control": {} }      
+    ]
+  },
+
+  "toggle_button_control@option_toggle_mcjava.toggle_base": {
+    "$toggle_group|default": true,
+    "toggle_name": "$toggle_button_name",
+    "$toggle_state_panel|default": "toggle_button_mcjava.toggle_state_panel",
+    "$toggle_type_panel|default": "toggle_button_mcjava.toggle_button_label",
+    "$checked_toggle_bg|default": "resources.button_default",
+    "$unchecked_toggle_bg|default": "resources.button_default",
+    "$checked_hover_toggle_bg|default": "resources.button_hover",
+    "$unchecked_hover_toggle_bg|default": "resources.button_hover",
+    "$checked_locked_toggle_bg|default": "resources.button_locked",
+    "$unchecked_locked_toggle_bg|default": "resources.button_locked",
+    "$text_locked_color|default": "$button_locked_text_color",
+    "$state|default": "",
+    "controls": [
+      {
+        "checked@$toggle_state_panel": {
+          "$toggle_bg": "$checked_toggle_bg",
+          "$state": "checked",
+          "$text_color|default": "$button_default_text_color",
+          "layer": 3
+        }
+      },
+      {
+        "unchecked@$toggle_state_panel": {
+          "$toggle_bg": "$unchecked_toggle_bg",
+          "$state": "unchecked",
+          "$text_color|default": "$button_default_text_color",
+          "layer": 3
+        }
+      },
+      {
+        "checked_hover@$toggle_state_panel": {
+          "$toggle_bg": "$checked_hover_toggle_bg",
+          "$state": "checked_hover",
+          "$text_color|default": "$button_hover_text_color",
+          "layer": 4
+        }
+      },
+      {
+        "unchecked_hover@$toggle_state_panel": {
+          "$toggle_bg": "$unchecked_hover_toggle_bg",
+          "$state": "unchecked_hover",
+          "$text_color|default": "$button_hover_text_color",
+          "layer": 4
+        }
+      },
+      {
+        "checked_locked@$toggle_state_panel": {
+          "$toggle_bg": "$checked_locked_toggle_bg",
+          "$state": "checked_locked",
+          "$text_color|default": "$button_locked_text_color",
+          "layer": 1
+        }
+      },
+      {
+        "unchecked_locked@$toggle_state_panel": {
+          "$toggle_bg": "$unchecked_locked_toggle_bg",
+          "$state": "unchecked_locked",
+          "$text_color|default": "$button_locked_text_color",
+          "layer": 1
+        }
+      },
+      {
+        "checked_locked_hover@$toggle_state_panel": {
+          "$toggle_bg": "$checked_locked_toggle_bg",
+          "$state": "checked_locked_hover",
+          "$text_color|default": "$button_locked_text_color",
+          "layer": 1
+        }
+      },
+      {
+        "unchecked_locked_hover@$toggle_state_panel": {
+          "$toggle_bg": "$unchecked_locked_toggle_bg",
+          "$state": "unchecked_locked_hover",
+          "$text_color|default": "$button_locked_text_color",
+          "layer": 1
+        }
+      }
+    ]
+  },
+
+  "toggle_state_panel": {
+    "type": "panel",
+    "$tooltip_name|default": "null",
+    "controls": [
+      {
+        "tooltip@tooltip_mcjava.tooltip": {
+          "visible": "($state = checked_hover or $state = unchecked_hover or $state = checked_locked_hover or $state = unchecked_locked_hover)",
+          "ignored": "($tooltip_name = null)"
+        }
+      },
+      { "bg@$toggle_bg": {} },
+      {
+        "content_panel": {
+          "type": "panel",
+          "size": "$content_panel_size",
+          "$content_panel_size|default": ["100% - 4px", "100% - 4px"],
+          "layer": 3,
+          "controls": [
+            { "content@$toggle_type_panel": {} }
+          ]
+        }
+      }
+    ]
+  },
+
+  "toggle_button_label@button_mcjava.button_label": {
+    "text": "$toggle_button_text",
+    "bindings": "$text_bindings",
+    "$text_bindings|default": []
+  }
+}

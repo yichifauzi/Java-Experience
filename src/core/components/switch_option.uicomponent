@@ -1,0 +1,117 @@
+{
+  "namespace": "switch_option_mcjava",
+
+  "perspective_panel@switch_option_panel": {
+    "size": [150, 20],
+    "$toggle_enabled_binding_name": "#third_person_dropdown_enabled",
+    "$switch_option_label": "options.perspective",
+    "$options": [
+      {
+        "peaceful@switch_option": {
+          "$option_action_text": "options.perspective.firstPerson",
+          "$this_action": "#thirdperson_radio_first",
+          "$next_action": "#thirdperson_radio_third_back"
+        }
+      },
+      {
+        "easy@switch_option": {
+          "$option_action_text": "options.perspective.thirdBack",
+          "$this_action": "#thirdperson_radio_third_back",
+          "$next_action": "#thirdperson_radio_third_front"
+        }
+      },
+      {
+        "normal@switch_option": {
+          "$option_action_text": "options.perspective.thirdFront",
+          "$this_action": "#thirdperson_radio_third_front",
+          "$next_action": "#thirdperson_radio_first"
+        }
+      }
+    ]
+  },
+
+  "switch_option_panel": {
+    "type": "panel",
+    "size": [150, 20],
+    "controls": "$options",
+    "anchor_from": "$anchor_from",
+    "anchor_to": "$anchor_to",
+    "$anchor_from|default": "center",
+    "$anchor_to|default": "center",
+    "$options|default": []
+  },
+
+  "switch_option": {
+    "type": "panel",
+    "size": ["100%", 20],
+    "bindings": [
+      {
+        "binding_name": "$this_action",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "$switch_option_label|default": "",
+    "$option_action_text|default": "",
+    "$this_action|default": "",
+    "$next_action|default": "",
+    "controls": [
+      {
+        "control@option_toggle_mcjava.option_toggle_control": {
+          "$toggle_type_panel": "switch_option_mcjava.switch_option_text_panel",
+          "$toggle_state_binding_name|default": "$this_action",
+          "toggle_name": "$next_action",
+          "$toggle_binding_name|default": "$next_action",
+          "$toggle_state_binding_name": "$this_action"
+        }
+      }
+    ]
+  },
+  
+  "switch_option_text_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": ["100%c", 10],
+    "offset": [0.5, 0],
+    "$option_text_color|default": "white",
+    "$action_text_color|default": "white",
+    "$option_locked_text_color": [0.62, 0.62, 0.62],
+    "$action_locked_text_color": [0.62, 0.62, 0.62],
+    "$button_text_max_size": [ "default", "default" ],
+    "$argument|default": true,
+    "variables": [
+      {
+        "requires": "($option_action_text = '' or $switch_option_label = '')",
+        "$argument": false
+      }
+    ],
+    "controls": [
+      {
+        "option_label@button_mcjava.button_label": {
+          "text": "$switch_option_label",
+          "color": "$option_text_color",
+          "locked_color": "$option_locked_text_color",
+          "bindings": "$option_text_bindings",
+          "$option_text_bindings|default": []
+        }
+      },
+      {
+        "space": {
+          "type": "label",
+          "text": ": ",
+          "shadow": true,
+          "visible": "$argument",
+          "layer": 10
+        }
+      },
+      {
+        "action_text@button_mcjava.button_label": {
+          "text": "$option_action_text",
+          "color": "$action_text_color",
+          "locked_color": "$action_locked_text_color",
+          "bindings": "$action_text_bindings",
+          "$action_text_bindings|default": []
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "namespace": "language_mcjava",
+
+  "language_content_panel@screen_mcjava.scroll_screen": {
+    "$top_content": "language_mcjava.top_content",
+    "$scrolling_content": "language_mcjava.scroll_content",
+    "$bottom_content": "language_mcjava.bottom_content",
+    "$bottom_content_size": ["100%", 61]
+  },
+
+  "top_content": {
+    "type": "panel",
+    "$title": "options.language.title",
+    "controls": [
+      { "title@screen_mcjava.title": { "offset": [0, 16] } }
+    ]
+  },
+
+  "scroll_content": {
+    "type": "panel",
+    "size": ["100%", "100%c"],
+    "controls": [
+      { "space": { "type": "panel", "size": [0, 4] } },
+      {
+        "centered_content": {
+          "type": "panel",
+          "size": [270, "100%c"],
+          "controls": [
+            {
+              "language_list_grid": {
+                "type": "grid",
+                "size": ["100%", "100%c"],
+                "grid_item_template": "language_mcjava.language_grid_item",
+                "grid_dimension_binding": "#language_grid_dimension",
+                "collection_name": "languages",
+                "bindings": [
+                  {
+                    "binding_name": "#language_grid_dimension",
+                    "binding_condition": "visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "bottom_content": {
+    "type": "panel",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "size": [310, 61],
+    "controls": [
+      {
+        "back@settings_mcjava.back_button": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [0, 23]
+        }
+      },
+      { "warning@language_mcjava.warning_panel": {} }
+    ]
+  },
+
+  "language_grid_item@radio_button_mcjava.radio_button": {
+    "$toggle_state_binding_name": "#language_initial_selected",
+    "$radio_button_label": "#language_description",
+    "$text_bindings": [
+      {
+        "binding_name": "#language_description",
+        "binding_type": "collection",
+        "binding_condition": "once",
+        "binding_collection_name": "languages"
+      }
+    ],
+    "$toggle_binding_type": "collection",
+    "$radio_button_name": "languages",
+    "$toggle_grid_collection_name": "languages",
+    "$toggle_enabled_binding_name": "",
+    "bindings": [
+      {
+        "binding_name": "#default_focus_precedence",
+        "binding_type": "collection",
+        "binding_condition": "visible",
+        "binding_collection_name": "languages"
+      }
+    ]
+  },
+
+  "warning_panel": {
+    "type": "stack_panel",
+    "size": ["100%c", 10],
+    "orientation": "horizontal",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [0, 4],
+    "controls": [
+      {
+        "par_left": {
+          "type": "label",
+          "color": [0.5, 0.5, 0.5],
+          "text": "gui.parenteses.left",
+          "shadow": true
+        }
+      },
+      { "warning@language_mcjava.warning": {} },
+      {
+        "par_right": {
+          "type": "label",
+          "color": [0.5, 0.5, 0.5],
+          "text": "gui.parenteses.right",
+          "shadow": true
+        }
+      }
+    ]
+  },
+
+  "warning": {
+    "type": "label",
+    "color": [0.5, 0.5, 0.5],
+    "text": "options.languageWarning",
+    "layer": 20,
+    "shadow": true
+  }
+}

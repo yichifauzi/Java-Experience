@@ -1,7 +1,6 @@
 {
-  "cartography_screen@common.inventory_screen_common": {
-    "$close_on_player_hurt|default": true,
-    "close_on_player_hurt": "$close_on_player_hurt",
+  "cartography_screen": {
+    "force_render_below": "$force_render_below",
     "variables": [
       {
         "requires": "$desktop_screen",

@@ -1,6 +1,0 @@
-{
-  "auto_save_info_screen@common.base_screen": {
-    "$screen_content": "auto_save_info_mcjava.auto_save_info_screen_content_panel",
-    "$screen_bg_content": "screen_mcjava.dirt_background"
-  }
-}

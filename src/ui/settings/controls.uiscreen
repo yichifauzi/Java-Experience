@@ -1,0 +1,7 @@
+{
+  "namespace": "controls_mcjava",
+
+  "controls_content_panel": {
+    "type": "panel"
+  }
+}

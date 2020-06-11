@@ -1,11 +1,11 @@
 {
   "format_version": 2,
   "header": {
-    "name": "20e0Mb1Mn15Pat2tpIn001",
-    "description": "Java UI",
+    "name": "Java UI - v2.0.0",
+    "description": "Credits: @FMarquesPTO",
     "uuid": "646041e3-098d-40a5-b75b-b6beb0a2692a",
     "version": [2, 0, 0],
-    "min_engine_version": [1, 14, 0]
+    "min_engine_version": [1, 16, 0]
   },
   "modules": [
     {

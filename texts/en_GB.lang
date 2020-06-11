@@ -1,327 +1,15 @@
-##Gui
-gui.toTitle=Back to title screen
-gui.parenteses.left=(
-gui.parenteses.right=)
-gui.percentage=%
-gui.soon=Soon...
-
-##Popups
-popup.quitGame.question=Are you sure you want to quit?
-popup.deathConfirm.question=Are you sure you want to quit?
-popup.feedback.question=Do you want to give some suggestions, feedback or report bugs?
-popup.resetSettings.accessibility=Are you sure yo want to reset the accessibility settings?
-popup.resetSettings.audio=Are you sure yo want to reset the sounds settings?
-popup.resetSettings.video=Are you sure yo want to reset the video settings?
-popup.resetSettings.mouse=Are you sure yo want to reset the mouse settings?
-popup.resetSettings.controller=Are you sure yo want to reset the controller settings?
-popup.resetSettings.touch=Dre you sure yo want to reset the touch settings?
-
 ##Main Menu
 menu.play=Play
+menu.courses=Courses
 menu.profile=Profile
-menu.skins=Change Skin
-menu.store=Minecraft Marketplace
+menu.skins=Change Skins
+menu.store=Marketplace
 menu.options=Options...
 menu.quit=Quit Game
-menu.savingLevel=Saving world
-menu.savingChunks=Saving chunks
-menu.takeScreenshot=Take Screenshot
-menu.takeScreenshot.short=Screenshot
+menu.switchAccounts=Switch Account
+menu.launchEditions=Launch Editions
 
-##Settings
-options.title=Options
-options.accessibility=Accessibility Settings...
-options.accessibility.title=Accessibility Settings
-options.userProfile=Profile...
-options.userProfile.title=User Profile Settings
-options.sounds=Music & Sounds...
-options.sounds.title=Music & Sound Options
-options.video=Video Settings...
-options.video.title=Video Settings
-options.mouse=Mouse...
-options.mouse_settings=Mouse Settings...
-options.mouse_settings.title=Mouse Settings
-options.language=Language...
-options.language.title=Language...
-options.languageWarning=Language translations may not be 100%% accurate
-options.controller=Controller...
-options.controller_settings=Controller Settings...
-options.controller_settings.title=Controller Settings
-options.resourcePacks=Resource Packs...
-options.resourcePacks.title=Select Resource Pack
-options.touch=Touch...
-options.controls.title=Controls
-options.fov.format=%s
-options.fov.toggle=Dynamic FOV
-options.enableChatTextToSpeech=Narrator For Chat
-options.enableAutoPlatformTextToSpeech=Narrator For Text
-options.enableUITextToSpeech=Narrator For System
-options.enableOpenChatMessage=Can Chat Message
-options.sound=Volume
-options.music=Music
-options.graphics=Graphics
-options.graphics.fancy=Fancy
-options.graphics.fast=Fast
-options.transparentleaves=Leaves
-options.transparentleaves.fancy=Fancy
-options.transparentleaves.fast=Fast
-options.box_selection=Selection
-options.box_selection.outline=Outline
-options.box_selection.highlight=Highlight
-options.renderclouds=Clouds
-options.fancyskies=Sky
-options.fancyskies.fancy=Fancy
-options.fancyskies.fast=Fast
-options.bubbleparticles=Bubbles Particles
-options.bubbleparticles.fancy=Fancy
-options.bubbleparticles.fast=Fast
-options.maxFramerate=Max Framerate
-options.autoJump=Auto-Jump
-controls.reset=Reset
-controls.resetAll=Reset Keys
-key.sprint=Sprint
-key.forward=Walk Forwards
-key.left=Strafe Left
-key.back=Walk Backwards
-key.right=Strafe Right
-key.jump=Jump
-key.inventory=Open/Close Inventory
-key.drop=Drop Selected Item
-key.chat=Open Chat
-key.sneak=Sneak
-key.attack=Attack/Destroy
-key.use=Use Item/Place Block
-key.pickItem=Pick Block
-key.command=Open Command
-key.togglePerspective=Toggle Perspective
-key.hotbar.1=Hotbar Slot 1
-key.hotbar.2=Hotbar Slot 2
-key.hotbar.3=Hotbar Slot 3
-key.hotbar.4=Hotbar Slot 4
-key.hotbar.5=Hotbar Slot 5
-key.hotbar.6=Hotbar Slot 6
-key.hotbar.7=Hotbar Slot 7
-key.hotbar.8=Hotbar Slot 8
-key.hotbar.9=Hotbar Slot 9
-key.mobEffects=Mob Effects
-key.tabLeft=Menu Tab Left
-key.tabRight=Menu Tab Right
-key.lookUpSlight=Look Up Slight
-key.lookDownSlight=Look Down Slight
-key.lookUpRight=Look Up Right
-key.lookUp=Look Up
-key.lookUpLeft=Look Up Left
-key.lookRight=Look Right
-key.lookCenter=Look Center
-key.lookLeft=Look Left
-key.lookDownRight=Look Down Right
-key.lookDown=Look Down
-key.lookDownLeft=Look Down Left
-key.lookUpSmooth=Look Up Smooth
-key.lookDownSmooth=Look Down Smooth
-key.lookLeftSmooth=Look Left Smooth
-key.lookRightSmooth=Look Right Smooth
-key.cycleItemLeft=Cycle Item Left
-key.cycleItemRight=Cycle Item Right
-key.categories.movement=Movement
-key.categories.misc=Miscellaneous
-key.categories.multiplayer=Multiplayer
-key.categories.gameplay=Gameplay
-key.categories.inventory=Inventory
-key.categories.additional=Additional
-options.resetSettings=Reset Settings
-options.difficulty=Difficulty
-options.difficulty.peaceful=Peaceful
-options.difficulty.easy=Easy
-options.difficulty.normal=Normal
-options.difficulty.hard=Hard
-
-##Create World Upsell
-createWorldUpsell.title=Create New World or Realm
-
-##World Templates
-worldTemplates.title=Templates
-
-##Create New World & Edit World
-selectWorld.resultFolder=Will be saved with:
-selectWorld.gameMode=Game Mode
-selectWorld.gameMode.survival=Survival
-selectWorld.gameMode.survival.line1=Search for resources, crafting, gain
-selectWorld.gameMode.survival.line2=levels, health and hunger
-selectWorld.gameMode.creative=Creative
-selectWorld.gameMode.creative.line1=Unlimited resources, free flying and
-selectWorld.gameMode.creative.line2=destroy blocks instantly
-selectWorld.gameMode.spectator=Spectator
-selectWorld.gameMode.spectator.line1=You can look but don't touch
-selectWorld.gameMode.spectator.line2=
-selectWorld.gameMode.hardcore=Hardcore
-selectWorld.gameMode.hardcore.line1=Same as survival mode, locked at hardest
-selectWorld.gameMode.hardcore.line2=difficulty, and one life only
-selectWorld.gameMode.adventure=Adventure
-selectWorld.gameMode.adventure.line1=Same as survival mode, but blocks can't
-selectWorld.gameMode.adventure.line2=be added or removed
-selectWorld.enterSeed=Seed for the world generator
-selectWorld.seedInfo=Leave blank for a random seed
-selectWorld.moreWorldOptions=More World Options...
-selectWorld.mapFeatures=Generate Structures
-selectWorld.mapFeatures.info=illages, dungeons etc
-selectWorld.mapType=World Type
-selectWorld.mapType.normal=Normal
-selectWorld.allowCommands=Allow Cheats
-selectWorld.allowCommands.info= Commands like /gamemode, /experience
-selectWorld.hardcoreMode=Hardcore
-selectWorld.hardcoreMode.info= World is deleted upon death
-selectWorld.experimentalGameplay=Experimental Gameplay
-selectWorld.experimentalGameplay.info=Test out new features comming to Minecraft
-selectWorld.forceUser.info=Force users to use this resources to join
-selectWorld.bonusItems= Bonus Chest
-generator.default=Default
-generator.flat=Superflat
-generator.small=Small
-seedPicker.title=Seed Picker
-seedPicker.use=Done
-
-createWorldScreen.gameMode.adventure=Adventure Mode
-createWorldScreen.gameMode.creative=Creative Mode
-createWorldScreen.gameMode.survival=Survival Mode
-
-selectWorld.title=Select World
-selectWorld.select=Play Selected World
-selectWorld.create=Create New World
-selectWorld.createDemo=Play New Demo World
-selectWorld.import=Import
-selectWorld.edit=Edit
-selectWorld.versionWarning=§cBackup this world because loading it in the beta could cause corruption!
-
-multiplayer.title=Play Multiplayer
-selectServer.add=Add Server
-
-##Add External Server
-addServer.title=Edit Server Info
-addServer.enterName=Server Name
-addServer.enterIp=Server Address
-addServer.enterPort=Server Port
-addServer.add=Done
-selectServer.deleteButton=Delete
-selectServer.playButton=Play
-
-##Loadings
-multiplayer.downloadingTerrain=Loading terrain...
-
-##Pause Menu
-menu.game=Game Menu
-menu.returnToGame=Back to Game
-menu.permissions=Permissions
-menu.feedback=Feedback
-menu.sendFeedback=Give Feedback
-menu.reportBugs=Report Bugs
-feedback.question=Do you want to give feedback or report bugs you found?
-menu.playersList=Players List
-menu.returnToMenu=Save and Quit to Title
-
-##Change Safe Zone
-safeZone.title=Change Safe Zone
-
-##Anvil
-container.repair=Repair & Name
-container.repair.cost=Enchantment Cost: %1$d
-
-##Beacon
-block.minecraft.beacon.primary=Primary Power
-block.minecraft.beacon.secondary=Secondary Power
-
-##Cartography Table
-container.cartography_table=Cartography Table
-
-##Enchanting Table
-container.enchant=Enchant
-
-##Grindstone
-container.grindstone_title=Repair & Disenchant
-
-##Loom
-container.loom=Loom
-
-##Stonecutter
-container.stonecutter=Stonecutter
-
-##Villager Trade
-merchant.trades=Trades
-
-##Book
-book.byAuthor=by
-book.signButton=Sign
-book.editTitle=Enter Book Title:
-book.finalizeButton=Sign and Close
-book.finalizeWarning=Note! When you sign the book, it will no longer be editable.
-
-##Command Block
-advMode.setCommand=Set Console Command for Block
-advMode.command=Console Command
-advMode.previousOutput=Previous Output
-advMode.mode.sequence=Chain
-advMode.mode.auto=Repeat
-advMode.mode.redstone=Impulse
-advMode.mode.conditional=Conditional
-advMode.mode.unconditional=Unconditional
-advMode.mode.redstoneTriggered=Needs Redstone
-advMode.mode.autoexec.bat=Always Active
-advMode.execOnFirstTick=Execute on First Tick
-
-##Content Log History
-contentLogHistory.title=Content Log History
-contentLogHistory.copyToClipBoard=Copy To ClipBoard
-
-##Death Menu
-deathScreen.respawn=Respawn
-deathScreen.titleScreen=Title screen
-deathScreen.title=You died!
-
-##In Bed
-multiplayer.stopSleeping=Leave Bed
-multiplayer.openChat=Open Chat
-
-##Sign
-sign.edit=Edit sign message
-
-##Store
-store.inventory.title=Inventory
-
-##idk ,-,
-
-itemGroup.building_blocks=Building Blocks
-itemGroup.decoration_blocks=Decoration Blocks
-itemGroup.redstone=Redstone
-itemGroup.transportation=Transportation
-itemGroup.miscellaneous=Miscellaneous
-itemGroup.safe_search=Safe Search
-itemGroup.search_items=Search Items
-itemGroup.foodstuffs=Foodstuffs
-itemGroup.tools=Tools
-itemGroup.combat=Combat
-itemGroup.brewing=Brewing
-itemGroup.survival_inventory=Survival Inventory
-inventory.binSlot=Destroy Item
-
-##Items and Blocks Names
-item.skull.char.name=§eHead§f
-item.skull.creeper.name=§eCreeper Head§f
-item.skull.dragon.name=§eDragon Head§f
-item.skull.player.name=§e%s's Head§f
-item.skull.skeleton.name=§eSkeleton Skull§f
-item.skull.wither.name=§eWither Skeleton Skull§f
-item.skull.zombie.name=§eZombie Head§f
-item.end_crystal.name=§bEnd Crystal§f
-item.elytra.name=§eElytra§f
-tile.beacon.name=§bBeacon§f
-tile.conduit.name=§bConduit§f
-item.experience_bottle.name=§eBottle o' Enchanting§f
-item.netherStar.name=§eNether Star§f
-item.record.name=§bMusic Disc§f
-item.heart_of_the_sea.name=§eHeart of the Sea§f
-item.banner_pattern.name=§eBanner Pattern§f
-item.golden_apple.name=§bGolden Apple§f
-item.appleEnchanted.name=§5Enchanted Golden Apple§f
+##Potions
 potion.nightVision=§9Night Vision§f
 potion.invisibility=§9Invisibility§f
 potion.jump=§9Jump Boost§f
@@ -333,9 +21,8 @@ potion.heal=§9Instant Health§f
 potion.regeneration=§9Regeneration§f
 potion.damageBoost=§9Strength§f
 potion.slowFalling=§9Slow Falling§f
-item.totem.name=§eTotem of Undying§f
-item.dragon_breath.name=§eDragon's Breath§f
-tile.dragon_egg.name=§5Dragon Egg§f
+
+##Attributes
 attribute.modifier.plus.0=§2+%d §2%s§f
 attribute.modifier.plus.1=§2+%d%% §2%s§f
 attribute.modifier.plus.2=§2+%d%% §2%s§f
@@ -343,16 +30,25 @@ attribute.modifier.take.0=-%d %s§f
 attribute.modifier.take.1=-%d%% %s§f
 attribute.modifier.take.2=-%d%% %s§f
 
-tile.double_plant.grass.name=Tall grass
-tile.snow.name=Snow Block
-tile.snow_layer.name=Snow
-tile.brown_mushroom.name=Mushroom Steam
-tile.brown_mushroom_block.name=Brown Mushroom Block
-tile.red_mushroom.name=Mushroom
-tile.red_mushroom_block.name=Red Mushroom Block
-item.reeds.name=Sugar Cane
-tile.mob_spawner.name=Spawner
-tile.turtle_egg.name=Turtle Egg
+##Items
+item.experience_bottle.name=§eBottle o' Enchanting§f
+item.netherStar.name=§eNether Star§f
+item.record.name=§bMusic Disc§f
+item.heart_of_the_sea.name=§eHeart of the Sea§f
+item.banner_pattern.name=§eBanner Pattern§f
+item.golden_apple.name=§bGolden Apple§f
+item.appleEnchanted.name=§5Enchanted Golden Apple§f
+item.skull.char.name=§eHead§f
+item.skull.creeper.name=§eCreeper Head§f
+item.skull.dragon.name=§eDragon Head§f
+item.skull.player.name=§e%s's Head§f
+item.skull.skeleton.name=§eSkeleton Skull§f
+item.skull.wither.name=§eWither Skeleton Skull§f
+item.skull.zombie.name=§eZombie Head§f
+item.end_crystal.name=§bEnd Crystal§f
+item.elytra.name=§eElytra§f
+item.totem.name=§eTotem of Undying§f
+item.dragon_breath.name=§eDragon's Breath§f
 item.spawn_egg.entity.agent.name=Agent Spawn Egg
 item.spawn_egg.entity.bee.name=Bee Spawn Egg
 item.spawn_egg.entity.cat.name=Cat Spawn Egg
@@ -419,6 +115,24 @@ item.spawn_egg.entity.fox.name=Fox Spawn Egg
 item.spawn_egg.entity.unknown.name=Spawn Spawn Egg
 item.spawn_egg.entity.wandering_trader.name=Wandering Trader Spawn Egg
 item.cooked_beef.name=Steak
+item.wheat_seeds.name=Wheat Seeds
+item.melon.name=Melon Slice
+item.speckled_melon.name=Glistering Melon Slice
+
+##Blocks
+tile.dragon_egg.name=§5Dragon Egg§f
+tile.beacon.name=§bBeacon§f
+tile.conduit.name=§bConduit§f
+tile.double_plant.grass.name=Tall grass
+tile.snow.name=Snow Block
+tile.snow_layer.name=Snow
+tile.brown_mushroom.name=Mushroom Steam
+tile.brown_mushroom_block.name=Brown Mushroom Block
+tile.red_mushroom.name=Mushroom
+tile.red_mushroom_block.name=Red Mushroom Block
+item.reeds.name=Sugar Cane
+tile.mob_spawner.name=Spawner
+tile.turtle_egg.name=Turtle Egg
 tile.planks.acacia.name=Acacia Planks
 tile.planks.big_oak.name=Dark Oak Planks
 tile.planks.birch.name=Birch Planks
@@ -452,23 +166,3 @@ item.redstone.name=Redstone Dust
 tile.heavy_weighted_pressure_plate.name=Heavy Weighted Pressure Plate
 tile.light_weighted_pressure_plate.name=Light Weighted Pressure Plate
 tile.daylight_detector.name=Daylight Detector
-item.wheat_seeds.name=Wheat Seeds
-item.melon.name=Melon Slice
-item.speckled_melon.name=Glistering Melon Slice
-
-##How To Play
-howToPlay.title=How To Play
-howToPlay.controls=Controls
-howToPlay.hud=Hud
-howToPlay.inventory=Inventory
-howToPlay.crafting=Crafting
-
-##---
-## Realms
-##---
-
-mco.invites.title=Pending Invites
-mco.invites.nopending=No pending invites!
-mco.selectServer.info=What is Realms?
-mco.selectServer.close=Close
-mco.selectServer.popup=Realms is a safe, simple way to enjoy an online Minecraft world with up to ten friends at a time.   It supports loads of minigames and plenty of custom worlds! Only the owner of the realm needs to pay.

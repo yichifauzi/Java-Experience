@@ -1,0 +1,106 @@
+{
+  "namespace": "accessibility_mcjava",
+ 
+  "accessibility_content_panel": {
+    "type": "panel",
+    "controls": [
+      { "title@screen_mcjava.title": { "text": "options.accessibility.title" } },
+      { "text_to_speech@accessibility_mcjava.text_to_speech_toggle": { "offset": [-80, "-36%"] } },
+      { "ui_text_to_speech@accessibility_mcjava.ui_text_to_speech_toggle": { "offset": [80, "-36%"] } },
+      { "chat_text_to_speech@accessibility_mcjava.chat_text_to_speech_toggle": { "offset": [-80, "-36% + 24px"] } },
+      { "open_chat_message@accessibility_mcjava.open_chat_message_toggle": { "offset": [80, "-36% + 24px"] } },
+      { "how_to_play@accessibility_mcjava.how_to_play_button": { "offset": [-80, "-36% + 48px"] } },
+      { "reset_button@accessibility_mcjava.reset_button": { "offset": [80, "-36% + 48px"] } },
+      { "perspective_panel@accessibility_mcjava.perspective_panel": { "offset": [80, "-36% + 48px"] } },
+      { "back@settings_mcjava.back_button": { "offset": [0, "-36% + 84px"] } }
+    ]
+  },
+ 
+  "perspective_panel@switch_option_mcjava.switch_option_panel": {
+    "anchor_from": "center",
+    "anchor_to": "top_middle",
+    "size": [150, 20],
+    "$option_enabled_binding_name": "#third_person_dropdown_enabled",
+    "$switch_option_label": "options.perspective",
+    "ignored": "$is_pregame",
+    "controls": [
+      {
+        "peaceful@switch_option_mcjava.switch_option": {
+          "$option_action_text": "options.perspective.firstPerson",
+          "$this_action": "#thirdperson_radio_first",
+          "$next_action": "#thirdperson_radio_third_back"
+        }
+      },
+      {
+        "easy@switch_option_mcjava.switch_option": {
+          "$option_action_text": "options.perspective.thirdBack",
+          "$this_action": "#thirdperson_radio_third_back",
+          "$next_action": "#thirdperson_radio_third_front"
+        }
+      },
+      {
+        "normal@switch_option_mcjava.switch_option": {
+          "$option_action_text": "options.perspective.thirdFront",
+          "$this_action": "#thirdperson_radio_third_front",
+          "$next_action": "#thirdperson_radio_first"
+        }
+      }
+    ]
+  },
+
+  "text_to_speech_toggle@option_toggle_mcjava.option_toggle": {
+    "anchor_from": "center",
+    "anchor_to": "top_middle",
+    "$option_toggle_text": "options.enableAutoPlatformTextToSpeech",
+    "$option_binding_name": "#enable_auto_text_to_speech",
+    "$option_enabled_binding_name": "#enable_auto_text_to_speech_enabled",
+    "$toggle_name": "enable_auto_text_to_speech"
+  },
+
+  "ui_text_to_speech_toggle@option_toggle_mcjava.option_toggle": {
+    "anchor_from": "center",
+    "anchor_to": "top_middle",
+    "$option_toggle_text": "options.enableUITextToSpeech",
+    "$option_binding_name": "#enable_ui_text_to_speech",
+    "$option_enabled_binding_name": "#enable_ui_text_to_speech_enabled",
+    "$toggle_name": "enable_ui_text_to_speech"
+  },
+
+  "chat_text_to_speech_toggle@option_toggle_mcjava.option_toggle": {
+    "anchor_from": "center",
+    "anchor_to": "top_middle",
+    "$option_toggle_text": "options.enableChatTextToSpeech",
+    "$option_binding_name": "#enable_chat_text_to_speech",
+    "$option_enabled_binding_name": "#enable_chat_text_to_speech_enabled",
+    "$toggle_name": "enable_chat_text_to_speech"
+  },
+
+  "open_chat_message_toggle@option_toggle_mcjava.option_toggle": {
+    "anchor_from": "center",
+    "anchor_to": "top_middle",
+    "$option_toggle_text": "options.enableOpenChatMessage",
+    "$option_binding_name": "#enable_open_chat_message",
+    "$option_enabled_binding_name": "#enable_open_chat_message_enabled",
+    "$toggle_name": "enable_open_chat_message"
+  },
+
+  "how_to_play_button@toggle_button_mcjava.toggle_button": {
+    "anchor_from": "center",
+    "anchor_to": "top_middle",
+    "$toggle_index": "$how_to_play_index",
+    "$toggle_button_text": "How To Play",
+    "$toggle_button_name": "navigation_tab",
+    "$toggle_control_name": "how_to_play_button_toggle"
+  },
+
+  "reset_button@button_mcjava.action_button": {
+    "anchor_from": "center",
+    "anchor_to": "top_middle",
+    "ignored": "(not $is_pregame)",
+    "$pressed_button_name": "button.reset_settings",
+    "size": [150, 20],
+    "$button_text": "options.resetSettings",
+    "$focus_override_down": "FOCUS_OVERRIDE_STOP",
+    "property_bag": { "reset_group": "accessibility" }
+  }
+}

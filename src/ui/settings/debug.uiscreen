@@ -1,0 +1,7 @@
+{
+  "namespace": "debug_mcjava",
+
+  "debug_content_panel": {
+    "type": "panel"
+  }
+}

@@ -1,14 +1,10 @@
 {
-  "crafting_screen@crafting.inventory_screen_base": {
-    "send_telemetry": false,
+  "crafting_screen": {
     "$screen_content": "crafting_table_mcjava.crafting_table_screen_content_panel",
-    "$screen_bg_content": "common.screen_background",
-    "$close_on_player_hurt|default": true,
-    "close_on_player_hurt": "$close_on_player_hurt"
+    "$screen_bg_content": "common.screen_background"
   },
 
-  "inventory_screen@crafting.inventory_screen_base": {
-    "send_telemetry": false,
+  "inventory_screen": {
     "$screen_content": "crafting.inv_panel",
     "$screen_bg_content": "common.screen_background"
   },
@@ -17,7 +13,7 @@
     "type": "panel",
     "controls": [
       {
-        "1@crafting.recipe_inventory_screen_content": {
+        "1@creative_inv_mcjava.creative_inv_screen_content_panel": {
           "bindings": [
             {
               "binding_type": "global",

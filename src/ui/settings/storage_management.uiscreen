@@ -1,0 +1,62 @@
+{
+  "namespace": "storage_mcjava",
+
+  "storage_management_content_panel": {
+    "type": "panel",
+    "controls": [
+      { "title@screen_mcjava.title": { "text": "options.storage.title" } },
+      { "content_panel@storage_mcjava.content_panel": {} },
+      { "bottom_content@storage_mcjava.bottom_content": {} }
+    ]
+  },
+
+  "content_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": ["100%", "100% - 83px"],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [0, 32],
+    "$ignore_border": true,
+    "layer": 20,
+    "$scroll_bar_offset": ["50% - 4px", 0],
+    "controls": [
+      { "space_left@screen_mcjava.hspace": {"size": [40, 0] } },
+      {
+        "selection_content_panel@resource_packs_mcjava.side_content_panel": {
+          "$scrolling_content": "storage_managment_mcjava.selection_scroll_content"
+        }
+      },
+      {
+        "space@screen_mcjava.hspace": { "size": [8, 0] } },
+      {
+        "selection_content_panel@resource_packs_mcjava.side_content_panel": {
+          "size": [ "fill", "100%"],
+          "$scrolling_content": "storage_managment_mcjava.storage_scroll_content"
+        }
+      },
+      { "space_right@screen_mcjava.hspace": { "size": [40, 0] } }
+    ]
+  },
+ 
+  "bottom_content": {
+    "type": "panel",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "size": [310, 20],
+    "offset": [0, -28],
+    "$text_locked_color": "$button_locked_text_color",
+    "controls": [
+      { "locked@storage_managment_mcjava.delete_button_locked": { "offset": [-80, 0] } },
+      { "delete@storage_managment_mcjava.delete_button": { "offset": [-80, 0] } },
+      { "multiselect_button@storage_managment_mcjava.multiselect_button": { "offset": [-170, 0] } },
+      {
+        "back@settings_mcjava.back_button": {
+          "$toggle_button_name": "navigation_tab",
+          "size": [150, 20],
+          "offset": [80, 0]
+        }
+      }
+    ]
+  }
+}

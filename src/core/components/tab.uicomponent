@@ -1,0 +1,100 @@
+{
+  "namespace": "tab_mcjava",
+
+  "tab": {
+    "type": "panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$tab_control_name|default": "tab",
+    "$tab_name|default": "this_tab",
+    "$checked_background|default": "",
+    "$unchecked_background|default": "",
+    "$checked_hover_background|default": "",
+    "$unchecked_hover_background|default": "",
+    "$checked_locked_background|default": "",
+    "$unchecked_locked_background|default": "",
+    "controls": [
+      {
+        "$tab_control_name@option_toggle_mcjava.toggle_base": {
+          "size": "$tab_control_size",
+          "$tab_control_size|default": ["100%", "100%"],
+          "toggle_name": "$tab_name",
+          "$content|default": "",
+          "radio_toggle_group": true,
+          "$tab_state|default": "",
+          "$tab_state_base|default": "tab_mcjava.state_base",
+          "$toggle_tts_name": "accessibility.tab.tts.title",
+          "$toggle_tts_enabled_binding_type": "global",
+          "controls": [
+            {
+              "unchecked@$tab_state_base": {
+                "$background": "$unchecked_background",
+                "$tab_state": "unchecked",
+                "layer": 1
+              }
+            },
+            {
+              "unchecked_hover@$tab_state_base": {
+                "$background": "$unchecked_hover_background",
+                "$tab_state": "unchecked_hover",
+                "layer": 3
+              }
+            },
+            {
+              "unchecked_locked@$tab_state_base": {
+                "$background": "$unchecked_locked_background",
+                "$tab_state": "unchecked_locked",
+                "layer": 1
+              }
+            },
+            {
+              "unchecked_locked_hover@$tab_state_base": {
+                "$background": "$unchecked_locked_background",
+                "$tab_state": "unchecked_locked_hover",
+                "layer": 1
+              }
+            },
+            {
+              "checked@$tab_state_base": {
+                "$background": "$checked_background",
+                "$tab_state": "checked",
+                "layer": 1
+              }
+            },
+            {
+              "checked_hover@$tab_state_base": {
+                "$background": "$checked_hover_background",
+                "$tab_state": "checked_hover",
+                "layer": 1
+              }
+            },
+            {
+              "checked_locked@$tab_state_base": {
+                "$background": "$checked_locked_background",
+                "$tab_state": "checked_locked",
+                "layer": 1
+              }
+            },
+            {
+              "checked_locked_hover@$tab_state_base": {
+                "$background": "$checked_locked_background",
+                "$tab_state": "checked_locked_hover",
+                "layer": 1
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "state_base": {
+    "type": "panel",
+    "$tooltip_name|default": "none",
+    "controls": [
+      { "@tooltip_mcjava.tooltip": { "visible": "($tab_state = hover)", "ignored": "($tooltip_name = 'none')" } },
+      { "@$background": {} },
+      { "@$content": {} }
+    ]
+  }
+}

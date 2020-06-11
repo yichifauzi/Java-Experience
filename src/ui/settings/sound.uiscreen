@@ -1,0 +1,49 @@
+{
+  "namespace": "sound_mcjava",
+
+  "sound_content_panel": {
+    "type": "panel",
+    "controls": [
+      { "title@screen_mcjava.title": { "text": "options.sounds.title" } },
+      { "music@sound_mcjava.music_slider": { "offset": [-80, "-36%"] } },
+      { "sound@sound_mcjava.sound_slider": { "offset": [80, "-36%"] } },
+      { "reset@sound_mcjava.reset_button": { "offset": [0, "-36% + 24px"] } },
+      { "back@settings_mcjava.back_button": { "offset": [0, "-36% + 60px"] } }
+    ]
+  },
+
+  "music_slider@slider_mcjava.slider": {
+    "anchor_from": "center",
+    "anchor_to": "top_middle",
+    "$slider_label": "#music_volume_slider_label",
+    "$slider_name": "music_volume",
+    "$slider_value_binding_name": "#music_volume",
+    "$slider_tts_text_value": "#music_volume_text_value",
+    "$slider_enabled_binding_name": "#music_volume_enabled",
+    "$focus_override_up": "FOCUS_OVERRIDE_STOP",
+    "$slider_percentage": true,
+    "$slider_text_bindings": [ { "binding_name": "$slider_label" } ]
+  },
+  
+  "sound_slider@slider_mcjava.slider": {
+    "anchor_from": "center",
+    "anchor_to": "top_middle",
+    "$slider_label": "#sound_volume_slider_label",
+    "$slider_name": "sound_volume",
+    "$slider_value_binding_name": "#sound_volume",
+    "$slider_tts_text_value": "#sound_volume_text_value",
+    "$slider_enabled_binding_name": "#sound_volume_enabled",
+    "$slider_percentage": true,
+    "$slider_text_bindings": [ { "binding_name": "$slider_label" } ]
+  },
+
+  "reset_button@button_mcjava.action_button": {
+    "anchor_from": "center",
+    "anchor_to": "top_middle",
+    "ignored": "(not $is_pregame)",
+    "size": [150, 20],
+    "$pressed_button_name": "button.reset_settings",
+    "$button_text": "options.resetSettings",
+    "property_bag": { "reset_group": "audio" }
+  }
+}

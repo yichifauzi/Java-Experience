@@ -1,12 +1,11 @@
 {
-  "anvil_screen@common.inventory_screen_common": {
-    "$close_on_player_hurt|default": true,
-    "close_on_player_hurt": "$close_on_player_hurt",
+  "anvil_screen": {
+    "force_render_below": "$force_render_below",
     "variables": [
       {
         "requires": "$desktop_screen",
         "$screen_content": "anvil_mcjava.anvil_screen_content_panel",
-        "$screen_bg_content": "common.screen_background"
+        "$screen_bg_content": "screen_mcjava.screen_background"
       },
       {
         "requires": "$pocket_screen",

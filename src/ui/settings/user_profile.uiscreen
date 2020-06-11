@@ -1,0 +1,7 @@
+{
+  "namespace": "user_profile_mcjava",
+
+  "user_profile_content_panel": {
+    "type": "panel"
+  }
+}

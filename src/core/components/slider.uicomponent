@@ -1,0 +1,171 @@
+{
+  "namespace": "slider_mcjava",
+
+  "base_slider@common.slider": {
+    "property_bag": "$slider_property_bag",
+    "controls": "$slider_controls",
+    "$slider_property_bag|default": {
+      "#slider_steps": 1,
+      "#slider_value": 0
+    },
+    "$slider_controls|default": [
+      { "slider_box@$slider_box_control": {} },
+      { "slider_bar_default@$default_control": {} },
+      { "slider_bar_hover@$hover_control": {} }
+    ],
+    "$default_control|default": "",
+    "$hover_control|default": "",
+    "$slider_box_control|default": "",
+    "$slider_step_factory_control_ids": {},
+    "layer": 1
+  },
+
+  "slider": {
+    "type": "panel",
+    "size": [150, 20],
+    "controls": [
+      { "control@slider_mcjava.slider_control": {} }
+    ] 
+  },
+
+  "slider_control@slider_mcjava.base_slider": {
+    "size": ["100% - 8px", "100%"],
+    "$slider_state_panel|default": "slider_mcjava.slider_state_panel",
+    "$slider_type_panel|default": "slider_mcjava.slider_text_panel",
+    "$default_slider_bg|default": "resources.button_locked",
+    "$hover_slider_bg|default": "resources.button_locked",
+    "$default_sb_bg|default": "resources.button_default",
+    "$hover_sb_bg|default": "resources.button_hover",
+    "$locked_sb_bg|default": "resources.button_locked",
+    "variables": [
+      {
+        "requires": "(not $slider_enabled_binding_name or not $enabled)",
+        "$slider_enabled_binding_name": "#not_data_bound",
+        "$slider_enabled_binding_type": "none"
+      }
+    ],
+    "enabled": "$enabled",
+    "$enabled": true,
+    "$state|default": "",
+    "$slider_tts_header": "$slider_label",
+    "$slider_tts_header_binding_type": "global",
+    "$slider_enabled_binding_name|default": "",
+    "$slider_enabled_binding_type": "global",
+    "$text_locked_color|default": "$button_locked_text_color",
+    "controls": [
+      { "slider_box@slider_mcjava.slider_box": { "$slider_track_button": "$slider_name" } },
+      {
+        "slider_bar_default@$slider_state_panel": {
+          "size": [ "100% + 8px", "100%" ],
+          "$slider_bg": "$default_slider_bg",
+          "$state": "default",
+          "$text_color|default": "$button_default_text_color",
+          "layer": 2
+        }
+      },
+      {
+        "slider_bar_hover@$slider_state_panel": {
+          "size": [ "100% + 8px", "100%" ],
+          "$slider_bg": "$hover_slider_bg",
+          "$state": "hover",
+          "visible": false,
+          "$text_color|default": "$button_default_text_color",
+          "layer": 3
+        }
+      }
+    ]
+  },
+
+  "slider_box": {
+    "type": "slider_box",
+    "layer": 4,
+    "size": [8, 20],
+    "anchor_to": "center",
+    "anchor_from": "center",
+    "default_control": "default",
+    "hover_control": "hover",
+    "locked_control": "locked",
+    "indent_control": "indent",
+    "$slider_type_panel": "",
+    "$sb_state|default": "",
+    "controls": [
+      {
+        "default@$slider_state_panel": {
+          "$slider_bg": "$default_sb_bg",
+          "$sb_state": "default",
+          "layer": 2
+        }
+      },
+      {
+        "hover@$slider_state_panel": {
+          "$slider_bg": "$hover_sb_bg",
+          "$sb_state": "hover",
+          "layer": 3
+        }
+      },
+      {
+        "indent@$slider_state_panel": {
+          "$slider_bg": "$hover_sb_bg",
+          "$sb_state": "indent",
+          "layer": 4
+        }
+      },
+      {
+        "locked@$slider_state_panel": {
+          "$slider_bg": "$locked_sb_bg",
+          "$sb_state": "locked",
+          "layer": 1
+        }
+      }
+    ]
+  },
+  
+  "slider_state_panel": {
+    "type": "panel",
+    "controls": [
+      { "bg@$slider_bg": {} },
+      {
+        "content_panel": {
+          "type": "panel",
+          "size": "$content_panel_size",
+          "$content_panel_size|default": ["100% - 4px", "100% - 4px"],
+          "layer": 3,
+          "controls": [
+            { "content@$slider_type_panel": {} }
+          ]
+        }
+      }
+    ]
+  },
+
+  "slider_text_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": ["100%c", 10],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "$slider_percentage|default": false,
+    "controls": [
+      { "option_label@slider_mcjava.slider_label": {} },
+      {
+        "percent": {
+          "type": "label",
+          "color": "$text_color",
+          "shadow": true,
+          "layer": 10,
+          "ignored": "(not $slider_percentage)",
+          "text": "gui.percentage"
+        }
+      }
+    ]
+  },
+
+  "slider_label@button_mcjava.button_label": {
+    "text": "$slider_label",
+    "bindings": "$slider_text_bindings",
+    "layer": "$text_layer",
+    "$button_text_max_size": ["default", "default"],
+    "$slider_text_bindings|default": [],
+    "$text_layer|default": 10
+  }
+}

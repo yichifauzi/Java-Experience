@@ -1,0 +1,84 @@
+{
+  "namespace": "brewing_stand_mcjava",
+
+  "brewing_stand_screen_content_panel@container_mcjava.container_panel": {
+    "$container_bg": "resources.brewing_stand_bg",
+    "$specified_content": "brewing_stand_mcjava.brewing_stand_content_panel"
+  },
+
+  "brewing_stand_content_panel": {
+    "type": "panel",
+    "controls": [
+      {
+        "title@container_mcjava.title": {
+          "offset": [0, 5],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle"
+        }
+      },
+      {
+        "arrow@resources.brewing_stand_full_arrow": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [97, 16]
+        }
+      },
+      {
+        "bubbles@resources.brewing_stand_full_bubbles": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [63, 14]
+        }
+      },
+      {
+        "fuel@resources.brewing_stand_full_fuel": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [60, 44]
+        }
+      },
+      { "input_item@brewing_stand_mcjava.input_item": {} },
+      { "fuel@brewing_stand_mcjava.fuel_item": {} },
+      { "output_item@brewing_stand_mcjava.output_item": { "$focus_override_left": "brewing_fuel", "offset": [55, 50], "$index": 0 } },
+      { "output_item@brewing_stand_mcjava.output_item": { "offset": [78, 57], "$index": 1 } },
+      { "output_item@brewing_stand_mcjava.output_item": { "offset": [101, 50], "$index": 2 } }
+    ]
+  },
+
+  "input_item@container_mcjava.container_slot": {
+    "offset": [78, 16],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$item_collection_name": "brewing_input_item",
+    "$focus_override_left_binding_type": "none",
+    "$focus_override_left": "brewing_fuel"
+  },
+
+  "fuel_item@container_mcjava.container_slot": {
+    "offset": [16, 16],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$item_collection_name": "brewing_fuel_item",
+    "$focus_override_id_binding_type": "none",
+    "$focus_id": "brewing_fuel",
+    "$focus_override_right_binding_type": "none",
+    "$focus_override_right": "brewing_input_item0"
+  },
+
+  "output_item": {
+    "type": "stack_panel",
+    "size": [18, 18],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "collection_name": "brewing_result_items",
+    "$item_collection_name": "brewing_result_items",
+    "controls": [
+      {
+        "output_item@container_mcjava.container_slot": {
+          "collection_index": "$index",
+          "$index|default": 0
+        }
+      }
+    ]
+  }
+}

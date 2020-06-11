@@ -1,10 +1,155 @@
 {
-  "$edition_logo": "java",
-  "$style": "java",
+  /* Debug */
+  "$force_render_helpers": false,
+  "$force_render_below": true,
 
-  "$furnace_resolution": "256x",
-  "$brewing_stand_resolution": "256x",
-  "$bars_resolution": "256x",
+  /* Texts */
+  "$minecraft_text": "Minecraft",
+  "$version_text": "#version",
+  "$additional_text": "/Java UI (FMarquesPTO) ",
+  "$trial_version_text": "Trial",
+  "$copyright_text": "Copyright Mojang AB. Do not distribute!",
+
+  /* Options */
+  "$edition_name": "java",
+  "$disabled_vignette": false,
+
+  /* Button Text Color */
+  "$button_default_text_color": [1.0, 1.0, 1.0],
+  "$button_hover_text_color": [1.0, 1.0, 1.0],
+  "$button_pressed_text_color": [1.0, 1.0, 1.0],
+  "$button_locked_text_color": [0.62745, 0.62745, 0.62745],
+
+  /* Titles Text Color */
+  "$header_text_color": [1.0, 1.0, 1.0],
+  "$header_information_text_color": [0.62, 0.62, 0.62],
+  "$information_text_color": [1.0, 1.0, 1.0],
+  "$secondary_information_text_color": [0.50, 0.50, 0.50],
+
+  /* Containers Text Color */
+  "$container_text_color": [0.25, 0.25, 0.25],
+  "$item_stack_count_text_color": [1.0, 1.0, 1.0],
+
+  "$highlight_slot_bg_color": [1.0, 1.0, 1.0],
+  "$highlight_slot_bg_alpha": 0.5,
+
+  "$invalid_crafting_highlight_slot_bg_color": [1.0, 0.0, 0.0],
+  "$invalid_crafting_highlight_slot_bg_alpha": 0.35,
+  "$invalid_crafting_highlight_overlay_slot_bg_color": [1.0, 1.0, 1.0],
+  "$invalid_crafting_highlight_overlay_slot_bg_alpha": 0.25,
+
+  "$anvil_cost_success_text_color": [0.49, 0.99, 0.125],
+  "$anvil_cost_fail_text_color": [0.99, 0.35, 0.37],
+
+  /* Gradients */
+  "$death_gradient_bg_color_top": [0.313, 0, 0, 0.37],
+  "$death_gradient_bg_color_bottom": [0.5, 0.188, 0.188, 0.627],
+
+  /* Hud Text Color */
+  "$iten_name_text_color": [1.0, 1.0, 1.0],
+
+  "$xp_number_text_color": [0.50, 1.0, 0.50],
+  "$xp_number_border_color": [0.0, 0.0, 0.0],
+
+  /* JukeBox Rainbow Text Color */
+  "$jukebox_text_color_1": [0.333, 1.0, 0.333], //Green
+  "$jukebox_text_color_2": [1.0, 0.333, 0.333], //Red
+  "$jukebox_text_color_3": [0.666, 0, 0.666], //Dark Purple
+  "$jukebox_text_color_4": [0.333, 0.333, 1.0], //Blue
+  "$jukebox_text_color_5": [0, 0.666, 0.666], //Dark Aqua
+  "$jukebox_text_color_6": [0, 0.666, 0], //Dark Green
+  "$jukebox_text_color_7": [1.0, 0.666, 0], //Gold
+  "$jukebox_text_rainbow_color_time": 0.5,
+
+  /* Scoreboard Text Color */
+  "$scoreboard_header_text_color": [1.0, 1.0, 1.0],
+  "$scoreboard_players_text_color": [1.0, 1.0, 1.0],
+  "$scoreboard_score_text_color": [1.0, 0.333, 0.333],
+  "$scoreboard_header_bg_color": [0.0, 0.0, 0.0],
+  "$scoreboard_list_bg_color": [0.0, 0.0, 0.0],
+  "$scoreboard_header_bg_alpha": 0.4,
+  "$scoreboard_list_bg_alpha": 0.3,
+
+  /* Player Position Def */
+  "$player_position_anchor": "top_left",
+  "$player_position_offset": [1, 1],
+  "$player_position_text_color": [1.0, 1.0, 1.0],
+  "$player_position_text_alpha": 1.0,
+  "$player_position_bg_color": [0.3, 0.3, 0.3],
+  "$player_position_bg_alpha": 0.4,
+
+  /* Bosses Bar Def */
+  "$default_boss_bar_name_text_color": [1.0, 1.0, 1.0],
+  "$ender_dragon_boss_bar_name_text_color": [1.0, 1.0, 1.0],
+  "$wither_boss_bar_name_text_color": [1.0, 1.0, 1.0],
+  "$raids_boss_bar_name_text_color": [1.0, 1.0, 1.0],
+  "$default_bar_color": "pink",
+  "$ender_dragon_bar_color": "pink",
+  "$wither_bar_color": "purple",
+  "$raids_bar_color": "red",
+  "$default_bar_style": "progress",
+  "$ender_dragon_bar_style": "progress",
+  "$wither_bar_style": "progress",
+  "$raids_bar_style": "notched_10",
+
+  /* Resolutions */
+  "$widgets_resolution": "256x",
+  "$title_resolution": "256x",
   "$icons_resolution": "256x",
-  "$options_background_resolution": "256x"
+  "$bars_resolution": "256x",
+  "$options_background_resolution": "256x",
+
+  "$anvil_resolution": "256x",
+  "$brewing_stand_resolution": "256x",
+  "$cartography_resolution": "256x",
+  "$generic_54_resolution": "256x",
+  "$shulker_box_resolution": "256x",
+  "$enchanting_table_resolution": "256x",
+  "$furnace_resolution": "256x",
+  "$grindstone_resolution": "256x",
+  "$loom_resolution": "256x",
+  "$horse_resolution": "256x",
+  "$dispenser_resolution": "256x",
+  "$hopper_resolution": "256x",
+  "$smithing_resolution": "256x",
+  "$stonecutter_resolution": "256x",
+  "$villager_resolution": "256x",
+  "$villager2_resolution": "256x",
+  "$recipe_book_resolution": "256x",
+
+  /* Advanced Defs */
+  "$chat_size": [326, 180],
+  "$chat_offset": [0, -40],
+  "$chat_anchor": "bottom_left",
+  "$chat_lines_spacing": 0,
+
+  "$crafting_table_container_title_offset": [29, 5],
+  "$crafting_table_container_title_anchor": "top_left",
+  "$survival_inv_container_title_offset": [97, 7],
+  "$survival_inv_container_title_anchor": "top_left",
+
+  /* Ultimate Advanced Defs */
+  "$crafting_table_container_crafting_grid_offset": [29, 16],
+  "$crafting_table_container_crafting_grid_anchor": "top_left",
+  "$crafting_table_container_output_grid_offset": [123, 34],
+  "$crafting_table_container_output_grid_anchor": "top_left",
+  "$crafting_table_container_recipe_book_button_offset": [5, 34],
+  "$crafting_table_container_recipe_book_button_anchor": "top_left",
+  "$furnaces_container_recipe_book_button_offset": [15, 34],
+  "$furnaces_container_recipe_book_button_anchor": "top_left",
+
+  "$survival_inv_container_player_renderer_offset": [26, 8],
+  "$survival_inv_container_player_renderer_anchor": "top_left",
+  "$survival_inv_container_player_armor_offset": [7, 7],
+  "$survival_inv_container_player_armor_anchor": "top_left",
+  "$survival_inv_container_player_offhand_offset": [76, 61],
+  "$survival_inv_container_player_offhand_anchor": "top_left",
+  "$survival_inv_container_crafting_grid_offset": [97, 17],
+  "$survival_inv_container_crafting_grid_anchor": "top_left",
+  "$survival_inv_container_output_grid_offset": [153, 27],
+  "$survival_inv_container_output_grid_anchor": "top_left",
+  "$survival_inv_container_invalid_crafting_icon_offset": [134, 28],
+  "$survival_inv_container_invalid_crafting_icon_anchor": "top_left",
+  "$survival_inv_container_recipe_book_button_offset": [104, 61],
+  "$survival_inv_container_recipe_book_button_anchor": "top_left"
 }

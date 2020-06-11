@@ -1,0 +1,187 @@
+{
+  "namespace": "cartography_table_mcjava",
+
+  "cartography_table_screen_content_panel@container_mcjava.container_panel": {
+    "$container_bg": "resources.cartography_table_bg",
+    "$specified_content": "cartography_table_mcjava.cartography_table_content_panel",
+    "$show_invlabel": false
+  },
+
+  "cartography_table_content_panel": {
+    "type": "panel",
+    "$container_title": "container.cartography",
+    "controls": [
+      { "@container_mcjava.title": { "offset": [8, 3] } },
+      { "@map_name_box": {} },
+      { "@input_item_slot": {} },
+      { "@additional_item_slot": {} },
+      { "@result_item_slot": {} },
+      { "@maps_panel": {} },
+      { "@map_name_button": {} }
+    ]
+  },
+
+  "maps_panel": {
+    "type": "panel",
+    "size": [66, 66],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [67, 13],
+    "controls": [
+      { "none@resources.ct_none_map": {} },
+      { "copy@resources.ct_clone_map": {} },
+      { "rename@resources.ct_rename_map": {} },
+      { "default@resources.ct_default_map": {} },
+      { "locator@resources.ct_locator_map": {} },
+      { "zoom@resources.ct_zoom_map": {} },
+      { "lock@resources.ct_locked_map": {} },
+      { "locked_icon@resources.ct_locked_map_icon": {} }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "map_name_box_view",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "cartography_item_slot@container_mcjava.container_slot": {
+    "anchor_from": "top_left",
+    "anchor_to": "top_left"
+  },
+
+  "input_item_slot@cartography_table_mcjava.cartography_item_slot": {
+    "offset": [14, 14],
+    "$item_collection_name": "cartography_input_items",
+    "$focus_id_binding_type": "none",
+    "$focus_id": "cartography_input",
+    "$focus_override_down_binding_type": "none",
+    "$focus_override_down": "cartography_additional",
+    "$focus_override_left_binding_type": "none",
+    "$focus_override_left": "show_textbox_button",
+    "$focus_override_right_binding_type": "none",
+    "$focus_override_right": "cartography_result"
+  },
+
+  "additional_item_slot@cartography_table_mcjava.cartography_item_slot": {
+    "offset": [14, 51],
+    "$item_collection_name": "cartography_additional_items",
+    "$focus_id_binding_type": "none",
+    "$focus_id": "cartography_additional",
+    "$focus_override_up_binding_type": "none",
+    "$focus_override_up": "cartography_input",
+    "$focus_override_left": "show_textbox_button",
+    "$focus_override_right_binding_type": "none",
+    "$focus_override_left_binding_type": "none",
+    "$focus_override_right": "cartography_result"
+  },
+
+  "result_item_slot@cartography_table_mcjava.cartography_item_slot": {
+    "offset": [144, 38],
+    "$item_collection_name": "cartography_result_items",
+    "$button_ref": "cartography_table_mcjava.cartography_table_output_slot_button",
+    "$focus_id_binding_type": "none",
+    "$focus_id": "cartography_result",
+    "$focus_override_left_binding_type": "none",
+    "$focus_override_left": "cartography_additional"
+  },
+
+  "cartography_table_output_slot_button@container_mcjava.no_coalesce_container_slot_button": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.cartography_result_take_all_place_all",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.cartography_result_take_all_place_all",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_secondary_select",
+        "to_button_id": "button.cartography_result_take_all_place_all",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_select",
+        "to_button_id": "button.cartography_result_take_all_place_all",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_auto_place",
+        "to_button_id": "button.container_auto_place",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_secondary_select",
+        "to_button_id": "button.container_auto_place",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_inventory_drop",
+        "to_button_id": "button.drop_one",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_inventory_drop_all",
+        "to_button_id": "button.drop_all",
+        "mapping_type": "pressed"
+      },
+      {
+        "to_button_id": "button.container_slot_hovered",
+        "mapping_type": "pressed"
+      }
+    ]
+  },
+
+  "map_name_box@text_box_mcjava.text_box": {
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [65, 39],
+    "size": [55, 16],
+    "max_length": 30,
+    "text_box_name": "#text_box_name",
+    "$placeholder_text": "#text_box_placeholder_name",
+    "$text_edit_box_placeholder_content_binding_name": "#text_box_placeholder_name",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "map_name_box_view",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "map_name_button@toggle_button_mcjava.toggle_button": {
+    "$toggle_button_name": "cartography",
+    "$toggle_group": false,
+    "size": [17, 17],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [14, 33],
+    "$toggle_index": 100,
+    "$toggle_control_name": "map_name_box_view",
+    "$focus_id": "show_textbox_button",
+    "$toggle_button_type": "cartography_table_mcjava.map_name_button_content"
+  },
+
+  "map_name_button_content": {
+    "type": "panel",
+    "size": [17, 17],
+    "controls": [
+      {
+        "img": {
+          "type": "image",
+          "texture": "src/javaui/resources/fmarquespto/textures/border",
+          "size": ["100%", "100%"],
+          "nineslice_size": 1,
+          "visible": "($toggle_button_state = checked_hover or $toggle_button_state = unchecked_hover)"
+        }
+      }
+    ]
+  }
+}

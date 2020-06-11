@@ -1,7 +1,6 @@
 {
-  "dispenser_screen@common.inventory_screen_common": {
-    "$close_on_player_hurt|default": true,
-    "close_on_player_hurt": "$close_on_player_hurt",
+  "dispenser_screen": {
+    "force_render_below": "$force_render_below",
     "variables": [
       {
         "requires": "$desktop_screen",
@@ -16,9 +15,8 @@
     ]
   },
 
-  "dropper_screen@common.inventory_screen_common": {
-    "$close_on_player_hurt|default": true,
-    "close_on_player_hurt": "$close_on_player_hurt",
+  "dropper_screen": {
+    "force_render_below": "$force_render_below",
     "variables": [
       {
         "requires": "$desktop_screen",
@@ -33,9 +31,8 @@
     ]
   },
 
-  "hopper_screen@common.inventory_screen_common": {
-    "$close_on_player_hurt|default": true,
-    "close_on_player_hurt": "$close_on_player_hurt",
+  "hopper_screen": {
+    "force_render_below": "$force_render_below",
     "variables": [
       {
         "requires": "$desktop_screen",

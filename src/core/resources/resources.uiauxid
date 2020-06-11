@@ -1,0 +1,19 @@
+{
+  "namespace": "aux_ids",
+
+  "item_renderer": {
+    "type": "custom",
+    "renderer": "inventory_item_renderer",
+    "size": [ 16, 16 ],
+    "offset": "$item_offset",
+    "$item_offset|default": [0, 1],
+    "layer": 5,
+    "property_bag": {
+      "#item_id_aux": "$item_id_aux"
+    }
+  }
+
+  /* Items */
+
+  /* Blocks */
+}

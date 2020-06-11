@@ -1,0 +1,162 @@
+{
+  "namespace": "content",
+
+  "space": {
+    "type": "panel"
+  },
+
+  "v2px@content.space": {
+    "size": [0, 2]
+  },
+
+  "v4px@content.space": {
+    "size": [0, 4]
+  },
+
+  "v10px@content.space": {
+    "size": [0, 10]
+  },
+
+  "vfill@content.space": {
+    "size": [0, "fill"]
+  },
+
+  "h2px@content.space": {
+    "size": [2, 0]
+  },
+
+  "h4px@content.space": {
+    "size": [4, 0]
+  },
+
+  "h10px@content.space": {
+    "size": [10, 0]
+  },
+
+  "hfill@content.space": {
+    "size": ["fill", 0]
+  },
+
+  "main_play_button@button_mcjava.button": {
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "default_focus_precedence": 1,
+    "$button_text": "menu.play",
+    "variables": [
+      {
+        "requires": "$education_edition",
+        "$pressed_button_name": "button.menu_edu_play"
+      },
+      {
+        "requires": "(not $education_edition)",
+        "$pressed_button_name": "button.menu_play"
+      }
+    ]
+  },
+
+  "main_course_button@button_mcjava.button": {
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "$pressed_button_name": "button.menu_courses",
+    "$button_text": "menu.courses"
+  },
+
+  "main_profile_button@button_mcjava.button": {
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "$pressed_button_name": "button.to_profile_screen",
+    "$button_text": "menu.profile"
+  },
+
+  "main_change_skin_button@button_mcjava.button": {
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "$pressed_button_name": "button.menu_skins",
+    "$button_text": "menu.skins"
+  },
+
+  "main_store_button@button_mcjava.button": {
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "$pressed_button_name": "button.menu_store",
+    "$button_text": "menu.store",
+    "enabled": "(not $store_disabled)",
+    "$tooltip_name": "#marketplace_error_text",
+    "bindings": [
+      {
+        "binding_name": "(not #has_marketplace_errors)",
+        "binding_name_override": "#enabled"
+      }
+    ],
+    "$tooltip_bindings": [
+      {
+        "binding_name": "#has_marketplace_errors",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "main_switch_accounts_button@button_mcjava.button": {
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "$pressed_button_name": "button.switch_accounts",
+    "$button_text": "menu.switchAccounts"
+  },
+
+  "main_launch_editions_button@button_mcjava.button": {
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "$pressed_button_name": "button.launch_editions",
+    "$button_text": "menu.launchEditions"
+  },
+
+  "feedback_panel": {
+    "type": "panel",
+    "size": [20, 20],
+    "ignored": "$feedback_ignored",
+    "$default_button_bg": "resources.feedback_button_default",
+    "$hover_button_bg": "resources.feedback_button_hover",
+    "$pressed_button_bg": "resources.feedback_button_hover",
+    "$locked_button_bg": "resources.feedback_button_default",
+    "controls": [
+      { "edu@content.edu_feedback_button": { "ignored": "(not $education_edition)" } },
+      { "release@content.release_feedback_button": { "ignored": "($pre_release or $education_edition)" } },
+      { "beta@content.pre_release_feedback_button": { "ignored": "(not $pre_release or $education_edition)" } }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#feedback_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "edu_feedback_button@button_mcjava.button": {
+    "size": [20, 20],
+    "$button_text": "",
+    "$pressed_button_name": "button.edu_feedback"
+  },
+
+  "release_feedback_button@button_mcjava.link_button": {
+    "size": [20, 20],
+    "$link": "https://aka.ms/minecraftfb",
+    "$button_text": ""
+  },
+
+  "pre_release_feedback_button@content.release_feedback_button": {
+    "size": [20, 20],
+    "$link": "https://aka.ms/minecraftfbbeta"
+  },
+
+  "main_settings_button@button_mcjava.button": {
+    "size": [98, 20],
+    "$pressed_button_name": "button.menu_settings",
+    "$button_text": "menu.options"
+  },
+
+  "main_quit_button@button_mcjava.button": {
+    "size": [98, 20],
+    "$pressed_button_name": "button.menu_exit",
+    "$button_text": "menu.quit"
+  }
+}

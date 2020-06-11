@@ -1,7 +1,6 @@
 {
-  "small_chest_screen@common.inventory_screen_common": {
-    "$close_on_player_hurt|default": true,
-    "close_on_player_hurt": "$close_on_player_hurt",
+  "small_chest_screen": {
+    "force_render_below": "$force_render_below",
     "variables": [
       {
         "requires": "$desktop_screen",
@@ -16,9 +15,8 @@
     ]
   },
 
-  "large_chest_screen@common.inventory_screen_common": {
-    "$close_on_player_hurt|default": true,
-    "close_on_player_hurt": "$close_on_player_hurt",
+  "large_chest_screen": {
+    "force_render_below": "$force_render_below",
     "variables": [
       {
         "requires": "$desktop_screen",
@@ -33,9 +31,8 @@
     ]
   },
 
-  "ender_chest_screen@common.inventory_screen_common": {
-    "$close_on_player_hurt|default": true,
-    "close_on_player_hurt": "$close_on_player_hurt",
+  "ender_chest_screen": {
+    "force_render_below": "$force_render_below",
     "variables": [
       {
         "requires": "$desktop_screen",
@@ -50,9 +47,8 @@
     ]
   },
 
-  "shulker_box_screen@common.inventory_screen_common": {
-    "$close_on_player_hurt|default": true,
-    "close_on_player_hurt": "$close_on_player_hurt",
+  "shulker_box_screen": {
+    "force_render_below": "$force_render_below",
     "variables": [
       {
         "requires": "$desktop_screen",
@@ -67,9 +63,8 @@
     ]
   },
 
-  "barrel_screen@common.inventory_screen_common": {
-    "$close_on_player_hurt|default": true,
-    "close_on_player_hurt": "$close_on_player_hurt",
+  "barrel_screen": {
+    "force_render_below": "$force_render_below",
     "variables": [
       {
         "requires": "$desktop_screen",
