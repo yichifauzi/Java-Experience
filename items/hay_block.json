@@ -1,0 +1,10 @@
+/* Original idea by @MCGaming_Lukas. All rights reserved. */
+{ "minecraft:item": {
+
+
+    "description": {
+      "identifier": "minecraft:hay_block",
+      "category": "null"
+    }
+  }
+}

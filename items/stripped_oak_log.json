@@ -1,0 +1,10 @@
+/* Original idea by @MCGaming_Lukas. All rights reserved. */
+{ "minecraft:item": {
+
+
+    "description": {
+      "identifier": "minecraft:stripped_oak_log",
+      "category": "null"
+    }
+  }
+}

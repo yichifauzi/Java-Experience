@@ -1,0 +1,10 @@
+/* Original idea by @MCGaming_Lukas. All rights reserved. */
+{ "minecraft:item": {
+
+
+    "description": {
+      "identifier": "minecraft:heart_of_the_sea",
+      "category": "null"
+    }
+  }
+}
