@@ -4,12 +4,12 @@
   "accessibility_content_panel": {
     "type": "panel",
     "controls": [
-      { "title@screen_mcjava.title": { "text": "options.accessibility.title" } },
+      { "title@screen_mcjava.title": { "offset": [0, 18], "text": "options.accessibility.title" } },
       { "text_to_speech@accessibility_mcjava.text_to_speech_toggle": { "offset": [-80, "-36%"] } },
       { "ui_text_to_speech@accessibility_mcjava.ui_text_to_speech_toggle": { "offset": [80, "-36%"] } },
       { "chat_text_to_speech@accessibility_mcjava.chat_text_to_speech_toggle": { "offset": [-80, "-36% + 24px"] } },
       { "open_chat_message@accessibility_mcjava.open_chat_message_toggle": { "offset": [80, "-36% + 24px"] } },
-      { "how_to_play@accessibility_mcjava.how_to_play_button": { "offset": [-80, "-36% + 48px"] } },
+      { "text_background_opacity_slider@accessibility_mcjava.text_background_opacity_slider": { "offset": [-80, "-36% + 48px"] } },
       { "reset_button@accessibility_mcjava.reset_button": { "offset": [80, "-36% + 48px"] } },
       { "perspective_panel@accessibility_mcjava.perspective_panel": { "offset": [80, "-36% + 48px"] } },
       { "back@settings_mcjava.back_button": { "offset": [0, "-36% + 84px"] } }
@@ -82,6 +82,17 @@
     "$option_binding_name": "#enable_open_chat_message",
     "$option_enabled_binding_name": "#enable_open_chat_message_enabled",
     "$toggle_name": "enable_open_chat_message"
+  },
+
+  "text_background_opacity_slider@slider_mcjava.slider": {
+    "anchor_from": "center",
+    "anchor_to": "top_middle",
+    "$slider_label": "#text_background_opacity_slider_label",
+    "$slider_name": "text_background_opacity",
+    "$slider_value_binding_name": "#text_background_opacity",
+    "$slider_tts_text_value": "#text_background_opacity_text_value",
+    "$option_enabled_binding_name": "#text_background_opacity_enabled",
+    "$slider_text_bindings": [ { "binding_name": "$slider_label" } ]
   },
 
   "how_to_play_button@toggle_button_mcjava.toggle_button": {

@@ -182,17 +182,16 @@
 
   "screen_background": {
     "type": "image",
-    "texture": "src/javaui/resources/textures/white",
+    "texture": "src/core/resources/fmarquespto/textures/white",
     "color": [0.005, 0.005, 0.005],
     "ignored": "$is_holographic",
     "$bg_alpha|default": 0.75,
-    "blur": true,
     "alpha": "$bg_alpha"
   },
 
   "screen_container_background": {
     "type": "image",
-    "texture": "src/javaui/resources/textures/white",
+    "texture": "src/core/resources/fmarquespto/textures/white",
     "color": [0.05, 0.05, 0.05],
     "ignored": "$is_holographic",
     "$bg_alpha|default": 0.74,

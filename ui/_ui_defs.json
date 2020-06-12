@@ -52,6 +52,7 @@
     "src/ui/settings/debug.uiscreen",
     "src/ui/settings/global_resource_packs.uiscreen",
     "src/ui/settings/language.uiscreen",
+    "src/ui/settings/percentage_slider.uiscreen",
     "src/ui/settings/mouse.uiscreen",
     "src/ui/settings/mouse_settings.uiscreen",
     "src/ui/settings/settings.uiscreen",

@@ -79,6 +79,42 @@
         }
       },
       {
+        "mouse@mouse_mcjava.mouse_content_panel": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mouse_view",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "controller@controller_mcjava.controller_content_panel": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "controller_view",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "touch@touch_mcjava.touch_content_panel": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "touch_view",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
         "language@language_mcjava.language_content_panel": {
           "bindings": [
             {
@@ -260,12 +296,6 @@
       },
       {
         "binding_type": "view",
-        "source_control_name": "controls_view",
-        "source_property_name": "(not #toggle_state)",
-        "target_property_name": "#visible"
-      },
-      {
-        "binding_type": "view",
         "source_control_name": "touch_view",
         "source_property_name": "(not #toggle_state)",
         "target_property_name": "#visible"
@@ -306,28 +336,15 @@
     "$slider_name": "field_of_view",
     "$slider_value_binding_name": "#field_of_view",
     "$slider_enabled_binding_name": "#field_of_view_enabled",
-    "$slider_type_panel": "settings_mcjava.fov_slider_text_panel",
+    "variables": [
+      {
+        "requires": "$better_slider_text",
+        "$slider_type_panel": "percentage_slider.fov_slider_text_panel"
+      }
+    ],
     "$slider_text_bindings": [
       {
         "binding_name": "$slider_label"
-      }
-    ]
-  },
-
-  "fov_slider_text_panel": {
-    "type": "panel",
-    "size": ["100%c - 10px", 12],
-    "offset": [0, 0],
-    "anchor_from": "center",
-    "anchor_to": "center",
-    "clips_children": true,
-    "controls": [
-      {
-        "option_label@slider_mcjava.slider_label": {
-          "anchor_from": "center",
-          "anchor_to": "center",
-          "offset": [10, 0]
-        }
       }
     ]
   },

@@ -3,7 +3,7 @@
 
   "language_content_panel@screen_mcjava.scroll_screen": {
     "$top_content": "language_mcjava.top_content",
-    "$scrolling_content": "language_mcjava.scroll_content",
+    "$scrolling_content": "language_mcjava.languages_content",
     "$bottom_content": "language_mcjava.bottom_content",
     "$bottom_content_size": ["100%", 61]
   },
@@ -16,7 +16,7 @@
     ]
   },
 
-  "scroll_content": {
+  "languages_content": {
     "type": "panel",
     "size": ["100%", "100%c"],
     "controls": [

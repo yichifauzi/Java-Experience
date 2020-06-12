@@ -13,6 +13,9 @@
   /* Options */
   "$edition_name": "java",
   "$disabled_vignette": false,
+  "$better_mouse_keys_grid": true,
+  "$better_controller_keys_grid": true,
+  "$better_slider_text": true,
 
   /* Button Text Color */
   "$button_default_text_color": [1.0, 1.0, 1.0],

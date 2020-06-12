@@ -1,5 +1,10 @@
 lang.name=PT PT
 
+options.fov.label=CV
+options.fov=0	#
+options.fov.toggle=CV	#
+options.fov.format=%s
+
 ##Main Menu
 menu.play=Jogar
 menu.courses=Cursos

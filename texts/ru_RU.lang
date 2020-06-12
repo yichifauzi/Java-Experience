@@ -1,0 +1,3 @@
+options.fov.label=Поле зрения	#
+options.fov=0	#
+options.fov.format=%s

@@ -1,0 +1,3 @@
+options.fov.label=Кут огляду	#
+options.fov=0	#
+options.fov.format=%s

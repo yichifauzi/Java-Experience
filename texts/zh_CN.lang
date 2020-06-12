@@ -1,3 +1,3 @@
-options.fov.label=Campo de visión	#
+options.fov.label=视野	#
 options.fov=0	#
 options.fov.format=%s
