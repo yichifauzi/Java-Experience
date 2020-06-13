@@ -1,3 +1,14 @@
 options.fov.label=Обхват на изгледа	#
 options.fov=0	#
 options.fov.format=%s
+
+entity.wither.name.new=Чезнещия	#
+entity.wither.name=0	#
+
+entity.ender_dragon.name.new=Пагубен дракон	#
+entity.ender_dragon.name=1	#
+
+raid.name.new=Нашествие	#
+raid.progress.new=Оставащи мобове:	#
+raid.name=2	#
+raid.progress=3	#

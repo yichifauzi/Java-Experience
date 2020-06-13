@@ -1,12 +1,8 @@
 {
   "namespace": "boss_bar_mcjava",
 
-  "boss_health_grid": {
-    "type": "grid",
-    "grid_dimension_binding": "#boss_grid_dimension",
+  "boss_health_grid@hud.boss_health_grid": {
     "grid_item_template": "boss_bar_mcjava.boss_health_panel",
-    "grid_fill_direction": "vertical",
-    "collection_name": "boss_bars",
     "anchor_to": "top_middle",
     "anchor_from": "top_middle",
     "size": [182, 171]
@@ -47,91 +43,24 @@
         }
       },
       {
-        "dragon_bars": {
-          "type": "panel",
-          "$boss_bar_name_color": "$ender_dragon_boss_bar_name_text_color",
-          "controls": [
-            { "bg_bg_ender_dragon_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Пагубен дракон')" } },
-            { "cs_cz_ender_dragon_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Drak z enderu')" } },
-            { "da_dk_ender_dragon_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Ender-drage')" } },
-            { "de_de_ender_dragon_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Enderdrache')" } },
-            { "el_gr_ender_dragon_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Δράκος Τελειωτής')" } },
-            { "en_us_ender_dragon_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Ender Dragon')" } },
-            { "es_es_ender_dragon_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Dragón de Ender')" } },
-            { "fi_fi_ender_dragon_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Äärilisko')" } },
-            { "fr_ca_ender_dragon_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Dragon Ender')" } },
-            { "fr_fr_ender_dragon_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Dragon de l´ Ender')" } },
-            { "hu_hu_ender_dragon_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Végzetsárkány')" } },
-            { "id_id_ender_dragon_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Naga Ender')" } },
-            { "it_it_ender_dragon_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Enderdrago')" } },
-            { "ja_jp_ender_dragon_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'エンダー ドラゴン')" } },
-            { "ko_kr_ender_dragon_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = '엔더 드래곤')" } },
-            { "nb_no_ender_dragon_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Enderdrage')" } },
-            { "nl_nl_ender_dragon_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Enderdraak')" } },
-            { "pl_pl_ender_dragon_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Smok Kresu')" } },
-            { "pt_br_ender_dragon_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Dragão Ender')" } },
-            { "pt_pt_ender_dragon_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Dragão de Ender')" } },
-            { "ru_ru_ender_dragon_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Дракон Края')" } },
-            { "sk_sk_ender_dragon_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Drak z konca sveta')" } },
-            { "sv_se_ender_dragon_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Enderdrake')" } },
-            { "tr_tr_ender_dragon_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Ender Ejderhası')" } },
-            { "uk_ua_ender_dragon_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Дракон Ендеру')" } },
-            { "zh_cn_ender_dragon_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = '末影龙')" } },
-            { "zh_tw_ender_dragon_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = '終界龍')" } }
-          ]
+        "ender_dragon_bar@boss_bar_mcjava.base_boss_bar_name": {
+          "$langBossName": "(#bossName = '1')",
+          "$boss_bar_name": "entity.ender_dragon.name.new",
+          "$boss_bar_name_color": "$ender_dragon_boss_bar_name_text_color"
         }
       },
       {
-        "wither_bars": {
-          "type": "panel",
-          "$boss_bar_name_color": "$wither_boss_bar_name_text_color",
-          "controls": [
-            { "bg_bg_wither_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Чезнещия')" } },
-            { "cs_cz_wither_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Pakostnice')" } },
-            { "el_gr_wither_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Μαρασμός')" } },
-            { "en_us_wither_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Wither')" } },
-            { "fi_fi_wither_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Näivettäjä')" } },
-            { "hu_hu_wither_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Sorvasztó')" } },
-            { "ja_jp_wither_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'ウィザー')" } },
-            { "ko_kr_wither_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = '위더')" } },
-            { "ru_ru_wither_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Иссушитель')" } },
-            { "uk_ua_wither_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Візер')" } },
-            { "zh_cn_wither_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = '凋灵')" } },
-            { "zh_tw_wither_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = '凋靈怪')" } }
-          ]
+        "wither_bar@boss_bar_mcjava.base_boss_bar_name": {
+          "$langBossName": "(#bossName = '0')",
+          "$boss_bar_name": "entity.wither.name.new",
+          "$boss_bar_name_color": "$wither_boss_bar_name_text_color"
         }
       },
       {
-        "raids_basic_bars": {
-          "type": "panel",
-          "$boss_bar_name_color": "$raids_boss_bar_name_text_color",
-          "controls": [
-            { "bg_bg_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Нашествие')" } },
-            { "cs_cz_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Nájezd')" } },
-            { "da_dk_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Plyndringstogt')" } },
-            { "de_de_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Raubzug')" } },
-            { "el_gr_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Επιδρομή')" } },
-            { "en_us_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Raid')" } },
-            { "es_es_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Asalto')" } },
-            { "fi_fi_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Rynnäkkö')" } },
-            { "hu_hu_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Rajtaütés')" } },
-            { "id_id_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Serbuan')" } },
-            { "it_it_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Incursione')" } },
-            { "ja_jp_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = '襲撃')" } },
-            { "ko_kr_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = '레이드')" } },
-            { "nb_no_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Plyndringstokt')" } },
-            { "nl_nl_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Plundering')" } },
-            { "pl_pl_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Najazd')" } },
-            { "pt_br_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Ataque')" } },
-            { "pt_pt_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Invasão')" } },
-            { "ru_ru_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Налет')" } },
-            { "sk_sk_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Nájazd')" } },
-            { "sv_se_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Räd')" } },
-            { "tr_tr_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Baskın')" } },
-            { "uk_ua_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Наскок')" } },
-            { "zh_cn_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = '劫掠')" } },
-            { "zh_tw_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = '戰鬥')" } }
-          ]
+        "raids_bar@boss_bar_mcjava.base_boss_bar_name": {
+          "$langBossName": "(#bossName = '2')",
+          "$boss_bar_name": "raid.name.new",
+          "$boss_bar_name_color": "$raids_boss_bar_name_text_color"
         }
       },
       {
@@ -139,84 +68,9 @@
           "type": "panel",
           "$boss_bar_name_color": "$raids_boss_bar_name_text_color",
           "controls": [
-            { "bg_bg_raids_remaing_2_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Нашествие - Оставащи мобове: 2')" } },
-            { "bg_bg_raids_remaing_1_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Нашествие - Оставащи мобове: 1')" } },
-            { "bg_bg_raids_remaing_0_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Нашествие - Оставащи мобове: 0')" } },
-            { "cs_cz_raids_remaing_2_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Nájezd - Zbývá stvoření: 2')" } },
-            { "cs_cz_raids_remaing_1_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Nájezd - Zbývá stvoření: 1')" } },
-            { "cs_cz_raids_remaing_0_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Nájezd - Zbývá stvoření: 0')" } },
-            { "da_dk_raids_remaing_2_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Plyndringstogt - Væsner tilbage: 2')" } },
-            { "da_dk_raids_remaing_1_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Plyndringstogt - Væsner tilbage: 1')" } },
-            { "da_dk_raids_remaing_0_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Plyndringstogt - Væsner tilbage: 0')" } },
-            { "de_de_raids_remaing_2_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Raubzug - Verbleibende Kreaturen: 2')" } },
-            { "de_de_raids_remaing_1_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Raubzug - Verbleibende Kreaturen: 1')" } },
-            { "de_de_raids_remaing_0_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Raubzug - Verbleibende Kreaturen: 0')" } },
-            { "el_gr_raids_remaing_2_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Επιδρομή - Πλάσματα που απομένουν: 2')" } },
-            { "el_gr_raids_remaing_1_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Επιδρομή - Πλάσματα που απομένουν: 1')" } },
-            { "el_gr_raids_remaing_0_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Επιδρομή - Πλάσματα που απομένουν: 0')" } },
-            { "en_us_raids_remaing_2_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Raid - Mobs remaining: 2')" } },
-            { "en_us_raids_remaing_1_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Raid - Mobs remaining: 1')" } },
-            { "en_us_raids_remaing_0_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Raid - Mobs remaining: 0')" } },
-            { "es_es_raids_remaing_2_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Asalto - Criaturas restantes: 2')" } },
-            { "es_es_raids_remaing_1_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Asalto - Criaturas restantes: 1')" } },
-            { "es_es_raids_remaing_0_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Asalto - Criaturas restantes: 0')" } },
-            { "fi_fi_raids_remaing_2_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Rynnäkkö - irviöitä jäljellä: 2')" } },
-            { "fi_fi_raids_remaing_1_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Rynnäkkö - irviöitä jäljellä: 1')" } },
-            { "fi_fi_raids_remaing_0_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Rynnäkkö - irviöitä jäljellä: 0')" } },
-            { "fr_fr_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Raid - Créatures restantes : 2')" } },
-            { "fr_fr_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Raid - Créatures restantes : 1')" } },
-            { "fr_fr_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Raid - Créatures restantes : 0')" } },
-            { "hu_hu_raids_remaing_2_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Rajtaütés - Megmaradt mobok: 2')" } },
-            { "hu_hu_raids_remaing_1_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Rajtaütés - Megmaradt mobok: 1')" } },
-            { "hu_hu_raids_remaing_0_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Rajtaütés - Megmaradt mobok: 0')" } },
-            { "id_id_raids_remaing_2_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Serbuan - Mob tersisa: 2')" } },
-            { "id_id_raids_remaing_1_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Serbuan - Mob tersisa: 1')" } },
-            { "id_id_raids_remaing_0_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Serbuan - Mob tersisa: 0')" } },
-            { "it_it_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Incursione - Creature rimaste: 2')" } },
-            { "it_it_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Incursione - Creature rimaste: 1')" } },
-            { "it_it_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Incursione - Creature rimaste: 0')" } },
-            { "ja_jp_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = '襲撃 - =残りモブ数: 2')" } },
-            { "ja_jp_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = '襲撃 - =残りモブ数: 1')" } },
-            { "ja_jp_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = '襲撃 - =残りモブ数: 0')" } },
-            { "ko_kr_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = '레이드 - 남은 몹: 2')" } },
-            { "ko_kr_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = '레이드 - 남은 몹: 1')" } },
-            { "ko_kr_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = '레이드 - 남은 몹: 0')" } },
-            { "nb_no_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Plyndringstokt - Vesener igjen: 2')" } },
-            { "nb_no_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Plyndringstokt - Vesener igjen: 1')" } },
-            { "nb_no_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Plyndringstokt - Vesener igjen: 0')" } },
-            { "nl_nl_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Plundering - Resterende mobs: 2')" } },
-            { "nl_nl_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Plundering - Resterende mobs: 1')" } },
-            { "nl_nl_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Plundering - Resterende mobs: 0')" } },
-            { "pl_pl_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Najazd - Pozostałe moby: 2')" } },
-            { "pl_pl_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Najazd - Pozostałe moby: 1')" } },
-            { "pl_pl_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Najazd - Pozostałe moby: 0')" } },
-            { "pt_br_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Ataque - Criaturas restantes: 2')" } },
-            { "pt_br_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Ataque - Criaturas restantes: 1')" } },
-            { "pt_br_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Ataque - Criaturas restantes: 0')" } },
-            { "pt_pt_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Invasão - Criaturas restantes: 2')" } },
-            { "pt_pt_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Invasão - Criaturas restantes: 1')" } },
-            { "pt_pt_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Invasão - Criaturas restantes: 0')" } },
-            { "ru_ru_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Налет - Осталось мобов: 2')" } },
-            { "ru_ru_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Налет - Осталось мобов: 1')" } },
-            { "ru_ru_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Налет - Осталось мобов: 0')" } },
-            { "sk_sk_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Nájazd - Zostávajúce tvory: 2')" } },
-            { "sk_sk_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Nájazd - Zostávajúce tvory: 1')" } },
-            { "sk_sk_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Nájazd - Zostávajúce tvory: 0')" } },
-            { "sv_se_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Räd - Varelser kvar: 2')" } },
-            { "sv_se_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Räd - Varelser kvar: 1')" } },
-            { "sv_se_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Räd - Varelser kvar: 0')" } },
-            { "tr_tr_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Baskın - Kalan yaratık: 2')" } },
-            { "tr_tr_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Baskın - Kalan yaratık: 1')" } },
-            { "tr_tr_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Baskın - Kalan yaratık: 0')" } },
-            { "uk_ua_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Наскок - Залишилося мобів: 2')" } }, 
-            { "uk_ua_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Наскок - Залишилося мобів: 1')" } }, 
-            { "uk_ua_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = 'Наскок - Залишилося мобів: 0')" } }, 
-            { "zh_cn_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = '劫掠 - 剩余生物： 2')" } },
-            { "zh_cn_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = '劫掠 - 剩余生物： 1')" } },
-            { "zh_cn_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = '劫掠 - 剩余生物： 0')" } },
-            { "zh_tw_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = '戰鬥 - 剩餘生物： 2')" } },
-            { "zh_tw_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = '戰鬥 - 剩餘生物： 1')" } },
-            { "zh_tw_raids_bar@boss_bar_mcjava.base_boss_bar_name": { "$langBossName": "(#bossName = '戰鬥 - 剩餘生物： 0')" } }
+            { "raids_remaing_2_bar@boss_bar_mcjava.base_boss_bar_name_stack": { "$langBossName": "(#bossName = '2 - 3 2')", "$count": "2" } },
+            { "raids_remaing_1_bar@boss_bar_mcjava.base_boss_bar_name_stack": { "$langBossName": "(#bossName = '2 - 3 1')", "$count": "1" } },
+            { "raids_remaing_0_bar@boss_bar_mcjava.base_boss_bar_name_stack": { "$langBossName": "(#bossName = '2 - 3 0')", "$count": "0" } }
           ]
         }
       }
@@ -225,25 +79,26 @@
 
   "base_boss_bar_name": {
     "type": "panel",
-    "controls": [
+    "controls": [ { "boss_bar_name@boss_bar_name": {} } ],
+    "bindings": [
       {
-        "base_boss_bar_name": {
-          "type": "label",
-          "color": "$boss_bar_name_color",
-          "text": "#bossName",
-          "size": ["default", "default"],
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "shadow": true,
-          "bindings": [
-            {
-              "binding_name": "#bossName",
-              "binding_type": "collection",
-              "binding_collection_name": "boss_bars"
-            }
-          ]
-        }
+        "binding_type": "collection",
+        "binding_name": "$langBossName",
+        "binding_collection_name": "boss_bars",
+        "binding_name_override": "#visible"
       }
+    ]
+  },
+
+  "base_boss_bar_name_stack": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "controls": [
+      { "boss_bar_name@boss_bar_name": { "text": "raid.name.new" } },
+      { "bar": { "type": "label", "text": " - ", "shadow": true, "color": "$boss_bar_name_color"} },
+      { "remainingg@boss_bar_name": { "text": "raid.progress.new" } },
+      { "space": { "type": "label", "text": " " } },
+      { "count@boss_bar_name": { "text": "$count", "$count|default": "" } }
     ],
     "bindings": [
       {
@@ -251,6 +106,24 @@
         "binding_name": "$langBossName",
         "binding_collection_name": "boss_bars",
         "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "boss_bar_name": {
+    "type": "label",
+    "color": "$boss_bar_name_color",
+    "text": "$boss_bar_name",
+    "$boss_bar_name|default": "",
+    "size": ["default", "default"],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "shadow": true,
+    "bindings": [
+      {
+        "binding_name": "#bossName",
+        "binding_type": "collection",
+        "binding_collection_name": "boss_bars"
       }
     ]
   },
@@ -273,193 +146,32 @@
         }
       },
       {
-        "dragon_bars": {
-          "type": "panel",
-          "size": [182, 5],
+        "ender_dragon_bar@boss_bar_mcjava.base_boss_bar": {
+          "$langBossName": "(#bossName = '1')",
           "$empty_bar_color": "('resources.empty_' + $ender_dragon_bar_color + '_bar')",
           "$filled_bar_color": "('resources.filled_' + $ender_dragon_bar_color + '_bar')",
           "$empty_bar_notched": "('resources.empty_' + $ender_dragon_bar_style + '_bar')",
-          "$filled_bar_notched": "('resources.filled_' + $ender_dragon_bar_style + '_bar')",
-          "controls": [
-            { "bg_bg_ender_dragon_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Пагубен дракон')" } },
-            { "cs_cz_ender_dragon_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Drak z enderu')" } },
-            { "da_dk_ender_dragon_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Ender-drage')" } },
-            { "de_de_ender_dragon_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Enderdrache')" } },
-            { "el_gr_ender_dragon_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Δράκος Τελειωτής')" } },
-            { "en_us_ender_dragon_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Ender Dragon')" } },
-            { "es_es_ender_dragon_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Dragón de Ender')" } },
-            /* { "es_mx_ender_dragon_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Dragón de Ender')" } }, */
-            { "fi_fi_ender_dragon_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Äärilisko')" } },
-            { "fr_ca_ender_dragon_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Dragon Ender')" } },
-            { "fr_fr_ender_dragon_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Dragon de l´ Ender')" } },
-            { "hu_hu_ender_dragon_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Végzetsárkány')" } },
-            { "id_id_ender_dragon_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Naga Ender')" } },
-            { "it_it_ender_dragon_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Enderdrago')" } },
-            { "ja_jp_ender_dragon_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'エンダー ドラゴン')" } },
-            { "ko_kr_ender_dragon_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = '엔더 드래곤')" } },
-            { "nb_no_ender_dragon_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Enderdrage')" } },
-            { "nl_nl_ender_dragon_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Enderdraak')" } },
-            { "pl_pl_ender_dragon_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Smok Kresu')" } },
-            { "pt_br_ender_dragon_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Dragão Ender')" } },
-            { "pt_pt_ender_dragon_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Dragão de Ender')" } },
-            { "ru_ru_ender_dragon_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Дракон Края')" } },
-            { "sk_sk_ender_dragon_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Drak z konca sveta')" } },
-            { "sv_se_ender_dragon_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Enderdrake')" } },
-            { "tr_tr_ender_dragon_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Ender Ejderhası')" } },
-            { "uk_ua_ender_dragon_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Дракон Ендеру')" } },
-            { "zh_cn_ender_dragon_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = '末影龙')" } },
-            { "zh_tw_ender_dragon_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = '終界龍')" } }
-          ]
+          "$filled_bar_notched": "('resources.filled_' + $ender_dragon_bar_style + '_bar')"
         }
       },
       {
-        "wither_bars": {
-          "type": "panel",
-          "size": [182, 5],
+        "wither_bar@boss_bar_mcjava.base_boss_bar": {
+          "$langBossName": "(#bossName = '0')",
           "$empty_bar_color": "('resources.empty_' + $wither_bar_color + '_bar')",
           "$filled_bar_color": "('resources.filled_' + $wither_bar_color + '_bar')",
           "$empty_bar_notched": "('resources.empty_' + $wither_bar_style + '_bar')",
-          "$filled_bar_notched": "('resources.filled_' + $wither_bar_style + '_bar')",
-          "controls": [
-            { "bg_bg_wither_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Чезнещия')" } },
-            { "cs_cz_wither_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Pakostnice')" } },
-            { "el_gr_wither_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Μαρασμός')" } },
-            { "en_us_wither_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Wither')" } },
-            { "fi_fi_wither_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Näivettäjä')" } },
-            { "hu_hu_wither_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Sorvasztó')" } },
-            { "ja_jp_wither_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'ウィザー')" } },
-            { "ko_kr_wither_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = '위더')" } },
-            { "ru_ru_wither_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Иссушитель')" } },
-            { "uk_ua_wither_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Візер')" } },
-            { "zh_cn_wither_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = '凋灵')" } },
-            { "zh_tw_wither_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = '凋靈怪')" } }
-          ]
+          "$filled_bar_notched": "('resources.filled_' + $wither_bar_style + '_bar')"
         }
       },
-      {
-        "raids_basic_bars": {
-          "type": "panel",
-          "size": [182, 5],
-          "$empty_bar_color": "('resources.empty_' + $raids_bar_color + '_bar')",
-          "$filled_bar_color": "('resources.filled_' + $raids_bar_color + '_bar')",
-          "$empty_bar_notched": "('resources.empty_' + $raids_bar_style + '_bar')",
-          "$filled_bar_notched": "('resources.empty_' + $raids_bar_style + '_bar')",
-          "controls": [
-            { "bg_bg_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Нашествие')" } },
-            { "cs_cz_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Nájezd')" } },
-            { "da_dk_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Plyndringstogt')" } },
-            { "de_de_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Raubzug')" } },
-            { "el_gr_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Επιδρομή')" } },
-            { "en_us_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Raid')" } },
-            { "es_es_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Asalto')" } },
-            { "fi_fi_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Rynnäkkö')" } },
-            { "hu_hu_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Rajtaütés')" } },
-            { "id_id_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Serbuan')" } },
-            { "it_it_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Incursione')" } },
-            { "ja_jp_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = '襲撃')" } },
-            { "ko_kr_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = '레이드')" } },
-            { "nb_no_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Plyndringstokt')" } },
-            { "nl_nl_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Plundering')" } },
-            { "pl_pl_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Najazd')" } },
-            { "pt_br_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Ataque')" } },
-            { "pt_pt_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Invasão')" } },
-            { "ru_ru_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Налет')" } },
-            { "sk_sk_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Nájazd')" } },
-            { "sv_se_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Räd')" } },
-            { "tr_tr_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Baskın')" } },
-            { "uk_ua_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Наскок')" } },
-            { "zh_cn_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = '劫掠')" } },
-            { "zh_tw_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = '戰鬥')" } }
-          ]
-        }
-      },
+      { "raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = '2')" } },
       {
         "raids_remaing_bars": {
           "type": "panel",
           "size": [182, 5],
-          "$empty_bar_color": "('resources.empty_' + $raids_bar_color + '_bar')",
-          "$filled_bar_color": "('resources.filled_' + $raids_bar_color + '_bar')",
-          "$empty_bar_notched": "('resources.empty_' + $raids_bar_style + '_bar')",
-          "$filled_bar_notched": "('resources.empty_' + $raids_bar_style + '_bar')",
           "controls": [
-            { "bg_bg_raids_remaing_2_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Нашествие - Оставащи мобове: 2')" } },
-            { "bg_bg_raids_remaing_1_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Нашествие - Оставащи мобове: 1')" } },
-            { "bg_bg_raids_remaing_0_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Нашествие - Оставащи мобове: 0')" } },
-            { "cs_cz_raids_remaing_2_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Nájezd - Zbývá stvoření: 2')" } },
-            { "cs_cz_raids_remaing_1_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Nájezd - Zbývá stvoření: 1')" } },
-            { "cs_cz_raids_remaing_0_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Nájezd - Zbývá stvoření: 0')" } },
-            { "da_dk_raids_remaing_2_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Plyndringstogt - Væsner tilbage: 2')" } },
-            { "da_dk_raids_remaing_1_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Plyndringstogt - Væsner tilbage: 1')" } },
-            { "da_dk_raids_remaing_0_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Plyndringstogt - Væsner tilbage: 0')" } },
-            { "de_de_raids_remaing_2_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Raubzug - Verbleibende Kreaturen: 2')" } },
-            { "de_de_raids_remaing_1_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Raubzug - Verbleibende Kreaturen: 1')" } },
-            { "de_de_raids_remaing_0_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Raubzug - Verbleibende Kreaturen: 0')" } },
-            { "el_gr_raids_remaing_2_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Επιδρομή - Πλάσματα που απομένουν: 2')" } },
-            { "el_gr_raids_remaing_1_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Επιδρομή - Πλάσματα που απομένουν: 1')" } },
-            { "el_gr_raids_remaing_0_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Επιδρομή - Πλάσματα που απομένουν: 0')" } },
-            { "en_us_raids_remaing_2_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Raid - Mobs remaining: 2')" } },
-            { "en_us_raids_remaing_1_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Raid - Mobs remaining: 1')" } },
-            { "en_us_raids_remaing_0_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Raid - Mobs remaining: 0')" } },
-            { "es_es_raids_remaing_2_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Asalto - Criaturas restantes: 2')" } },
-            { "es_es_raids_remaing_1_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Asalto - Criaturas restantes: 1')" } },
-            { "es_es_raids_remaing_0_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Asalto - Criaturas restantes: 0')" } },
-            { "fi_fi_raids_remaing_2_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Rynnäkkö - irviöitä jäljellä: 2')" } },
-            { "fi_fi_raids_remaing_1_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Rynnäkkö - irviöitä jäljellä: 1')" } },
-            { "fi_fi_raids_remaing_0_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Rynnäkkö - irviöitä jäljellä: 0')" } },
-            { "fr_fr_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Raid - Créatures restantes : 2')" } },
-            { "fr_fr_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Raid - Créatures restantes : 1')" } },
-            { "fr_fr_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Raid - Créatures restantes : 0')" } },
-            { "hu_hu_raids_remaing_2_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Rajtaütés - Megmaradt mobok: 2')" } },
-            { "hu_hu_raids_remaing_1_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Rajtaütés - Megmaradt mobok: 1')" } },
-            { "hu_hu_raids_remaing_0_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Rajtaütés - Megmaradt mobok: 0')" } },
-            { "id_id_raids_remaing_2_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Serbuan - Mob tersisa: 2')" } },
-            { "id_id_raids_remaing_1_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Serbuan - Mob tersisa: 1')" } },
-            { "id_id_raids_remaing_0_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Serbuan - Mob tersisa: 0')" } },
-            { "it_it_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Incursione - Creature rimaste: 2')" } },
-            { "it_it_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Incursione - Creature rimaste: 1')" } },
-            { "it_it_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Incursione - Creature rimaste: 0')" } },
-            { "ja_jp_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = '襲撃 - =残りモブ数: 2')" } },
-            { "ja_jp_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = '襲撃 - =残りモブ数: 1')" } },
-            { "ja_jp_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = '襲撃 - =残りモブ数: 0')" } },
-            { "ko_kr_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = '레이드 - 남은 몹: 2')" } },
-            { "ko_kr_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = '레이드 - 남은 몹: 1')" } },
-            { "ko_kr_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = '레이드 - 남은 몹: 0')" } },
-            { "nb_no_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Plyndringstokt - Vesener igjen: 2')" } },
-            { "nb_no_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Plyndringstokt - Vesener igjen: 1')" } },
-            { "nb_no_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Plyndringstokt - Vesener igjen: 0')" } },
-            { "nl_nl_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Plundering - Resterende mobs: 2')" } },
-            { "nl_nl_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Plundering - Resterende mobs: 1')" } },
-            { "nl_nl_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Plundering - Resterende mobs: 0')" } },
-            { "pl_pl_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Najazd - Pozostałe moby: 2')" } },
-            { "pl_pl_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Najazd - Pozostałe moby: 1')" } },
-            { "pl_pl_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Najazd - Pozostałe moby: 0')" } },
-            { "pt_br_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Ataque - Criaturas restantes: 2')" } },
-            { "pt_br_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Ataque - Criaturas restantes: 1')" } },
-            { "pt_br_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Ataque - Criaturas restantes: 0')" } },
-            { "pt_pt_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Invasão - Criaturas restantes: 2')" } },
-            { "pt_pt_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Invasão - Criaturas restantes: 1')" } },
-            { "pt_pt_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Invasão - Criaturas restantes: 0')" } },
-            { "ru_ru_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Налет - Осталось мобов: 2')" } },
-            { "ru_ru_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Налет - Осталось мобов: 1')" } },
-            { "ru_ru_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Налет - Осталось мобов: 0')" } },
-            { "sk_sk_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Nájazd - Zostávajúce tvory: 2')" } },
-            { "sk_sk_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Nájazd - Zostávajúce tvory: 1')" } },
-            { "sk_sk_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Nájazd - Zostávajúce tvory: 0')" } },
-            { "sv_se_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Räd - Varelser kvar: 2')" } },
-            { "sv_se_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Räd - Varelser kvar: 1')" } },
-            { "sv_se_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Räd - Varelser kvar: 0')" } },
-            { "tr_tr_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Baskın - Kalan yaratık: 2')" } },
-            { "tr_tr_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Baskın - Kalan yaratık: 1')" } },
-            { "tr_tr_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Baskın - Kalan yaratık: 0')" } },
-            { "uk_ua_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Наскок - Залишилося мобів: 2')" } }, 
-            { "uk_ua_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Наскок - Залишилося мобів: 1')" } }, 
-            { "uk_ua_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = 'Наскок - Залишилося мобів: 0')" } }, 
-            { "zh_cn_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = '劫掠 - 剩余生物： 2')" } },
-            { "zh_cn_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = '劫掠 - 剩余生物： 1')" } },
-            { "zh_cn_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = '劫掠 - 剩余生物： 0')" } },
-            { "zh_tw_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = '戰鬥 - 剩餘生物： 2')" } },
-            { "zh_tw_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = '戰鬥 - 剩餘生物： 1')" } },
-            { "zh_tw_raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = '戰鬥 - 剩餘生物： 0')" } }
+            { "raids_remaing_2_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = '2 - 3 2')" } },
+            { "raids_remaing_1_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = '2 - 3 1')" } },
+            { "raids_remaing_0_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = '2 - 3 0')" } }
           ]
         }
       }
@@ -469,6 +181,10 @@
   "base_boss_bar": {
     "type": "panel",
     "size": [182, 5],
+    "$empty_bar_color|default": "('resources.empty_' + $raids_bar_color + '_bar')",
+    "$filled_bar_color|default": "('resources.filled_' + $raids_bar_color + '_bar')",
+    "$empty_bar_notched|default": "('resources.empty_' + $raids_bar_style + '_bar')",
+    "$filled_bar_notched|default": "('resources.empty_' + $raids_bar_style + '_bar')",
     "controls": [
       { "notched_progress_bar@$empty_bar_notched": {} },
       { "notched_progress_bar@$filled_bar_notched": {} },

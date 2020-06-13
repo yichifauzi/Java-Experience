@@ -1,14 +1,15 @@
-options.fov.label=Champ de vision	#
+options.fov.label=CV
 options.fov=0	#
+options.fov.toggle=CV	#
 options.fov.format=%s
 
 entity.wither.name.new=Wither	#
 entity.wither.name=0	#
 
-entity.ender_dragon.name.new=Dragon Ender	#
+entity.ender_dragon.name.new=Dragão Ender	#
 entity.ender_dragon.name=1	#
 
-raid.name.new=Raid	#
-raid.progress.new=Créatures restantes :	#
+raid.name.new=Ataque	#
+raid.progress.new=Criaturas restantes:	#
 raid.name=2	#
 raid.progress=3	#

@@ -1,3 +1,14 @@
 options.fov.label=시야 범위	#
 options.fov=0	#
 options.fov.format=%s
+
+entity.wither.name.new=위더	#
+entity.wither.name=0	#
+
+entity.ender_dragon.name.new=엔더 드래곤	#
+entity.ender_dragon.name=1	#
+
+raid.name.new=레이드	#
+raid.progress.new=남은 몹:	#
+raid.name=2	#
+raid.progress=3	#
