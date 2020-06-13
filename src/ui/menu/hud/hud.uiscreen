@@ -3,6 +3,13 @@
 
   "hud_screen_content_panel": {
     "type": "panel",
+    "$hud_player_rend_desktop_offset|default": [15, 15],
+    "variables": [
+      {
+        "requires": "($is_holographic and not $is_living_room_mode)",
+        "$hud_player_rend_desktop_offset": [100, 50]
+      }
+    ],
     "controls": [
       { "root@hud_mcjava.hud_content_panel": {} },
       { "camera@hud.camera_renderer": {} },
@@ -116,7 +123,7 @@
           ]
         }
       },
-      { "save_icon@hud.auto_save": {} }
+      { "save_icon@hud_mcjava.auto_save": {} }
     ],
     "bindings": [
       {
@@ -136,6 +143,26 @@
       }
     ]
   },
+  
+  "auto_save": {
+    "type": "image",
+    "layer": 31,
+    "texture": "textures/ui/auto_save",
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "offset": [ -15, 15 ],
+    "size": [ 18, 30 ],
+    "uv_size": [ 18, 30 ],
+    "uv": "@hud.auto_save_animation",
+    "disable_anim_fast_forward": true,
+    "bindings": [
+      {
+        "binding_name": "#auto_save_animation_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
 
   /* Texts */
 
@@ -263,7 +290,7 @@
   "player_position": {
     "type": "image",
     "size": [ "100%c + 2px", "100%c - 1px" ],
-    "texture": "src/javaui/resources/fmarquespto/textures/white",
+    "texture": "src/core/resources/fmarquespto/textures/white",
     "color": "$player_position_bg_color",
     "anchor_from": "$player_position_anchor",
     "anchor_to": "$player_position_anchor",

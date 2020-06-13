@@ -1,3 +1,4 @@
+/* By @FMarquesPTO. All rights reserved. */
 {
   "namespace": "main_menu_mcjava",
 
@@ -17,7 +18,7 @@
     "anchor_to": "top_middle",
     "offset": [0, "6% + 8px"],
     "controls": [
-    /*{
+      {
         "title_stack": {
           "type": "stack_panel",
           "orientation": "horizontal",
@@ -26,8 +27,8 @@
             { "right@resources.main_title_right": {} }
           ]
         }
-      },*/
-      { "new_title@resources.main_new_title": {} },
+      },
+      /* { "new_title@resources.main_new_title": {} }, */
       { "splash_text@main_menu_mcjava.splash_text": { "offset": [-36, 8] } },
       { "edition@$edition_image": {} }
     ],

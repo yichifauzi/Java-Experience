@@ -1,0 +1,54 @@
+{
+  "namespace": "sign_mcjava",
+
+  "sign_screen_content_panel": {
+    "type": "panel",
+    "controls": [
+      { "title@screen_mcjava.message_title": { "offset": [0, "10%"], "text": "sign.edit" } },
+      {
+        "input_eating_panel": {
+          "type": "input_panel",
+          "layer": 2,
+          "size": ["100%c", "100%c"],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [2, "18%"],
+          "focus_enabled": false,
+          "controls": [ { "text_edit@sign_mcjava.sign_text_multiline": {} } ]
+        }
+      },
+      { "exit@screen_mcjava.exit_button": { "offset": [0, "-20%"], "layer": 100 } }
+    ]
+  },
+
+  "sign_text_multiline@common.multiline_text_edit_box": {
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "size": [96, 101],
+    "$text_alignment": "center",
+    "constrain_to_rect": false,
+    "selected": true,
+    "can_be_deselected": false,
+    "focus_enabled": true,
+    "$text_box_name": "#sign_text_multi",
+    "max_length": 32500,
+    "$text_color_binding_type": "global",
+    "$text_background_default": "sign_mcjava.sign_background",
+    "$text_background_hover": "sign_mcjava.sign_background"
+  },
+
+  "sign_background": {
+    "type": "image",
+    "texture": "$sign_texture_location",
+    "size": [94, 101],
+    "offset": [-1, 0],
+    "$sign_texture_location|default": "src/core/resources/fmarquespto/textures/sign",
+    "variables": [
+      { "requires": "($sign_texture = 'textures/ui/sign_acacia')", "$sign_texture_location": "src/core/resources/fmarquespto/textures/sign_acacia" },
+      { "requires": "($sign_texture = 'textures/ui/sign_spruce')", "$sign_texture_location": "src/core/resources/fmarquespto/textures/sign_spruce" },
+      { "requires": "($sign_texture = 'textures/ui/sign_birch')", "$sign_texture_location": "src/core/resources/fmarquespto/textures/sign_birch" },
+      { "requires": "($sign_texture = 'textures/ui/sign_jungle')", "$sign_texture_location": "src/core/resources/fmarquespto/textures/sign_jungle" },
+      { "requires": "($sign_texture = 'textures/ui/sign_darkoak')", "$sign_texture_location": "src/core/resources/fmarquespto/textures/sign_darkoak" }
+    ]
+  }
+}

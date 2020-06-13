@@ -16,6 +16,9 @@ raid.progress.new=Criaturas restantes:	#
 raid.name=2	#
 raid.progress=3	#
 
+map.position.agent=Agente XYZ: %s / %s / %s
+map.position=XYZ: %s / %s / %s
+
 ##Main Menu
 menu.play=Jogar
 menu.courses=Cursos

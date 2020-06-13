@@ -13,7 +13,8 @@
   /* Options */
   "$edition_name": "java",
   "$disabled_vignette": false,
-  "$better_mouse_keys_grid": true,
+  "$lock_storage_management": true,
+  "$better_mouse_keys_grid": false,
   "$better_controller_keys_grid": true,
   "$better_slider_text": true,
 
@@ -74,8 +75,8 @@
   "$scoreboard_list_bg_alpha": 0.3,
 
   /* Player Position Def */
-  "$player_position_anchor": "top_left",
-  "$player_position_offset": [1, 1],
+  "$player_position_anchor": "top_right",
+  "$player_position_offset": [-1, 1],
   "$player_position_text_color": [1.0, 1.0, 1.0],
   "$player_position_text_alpha": 1.0,
   "$player_position_bg_color": [0.3, 0.3, 0.3],
@@ -104,6 +105,7 @@
 
   "$anvil_resolution": "256x",
   "$brewing_stand_resolution": "256x",
+  "$crafting_table_resolution": "256x",
   "$cartography_resolution": "256x",
   "$generic_54_resolution": "256x",
   "$shulker_box_resolution": "256x",
@@ -112,6 +114,7 @@
   "$grindstone_resolution": "256x",
   "$loom_resolution": "256x",
   "$horse_resolution": "256x",
+  "$inventory_resolution": "256x",
   "$dispenser_resolution": "256x",
   "$hopper_resolution": "256x",
   "$smithing_resolution": "256x",

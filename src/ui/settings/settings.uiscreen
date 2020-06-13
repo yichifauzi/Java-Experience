@@ -1,3 +1,4 @@
+/* By @FMarquesPTO. All rights reserved. */
 {
   "namespace": "settings_mcjava",
 
@@ -181,7 +182,7 @@
             {
               "stack_1@settings_mcjava.stack": {
                 "controls": [
-                  { "debug@settings_mcjava.debug_button": {} },
+                  { "debug@settings_mcjava.debug_button": { "enabled": "(not $is_publish)" } },
                   { "fill@screen_mcjava.hfill": {} },
                   { "realms@settings_mcjava.realms_button": { "ignored": "(not $is_realms)" } }
                 ]
@@ -213,7 +214,7 @@
                 "controls": [
                   { "language@settings_mcjava.language_button": {} },
                   { "fill@screen_mcjava.hfill": {} },
-                  { "storage@settings_mcjava.storage_management_button": { "$toggle_index": "$storage_management_forced_index", "ignored": "(not $is_pregame)" } },
+                  { "storage@settings_mcjava.storage_management_button": { "enabled": "(not $lock_storage_management)", "$toggle_index": "$storage_management_forced_index", "ignored": "(not $is_pregame)" } },
                   { "gamerules_button@settings_mcjava.gamerules_button": {"ignored": "$is_pregame" } }
                 ]
               }

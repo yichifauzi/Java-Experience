@@ -1,3 +1,4 @@
+/* By @FMarquesPTO. All rights reserved. */
 {
   "namespace": "container_mcjava",
 
@@ -429,20 +430,6 @@
         "hover_text@common.hover_text": {
           "layer": 50,
           "$hover_text_binding_name|default": "#hover_text",
-          "modifications": [
-            {
-              "array_name": "controls",
-              "operation": "insert_front",
-              "values": [
-                {
-                  "title@title": {
-                    "text": "MErda",
-                    "layer": 100
-                  }
-                }
-              ]
-            }
-          ],
           "bindings": [
             {
               "binding_name": "$hover_text_binding_name",
@@ -489,7 +476,7 @@
 
   "highlight_slot_image": {
     "type": "image",
-    "texture": "src/javaui/resources/fmarquespto/textures/white",
+    "texture": "src/core/resources/fmarquespto/textures/white",
     "size": [16, 16],
     "color": "$highlight_slot_bg_color",
     "visible": "$highlight_slot_required",
@@ -620,7 +607,6 @@
     "controls": [
       { "selected_item_icon@container_mcjava.inventory_selected_icon": {} },
       { "selected_stack_size_text@container_mcjava.inventory_selected_stack_size_text": {} },
-      { "selected_stack_size_text@container_mcjava.red_inventory_selected_stack_size_text": {} },
       {
         "hover_text@common.hover_text": {
           "layer": 59,

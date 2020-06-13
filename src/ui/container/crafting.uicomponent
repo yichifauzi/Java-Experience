@@ -459,7 +459,7 @@
       {
         "red": {
           "type": "image",
-          "texture": "src/javaui/resources/textures/white",
+          "texture": "src/core/resources/textures/white",
           "$red_cell_size|default": [ "100% - 2px", "100% - 2px" ],
           "size": "$red_cell_size",
           "anchor_to": "center",
@@ -472,7 +472,7 @@
       {
         "red": {
           "type": "image",
-          "texture": "src/javaui/resources/textures/white",
+          "texture": "src/core/resources/textures/white",
           "$red_cell_size|default": [ "100% - 2px", "100% - 2px" ],
           "size": "$red_cell_size",
           "anchor_to": "center",

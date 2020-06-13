@@ -67,6 +67,18 @@
     "texture": "src/core/resources/fmarquespto/textures/indentboxhover"
   },
 
+  "effect_gray_background@resources.resource_image": {
+    "$rsrc_location": "src/assets/minecraft/textures/gui/container/inventory",
+    "size": [120, 31],
+    "variables": [
+      { "requires": "($inventory_resolution = 256x)", "$uv": [0, 166], "$uv_size": [120, 31] },
+      { "requires": "($inventory_resolution = 512x)", "$uv": [0, 332], "$uv_size": [240, 62] },
+      { "requires": "($inventory_resolution = 1024x)", "$uv": [0, 664], "$uv_size": [480, 124] },
+      { "requires": "($inventory_resolution = 2048x)", "$uv": [0, 1328], "$uv_size": [960, 248] },
+      { "requires": "($inventory_resolution = 4096x)", "$uv": [0, 2652], "$uv_size": [1920, 496] }
+    ]
+  },
+
   /* Widgets */
 
   "hotbar_bg@resources.resource_image": {
@@ -1096,11 +1108,11 @@
     "uv": [0, 0],
     "size": [176, 166],
     "variables": [
-      { "requires": "($dispenser_resolution = 256x)", "$uv_size": [176, 166] },
-      { "requires": "($dispenser_resolution = 512x)", "$uv_size": [352, 332] },
-      { "requires": "($dispenser_resolution = 1024x)", "$uv_size": [704, 664] },
-      { "requires": "($dispenser_resolution = 2048x)", "$uv_size": [1408, 1328] },
-      { "requires": "($dispenser_resolution = 4096x)", "$uv_size": [2816, 2656] }
+      { "requires": "($crafting_table_resolution = 256x)", "$uv_size": [176, 166] },
+      { "requires": "($crafting_table_resolution = 512x)", "$uv_size": [352, 332] },
+      { "requires": "($crafting_table_resolution = 1024x)", "$uv_size": [704, 664] },
+      { "requires": "($crafting_table_resolution = 2048x)", "$uv_size": [1408, 1328] },
+      { "requires": "($crafting_table_resolution = 4096x)", "$uv_size": [2816, 2656] }
     ]
   },
 
@@ -1109,11 +1121,11 @@
     "uv": [0, 0],
     "size": [176, 166],
     "variables": [
-      { "requires": "($dispenser_resolution = 256x)", "$uv_size": [176, 166] },
-      { "requires": "($dispenser_resolution = 512x)", "$uv_size": [352, 332] },
-      { "requires": "($dispenser_resolution = 1024x)", "$uv_size": [704, 664] },
-      { "requires": "($dispenser_resolution = 2048x)", "$uv_size": [1408, 1328] },
-      { "requires": "($dispenser_resolution = 4096x)", "$uv_size": [2816, 2656] }
+      { "requires": "($inventory_resolution = 256x)", "$uv_size": [176, 166] },
+      { "requires": "($inventory_resolution = 512x)", "$uv_size": [352, 332] },
+      { "requires": "($inventory_resolution = 1024x)", "$uv_size": [704, 664] },
+      { "requires": "($inventory_resolution = 2048x)", "$uv_size": [1408, 1328] },
+      { "requires": "($inventory_resolution = 4096x)", "$uv_size": [2816, 2656] }
     ]
   },
 

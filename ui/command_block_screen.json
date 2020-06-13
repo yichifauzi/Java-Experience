@@ -1,0 +1,7 @@
+{
+  "command_block_screen": {
+    "$screen_content": "command_block_mcjava.command_block_screen_content_panel",
+    "$screen_bg_content": "screen_mcjava.screen_background",
+    "force_render_below": true
+  }
+}

@@ -1,12 +1,14 @@
 {
   "crafting_screen": {
     "$screen_content": "crafting_table_mcjava.crafting_table_screen_content_panel",
-    "$screen_bg_content": "common.screen_background"
+    "$screen_bg_content": "common.screen_background",
+    "force_render_below": "$force_render_below"
   },
 
   "inventory_screen": {
     "$screen_content": "crafting.inv_panel",
-    "$screen_bg_content": "common.screen_background"
+    "$screen_bg_content": "common.screen_background",
+    "force_render_below": "$force_render_below"
   },
 
   "inv_panel": {

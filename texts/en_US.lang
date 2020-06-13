@@ -18,6 +18,9 @@ raid.progress.new=Mobs remaining:
 raid.name=2
 raid.progress=3
 
+map.position.agent=Agent XYZ: %s / %s / %s
+map.position=XYZ: %s / %s / %s
+
 ##Main Menu
 menu.play=Play
 menu.courses=Courses
@@ -378,6 +381,19 @@ addServer.enterPort=Server Port
 addServer.add=Done
 selectServer.deleteButton=Delete
 selectServer.playButton=Play
+
+##Command Block
+advMode.setCommand=Set Console Command for Block
+advMode.command=Console Command
+advMode.previousOutput=Previous Output
+advMode.mode.sequence=Chain
+advMode.mode.auto=Repeat
+advMode.mode.redstone=Impulse
+advMode.mode.conditional=Conditional
+advMode.mode.unconditional=Unconditional
+advMode.mode.redstoneTriggered=Needs Redstone
+advMode.mode.autoexec.bat=Always Active
+advMode.execOnFirstTick=Execute on First Tick
 
 ##Loadings
 multiplayer.downloadingTerrain=Loading terrain...
