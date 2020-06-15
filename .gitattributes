@@ -1,5 +1,8 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 
-* linguist-vendored
-*.js linguist-vendored=false
+*.uiscreen linguist-language=JSON
+*.uicomponent linguist-language=JSON
+*.ui linguist-language=JSON
+*.uicontent linguist-language=JSON
+*.uitexture linguist-language=JSON
