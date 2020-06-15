@@ -587,6 +587,7 @@
 
   "action_button@button_mcjava.action_button": {
     "$pressed_button_name": "setup_safe_zone_button",
+    "enabled": "$is_pregame",
     "$button_text": "options.safeZone.title",
     "size": [150, 20]
   },

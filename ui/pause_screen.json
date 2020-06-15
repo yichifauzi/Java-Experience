@@ -1,0 +1,17 @@
+{
+  "pause_screen": {
+    "force_render_below": "$force_render_below",
+    "variables": [
+      {
+        "requires": "(not $education_edition)",
+        "$screen_content": "pause_menu_mcjava.pause_menu_screen_content_panel",
+        "$screen_bg_content": "pause_menu_mcjava.screen_background"
+      },
+      {
+        "requires": "$education_edition",
+        "$screen_content": "pause_menu_mcjava.pause_menu_screen_content_panel",
+        "$screen_bg_content": "pause_menu_mcjava.screen_background"
+      }
+    ]
+  }
+}

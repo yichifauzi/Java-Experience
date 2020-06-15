@@ -4,7 +4,7 @@
   "sign_screen_content_panel": {
     "type": "panel",
     "controls": [
-      { "title@screen_mcjava.message_title": { "offset": [0, "10%"], "text": "sign.edit" } },
+      { "title@screen_mcjava.title": { "offset": [0, "10%"], "text": "sign.edit" } },
       {
         "input_eating_panel": {
           "type": "input_panel",
@@ -17,7 +17,7 @@
           "controls": [ { "text_edit@sign_mcjava.sign_text_multiline": {} } ]
         }
       },
-      { "exit@screen_mcjava.exit_button": { "offset": [0, "-20%"], "layer": 100 } }
+      { "exit@screen_mcjava.exit_button": { "anchor_from": "bottom_middle", "anchor_to": "bottom_middle", "offset": [0, "-20%"], "layer": 100 } }
     ]
   },
 

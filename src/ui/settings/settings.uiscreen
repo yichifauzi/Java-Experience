@@ -324,6 +324,112 @@
     ]
   },
 
+  "screen_background": {
+    "type": "panel",
+    "controls": [
+      {
+        "default@screen_mcjava.screen_background": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "video_view",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "mouse_view",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "controller_view",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "touch_view",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "language_view",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            },
+            {
+              "ignored": "(not $is_pregame)",
+              "binding_type": "view",
+              "source_control_name": "storage_management_button_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            },
+            {
+              "ignored": "(not $is_pregame)",
+              "binding_type": "view",
+              "source_control_name": "global_resource_packs_view",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "dirt@screen_mcjava.dirt_background": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "video_view",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "mouse_view",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "controller_view",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "touch_view",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "language_view",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            },
+            {
+              "ignored": "(not $is_pregame)",
+              "binding_type": "view",
+              "source_control_name": "storage_management_button_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            },
+            {
+              "ignored": "(not $is_pregame)",
+              "binding_type": "view",
+              "source_control_name": "global_resource_packs_view",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
   "stack": {
     "type": "stack_panel",
     "orientation": "horizontal",

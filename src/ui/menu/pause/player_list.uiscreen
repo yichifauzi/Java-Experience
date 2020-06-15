@@ -1,0 +1,266 @@
+/* By @FMarquesPTO. All rights reserved. */
+{
+  "namespace": "player_list_mcjava",
+
+  "player_list_content_panel": {
+    "type": "panel",
+    "controls": [
+      { "list_content_panel@list_content_panel": {} },
+      {
+        "menu": {
+          "type": "stack_panel",
+          "size": [310, 20],
+          "orientation": "horizontal",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [0, -8],
+          "controls": [
+            { "invite_players_button@pause_menu_mcjava.invite_players_button": {} },
+            { "fill@screen_mcjava.hfill": {} },
+            { "pause_menu_button@player_list_mcjava.pause_menu_button": {} }
+          ]
+        }
+      }
+    ]
+  },
+
+  "list_content_panel": {
+    "type": "panel",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "size": [274, 73],
+    "offset": [0, 32],
+    "controls": [
+      { "bg@screen_mcjava.screen_background": { "anchor_from": "top_left", "anchor_to": "top_left", "size": ["100% + 0.5px", "100% + 1px"], "alpha": 0.4 } },
+      { "0@player_list_mcjava.list_content": { "$grid_offset": [1, 1] } },
+      { "1@player_list_mcjava.list_content": { "anchor_from": "top_middle", "anchor_to": "top_middle", "$grid_offset": [1, -71]  } },
+      { "2@player_list_mcjava.list_content": { "anchor_from": "top_right", "anchor_to": "top_right", "$grid_offset": [1, -143]  } }
+    ]
+  },
+
+  "list_content": {
+    "type": "panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [91, "100%"],
+    "focus_container": true,
+    "use_last_focus": true,
+    "clips_children": true,
+    "controls": [
+      { "players_grid_panel@player_list_mcjava.players_grid": {} }
+    ]
+  },
+
+  "players_grid": {
+    "type": "grid",
+    "size": ["100%", "default"],
+    "offset": "$grid_offset",
+    "grid_item_template": "player_list_mcjava.player_grid_item",
+    "grid_dimension_binding": "#players_grid_dimension",
+    "collection_name": "players_collection",
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "bindings": [ { "binding_name": "#players_grid_dimension" } ]
+  },
+
+  "player_grid_item": {
+    "type": "panel",
+    "size": [91, 9],
+    "controls": [
+      { "player_grid_item_content@player_list_mcjava.player_grid_item_content": {} }
+    ]
+  },
+
+  "player_grid_item_content": {
+    "type": "panel",
+    "size": [90, 8],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [0, 0],
+    "controls": [
+      { "player_button@player_list_mcjava.player_button": {} },
+      { "player_banner@player_list_mcjava.player_banner": {} },
+      {
+        "player_banner": {
+          "type": "image",
+          "texture": "src/core/resources/fmarquespto/textures/white",
+          "alpha": 0.3,
+          "color": "black",
+          "size": ["100%", "100%"],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "layer": 1
+        }
+      }
+    ]
+  },
+
+  "player_banner": {
+    "type": "image",
+    "texture": "src/core/resources/fmarquespto/textures/white",
+    "alpha": 0.3,
+    "color": "black",
+    "size": ["100%", "100%"],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "layer": 10,
+    "controls": [
+      {
+        "player_grid_banner_no_focus": {
+          "type": "panel",
+          "controls": [
+            { "player_button_content@player_list_mcjava.player_button_content": {} }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#button_disabled",
+        "binding_type": "collection",
+        "binding_collection_name": "players_collection",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "player_button@common.button": {
+    "size": ["100%", "100%"],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "layer": 10,
+    "controls": [
+      { "@player_list_mcjava.player_button_content": {} }
+    ],
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.player_profile_card",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.player_profile_card",
+        "mapping_type": "focused"
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#button_enabled",
+        "binding_type": "collection",
+        "binding_collection_name": "players_collection",
+        "binding_name_override": "#visible"
+      },
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "players_collection"
+      }
+    ]
+  },
+
+  "player_button_content": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "size": ["100%", "100%"],
+    "layer": 3,
+    "controls": [
+      { "player_pic_panel@player_list_mcjava.player_pic_panel": { "layer": 1 } },
+      { "@screen_mcjava.vspace": { "size": [2, 0] } },
+      { "player_gamertag@player_list_mcjava.gametag_wrapper": { "layer": 1 } },
+      { "platform_icon@pause.platform_icon_panel": { "layer": 1 } }
+    ]
+  },
+
+  "player_pic_panel": {
+    "type": "panel",
+    "size": [8, 8],
+    "anchor_to": "left_middle",
+    "anchor_from": "left_middle",
+    "ignored": "$education_edition",
+    "controls": [
+      { "player_gamer_pic@player_list_mcjava.player_gamer_pic": {} },
+      { "player_local_icon@player_list_mcjava.player_local_icon": {} }
+    ]
+  },
+
+  "player_local_icon": {
+    "type": "image",
+    "texture": "textures/ui/lan_icon",
+    "size": [8, 8],
+    "layer": 1,
+    "bindings": [
+      {
+        "binding_name": "#local_icon_visible",
+        "binding_type": "collection",
+        "binding_collection_name": "players_collection",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "player_gamer_pic": {
+    "type": "image",
+    "texture": "#texture",
+    "size": [8, 8],
+    "layer": 1,
+    "texture_file_system": "#texture_source",
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "bindings": [
+      {
+        "binding_name": "#texture",
+        "binding_type": "collection",
+        "binding_collection_name": "players_collection"
+      },
+      {
+        "binding_name": "#texture_source",
+        "binding_name_override": "#texture_file_system",
+        "binding_type": "collection",
+        "binding_collection_name": "players_collection"
+      },
+      {
+        "binding_name": "#gamerpic_visible",
+        "binding_type": "collection",
+        "binding_collection_name": "players_collection",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "gametag_wrapper": {
+    "type": "panel",
+    "size": ["100%c", "100%"],
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "controls": [
+      { "gamertag@player_list_mcjava.player_gamertag": {} }
+    ]
+  },
+
+  "player_gamertag": {
+    "type": "label",
+    "color": "$main_header_text_color",
+    "text": "#gamertag",
+    "size": ["default", 10],
+    "shadow": true,
+    "layer": 2,
+    "bindings": [
+      {
+        "binding_name": "#gamertag",
+        "binding_type": "collection",
+        "binding_collection_name": "players_collection"
+      }
+    ]
+  },
+
+  "pause_menu_button@toggle_button_mcjava.toggle_button": {
+    "$toggle_index": 0,
+    "size": [150, 20],
+    "$toggle_button_text": "gui.done",
+    "$toggle_control_name": "not_players_list_view",
+    "$toggle_button_name": "pause_menu",
+    "$cancel_mapping": true
+  }
+}

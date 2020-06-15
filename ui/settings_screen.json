@@ -1,6 +1,9 @@
 
 {
   "settings_screen_base@settings_common.screen_base": {
+    "$screen_content": "",
+    "$screen_bg_content": "",
+    "$is_full_screen_layout": false
   },
 
   "screen_world_create@settings_screen_base": {
@@ -25,7 +28,7 @@
 
   "screen_world_controls_and_settings@settings_screen_base": {
     "$screen_content": "settings_mcjava.settings_screen_content_panel",
-    "$screen_bg_content": "screen_mcjava.screen_background"
+    "$screen_bg_content": "settings_mcjava.screen_background"
   },
 
   "screen_realm_controls_and_settings@settings_screen_base": {

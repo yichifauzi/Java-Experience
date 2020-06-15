@@ -51,7 +51,7 @@
     "$top_content_layer|default": 2,
     "$bottom_content_layer|default": 2,
     "controls": [
-      { "dirt_background@screen_mcjava.dirt_background": {} },
+    /*   { "dirt_background@screen_mcjava.dirt_background": {} }, */
       {
         "screen_stack": {
           "type": "stack_panel",

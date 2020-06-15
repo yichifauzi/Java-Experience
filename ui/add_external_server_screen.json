@@ -1,0 +1,6 @@
+{
+  "add_external_server_screen": {
+    "$screen_content": "add_external_server_mcjava.add_external_server_screen_content_panel",
+    "$screen_bg_content": "screen_mcjava.dirt_background"
+  }
+}

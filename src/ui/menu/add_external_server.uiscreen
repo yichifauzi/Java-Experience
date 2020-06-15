@@ -1,0 +1,191 @@
+/* By @FMarquesPTO. All rights reserved. */
+{
+  "namespace": "add_external_server_mcjava",
+
+  "add_external_server_screen_content_panel": {
+    "type": "panel",
+    "controls": [
+      { "title@screen_mcjava.title": { "text": "addServer.title" } },
+      { "content_panel@add_external_server_mcjava.content_panel": {} }
+    ]
+  },
+
+  "content_panel": {
+    "type": "stack_panel",
+    "anchor_from": "center",
+    "anchor_to": "top_middle",
+    "size": [200, 195],
+    "offset": [0, "-38% - 0.5px"],
+    "controls": [
+      { "panel_zero@add_external_server_mcjava.server_info_content": {} },
+      { "space_zero@screen_mcjava.vspace": {} },
+      {
+        "panel_one": {
+          "type": "panel",
+          "size": [200, 20],
+          "ignored": "$edit_mode",
+          "controls": [
+            { "play@add_external_server_mcjava.play_button": {} },
+            { "play_disabled@add_external_server_mcjava.play_disabled_button": {} }
+          ]
+        }
+      },
+      { "delete@add_external_server_mcjava.delete_button": {} },
+      {
+        "space_one@screen_mcjava.vspace": { "size": [0, 22] } },
+      {
+        "panel_two": {
+          "type": "panel",
+          "size": [200, 20],
+          "controls": [
+            { "save@add_external_server_mcjava.save_button": {} },
+            { "save_disabled@add_external_server_mcjava.save_disabled_button": {} }
+          ]
+        }
+      },
+      { "space_two@screen_mcjava.vspace": {} },
+      { "cancel@screen_mcjava.exit_button": { "$button_text": "gui.cancel" } }
+    ]
+  },
+
+  "server_info_content": {
+    "type": "stack_panel",
+    "size": ["100%", 114],
+    "controls": [
+      {
+        "name_edit@add_external_server_mcjava.text_input_group": {
+          "$text_group_size": ["100%", 34],
+          "$header_offset": [1, 0],
+          "$header": "addServer.enterName",
+          "$text_box_name": "#name_text_box",
+          "$max_length": 32,
+          "$content_binding_name": "#name_text_box_content",
+          "$text_box_tts_header": "addExternalServerScreen.nameTextBoxLabel"
+        }
+      },
+      {
+        "ip_input@add_external_server_mcjava.text_input_group": {
+          "$text_group_size": ["100%", 40],
+          "$header": "addServer.enterIp",
+          "$text_box_name": "#ip_text_box",
+          "$max_length": 64,
+          "$content_binding_name": "#ip_text_box_content",
+          "$text_box_tts_header": "addExternalServerScreen.ipTextBoxLabel"
+        }
+      },
+      {
+        "port_input@add_external_server_mcjava.text_input_group": {
+          "$text_group_size": ["100%", 40],
+          "$header": "addServer.enterPort",
+          "$max_length": 6,
+          "$text_type": "NumberChars",
+          "$text_box_name": "#port_text_box",
+          "$content_binding_name": "#port_text_box_content",
+          "$text_box_tts_header": "addExternalServerScreen.portTextBoxLabel"
+        }
+      }
+    ]
+  },
+
+  "text_input_group": {
+    "type": "panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": "$text_group_size",
+    "$max_length|default": 30,
+    "offset": [-1, 0],
+    "$text_type|default": "ExtendedASCII",
+    "$header_offset|default": [1, 6],
+    "controls": [
+      {
+        "name_label": {
+          "type": "label",
+          "color": "$light_button_locked_text_color",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "layer": 1,
+          "offset": "$header_offset",
+          "shadow": true,
+          "text": "$header"
+        }
+      },
+      {
+        "input_box@text_box_mcjava.text_box": {
+          "layer": 2,
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "size": [202, 20],
+          "offset": [0, -1],
+          "$text_box_name": "$text_box_name",
+          "$text_edit_box_content_binding_name": "$content_binding_name",
+          "max_length": "$max_length",
+          "$text_box_tts_name": "",
+          "text_type": "$text_type",
+          "$placeholder_text": "",
+          "$text_edit_box_binding_condition": "once"
+        }
+      }
+    ]
+  },
+
+  "play_button@button_mcjava.button": {
+    "$pressed_button_name": "button.play_button",
+    "$button_text": "selectServer.playButton",
+    "ignored": "$edit_mode",
+    "bindings": [
+      {
+        "binding_name": "#play_button_enabled",
+        "binding_name_override": "#enabled"
+      }
+    ]
+  },
+
+  "play_disabled_button@add_external_server_mcjava.play_button": {
+    "layer": 2,
+    "bindings": [
+      {
+        "binding_name": "#play_button_disabled",
+        "binding_name_override": "#visible"
+      },
+      {
+        "binding_name": "#play_button_enabled",
+        "binding_name_override": "#enabled"
+      }
+    ]
+  },
+
+  "delete_button@button_mcjava.button": {
+    "$pressed_button_name": "button.remove_button",
+    "$button_text": "selectServer.deleteButton",
+    "ignored": "(not $edit_mode)"
+  },
+
+  "save_button@button_mcjava.button": {
+    "$pressed_button_name": "button.save_button",
+    "$button_text": "addServer.add",
+    "bindings": [
+      {
+        "binding_name": "#save_button_enabled",
+        "binding_name_override": "#visible"
+      },
+      {
+        "binding_name": "#save_button_enabled",
+        "binding_name_override": "#enabled"
+      }
+    ]
+  },
+  
+  "save_disabled_button@add_external_server_mcjava.save_button": {
+    "layer": 2,
+    "bindings": [
+      {
+        "binding_name": "#save_button_disabled",
+        "binding_name_override": "#visible"
+      },
+      {
+        "binding_name": "#save_button_enabled",
+        "binding_name_override": "#enabled"
+      }
+    ]
+  }
+}

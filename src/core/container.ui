@@ -6,9 +6,11 @@
     "type": "panel",
     "$container_size|default": [176, 166],
     "$specified_content|default": "",
+    "$inv_grid_panel|default": "container_mcjava.inventory_grid_panel",
+    "$hotbar_grid_panel|default": "container_mcjava.hotbar_grid",
     "controls": [
       { "container_gamepad_helpers@gamepadhelper.container_gamepad_helpers": {} },
-      { "container_gamepad_helpers@container_mcjava.invisible_exit_background": {} },
+      { "invisible_exit_background@container_mcjava.invisible_exit_background": {} },
       {
         "flying_item_renderer@common.flying_item_renderer": {
           "layer": 8,
@@ -31,9 +33,9 @@
                 "type": "panel",
                 "layer": 2,
                 "controls": [
-                  { "@$specified_content": {} },
-                  { "inventory_grid_panel@container_mcjava.inventory_grid_panel": {} },
-                  { "hotbar_grid@container_mcjava.hotbar_grid": {} },
+                  { "$specified_content@$specified_content": {} },
+                  { "inventory_grid_panel@$inv_grid_panel": {} },
+                  { "hotbar_grid@$hotbar_grid_panel": {} },
                   { "inventory_take_progress_icon_button@container_mcjava.inventory_take_progress_icon_button": {} }
                 ]
               }

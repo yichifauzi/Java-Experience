@@ -1,0 +1,236 @@
+/* By @FMarquesPTO. All rights reserved. */
+{
+  "namespace": "create_world_upsell_mcjava",
+
+  "create_world_upsell_screen_content_panel": {
+    "type": "panel",
+    "controls": [
+      {
+        "title@screen_mcjava.title": {
+          "text": "createWorldUpsell.title"
+        }
+      },
+      { "content_panel@create_world_upsell_mcjava.content_panel": {} },
+      { "bottom_content@bottom_content": {} }
+    ]
+  },
+
+  "content_panel": {
+    "type": "panel",
+    "size": [408, "100% - 83px"],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [0, 32],
+    "controls": [
+      {
+        "content_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [408, "100% - 20px"],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "$grid_item_size": ["100%", 26],
+          "controls": [
+            {
+              "world_content_panel@resource_packs_mcjava.side_content_panel": {
+                "$scrolling_content": "create_world_upsell_mcjava.world_scroll_content"
+              }
+            },
+            { "fill@screen_mcjava.hfill": {} },
+            {
+              "realm_content_panel@resource_packs_mcjava.side_content_panel": {
+                "$scrolling_content": "create_world_upsell_mcjava.realm_scroll_content"
+              }
+            }
+          ]
+        }
+      },
+      { "new_world@create_world_upsell_mcjava.new_world_button": {} },
+      { "new_realm@create_world_upsell_mcjava.new_realm_button": {} }
+    ]
+  },
+
+  "world_scroll_content": {
+    "type": "stack_panel",
+    "size": ["100%", "100%c"],
+    "controls": [
+      {
+        "scroll_top_title@resource_packs_mcjava.scroll_top_title": {
+          "$text": "New World"
+        }
+      },
+      {  "world_grid@create_world_upsell_mcjava.world_grid": {} }
+    ]
+  },
+
+  "realm_scroll_content": {
+    "type": "stack_panel",
+    "size": ["100%", "100%c"],
+    "controls": [
+      {
+        "scroll_top_title@resource_packs_mcjava.scroll_top_title": {
+          "$text": "New Realm"
+        }
+      },
+      { "realm_grid@create_world_upsell_mcjava.realm_grid": {} }
+    ]
+  },
+
+  "bottom_content": {
+    "type": "panel",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "size": [310, 32],
+    "offset": [0, 0],
+    "controls": [
+      { "exit@create_world_upsell_mcjava.done_button": {} }
+    ]
+  },
+
+  "world_grid": {
+    "type": "grid",
+    "grid_item_template": "create_world_upsell_mcjava.create_world_upsell_grid_item",
+    "grid_dimension_binding": "#world_grid_dimension",
+    "collection_name": "world_list",
+    "$collection_name": "world_list",
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "size": ["100%", "default"],
+    "bindings": [
+      {
+        "binding_name": "#world_grid_dimension",
+        "binding_type": "global",
+        "binding_condition": "visible"
+      }
+    ]
+  },
+
+  "realm_grid": {
+    "type": "grid",
+    "grid_item_template": "create_world_upsell_mcjava.create_world_upsell_grid_item",
+    "grid_dimension_binding": "#realm_grid_dimension",
+    "collection_name": "realm_list",
+    "$collection_name": "realm_list",
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "size": ["100%", "default"],
+    "bindings": [
+      {
+        "binding_name": "#realm_grid_dimension",
+        "binding_type": "global",
+        "binding_condition": "once"
+      },
+      {
+        "binding_name": "#templates_visible",
+        "binding_name_override": "#visible",
+        "binding_type": "global"
+      }
+    ]
+  },
+
+  "create_world_upsell_grid_item": {
+    "type": "panel",
+    "size": "$grid_item_size",
+    "controls": [
+      {
+        "db": {
+          "type": "panel",
+          "layer": 1,
+          "bindings": [
+            {
+              "binding_name": "#dark_banner_visible",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$collection_name"
+            }
+          ]
+        }
+      },
+      {
+        "gb": {
+          "type": "panel",
+          "layer": 1,
+          "bindings": [
+            {
+              "binding_name": "#grey_banner_visible",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$collection_name"
+            }
+          ]
+        }
+      },
+      {
+        "gp@create_world_upsell_mcjava.grid_panel": {
+          "layer": 2
+        }
+      }
+    ]
+  },
+
+  "grid_panel": {
+    "type": "stack_panel",
+    "size": ["100% - 6px", "100% - 4px"],
+    "offset": [3, 0],
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "orientation": "horizontal",
+    "controls": [
+      {
+        "padding": {
+          "type": "panel",
+          "size": [2, "100%"]
+        }
+      },
+      {
+        "upsell_text_panel": {
+          "type": "panel",
+          "size": ["fill", "100%"],
+          "controls": [
+            {
+              "upsell_label": {
+                "type": "label",
+                "text": "#upsell_text",
+                "size": ["100%", "default"],
+                "max_size": ["100%", 20],
+                "shadow": true,
+                "color": "$body_text_color",
+                "bindings": [
+                  {
+                    "binding_name": "#upsell_text",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$collection_name"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "new_world_button@button_mcjava.button": {
+    "size": [200, 20],
+    "$pressed_button_name": "button.new_world",
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "$button_text": "createWorldUpsell.newWorld"
+  },
+
+  "new_realm_button@button_mcjava.button": {
+    "size": [200, 20],
+    "anchor_from": "bottom_right",
+    "anchor_to": "bottom_right",
+    "$pressed_button_name": "button.new_realm",
+    "$button_text": "createWorldUpsell.newRealm"
+  },
+
+  "done_button@button_mcjava.button": {
+    "$pressed_button_name": "button.menu_exit",
+    "size": [200, 20],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "$button_text": "gui.cancel"
+  }
+}

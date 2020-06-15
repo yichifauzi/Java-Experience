@@ -615,6 +615,95 @@
     ]
   },
 
+  /* Beacon */
+
+  "beacon_bg@resources.resource_image": {
+    "$rsrc_location": "src/assets/minecraft/textures/gui/container/beacon",
+    "uv": [0, 0],
+    "size": [230, 219],
+    "variables": [
+      { "requires": "($beacon_resolution = 256x)", "$uv_size": [230, 219] },
+      { "requires": "($beacon_resolution = 512x)", "$uv_size": [460, 438] },
+      { "requires": "($beacon_resolution = 1024x)", "$uv_size": [920, 872] },
+      { "requires": "($beacon_resolution = 2048x)", "$uv_size": [1840, 1744] },
+      { "requires": "($beacon_resolution = 4096x)", "$uv_size": [3680, 3488] }
+    ]
+  },
+
+  "beacon_button@resources.resource_image": {
+    "$rsrc_location": "src/assets/minecraft/textures/gui/container/beacon",
+    "size": [22, 22],
+    "variables": [
+      { "requires": "($beacon_resolution = 256x)", "$uv": [0, 219], "$uv_size": [22, 22] },
+      { "requires": "($beacon_resolution = 512x)", "$uv": [0, 438], "$uv_size": [44, 44] },
+      { "requires": "($beacon_resolution = 1024x)", "$uv": [0, 872], "$uv_size": [88, 88] },
+      { "requires": "($beacon_resolution = 2048x)", "$uv": [0, 1744], "$uv_size": [176, 176] },
+      { "requires": "($beacon_resolution = 4096x)", "$uv": [0, 3488], "$uv_size": [352, 352] }
+    ]
+  },
+
+  "beacon_button_selected@resources.resource_image": {
+    "$rsrc_location": "src/assets/minecraft/textures/gui/container/beacon",
+    "size": [22, 22],
+    "variables": [
+      { "requires": "($beacon_resolution = 256x)", "$uv": [22, 219], "$uv_size": [22, 22] },
+      { "requires": "($beacon_resolution = 512x)", "$uv": [44, 438], "$uv_size": [44, 44] },
+      { "requires": "($beacon_resolution = 1024x)", "$uv": [88, 872], "$uv_size": [88, 88] },
+      { "requires": "($beacon_resolution = 2048x)", "$uv": [176, 1744], "$uv_size": [176, 176] },
+      { "requires": "($beacon_resolution = 4096x)", "$uv": [352, 3488], "$uv_size": [352, 352] }
+    ]
+  },
+
+  "beacon_button_locked@resources.resource_image": {
+    "$rsrc_location": "src/assets/minecraft/textures/gui/container/beacon",
+    "size": [22, 22],
+    "variables": [
+      { "requires": "($beacon_resolution = 256x)", "$uv": [44, 219], "$uv_size": [22, 22] },
+      { "requires": "($beacon_resolution = 512x)", "$uv": [88, 438], "$uv_size": [44, 44] },
+      { "requires": "($beacon_resolution = 1024x)", "$uv": [176, 872], "$uv_size": [88, 88] },
+      { "requires": "($beacon_resolution = 2048x)", "$uv": [352, 1744], "$uv_size": [176, 176] },
+      { "requires": "($beacon_resolution = 4096x)", "$uv": [704, 3488], "$uv_size": [352, 352] }
+    ]
+  },
+
+  "beacon_button_hover@resources.resource_image": {
+    "$rsrc_location": "src/assets/minecraft/textures/gui/container/beacon",
+    "size": [22, 22],
+    "variables": [
+      { "requires": "($beacon_resolution = 256x)", "$uv": [66, 219], "$uv_size": [22, 22] },
+      { "requires": "($beacon_resolution = 512x)", "$uv": [132, 438], "$uv_size": [44, 44] },
+      { "requires": "($beacon_resolution = 1024x)", "$uv": [264, 872], "$uv_size": [88, 88] },
+      { "requires": "($beacon_resolution = 2048x)", "$uv": [528, 1744], "$uv_size": [176, 176] },
+      { "requires": "($beacon_resolution = 4096x)", "$uv": [1056, 3488], "$uv_size": [352, 352] }
+    ]
+  },
+  
+  "beacon_confirm_icon@resources.resource_image": {
+    "$rsrc_location": "src/assets/minecraft/textures/gui/container/beacon",
+    "size": [18, 19],
+    "offset": [0, 0.5],
+    "variables": [
+      { "requires": "($beacon_resolution = 256x)", "$uv": [90, 220], "$uv_size": [18, 19] },
+      { "requires": "($beacon_resolution = 512x)", "$uv": [180, 440], "$uv_size": [36, 38] },
+      { "requires": "($beacon_resolution = 1024x)", "$uv": [360, 880], "$uv_size": [72, 76] },
+      { "requires": "($beacon_resolution = 2048x)", "$uv": [720, 1760], "$uv_size": [144, 152] },
+      { "requires": "($beacon_resolution = 4096x)", "$uv": [1440, 3520], "$uv_size": [288, 304] }
+    ]
+  },
+
+  "beacon_cancel_icon@resources.resource_image": {
+    "$rsrc_location": "src/assets/minecraft/textures/gui/container/beacon",
+    "size": [18, 19],
+    "offset": [0, 0.5],
+    "variables": [
+      { "requires": "($beacon_resolution = 256x)", "$uv": [112, 220], "$uv_size": [18, 19] },
+      { "requires": "($beacon_resolution = 512x)", "$uv": [224, 440], "$uv_size": [36, 38] },
+      { "requires": "($beacon_resolution = 1024x)", "$uv": [448, 880], "$uv_size": [72, 76] },
+      { "requires": "($beacon_resolution = 2048x)", "$uv": [896, 1760], "$uv_size": [144, 152] },
+      { "requires": "($beacon_resolution = 4096x)", "$uv": [1792, 3520], "$uv_size": [288, 304] }
+    ]
+  },
+
   /* Brewing Stand */
 
   "brewing_stand_bg@resources.resource_image": {

@@ -1,0 +1,11 @@
+{
+  "create_world_upsell": {
+    "$screen_content": "create_world_upsell_mcjava.create_world_upsell_screen_content_panel",
+    "$screen_bg_content": "screen_mcjava.dirt_background"
+  },
+
+  "create_world_upsell_realms@create_world_upsell": {
+    "$screen_content": "create_world_upsell_mcjava.create_world_upsell_screen_content_panel",
+    "$screen_bg_content": "screen_mcjava.dirt_background"
+  }
+}

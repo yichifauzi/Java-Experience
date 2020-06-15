@@ -111,7 +111,14 @@
 
   "box_state_panel": {
     "type": "panel",
+    "$tooltip_name|default": "null",
     "controls": [
+      {
+        "tooltip@tooltip_mcjava.tooltip": {
+          "visible": "($state = hover or $state = pressed)",
+          "ignored": "($tooltip_name = null)"
+        }
+      },
       { "bg@$box_bg": {} },
       {
         "content_panel": {

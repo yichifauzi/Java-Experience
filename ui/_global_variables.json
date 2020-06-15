@@ -104,6 +104,7 @@
   "$options_background_resolution": "256x",
 
   "$anvil_resolution": "256x",
+  "$beacon_resolution": "256x",
   "$brewing_stand_resolution": "256x",
   "$crafting_table_resolution": "256x",
   "$cartography_resolution": "256x",

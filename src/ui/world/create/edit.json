@@ -1,0 +1,122 @@
+{
+  "namespace": "world_edit_mcjava",
+
+  "world_edit_screen_content_panel": {
+    "type": "panel",
+    "controls": [
+      { "title@screen_mcjava.title": { "text": "selectWorld.edit" } },
+      { "content_panel@world_edit_mcjava.content_panel": {} }
+    ]
+  },
+
+  "content_panel": {
+    "type": "stack_panel",
+    "anchor_from": "center",
+    "anchor_to": "top_middle",
+    "size": [200, 195],
+    "offset": [0, "-38%"],
+    "$education_ios": "($education_edition and $ios)",
+    "controls": [
+      {
+        "panel_zero@screen_mcjava.panel": {
+          "controls": [
+            { "world_name@world_edit_mcjava.world_name_box": {} }
+          ]
+        }
+      },
+      { "space_zero@screen_mcjava.vspace": { "size": [0, 15] } },
+      {
+        "panel_one@screen_mcjava.panel": {
+          "ignored": "(not $is_pregame or not $is_world_edit)",
+          "bindings": [
+            {
+              "binding_name": "#show_convert_to_infinite_button",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            { "convert_to_infinite_button@world_edit_mcjava.convert_to_infinite_button": {} }
+          ]
+        }
+      },
+      {
+        "space_one@screen_mcjava.vspace": {
+          "ignored": "(not $is_pregame or not $is_world_edit)",
+          "bindings": [
+            {
+              "binding_name": "#show_convert_to_infinite_button",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "panel_two@screen_mcjava.panel": {
+          "ignored": "($is_mp_client or $trial or not $is_pregame or $export_disabled)",
+          "controls": [
+            { "copy_world@world_edit_mcjava.copy_world_button": {} }
+          ]
+        }
+      },
+      { "space_two@screen_mcjava.vspace": { "ignored": "($is_mp_client or $trial or not $is_pregame or $export_disabled)" } },
+      {
+        "panel_four@screen_mcjava.panel": {
+          "ignored": "(($pocket_edition or $export_disabled or not $file_picking_supported) and not $education_ios",
+          "controls": [
+            { "export_button@world_edit_mcjava.export_button": {} }
+          ]
+        }
+      },
+      { "space_four@screen_mcjava.vspace": { "ignored": "(($pocket_edition or $export_disabled or not $file_picking_supported) and not $education_ios)" } },
+      {
+        "stack@screen_mcjava.stack": {
+          "controls": [
+            {
+              "exit@screen_mcjava.exit_button": {
+                "size": [98, 20],
+                "$button_text": "gui.done"
+              }
+            },
+            { "fill@screen_mcjava.hfill": {} },
+            { "delete@world_edit_mcjava.delete_button": {} }
+          ]
+        }
+      }
+    ]
+  },
+
+  "world_name_box@text_box_mcjava.text_box_with_label": {
+    "$box_label": "selectWorld.enterName",
+    "$option_binding_name": "#world_name",
+    "$option_enabled_binding_name": "#world_name_enabled",
+    "$text_box_name": "world_name_text_box",
+    "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+    "$tts_override_control_value": " "
+  },
+
+  "copy_world_button@button_mcjava.action_button": {
+    "size": [200, 20],
+    "$button_text": "gui.copyWorld",
+    "$pressed_button_name": "copy_world_button"
+  },
+
+  "delete_button@button_mcjava.action_button": {
+    "size": [98, 20],
+    "$button_text": "Delete",
+    "$pressed_button_name": "delete_world_button",
+    "$focus_id": "delete_world_button"
+  },
+
+  "export_button@button_mcjava.action_button": {
+    "size": [200, 20],
+    "$button_text": "gui.exportWorldLong",
+    "$pressed_button_name": "export_world_button",
+    "$focus_id": "export_world_button"
+  },
+
+  "convert_to_infinite_button@button_mcjava.action_button": {
+    "size": [200, 20],
+    "$pressed_button_name": "convert_to_infinite_button",
+    "$button_text": "createWorldScreen.action.editLocal"
+  }
+}

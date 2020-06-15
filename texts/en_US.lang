@@ -32,6 +32,18 @@ menu.quit=Quit Game
 menu.switchAccounts=Switch Account
 menu.launchEditions=Launch Editions
 
+menu.savingLevel=Saving world
+menu.savingChunks=Saving chunks
+menu.returnToGame=Back to Game
+menu.permissions=Permissions
+menu.playersMenu=Players
+menu.takeScreenshot=Take Screenshot
+menu.sendFeedback=Give Feedback
+menu.invitePlayer=Invite Players
+menu.takeScreenshot.short=Screenshot
+menu.returnToMenu=Save and Quit to Title
+menu.disconnect=Disconnect
+
 ##Containers
 merchant.trades=Trades
 container.anvil=Repair & Name
@@ -323,7 +335,7 @@ selectWorld.gameMode=Game Mode
 selectWorld.gameModePlayer=Personal GMode
 selectWorld.gameMode.default=Default
 selectWorld.gameMode.survival=Survival
-selectWorld.gameMode.survival.line1=Search for resources, crafting, gain
+selectWorld.gameMode.survival.line1=Search for resources, craft, gain
 selectWorld.gameMode.survival.line2=levels, health and hunger
 selectWorld.gameMode.creative=Creative
 selectWorld.gameMode.creative.line1=Unlimited resources, free flying and
@@ -397,6 +409,10 @@ advMode.execOnFirstTick=Execute on First Tick
 
 ##Loadings
 multiplayer.downloadingTerrain=Loading terrain...
+
+##Beacon
+block.minecraft.beacon.primary=Primary Power
+block.minecraft.beacon.secondary=Secondary Power
 
 ##Potions
 potion.nightVision=§9Night Vision§f
