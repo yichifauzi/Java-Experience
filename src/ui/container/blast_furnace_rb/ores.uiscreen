@@ -1,0 +1,53 @@
+{
+  "namespace": "blast_furnace_rb_ores_mcjava",
+
+  "ores_tab": {
+    "type": "panel",
+    "$tab_source": "ores",
+    "$page_total_number": "1",
+    "controls": [
+      { "page_1@blast_furnace_rb_ores_mcjava.ores_page_1": {} }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "ores_tab_view",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "ores_page_1@furnace_recipes_mcjava.page_content_panel": {
+    "$page_current_number": "1",
+    "$page_recipes": [
+      {
+        "redstone_dust@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 12,
+          "$item": "redstone_dust",
+          "$itemLangName": "item.redstone.name",
+          "grid_position": [0, 0],
+          "$item_id_aux": 21692416
+        }
+      }
+    ]
+  },
+
+  /* Show On Blast Furnace */
+
+  "ores_input_recipes": {
+    "type": "panel",
+    "$tab_source": "ores",
+    "controls": [
+      { "redstone@furnace_recipes_mcjava.show_item": { "$item": "redstone_dust", "$item_id_aux": 4784128 } }
+    ]
+  },
+
+  "ores_output_recipes": {
+    "type": "panel",
+    "$tab_source": "ores",
+    "controls": [
+      { "redstone@furnace_recipes_mcjava.show_item": { "$item": "redstone_dust", "$item_id_aux": 21692416 } }
+    ]
+  }
+}

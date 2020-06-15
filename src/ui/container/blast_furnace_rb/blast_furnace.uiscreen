@@ -1,0 +1,110 @@
+{
+  "namespace": "blast_furnace_recipe_book_mcjava",
+
+  "blast_furnace_recipe_book_content_panel@common.root_panel": {
+    "size": [147, 166],
+    "controls": [
+      { "bg@resources.recipe_book_bg": {} },
+      { "search_tab@blast_furnace_recipe_book_mcjava.search_tab": { "offset": [ -31, 4 ] } },
+      { "ores_tab@blast_furnace_recipe_book_mcjava.ores_tab": { "offset": [ -31, 30 ] } },
+      { "minerals_tab@blast_furnace_recipe_book_mcjava.minerals_tab": { "offset": [ -31, 56 ] } },
+      { "blast_furnace_recipes_panel@blast_furnace_recipe_book_mcjava.blast_furnace_recipes_panel": {} }
+    ]
+  },
+
+  "search_tab@furnace_recipes_mcjava.left_tab": {
+    "$item_id_aux": 22609920,
+    "$tab_control_name": "search_tab_view",
+    "$toggle_index": 0,
+    "$toggle_default_state": true,
+    "$focus_id": "search_tab",
+    "$focus_override_down": "minerals_tab",
+    "$focus_override_up": "FOCUS_OVERRIDE_STOP"
+  },
+
+  "ores_tab@furnace_recipes_mcjava.left_tab": {
+    "$item_id_aux": 4784128,
+    "$tab_control_name": "ores_tab_view",
+    "$toggle_index": 1,
+    "$focus_id": "ores_tab",
+    "$focus_override_up": "search_tab",
+    "$focus_override_down": "minerals_tab"
+  },
+
+  "minerals_tab@furnace_recipes_mcjava.left_tab": {
+    "$item_left_id_aux": 16777216,
+    "$item_right_id_aux": 20709376,
+    "$tab_control_name": "minerals_tab_view",
+    "$toggle_index": 2,
+    "$focus_id": "minerals_tab",
+    "$focus_override_up": "ores_tab",
+    "$focus_override_down": "FOCUS_OVERRIDE_STOP"
+  },
+
+  "blast_furnace_recipes_panel": {
+    "type": "panel",
+    "$furnace": "blast_furnace",
+    "controls": [
+      { "default_slot_button@furnace_recipes_mcjava.default_slot_button": {} },
+      { "search_recipes@blast_furnace_rb_search_mcjava.search_tab": {} },
+      { "ores_recipes@blast_furnace_rb_ores_mcjava.ores_tab": {} },
+      { "minerals_recipes@blast_furnace_rb_minerals_mcjava.minerals_tab": {} }
+    ]
+  },
+
+  "show_on_blast_furnace_content_panel": {
+    "type": "panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [55, 16],
+    "size": [82, 54],
+    "$furnace": "blast_furnace",
+    "controls": [
+      {
+        "input_content_panel": {
+          "type": "panel",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "size": [18, 18],
+          "controls": [
+            { "search_input_recipes@blast_furnace_rb_search_mcjava.search_input_recipes": {} },
+            { "ores_input_recipes@blast_furnace_rb_ores_mcjava.ores_input_recipes": {} },
+            { "minerals_input_recipes@blast_furnace_rb_minerals_mcjava.minerals_input_recipes": {} }
+          ]
+        }
+      },
+      {
+        "fuel_content_panel": {
+          "type": "panel",
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "size": [18, 18],
+          "controls": [ { "fuel@furnace_recipes_mcjava.show_fuel": { "$furnace": "blast_furnace" } } ]
+        }
+      },
+      {
+        "output_content_panel": {
+          "type": "panel",
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "offset": [-4, 0],
+          "size": [18, 18],
+          "$red_cell_size": [24, 24],
+          "controls": [
+            { "search_output_recipes@blast_furnace_rb_search_mcjava.search_output_recipes": {} },
+            { "ores_output_recipes@blast_furnace_rb_ores_mcjava.ores_output_recipes": {} },
+            { "minerals_output_recipes@blast_furnace_rb_minerals_mcjava.minerals_output_recipes": {} }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "blast_furnace_rb_view",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  }
+}

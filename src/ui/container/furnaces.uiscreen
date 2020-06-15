@@ -155,7 +155,7 @@
         }
       },
       {
-        "recipe_book_button@furnace_recipe_book_mcjava.recipe_book_button": {
+        "recipe_book_button@furnace_recipes_mcjava.furnace_recipe_book_button": {
           "offset": "$furnaces_container_recipe_book_button_offset",
           "anchor_from": "$furnaces_container_recipe_book_button_anchor",
           "anchor_to": "$furnaces_container_recipe_book_button_anchor"

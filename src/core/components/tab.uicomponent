@@ -95,7 +95,7 @@
     "controls": [
       { "@tooltip_mcjava.tooltip": { "visible": "($tab_state = hover)", "ignored": "($tooltip_name = 'none')" } },
       { "@$background": {} },
-      { "@$content": {} }
+      { "@$tab_type_panel": {} }
     ]
   }
 }

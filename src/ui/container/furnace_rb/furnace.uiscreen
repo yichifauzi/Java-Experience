@@ -6,77 +6,15 @@
     "$furnace": "furnace",
     "controls": [
       { "bg@resources.recipe_book_bg": {} },
-      { "search_tab@furnace_recipe_book_mcjava.search_tab": { "offset": [ -31, 4 ] } },
-      { "food_tab@furnace_recipe_book_mcjava.food_tab": { "offset": [ -31, 30 ] } },
-      { "stone_tab@furnace_recipe_book_mcjava.stone_tab": { "offset": [ -31, 56 ] } },
-      { "misc_tab@furnace_recipe_book_mcjava.misc_tab": { "offset": [ -31, 82 ] } },
+      { "search_tab@furnace_recipe_book_mcjava.search_tab": { "offset": [-31, 4] } },
+      { "food_tab@furnace_recipe_book_mcjava.food_tab": { "offset": [-31, 30] } },
+      { "stone_tab@furnace_recipe_book_mcjava.stone_tab": { "offset": [-31, 56] } },
+      { "misc_tab@furnace_recipe_book_mcjava.misc_tab": { "offset": [-31, 82] } },
       { "food_content_panel@furnace_recipe_book_mcjava.furnace_recipes_panel": {} }
     ]
   },
 
-  "recipe_book_button": {
-    "type": "panel",
-    "size": [20, 18],
-    "anchor_from": "top_left",
-    "anchor_to": "top_left",
-    "layer": 10,
-    "$unchecked_background": "resources.recipe_button_default",
-    "$checked_background": "resources.recipe_button_default",
-    "$unchecked_hover_background": "resources.recipe_button_hover",
-    "$checked_hover_background": "resources.recipe_button_hover",
-    "$unchecked_locked_background": "resources.recipe_button_default",
-    "$checked_locked_background": "resources.recipe_button_default",
-    "$toggle_button_name": "$furnace_view",
-    "$content": "",
-    "controls": [
-      {
-        "hide@toggle_button_mcjava.toggle_button": {
-          "size": [20, 18],
-          "$toggle_index": 0,
-          "$toggle_control_name": "('not_' + $furnace_view)",
-          "$focus_id": "recipe_book_layout_toggle",
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_control_name": "$furnace_view",
-              "source_property_name": "#toggle_state",
-              "target_property_name": "#visible"
-            }
-          ]
-        }
-      },
-      {
-        "show@toggle_button_mcjava.toggle_button": {
-          "size": [20, 18],
-          "$toggle_index": 1,
-          "$toggle_control_name": "$furnace_view",
-          "$focus_id": "recipe_book_layout_toggle",
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_control_name": "$furnace_view",
-              "source_property_name": "(not #toggle_state)",
-              "target_property_name": "#visible"
-            }
-          ]
-        }
-      }
-    ]
-  },
-
-  "left_tab@tab_mcjava.tab": {
-    "size": [35, 26],
-    "$toggle_focus_enabled": false,
-    "$tab_name": "nav_tab",
-    "$toggle_default_selected": 0,
-    "$content": "recipe_book_mcjava.tab_with_item_renderer_panel",
-    "$unchecked_background": "resources.recipe_book_tab_unchecked",
-    "$checked_background": "resources.recipe_book_tab_checked",
-    "$unchecked_hover_background": "resources.recipe_book_tab_unchecked",
-    "$checked_hover_background": "resources.recipe_book_tab_checked"
-  },
-
-  "search_tab@furnace_recipe_book_mcjava.left_tab": {
+  "search_tab@furnace_recipes_mcjava.left_tab": {
     "$item_id_aux": 22609920,
     "$tab_control_name": "search_tab_view",
     "$toggle_index": 0,
@@ -86,7 +24,7 @@
     "$focus_override_up": "FOCUS_OVERRIDE_STOP"
   },
 
-  "food_tab@furnace_recipe_book_mcjava.left_tab": {
+  "food_tab@furnace_recipes_mcjava.left_tab": {
     "$item_id_aux": 20905984,
     "$tab_control_name": "food_tab_view",
     "$toggle_index": 1,
@@ -95,7 +33,7 @@
     "$focus_override_down": "stone_tab"
   },
 
-  "stone_tab@furnace_recipe_book_mcjava.left_tab": {
+  "stone_tab@furnace_recipes_mcjava.left_tab": {
     "$item_id_aux": 65536,
     "$tab_control_name": "stone_tab_view",
     "$toggle_index": 2,
@@ -104,7 +42,7 @@
     "$focus_override_down": "misc_tab"
   },
 
-  "misc_tab@furnace_recipe_book_mcjava.left_tab": {
+  "misc_tab@furnace_recipes_mcjava.left_tab": {
     "$item_left_id_aux": 21299210,
     "$item_right_id_aux": 25427968,
     "$tab_control_name": "misc_tab_view",
@@ -114,834 +52,15 @@
     "$focus_override_down": "FOCUS_OVERRIDE_STOP"
   },
 
-  "default_slot_button@toggle_button_mcjava.toggle_button": {
-    "$toggle_button_name": "($furnace + '_tab')",
-    "$toggle_index": 0,
-    "anchor_from": "top_right",
-    "anchor_to": "top_right",
-    "offset": [-11, 11],
-    "$unchecked_control": "resources.filter_unchecked_state",
-    "$checked_control": "resources.filter_checked_state",
-    "$unchecked_hover_control": "resources.filter_unchecked_hover_state",
-    "$checked_hover_control": "resources.filter_checked_hover_state",
-    "$unchecked_locked_control": "resources.filter_unchecked_state",
-    "$checked_locked_control": "resources.filter_checked_state",
-    "size": [26, 16]
-  },
-
-  "slot_button@toggle_button_mcjava.toggle_button": {
-    "$toggle_button_name": "($furnace + '_tab')",
-    "$toggle_control_name": "($furnace + '_' + $tab_source + '_tab_slot_' + $item + '_view')",
-    "size": [25, 25],
-    "$content": "furnace_recipe_book_mcjava.slot_button_content",
-    "$unchecked_background": "resources.rb_default_slot",
-    "$checked_background": "resources.rb_default_slot",
-    "$unchecked_hover_background": "resources.rb_default_slot",
-    "$checked_hover_background": "resources.rb_default_slot",
-    "$unchecked_locked_background": "resources.rb_default_slot",
-    "$checked_locked_background": "resources.rb_default_slot"
-  },
-
-  "slot_button_content": {
-    "type": "panel",
-    "controls": [
-      {
-        "tooltip@tooltip_mcjava.tooltip": {
-          "visible": "($toggle_button_state = checked_hover or $toggle_button_state = unchecked_hover)",
-          "$tooltip_name": "$itemLangName"
-        }
-      },
-      {
-        "item_renderer": {
-          "type": "custom",
-          "renderer": "inventory_item_renderer",
-          "size": [16, 16],
-          "offset": [-1, -1],
-          "layer": 10,
-          "property_bag": {
-            "#item_id_aux": "$item_id_aux"
-          }
-        }
-      }
-    ]
-  },
-
   "furnace_recipes_panel": {
     "type": "panel",
+    "$furnace": "furnace",
     "controls": [
-      {
-        "search_tab": {
-          "type": "panel",
-          "$page_total_number": "3",
-          "controls": [
-            {
-              "page_1_panel": {
-                "type": "panel",
-                "controls": [
-                  {
-                    "1_page@page_content_panel": {
-                      "$page_current_number": "1",
-                      "$ignore_left_button": true,
-                      "$right_button_name": "furnace_search_tab_to_page_2",
-                      "$right_control_name": "furnace_search_tab_page_2_view",
-                      "bindings": [
-                        {
-                          "binding_type": "view",
-                          "source_control_name": "furnace_search_tab_page_2_view",
-                          "source_property_name": "(not #toggle_state)",
-                          "target_property_name": "#visible"
-                        }
-                      ]
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "page_2_and_beyond_panel": {
-                "type": "panel",
-                "controls": [
-                  {
-                    "2_page@page_content_panel": {
-                      "$page_current_number": "2",
-                      "$left_button_name": "furnace_search_tab_to_page_2",
-                      "$left_control_name": "furnace_search_tab_page_2_view",
-                      "$right_button_name": "furnace_search_tab_to_page_3",
-                      "$right_control_name": "furnace_search_tab_page_3_view",
-                      "bindings": [
-                        {
-                          "binding_type": "view",
-                          "source_control_name": "furnace_search_tab_page_3_view",
-                          "source_property_name": "(not #toggle_state)",
-                          "target_property_name": "#visible"
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "3_page@page_content_panel": {
-                      "$page_current_number": "3",
-                      "$ignore_right_button": true,
-                      "$left_button_name": "furnace_search_tab_to_page_3",
-                      "$left_control_name": "furnace_search_tab_page_3_view",
-                      "bindings": [
-                        {
-                          "binding_type": "view",
-                          "source_control_name": "furnace_search_tab_page_3_view",
-                          "source_property_name": "#toggle_state",
-                          "target_property_name": "#visible"
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "bindings": [
-                  {
-                    "binding_type": "view",
-                    "source_control_name": "furnace_search_tab_page_2_view",
-                    "source_property_name": "#toggle_state",
-                    "target_property_name": "#visible"
-                  }
-                ]
-              }
-            }
-          ],
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_control_name": "search_tab_view",
-              "source_property_name": "#toggle_state",
-              "target_property_name": "#visible"
-            }
-          ]
-        }
-      },
-      {
-        "food_tab": {
-          "type": "panel",
-          "$page_total_number": "1",
-          "controls": [
-            {
-              "page_panel@page_content_panel": {
-                "$page_current_number": "1"
-              }
-            }
-          ],
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_control_name": "food_tab_view",
-              "source_property_name": "#toggle_state",
-              "target_property_name": "#visible"
-            }
-          ]
-        }
-      },
-      {
-        "stone_tab": {
-          "type": "panel",
-          "$page_total_number": "2",
-          "controls": [
-            {
-              "page_1_panel@page_content_panel": {
-                "$page_current_number": "1",
-                "$ignore_left_button": true,
-                "$right_button_name": "furnace_stone_tab_to_page_2",
-                "$right_control_name": "furnace_stone_tab_page_2_view",
-                "bindings": [
-                  {
-                    "binding_type": "view",
-                    "source_control_name": "furnace_stone_tab_page_2_view",
-                    "source_property_name": "(not #toggle_state)",
-                    "target_property_name": "#visible"
-                  }
-                ]
-              }
-            },
-            {
-              "2_page@page_content_panel": {
-                "$ignore_right_button": true,
-                "$page_current_number": "2",
-                "$left_button_name": "furnace_stone_tab_to_page_2",
-                "$left_control_name": "furnace_stone_tab_page_2_view",
-                "bindings": [
-                  {
-                    "binding_type": "view",
-                    "source_control_name": "furnace_stone_tab_page_2_view",
-                    "source_property_name": "#toggle_state",
-                    "target_property_name": "#visible"
-                  }
-                ]
-              }
-            }
-          ],
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_control_name": "stone_tab_view",
-              "source_property_name": "#toggle_state",
-              "target_property_name": "#visible"
-            }
-          ]
-        }
-      },
-      {
-        "misc_tab": {
-          "type": "panel",
-          "$page_total_number": "1",
-          "controls": [
-            {
-              "page_panel@page_content_panel": {
-                "$page_current_number": "1"
-              }
-            }
-          ],
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_control_name": "misc_tab_view",
-              "source_property_name": "#toggle_state",
-              "target_property_name": "#visible"
-            }
-          ]
-        }
-      }
-    ]
-  },
-
-  "page_content_panel": {
-    "type": "panel",
-    "$ignore_left_button|default": false,
-    "$ignore_right_button|default": false,
-    "$ignore_page_count|default": false,
-    "$page_current_number|default": "1",
-    "$page_total_number|default": "1",
-    "$left_button_name|default": "",
-    "$right_control_name|default": "",
-    "$left_control_name|default": "",
-    "$right_button_name|default": "",
-    "variables": [
-      {
-        "requires": "($page_current_number = '1' and $page_total_number = '1')",
-        "$ignore_page_count": true,
-        "$ignore_left_button": true,
-        "$ignore_right_button": true
-      }
-    ],
-    "controls": [
-      {
-        "recipes_grid": {
-          "type": "grid",
-          "size": [128, 100],
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "offset": [1.5, 30],
-          "grid_dimensions": [5, 4],
-          "controls": "$page_recipes"
-        }
-      },
-      {
-        "page_buttons_panel": {
-          "type": "panel",
-          "size": [75, 28],
-          "anchor_from": "bottom_middle",
-          "anchor_to": "bottom_middle",
-          "$content": "",
-          "controls": [
-            {
-              "left_button@toggle_button_mcjava.toggle_button": {
-                "size": [11, 17],
-                "anchor_from": "left_middle",
-                "anchor_to": "left_middle",
-                "ignored": "$ignore_left_button",
-                "$toggle_index": 0,
-                "$toggle_button_name": "$left_button_name",
-                "$toggle_control_name": "$left_control_name",
-                "$checked_background": "resources.rb_left_button_default",
-                "$unchecked_background": "resources.rb_left_button_default",
-                "$checked_hover_background": "resources.rb_left_button_hover",
-                "$unchecked_hover_background": "resources.rb_left_button_hover",
-                "$checked_locked_background": "resources.rb_left_button_default",
-                "$unchecked_locked_background": "resources.rb_left_button_default"
-              }
-            },
-            {
-              "page_number": {
-                "type": "label",
-                "text": "($page_current_number + '/' + $page_total_number)",
-                "shadow": true,
-                "ignored": "$ignore_page_count",
-                "anchor_from": "center",
-                "anchor_to": "center",
-                "layer": 10
-              }
-            },
-            {
-              "right_button@toggle_button_mcjava.toggle_button": {
-                "size": [11, 17],
-                "anchor_from": "right_middle",
-                "anchor_to": "right_middle",
-                "ignored": "$ignore_right_button",
-                "$toggle_index": 1,
-                "$toggle_button_name": "$right_button_name",
-                "$toggle_control_name": "$right_control_name",
-                "$checked_background": "resources.rb_right_button_default",
-                "$unchecked_background": "resources.rb_right_button_default",
-                "$checked_hover_background": "resources.rb_right_button_hover",
-                "$unchecked_hover_background": "resources.rb_right_button_hover",
-                "$checked_locked_background": "resources.rb_right_button_default",
-                "$unchecked_locked_background": "resources.rb_right_button_default"
-              }
-            }
-          ]
-        }
-      }
-    ]
-  },
-
-  "show_item": {
-    "type": "panel",
-    "size": [16, 16],
-    "layer": 1,
-    "controls": [
-      {
-        "bg": {
-          "type": "image",
-          "texture": "src/javaui/resources/fmarquespto/textures/white",
-          "color": "red",
-          "alpha": 0.2,
-          "size": "$bg_size",
-          "$bg_size|default": [16, 16],
-          "layer": 1
-        }
-      },
-      {
-        "fuel_item_renderer": {
-          "type": "custom",
-          "renderer": "inventory_item_renderer",
-          "size": [16, 16],
-          "offset": [-1, -1],
-          "layer": 3,
-          "property_bag": {
-            "#item_id_aux": "$item_id_aux"
-          }
-        }
-      }
-    ],
-    "bindings": [
-      {
-        "binding_type": "view",
-        "source_control_name": "($furnace + '_' + $tab_source + '_tab_slot_' + $item + '_view')",
-        "source_property_name": "#toggle_state",
-        "target_property_name": "#visible"
-      }
-    ]
-  },
-
-  "show_fuel": {
-    "type": "panel",
-    "size": [16, 16],
-    "layer": 1,
-    "controls": [
-      {
-        "bg": {
-          "type": "image",
-          "texture": "src/javaui/resources/fmarquespto/textures/white",
-          "color": "red",
-          "alpha": 0.2,
-          "size": "$bg_size",
-          "$bg_size|default": [16, 16],
-          "layer": 1
-        }
-      },
-      {
-        "lava_bucket@fuel_item_renderer": {
-          "$item_id_aux": 21299210/* ,
-          "alpha": "@furnace_recipe_book_mcjava.anim_alpha_lava_bucket_0" */
-        }
-      },
-      {
-        "coal_block@fuel_item_renderer": {
-          "alpha": 0,
-          "$item_id_aux": 11337728/* ,
-          "alpha": "@furnace_recipe_book_mcjava.anim_alpha_coal_block_0" */
-        }
-      },
-      {
-        "blaze_rod@fuel_item_renderer": {
-          "alpha": 0,
-          "$item_id_aux": 24182784/* ,
-          "alpha": "@furnace_recipe_book_mcjava.anim_alpha_blaze_rod_0" */
-        }
-      },
-      {
-        "coal@fuel_item_renderer": {
-          "alpha": 0,
-          "$item_id_aux": 17235968/* ,
-          "alpha": "@furnace_recipe_book_mcjava.anim_alpha_coal_0" */
-        }
-      },
-      {
-        "charcoal@fuel_item_renderer": {
-          "alpha": 0,
-          "$item_id_aux": 17235969/* ,
-          "alpha": "@furnace_recipe_book_mcjava.anim_alpha_charcoal_0" */
-        }
-      },
-      {
-        "oak_log@fuel_item_renderer": {
-          "alpha": 0,
-          "$item_id_aux": 1114112/* ,
-          "alpha": "@furnace_recipe_book_mcjava.anim_alpha_oak_log_0" */
-        }
-      }
-    ],
-    "bindings": [
-      {
-        "binding_type": "view",
-        "source_control_name": "($furnace + '_' + $tab_source + '_tab_slot_' + $item + '_view')",
-        "source_property_name": "#toggle_state",
-        "target_property_name": "#visible"
-      }
-    ]
-  },
-
-  "fuel_item_renderer": {
-    "type": "custom",
-    "renderer": "inventory_item_renderer",
-    "size": [16, 16],
-    "offset": [-1, -1],
-    "layer": 3,
-    "property_bag": {
-      "#item_id_aux": "$item_id_aux"
-    }
-  },
-
-  "anim_alpha_lava_bucket_0": {
-    "anim_type": "alpha",
-    "duration": 5,
-    "from": 1.0,
-    "to": 1.0,
-    "next": "@furnace_recipe_book_mcjava.anim_alpha_lava_bucket_1"
-  },
-
-  "anim_alpha_lava_bucket_1": {
-    "anim_type": "alpha",
-    "duration": 0,
-    "from": 1.0,
-    "to": 0.0,
-    "next": "@furnace_recipe_book_mcjava.anim_alpha_lava_bucket_2"
-  },
-
-  "anim_alpha_lava_bucket_2": {
-    "anim_type": "wait",
-    "duration": 10,
-    "next": "@furnace_recipe_book_mcjava.anim_alpha_lava_bucket_3"
-  },
-
-  "anim_alpha_lava_bucket_3": {
-    "anim_type": "alpha",
-    "duration": 0,
-    "from": 0.0,
-    "to": 1.0,
-    "next": "@furnace_recipe_book_mcjava.anim_alpha_lava_bucket_0"
-  },
-
-  "anim_alpha_coal_block_0": {
-    "anim_type": "alpha",
-    "duration": 2,
-    "from": 0.0,
-    "to": 0.0,
-    "next": "@furnace_recipe_book_mcjava.anim_alpha_coal_block_1"
-  },
-
-  "anim_alpha_coal_block_1": {
-    "anim_type": "alpha",
-    "duration": 0,
-    "from": 0.0,
-    "to": 1.0,
-    "next": "@furnace_recipe_book_mcjava.anim_alpha_coal_block_2"
-  },
-
-  "anim_alpha_coal_block_2": {
-    "anim_type": "alpha",
-    "duration": 2,
-    "from": 1.0,
-    "to": 1.0,
-    "next": "@furnace_recipe_book_mcjava.anim_alpha_coal_block_3"
-  },
-
-  "anim_alpha_coal_block_3": {
-    "anim_type": "wait",
-    "duration": 10,
-    "next": "@furnace_recipe_book_mcjava.anim_alpha_coal_block_3"
-  },
-
-  "anim_alpha_coal_block_4": {
-    "anim_type": "alpha",
-    "duration": 0,
-    "from": 1.0,
-    "to": 1.0,
-    "next": "@furnace_recipe_book_mcjava.anim_alpha_coal_block_0"
-  }
-}
-/* 
-  "search_content_panel": {
-    "type": "panel",
-    "$tab_source": "search",
-    "controls": [
-      { "default@furnace_recipe_book_mcjava.default_slot_button": {} },
-      { 
-        "recipe_book_panel": {
-          "type": "grid",
-          "size": [128, 100],
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "offset": [1.5, 30],
-          "grid_dimensions": [5, 4],
-          "controls": [
-            {
-              "netherite_scrap@slot_button": {
-                "$toggle_index": 1,
-                "$item": "netherite_scrap",
-                "grid_position": [0, 0],
-                "$item_id_aux": 49283072
-              }
-            },
-            {
-              "steak@slot_button": {
-                "$toggle_index": 2,
-                "$item": "steak",
-                "grid_position": [1, 0],
-                "$item_id_aux": 23855104
-              }
-            },
-            {
-              "gray_glazed_terracotta@slot_button": {
-                "$toggle_index": 3,
-                "$item": "gray_glazed_terracotta",
-                "grid_position": [2, 0],
-                "$item_id_aux": 14876672
-              }
-            },
-            {
-              "cooked_rabbit@slot_button": {
-                "$toggle_index": 4,
-                "$item": "cooked_rabbit",
-                "grid_position": [3, 0],
-                "$item_id_aux": 27000832
-              }
-            },
-            {
-              "dried_kelp@slot_button": {
-                "$toggle_index": 5,
-                "$item": "dried_kelp",
-                "grid_position": [4, 0],
-                "$item_id_aux": 30408704
-              }
-            },
-            {
-              "green_glazed_terracotta@slot_button": {
-                "$toggle_index": 6,
-                "$item": "green_glazed_terracotta",
-                "grid_position": [0, 1],
-                "$item_id_aux": 15269888
-              }
-            },
-            {
-              "nether_brick@slot_button": {
-                "$toggle_index": 7,
-                "$item": "nether_brick",
-                "grid_position": [1, 1],
-                "$item_id_aux": 26542080
-              }
-            },
-            {
-              "orange_glazed_terracotta@slot_button": {
-                "$toggle_index": 8,
-                "$item": "orange_glazed_terracotta",
-                "grid_position": [2, 1],
-                "$item_id_aux": 14483456
-              }
-            },
-            {
-              "golden_nugget@slot_button": {
-                "$toggle_index": 9,
-                "$item": "golden_nugget",
-                "grid_position": [3, 1],
-                "$item_id_aux": 24313856
-              }
-            },
-            {
-              "purple_glazed_terracotta@slot_button": {
-                "$toggle_index": 10,
-                "$item": "purple_glazed_terracotta",
-                "grid_position": [4, 1],
-                "$item_id_aux": 14352384
-              }
-            },
-            {
-              "cracked_polished_blackstone_bricks@slot_button": {
-                "$toggle_index": 11,
-                "$item": "cracked_polished_blackstone_bricks",
-                "grid_position": [0, 2],
-                "$item_id_aux": -18350080
-              }
-            },
-            {
-              "cooked_mutton@slot_button": {
-                "$toggle_index": 12,
-                "$item": "cooked_mutton",
-                "grid_position": [1, 2],
-                "$item_id_aux": 27787264
-              }
-            },
-            {
-              "black_glazed_terracotta@slot_button": {
-                "$toggle_index": 13,
-                "$item": "black_glazed_terracotta",
-                "grid_position": [2, 2],
-                "$item_id_aux": 15400960
-              }
-            },
-            {
-              "light_gray_glazed_terracotta@slot_button": {
-                "$toggle_index": 14,
-                "$item": "light_gray_glazed_terracotta",
-                "grid_position": [3, 2],
-                "$item_id_aux": 14942208
-              }
-            },
-            {
-              "glass@slot_button": {
-                "$toggle_index": 15,
-                "$item": "glass",
-                "grid_position": [4, 2],
-                "$item_id_aux": 131072
-              }
-            },
-            {
-              "coal@slot_button": {
-                "$toggle_index": 16,
-                "$item": "gray_glazed_terracotta",
-                "grid_position": [0, 3],
-                "$item_id_aux": 17235968
-              }
-            },
-            {
-              "blue_glazed_terracotta@slot_button": {
-                "$toggle_index": 17,
-                "$item": "blue_glazed_terracotta",
-                "grid_position": [1, 3],
-                "$item_id_aux": 15138816
-              }
-            },
-            {
-              "redstone_dust@slot_button": {
-                "$toggle_index": 18,
-                "$item": "redstone_dust",
-                "grid_position": [2, 3],
-                "$item_id_aux": 21692416
-              }
-            },
-            {
-              "lime_dye@slot_button": {
-                "$toggle_index": 19,
-                "$item": "lime_dye",
-                "grid_position": [3, 3],
-                "$item_id_aux": 23003146
-              }
-            },
-            {
-              "yellow_glazed_terracotta@slot_button": {
-                "$toggle_index": 20,
-                "$item": "yellow_glazed_terracotta",
-                "grid_position": [4, 3],
-                "$item_id_aux": 14680064
-              }
-            }
-          ]
-        }
-      }
-    ],
-    "bindings": [
-      {
-        "binding_type": "view",
-        "source_control_name": "search_tab_view",
-        "source_property_name": "#toggle_state",
-        "target_property_name": "#visible"
-      }
-    ]
-  },
-
-  "food_content_panel": {
-    "type": "panel",
-    "$tab_source": "food",
-    "controls": [
-      { "default@furnace_recipe_book_mcjava.default_slot_button": {} },
-      { 
-        "recipe_book_panel": {
-          "type": "grid",
-          "size": [128, 100],
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "offset": [1.5, 30],
-          "grid_dimensions": [5, 4],
-          "controls": [
-            {
-              "steak@slot_button": {
-                "$toggle_index": 10,
-                "$item": "steak",
-                "grid_position": [0, 0],
-                "$item_id_aux": 23855104
-              }
-            },
-            {
-              "cooked_rabbit@slot_button": {
-                "$toggle_index": 11,
-                "$item": "cooked_rabbit",
-                "grid_position": [1, 0],
-                "$item_id_aux": 27000832
-              }
-            },
-            {
-              "dried_kelp@slot_button": {
-                "$toggle_index": 12,
-                "$item": "dried_kelp",
-                "grid_position": [2, 0],
-                "$item_id_aux": 30408704
-              }
-            },
-            {
-              "cooked_mutton@slot_button": {
-                "$toggle_index": 13,
-                "$item": "cooked_mutton",
-                "grid_position": [3, 0],
-                "$item_id_aux": 27787264
-              }
-            },
-            {
-              "cooked_chicken@slot_button": {
-                "$toggle_index": 14,
-                "$item": "cooked_chicken",
-                "grid_position": [4, 0],
-                "$item_id_aux": 23986176
-              }
-            },
-            {
-              "cooked_pork@slot_button": {
-                "$toggle_index": 15,
-                "$item": "cooked_pork",
-                "grid_position": [0, 1],
-                "$item_id_aux": 20971520
-              }
-            },
-            {
-              "baked_potato@slot_button": {
-                "$toggle_index": 16,
-                "$item": "baked_beef",
-                "grid_position": [1, 1],
-                "$item_id_aux": 25755648
-              }
-            },
-            {
-              "cooked_salmon@slot_button": {
-                "$toggle_index": 17,
-                "$item": "cooked_salmon",
-                "grid_position": [2, 1],
-                "$item_id_aux": 30343168
-              }
-            },
-            {
-              "cooked_cod@slot_button": {
-                "$toggle_index": 18,
-                "$item": "cooked_cod",
-                "grid_position": [3, 1],
-                "$item_id_aux": 22937600
-              }
-            }
-          ]
-        }
-      }
-    ],
-    "bindings": [
-      {
-        "binding_type": "view",
-        "source_control_name": "food_tab_view",
-        "source_property_name": "#toggle_state",
-        "target_property_name": "#visible"
-      }
-    ]
-  },
-
-  "show_item": {
-    "type": "panel",
-    "size": [16, 16],
-    "controls": [
-      {
-        "bg": {
-          "type": "image",
-          "texture": "src/javaui/resources/fmarquespto/textures/white",
-          "color": "red",
-          "alpha": 0.2,
-          "size": "$bg_size",
-          "$bg_size|default": [16, 16],
-          "layer": 1
-        }
-      },
-      {
-        "item_renderer@item_renderer": {
-          "layer": 2
-        }
-      }
-    ],
-    "bindings": [
-      {
-        "binding_type": "view",
-        "source_control_name": "($furnace + '_' + $tab_source + '_tab_slot_' + $item + '_view')",
-        "source_property_name": "#toggle_state",
-        "target_property_name": "#visible"
-      }
+      { "default_slot_button@furnace_recipes_mcjava.default_slot_button": {} },
+      { "search_recipes@furnace_rb_search_mcjava.search_tab": {} },
+      { "food_recipes@furnace_rb_food_mcjava.food_tab": {} },
+      { "stone_recipes@furnace_rb_stone_mcjava.stone_tab": {} },
+      { "misc_recipes@furnace_rb_misc_mcjava.misc_tab": {} }
     ]
   },
 
@@ -949,8 +68,9 @@
     "type": "panel",
     "anchor_from": "top_left",
     "anchor_to": "top_left",
-    "offset": [204, 16],
+    "offset": [55, 16],
     "size": [82, 54],
+    "$furnace": "furnace",
     "controls": [
       {
         "input_content_panel": {
@@ -959,35 +79,20 @@
           "anchor_to": "top_left",
           "size": [18, 18],
           "controls": [
-            {
-              "search_tab": {
-                "type": "panel",
-                "$tab_source": "search",
-                "controls": [
-                  {
-                    "beef@show_item": {
-                      "$item": "steak",
-                      "$item_id_aux": 23789568
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "food_tab": {
-                "type": "panel",
-                "$tab_source": "food",
-                "controls": [
-                  {
-                    "beef@show_item": {
-                      "$item": "steak",
-                      "$item_id_aux": 23789568
-                    }
-                  }
-                ]
-              }
-            }
+            { "search_input_recipes@furnace_rb_search_mcjava.search_input_recipes": {} },
+            { "food_input_recipes@furnace_rb_food_mcjava.food_input_recipes": {} },
+            { "stone_input_recipes@furnace_rb_stone_mcjava.stone_input_recipes": {} },
+            { "misc_input_recipes@furnace_rb_misc_mcjava.misc_input_recipes": {} }
           ]
+        }
+      },
+      {
+        "fuel_content_panel": {
+          "type": "panel",
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "size": [18, 18],
+          "controls": [ { "fuel@furnace_recipes_mcjava.show_fuel": { "$furnace": "furnace" } } ]
         }
       },
       {
@@ -997,39 +102,23 @@
           "anchor_to": "right_middle",
           "offset": [-4, 0],
           "size": [18, 18],
-          "$bg_size": [24, 24],
+          "$red_cell_size": [24, 24],
           "controls": [
-            {
-              "search_tab": {
-                "type": "panel",
-                "$tab_source": "search",
-                "controls": [
-                  {
-                    "beef@show_item": {
-                      "$item": "steak",
-                      "$item_id_aux": 23855104
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "food_tab": {
-                "type": "panel",
-                "$tab_source": "food",
-                "controls": [
-                  {
-                    "beef@show_item": {
-                      "$item": "steak",
-                      "$item_id_aux": 23855104
-                    }
-                  }
-                ]
-              }
-            }
+            { "search_output_recipes@furnace_rb_search_mcjava.search_output_recipes": {} },
+            { "food_output_recipes@furnace_rb_food_mcjava.food_output_recipes": {} },
+            { "stone_output_recipes@furnace_rb_stone_mcjava.stone_output_recipes": {} },
+            { "misc_output_recipes@furnace_rb_misc_mcjava.misc_output_recipes": {} }
           ]
         }
       }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "furnace_rb_view",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
     ]
   }
-} */
+}

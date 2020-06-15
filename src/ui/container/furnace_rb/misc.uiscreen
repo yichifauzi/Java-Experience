@@ -1,0 +1,218 @@
+{
+  "namespace": "furnace_rb_misc_mcjava",
+
+  "misc_tab": {
+    "type": "panel",
+    "$tab_source": "misc",
+    "$page_total_number": "1",
+    "controls": [
+      { "page_1@furnace_rb_misc_mcjava.misc_page_1": {} }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "misc_tab_view",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "misc_page_1@furnace_recipes_mcjava.page_content_panel": {
+    "$page_current_number": "1",
+    "$page_recipes": [
+      {
+        "lime_dye@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 88,
+          "$item": "lime_dye",
+          "$itemLangName": "item.dye.lime.name",
+          "grid_position": [0, 0],
+          "$item_id_aux": 23003146
+        }
+      },
+      {
+        "diamond@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 89,
+          "$item": "diamond",
+          "$itemLangName": "item.diamond.name",
+          "grid_position": [1, 0],
+          "$item_id_aux": 17301504
+        }
+      },
+      {
+        "lapis_lazuli@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 90,
+          "$item": "lapis_lazuli",
+          "$itemLangName": "item.dye.blue.name",
+          "grid_position": [2, 0],
+          "$item_id_aux": 23003140
+        }
+      },
+      {
+        "popped_chorus_fruit@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 91,
+          "$item": "popped_chorus_fruit",
+          "$itemLangName": "item.chorus_fruit_popped.name",
+          "grid_position": [3, 0],
+          "$item_id_aux": 28377088
+        }
+      },
+      {
+        "netherite_scrap@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 92,
+          "$item": "netherite_scrap",
+          "$itemLangName": "item.netherite_scrap.name",
+          "grid_position": [4, 0],
+          "$item_id_aux": 49283072
+        }
+      },
+      {
+        "brick@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 93,
+          "$item": "brick",
+          "$itemLangName": "item.brick.name",
+          "grid_position": [0, 1],
+          "$item_id_aux": 22020096
+        }
+      },
+      {
+        "iron_nugget@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 94,
+          "$item": "iron_nugget",
+          "$itemLangName": "item.iron_nugget.name",
+          "grid_position": [1, 1],
+          "$item_id_aux": 29622272
+        }
+      },
+      {
+        "coal@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 95,
+          "$item": "coal",
+          "$itemLangName": "item.coal.name",
+          "grid_position": [2, 1],
+          "$item_id_aux": 17235968
+        }
+      },
+      {
+        "charcoal@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 96,
+          "$item": "charcoal",
+          "$itemLangName": "item.charcoal.name",
+          "grid_position": [3, 1],
+          "$item_id_aux": 17235969
+        }
+      },
+      {
+        "iron_ingot@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 97,
+          "$item": "iron_ingot",
+          "$itemLangName": "item.iron_ingot.name",
+          "grid_position": [4, 1],
+          "$item_id_aux": 17367040
+        }
+      },
+      {
+        "emerald@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 98,
+          "$item": "emerald",
+          "$itemLangName": "item.emerald.name",
+          "grid_position": [0, 2],
+          "$item_id_aux": 25427968
+        }
+      },
+      {
+        "quartz@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 99,
+          "$item": "quartz",
+          "$itemLangName": "item.quartz.name",
+          "grid_position": [1, 2],
+          "$item_id_aux": 26607616
+        }
+      },
+      {
+        "green_dye@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 100,
+          "$item": "green_dye",
+          "$itemLangName": "item.dye.green.name",
+          "grid_position": [2, 2],
+          "$item_id_aux": 23003138
+        }
+      },
+      {
+        "gold_ingot@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 101,
+          "$item": "gold_ingot",
+          "$itemLangName": "item.gold_ingot.name",
+          "grid_position": [3, 2],
+          "$item_id_aux": 17432576
+        }
+      },
+      {
+        "gold_nugget@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 102,
+          "$item": "gold_nugget",
+          "$itemLangName": "item.gold_nugget.name",
+          "grid_position": [4, 2],
+          "$item_id_aux": 24313856
+        }
+      },
+      {
+        "nether_brick@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 103,
+          "$item": "nether_brick",
+          "$itemLangName": "item.netherbrick.name",
+          "grid_position": [0, 3],
+          "$item_id_aux": 26542080
+        }
+      }
+    ]
+  },
+
+  /* Show On Furnace */
+
+  "misc_input_recipes": {
+    "type": "panel",
+    "$tab_source": "misc",
+    "controls": [
+      { "lime_dye@furnace_recipes_mcjava.show_item": { "$item": "lime_dye", "$item_id_aux": -10223616 } },
+      { "diamond@furnace_recipes_mcjava.show_item": { "$item": "diamond", "$item_id_aux": 3670016 } },
+      { "lapis_lazuli@furnace_recipes_mcjava.show_item": { "$item": "lapis_lazuli", "$item_id_aux": 1376256 } },
+      { "popped_chorus_fruit@furnace_recipes_mcjava.show_item": { "$item": "popped_chorus_fruit", "$item_id_aux": 28311552 } },
+      { "netherite_scrap@furnace_recipes_mcjava.show_item": { "$item": "netherite_scrap", "$item_id_aux": -17760256 } },
+      { "brick@furnace_recipes_mcjava.show_item": { "$item": "brick", "$item_id_aux": 5373952 } },
+      { "iron_nugget@furnace_recipes_mcjava.show_item": { "$item": "iron_nugget", "$item_id_aux": 20119552 } },
+      { "coal@furnace_recipes_mcjava.show_item": { "$item": "coal", "$item_id_aux": 1048576 } },
+      { "charcoal@furnace_recipes_mcjava.show_item": { "$item": "charcoal", "$item_id_aux": 1114112 } },
+      { "iron_ingot@furnace_recipes_mcjava.show_item": { "$item": "iron_ingot", "$item_id_aux": 983040 } },
+      { "emerald@furnace_recipes_mcjava.show_item": { "$item": "emerald", "$item_id_aux": 8454144 } },
+      { "quartz@furnace_recipes_mcjava.show_item": { "$item": "quartz", "$item_id_aux": 10027008 } },
+      { "green_dye@furnace_recipes_mcjava.show_item": { "$item": "green_dye", "$item_id_aux": 5308416 } },
+      { "gold_ingot@furnace_recipes_mcjava.show_item": { "$item": "gold_ingot", "$item_id_aux": 917504 } },
+      { "gold_nugget@furnace_recipes_mcjava.show_item": { "$item": "gold_nugget", "$item_id_aux": 20643840 } },
+      { "nether_brick@furnace_recipes_mcjava.show_item": { "$item": "nether_brick", "$item_id_aux": 5701632 } }
+    ]
+  },
+
+  "misc_output_recipes": {
+    "type": "panel",
+    "$tab_source": "misc",
+    "controls": [
+      { "lime_dye@furnace_recipes_mcjava.show_item": { "$item": "lime_dye", "$item_id_aux": 23003146 } },
+      { "diamond@furnace_recipes_mcjava.show_item": { "$item": "diamond", "$item_id_aux": 17301504 } },
+      { "lapis_lazuli@furnace_recipes_mcjava.show_item": { "$item": "lapis_lazuli", "$item_id_aux": 23003140 } },
+      { "popped_chorus_fruit@furnace_recipes_mcjava.show_item": { "$item": "popped_chorus_fruit", "$item_id_aux": 28377088 } },
+      { "netherite_scrap@furnace_recipes_mcjava.show_item": { "$item": "netherite_scrap", "$item_id_aux": 49283072 } },
+      { "brick@furnace_recipes_mcjava.show_item": { "$item": "brick", "$item_id_aux": 22020096 } },
+      { "iron_nugget@furnace_recipes_mcjava.show_item": { "$item": "iron_nugget", "$item_id_aux": 29622272 } },
+      { "coal@furnace_recipes_mcjava.show_item": { "$item": "coal", "$item_id_aux": 17235968 } },
+      { "charcoal@furnace_recipes_mcjava.show_item": { "$item": "charcoal", "$item_id_aux": 17235969 } },
+      { "iron_ingot@furnace_recipes_mcjava.show_item": { "$item": "iron_ingot", "$item_id_aux": 17367040 } },
+      { "emerald@furnace_recipes_mcjava.show_item": { "$item": "emerald", "$item_id_aux": 25427968 } },
+      { "quartz@furnace_recipes_mcjava.show_item": { "$item": "quartz", "$item_id_aux": 26607616 } },
+      { "green_dye@furnace_recipes_mcjava.show_item": { "$item": "green_dye", "$item_id_aux": 23003138 } },
+      { "gold_ingot@furnace_recipes_mcjava.show_item": { "$item": "gold_ingot", "$item_id_aux": 17432576 } },
+      { "gold_nugget@furnace_recipes_mcjava.show_item": { "$item": "gold_nugget", "$item_id_aux": 24313856 } },
+      { "nether_brick@furnace_recipes_mcjava.show_item": { "$item": "nether_brick", "$item_id_aux": 26542080 } }
+    ]
+  }
+}

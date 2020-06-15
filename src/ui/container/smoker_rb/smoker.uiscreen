@@ -1,0 +1,96 @@
+{
+  "namespace": "smoker_recipe_book_mcjava",
+
+  "smoker_recipe_book_content_panel@common.root_panel": {
+    "size": [147, 166],
+    "controls": [
+      { "bg@resources.recipe_book_bg": {} },
+      { "search_tab@smoker_recipe_book_mcjava.search_tab": { "offset": [ -31, 4 ] } },
+      { "food_tab@smoker_recipe_book_mcjava.food_tab": { "offset": [ -31, 30 ] } },
+      { "smoker_recipes_panel@smoker_recipes_panel": {} }
+    ]
+  },
+
+  "search_tab@furnace_recipes_mcjava.left_tab": {
+    "$item_id_aux": 22609920,
+    "$tab_control_name": "search_tab_view",
+    "$toggle_index": 0,
+    "$toggle_default_state": true,
+    "$focus_id": "search_tab",
+    "$focus_override_down": "food_tab",
+    "$focus_override_up": "FOCUS_OVERRIDE_STOP"
+  },
+
+  "food_tab@furnace_recipes_mcjava.left_tab": {
+    "$item_id_aux": 20905984,
+    "$tab_control_name": "food_tab_view",
+    "$toggle_index": 1,
+    "$focus_id": "food_tab",
+    "$focus_override_up": "search_tab",
+    "$focus_override_down": "FOCUS_OVERRIDE_STOP"
+  },
+  
+  "smoker_recipes_panel": {
+    "type": "panel",
+    "$furnace": "smoker",
+    "controls": [
+      { "default_slot_button@furnace_recipes_mcjava.default_slot_button": {} },
+      { "search_recipes@smoker_rb_search_mcjava.search_tab": {} },
+      { "food_recipes@smoker_rb_food_mcjava.food_tab": {} }
+    ]
+  },
+
+  "show_on_smoker_content_panel": {
+    "type": "panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [55, 16],
+    "size": [82, 54],
+    "$furnace": "smoker",
+    "controls": [
+      {
+        "input_content_panel": {
+          "type": "panel",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "size": [18, 18],
+          "controls": [
+            { "search_input_recipes@smoker_rb_search_mcjava.search_input_recipes": {} },
+            { "food_input_recipes@smoker_rb_food_mcjava.food_input_recipes": {} }
+          ]
+        }
+      },
+      {
+        "fuel_content_panel": {
+          "type": "panel",
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "size": [18, 18],
+          "controls": [ { "fuel@furnace_recipes_mcjava.show_fuel": { "$furnace": "smoker" } } ]
+        }
+      },
+      {
+        "output_content_panel": {
+          "type": "panel",
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "offset": [-4, 0],
+          "size": [18, 18],
+          "$red_cell_size": [24, 24],
+          "controls": [
+            { "search_output_recipes@smoker_rb_search_mcjava.search_output_recipes": {} },
+            { "food_output_recipes@smoker_rb_food_mcjava.food_output_recipes": {} }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "smoker_rb_view",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  }
+}

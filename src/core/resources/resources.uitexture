@@ -1432,11 +1432,11 @@
     "$rsrc_location": "src/assets/minecraft/textures/gui/recipe_book",
     "size": [147, 166],
     "variables": [
-      { "requires": "($loom_resolution = 256x)", "$uv": [1, 1], "$uv_size": [147, 166] },
-      { "requires": "($loom_resolution = 512x)", "$uv": [2, 2], "$uv_size": [294, 332] },
-      { "requires": "($loom_resolution = 1024x)", "$uv": [4, 4], "$uv_size": [588, 664] },
-      { "requires": "($loom_resolution = 2048x)", "$uv": [8, 8], "$uv_size": [1176, 1328] },
-      { "requires": "($loom_resolution = 4096x)", "$uv": [16, 16], "$uv_size": [2352, 2656] }
+      { "requires": "($recipe_book_resolution = 256x)", "$uv": [1, 1], "$uv_size": [147, 166] },
+      { "requires": "($recipe_book_resolution = 512x)", "$uv": [2, 2], "$uv_size": [294, 332] },
+      { "requires": "($recipe_book_resolution = 1024x)", "$uv": [4, 4], "$uv_size": [588, 664] },
+      { "requires": "($recipe_book_resolution = 2048x)", "$uv": [8, 8], "$uv_size": [1176, 1328] },
+      { "requires": "($recipe_book_resolution = 4096x)", "$uv": [16, 16], "$uv_size": [2352, 2656] }
     ]
   },
 
@@ -1445,11 +1445,11 @@
     "size": [20, 18],
     "uv": [0, 0],
     "variables": [
-      { "requires": "($loom_resolution = 256x)", "$uv_size": [20, 18] },
-      { "requires": "($loom_resolution = 512x)", "$uv_size": [40, 36] },
-      { "requires": "($loom_resolution = 1024x)", "$uv_size": [80, 72] },
-      { "requires": "($loom_resolution = 2048x)", "$uv_size": [160, 144] },
-      { "requires": "($loom_resolution = 4096x)", "$uv_size": [320, 288] }
+      { "requires": "($recipe_book_resolution = 256x)", "$uv_size": [20, 18] },
+      { "requires": "($recipe_book_resolution = 512x)", "$uv_size": [40, 36] },
+      { "requires": "($recipe_book_resolution = 1024x)", "$uv_size": [80, 72] },
+      { "requires": "($recipe_book_resolution = 2048x)", "$uv_size": [160, 144] },
+      { "requires": "($recipe_book_resolution = 4096x)", "$uv_size": [320, 288] }
     ]
   },
 
@@ -1457,36 +1457,108 @@
     "$rsrc_location": "src/assets/minecraft/textures/gui/recipe_button",
     "size": [20, 18],
     "variables": [
-      { "requires": "($loom_resolution = 256x)", "$uv": [0, 19], "$uv_size": [20, 18] },
-      { "requires": "($loom_resolution = 512x)", "$uv": [0, 38], "$uv_size": [40, 36] },
-      { "requires": "($loom_resolution = 1024x)", "$uv": [0, 76], "$uv_size": [80, 72] },
-      { "requires": "($loom_resolution = 2048x)", "$uv": [0, 152], "$uv_size": [160, 144] },
-      { "requires": "($loom_resolution = 4096x)", "$uv": [0, 304], "$uv_size": [320, 288] }
+      { "requires": "($recipe_book_resolution = 256x)", "$uv": [0, 19], "$uv_size": [20, 18] },
+      { "requires": "($recipe_book_resolution = 512x)", "$uv": [0, 38], "$uv_size": [40, 36] },
+      { "requires": "($recipe_book_resolution = 1024x)", "$uv": [0, 76], "$uv_size": [80, 72] },
+      { "requires": "($recipe_book_resolution = 2048x)", "$uv": [0, 152], "$uv_size": [160, 144] },
+      { "requires": "($recipe_book_resolution = 4096x)", "$uv": [0, 304], "$uv_size": [320, 288] }
     ]
   },
 
   "crafting_filter_unchecked@resources.resource_image": {
-    "$rsrc_location": "assets/minecraft/textures/gui/recipe_book",
+    "$rsrc_location": "src/assets/minecraft/textures/gui/recipe_book",
     "size": [26, 16],
-    "$xy": [-152, -41]
+    "variables": [
+      { "requires": "($recipe_book_resolution = 256x)", "$uv": [152, 41], "$uv_size": [26, 16] },
+      { "requires": "($recipe_book_resolution = 512x)", "$uv": [304, 82], "$uv_size": [52, 32] },
+      { "requires": "($recipe_book_resolution = 1024x)", "$uv": [608, 164], "$uv_size": [104, 64] },
+      { "requires": "($recipe_book_resolution = 2048x)", "$uv": [1216, 328], "$uv_size": [208, 128] },
+      { "requires": "($recipe_book_resolution = 4096x)", "$uv": [2432, 656], "$uv_size": [416, 256] }
+    ]
   },
 
   "crafting_filter_unchecked_hover@resources.resource_image": {
-    "$rsrc_location": "assets/minecraft/textures/gui/recipe_book",
+    "$rsrc_location": "src/assets/minecraft/textures/gui/recipe_book",
     "size": [26, 16],
-    "$xy": [-152, -59]
+    "variables": [
+      { "requires": "($recipe_book_resolution = 256x)", "$uv": [152, 59], "$uv_size": [26, 16] },
+      { "requires": "($recipe_book_resolution = 512x)", "$uv": [304, 118], "$uv_size": [52, 32] },
+      { "requires": "($recipe_book_resolution = 1024x)", "$uv": [608, 236], "$uv_size": [104, 64] },
+      { "requires": "($recipe_book_resolution = 2048x)", "$uv": [1216, 472], "$uv_size": [208, 128] },
+      { "requires": "($recipe_book_resolution = 4096x)", "$uv": [2432, 944], "$uv_size": [416, 256] }
+    ]
   },
   
   "crafting_filter_checked@resources.resource_image": {
-    "$rsrc_location": "assets/minecraft/textures/gui/recipe_book",
+    "$rsrc_location": "src/assets/minecraft/textures/gui/recipe_book",
     "size": [26, 16],
-    "$xy": [-180, -41]
+    "variables": [
+      { "requires": "($recipe_book_resolution = 256x)", "$uv": [180, 41], "$uv_size": [26, 16] },
+      { "requires": "($recipe_book_resolution = 512x)", "$uv": [360, 82], "$uv_size": [52, 32] },
+      { "requires": "($recipe_book_resolution = 1024x)", "$uv": [720, 164], "$uv_size": [104, 64] },
+      { "requires": "($recipe_book_resolution = 2048x)", "$uv": [1440, 328], "$uv_size": [208, 128] },
+      { "requires": "($recipe_book_resolution = 4096x)", "$uv": [2880, 656], "$uv_size": [416, 256] }
+    ]
   },
 
   "crafting_filter_checked_hover@resources.resource_image": {
-    "$rsrc_location": "assets/minecraft/textures/gui/recipe_book",
+    "$rsrc_location": "src/assets/minecraft/textures/gui/recipe_book",
     "size": [26, 16],
-    "$xy": [-180, -59]
+    "variables": [
+      { "requires": "($recipe_book_resolution = 256x)", "$uv": [180, 59], "$uv_size": [26, 16] },
+      { "requires": "($recipe_book_resolution = 512x)", "$uv": [360, 118], "$uv_size": [52, 32] },
+      { "requires": "($recipe_book_resolution = 1024x)", "$uv": [720, 236], "$uv_size": [104, 64] },
+      { "requires": "($recipe_book_resolution = 2048x)", "$uv": [1440, 472], "$uv_size": [208, 128] },
+      { "requires": "($recipe_book_resolution = 4096x)", "$uv": [2880, 944], "$uv_size": [416, 256] }
+    ]
+  },
+
+  "furnace_filter_unchecked@resources.resource_image": {
+    "$rsrc_location": "src/assets/minecraft/textures/gui/recipe_book",
+    "size": [26, 16],
+    "variables": [
+      { "requires": "($recipe_book_resolution = 256x)", "$uv": [152, 182], "$uv_size": [26, 16] },
+      { "requires": "($recipe_book_resolution = 512x)", "$uv": [304, 364], "$uv_size": [52, 32] },
+      { "requires": "($recipe_book_resolution = 1024x)", "$uv": [608, 728], "$uv_size": [104, 64] },
+      { "requires": "($recipe_book_resolution = 2048x)", "$uv": [1216, 1456], "$uv_size": [208, 128] },
+      { "requires": "($recipe_book_resolution = 4096x)", "$uv": [2432, 2912], "$uv_size": [416, 256] }
+    ]
+  },
+
+  "furnace_filter_unchecked_hover@resources.resource_image": {
+    "$rsrc_location": "src/assets/minecraft/textures/gui/recipe_book",
+    "size": [26, 16],
+    "variables": [
+      { "requires": "($recipe_book_resolution = 256x)", "$uv": [152, 200], "$uv_size": [26, 16] },
+      { "requires": "($recipe_book_resolution = 512x)", "$uv": [304, 400], "$uv_size": [52, 32] },
+      { "requires": "($recipe_book_resolution = 1024x)", "$uv": [608, 800], "$uv_size": [104, 64] },
+      { "requires": "($recipe_book_resolution = 2048x)", "$uv": [1216, 1600], "$uv_size": [208, 128] },
+      { "requires": "($recipe_book_resolution = 4096x)", "$uv": [2432, 3200], "$uv_size": [416, 256] }
+    ]
+  },
+  
+  "furnace_filter_checked@resources.resource_image": {
+    "$rsrc_location": "src/assets/minecraft/textures/gui/recipe_book",
+    "size": [26, 16],
+    "variables": [
+      { "requires": "($recipe_book_resolution = 256x)", "$uv": [180, 182], "$uv_size": [26, 16] },
+      { "requires": "($recipe_book_resolution = 512x)", "$uv": [360, 364], "$uv_size": [52, 32] },
+      { "requires": "($recipe_book_resolution = 1024x)", "$uv": [720, 728], "$uv_size": [104, 64] },
+      { "requires": "($recipe_book_resolution = 2048x)", "$uv": [1440, 1456], "$uv_size": [208, 128] },
+      { "requires": "($recipe_book_resolution = 4096x)", "$uv": [2880, 2912], "$uv_size": [416, 256] }
+    ]
+  },
+
+  "furnace_filter_checked_hover@resources.resource_image": {
+    "$rsrc_location": "src/assets/minecraft/textures/gui/recipe_book",
+    "size": [26, 16],
+    "variables": [
+      { "requires": "($recipe_book_resolution = 256x)", "$uv": [180, 200], "$uv_size": [26, 16] },
+      { "requires": "($recipe_book_resolution = 512x)", "$uv": [360, 400], "$uv_size": [52, 32] },
+      { "requires": "($recipe_book_resolution = 1024x)", "$uv": [720, 800], "$uv_size": [104, 64] },
+      { "requires": "($recipe_book_resolution = 2048x)", "$uv": [1440, 1600], "$uv_size": [208, 128] },
+      { "requires": "($recipe_book_resolution = 4096x)", "$uv": [2880, 3200], "$uv_size": [416, 256] }
+    ]
   },
 
   "recipe_book_tab_checked@resources.resource_image": {
@@ -1522,6 +1594,18 @@
       { "requires": "($recipe_book_resolution = 1024x)", "$uv": [116, 824], "$uv_size": [100, 100] },
       { "requires": "($recipe_book_resolution = 2048x)", "$uv": [232, 1648], "$uv_size": [200, 200] },
       { "requires": "($recipe_book_resolution = 4096x)", "$uv": [464, 3296], "$uv_size": [400, 400] }
+    ]
+  },
+
+  "rb_red_slot@resources.resource_image": {
+    "$rsrc_location": "src/assets/minecraft/textures/gui/recipe_book",
+    "size": [25, 25],
+    "variables": [
+      { "requires": "($recipe_book_resolution = 256x)", "$uv": [54, 206], "$uv_size": [25, 25] },
+      { "requires": "($recipe_book_resolution = 512x)", "$uv": [108, 412], "$uv_size": [50, 50] },
+      { "requires": "($recipe_book_resolution = 1024x)", "$uv": [216, 824], "$uv_size": [100, 100] },
+      { "requires": "($recipe_book_resolution = 2048x)", "$uv": [432, 1648], "$uv_size": [200, 200] },
+      { "requires": "($recipe_book_resolution = 4096x)", "$uv": [864, 3296], "$uv_size": [400, 400] }
     ]
   },
 
@@ -1578,12 +1662,6 @@
     "$rsrc_location": "src/assets/minecraft/textures/gui/recipe_book",
     "size": [25, 25],
     "$xy": [-29, -231]
-  },
-
-  "rb_red_slot@resources.resource_image": {
-    "$rsrc_location": "src/assets/minecraft/textures/gui/recipe_book",
-    "size": [25, 25],
-    "$xy": [-54, -206]
   },
 
   /* Redstone */

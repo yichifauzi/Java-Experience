@@ -1,0 +1,141 @@
+{
+  "namespace": "smoker_rb_food_mcjava",
+
+  "food_tab": {
+    "type": "panel",
+    "$tab_source": "food",
+    "$page_total_number": "1",
+    "controls": [
+      {
+        "page_panel@furnace_recipes_mcjava.page_content_panel": {
+          "$page_current_number": "1",
+          "$page_recipes": [
+            {
+              "steak@furnace_recipes_mcjava.slot_button": {
+                "$toggle_index": 10,
+                "$item": "steak",
+                "$itemLangName": "item.cooked_beef.name",
+                "grid_position": [0, 0],
+                "$item_id_aux": 23855104
+              }
+            },
+            {
+              "cooked_rabbit@furnace_recipes_mcjava.slot_button": {
+                "$toggle_index": 11,
+                "$item": "cooked_rabbit",
+                "$itemLangName": "item.cooked_rabbit.name",
+                "grid_position": [1, 0],
+                "$item_id_aux": 27000832
+              }
+            },
+            {
+              "dried_kelp@furnace_recipes_mcjava.slot_button": {
+                "$toggle_index": 12,
+                "$item": "dried_kelp",
+                "$itemLangName": "item.dried_kelp.name",
+                "grid_position": [2, 0],
+                "$item_id_aux": 30408704
+              }
+            },
+            {
+              "cooked_mutton@furnace_recipes_mcjava.slot_button": {
+                "$toggle_index": 13,
+                "$item": "cooked_mutton",
+                "$itemLangName": "item.muttonCooked.name",
+                "grid_position": [3, 0],
+                "$item_id_aux": 27787264
+              }
+            },
+            {
+              "cooked_chicken@furnace_recipes_mcjava.slot_button": {
+                "$toggle_index": 14,
+                "$item": "cooked_chicken",
+                "$itemLangName": "item.cooked_chicken.name",
+                "grid_position": [4, 0],
+                "$item_id_aux": 23986176
+              }
+            },
+            {
+              "cooked_pork@furnace_recipes_mcjava.slot_button": {
+                "$toggle_index": 15,
+                "$item": "cooked_pork",
+                "$itemLangName": "item.cooked_porkchop.name",
+                "grid_position": [0, 1],
+                "$item_id_aux": 20971520
+              }
+            },
+            {
+              "baked_potato@furnace_recipes_mcjava.slot_button": {
+                "$toggle_index": 16,
+                "$item": "baked_potato",
+                "$itemLangName": "item.baked_potato.name",
+                "grid_position": [1, 1],
+                "$item_id_aux": 25755648
+              }
+            },
+            {
+              "cooked_salmon@furnace_recipes_mcjava.slot_button": {
+                "$toggle_index": 17,
+                "$item": "cooked_salmon",
+                "$itemLangName": "item.cooked_salmon.name",
+                "grid_position": [2, 1],
+                "$item_id_aux": 30343168
+              }
+            },
+            {
+              "cooked_cod@furnace_recipes_mcjava.slot_button": {
+                "$toggle_index": 18,
+                "$item": "cooked_cod",
+                "$itemLangName": "item.cooked_fish.name",
+                "grid_position": [3, 1],
+                "$item_id_aux": 22937600
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "food_tab_view",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  /* Show On Smoker */
+
+  "food_input_recipes": {
+    "type": "panel",
+    "$tab_source": "food",
+    "controls": [
+      { "steack@furnace_recipes_mcjava.show_item": { "$item": "steak", "$item_id_aux": 23789568 } },
+      { "cooked_rabbit@furnace_recipes_mcjava.show_item": { "$item": "cooked_rabbit", "$item_id_aux": 26935296 } },
+      { "dried_kelp@furnace_recipes_mcjava.show_item": { "$item": "dried_kelp", "$item_id_aux": 21954560 } },
+      { "cooked_mutton@furnace_recipes_mcjava.show_item": { "$item": "cooked_mutton", "$item_id_aux": 27721728 } },
+      { "cooked_chicken@furnace_recipes_mcjava.show_item": { "$item": "cooked_chicken", "$item_id_aux": 23920640 } },
+      { "cooked_pork@furnace_recipes_mcjava.show_item": { "$item": "cooked_pork", "$item_id_aux": 20905984 } },
+      { "baked_potato@furnace_recipes_mcjava.show_item": { "$item": "baked_potato", "$item_id_aux": 25690112 } },
+      { "cooked_salmon@furnace_recipes_mcjava.show_item": { "$item": "cooked_salmon", "$item_id_aux": 30146560 } },
+      { "cooked_cod@furnace_recipes_mcjava.show_item": { "$item": "cooked_cod", "$item_id_aux": 22872064 } }
+    ]
+  },
+
+  "food_output_recipes": {
+    "type": "panel",
+    "$tab_source": "food",
+    "controls": [
+      { "steak@furnace_recipes_mcjava.show_item": { "$item": "steak", "$item_id_aux": 23855104 } },
+      { "cooked_rabbit@furnace_recipes_mcjava.show_item": { "$item": "cooked_rabbit", "$item_id_aux": 27000832 } },
+      { "dried_kelp@furnace_recipes_mcjava.show_item": { "$item": "dried_kelp", "$item_id_aux": 30408704 } },
+      { "cooked_mutton@furnace_recipes_mcjava.show_item": { "$item": "cooked_mutton", "$item_id_aux": 27787264 } },
+      { "cooked_chicken@furnace_recipes_mcjava.show_item": { "$item": "cooked_chicken", "$item_id_aux": 23986176 } },
+      { "cooked_pork@furnace_recipes_mcjava.show_item": { "$item": "cooked_pork", "$item_id_aux": 20971520 } },
+      { "baked_potato@furnace_recipes_mcjava.show_item": { "$item": "baked_potato", "$item_id_aux": 25755648 } },
+      { "cooked_salmon@furnace_recipes_mcjava.show_item": { "$item": "cooked_salmon", "$item_id_aux": 30343168 } },
+      { "cooked_cod@furnace_recipes_mcjava.show_item": { "$item": "cooked_cod", "$item_id_aux": 22937600 } }
+    ]
+  }
+}

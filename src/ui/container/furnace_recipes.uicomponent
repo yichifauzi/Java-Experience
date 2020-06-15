@@ -1,0 +1,309 @@
+{
+  "namespace": "furnace_recipes_mcjava",
+
+  "furnace_recipe_book_button": {
+    "type": "panel",
+    "size": [20, 18],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "layer": 10,
+    "$unchecked_toggle_bg": "resources.recipe_button_default",
+    "$checked_toggle_bg": "resources.recipe_button_default",
+    "$unchecked_hover_toggle_bg": "resources.recipe_button_hover",
+    "$checked_hover_toggle_bg": "resources.recipe_button_hover",
+    "$unchecked_locked_toggle_bg": "resources.recipe_button_default",
+    "$checked_locked_toggle_bg": "resources.recipe_button_default",
+    "$toggle_button_name": "$furnace_view",
+    "$toggle_type_panel": "",
+    "controls": [
+      {
+        "hide@toggle_button_mcjava.toggle_button": {
+          "size": [20, 18],
+          "$toggle_index": 0,
+          "$toggle_control_name": "('not_' + $furnace_view)",
+          "$focus_id": "recipe_book_layout_toggle",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "$furnace_view",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "show@toggle_button_mcjava.toggle_button": {
+          "size": [20, 18],
+          "$toggle_index": 1,
+          "$toggle_control_name": "$furnace_view",
+          "$focus_id": "recipe_book_layout_toggle",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "$furnace_view",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "left_tab@tab_mcjava.tab": {
+    "size": [35, 26],
+    "$toggle_focus_enabled": false,
+    "$tab_name": "nav_tab",
+    "$toggle_default_selected": 0,
+    "$tab_type_panel": "recipes_mcjava.tab_with_item_renderer_panel",
+    "$unchecked_background": "resources.recipe_book_tab_unchecked",
+    "$checked_background": "resources.recipe_book_tab_checked",
+    "$unchecked_hover_background": "resources.recipe_book_tab_unchecked",
+    "$checked_hover_background": "resources.recipe_book_tab_checked"
+  },
+
+  "page_content_panel": {
+    "type": "panel",
+    "$ignore_left_button|default": false,
+    "$ignore_right_button|default": false,
+    "$ignore_page_count|default": false,
+    "$page_current_number|default": "1",
+    "$page_total_number|default": "1",
+    "$left_button_name|default": "",
+    "$right_control_name|default": "",
+    "$left_control_name|default": "",
+    "$right_button_name|default": "",
+    "variables": [
+      {
+        "requires": "($page_current_number = '1' and $page_total_number = '1')",
+        "$ignore_page_count": true,
+        "$ignore_left_button": true,
+        "$ignore_right_button": true
+      }
+    ],
+    "controls": [
+      {
+        "recipes_grid": {
+          "type": "grid",
+          "size": [128, 100],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [1.5, 30],
+          "grid_dimensions": [5, 4],
+          "controls": "$page_recipes"
+        }
+      },
+      {
+        "page_buttons_panel": {
+          "type": "panel",
+          "size": [61, 17],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "$toggle_type_panel": "",
+          "offset": [0, -12],
+          "controls": [
+            {
+              "left_button@toggle_button_mcjava.toggle_button": {
+                "size": [11, 17],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "ignored": "$ignore_left_button",
+                "$toggle_index": 0,
+                "$toggle_button_name": "$left_button_name",
+                "$toggle_control_name": "$left_control_name",
+                "$checked_toggle_bg": "resources.rb_left_button_default",
+                "$unchecked_toggle_bg": "resources.rb_left_button_default",
+                "$checked_hover_toggle_bg": "resources.rb_left_button_hover",
+                "$unchecked_hover_toggle_bg": "resources.rb_left_button_hover",
+                "$checked_locked_toggle_bg": "resources.rb_left_button_default",
+                "$unchecked_locked_toggle_bg": "resources.rb_left_button_default"
+              }
+            },
+            {
+              "page_number": {
+                "type": "label",
+                "text": "($page_current_number + '/' + $page_total_number)",
+                "shadow": true,
+                "ignored": "$ignore_page_count",
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "layer": 10
+              }
+            },
+            {
+              "right_button@toggle_button_mcjava.toggle_button": {
+                "size": [11, 17],
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle",
+                "ignored": "$ignore_right_button",
+                "$toggle_index": 1,
+                "$toggle_button_name": "$right_button_name",
+                "$toggle_control_name": "$right_control_name",
+                "$checked_toggle_bg": "resources.rb_right_button_default",
+                "$unchecked_toggle_bg": "resources.rb_right_button_default",
+                "$checked_hover_toggle_bg": "resources.rb_right_button_hover",
+                "$unchecked_hover_toggle_bg": "resources.rb_right_button_hover",
+                "$checked_locked_toggle_bg": "resources.rb_right_button_default",
+                "$unchecked_locked_toggle_bg": "resources.rb_right_button_default"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "show_item": {
+    "type": "panel",
+    "size": [16, 16],
+    "layer": 1,
+    "controls": [
+      {
+        "red": {
+          "type": "image",
+          "texture": "src/core/resources/fmarquespto/textures/white",
+          "$red_cell_size|default": [ "100%", "100%" ],
+          "size": "$red_cell_size",
+          "anchor_to": "center",
+          "anchor_from": "center",
+          "color": "red",
+          "alpha": 0.35,
+          "layer": 1
+        }
+      },
+      {
+        "red": {
+          "type": "image",
+          "texture": "src/core/resources/fmarquespto/textures/white",
+          "$red_cell_size|default": [ "100%", "100%" ],
+          "size": "$red_cell_size",
+          "anchor_to": "center",
+          "anchor_from": "center",
+          "color": "white",
+          "alpha": 0.2,
+          "layer": 3
+        }
+      },
+      { "item_renderer@item_renderer": {} }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($furnace + '_' + $tab_source + '_tab_slot_' + $item + '_view')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "show_fuel": {
+    "type": "panel",
+    "size": [16, 16],
+    "layer": 1,
+    "controls": [
+      {
+        "red": {
+          "type": "image",
+          "texture": "src/core/resources/fmarquespto/textures/white",
+          "$red_cell_size|default": [ "100%", "100%" ],
+          "size": "$red_cell_size",
+          "anchor_to": "center",
+          "anchor_from": "center",
+          "color": "red",
+          "alpha": 0.35,
+          "layer": 1
+        }
+      },
+      {
+        "red": {
+          "type": "image",
+          "texture": "src/core/resources/fmarquespto/textures/white",
+          "$red_cell_size|default": [ "100%", "100%" ],
+          "size": "$red_cell_size",
+          "anchor_to": "center",
+          "anchor_from": "center",
+          "color": "white",
+          "alpha": 0.2,
+          "layer": 3
+        }
+      },
+      { "lava_bucket@item_renderer": { "$item_id_aux": 21299210 } }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        // "source_control_name": "($furnace + '_' + $tab_source + '_tab_slot_' + $item + '_view')",
+        "source_control_name": "($furnace + '_tab_view')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "item_renderer": {
+    "type": "custom",
+    "renderer": "inventory_item_renderer",
+    "size": [16, 16],
+    "offset": [-0.5, -0.5],
+    "layer": 2,
+    "property_bag": {
+      "#item_id_aux": "$item_id_aux"
+    }
+  },
+
+  "default_slot_button@toggle_button_mcjava.toggle_button": {
+    "$toggle_button_name": "($furnace + '_tab')",
+    "$toggle_index": 0,
+    "anchor_from": "top_right",
+    "$toggle_default_state": true,
+    "anchor_to": "top_right",
+    "offset": [-11, 11],
+    "$toggle_control_name": "($furnace + '_tab_view')",
+    "$toggle_type_panel": "",
+    "$unchecked_toggle_bg": "resources.furnace_filter_unchecked",
+    "$checked_toggle_bg": "resources.furnace_filter_checked",
+    "$unchecked_hover_toggle_bg": "resources.furnace_filter_unchecked_hover",
+    "$checked_hover_toggle_bg": "resources.furnace_filter_checked_hover",
+    "$unchecked_locked_toggle_bg": "resources.furnace_filter_unchecked",
+    "$checked_locked_toggle_bg": "resources.furnace_filter_checked",
+    "size": [26, 16]
+  },
+
+  "slot_button@toggle_button_mcjava.toggle_button": {
+    "$toggle_button_name": "($furnace + '_tab')",
+    "$toggle_control_name": "($furnace + '_' + $tab_source + '_tab_slot_' + $item + '_view')",
+    "size": [25, 25],
+    "$toggle_type_panel": "furnace_recipes_mcjava.slot_button_content",
+    "$unchecked_toggle_bg": "resources.rb_default_slot",
+    "$checked_toggle_bg": "resources.rb_default_slot",
+    "$unchecked_hover_toggle_bg": "resources.rb_default_slot",
+    "$checked_hover_toggle_bg": "resources.rb_default_slot",
+    "$unchecked_locked_toggle_bg": "resources.rb_default_slot",
+    "$checked_locked_toggle_bg": "resources.rb_default_slot"
+  },
+
+  "slot_button_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "tooltip@tooltip_mcjava.tooltip": {
+          "visible": "($state = checked_hover or $state = unchecked_hover)",
+          "$tooltip_name": "$itemLangName"
+        }
+      },
+      {
+        "item_renderer": {
+          "type": "custom",
+          "renderer": "inventory_item_renderer",
+          "size": [16, 16],
+          "offset": [-1, -1],
+          "layer": 10,
+          "property_bag": {
+            "#item_id_aux": "$item_id_aux"
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,706 @@
+{
+  "namespace": "furnace_rb_search_mcjava",
+
+  "search_tab": {
+    "type": "panel",
+    "$tab_source": "search",
+    "$page_total_number": "3",
+    "controls": [
+      {
+        "page_1_panel": {
+          "type": "panel",
+          "controls": [
+            {
+              "page_1@furnace_rb_search_mcjava.search_page_1": {
+                "$ignore_left_button": true,
+                "$right_button_name": "furnace_search_tab_to_page_2",
+                "$right_control_name": "furnace_search_tab_page_2_view",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "furnace_search_tab_page_2_view",
+                    "source_property_name": "(not #toggle_state)",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "page_2_and_beyond_panel": {
+          "type": "panel",
+          "controls": [
+            {
+              "page_2@furnace_rb_search_mcjava.search_page_2": {
+                "$left_button_name": "furnace_search_tab_to_page_2",
+                "$left_control_name": "furnace_search_tab_page_2_view",
+                "$right_button_name": "furnace_search_tab_to_page_3",
+                "$right_control_name": "furnace_search_tab_page_3_view",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "furnace_search_tab_page_3_view",
+                    "source_property_name": "(not #toggle_state)",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "page_3@furnace_rb_search_mcjava.search_page_3": {
+                "$ignore_right_button": true,
+                "$left_button_name": "furnace_search_tab_to_page_3",
+                "$left_control_name": "furnace_search_tab_page_3_view",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "furnace_search_tab_page_3_view",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "furnace_search_tab_page_2_view",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "search_tab_view",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "search_page_1@furnace_recipes_mcjava.page_content_panel": {
+    "$page_current_number": "1",
+    "$page_recipes": [
+      {
+        "light_gray_glazed_terracotta@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 1,
+          "$item": "light_gray_glazed_terracotta",
+          "$itemLangName": "tile.glazedTerracotta.silver.name",
+          "grid_position": [0, 0],
+          "$item_id_aux": 14942208
+        }
+      },
+      {
+        "purple_glazed_terracotta@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 2,
+          "$item": "purple_glazed_terracotta",
+          "$itemLangName": "tile.glazedTerracotta.purple.name",
+          "grid_position": [1, 0],
+          "$item_id_aux": 14352384
+        }
+      },
+      {
+        "lime_glazed_terracotta@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 3,
+          "$item": "lime_glazed_terracotta",
+          "$itemLangName": "tile.glazedTerracotta.lime.name",
+          "grid_position": [2, 0],
+          "$item_id_aux": 14745600
+        }
+      },
+      {
+        "white_glazed_terracotta@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 4,
+          "$item": "white_glazed_terracotta",
+          "$itemLangName": "tile.glazedTerracotta.white.name",
+          "grid_position": [3, 0],
+          "$item_id_aux": 14417920
+        }
+      },
+      {
+        "yellow_glazed_terracotta@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 5,
+          "$item": "yellow_glazed_terracotta",
+          "$itemLangName": "tile.glazedTerracotta.yellow.name",
+          "grid_position": [4, 0],
+          "$item_id_aux": 14680064
+        }
+      },
+      {
+        "cooked_chicken@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 6,
+          "$item": "cooked_chicken",
+          "$itemLangName": "item.cooked_chicken.name",
+          "grid_position": [0, 1],
+          "$item_id_aux": 23986176
+        }
+      },
+      {
+        "redstone_dust@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 7,
+          "$item": "redstone_dust",
+          "$itemLangName": "item.redstone.name",
+          "grid_position": [1, 1],
+          "$item_id_aux": 21692416
+        }
+      },
+      {
+        "cracked_polished_blackstone_bricks@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 8,
+          "$item": "cracked_polished_blackstone_bricks",
+          "$itemLangName": "tile.cracked_polished_blackstone_bricks.name",
+          "grid_position": [2, 1],
+          "$item_id_aux": -18350080
+        }
+      },
+      {
+        "pink_glazed_terracotta@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 9,
+          "$item": "pink_glazed_terracotta",
+          "$itemLangName": "tile.glazedTerracotta.pink.name",
+          "grid_position": [3, 1],
+          "$item_id_aux": 14811136
+        }
+      },
+      {
+        "lime_dye@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 10,
+          "$item": "lime_dye",
+          "$itemLangName": "item.dye.lime.name",
+          "grid_position": [4, 1],
+          "$item_id_aux": 23003146
+        }
+      },
+      {
+        "cooked_cod@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 11,
+          "$item": "cooked_cod",
+          "$itemLangName": "item.cooked_fish.name",
+          "grid_position": [0, 2],
+          "$item_id_aux": 22937600
+        }
+      },
+      {
+        "diamond@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 12,
+          "$item": "diamond",
+          "$itemLangName": "item.diamond.name",
+          "grid_position": [1, 2],
+          "$item_id_aux": 17301504
+        }
+      },
+      {
+        "brown_glazed_terracotta@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 13,
+          "$item": "brown_glazed_terracotta",
+          "$itemLangName": "tile.glazedTerracotta.brown.name",
+          "grid_position": [2, 2],
+          "$item_id_aux": 15204352
+        }
+      },
+      {
+        "lapis_lazuli@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 14,
+          "$item": "lapis_lazuli",
+          "$itemLangName": "item.dye.blue.name",
+          "grid_position": [3, 2],
+          "$item_id_aux": 23003140
+        }
+      },
+      {
+        "smooth_stone@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 15,
+          "$item": "smooth_stone",
+          "$itemLangName": "tile.smooth_stone.name",
+          "grid_position": [4, 2],
+          "$item_id_aux": -11993088
+        }
+      },
+      {
+        "magenta_glazed_terracotta@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 16,
+          "$item": "magenta_glazed_terracotta",
+          "$itemLangName": "tile.glazedTerracotta.magenta.name",
+          "grid_position": [0, 3],
+          "$item_id_aux": 14548992
+        }
+      },
+      {
+        "black_glazed_terracotta@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 17,
+          "$item": "black_glazed_terracotta",
+          "$itemLangName": "tile.glazedTerracotta.black.name",
+          "grid_position": [1, 3],
+          "$item_id_aux": 15400960
+        }
+      },
+      {
+        "orange_glazed_terracotta@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 18,
+          "$item": "orange_glazed_terracotta",
+          "$itemLangName": "tile.glazedTerracotta.orange.name",
+          "grid_position": [2, 3],
+          "$item_id_aux": 14483456
+        }
+      },
+      {
+        "popped_chorus_fruit@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 19,
+          "$item": "popped_chorus_fruit",
+          "$itemLangName": "item.chorus_fruit_popped.name",
+          "grid_position": [3, 3],
+          "$item_id_aux": 28377088
+        }
+      },
+      {
+        "dried_kelp@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 20,
+          "$item": "dried_kelp",
+          "$itemLangName": "item.dried_kelp.name",
+          "grid_position": [4, 3],
+          "$item_id_aux": 30408704
+        }
+      }
+    ]
+  },
+
+  "search_page_2@furnace_recipes_mcjava.page_content_panel": {
+    "$page_current_number": "2",
+    "$page_recipes": [
+      {
+        "sponge@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 21,
+          "$item": "sponge",
+          "$itemLangName": "tile.sponge.dry.name",
+          "grid_position": [0, 0],
+          "$item_id_aux": 1245184
+        }
+      },
+      {
+        "netherite_scrap@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 22,
+          "$item": "netherite_scrap",
+          "$itemLangName": "item.netherite_scrap.name",
+          "grid_position": [1, 0],
+          "$item_id_aux": 49283072
+        }
+      },
+      {
+        "light_blue_glazed_terracotta@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 23,
+          "$item": "light_blue_glazed_terracotta",
+          "$itemLangName": "tile.glazedTerracotta.light_blue.name",
+          "grid_position": [2, 0],
+          "$item_id_aux": 14614528
+        }
+      },
+      {
+        "red_glazed_terracotta@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 24,
+          "$item": "red_glazed_terracotta",
+          "$itemLangName": "tile.glazedTerracotta.red.name",
+          "grid_position": [3, 0],
+          "$item_id_aux": 15335424
+        }
+      },
+      {
+        "brick@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 25,
+          "$item": "brick",
+          "$itemLangName": "item.brick.name",
+          "grid_position": [4, 0],
+          "$item_id_aux": 22020096
+        }
+      },
+      {
+        "iron_nugget@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 26,
+          "$item": "iron_nugget",
+          "$itemLangName": "item.iron_nugget.name",
+          "grid_position": [0, 1],
+          "$item_id_aux": 29622272
+        }
+      },
+      {
+        "smooth_quartz@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 27,
+          "$item": "smooth_quartz",
+          "$itemLangName": "tile.quartz_block.smooth.name",
+          "grid_position": [1, 1],
+          "$item_id_aux": 10158083
+        }
+      },
+      {
+        "smooth_sandstone@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 28,
+          "$item": "smooth_sandstone",
+          "$itemLangName": "tile.sandstone.smooth.name",
+          "grid_position": [2, 1],
+          "$item_id_aux": 1572866
+        }
+      },
+      {
+        "cooked_rabbit@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 29,
+          "$item": "cooked_rabbit",
+          "$itemLangName": "item.cooked_rabbit.name",
+          "grid_position": [3, 1],
+          "$item_id_aux": 27000832
+        }
+      },
+      {
+        "gray_glazed_terracotta@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 30,
+          "$item": "gray_glazed_terracotta",
+          "$itemLangName": "tile.glazedTerracotta.gray.name",
+          "grid_position": [4, 1],
+          "$item_id_aux": 14876672
+        }
+      },
+      {
+        "cooked_beef@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 31,
+          "$item": "cooked_beef",
+          "$itemLangName": "item.cooked_beef.name",
+          "grid_position": [0, 2],
+          "$item_id_aux": 23855104
+        }
+      },
+      {
+        "green_glazed_terracotta@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 32,
+          "$item": "green_glazed_terracotta",
+          "$itemLangName": "tile.glazedTerracotta.green.name",
+          "grid_position": [1, 2],
+          "$item_id_aux": 15269888
+        }
+      },
+      {
+        "cooked_salmon@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 33,
+          "$item": "cooked_salmon",
+          "$itemLangName": "item.cooked_salmon.name",
+          "grid_position": [2, 2],
+          "$item_id_aux": 30343168
+        }
+      },
+      {
+        "coal@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 34,
+          "$item": "coal",
+          "$itemLangName": "item.coal.name",
+          "grid_position": [3, 2],
+          "$item_id_aux": 17235968
+        }
+      },
+      {
+        "stone@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 35,
+          "$item": "stone",
+          "$itemLangName": "tile.stone.stone.name",
+          "grid_position": [4, 2],
+          "$item_id_aux": 65536
+        }
+      },
+      {
+        "smooth_red_sandstone@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 36,
+          "$item": "smooth_red_sandstone",
+          "$itemLangName": "tile.red_sandstone.smooth.name",
+          "grid_position": [0, 3],
+          "$item_id_aux": 11730946
+        }
+      },
+      {
+        "cooked_mutton@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 37,
+          "$item": "cooked_mutton",
+          "$itemLangName": "item.muttonCooked.name",
+          "grid_position": [1, 3],
+          "$item_id_aux": 27787264
+        }
+      },
+      {
+        "cyan_glazed_terracotta@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 38,
+          "$item": "cyan_glazed_terracotta",
+          "$itemLangName": "tile.glazedTerracotta.cyan.name",
+          "grid_position": [2, 3],
+          "$item_id_aux": 15007744
+        }
+      },
+      {
+        "charcoal@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 39,
+          "$item": "charcoal",
+          "$itemLangName": "item.charcoal.name",
+          "grid_position": [3, 3],
+          "$item_id_aux": 17235969
+        }
+      },
+      {
+        "cracked_stone_bricks@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 40,
+          "$item": "cracked_stone_bricks",
+          "$itemLangName": "tile.stonebrick.cracked.name",
+          "grid_position": [4, 3],
+          "$item_id_aux": 6422530
+        }
+      }
+    ]
+  },
+
+  "search_page_3@furnace_recipes_mcjava.page_content_panel": {
+    "$page_current_number": "3",
+    "$page_recipes": [
+      {
+        "iron_ingot@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 41,
+          "$item": "iron_ingot",
+          "$itemLangName": "item.iron_ingot.name",
+          "grid_position": [0, 0],
+          "$item_id_aux": 17367040
+        }
+      },
+      {
+        "emerald@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 42,
+          "$item": "emerald",
+          "$itemLangName": "item.emerald.name",
+          "grid_position": [1, 0],
+          "$item_id_aux": 25427968
+        }
+      },
+      {
+        "cracked_nether_bricks@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 43,
+          "$item": "cracked_nether_bricks",
+          "$itemLangName": "tile.cracked_nether_bricks.name",
+          "grid_position": [2, 0],
+          "$item_id_aux": -19857408
+        }
+      },
+      {
+        "glass@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 44,
+          "$item": "glass",
+          "$itemLangName": "tile.glass.name",
+          "grid_position": [3, 0],
+          "$item_id_aux": 1310720
+        }
+      },
+      {
+        "blue_glazed_terracotta@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 45,
+          "$item": "blue_glazed_terracotta",
+          "$itemLangName": "tile.glazedTerracotta.blue.name",
+          "grid_position": [4, 0],
+          "$item_id_aux": 15138816
+        }
+      },
+      {
+        "quartz@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 46,
+          "$item": "quartz",
+          "$itemLangName": "item.quartz.name",
+          "grid_position": [0, 1],
+          "$item_id_aux": 26607616
+        }
+      },
+      {
+        "green_dye@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 47,
+          "$item": "green_dye",
+          "$itemLangName": "item.dye.green.name",
+          "grid_position": [1, 1],
+          "$item_id_aux": 23003138
+        }
+      },
+      {
+        "cooked_porkchop@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 48,
+          "$item": "cooked_porkchop",
+          "$itemLangName": "item.porkchop_cooked.name",
+          "grid_position": [2, 1],
+          "$item_id_aux": 20971520
+        }
+      },
+      {
+        "gold_ingot@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 49,
+          "$item": "gold_ingot",
+          "$itemLangName": "item.gold_ingot.name",
+          "grid_position": [3, 1],
+          "$item_id_aux": 17432576
+        }
+      },
+      {
+        "gold_nugget@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 50,
+          "$item": "gold_nugget",
+          "$itemLangName": "item.gold_nugget.name",
+          "grid_position": [4, 1],
+          "$item_id_aux": 24313856
+        }
+      },
+      {
+        "baked_potato@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 51,
+          "$item": "baked_potato",
+          "$itemLangName": "item.baked_potato.name",
+          "grid_position": [0, 2],
+          "$item_id_aux": 25755648
+        }
+      },
+      {
+        "nether_brick@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 52,
+          "$item": "nether_brick",
+          "$itemLangName": "item.netherbrick.name",
+          "grid_position": [1, 2],
+          "$item_id_aux": 26542080
+        }
+      },
+      {
+        "terracotta@furnace_recipes_mcjava.slot_button": {
+          "$toggle_index": 53,
+          "$item": "terracotta",
+          "$itemLangName": "tile.hardened_clay.name",
+          "grid_position": [2, 2],
+          "$item_id_aux": 11272192
+        }
+      }
+    ]
+  },
+
+  /* Show On Furnace */
+
+  "search_input_recipes": {
+    "type": "panel",
+    "$tab_source": "search",
+    "controls": [
+      { "light_gray_glazed_terracotta@furnace_recipes_mcjava.show_item": { "$item": "light_gray_glazed_terracotta", "$item_id_aux": 10420232 } },
+      { "purple_glazed_terracotta@furnace_recipes_mcjava.show_item": { "$item": "purple_glazed_terracotta", "$item_id_aux": 10420234 } },
+      { "lime_glazed_terracotta@furnace_recipes_mcjava.show_item": { "$item": "lime_glazed_terracotta", "$item_id_aux": 10420229 } },
+      { "white_glazed_terracotta@furnace_recipes_mcjava.show_item": { "$item": "white_glazed_terracotta", "$item_id_aux": 10420224 } },
+      { "yellow_glazed_terracotta@furnace_recipes_mcjava.show_item": { "$item": "yellow_glazed_terracotta", "$item_id_aux": 10420228 } },
+      { "redstone_dust@furnace_recipes_mcjava.show_item": { "$item": "redstone_dust", "$item_id_aux": 4784128 } },
+      { "cracked_polished_blackstone_bricks@furnace_recipes_mcjava.show_item": { "$item": "cracked_polished_blackstone_bricks", "$item_id_aux": -19070976 } },
+      { "pink_glazed_terracotta@furnace_recipes_mcjava.show_item": { "$item": "pink_glazed_terracotta", "$item_id_aux": 10420230 } },
+      { "lime_dye@furnace_recipes_mcjava.show_item": { "$item": "lime_dye", "$item_id_aux": -10223616 } },
+      { "diamond@furnace_recipes_mcjava.show_item": { "$item": "diamond", "$item_id_aux": 3670016 } },
+      { "brown_glazed_terracotta@furnace_recipes_mcjava.show_item": { "$item": "brown_glazed_terracotta", "$item_id_aux": 10420236 } },
+      { "lapis_lazuli@furnace_recipes_mcjava.show_item": { "$item": "lapis_lazuli", "$item_id_aux": 1376256 } },
+      { "smooth_stone@furnace_recipes_mcjava.show_item": { "$item": "smooth_stone", "$item_id_aux": 65536 } },
+      { "magenta_glazed_terracotta@furnace_recipes_mcjava.show_item": { "$item": "magenta_glazed_terracotta", "$item_id_aux": 10420226 } },
+      { "black_glazed_terracotta@furnace_recipes_mcjava.show_item": { "$item": "black_glazed_terracotta", "$item_id_aux": 10420239 } },
+      { "orange_glazed_terracotta@furnace_recipes_mcjava.show_item": { "$item": "orange_glazed_terracotta", "$item_id_aux": 10420225 } },
+      { "popped_chorus_fruit@furnace_recipes_mcjava.show_item": { "$item": "popped_chorus_fruit", "$item_id_aux": 28311552 } },
+      { "dried_kelp@furnace_recipes_mcjava.show_item": { "$item": "dried_kelp", "$item_id_aux": -9043968 } },
+      { "sponge@furnace_recipes_mcjava.show_item": { "$item": "sponge", "$item_id_aux": 1245185 } },
+      { "netherite_scrap@furnace_recipes_mcjava.show_item": { "$item": "netherite_scrap", "$item_id_aux": -17760256 } },
+      { "light_blue_glazed_terracotta@furnace_recipes_mcjava.show_item": { "$item": "light_blue_glazed_terracotta", "$item_id_aux": 10420227 } },
+      { "red_glazed_terracotta@furnace_recipes_mcjava.show_item": { "$item": "red_glazed_terracotta", "$item_id_aux": 10420238 } },
+      { "brick@furnace_recipes_mcjava.show_item": { "$item": "brick", "$item_id_aux": 22085632 } },
+      { "iron_nugget@furnace_recipes_mcjava.show_item": { "$item": "iron_nugget", "$item_id_aux": 20119552 } },
+      { "smooth_quartz@furnace_recipes_mcjava.show_item": { "$item": "smooth_quartz", "$item_id_aux": 10158080 } },
+      { "smooth_sandstone@furnace_recipes_mcjava.show_item": { "$item": "smooth_sandstone", "$item_id_aux": 1572864 } },
+      { "gray_glazed_terracotta@furnace_recipes_mcjava.show_item": { "$item": "gray_glazed_terracotta", "$item_id_aux": 10420231 } },
+      { "green_glazed_terracotta@furnace_recipes_mcjava.show_item": { "$item": "green_glazed_terracotta", "$item_id_aux": 10420237 } },
+      { "coal@furnace_recipes_mcjava.show_item": { "$item": "coal", "$item_id_aux": 1048576 } },
+      { "stone@furnace_recipes_mcjava.show_item": { "$item": "stone", "$item_id_aux": 262144 } },
+      { "smooth_red_sandstone@furnace_recipes_mcjava.show_item": { "$item": "smooth_red_sandstone", "$item_id_aux": 11730944 } },
+      { "cyan_glazed_terracotta@furnace_recipes_mcjava.show_item": { "$item": "cyan_glazed_terracotta", "$item_id_aux": 10420233 } },
+      { "charcoal@furnace_recipes_mcjava.show_item": { "$item": "charcoal", "$item_id_aux": 1114112 } },
+      { "cracked_stone_bricks@furnace_recipes_mcjava.show_item": { "$item": "cracked_stone_bricks", "$item_id_aux": 6422528 } },
+      { "iron_ingot@furnace_recipes_mcjava.show_item": { "$item": "iron_ingot", "$item_id_aux": 983040 } },
+      { "emerald@furnace_recipes_mcjava.show_item": { "$item": "emerald", "$item_id_aux": 8454144 } },
+      { "cracked_nether_bricks@furnace_recipes_mcjava.show_item": { "$item": "cracked_nether_bricks", "$item_id_aux": 7340032 } },
+      { "glass@furnace_recipes_mcjava.show_item": { "$item": "glass", "$item_id_aux": 786432 } },
+      { "blue_glazed_terracotta@furnace_recipes_mcjava.show_item": { "$item": "blue_glazed_terracotta", "$item_id_aux": 10420235 } },
+      { "quartz@furnace_recipes_mcjava.show_item": { "$item": "quartz", "$item_id_aux": 10027008 } },
+      { "green_dye@furnace_recipes_mcjava.show_item": { "$item": "green_dye", "$item_id_aux": 5308416 } },
+      { "gold_ingot@furnace_recipes_mcjava.show_item": { "$item": "gold_ingot", "$item_id_aux": 917504 } },
+      { "gold_nugget@furnace_recipes_mcjava.show_item": { "$item": "gold_nugget", "$item_id_aux": 20643840 } },
+      { "nether_brick@furnace_recipes_mcjava.show_item": { "$item": "nether_brick", "$item_id_aux": 5701632 } },
+      { "terracotta@furnace_recipes_mcjava.show_item": { "$item": "terracotta", "$item_id_aux": 5373952 } },
+      { "steak@furnace_recipes_mcjava.show_item": { "$item": "cooked_beef", "$item_id_aux": 23789568 } },
+      { "cooked_rabbit@furnace_recipes_mcjava.show_item": { "$item": "cooked_rabbit", "$item_id_aux": 26935296 } },
+      { "dried_kelp@furnace_recipes_mcjava.show_item": { "$item": "dried_kelp", "$item_id_aux": 21954560 } },
+      { "cooked_mutton@furnace_recipes_mcjava.show_item": { "$item": "cooked_mutton", "$item_id_aux": 27721728 } },
+      { "cooked_chicken@furnace_recipes_mcjava.show_item": { "$item": "cooked_chicken", "$item_id_aux": 23920640 } },
+      { "cooked_pork@furnace_recipes_mcjava.show_item": { "$item": "cooked_porkchop", "$item_id_aux": 20905984 } },
+      { "baked_potato@furnace_recipes_mcjava.show_item": { "$item": "baked_potato", "$item_id_aux": 25690112 } },
+      { "cooked_salmon@furnace_recipes_mcjava.show_item": { "$item": "cooked_salmon", "$item_id_aux": 30146560 } },
+      { "cooked_cod@furnace_recipes_mcjava.show_item": { "$item": "cooked_cod", "$item_id_aux": 22872064 } }
+    ]
+  },
+
+  "search_output_recipes": {
+    "type": "panel",
+    "$tab_source": "search",
+    "controls": [
+      { "light_gray_glazed_terracotta@furnace_recipes_mcjava.show_item": { "$item": "light_gray_glazed_terracotta", "$item_id_aux": 14942208 } },
+      { "purple_glazed_terracotta@furnace_recipes_mcjava.show_item": { "$item": "purple_glazed_terracotta", "$item_id_aux": 14352384 } },
+      { "lime_glazed_terracotta@furnace_recipes_mcjava.show_item": { "$item": "lime_glazed_terracotta", "$item_id_aux": 14745600 } },
+      { "white_glazed_terracotta@furnace_recipes_mcjava.show_item": { "$item": "white_glazed_terracotta", "$item_id_aux": 14417920 } },
+      { "yellow_glazed_terracotta@furnace_recipes_mcjava.show_item": { "$item": "yellow_glazed_terracotta", "$item_id_aux": 14680064 } },
+      { "redstone_dust@furnace_recipes_mcjava.show_item": { "$item": "redstone_dust", "$item_id_aux": 21692416 } },
+      { "cracked_polished_blackstone_bricks@furnace_recipes_mcjava.show_item": { "$item": "cracked_polished_blackstone_bricks", "$item_id_aux": -18350080 } },
+      { "pink_glazed_terracotta@furnace_recipes_mcjava.show_item": { "$item": "pink_glazed_terracotta", "$item_id_aux": 14811136 } },
+      { "lime_dye@furnace_recipes_mcjava.show_item": { "$item": "lime_dye", "$item_id_aux": 23003146 } },
+      { "diamond@furnace_recipes_mcjava.show_item": { "$item": "diamond", "$item_id_aux": 17301504 } },
+      { "brown_glazed_terracotta@furnace_recipes_mcjava.show_item": { "$item": "brown_glazed_terracotta", "$item_id_aux": 15204352 } },
+      { "lapis_lazuli@furnace_recipes_mcjava.show_item": { "$item": "lapis_lazuli", "$item_id_aux": 23003140 } },
+      { "smooth_stone@furnace_recipes_mcjava.show_item": { "$item": "smooth_stone", "$item_id_aux": -11993088 } },
+      { "magenta_glazed_terracotta@furnace_recipes_mcjava.show_item": { "$item": "magenta_glazed_terracotta", "$item_id_aux": 14548992 } },
+      { "black_glazed_terracotta@furnace_recipes_mcjava.show_item": { "$item": "black_glazed_terracotta", "$item_id_aux": 15400960 } },
+      { "orange_glazed_terracotta@furnace_recipes_mcjava.show_item": { "$item": "orange_glazed_terracotta", "$item_id_aux": 14483456 } },
+      { "popped_chorus_fruit@furnace_recipes_mcjava.show_item": { "$item": "popped_chorus_fruit", "$item_id_aux": 28377088 } },
+      { "dried_kelp@furnace_recipes_mcjava.show_item": { "$item": "dried_kelp", "$item_id_aux": 30408704 } },
+      { "sponge@furnace_recipes_mcjava.show_item": { "$item": "sponge", "$item_id_aux": 1245184 } },
+      { "netherite_scrap@furnace_recipes_mcjava.show_item": { "$item": "netherite_scrap", "$item_id_aux": 49283072 } },
+      { "light_blue_glazed_terracotta@furnace_recipes_mcjava.show_item": { "$item": "light_blue_glazed_terracotta", "$item_id_aux": 14614528 } },
+      { "red_glazed_terracotta@furnace_recipes_mcjava.show_item": { "$item": "red_glazed_terracotta", "$item_id_aux": 15335424 } },
+      { "brick@furnace_recipes_mcjava.show_item": { "$item": "brick", "$item_id_aux": 22020096 } },
+      { "iron_nugget@furnace_recipes_mcjava.show_item": { "$item": "iron_nugget", "$item_id_aux": 29622272 } },
+      { "smooth_quartz@furnace_recipes_mcjava.show_item": { "$item": "smooth_quartz", "$item_id_aux": 10158083 } },
+      { "smooth_sandstone@furnace_recipes_mcjava.show_item": { "$item": "smooth_sandstone", "$item_id_aux": 1572866 } },
+      { "gray_glazed_terracotta@furnace_recipes_mcjava.show_item": { "$item": "gray_glazed_terracotta", "$item_id_aux": 14876672 } },
+      { "green_glazed_terracotta@furnace_recipes_mcjava.show_item": { "$item": "green_glazed_terracotta", "$item_id_aux": 15269888 } },
+      { "coal@furnace_recipes_mcjava.show_item": { "$item": "coal", "$item_id_aux": 17235968 } },
+      { "stone@furnace_recipes_mcjava.show_item": { "$item": "stone", "$item_id_aux": 65536 } },
+      { "smooth_red_sandstone@furnace_recipes_mcjava.show_item": { "$item": "smooth_red_sandstone", "$item_id_aux": 11730946 } },
+      { "cyan_glazed_terracotta@furnace_recipes_mcjava.show_item": { "$item": "cyan_glazed_terracotta", "$item_id_aux": 15007744 } },
+      { "charcoal@furnace_recipes_mcjava.show_item": { "$item": "charcoal", "$item_id_aux": 17235969 } },
+      { "cracked_stone_bricks@furnace_recipes_mcjava.show_item": { "$item": "cracked_stone_bricks", "$item_id_aux": 6422530 } },
+      { "iron_ingot@furnace_recipes_mcjava.show_item": { "$item": "iron_ingot", "$item_id_aux": 17367040 } },
+      { "emerald@furnace_recipes_mcjava.show_item": { "$item": "emerald", "$item_id_aux": 25427968 } },
+      { "cracked_nether_bricks@furnace_recipes_mcjava.show_item": { "$item": "cracked_nether_bricks", "$item_id_aux": -19857408 } },
+      { "glass@furnace_recipes_mcjava.show_item": { "$item": "glass", "$item_id_aux": 1310720 } },
+      { "blue_glazed_terracotta@furnace_recipes_mcjava.show_item": { "$item": "blue_glazed_terracotta", "$item_id_aux": 15138816 } },
+      { "quartz@furnace_recipes_mcjava.show_item": { "$item": "quartz", "$item_id_aux": 26607616 } },
+      { "green_dye@furnace_recipes_mcjava.show_item": { "$item": "green_dye", "$item_id_aux": 23003138 } },
+      { "gold_ingot@furnace_recipes_mcjava.show_item": { "$item": "gold_ingot", "$item_id_aux": 17432576 } },
+      { "gold_nugget@furnace_recipes_mcjava.show_item": { "$item": "gold_nugget", "$item_id_aux": 24313856 } },
+      { "nether_brick@furnace_recipes_mcjava.show_item": { "$item": "nether_brick", "$item_id_aux": 26542080 } },
+      { "terracotta@furnace_recipes_mcjava.show_item": { "$item": "terracotta", "$item_id_aux": 11272192 } },
+      { "cooked_beef@furnace_recipes_mcjava.show_item": { "$item": "cooked_beef", "$item_id_aux": 23855104 } },
+      { "cooked_rabbit@furnace_recipes_mcjava.show_item": { "$item": "cooked_rabbit", "$item_id_aux": 27000832 } },
+      { "dried_kelp@furnace_recipes_mcjava.show_item": { "$item": "dried_kelp", "$item_id_aux": 30408704 } },
+      { "cooked_mutton@furnace_recipes_mcjava.show_item": { "$item": "cooked_mutton", "$item_id_aux": 27787264 } },
+      { "cooked_chicken@furnace_recipes_mcjava.show_item": { "$item": "cooked_chicken", "$item_id_aux": 23986176 } },
+      { "cooked_pork@furnace_recipes_mcjava.show_item": { "$item": "cooked_porkchop", "$item_id_aux": 20971520 } },
+      { "baked_potato@furnace_recipes_mcjava.show_item": { "$item": "baked_potato", "$item_id_aux": 25755648 } },
+      { "cooked_salmon@furnace_recipes_mcjava.show_item": { "$item": "cooked_salmon", "$item_id_aux": 30343168 } },
+      { "cooked_cod@furnace_recipes_mcjava.show_item": { "$item": "cooked_cod", "$item_id_aux": 22937600 } }
+    ]
+  }
+}
