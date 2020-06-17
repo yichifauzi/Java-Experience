@@ -1,0 +1,6 @@
+{
+  "screenshot_screen": {
+    "$screen_content": "screenshot_mcjava.screenshot_screen_content_panel",
+    "$screen_background": "screen_mcjava.screen_background"
+  }
+}

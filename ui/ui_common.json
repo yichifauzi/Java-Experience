@@ -3,6 +3,7 @@
     "type": "screen",
     "vr_mode": "$is_holographic",
     "$screen_content|default": "common.base_screen_empty_panel",
+    "$screen_safe|default": "common.safezone_outer_matrix",
     "$screen_bg_content|default": "common.base_screen_empty_panel",
     "$popup_factory|default": "common.popup_dialog_factory",
     "$screen_animations|default": [
@@ -68,7 +69,7 @@
               }
             },
             {
-              "safezone_screen_matrix@common.safezone_outer_matrix": {
+              "safezone_screen_matrix@$screen_safe": {
                 "anims": "$screen_animations",
                 "animation_reset_name": "screen_animation_reset",
                 "propagate_alpha": true,

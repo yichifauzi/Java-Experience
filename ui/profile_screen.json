@@ -1,0 +1,6 @@
+{
+  "profile_screen": {
+    "$screen_safe": "profile_mcjava.profile_screen_content_panel",
+    "$screen_bg_content": "profile_mcjava.profile_background"
+  }
+}

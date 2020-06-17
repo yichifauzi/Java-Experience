@@ -243,7 +243,7 @@
     "anchor_to": "$text_anchor",
     "alpha": "$text_alpha",
     "text_alignment": "$text_alignment",
-    "$text_shadow|default": false,
+    "$text_shadow|default": true,
     "$text_color|default": [0.62, 0.62, 0.62],
     "$locked_text_color|default": [0.62, 0.62, 0.62],
     "$text_alpha|default": 1.0,

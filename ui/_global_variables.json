@@ -1,7 +1,7 @@
 {
   /* Debug */
   "$force_render_helpers": false,
-  "$force_render_below": true,
+  "$force_render_below": "(not $game_pad)",
 
   /* Texts */
   "$minecraft_text": "Minecraft",
@@ -17,6 +17,7 @@
   "$better_mouse_keys_grid": false,
   "$better_controller_keys_grid": true,
   "$better_slider_text": true,
+  "$recipe_book": "best", //Best - All Pages (Default) / Better - Less Pages / Faster - Scrolling Panel
 
   /* Button Text Color */
   "$button_default_text_color": [1.0, 1.0, 1.0],
@@ -69,6 +70,13 @@
   "$scoreboard_header_bg_alpha": 0.4,
   "$scoreboard_list_bg_alpha": 0.3,
 
+  /* Book Text Color */
+  "$book_title_text_color": [0.0, 0.0, 0.0],
+  "$book_author_text_color": [0.7, 0.7, 0.7],
+  "$book_warning_text_color": [0.0, 0.0, 0.0],
+  "$book_page_number_text_color": [0.0, 0.0, 0.0],
+  "$book_page_text_color": [0.0, 0.0, 0.0],
+
   /* Player Position Def */
   "$player_position_anchor": "top_right",
   "$player_position_offset": [-1, 1],
@@ -98,6 +106,8 @@
   "$bars_resolution": "256x",
   "$options_background_resolution": "256x",
   
+  "$book_resolution": "256x",
+
   "$anvil_resolution": "256x",
   "$beacon_resolution": "256x",
   "$brewing_stand_resolution": "256x",

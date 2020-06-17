@@ -1,0 +1,6 @@
+{
+  "patch_notes_screen": {
+    "$screen_content": "patch_notes_mcjava.patch_notes_screen_content_panel",
+    "$screen_bg_content": "screen_mcjava.dirt_background"
+  }
+}

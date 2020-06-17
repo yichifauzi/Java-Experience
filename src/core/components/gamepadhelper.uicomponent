@@ -55,6 +55,19 @@
     ]
   },
 
+  "gamepad_helper_left_trigger@gamepad_helper": {
+    "$icon_texture": "#controller_left_trigger",
+    "$icon_description_bind": "#controller_left_trigger_description",
+    "$icon_image_ref": "icon@gamepadhelper.gamepad_icon_button"
+  },
+
+  "gamepad_helper_right_trigger@gamepad_helper": {
+    "$icon_texture": "#controller_right_trigger",
+    "$icon_description_bind": "#controller_right_trigger_description",
+    "$icon_image_ref": "icon@gamepadhelper.gamepad_icon_button"
+  },
+
+
   "container_gamepad_helpers@common.gamepad_helpers": {
     "$a_b_stack_panel_orientation|default": "horizontal",
     "$x_y_stack_panel_orientation|default": "horizontal",

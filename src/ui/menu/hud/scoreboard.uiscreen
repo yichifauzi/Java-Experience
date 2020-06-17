@@ -20,7 +20,7 @@
               "bg": {
                 "type": "image",
                 "size": ["100%", 10],
-                "texture": "src/javaui/resources/fmarquespto/textures/white",
+                "texture": "src/core/resources/fmarquespto/textures/white",
                 "color": "$scoreboard_header_bg_color",
                 "alpha": "$scoreboard_header_bg_alpha"
               }
@@ -51,7 +51,7 @@
       {
         "list": {
           "type": "image",
-          "texture": "src/javaui/resources/fmarquespto/textures/white",
+          "texture": "src/core/resources/fmarquespto/textures/white",
           "color": "$scoreboard_list_bg_color",
           "alpha": "$scoreboard_list_bg_alpha",
           "inherit_max_sibling_width": true,

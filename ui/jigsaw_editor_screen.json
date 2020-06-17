@@ -1,0 +1,7 @@
+{
+  "jigsaw_editor_screen": {
+    "$screen_content": "jigsaw_block_mcjava.jigsaw_block_screen_content_panel",
+    "$screen_bg_content": "screen_mcjava.screen_background",
+    "force_render_below": "$force_render_below"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "permissions_screen": {
+    "$screen_content": "permissions_mcjava.permissions_screen_content_panel",
+    "$screen_background": "common_mcjava.screen_background"
+  }
+}

@@ -1,0 +1,210 @@
+/* By @FMarquesPTO. All rights reserved. */
+{
+  "namespace": "permissions_mcjava",
+
+  "permissions_screen_content_panel": {
+    "type": "panel",
+    "controls": [
+      { "content@permissions_mcjava.main_content_panel": {} },
+      { "bottom_content@permissions_mcjava.bottom_content": {} }
+    ]
+  },
+
+  "main_content_panel": {
+    "type": "panel",
+    "size": ["70%", "100%" ],
+    "controls": [
+      {
+        "selector_area@permissions_mcjava.selector_area": {
+          "size": [202, 202],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [0, 32]
+        }
+      },
+      {
+        "content_area@permissions_mcjava.content_area": {
+          "size": [154, 182],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [0, 32]
+        }
+      },
+      {
+        "exit@screen_mcjava.exit_button": {
+          "size": [200, 20],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [23, 228]
+        }
+      }
+    ]
+  },
+
+  "black_bg": {
+    "type": "image",
+    "texture": "src/core/resources/fmarquespto/textures/white",
+    "color": "black",
+    "size": ["100%", "100%"],
+    "alpha": 0.35,
+    "layer": -4
+  },
+
+  "selector_area@common.modal_area_panel_base": {
+    "$menu_cancel_button_id": "button.menu_exit",
+    "$modal_binding_name": "#selector_area_focused",
+    "layer": 2,
+    "controls": [
+      { "top_shadow@screen_mcjava.shadow_top": {} },
+      { "bg@permissions_mcjava.black_bg": {} },
+      {
+        "player_scrolling_panel@scrolling_mcjava.scrolling_panel": {
+          "$scrolling_content": "permissions.players_grid_panel"
+        }
+      },
+      { "bottom_shadow@screen_mcjava.shadow_bottom": {} }
+    ]
+  },
+
+  "content_area@common.modal_area_panel_base": {
+    "$menu_cancel_button_id": "button.back_to_selector_area",
+    "$modal_binding_name": "#content_area_focused",
+    "controls": [
+      { "top_shadow@screen_mcjava.shadow_top": {} },
+      { "bg@permissions_mcjava.black_bg": {} },
+      {
+        "permissions_options_scrolling_panel@scrolling_mcjava.scrolling_panel": {
+          "$scroll_bar_offset": ["50% - 5px", 0 ],
+          "$scrolling_content": "permissions_mcjava.permissions_options_panel"
+        }
+      },
+      { "bottom_shadow@screen_mcjava.shadow_bottom": {} }
+    ]
+  },
+
+  "permissions_options_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "inner_permissions_options_panel": {
+          "type": "stack_panel",
+          "size": [ "100% - 10px", "100%c" ],
+          "offset": [-3, 0],
+          "controls": [
+            { "permissions_options_stack_panel@permissions_mcjava.permissions_options_stack_panel": {} }
+          ]
+        }
+      }
+    ]
+  },
+
+  "permissions_options_stack_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": ["100%", "100%c"],
+    "controls": [
+      {
+        "permissions_padding_1": {
+          "type": "panel",
+          "size": [ "100%", 4 ]
+        }
+      },
+      { "permission_level_dropdown@permissions_mcjava.permission_level_panel": {} },
+      {
+        "permissions_padding_1": {
+          "type": "panel",
+          "size": [ "100%", 2 ]
+        }
+      },
+      { "permissions_options_grid@permissions_mcjava.permissions_options_grid": {} },
+      {
+        "permissions_padding_3": {
+          "type": "panel",
+          "size": [ "100%", 2 ]
+        }
+      }
+    ]
+  },
+
+  "permission_level_panel@switch_option_mcjava.switch_option_panel": {
+    "size": [152, 20],
+    "$toggle_enabled_binding_name": "#can_edit_permissions",
+    "$switch_option_label": "Permissions",
+    "controls": [
+      {
+        "peaceful@switch_option_mcjava.switch_option": {
+          "size": ["100%- 2px", 20],
+          "$option_action_text": "permissions.level.visitor",
+          "$this_action": "#permission_level_radio_visitor",
+          "$next_action": "#permission_level_radio_member"
+        }
+      },
+      {
+        "easy@switch_option_mcjava.switch_option": {
+          "size": ["100%- 2px", 20],
+          "$option_action_text": "permissions.level.member",
+          "$this_action": "#permission_level_radio_member",
+          "$next_action": "#permission_level_radio_operator"
+        }
+      },
+      {
+        "normal@switch_option_mcjava.switch_option": {
+          "size": ["100%- 2px", 20],
+          "$option_action_text": "permissions.level.operator",
+          "$this_action": "#permission_level_radio_operator",
+          "$next_action": "#permission_level_radio_custom"
+        }
+      },
+      {
+        "hard@switch_option_mcjava.switch_option": {
+          "size": ["100%- 2px", 20],
+          "$option_action_text": "permissions.level.custom",
+          "$this_action": "#permission_level_radio_custom",
+          "$next_action": "#permission_level_radio_visitor"
+        }
+      }
+    ]
+  },
+  
+  "permissions_options_grid": {
+    "type": "grid",
+    "size": [ "100%", "default" ],
+    "collection_name": "permissions_collection",
+    "grid_item_template": "permissions_mcjava.permissions_options_grid_item",
+    "grid_dimension_binding": "#permissions_grid_dimension",
+    "bindings": [ { "binding_name": "#permissions_grid_dimension" } ]
+  },
+
+  "permissions_options_grid_item": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%", 22 ],
+    "controls": [
+      {
+        "option_toggle@option_toggle_mcjava.option_toggle": {
+          "size": ["100%", 20],
+          "$option_toggle_text": "#option_name",
+          "$option_toggle_state_text": "#option_state_name",
+          "$toggle_text_bindings": [
+            {
+              "binding_name": "#option_name",
+              "binding_type": "collection",
+              "binding_collection_name": "permissions_collection"
+            }
+          ],
+          "$toggle_state_text_bindings": [
+            {
+              "binding_name": "#option_state_name",
+              "binding_type": "collection",
+              "binding_collection_name": "permissions_collection"
+            }
+          ],
+          "$toggle_tts_header_binding_type": "collection",
+          "$toggle_tts_header_binding_collection_name": "permissions_collection",
+          "$toggle_tts_header": "#option_name"
+        }
+      }
+    ]
+  }
+}

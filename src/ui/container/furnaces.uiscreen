@@ -20,9 +20,10 @@
         }
       },
       {
-        "with_recipe_book": {
-          "type": "panel",
+        "stack": {
+          "type": "stack_panel",
           "size": [325, 166],
+          "orientation": "horizontal",
           "anchor_from": "center",
           "anchor_to": "center",
           "layer": 10,
@@ -30,7 +31,43 @@
             {
               "recipe_book@$recipe_book": {
                 "anchor_from": "top_left",
-                "anchor_to": "top_left" 
+                "anchor_to": "top_left",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "$furnace_view",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "with_rb": {
+                "type": "panel",
+                "size": [2, 0],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "$furnace_view",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "without_rb_0": {
+                "type": "panel",
+                "size": [74.5, 0],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "$furnace_view",
+                    "source_property_name": "(not #toggle_state)",
+                    "target_property_name": "#visible"
+                  }
+                ]
               }
             },
             {
@@ -57,45 +94,6 @@
                   { "gamepad_cursor@common.gamepad_cursor_button": {} }
                 ]
               }
-            }
-          ],
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_control_name": "$furnace_view",
-              "source_property_name": "#toggle_state",
-              "target_property_name": "#visible"
-            }
-          ]
-        }
-      },
-      {
-        "furnace_root@common.root_panel": {
-          "size": [176, 166],
-          "layer": 1,
-          "controls": [
-            { "@$container_bg": {} },
-            {
-              "screen_inventory": {
-                "type": "panel",
-                "layer": 2,
-                "controls": [
-                  { "@$specified_content": {} },
-                  { "inventory_grid_panel@container_mcjava.inventory_grid_panel": {} },
-                  { "hotbar_grid@container_mcjava.hotbar_grid": {} },
-                  { "inventory_take_progress_icon_button@container_mcjava.inventory_take_progress_icon_button": {} }
-                ]
-              }
-            },
-            { "inventory_selected_icon_button@container_mcjava.inventory_selected_icon_button": {} },
-            { "gamepad_cursor@common.gamepad_cursor_button": {} }
-          ],
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_control_name": "$furnace_view",
-              "source_property_name": "(not #toggle_state)",
-              "target_property_name": "#visible"
             }
           ]
         }
@@ -154,13 +152,7 @@
           "offset": [56, 36]
         }
       },
-      {
-        "recipe_book_button@furnace_recipes_mcjava.furnace_recipe_book_button": {
-          "offset": "$furnaces_container_recipe_book_button_offset",
-          "anchor_from": "$furnaces_container_recipe_book_button_anchor",
-          "anchor_to": "$furnaces_container_recipe_book_button_anchor"
-        }
-      },
+      { "recipe_book_button@furnace_recipes_mcjava.furnace_recipe_book_button": {} },
       { "show_on@$show_on": {} },
       { "ingredient@furnaces_mcjava.ingredient_item": {} },
       { "fuel@furnaces_mcjava.fuel_item": {} },

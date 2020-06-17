@@ -10,15 +10,15 @@
     "follows_cursor": true,
     "consume_hover_events": false,
     "always_handle_pointer": true,
-    "consume_event": false,
     "layer": 120,
+    "allow_clipping": false,
     "controls": [
       {
         "bg": {
           "type": "image",
           "texture": "src/core/resources/fmarquespto/textures/tooltip",
-          "size": ["100%c + 7px", "100%c + 6px"],
-          "offset": ["50%c + 8px", "50%c - 14px"],
+          "size": ["100%c + 8px", "100%c + 8px"],
+          "offset": ["50%c + 12px", "50%c - 12px"],
           "nineslice_size": 2,
           "bindings": "$tooltip_bindings",
           "$tooltip_bindings|default": [],

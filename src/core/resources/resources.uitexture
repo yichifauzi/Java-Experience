@@ -564,6 +564,68 @@
     ]
   },
 
+  /* Book */
+
+  "book_bg@resources.resource_image": {
+    "$rsrc_location": "src/assets/minecraft/textures/gui/book",
+    "size": [146, 180],
+    "variables": [
+      { "requires": "($book_resolution = 256x)", "$uv": [20, 1], "$uv_size": [146, 180] },
+      { "requires": "($book_resolution = 512x)", "$uv": [40, 2], "$uv_size": [292, 360] },
+      { "requires": "($book_resolution = 1024x)", "$uv": [80, 4], "$uv_size": [584, 720] },
+      { "requires": "($book_resolution = 2048x)", "$uv": [160, 8], "$uv_size": [1168, 1440] },
+      { "requires": "($book_resolution = 4096x)", "$uv": [320, 16], "$uv_size": [2336, 2880] }
+    ]
+  },
+
+  "prev_button_default@resources.resource_image": {
+    "$rsrc_location": "src/assets/minecraft/textures/gui/book",
+    "size": [18, 10],
+    "variables": [
+      { "requires": "($book_resolution = 256x)", "$uv": [3, 207], "$uv_size": [18, 10] },
+      { "requires": "($book_resolution = 512x)", "$uv": [6, 414], "$uv_size": [36, 20] },
+      { "requires": "($book_resolution = 1024x)", "$uv": [12, 828], "$uv_size": [72, 40] },
+      { "requires": "($book_resolution = 2048x)", "$uv": [24, 1656], "$uv_size": [144, 80] },
+      { "requires": "($book_resolution = 4096x)", "$uv": [48, 3312], "$uv_size": [288, 160] }
+    ]
+  },
+
+  "prev_button_hover@resources.resource_image": {
+    "$rsrc_location": "src/assets/minecraft/textures/gui/book",
+    "size": [18, 10],
+    "variables": [
+      { "requires": "($book_resolution = 256x)", "$uv": [26, 207], "$uv_size": [18, 10] },
+      { "requires": "($book_resolution = 512x)", "$uv": [52, 414], "$uv_size": [36, 20] },
+      { "requires": "($book_resolution = 1024x)", "$uv": [104, 828], "$uv_size": [72, 40] },
+      { "requires": "($book_resolution = 2048x)", "$uv": [208, 1656], "$uv_size": [144, 80] },
+      { "requires": "($book_resolution = 4096x)", "$uv": [416, 3312], "$uv_size": [288, 160] }
+    ]
+  },
+
+  "next_button_default@resources.resource_image": {
+    "$rsrc_location": "src/assets/minecraft/textures/gui/book",
+    "size": [18, 10],
+    "variables": [
+      { "requires": "($book_resolution = 256x)", "$uv": [3, 194], "$uv_size": [18, 10] },
+      { "requires": "($book_resolution = 512x)", "$uv": [6, 388], "$uv_size": [36, 20] },
+      { "requires": "($book_resolution = 1024x)", "$uv": [12, 776], "$uv_size": [72, 40] },
+      { "requires": "($book_resolution = 2048x)", "$uv": [24, 1552], "$uv_size": [144, 80] },
+      { "requires": "($book_resolution = 4096x)", "$uv": [48, 3104], "$uv_size": [288, 160] }
+    ]
+  },
+
+  "next_button_hover@resources.resource_image": {
+    "$rsrc_location": "src/assets/minecraft/textures/gui/book",
+    "size": [18, 10],
+    "variables": [
+      { "requires": "($book_resolution = 256x)", "$uv": [26, 194], "$uv_size": [18, 10] },
+      { "requires": "($book_resolution = 512x)", "$uv": [52, 388], "$uv_size": [36, 20] },
+      { "requires": "($book_resolution = 1024x)", "$uv": [104, 776], "$uv_size": [72, 40] },
+      { "requires": "($book_resolution = 2048x)", "$uv": [208, 1552], "$uv_size": [144, 80] },
+      { "requires": "($book_resolution = 4096x)", "$uv": [416, 3104], "$uv_size": [288, 160] }
+    ]
+  },
+
   /* Anvil */
 
   "anvil_bg@resources.resource_image": {

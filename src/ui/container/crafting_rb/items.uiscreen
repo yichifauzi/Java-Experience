@@ -1,0 +1,31 @@
+{
+  "namespace": "crafting_rb_items_mcjava",
+
+  "creative_items_tab_content@crafting_rb_mcjava.common_tab_content": {
+    "$tab_name": "items",
+    "$page_total_number": "19",
+    "$ignore_from_nineteen": true,
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "items_tab_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "survival_items_tab_content@crafting_rb_mcjava.common_tab_content": {
+    "$tab_name": "items",
+    "$page_total_number": "10",
+    "$ignore_from_ten": true,
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "items_tab_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  }
+}

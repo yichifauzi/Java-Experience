@@ -164,7 +164,7 @@
     "anchor_from": "center",
     "size": [200, 20],
     "controls": [
-      { "middle@popup_mcjava.modal_middle_button": { "size": [200, 20] } }
+      { "middle@popup_mcjava.modal_right_button": { "size": [200, 20] } }
     ]
   },
   

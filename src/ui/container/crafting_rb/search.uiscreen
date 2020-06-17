@@ -1,0 +1,44 @@
+{
+  "namespace": "crafting_rb_search_mcjava",
+
+  "creative_search_tab_content@crafting_rb_mcjava.common_tab_content": {
+    "$tab_name": "search",
+    "$page_total_number": "58",
+    "variables": [
+      {
+        "requires": "($recipe_book = better)",
+        "$page_total_number": "19",
+        "$ignore_from_nineteen": true
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "search_tab_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "survival_search_tab_content@crafting_rb_mcjava.common_tab_content": {
+    "$tab_name": "search",
+    "$page_total_number": "30",
+    "$ignore_from_thirty": true,
+    "variables": [
+      {
+        "requires": "($recipe_book = better)",
+        "$page_total_number": "19",
+        "$ignore_from_nineteen": true
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "search_tab_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  }
+}

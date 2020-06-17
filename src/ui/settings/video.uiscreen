@@ -17,6 +17,7 @@
         "render_dragon_button@settings_mcjava.open_button": {
           "size": [100, 20],
           "$toggle_index": 1,
+          "enabled": false,
           "$toggle_button_text": "Advanced",
           "$toggle_control_name": "advanced_video_view",
           "anchor_from": "top_right",
