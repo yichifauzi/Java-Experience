@@ -501,7 +501,7 @@
           "offset": [0, 30],
           "layer": 10,
           "controls": [
-            { "@recipes_mcjava.recipe_book_scroll_panel": { "offset": [0, 0], "$scroll_box_visible": false, "clips_children": true, "$scroll_view_port_offset": "$scroll_position" } }
+            { "@recipes_mcjava.recipe_book_scroll_panel": { "offset": [0, 0], "$scroll_box_visible": false, "clips_children": true, "$enable_gesture_control": false, "$scroll_view_port_offset": "$scroll_position" } }
           ]
         }
       },

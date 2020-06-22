@@ -1,0 +1,6 @@
+{
+  "world_templates_screen": {
+    "$screen_content": "world_templates_mcjava.world_templates_content_panel",
+    "$screen_bg_content": "content.dirt_bg"
+  }
+}

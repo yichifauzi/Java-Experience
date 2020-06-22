@@ -33,64 +33,33 @@
           ]
         }
       },
-      {
-        "space_zero@screen_mcjava.vspace": {}
-      },
+      { "space_zero@screen_mcjava.vspace": {} },
       {
         "stack_zero@screen_mcjava.stack": {
           "controls": [
-            {
-              "font_type@chat_settings_mcjava.font_type_panel": {}
-            },
-            {
-              "fill@screen_mcjava.hfill": {}
-            },
-            {
-              "font_size@chat_settings_mcjava.font_size_slider": {}
-            }
+            { "font_type@chat_settings_mcjava.font_type_panel": {} },
+            { "fill@screen_mcjava.hfill": {} },
+            { "font_size@chat_settings_mcjava.font_size_slider": {} }
           ]
         }
       },
-      {
-        "space_zero@screen_mcjava.vspace": {}
-      },
+      { "space_zero@screen_mcjava.vspace": {} },
       {
         "stack_zero@screen_mcjava.stack": {
           "controls": [
-            {
-              "chat_color@chat_settings_mcjava.chat_color_panel": {}
-            },
-            {
-              "fill@screen_mcjava.hfill": {}
-            },
-            {
-              "font_smentions_colorize@chat_settings_mcjava.mentions_color_panel": {}
-            }
+            { "chat_color@chat_settings_mcjava.chat_color_panel": {} },
+            { "fill@screen_mcjava.hfill": {} },
+            { "font_smentions_colorize@chat_settings_mcjava.mentions_color_panel": {} }
           ]
         }
       },
-      {
-        "space_one@screen_mcjava.vspace": {
-          "size": [
-            0,
-            16
-          ]
-        }
-      },
+      { "space_one@screen_mcjava.vspace": { "size": [0, 16] } },
       {
         "stack_two@screen_mcjava.stack": {
           "controls": [
-            {
-              "fill_left@screen_mcjava.hfill": {}
-            },
-            {
-              "back@screen_mcjava.exit_button": {
-                "$pressed_button_name": "button.close_chat_settings"
-              }
-            },
-            {
-              "fill_right@screen_mcjava.hfill": {}
-            }
+            { "fill_left@screen_mcjava.hfill": {} },
+            { "back@screen_mcjava.exit_button": { "$pressed_button_name": "button.close_chat_settings" } },
+            { "fill_right@screen_mcjava.hfill": {} }
           ]
         }
       }
@@ -229,9 +198,7 @@
         "binding_name": "$slider_label",
         "binding_condition": "visible"
       },
-      {
-        "binding_name": "$slider_tts_text_value"
-      }
+      { "binding_name": "$slider_tts_text_value" }
     ],
     "bindings": [
       {

@@ -1,0 +1,7 @@
+{
+  "custom_templates_screen@common.base_screen": {
+    "force_render_below": false,
+    "$screen_content": "custom_templates_mcjava.custom_templates_screen_content_panel",
+    "$screen_bg_content": "content.dirt_bg"
+  }
+}

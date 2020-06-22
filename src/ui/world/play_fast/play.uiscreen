@@ -1,0 +1,93 @@
+{
+  "namespace": "play_fast_mcjava",
+
+  "play_screen_content_panel": {
+    "type": "panel",
+    "controls": [
+      {
+        "singleplayer@singleplayer_fast_mcjava.singleplayer_screen_content_panel": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "multiplayer_view",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "panel": {
+          "type": "panel",
+          "controls": [
+            {
+              "multiplayer@multiplayer_fast_mcjava.multiplayer_screen_content_panel": {
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "realms_view",
+                    "source_property_name": "(not #toggle_state)",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "realms": {
+                "type": "panel",
+                "controls": [
+                  { "realms@realms_fast_mcjava.realms_screen_content_panel": { "ignored": "$pre_release" } },
+                  { "realms_warning@realms_fast_mcjava.realms_warning_screen_content_panel": { "ignored": "(not $pre_release)" } }
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "realms_view",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "multiplayer_view",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /* Content */
+
+  "left_button@toggle_button_mcjava.toggle_button": {
+    "size": [20, 20],
+    "$toggle_index": 0,
+    "$custom_mapping": true,
+    "$custom_mapping_from_id": "button.menu_tab_left",
+    "$custom_mapping_to_id": "button.menu_tab_left",
+    "$custom_mapping_type": "global",
+    "$toggle_button_text": "<",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [10, 6]
+  },
+
+  "right_button@toggle_button_mcjava.toggle_button": {
+    "size": [20, 20],
+    "$toggle_index": 1,
+    "$toggle_button_text": ">",
+    "$custom_mapping": true,
+    "$custom_mapping_from_id": "button.menu_tab_right",
+    "$custom_mapping_to_id": "button.menu_tab_right",
+    "$custom_mapping_type": "global",
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "offset": [-10, 6]
+  }
+}

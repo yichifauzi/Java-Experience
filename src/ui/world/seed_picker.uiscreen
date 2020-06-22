@@ -1,0 +1,418 @@
+{
+  "namespace": "seed_picker_mcjava",
+
+  "seed_picker_screen_content_panel@content.scroll_screen": {
+    "$top_content": "seed_picker_mcjava.top_content",
+    "$top_content_size": ["100%", 44],
+    "$middle_content": "seed_picker_mcjava.scroll_content",
+    "$bottom_content": "seed_picker_mcjava.bottom_content",
+    "$no_clip_path": true,
+    "$scroll_clip_path": false
+  },
+
+  "top_content": {
+    "type": "panel",
+    "controls": [
+      { "title@screen_mcjava.title": { "offset": [0, 5], "text": "seedPicker.title" } },
+      { "search_box@seed_picker_mcjava.search_box": {} }
+    ]
+  },
+
+  "scroll_content": {
+    "type": "stack_panel",
+    "size": ["100%", "100%c"],
+    "controls": [
+      { "space_top@content.v4px": {} },
+      {
+        "selection": {
+          "type": "stack_panel",
+          "size": ["100%", "100%c"],
+          "clips_children": true,
+          "controls": [
+            { "seeds_selection_panel@seed_picker_mcjava.seeds_selection_panel": {} },
+            { "seeds_grid@seed_picker_mcjava.seeds_grid": {} }
+          ]
+        }
+      },
+      { "space_bottom@content.v2px": {} }
+    ]
+  },
+
+  "bottom_content": {
+    "type": "panel",
+    "size": [310, 20],
+    "controls": [
+      { "seed_use@seed_picker_mcjava.seed_use_panel": {} },
+      {
+        "back@content.exit_button": {
+          "$button_text": "gui.cancel",
+          "offset": [80, -0.5],
+          "size": [150, 20]
+        }
+      }
+    ]
+  },
+
+  "search_box@text_box_mcjava.text_box": {
+    "size": [202, 22],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [0, 18],
+    "$text_edit_box_content_binding_name": "#search_box_binding",
+    "$text_box_name": "#search_box_name",
+    "$placeholder_text": "seedPicker.search"
+  },
+
+  "seeds_grid": {
+    "type": "grid",
+    "size": ["100%", "default"],
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "grid_item_template": "seed_picker_mcjava.seed_item_grid",
+    "grid_rescaling_type": "horizontal",
+    "collection_name": "ugc_items",
+    "bindings": [
+      {
+        "binding_name": "#ugc_max_grid_items",
+        "binding_name_override": "#maximum_grid_items"
+      }
+    ]
+  },
+
+  "seed_item_grid": {
+    "type": "panel",
+    "size": ["100%", 36],
+    "layer": 2,
+    "controls": [ { "item@seed_picker_mcjava.seeds_grid_item_content_panel": {} } ]
+  },
+
+  "seeds_grid_item_content_panel": {
+    "type": "panel",
+    "size": [266, 32],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "layer": 2,
+    "controls": [
+      { "screenshot@seed_picker_mcjava.world_image": { "layer": 4 } },
+      { "seed_item_button@seed_picker_mcjava.seed_item_button": {} },
+      {
+        "text_panel": {
+          "type": "panel",
+          "size": ["100% - 34px", "100%"],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [34, 0],
+          "layer": 2,
+          "controls": [ { "text_panel@seed_picker_mcjava.seeds_item_text_panel": {} } ]
+        }
+      }
+    ]
+  },
+
+  "world_label": {
+    "type": "label",
+    "color": "white",
+    "text": "#text",
+    "shadow": false,
+    "layer": 10,
+    "bindings": [
+      {
+        "binding_type": "collection",
+        "binding_collection_name": "ugc_items",
+        "binding_name": "#text"
+      }
+    ]
+  },
+
+  "world_image": {
+    "type": "image",
+    "size": [32, 32],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "force_texture_reload": true,
+    "fill": true,
+    "bindings": [
+      {
+        "binding_name": "#texture_name",
+        "binding_name_override": "#texture",
+        "binding_type": "collection",
+        "binding_collection_name": "ugc_items"
+      },
+      {
+        "binding_name": "#texture_locationtype",
+        "binding_name_override": "#texture_file_system",
+        "binding_type": "collection",
+        "binding_collection_name": "ugc_items"
+      }
+    ]
+  },
+
+  "seeds_item_text_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": ["100%", "100%"],
+    "layer": 15,
+    "controls": [
+      {
+        "name_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": ["100%", "10px"],
+          "controls": [
+            { "seed_name@seed_picker_mcjava.world_label": { "size": [ "fill", 10] } }
+          ]
+        }
+      },
+      { "fill@content.vfill": {} }
+    ]
+  },
+
+  "seeds_selection_panel": {
+    "type": "panel",
+    "anchor_to": "top_middle",
+    "anchor_from": "top_middle",
+    "size": ["100%", 0],
+    "layer": 2,
+    "controls": [
+      {
+        "content": {
+          "type": "stack_panel",
+          "size": [236, 0],
+          "offset": [17, 0],
+          "anchor_to": "top_middle",
+          "anchor_from": "top_middle",
+          "collection_name": "$collection_name",
+          "controls": [
+            { "1@seed_picker_mcjava.select_item_button": { "$item_index": 1 } },
+            { "2@seed_picker_mcjava.select_item_button": { "$item_index": 2 } },
+            { "3@seed_picker_mcjava.select_item_button": { "$item_index": 3 } },
+            { "4@seed_picker_mcjava.select_item_button": { "$item_index": 4 } },
+            { "5@seed_picker_mcjava.select_item_button": { "$item_index": 5 } },
+            { "6@seed_picker_mcjava.select_item_button": { "$item_index": 6 } },
+            { "7@seed_picker_mcjava.select_item_button": { "$item_index": 7 } },
+            { "8@seed_picker_mcjava.select_item_button": { "$item_index": 8 } },
+            { "9@seed_picker_mcjava.select_item_button": { "$item_index": 9 } },
+            { "10@seed_picker_mcjava.select_item_button": { "$item_index": 10 } },
+            { "11@seed_picker_mcjava.select_item_button": { "$item_index": 11 } },
+            { "12@seed_picker_mcjava.select_item_button": { "$item_index": 12 } },
+            { "13@seed_picker_mcjava.select_item_button": { "$item_index": 13 } },
+            { "14@seed_picker_mcjava.select_item_button": { "$item_index": 14 } },
+            { "15@seed_picker_mcjava.select_item_button": { "$item_index": 15 } },
+            { "16@seed_picker_mcjava.select_item_button": { "$item_index": 16 } },
+            { "17@seed_picker_mcjava.select_item_button": { "$item_index": 17 } },
+            { "18@seed_picker_mcjava.select_item_button": { "$item_index": 18 } }
+          ]
+        }
+      }
+    ]
+  }, 
+
+  "seed_item_button@common.button": {
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$pressed_button_name": "button.ugc_item",
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "ugc_items"
+      }
+    ],
+    "size": [32, 32],
+    "layer": 5,
+    "controls": [
+      {
+        "hover": {
+          "type": "panel",
+          "size": [32, 32],
+          "controls": [
+            {
+              "bg@resources.text_box_hover": {
+                "size": [270, 36],
+                "offset": [-2, -2],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "layer": -4
+              }
+            },
+            { "overlay@resource_packs_mcjava.overlay": { "layer": 3 } },
+            { "select@resources.world_select_hover": { "layer": 4 } }
+          ]
+        }
+      },
+      {
+        "pressed": {
+          "type": "panel",
+          "size": [32, 32],
+          "controls": [
+            { "overlay@resource_packs_mcjava.overlay": { "layer": 3 } },
+            { "select@resources.world_select_hover": { "layer": 4 } }
+          ]
+        }
+      }
+    ]
+  },
+
+  "select_item_button": {
+    "type": "panel",
+    "size": [234, 36],
+    "collection_index": "($item_index - 1)",
+    "controls": [ { "select@seed_picker_mcjava.select_button": {} } ]
+  },
+
+  "select_button@toggle_button_mcjava.toggle_button": {
+    "$toggle_button_name": "selection",
+    "anchor_from": "right_middle",
+    "anchor_to": "right_middle",
+    "size": [234, 36],
+    "$toggle_index": "$item_index",
+    "$toggle_state_panel": "seed_picker_mcjava.select_button_content",
+    "$toggle_control_name": "('item_' + ($item_index))",
+    "$double_mapping": true,
+    "$double_mapping_id": "button.ugc_item",
+    "$toggle_bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "$collection_name"
+      },
+      {
+        "binding_type": "$toggle_binding_type",
+        "binding_condition": "$toggle_binding_condition",
+        "binding_collection_name": "$toggle_grid_collection_name",
+        "binding_name": "$toggle_state_binding_name",
+        "binding_name_override": "#toggle_state"
+      },
+      {
+        "binding_type": "$toggle_enabled_binding_type",
+        "binding_condition": "$toggle_enabled_binding_condition",
+        "binding_collection_name": "$toggle_grid_collection_name",
+        "binding_name": "$toggle_enabled_binding_name",
+        "binding_name_override": "#enabled"
+      },
+      {
+        "binding_type": "$toggle_collection_details_type",
+        "binding_collection_name": "$toggle_collection_detail_name"
+      },
+      {
+        "binding_type": "$toggle_tts_header_binding_type",
+        "binding_condition": "$toggle_tts_header_binding_condition",
+        "binding_collection_name": "$toggle_tts_header_binding_collection_name",
+        "binding_name": "$toggle_tts_header"
+      },
+      {
+        "binding_type": "$toggle_tts_value_binding_type",
+        "binding_condition": "$toggle_tts_value_binding_condition",
+        "binding_collection_name": "$toggle_tts_value_binding_collection_name",
+        "binding_name": "$toggle_tts_override_toggle_value"
+      },
+      {
+        "binding_type": "$toggle_tts_enabled_binding_type",
+        "binding_name": "#tts_enabled",
+        "binding_name_override": "#focus_enabled"
+      }
+    ]
+  },
+  
+  "select_button_content": {
+    "type": "panel",
+    "size": [234, 36],
+    "$show_bg|default": false,
+    "$show_tool|default": false,
+    "variables": [
+      {
+        "requires": "($state = unchecked_hover or $state = checked or $state = checked_hover)",
+        "$show_bg": true
+      },
+      {
+        "requires": "($state = unchecked_hover or $state = checked_hover)",
+        "$show_tool": true
+      }
+    ],
+    "controls": [
+      {
+        "checked_bg@resources.text_box_default": {
+          "visible": "$show_bg",
+          "size": [270, "100%"],
+          "offset": [-16, 0],
+          "layer": -1
+        }
+      },
+      {
+        "tool": {
+          "type": "panel",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [-32, 2],
+          "size": [32, 32],
+          "visible": "$show_tool",
+          "controls": [
+            { "overlay@resource_packs_mcjava.overlay": { "layer": 5 } },
+            { "select@resources.world_select_default": { "layer": 6 } }
+          ]
+        }
+      }
+    ]
+  },
+
+  "seed_use_panel": {
+    "type": "panel",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "offset": [-80, -0.5],
+    "size": [150, 20],
+    "layer": 10,
+    "$item_template": "seed_picker_mcjava.seed_use_button",
+    "controls": [
+      {
+        "seed_use@content.locked_button": {
+          "size": [150, 20],
+          "$button_text": "seedPicker.use",
+          "layer": 1
+        }
+      },
+      { "1@seed_picker_mcjava.use_grid_item": { "$item_index": 0, "$rindex": "1" } },
+      { "2@seed_picker_mcjava.use_grid_item": { "$item_index": 1, "$rindex": "2" } },
+      { "3@seed_picker_mcjava.use_grid_item": { "$item_index": 2,"$rindex": "3" } },
+      { "4@seed_picker_mcjava.use_grid_item": { "$item_index": 3, "$rindex": "4" } },
+      { "5@seed_picker_mcjava.use_grid_item": { "$item_index": 4, "$rindex": "5" } },
+      { "6@seed_picker_mcjava.use_grid_item": { "$item_index": 5, "$rindex": "6" } },
+      { "7@seed_picker_mcjava.use_grid_item": { "$item_index": 6, "$rindex": "7" } },
+      { "8@seed_picker_mcjava.use_grid_item": { "$item_index": 7, "$rindex": "8" } },
+      { "9@seed_picker_mcjava.use_grid_item": { "$item_index": 8, "$rindex": "9" } },
+      { "10@seed_picker_mcjava.use_grid_item": { "$item_index": 9, "$rindex": "10" } },
+      { "11@seed_picker_mcjava.use_grid_item": { "$item_index": 10, "$rindex": "11" } },
+      { "12@seed_picker_mcjava.use_grid_item": { "$item_index": 11, "$rindex": "12" } },
+      { "13@seed_picker_mcjava.use_grid_item": { "$item_index": 12, "$rindex": "13" } },
+      { "14@seed_picker_mcjava.use_grid_item": { "$item_index": 13, "$rindex": "14" } },
+      { "15@seed_picker_mcjava.use_grid_item": { "$item_index": 14, "$rindex": "15" } },
+      { "16@seed_picker_mcjava.use_grid_item": { "$item_index": 15, "$rindex": "16" } },
+      { "17@seed_picker_mcjava.use_grid_item": { "$item_index": 16, "$rindex": "17" } },
+      { "18@seed_picker_mcjava.use_grid_item": { "$item_index": 17, "$rindex": "18" } }
+    ]
+  },
+
+  "use_grid_item@content.grid_index_panel": {
+    "$collection_name": "ugc_items",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "('item_' + $rindex)",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "seed_use_button@button_mcjava.button": {
+    "$pressed_button_name": "button.ugc_item",
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "ugc_items"
+      }
+    ],
+    "size": [150, 20],
+    "$button_text": "seedPicker.use"
+  }
+}

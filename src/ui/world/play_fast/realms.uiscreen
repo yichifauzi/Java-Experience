@@ -1,0 +1,134 @@
+{
+  "namespace": "realms_fast_mcjava",
+
+  "realms_screen_content_panel@content.scroll_screen": {
+    "$top_content": "realms_fast_mcjava.top_content",
+    "$middle_content": "realms_fast_mcjava.scroll_content",
+    "$bottom_content": "realms_fast_mcjava.bottom_content"
+  },
+
+  "top_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "left@play_fast_mcjava.left_button": {
+          "$toggle_button_name": "to_realms",
+          "$toggle_control_name": ""
+        }
+      }
+    ]
+  },
+
+  /* Realms Warning */
+
+  "realms_warning_screen_content_panel": {
+    "type": "panel",
+    "controls": [
+      {
+        "centered_panel": {
+          "type": "stack_panel",
+          "size": ["100%", 138],
+          "anchor_from": "center",
+          "anchor_to": "top_middle",
+          "offset": [0, "-38%"],
+          "controls": [
+            {
+              "panel_0": {
+                "type": "panel",
+                "size": ["100%", 10],
+                "controls": [
+                  {
+                    "title": {
+                      "type": "label",
+                      "color": "red",
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "shadow": true,
+                      "text": "mco.client.incompatible.title",
+                      "text_alignment": "center"
+                    }
+                  }
+                ]
+              }
+            },
+            { "space_0@screen_mcjava.vspace": { "size": [0, 18] } },
+            {
+              "panel_1": {
+                "type": "panel",
+                "size": ["100%", 10],
+                "controls": [
+                  {
+                    "title": {
+                      "type": "label",
+                      "shadow": true,
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "text": "mco.client.incompatible.msg.line1",
+                      "text_alignment": "center"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "panel_2": {
+                "type": "panel",
+                "size": ["100%", 11],
+                "controls": [
+                  {
+                    "title": {
+                      "type": "label",
+                      "shadow": true,
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "text": "mco.client.incompatible.msg.line2",
+                      "text_alignment": "center"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "panel_3": {
+                "type": "panel",
+                "size": ["100%", 12],
+                "controls": [
+                  {
+                    "title": {
+                      "type": "label",
+                      "shadow": true,
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "text": "mco.client.incompatible.msg.line3",
+                      "text_alignment": "center"
+                    }
+                  }
+                ]
+              }
+            },
+            { "space_1@screen_mcjava.vspace": { "size": [0, 58] } },
+            {
+              "panel_4": {
+                "type": "panel",
+                "size": ["100%", 20],
+                "controls": [
+                  {
+                    "back@play_fast_mcjava.left_button": {
+                      "$toggle_button_name": "to_realms",
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "offset": [0, 0],
+                      "$toggle_button_text": "gui.ok",
+                      "size": [200, 20],
+                      "$toggle_control_name": ""
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -13,11 +13,14 @@
   /* Options */
   "$edition_name": "java",
   "$disabled_vignette": false,
+  "$show_loading_screens_tips": true,
+
   "$lock_storage_management": true,
   "$better_mouse_keys_grid": false,
   "$better_controller_keys_grid": true,
   "$better_slider_text": true,
   "$recipe_book": "best", //Best - All Pages (Default) / Better - Less Pages / Faster - Scrolling Panel
+  "$play_screen": "fast", //Better - Buttons (Default) / Faster - Switch
 
   /* Button Text Color */
   "$button_default_text_color": [1.0, 1.0, 1.0],

@@ -68,27 +68,33 @@
     "anchor_to": "top_middle",
     "anchor_from": "center",
     "offset": [0, "-26%"],
+    "$title|default": "popup_mcjava.modal_title_text",
+    "$description|default": "popup_mcjava.modal_label_panel",
+    "$top_space|default": [0, 10],
+    "$bottom_space|default": [0, 40],
+    "$top_controls|default": [],
+    "$bottom_controls|default": [],
     "controls": [
       {
         "title": {
           "type": "stack_panel",
           "size": ["100%", "100%c"],
           "controls": [
-            { "title@popup_mcjava.modal_title_text": {} }
+            { "title@$title": {} }
           ]
         }
       },
-      { "space_0@screen_mcjava.vspace": { "size": [0, 10] } },
+      { "space_0@screen_mcjava.vspace": { "size": "$top_space", "controls": "$top_controls" } },
       {
         "desc": {
           "type": "panel",
           "size": ["100%", "100%c"],
           "controls": [
-            { "description@popup_mcjava.modal_label_panel": {} }
+            { "description@$description": {} }
           ]
         }
       },
-      { "space_1@screen_mcjava.vspace": { "size": [0, 39] } },
+      { "space_1@screen_mcjava.vspace": { "size": "$bottom_space", "controls": "$bottom_controls" } },
       {
         "buttons": {
           "type": "panel",

@@ -1,0 +1,526 @@
+{
+  "namespace": "world_progress_mcjava",
+
+  "world_progress_screen_content_panel": {
+    "type": "panel",
+    "controls": [
+      { "content@world_progress_mcjava.worlds_content_panel": {} },
+      { "popup_dialog_factory@world_progress_mcjava.popup_dialog_factory": {} }
+    ]
+  },
+
+  "overworld_progress_screen_content_panel": {
+    "type": "panel",
+    "controls": [
+      { "content@world_progress_mcjava.dimension_content_panel": {} },
+      { "popup_dialog_factory@world_progress_mcjava.popup_dialog_factory": {} }
+    ]
+  },
+
+  "nether_progress_screen_content_panel@world_progress_mcjava.overworld_progress_screen_content_panel": {},
+  "the_end_progress_screen_content_panel@world_progress_mcjava.overworld_progress_screen_content_panel": {},
+  "world_convert_progress_screen_content_panel@world_progress_mcjava.world_progress_screen_content_panel": {},
+  "delete_progress_screen_content_panel@world_progress_mcjava.world_progress_screen_content_panel": {},
+  "modal_progress_screen_content_panel@world_progress_mcjava.world_progress_screen_content_panel": {},
+
+  "world_save_progress_screen_content_panel@world_progress_mcjava.world_progress_screen_content_panel": {
+    "type": "panel",
+    "layer": 50,
+    "controls": [
+      {
+        "progress_title_text@progress.progress_title_text": {
+          "color": "white",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "shadow": true,
+          "text": "menu.savingLevel",
+          "offset": [0, 70]
+        }
+      },
+      { "popup_dialog_factory@world_progress_mcjava.popup_dialog_factory": {} }
+    ]
+  },
+
+  "worlds_content_panel": {
+    "type": "panel",
+    "controls": [
+      {
+        "progress_title_text@progress.progress_title_text": {
+          "color": "white",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "shadow": true,
+          "offset": [0, 70]
+        }
+      },
+      {
+        "world_progress@world_progress_mcjava.world_progress": {
+          "anchor_from": "center",
+          "anchor_to": "center"
+        }
+      },
+      { "@progress_bar_text": {} },
+      { "@cancel_button": {} }
+    ]
+  },
+
+  "world_progress": {
+    "type": "panel",
+    "size": [90, 90],
+    "offset": [0, 10],
+    "layer": 5,
+    "controls": [
+      { "full_progress_bar_icon@world_progress_mcjava.full_world_progress": { "layer": 4 } },
+      { "@empty_progress_bar_icon": {} }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#loading_bar_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "progress_bar_text@progress.progress_screen_text": {
+    "size": ["default", 20],
+    "max_size": ["80%", 20],
+    "text": "#progress_text",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [0, 22],
+    "visible": "$show_loading_screens_tips",
+    "shadow": true,
+    "bindings": [ { "binding_name": "#progress_text" } ]
+  },
+
+  "cancel_button@button_mcjava.button": {
+    "$pressed_button_name": "button.menu_exit",
+    "$button_text": "gui.cancel",
+    "anchor_from": "bottom_middle", 
+    "anchor_to": "bottom_middle",
+    "offset": [0, "30%"],
+    "bindings": [
+      {
+        "binding_name": "#cancel_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "empty_progress_bar_icon": {
+    "type": "image",
+    "texture": "src/core/resources/fmarquespto/textures/white",
+    "size": ["100%", "100%"],
+    "color": "black",
+    "layer": 1
+  },
+
+  "percentage": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": ["100%c", 10],
+    "anchor_from": "top_middle", 
+    "anchor_to": "top_middle",
+    "offset": [0, -20],
+    "controls": [
+      {
+        "per": {
+          "type": "label",
+          "text": "$per",
+          "layer": 1,
+          "bindings": [
+            {
+              "binding_name": "$1",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "percent": {
+          "type": "label",
+          "color": "$text_color",
+          "shadow": true,
+          "layer": 10,
+          "text": "gui.percentage"
+        }
+      }
+    ]
+  },
+
+  "full_world_progress": {
+    "type": "image",
+    "texture": "src/core/resources/fmarquespto/textures/loading/world_loading_center",
+    "clip_direction": "left",
+    "size": ["100%", "100%"],
+    "clip_pixelperfect": true,
+    "layer": 5,
+    "bindings": [
+      {
+        "binding_name": "#loading_bar_percentage",
+        "binding_name_override": "#clip_ratio"
+      }
+    ]
+  },
+
+  "popup_dialog_factory": {
+    "type": "factory",
+    "control_ids": {
+      "test": "dialog@progress.popup_dialog_base",
+      "add_on_only": "add_on_only@world_progress_mcjava.add_on_only",
+      "add_on_confirmation": "add_on_only@world_progress_mcjava.add_on_confirmation",
+      "add_on_with_optional_texture_pack": "add_on_only@world_progress_mcjava.add_on_with_optional_texture_pack",
+      "add_on_with_texture_pack": "add_on_only@world_progress_mcjava.add_on_with_texture_pack",
+      "texture_pack_optional": "add_on_only@world_progress_mcjava.texture_pack_optional",
+      "texture_pack_required": "add_on_only@world_progress_mcjava.texture_pack_required",
+      "online_safety_dialog": "online_safety_dialog@world_progress_mcjava.online_safety_popup"
+    }
+  },
+
+  /* Popups */
+
+  "simple_popup_base@popup_dialog.popup_dialog": {
+    "size": ["100%", "100%"],
+    "layer": 100,
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "modal.escape",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_up",
+        "to_button_id": "button.menu_up",
+        "mapping_type": "global",
+        "scope": "view"
+      },
+      {
+        "from_button_id": "button.menu_down",
+        "to_button_id": "button.menu_down",
+        "mapping_type": "global",
+        "scope": "view"
+      },
+      {
+        "from_button_id": "button.menu_left",
+        "to_button_id": "button.menu_left",
+        "mapping_type": "global",
+        "scope": "view"
+      },
+      {
+        "from_button_id": "button.menu_right",
+        "to_button_id": "button.menu_right",
+        "mapping_type": "global",
+        "scope": "view"
+      }
+    ],
+    "$use_top_button|default": false,
+    "$top_button_press|default": "",
+    "$top_button_text|default": "",
+    "controls": [
+      { "bg@screen_mcjava.dirt_background": {} },
+      {
+        "modal@popup_mcjava.modal_with_buttons": {
+          "$title": "world_progress_mcjava.simple_popup_title",
+          "$description": "world_progress_mcjava.simple_popup_description",
+          "$button_panel": "world_progress_mcjava.simple_popup_two_buttons_panel",
+          "variables": [
+            {
+              "requires": "$use_top_button",
+              "$button_panel": "world_progress_mcjava.simple_popup_three_buttons_panel"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "simple_popup_title": {
+    "type": "label",
+    "size": ["100%", "default"],
+    "color": "white",
+    "text": "$title_text",
+    "anchor_to": "center",
+    "anchor_from": "center",
+    "text_alignment": "center",
+    "shadow": true
+  },
+
+  "simple_popup_description@world_progress_mcjava.simple_popup_title": {
+    "size": ["default", "default"],
+    "max_size": ["80%", "default"],
+    "text": "$description_text"  
+  },
+
+  "add_on_only@world_progress_mcjava.simple_popup_base": {
+    "$title_text": "progressScreen.dialog.title.onlyBehavior",
+    "$description_text": "progressScreen.dialog.message.onlyBehavior",
+    "$top_button_text": "#empty_binding",
+    "$middle_button_press": "button.join_and_download_all",
+    "$middle_button_text": "#join_and_download",
+    "$bottom_button_press": "button.leave",
+    "$bottom_button_text": "progressScreen.dialog.button.leave"
+  },
+
+  "add_on_confirmation@world_progress_mcjava.simple_popup_base": {
+    "$title_text": "progressScreen.dialog.title.scriptConfirm",
+    "$description_text": "progressScreen.dialog.message.scriptConfirm",
+    "$top_button_text": "#empty_binding",
+    "$middle_button_press": "button.join",
+    "$middle_button_text": "#join_and_download",
+    "$bottom_button_press": "button.leave",
+    "$bottom_button_text": "progressScreen.dialog.button.leave"
+  },
+
+  "add_on_with_optional_texture_pack@world_progress_mcjava.simple_popup_base": {
+    "$title_text": "progressScreen.dialog.title.behaviorAndResourcePack",
+    "$description_text": "progressScreen.dialog.message.behaviorAndResourcePack",
+    "$use_top_button": true,
+    "$top_button_press": "button.join_and_download_all",
+    "$top_button_text": "#join_and_download_everything",
+    "$middle_button_press": "button.join_and_download_needed",
+    "$middle_button_text": "#join_and_download_only_add_on",
+    "$bottom_button_press": "button.leave",
+    "$bottom_button_text": "progressScreen.dialog.button.leave"
+  },
+
+  "add_on_with_texture_pack@world_progress_mcjava.simple_popup_base": {
+    "$title_text": "progressScreen.dialog.title.behaviorAndResourcePack",
+    "$description_text": "progressScreen.dialog.message.behaviorAndResourcePack",
+    "$top_button_text": "#empty_binding",
+    "$middle_button_press": "button.join_and_download_all",
+    "$middle_button_text": "#join_and_download",
+    "$bottom_button_press": "button.leave",
+    "$bottom_button_text": "progressScreen.dialog.button.leave"
+  },
+
+  "texture_pack_optional@world_progress_mcjava.simple_popup_base": {
+    "$title_text": "progressScreen.dialog.title.resourcePack",
+    "$description_text": "progressScreen.dialog.message.resourcePackOptional",
+    "$top_button_text": "#empty_binding",
+    "$middle_button_press": "button.join_and_download_all",
+    "$middle_button_text": "#join_and_download",
+    "$bottom_button_press": "button.join",
+    "$bottom_button_text": "progressScreen.dialog.button.join"
+  },
+
+  "texture_pack_required@world_progress_mcjava.simple_popup_base": {
+    "$title_text": "progressScreen.dialog.title.resourcePack",
+    "$description_text": "progressScreen.dialog.message.resourcePackRequired",
+    "$top_button_text": "#empty_binding",
+    "$middle_button_press": "button.join_and_download_all",
+    "$middle_button_text": "#join_and_download",
+    "$bottom_button_press": "button.leave",
+    "$bottom_button_text": "progressScreen.dialog.button.leave"
+  },
+
+  "simple_popup_two_buttons_panel": {
+    "type": "stack_panel",
+    "size": [310, 20],
+    "anchor_to": "center",
+    "anchor_from": "center",
+    "orientation": "horizontal",
+    "controls": [
+      {
+        "left@button_mcjava.button": {
+          "$pressed_button_name": "$middle_button_press",
+          "$button_binding_condition": "once",
+          "$button_text_binding_type": "global",
+          "$button_text": "$middle_button_text"
+        }
+      },
+      { "space@screen_mcjava.hfill": {} },
+      {
+        "right@button_mcjava.button": {
+          "$pressed_button_name": "$bottom_button_press",
+          "$button_text": "$bottom_button_text"
+        }
+      }
+    ]
+  },
+
+  "simple_popup_three_buttons_panel": {
+    "type": "stack_panel",
+    "anchor_to": "center",
+    "anchor_from": "center",
+    "size": [310, 44],
+    "controls": [
+      {
+        "top_stack": {
+          "type": "stack_panel",
+          "size": [310, 20],
+          "orientation": "horizontal",
+          "controls": [
+            {
+              "left@button_mcjava.button": {
+                "size": [150, 20],
+                "$pressed_button_name": "$top_button_press",
+                "$button_binding_condition": "once",
+                "$button_text_binding_type": "global",
+                "$button_text": "$top_button_text"
+              }
+            },
+            { "space@screen_mcjava.hfill": {} },
+            {
+              "right@button_mcjava.button": {
+                "size": [150, 20],
+                "$pressed_button_name": "$middle_button_press",
+                "$button_binding_condition": "once",
+                "$button_text_binding_type": "global",
+                "$button_text": "$middle_button_text"
+              }
+            }
+          ]
+        }
+      },
+      { "space@screen_mcjava.vspace": {} },
+      {
+        "bottom_stack": {
+          "type": "panel",
+          "size": [310, 20],
+          "controls": [
+            {
+              "bottom_button@button_mcjava.button": {
+                "size": [200, 20],
+                "$pressed_button_name": "$bottom_button_press",
+                "$button_text": "$bottom_button_text"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "online_safety_popup": {
+    "type": "panel",
+    "layer": 100,
+    "controls": [
+      { "bg@screen_mcjava.dirt_background": {} },
+      {
+        "modal@popup_mcjava.modal_with_buttons": {
+          "$title": "world_progress_mcjava.online_safety_title",
+          "$description": "world_progress_mcjava.online_safety_description",
+          "$button_panel": "world_progress_mcjava.online_safety_buttons_panel",
+          "anchor_to": "top_middle",
+          "anchor_from": "top_middle",
+          "offset": [0, 30],
+          "$top_space": [0, 30],
+          "$bottom_space": ["100%", 40],
+          "$bottom_controls": [ { "checkbox@world_progress_mcjava.online_safety_checkbox": {} } ]
+        }
+      }
+    ]
+  },
+
+  "online_safety_title": {
+    "type": "label",
+    "size": ["100%", "default"],
+    "color": "white",
+    "text": "onlinePlay.notRated",
+    "anchor_to": "center",
+    "anchor_from": "center",
+    "text_alignment": "center",
+    "shadow": true
+  },
+
+  "online_safety_description": {
+    "type": "label",
+    "size": ["default", "default"],
+    "max_size": ["80%", "default"],
+    "color": "white",
+    "text": "onlinePlay.message",
+    "anchor_to": "center",
+    "anchor_from": "center",
+    "text_alignment": "center",
+    "shadow": true
+  },
+
+  "online_safety_checkbox": {
+    "type": "panel",
+    "size": ["100%", 20],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [0, 16],
+    "controls": [
+      {
+        "online_safety_checkbox@common.toggle": {
+          "size": ["100%c", 20],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "$toggle_name": "online_safety_do_not_show_again",
+          "$toggle_state_binding_name": "#online_safety_do_not_show_again",
+          "$toggle_tts_name": "accessibility.checkbox.tts.title",
+          "$toggle_tts_toggle_on_text": "accessibility.state.checked",
+          "$toggle_tts_toggle_off_text": "accessibility.state.unchecked",
+          "tts_control_type_order_priority": 100,
+          "tts_value_order_priority": 101,
+          "$toggle_enabled_binding_type": "global",
+          "controls": [
+            { "unchecked@world_progress_mcjava.online_safety_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_unchecked" } },
+            { "checked@world_progress_mcjava.online_safety_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_checked" } },
+            { "unchecked_hover@world_progress_mcjava.online_safety_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_unchecked_hover" } },
+            { "checked_hover@world_progress_mcjava.online_safety_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_checked_hover" } },
+            { "unchecked_locked@world_progress_mcjava.online_safety_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_unchecked" } },
+            { "checked_locked@world_progress_mcjava.online_safety_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_checked" } },
+            { "unchecked_locked_hover@world_progress_mcjava.online_safety_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_unchecked" } },
+            { "checked_locked_hover@world_progress_mcjava.online_safety_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_checked" } }
+          ]
+        }
+      }
+    ]
+  },
+
+  "online_safety_checkbox_state_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": ["100%c", 20],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      { "checkbox_visuals@$checkbox_bg": { "size": [20, 20] } },
+      { "@screen_mcjava.hspace": {} },
+      {
+        "buffer_panel": {
+          "type": "panel",
+          "layer": 3,
+          "size": [ "100%c", "100%" ],
+          "controls": [
+            {
+              "label": {
+                "type": "label",
+                "color": "white",
+                "text": "onlinePlay.doNotShowAgain",
+                "shadow": true
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "online_safety_buttons_panel": {
+    "type": "stack_panel",
+    "size": [310, 20],
+    "anchor_to": "center",
+    "anchor_from": "center",
+    "orientation": "horizontal",
+    "controls": [
+      { "left@world_progress_mcjava.online_safety_proceed_button": {} },
+      { "space@screen_mcjava.hfill": {} },
+      { "right@world_progress_mcjava.online_safety_back_button": {} }
+    ]
+  },
+
+  "online_safety_proceed_button@button_mcjava.button": {
+    "size": [150, 20],
+    "$pressed_button_name": "button.proceed",
+    "$button_text": "onlinePlay.proceed"
+  },
+
+  "online_safety_back_button@button_mcjava.button": {
+    "size": [150, 20],
+    "$pressed_button_name": "button.back",
+    "$button_text": "onlinePlay.Back"
+  }
+}

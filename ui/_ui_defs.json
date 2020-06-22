@@ -80,6 +80,7 @@
     "src/ui/menu/structure_block.uiscreen",
     "src/ui/others/account_transfer_error.uiscreen",
     "src/ui/others/adhoc.uiscreen",
+    "src/ui/others/progress.uiscreen",
     "src/ui/others/adhoc_inprogress.uiscreen",
     "src/ui/others/auto_save_info.uiscreen",
     "src/ui/others/braze.uiscreen",
@@ -108,6 +109,13 @@
     "src/ui/world/create/edit.json",
     "src/ui/world/create/resource_packs.json",
     "src/ui/world/create_world_upsell.uiscreen",
+    "src/ui/world/play_fast/multiplayer.uiscreen",
+    "src/ui/world/play_fast/play.uiscreen",
+    "src/ui/world/play_fast/realms.uiscreen",
+    "src/ui/world/play_fast/singleplayer.uiscreen",
+    "src/ui/world/seed_picker.uiscreen",
+    "src/ui/world/custom_templates.uiscreen",
+    "src/ui/world/world_templates.uiscreen",
     "src/ui/resource_packs.ui",
     "src/ui/storage_managment.ui"
   ]

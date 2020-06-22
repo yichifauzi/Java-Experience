@@ -5,9 +5,10 @@
   "tooltip": {
     "type": "button",
     "size": [0, 0],
-    "focus_enabled": true,
+    "focus_enabled": false,
     "focus_magnet_enabled": false,
     "follows_cursor": true,
+    "consume_events": false,
     "consume_hover_events": false,
     "always_handle_pointer": true,
     "layer": 120,
@@ -49,12 +50,10 @@
     "$tooltip_name|default": "null",
     "size": ["default", "default"],
     "max_size": [180, "default"],
+    "color": "$name_color",
+    "$name_color|default": "white",
     "shadow": true,
-    "bindings": [
-      {
-        "binding_name": "$tooltip_name"
-      }
-    ]
+    "bindings": [ { "binding_name": "$tooltip_name" } ]
   },
 
   "category": {

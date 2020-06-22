@@ -17,7 +17,14 @@
     "$scroll_box_visible|default": true,
     "layer": "$scrolling_layer",
     "$scrolling_layer|default": 1,
+    "$dirt_scroll|default": false,
     "$scroll_viewport|default": "scrolling_mcjava.scroll_viewport",
+    "variables": [
+      {
+        "requires": "$dirt_scroll",
+        "$scrolling_view_size": [ "100%", "50%c" ]
+      }
+    ],
     "controls": [
       {
         "scroll_mouse@scrolling_mcjava.scrolling_panel_base": {
@@ -58,8 +65,8 @@
     "scroll_view_port": "scrolling_view_port",
     "scroll_box_and_track_panel": "bar_and_track",
     "$jump_to_bottom_on_update|default": false,
-    "$dirt_scroll|default": false,
     "$creative_scroll|default": false,
+    "$enable_gesture_control|default": true,
     "jump_to_bottom_on_update": "$jump_to_bottom_on_update",
     "$scroll_track_image_control|default": "scrolling_mcjava.scroll_track_image",
     "$scroll_box_image_control|default": "scrolling_mcjava.scroll_box_image",
@@ -73,6 +80,7 @@
     ],
     "bindings": [
       {
+        "ignored": "(not $enable_gesture_control)",
         "binding_name": "#gesture_control_enabled"
       }
     ],
@@ -110,7 +118,7 @@
           "offset": "$scroll_view_port_offset",
           "size": "$scroll_view_port_size",
           "controls": [
-            { "background@screen_mcjava.dark_dirt_background": { "visible": "($scroll_bg = 'screen_mcjava.dark_dirt_background')" } },
+            { "background@screen_mcjava.dark_dirt_background": { "size": ["100%", "100%"], "visible": "($scroll_bg = 'screen_mcjava.dark_dirt_background')" } },
             { "top_shadow@screen_mcjava.shadow_top": { "visible": "($scroll_bg = 'screen_mcjava.dark_dirt_background')" } },
             { 
               "scrolling_content@$scroll_bg": {
@@ -118,6 +126,7 @@
                 "anchor_to": "$scrolling_panel_anchor",
                 "size": "$scrolling_view_size",
                 "controls": [
+                  { "background@screen_mcjava.dark_dirt_background": { "size": ["100%", "100%sm"], "visible": "($scroll_bg = 'screen_mcjava.dark_dirt_background')" } },
                   {
                     "content@$scrolling_content": {
                       "anchor_from": "$scrolling_panel_anchor",

@@ -1,0 +1,23 @@
+{
+  "play_screen": {
+    "$screen_content": "play.play_screen_content",
+    "$screen_bg_content": "content.dirt_bg"
+  },
+
+  "play_screen_content": {
+    "type": "panel",
+    "variables": [
+      {
+        "requires": "($play_screen = better)",
+        "$content": "play_mcjava.play_screen_content_panel"
+      },
+      {
+        "requires": "($play_screen = fast)",
+        "$content": "play_fast_mcjava.play_screen_content_panel"
+      }
+    ],
+    "controls": [
+      { "$content@$content": {} }
+    ]
+  }
+}

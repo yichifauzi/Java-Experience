@@ -318,9 +318,9 @@
     "$text_box_name": "#message_text_box",
     "$text_edit_box_content_binding_name": "#message_text_box_content",
     "default_focus_precedence": 1,
+    "focus_magnet_enabled": true,
     "$focus_id": "text_edit_box_focus_id",
     "$focus_override_right": "keyboard_button_focus_id",
-    "$focus_override_left": "chat_settings_button_focus_id",
     "$text_box_tts_header": "accessibility.chat.tts.textboxTitle",
     "$text_box_tts_name": "",
     "bindings": [

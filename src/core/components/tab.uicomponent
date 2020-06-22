@@ -25,6 +25,8 @@
           "$tab_state_panel|default": "tab_mcjava.tab_state_panel",
           "$toggle_tts_name": "accessibility.tab.tts.title",
           "$toggle_tts_enabled_binding_type": "global",
+          "$toggle_reset_on_focus_lost|default": true,
+          "reset_on_focus_lost": "$toggle_reset_on_focus_lost",
           "controls": [
             {
               "unchecked@$tab_state_panel": {
@@ -37,7 +39,7 @@
               "unchecked_hover@$tab_state_panel": {
                 "$tab_bg": "$unchecked_hover_tab_bg",
                 "$state": "unchecked_hover",
-                "layer": 3
+                "layer": 1
               }
             },
             {
@@ -92,7 +94,7 @@
     "type": "panel",
     "$tooltip_name|default": "null",
     "controls": [
-      { "@tooltip_mcjava.tooltip": { "visible": "($state = hover)", "ignored": "($tooltip_name = 'null')" } },
+      { "@tooltip_mcjava.tooltip": { "visible": "($state = unchecked_hover or $state = checked_hover or $state = unchecked_locked_hover or $state = checked_locked_hover)", "ignored": "($tooltip_name = 'null')" } },
       { "@$tab_bg": {} },
       { "@$tab_type_panel": {} }
     ]

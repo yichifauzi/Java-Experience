@@ -1,0 +1,6 @@
+{
+  "ugc_viewer_screen": {
+    "$screen_content": "seed_picker_mcjava.seed_picker_screen_content_panel",
+    "$screen_bg_content": "content.dirt_bg"
+  }
+}
