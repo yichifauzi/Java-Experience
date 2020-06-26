@@ -1,3 +1,4 @@
+/* Version: 2.0.0 */
 /* By @FMarquesPTO. All rights reserved. */
 {
   "namespace": "beacon_mcjava",
@@ -6,7 +7,7 @@
     "$container_size": [230, 219],
     "$inv_grid_panel": "beacon_mcjava.inventory_grid_panel",
     "$hotbar_grid_panel": "beacon_mcjava.hotbar_grid",
-    "$container_bg": "resources.beacon_bg",
+    "$container_bg": "resources1.beacon_bg",
     "$specified_content": "beacon_mcjava.beacon_content_panel"
   },
 
@@ -200,7 +201,7 @@
     "$button_name": "confirm",
     "$tooltip_name": "Confirm",
     "$button_control": "beacon_mcjava.button_template",
-    "$icon_origin": "resources.beacon_confirm_icon",
+    "$icon_origin": "resources1.beacon_confirm_icon",
     "anchor_from": "top_left",
     "anchor_to": "top_left"
   },
@@ -210,7 +211,7 @@
     "$button_name": "cancel",
     "$tooltip_name": "Cancel",
     "$button_control": "beacon_mcjava.button_template",
-    "$icon_origin": "resources.beacon_cancel_icon",
+    "$icon_origin": "resources1.beacon_cancel_icon",
     "anchor_from": "top_left",
     "anchor_to": "top_left"
   },
@@ -256,8 +257,8 @@
   "active_button@beacon.base_button": {
     "$button_active": "#active",
     "controls": [
-      { "default@resources.beacon_button": {} },
-      { "hover@resources.beacon_button_hover": { "controls": [ { "tooltip@tooltip_mcjava.tooltip": {} } ] } }
+      { "default@resources1.beacon_button": {} },
+      { "hover@resources1.beacon_button_hover": { "controls": [ { "tooltip@tooltip_mcjava.tooltip": {} } ] } }
     ],
     "button_mappings": [
       {
@@ -278,32 +279,22 @@
     "pressed_control": "",
     "button_mappings": [],
     "controls": [
-      { "default@resources.beacon_button_locked": {} },
-      { "hover@resources.beacon_button_locked": {} }
-    ]
-  },
-
-  "selected_button@beacon.base_button": {
-    "$button_active": "#selected",
-    "button_mappings": [],
-    "pressed_control": "",
-    "controls": [
-      { "default@base_state": {} },
-      { "hover@hover_state": {} }
+      { "default@resources1.beacon_button_locked": {} },
+      { "hover@resources1.beacon_button_locked": {} }
     ]
   },
 
   "toggle_button@beacon.toggle_button": {
     "size": [22, 22],
     "controls": [
-      { "unchecked@resources.beacon_button": {} },
-      { "checked@resources.beacon_button_selected": {} },
-      { "unchecked_hover@resources.beacon_button_hover": { "controls": [ { "hover_text@beacon.hover_text": {} } ] } },
-      { "checked_hover@resources.beacon_button_selected": { "controls": [ { "hover_text@beacon.hover_text": {} } ] } },
-      { "unchecked_locked@resources.beacon_button_locked": {} },
-      { "checked_locked@resources.beacon_button_locked": {} },
-      { "unchecked_locked_hover@resources.beacon_button_locked": { "controls": [ { "hover_text@beacon.hover_text": {} } ] } },
-      { "checked_locked_hover@resources.beacon_button_locked": { "controls": [ { "hover_text@beacon.hover_text": {} } ] } }
+      { "unchecked@resources1.beacon_button": {} },
+      { "checked@resources1.beacon_button_selected": {} },
+      { "unchecked_hover@resources1.beacon_button_hover": { "controls": [ { "hover_text@beacon.hover_text": {} } ] } },
+      { "checked_hover@resources1.beacon_button_selected": { "controls": [ { "hover_text@beacon.hover_text": {} } ] } },
+      { "unchecked_locked@resources1.beacon_button_locked": {} },
+      { "checked_locked@resources1.beacon_button_locked": {} },
+      { "unchecked_locked_hover@resources1.beacon_button_locked": { "controls": [ { "hover_text@beacon.hover_text": {} } ] } },
+      { "checked_locked_hover@resources1.beacon_button_locked": { "controls": [ { "hover_text@beacon.hover_text": {} } ] } }
     ]
   },
 

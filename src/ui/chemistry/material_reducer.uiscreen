@@ -1,0 +1,229 @@
+{
+  "namespace": "material_reducer_mcjava",
+
+  "material_reducer_screen_content_panel": {
+    "type": "panel",
+    "controls": [
+      {
+        "root_panel@common.root_panel": {
+          "layer": 1,
+          "size": [176, 194],
+          "controls": [
+            { "material_reducer_bg@resources1.material_reducer_bg": {} },
+            {
+              "title@container_mcjava.title": {
+                "text": "materialreducer.title",
+                "offset": [0, 4],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle"
+              }
+            },
+            { "content@material_reducer_mcjava.material_reducer_content_panel": {} },
+            {
+              "inventory": {
+                "type": "panel",
+                "layer": 3,
+                "controls": [
+                  { "inventory_panel@container_mcjava.inventory_grid_panel": {} },
+                  { "hotbar_grid@container_mcjava.hotbar_grid": {} },
+                  { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} }
+                ]
+              }
+            },
+            { "inventory_selected_icon_button@container_mcjava.inventory_selected_icon_button": {} }
+          ]
+        }
+      },
+      { "container_gamepad_helpers@common.container_gamepad_helpers": {} }
+    ]
+  },
+
+  "material_reducer_content_panel": {
+    "type": "panel",
+    "controls": [
+      { "input@material_reducer_mcjava.input_slot": {} },
+      { "output_slots@material_reducer_mcjava.output_slots": {} }
+    ]
+  },
+
+  "input_slot": {
+    "type": "panel",
+    "size": [18, 18],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [79, 15],
+    "controls": [
+      {
+        "slot@container_mcjava.container_slot": {
+          "size": [18, 18],
+          "layer": 2,
+          "$item_collection_name": "matreduce_input",
+          "$button_ref": "material_reducer_mcjava.one_touch_button",
+          "bindings": [
+            {
+              "binding_name": "#input_enabled",
+              "binding_name_override": "#enabled"
+            }
+          ]
+        }
+      },
+      {
+        "disabled_overlay": {
+          "type": "image",
+          "layer": 4,
+          "size": ["100% - 2px", "100% - 2px"],
+          "texture": "src/core/resources/fmarquespto/textures/white",
+          "color": "red",
+          "alpha": 0.35,
+          "bindings": [
+            {
+              "binding_name": "(not #input_enabled)",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "one_touch_button@container_mcjava.container_slot_button_prototype": {
+    "$take_all_place_all": "button.matreduce_take_all_place_all",
+    "$coalesce_stack": "button.matreduce_coalesce_stack",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "$take_all_place_all",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "$take_all_place_all",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_secondary_select",
+        "to_button_id": "button.container_take_half_place_one",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_select",
+        "to_button_id": "button.container_take_half_place_one",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_auto_place",
+        "to_button_id": "button.container_auto_place",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_secondary_select",
+        "to_button_id": "button.container_auto_place",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_inventory_drop",
+        "to_button_id": "button.drop_one",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_inventory_drop_all",
+        "to_button_id": "button.drop_all",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "$coalesce_stack",
+        "mapping_type": "double_pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "$coalesce_stack",
+        "mapping_type": "double_pressed"
+      },
+      {
+        "to_button_id": "button.shape_drawing",
+        "mapping_type": "pressed"
+      },
+      {
+        "to_button_id": "button.container_slot_hovered",
+        "mapping_type": "pressed"
+      }
+    ]
+  },
+
+  "output_slots": {
+    "type": "grid",
+    "size": [130, 50],
+    "offset": [4, 50],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "grid_dimensions": [5, 2],
+    "collection_name": "matreduce_output",
+    "controls": [
+      {
+        "a@material_reducer_mcjava.output_item": {
+          "$grid_position": [ 0, 0 ]
+        }
+      },
+      {
+        "b@material_reducer_mcjava.output_item": {
+          "$grid_position": [ 1, 0 ]
+        }
+      },
+      {
+        "c@material_reducer_mcjava.output_item": {
+          "$grid_position": [ 2, 0 ]
+        }
+      },
+      {
+        "d@material_reducer_mcjava.output_item": {
+          "$grid_position": [ 3, 0 ]
+        }
+      },
+      {
+        "e@material_reducer_mcjava.output_item": {
+          "$grid_position": [ 4, 0 ]
+        }
+      },
+      {
+        "f@material_reducer_mcjava.output_item": {
+          "$grid_position": [ 0, 1 ],
+          "$offset": [ 13, 0 ]
+        }
+      },
+      {
+        "g@material_reducer_mcjava.output_item": {
+          "$grid_position": [ 1, 1 ],
+          "$offset": [ 13, 0 ]
+        }
+      },
+      {
+        "h@material_reducer_mcjava.output_item": {
+          "$grid_position": [ 2, 1 ],
+          "$offset": [ 13, 0 ]
+        }
+      },
+      {
+        "i@material_reducer_mcjava.output_item": {
+          "$grid_position": [ 3, 1 ],
+          "$offset": [ 13, 0 ]
+        }
+      }
+    ]
+  },
+
+  "output_item": {
+    "type": "panel",
+    "grid_position": "$grid_position",
+    "size": [18, 18],
+    "controls": [
+      {
+        "slot@container_mcjava.container_slot": {
+          "$offset|default": [ 0, 0 ],
+          "offset": "$offset",
+          "$item_collection_name": "matreduce_output"
+        }
+      }
+    ]
+  }
+}

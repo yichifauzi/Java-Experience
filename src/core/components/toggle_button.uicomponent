@@ -28,7 +28,7 @@
     "controls": [
       {
         "checked@$toggle_state_panel": {
-          "$toggle_bg": "$checked_toggle_bg",
+          "$toggle_bg|default": "$checked_toggle_bg",
           "$state": "checked",
           "$text_color|default": "$button_default_text_color",
           "layer": 3
@@ -36,7 +36,7 @@
       },
       {
         "unchecked@$toggle_state_panel": {
-          "$toggle_bg": "$unchecked_toggle_bg",
+          "$toggle_bg|default": "$unchecked_toggle_bg",
           "$state": "unchecked",
           "$text_color|default": "$button_default_text_color",
           "layer": 3
@@ -44,7 +44,7 @@
       },
       {
         "checked_hover@$toggle_state_panel": {
-          "$toggle_bg": "$checked_hover_toggle_bg",
+          "$toggle_bg|default": "$checked_hover_toggle_bg",
           "$state": "checked_hover",
           "$text_color|default": "$button_hover_text_color",
           "layer": 4
@@ -52,7 +52,7 @@
       },
       {
         "unchecked_hover@$toggle_state_panel": {
-          "$toggle_bg": "$unchecked_hover_toggle_bg",
+          "$toggle_bg|default": "$unchecked_hover_toggle_bg",
           "$state": "unchecked_hover",
           "$text_color|default": "$button_hover_text_color",
           "layer": 4
@@ -60,7 +60,7 @@
       },
       {
         "checked_locked@$toggle_state_panel": {
-          "$toggle_bg": "$checked_locked_toggle_bg",
+          "$toggle_bg|default": "$checked_locked_toggle_bg",
           "$state": "checked_locked",
           "$text_color|default": "$button_locked_text_color",
           "layer": 1
@@ -68,7 +68,7 @@
       },
       {
         "unchecked_locked@$toggle_state_panel": {
-          "$toggle_bg": "$unchecked_locked_toggle_bg",
+          "$toggle_bg|default": "$unchecked_locked_toggle_bg",
           "$state": "unchecked_locked",
           "$text_color|default": "$button_locked_text_color",
           "layer": 1
@@ -76,7 +76,7 @@
       },
       {
         "checked_locked_hover@$toggle_state_panel": {
-          "$toggle_bg": "$checked_locked_toggle_bg",
+          "$toggle_bg|default": "$checked_locked_toggle_bg",
           "$state": "checked_locked_hover",
           "$text_color|default": "$button_locked_text_color",
           "layer": 1
@@ -84,7 +84,7 @@
       },
       {
         "unchecked_locked_hover@$toggle_state_panel": {
-          "$toggle_bg": "$unchecked_locked_toggle_bg",
+          "$toggle_bg|default": "$unchecked_locked_toggle_bg",
           "$state": "unchecked_locked_hover",
           "$text_color|default": "$button_locked_text_color",
           "layer": 1

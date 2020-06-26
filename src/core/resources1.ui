@@ -1,0 +1,1328 @@
+{
+  "namespace": "resources1",
+
+  /* Chemistry */
+
+  "compound_bg@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/compound_creator",
+    "size": [176, 184],
+    "variables": [
+      { "requires": "($anvil_resolution = 256x)", "$uv_size": [176, 184] },
+      { "requires": "($anvil_resolution = 512x)", "$uv_size": [352, 368] },
+      { "requires": "($anvil_resolution = 1024x)", "$uv_size": [704, 736] },
+      { "requires": "($anvil_resolution = 2048x)", "$uv_size": [1408, 1472] },
+      { "requires": "($anvil_resolution = 4096x)", "$uv_size": [2816, 2944] }
+    ]
+  },
+
+  "material_reducer_bg@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/material_reducer",
+    "size": [176, 196],
+    "variables": [
+      { "requires": "($anvil_resolution = 256x)", "$uv_size": [176, 196] },
+      { "requires": "($anvil_resolution = 512x)", "$uv_size": [352, 392] },
+      { "requires": "($anvil_resolution = 1024x)", "$uv_size": [704, 784] },
+      { "requires": "($anvil_resolution = 2048x)", "$uv_size": [1408, 1568] },
+      { "requires": "($anvil_resolution = 4096x)", "$uv_size": [2816, 3036] }
+    ]
+  },
+
+  "element_constructor_bg@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/element_constructor",
+    "size": [256, 220],
+    "variables": [
+      { "requires": "($anvil_resolution = 256x)", "$uv_size": [256, 220] },
+      { "requires": "($anvil_resolution = 512x)", "$uv_size": [460, 392] },
+      { "requires": "($anvil_resolution = 1024x)", "$uv_size": [920, 784] },
+      { "requires": "($anvil_resolution = 2048x)", "$uv_size": [1840, 1568] },
+      { "requires": "($anvil_resolution = 4096x)", "$uv_size": [2816, 3036] }
+    ]
+  },
+
+  "ec_button_default@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/element_constructor",
+    "size": [18, 18],
+    "variables": [
+      { "requires": "($anvil_resolution = 256x)", "$uv": [257, 0], "$uv_size": [18, 18] },
+      { "requires": "($anvil_resolution = 512x)", "$uv": [0, 0], "$uv_size": [36, 36] },
+      { "requires": "($anvil_resolution = 1024x)", "$uv": [0, 0], "$uv_size": [72, 72] },
+      { "requires": "($anvil_resolution = 2048x)", "$uv": [0, 0], "$uv_size": [144, 144] },
+      { "requires": "($anvil_resolution = 4096x)", "$uv": [0, 0], "$uv_size": [288, 288] }
+    ]
+  },
+
+  "ec_button_hover@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/element_constructor",
+    "size": [18, 18],
+    "variables": [
+      { "requires": "($anvil_resolution = 256x)", "$uv": [257, 18], "$uv_size": [18, 18] },
+      { "requires": "($anvil_resolution = 512x)", "$uv": [0, 0], "$uv_size": [36, 36] },
+      { "requires": "($anvil_resolution = 1024x)", "$uv": [0, 0], "$uv_size": [72, 72] },
+      { "requires": "($anvil_resolution = 2048x)", "$uv": [0, 0], "$uv_size": [144, 144] },
+      { "requires": "($anvil_resolution = 4096x)", "$uv": [0, 0], "$uv_size": [288, 288] }
+    ]
+  },
+
+  "ec_button_locked@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/element_constructor",
+    "size": [18, 18],
+    "variables": [
+      { "requires": "($anvil_resolution = 256x)", "$uv": [257, 36], "$uv_size": [18, 18] },
+      { "requires": "($anvil_resolution = 512x)", "$uv": [0, 0], "$uv_size": [36, 36] },
+      { "requires": "($anvil_resolution = 1024x)", "$uv": [0, 0], "$uv_size": [72, 72] },
+      { "requires": "($anvil_resolution = 2048x)", "$uv": [0, 0], "$uv_size": [144, 144] },
+      { "requires": "($anvil_resolution = 4096x)", "$uv": [0, 0], "$uv_size": [288, 288] }
+    ]
+  },
+
+  "ec_sliderbtn_default@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/element_constructor",
+    "size": [16, 8],
+    "variables": [
+      { "requires": "($anvil_resolution = 256x)", "$uv": [257, 54], "$uv_size": [16, 8] },
+      { "requires": "($anvil_resolution = 512x)", "$uv": [0, 0], "$uv_size": [36, 36] },
+      { "requires": "($anvil_resolution = 1024x)", "$uv": [0, 0], "$uv_size": [72, 72] },
+      { "requires": "($anvil_resolution = 2048x)", "$uv": [0, 0], "$uv_size": [144, 144] },
+      { "requires": "($anvil_resolution = 4096x)", "$uv": [0, 0], "$uv_size": [288, 288] }
+    ]
+  },
+
+  "ec_sliderbtn_hover@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/element_constructor",
+    "size": [16, 8],
+    "variables": [
+      { "requires": "($anvil_resolution = 256x)", "$uv": [257, 62], "$uv_size": [16, 8] },
+      { "requires": "($anvil_resolution = 512x)", "$uv": [0, 0], "$uv_size": [36, 36] },
+      { "requires": "($anvil_resolution = 1024x)", "$uv": [0, 0], "$uv_size": [72, 72] },
+      { "requires": "($anvil_resolution = 2048x)", "$uv": [0, 0], "$uv_size": [144, 144] },
+      { "requires": "($anvil_resolution = 4096x)", "$uv": [0, 0], "$uv_size": [288, 288] }
+    ]
+  },
+
+  "ec_slider_bg@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/element_constructor",
+    "size": [16, 125],
+    "variables": [
+      { "requires": "($anvil_resolution = 256x)", "$uv": [276, 0], "$uv_size": [16, 125] },
+      { "requires": "($anvil_resolution = 512x)", "$uv": [0, 0], "$uv_size": [36, 36] },
+      { "requires": "($anvil_resolution = 1024x)", "$uv": [0, 0], "$uv_size": [72, 72] },
+      { "requires": "($anvil_resolution = 2048x)", "$uv": [0, 0], "$uv_size": [144, 144] },
+      { "requires": "($anvil_resolution = 4096x)", "$uv": [0, 0], "$uv_size": [288, 288] }
+    ]
+  },
+
+  "lab_table_bg@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/lab_table",
+    "size": [176, 194],
+    "variables": [
+      { "requires": "($anvil_resolution = 256x)", "$uv_size": [176, 194] },
+      { "requires": "($anvil_resolution = 512x)", "$uv_size": [352, 388] },
+      { "requires": "($anvil_resolution = 1024x)", "$uv_size": [704, 776] },
+      { "requires": "($anvil_resolution = 2048x)", "$uv_size": [1408, 1552] },
+      { "requires": "($anvil_resolution = 4096x)", "$uv_size": [2816, 3104] }
+    ]
+  },
+
+  "lab_button_default@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/lab_table",
+    "size": [86, 18],
+    "variables": [
+      { "requires": "($anvil_resolution = 256x)", "$uv": [0, 196], "$uv_size": [86, 18] },
+      { "requires": "($anvil_resolution = 512x)", "$uv": [0, 392], "$uv_size": [172, 36] },
+      { "requires": "($anvil_resolution = 1024x)", "$uv": [0, 784], "$uv_size": [344, 72] },
+      { "requires": "($anvil_resolution = 2048x)", "$uv": [0, 1568], "$uv_size": [688, 144] },
+      { "requires": "($anvil_resolution = 4096x)", "$uv": [0, 3136], "$uv_size": [1376, 288] }
+    ]
+  },
+
+  "lab_button_hover@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/lab_table",
+    "size": [86, 18],
+    "variables": [
+      { "requires": "($anvil_resolution = 256x)", "$uv": [0, 215], "$uv_size": [86, 18] },
+      { "requires": "($anvil_resolution = 512x)", "$uv": [0, 430], "$uv_size": [172, 36] },
+      { "requires": "($anvil_resolution = 1024x)", "$uv": [0, 860], "$uv_size": [344, 72] },
+      { "requires": "($anvil_resolution = 2048x)", "$uv": [0, 1720], "$uv_size": [688, 144] },
+      { "requires": "($anvil_resolution = 4096x)", "$uv": [0, 3440], "$uv_size": [1376, 288] }
+    ]
+  },
+
+  "lab_button_locked@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/lab_table",
+    "size": [86, 18],
+    "variables": [
+      { "requires": "($anvil_resolution = 256x)", "$uv": [0, 234], "$uv_size": [86, 18] },
+      { "requires": "($anvil_resolution = 512x)", "$uv": [0, 468], "$uv_size": [172, 36] },
+      { "requires": "($anvil_resolution = 1024x)", "$uv": [0, 936], "$uv_size": [344, 72] },
+      { "requires": "($anvil_resolution = 2048x)", "$uv": [0, 1872], "$uv_size": [688, 144] },
+      { "requires": "($anvil_resolution = 4096x)", "$uv": [0, 3744], "$uv_size": [1376, 288] }
+    ]
+  },
+
+  /* Anvil */
+
+  "anvil_bg@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/anvil",
+    "size": [176, 166],
+    "variables": [
+      { "requires": "($anvil_resolution = 256x)", "$uv_size": [176, 166] },
+      { "requires": "($anvil_resolution = 512x)", "$uv_size": [352, 332] },
+      { "requires": "($anvil_resolution = 1024x)", "$uv_size": [704, 664] },
+      { "requires": "($anvil_resolution = 2048x)", "$uv_size": [1408, 1328] },
+      { "requires": "($anvil_resolution = 4096x)", "$uv_size": [2816, 2656] }
+    ]
+  },
+  
+  "anvil_text_box@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/anvil",
+    "size": [110, 16],
+    "variables": [
+      { "requires": "($anvil_resolution = 256x)", "$uv": [0, 166], "$uv_size": [110, 16] },
+      { "requires": "($anvil_resolution = 512x)", "$uv": [0, 332], "$uv_size": [220, 32] },
+      { "requires": "($anvil_resolution = 1024x)", "$uv": [0, 664], "$uv_size": [440, 64] },
+      { "requires": "($anvil_resolution = 2048x)", "$uv": [0, 1328], "$uv_size": [880, 128] },
+      { "requires": "($anvil_resolution = 4096x)", "$uv": [0, 2656], "$uv_size": [1760, 256] }
+    ]
+  },
+
+  "anvil_text_box_locked@resources1.anvil_text_box": {
+    "variables": [
+      { "requires": "($anvil_resolution = 256x)", "$uv":[0, 182], "$uv_size":[110, 16] },
+      { "requires": "($anvil_resolution = 512x)", "$uv":[0,364], "$uv_size":[220,32] },
+      { "requires": "($anvil_resolution = 1024x)", "$uv":[0,728], "$uv_size":[440,64] },
+      { "requires": "($anvil_resolution = 2048x)", "$uv":[0,1456], "$uv_size":[880,128] },
+      { "requires": "($anvil_resolution = 4096x)", "$uv":[0,2912], "$uv_size":[1760,256] }
+    ]
+  },
+
+  "anvil_arrow_cross_out@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/anvil",
+    "size": [28, 21],
+    "variables": [
+      { "requires":"($anvil_resolution = 256x)", "$uv": [176, 0], "$uv_size": [28, 21] },
+      { "requires":"($anvil_resolution = 512x)", "$uv": [352, 0], "$uv_size": [220, 32] },
+      { "requires":"($anvil_resolution = 1024x)", "$uv": [704, 0], "$uv_size": [440, 64] },
+      { "requires":"($anvil_resolution = 2048x)", "$uv": [1408, 0], "$uv_size": [880, 128] },
+      { "requires":"($anvil_resolution = 4096x)", "$uv": [2816, 0], "$uv_size": [1760, 256] }
+    ]
+  },
+
+  /* Beacon */
+
+  "beacon_bg@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/beacon",
+    "size": [230, 219],
+    "variables": [
+      { "requires": "($beacon_resolution = 256x)", "$uv_size": [230, 219] },
+      { "requires": "($beacon_resolution = 512x)", "$uv_size": [460, 438] },
+      { "requires": "($beacon_resolution = 1024x)", "$uv_size": [920, 872] },
+      { "requires": "($beacon_resolution = 2048x)", "$uv_size": [1840, 1744] },
+      { "requires": "($beacon_resolution = 4096x)", "$uv_size": [3680, 3488] }
+    ]
+  },
+
+  "beacon_button@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/beacon",
+    "size": [22, 22],
+    "variables": [
+      { "requires": "($beacon_resolution = 256x)", "$uv": [0, 219], "$uv_size": [22, 22] },
+      { "requires": "($beacon_resolution = 512x)", "$uv": [0, 438], "$uv_size": [44, 44] },
+      { "requires": "($beacon_resolution = 1024x)", "$uv": [0, 872], "$uv_size": [88, 88] },
+      { "requires": "($beacon_resolution = 2048x)", "$uv": [0, 1744], "$uv_size": [176, 176] },
+      { "requires": "($beacon_resolution = 4096x)", "$uv": [0, 3488], "$uv_size": [352, 352] }
+    ]
+  },
+
+  "beacon_button_selected@resources1.beacon_button": {
+    "variables": [
+      { "requires": "($beacon_resolution = 256x)", "$uv": [22, 219], "$uv_size": [22, 22] },
+      { "requires": "($beacon_resolution = 512x)", "$uv": [44, 438], "$uv_size": [44, 44] },
+      { "requires": "($beacon_resolution = 1024x)", "$uv": [88, 872], "$uv_size": [88, 88] },
+      { "requires": "($beacon_resolution = 2048x)", "$uv": [176, 1744], "$uv_size": [176, 176] },
+      { "requires": "($beacon_resolution = 4096x)", "$uv": [352, 3488], "$uv_size": [352, 352] }
+    ]
+  },
+
+  "beacon_button_locked@resources1.beacon_button": {
+    "variables": [
+      { "requires": "($beacon_resolution = 256x)", "$uv": [44, 219], "$uv_size": [22, 22] },
+      { "requires": "($beacon_resolution = 512x)", "$uv": [88, 438], "$uv_size": [44, 44] },
+      { "requires": "($beacon_resolution = 1024x)", "$uv": [176, 872], "$uv_size": [88, 88] },
+      { "requires": "($beacon_resolution = 2048x)", "$uv": [352, 1744], "$uv_size": [176, 176] },
+      { "requires": "($beacon_resolution = 4096x)", "$uv": [704, 3488], "$uv_size": [352, 352] }
+    ]
+  },
+
+  "beacon_button_hover@resources1.beacon_button": {
+    "variables": [
+      { "requires": "($beacon_resolution = 256x)", "$uv": [66, 219], "$uv_size": [22, 22] },
+      { "requires": "($beacon_resolution = 512x)", "$uv": [132, 438], "$uv_size": [44, 44] },
+      { "requires": "($beacon_resolution = 1024x)", "$uv": [264, 872], "$uv_size": [88, 88] },
+      { "requires": "($beacon_resolution = 2048x)", "$uv": [528, 1744], "$uv_size": [176, 176] },
+      { "requires": "($beacon_resolution = 4096x)", "$uv": [1056, 3488], "$uv_size": [352, 352] }
+    ]
+  },
+  
+  "beacon_confirm_icon@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/beacon",
+    "size": [18, 19],
+    "offset": [0, 0.5],
+    "variables": [
+      { "requires": "($beacon_resolution = 256x)", "$uv": [90, 220], "$uv_size": [18, 19] },
+      { "requires": "($beacon_resolution = 512x)", "$uv": [180, 440], "$uv_size": [36, 38] },
+      { "requires": "($beacon_resolution = 1024x)", "$uv": [360, 880], "$uv_size": [72, 76] },
+      { "requires": "($beacon_resolution = 2048x)", "$uv": [720, 1760], "$uv_size": [144, 152] },
+      { "requires": "($beacon_resolution = 4096x)", "$uv": [1440, 3520], "$uv_size": [288, 304] }
+    ]
+  },
+
+  "beacon_cancel_icon@resources1.beacon_confirm_icon": {
+    "variables": [
+      { "requires": "($beacon_resolution = 256x)", "$uv": [112, 220], "$uv_size": [18, 19] },
+      { "requires": "($beacon_resolution = 512x)", "$uv": [224, 440], "$uv_size": [36, 38] },
+      { "requires": "($beacon_resolution = 1024x)", "$uv": [448, 880], "$uv_size": [72, 76] },
+      { "requires": "($beacon_resolution = 2048x)", "$uv": [896, 1760], "$uv_size": [144, 152] },
+      { "requires": "($beacon_resolution = 4096x)", "$uv": [1792, 3520], "$uv_size": [288, 304] }
+    ]
+  },
+
+  /* Brewing Stand */
+
+  "brewing_stand_bg@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/brewing_stand",
+    "size": [176, 166],
+    "variables": [
+      { "requires": "($brewing_stand_resolution = 256x)", "$uv_size": [176, 166] },
+      { "requires": "($brewing_stand_resolution = 512x)", "$uv_size": [352, 332] },
+      { "requires": "($brewing_stand_resolution = 1024x)", "$uv_size": [704, 664] },
+      { "requires": "($brewing_stand_resolution = 2048x)", "$uv_size": [1408, 1328] },
+      { "requires": "($brewing_stand_resolution = 4096x)", "$uv_size": [2816, 2656] }
+    ]
+  },
+
+  "brewing_stand_full_arrow@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/brewing_stand",
+    "size": [9, 28],
+    "variables": [
+      { "requires": "($brewing_stand_resolution = 256x)", "$uv": [176, 0], "$uv_size": [9, 28] },
+      { "requires": "($brewing_stand_resolution = 512x)", "$uv": [352, 0], "$uv_size": [18, 56] },
+      { "requires": "($brewing_stand_resolution = 1024x)", "$uv": [704, 0], "$uv_size": [36, 112] },
+      { "requires": "($brewing_stand_resolution = 2048x)", "$uv": [1408, 0], "$uv_size": [72, 224] },
+      { "requires": "($brewing_stand_resolution = 4096x)", "$uv": [2816, 0], "$uv_size": [144, 448] }
+    ]
+  },
+
+  "brewing_stand_full_bubbles@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/brewing_stand",
+    "size": [12, 29],
+    "variables": [
+      { "requires": "($brewing_stand_resolution = 256x)", "$uv": [185, 0], "$uv_size": [12, 29] },
+      { "requires": "($brewing_stand_resolution = 512x)", "$uv": [370, 0], "$uv_size": [24, 58] },
+      { "requires": "($brewing_stand_resolution = 1024x)", "$uv": [740, 0], "$uv_size": [48, 116] },
+      { "requires": "($brewing_stand_resolution = 2048x)", "$uv": [1480, 0], "$uv_size": [72, 224] },
+      { "requires": "($brewing_stand_resolution = 4096x)", "$uv": [2960, 0], "$uv_size": [192, 464] }
+    ]
+  },
+
+  "brewing_stand_full_fuel@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/brewing_stand",
+    "size": [18, 4],
+    "variables": [
+      { "requires":"($brewing_stand_resolution = 256x)", "$uv":[176,29], "$uv_size":[18,4] },
+      { "requires":"($brewing_stand_resolution = 512x)", "$uv":[352,58], "$uv_size":[36,8] },
+      { "requires":"($brewing_stand_resolution = 1024x)", "$uv":[704,116], "$uv_size":[72,16] },
+      { "requires":"($brewing_stand_resolution = 2048x)", "$uv":[1408,232], "$uv_size":[144,32] },
+      { "requires":"($brewing_stand_resolution = 4096x)", "$uv":[2816,464], "$uv_size":[288,64] }
+    ]
+  },
+
+  /* Cartography */
+
+  "cartography_table_bg@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/cartography_table",
+    "size": [176, 166],
+    "variables": [
+      { "requires": "($cartography_resolution = 256x)", "$uv_size": [176, 166] },
+      { "requires": "($cartography_resolution = 512x)", "$uv_size": [352, 332] },
+      { "requires": "($cartography_resolution = 1024x)", "$uv_size": [704, 664] },
+      { "requires": "($cartography_resolution = 2048x)", "$uv_size": [1408, 1328] },
+      { "requires": "($cartography_resolution = 4096x)", "$uv_size": [2816, 2656] }
+    ]
+  },
+
+  "ct_map@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/cartography_table",
+    "size": [66, 66],
+    "variables": [
+      { "requires": "($cartography_resolution = 256x)", "$uv": [176, 0], "$uv_size": [66, 66] },
+      { "requires": "($cartography_resolution = 512x)", "$uv": [352, 0], "$uv_size": [132, 132] },
+      { "requires": "($cartography_resolution = 1024x)", "$uv": [704, 0], "$uv_size": [264, 264] },
+      { "requires": "($cartography_resolution = 2048x)", "$uv": [1408, 0], "$uv_size": [528, 528] },
+      { "requires": "($cartography_resolution = 4096x)", "$uv": [2816, 0], "$uv_size": [1056, 1056] }
+    ],
+    "bindings": [
+      {
+        "binding_name": "$map_binding_name",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "ct_none_map@resources1.ct_map": {
+    "$map_binding_name": "#is_none_mode"
+  },
+
+  "ct_default_map@resources1.ct_map": {
+    "$map_binding_name": "#is_basic_map_mode"
+  },
+
+  "ct_rename_map@resources1.ct_map": {
+    "$map_binding_name": "#is_rename_mode"
+  },
+
+  "ct_zoom_map@resources1.ct_map": {
+    "$map_binding_name": "#is_extend_mode",
+    "variables": [
+      { "requires": "($cartography_resolution = 256x)", "$uv": [176, 66], "$uv_size": [66, 66] },
+      { "requires": "($cartography_resolution = 512x)", "$uv": [352, 132], "$uv_size": [132, 132] },
+      { "requires": "($cartography_resolution = 1024x)", "$uv": [704, 264], "$uv_size": [264, 264] },
+      { "requires": "($cartography_resolution = 2048x)", "$uv": [1408, 528], "$uv_size": [528, 528] },
+      { "requires": "($cartography_resolution = 4096x)", "$uv": [2816, 1056], "$uv_size": [1056, 1056] }
+    ]
+  },
+
+  "ct_clone_map": {
+    "type": "panel",
+    "variables": [
+      { "requires": "($cartography_resolution = 256x)", "$uv": [176, 132], "$uv_size": [50, 50] },
+      { "requires": "($cartography_resolution = 512x)", "$uv": [352, 264], "$uv_size": [100, 100] },
+      { "requires": "($cartography_resolution = 1024x)", "$uv": [704, 528], "$uv_size": [200, 200] },
+      { "requires": "($cartography_resolution = 2048x)", "$uv": [1408, 1056], "$uv_size": [400, 400] },
+      { "requires": "($cartography_resolution = 4096x)", "$uv": [2816, 2112], "$uv_size": [800, 800] }
+    ],
+    "controls": [
+      {
+        "top_right@resources1.ct_map": {
+          "size": [50, 50],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right"
+        }
+      },
+      {
+        "bottom_left@resources1.ct_map": {
+          "size": [50, 50],
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "layer": 2
+        }
+      }
+    ],
+    "$map_binding_name": "#is_clone_mode"
+  },
+
+  "ct_locator_map@resources1.ct_map": {
+    "$map_binding_name": "#is_locator_map_mode"
+  },
+
+  "ct_locked_map@resources1.ct_map": {
+    "$map_binding_name": "#is_locked_mode"
+  },
+
+  "ct_locked_map_icon@resources1.ct_map": {
+    "$map_binding_name": "#is_locked_mode",
+    "layer": 4,
+    "variables": [
+      { "requires": "($cartography_resolution = 256x)", "$uv": [1, 167], "$uv_size": [66, 66] },
+      { "requires": "($cartography_resolution = 512x)", "$uv": [2, 334], "$uv_size": [132, 132] },
+      { "requires": "($cartography_resolution = 1024x)", "$uv": [4, 668], "$uv_size": [264, 264] },
+      { "requires": "($cartography_resolution = 2048x)", "$uv": [8, 1336], "$uv_size": [528, 528] },
+      { "requires": "($cartography_resolution = 4096x)", "$uv": [16, 2672], "$uv_size": [1056, 1056] }
+    ]
+  },
+
+  /* Chests */
+
+  "generic_54_bg": {
+    "type": "stack_panel",
+    "size": [176, 221],
+    "controls": [
+      {
+        "top@resources.resource_image": {
+          "texture": "src/assets/minecraft/textures/gui/container/generic_54",
+          "size": [176, 125],
+          "variables": [
+            { "requires": "($generic_54_resolution = 256x)", "$uv_size": [176, 125] },
+            { "requires": "($generic_54_resolution = 512x)", "$uv_size": [352, 250] },
+            { "requires": "($generic_54_resolution = 1024x)", "$uv_size": [704, 300] },
+            { "requires": "($generic_54_resolution = 2048x)", "$uv_size": [1408, 600] },
+            { "requires": "($generic_54_resolution = 4096x)", "$uv_size": [2816, 1200] }
+          ]
+        }
+      },
+      {
+        "bottom@resources.resource_image": {
+          "texture": "src/assets/minecraft/textures/gui/container/generic_54",
+          "size": [176, 96],
+          "variables": [
+            { "requires": "($generic_54_resolution = 256x)", "$uv": [0, 126], "$uv_size": [176, 96] },
+            { "requires": "($generic_54_resolution = 512x)", "$uv": [0, 252], "$uv_size": [352, 192] },
+            { "requires": "($generic_54_resolution = 1024x)", "$uv": [0, 304], "$uv_size": [704, 384] },
+            { "requires": "($generic_54_resolution = 2048x)", "$uv": [0, 608], "$uv_size": [1408, 768] },
+            { "requires": "($generic_54_resolution = 4096x)", "$uv": [0, 1216], "$uv_size": [2816, 1536] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "generic_27_bg": {
+    "type": "stack_panel",
+    "size": [176, 167],
+    "controls": [
+      {
+        "top@resources.resource_image": {
+          "texture": "src/assets/minecraft/textures/gui/container/generic_54",
+          "size": [176, 71],
+          "variables": [
+            { "requires": "($generic_54_resolution = 256x)", "$uv_size": [176, 71] },
+            { "requires": "($generic_54_resolution = 512x)", "$uv_size": [352, 142] },
+            { "requires": "($generic_54_resolution = 1024x)", "$uv_size": [704, 274] },
+            { "requires": "($generic_54_resolution = 2048x)", "$uv_size": [1408, 548] },
+            { "requires": "($generic_54_resolution = 4096x)", "$uv_size": [2816, 1096] }
+          ]
+        }
+      },
+      {
+        "bottom@resources.resource_image": {
+          "texture": "src/assets/minecraft/textures/gui/container/generic_54",
+          "size": [176, 96],
+          "variables": [
+            { "requires": "($generic_54_resolution = 256x)", "$uv": [0, 126], "$uv_size": [176, 96] },
+            { "requires": "($generic_54_resolution = 512x)", "$uv": [0, 252], "$uv_size": [352, 192] },
+            { "requires": "($generic_54_resolution = 1024x)", "$uv": [0, 304], "$uv_size": [704, 384] },
+            { "requires": "($generic_54_resolution = 2048x)", "$uv": [0, 608], "$uv_size": [1408, 768] },
+            { "requires": "($generic_54_resolution = 4096x)", "$uv": [0, 1216], "$uv_size": [2816, 1536] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "shulker_box_bg@resources.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/shulker_box",
+    "size": [176, 166],
+    "variables": [
+      { "requires": "($shulker_box_resolution = 256x)", "$uv_size": [176, 166] },
+      { "requires": "($shulker_box_resolution = 512x)", "$uv_size": [352, 332] },
+      { "requires": "($shulker_box_resolution = 1024x)", "$uv_size": [704, 664] },
+      { "requires": "($shulker_box_resolution = 2048x)", "$uv_size": [1408, 1328] },
+      { "requires": "($shulker_box_resolution = 4096x)", "$uv_size": [2816, 2656] }
+    ]
+  },
+
+  /* Crafting Table */
+
+  "crafting_table_bg@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/crafting_table",
+    "size": [176, 166],
+    "variables": [
+      { "requires": "($crafting_table_resolution = 256x)", "$uv_size": [176, 166] },
+      { "requires": "($crafting_table_resolution = 512x)", "$uv_size": [352, 332] },
+      { "requires": "($crafting_table_resolution = 1024x)", "$uv_size": [704, 664] },
+      { "requires": "($crafting_table_resolution = 2048x)", "$uv_size": [1408, 1328] },
+      { "requires": "($crafting_table_resolution = 4096x)", "$uv_size": [2816, 2656] }
+    ]
+  },
+
+  /* Enchanting Table */
+
+  "enchanting_table_bg@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/enchanting_table",
+    "size": [176, 166],
+    "variables": [
+      { "requires": "($enchanting_table_resolution = 256x)", "$uv_size": [176, 166] },
+      { "requires": "($enchanting_table_resolution = 512x)", "$uv_size": [352, 332] },
+      { "requires": "($enchanting_table_resolution = 1024x)", "$uv_size": [704, 664] },
+      { "requires": "($enchanting_table_resolution = 2048x)", "$uv_size": [1408, 1328] },
+      { "requires": "($enchanting_table_resolution = 4096x)", "$uv_size": [2816, 2656] }
+    ]
+  },
+
+  "et_enchantments_selectable_bg@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/enchanting_table",
+    "size": [108, 19],
+    "variables": [
+      { "requires": "($enchanting_table_resolution = 256x)", "$uv": [0, 166], "$uv_size": [108, 19] },
+      { "requires": "($enchanting_table_resolution = 512x)", "$uv": [0, 332], "$uv_size": [216, 38] },
+      { "requires": "($enchanting_table_resolution = 1024x)", "$uv": [0, 664], "$uv_size": [432, 76] },
+      { "requires": "($enchanting_table_resolution = 2048x)", "$uv": [0, 1328], "$uv_size": [864, 152] },
+      { "requires": "($enchanting_table_resolution = 4096x)", "$uv": [0, 2656], "$uv_size": [1728, 304] }
+    ]
+  },
+
+  "et_enchantments_selectable_hover_bg@resources1.et_enchantments_selectable_bg": {
+    "variables": [
+      { "requires": "($enchanting_table_resolution = 256x)", "$uv": [0, 204], "$uv_size": [108, 19] },
+      { "requires": "($enchanting_table_resolution = 512x)", "$uv": [0, 408], "$uv_size": [216, 38] },
+      { "requires": "($enchanting_table_resolution = 1024x)", "$uv": [0, 816], "$uv_size": [432, 76] },
+      { "requires": "($enchanting_table_resolution = 2048x)", "$uv": [0, 1632], "$uv_size": [864, 152] },
+      { "requires": "($enchanting_table_resolution = 4096x)", "$uv": [0, 3264], "$uv_size": [1728, 304] }
+    ]
+  },
+
+  "et_enchantments_unselectable_bg@resources1.et_enchantments_selectable_bg": {
+    "variables": [
+      { "requires": "($enchanting_table_resolution = 256x)", "$uv": [0, 185], "$uv_size": [108, 19] },
+      { "requires": "($enchanting_table_resolution = 512x)", "$uv": [0, 370], "$uv_size": [216, 38] },
+      { "requires": "($enchanting_table_resolution = 1024x)", "$uv": [0, 740], "$uv_size": [432, 76] },
+      { "requires": "($enchanting_table_resolution = 2048x)", "$uv": [0, 1480], "$uv_size": [864, 152] },
+      { "requires": "($enchanting_table_resolution = 4096x)", "$uv": [0, 2960], "$uv_size": [1728, 304] }
+    ]
+  },
+
+  "et_dust_image@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/enchanting_table",
+    "size": [16, 16],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [0, 1],
+    "bindings": [
+      {
+        "binding_name": "$visibility_binding_name",
+        "binding_name_override": "#visible",
+        "binding_collection_name": "#enchant_buttons",
+        "binding_type": "collection"
+      }
+    ]
+  },
+
+  "et_dust_image_selectable@resources1.et_dust_image": {
+    "layer": 3,
+    "$visibility_binding_name": "#selectable_dust_is_visible"
+  },
+
+  "et_dust_image_unselectable@resources1.et_dust_image": {
+    "layer": 3,
+    "$visibility_binding_name": "#unselectable_dust_is_visible"
+  },
+
+  "et_dust_level1@resources1.et_dust_image_selectable": {
+    "variables": [
+      { "requires": "($enchanting_table_resolution = 256x)", "$uv": [0, 223], "$uv_size": [16, 16] },
+      { "requires": "($enchanting_table_resolution = 512x)", "$uv": [0, 446], "$uv_size": [32, 32] },
+      { "requires": "($enchanting_table_resolution = 1024x)", "$uv": [0, 892], "$uv_size": [64, 64] },
+      { "requires": "($enchanting_table_resolution = 2048x)", "$uv": [0, 1784], "$uv_size": [128, 128] },
+      { "requires": "($enchanting_table_resolution = 4096x)", "$uv": [0, 3568], "$uv_size": [256, 256] }
+    ]
+  },
+
+  "et_dust_level1_disabled@resources1.et_dust_image_unselectable": {
+    "variables": [
+      { "requires": "($enchanting_table_resolution = 256x)", "$uv": [0, 239], "$uv_size": [16, 16] },
+      { "requires": "($enchanting_table_resolution = 512x)", "$uv": [0, 478], "$uv_size": [32, 32] },
+      { "requires": "($enchanting_table_resolution = 1024x)", "$uv": [0, 956], "$uv_size": [64, 64] },
+      { "requires": "($enchanting_table_resolution = 2048x)", "$uv": [0, 1912], "$uv_size": [128, 128] },
+      { "requires": "($enchanting_table_resolution = 4096x)", "$uv": [0, 3824], "$uv_size": [256, 256] }
+    ]
+  },
+
+  "et_dust_level2@resources1.et_dust_image_selectable": {
+    "variables": [
+      { "requires": "($enchanting_table_resolution = 256x)", "$uv": [16, 223], "$uv_size": [16, 16] },
+      { "requires": "($enchanting_table_resolution = 512x)", "$uv": [32, 446], "$uv_size": [32, 32] },
+      { "requires": "($enchanting_table_resolution = 1024x)", "$uv": [64, 892], "$uv_size": [64, 64] },
+      { "requires": "($enchanting_table_resolution = 2048x)", "$uv": [128, 1784], "$uv_size": [128, 128] },
+      { "requires": "($enchanting_table_resolution = 4096x)", "$uv": [256, 3568], "$uv_size": [256, 256] }
+    ]
+  },
+
+  "et_dust_level2_disabled@resources1.et_dust_image_unselectable": {
+    "variables": [
+      { "requires": "($enchanting_table_resolution = 256x)", "$uv": [16, 239], "$uv_size": [16, 16] },
+      { "requires": "($enchanting_table_resolution = 512x)", "$uv": [32, 478], "$uv_size": [32, 32] },
+      { "requires": "($enchanting_table_resolution = 1024x)", "$uv": [64, 956], "$uv_size": [64, 64] },
+      { "requires": "($enchanting_table_resolution = 2048x)", "$uv": [128, 1912], "$uv_size": [128, 128] },
+      { "requires": "($enchanting_table_resolution = 4096x)", "$uv": [256, 3824], "$uv_size": [256, 256] }
+    ]
+  },
+
+  "et_dust_level3@resources1.et_dust_image_selectable": {
+    "variables": [
+      { "requires": "($enchanting_table_resolution = 256x)", "$uv": [33, 223], "$uv_size": [16, 16] },
+      { "requires": "($enchanting_table_resolution = 512x)", "$uv": [64, 446], "$uv_size": [32, 32] },
+      { "requires": "($enchanting_table_resolution = 1024x)", "$uv": [128, 892], "$uv_size": [64, 64] },
+      { "requires": "($enchanting_table_resolution = 2048x)", "$uv": [256, 1784], "$uv_size": [128, 128] },
+      { "requires": "($enchanting_table_resolution = 4096x)", "$uv": [512, 3568], "$uv_size": [256, 256] }
+    ]
+  },
+
+  "et_dust_level3_disabled@resources1.et_dust_image_unselectable": {
+    "variables": [
+      { "requires": "($enchanting_table_resolution = 256x)", "$uv": [32, 239], "$uv_size": [16, 16] },
+      { "requires": "($enchanting_table_resolution = 512x)", "$uv": [64, 478], "$uv_size": [32, 32] },
+      { "requires": "($enchanting_table_resolution = 1024x)", "$uv": [128, 956], "$uv_size": [64, 64] },
+      { "requires": "($enchanting_table_resolution = 2048x)", "$uv": [256, 1912], "$uv_size": [128, 128] },
+      { "requires": "($enchanting_table_resolution = 4096x)", "$uv": [512, 3824], "$uv_size": [256, 256] }
+    ]
+  },
+
+  /* Furnace */
+
+  "furnace_bg@content.resource_image": {
+    "texture": "('src/assets/minecraft/textures/gui/container/' + $furnace_name)",
+    "size": [176, 166],
+    "variables": [
+      { "requires": "($furnace_resolution = 256x)", "$uv_size": [176, 166] },
+      { "requires": "($furnace_resolution = 512x)", "$uv_size": [352, 332] },
+      { "requires": "($furnace_resolution = 1024x)", "$uv_size": [704, 664] },
+      { "requires": "($furnace_resolution = 2048x)", "$uv_size": [1408, 1328] },
+      { "requires": "($furnace_resolution = 4096x)", "$uv_size": [2816, 2656] }
+    ]
+  },
+
+  "furnace_full_arrow@content.resource_image": {
+    "texture": "('src/assets/minecraft/textures/gui/container/' + $furnace_name)",
+    "size": [24, 17],
+    "variables": [
+      { "requires": "($furnace_resolution = 256x)", "$uv": [176, 14], "$uv_size": [24, 17] },
+      { "requires": "($furnace_resolution = 512x)", "$uv": [352, 28], "$uv_size": [48, 34] },
+      { "requires": "($furnace_resolution = 1024x)", "$uv": [704, 56], "$uv_size": [96, 68] },
+      { "requires": "($furnace_resolution = 2048x)", "$uv": [1408, 112], "$uv_size": [192, 136] },
+      { "requires": "($furnace_resolution = 4096x)", "$uv": [2816, 224], "$uv_size": [384, 272] }
+    ]
+  },
+
+  "furnace_full_flame@content.resource_image": {
+    "texture": "('src/assets/minecraft/textures/gui/container/' + $furnace_name)",
+    "size": [14, 14],
+    "variables": [
+      { "requires": "($furnace_resolution = 256x)", "$uv": [176, 0], "$uv_size": [14, 14] },
+      { "requires": "($furnace_resolution = 512x)", "$uv": [352, 0], "$uv_size": [28, 28] },
+      { "requires": "($furnace_resolution = 1024x)", "$uv": [704, 0], "$uv_size": [56, 56] },
+      { "requires": "($furnace_resolution = 2048x)", "$uv": [1408, 0], "$uv_size": [112, 112] },
+      { "requires": "($furnace_resolution = 4096x)", "$uv": [2816, 0], "$uv_size": [224, 224] }
+    ]
+  },
+
+  /* Grindstone */
+
+  "grindstone_bg@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/grindstone",
+    "size": [176, 166],
+    "variables": [
+      { "requires": "($grindstone_resolution = 256x)", "$uv_size": [176, 166] },
+      { "requires": "($grindstone_resolution = 512x)", "$uv_size": [352, 332] },
+      { "requires": "($grindstone_resolution = 1024x)", "$uv_size": [704, 664] },
+      { "requires": "($grindstone_resolution = 2048x)", "$uv_size": [1408, 1328] },
+      { "requires": "($grindstone_resolution = 4096x)", "$uv_size": [2816, 2656] }
+    ]
+  },
+
+  "grindstone_arrow_cross_out@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/grindstone",
+    "variables":[
+      { "requires":"($grindstone_resolution = 256x)", "$uv": [176, 0], "$uv_size": [28, 21] },
+      { "requires":"($grindstone_resolution = 512x)", "$uv": [352, 0], "$uv_size": [220, 32] },
+      { "requires":"($grindstone_resolution = 1024x)", "$uv": [704, 0], "$uv_size": [440, 64] },
+      { "requires":"($grindstone_resolution = 2048x)", "$uv": [1408, 0], "$uv_size": [880, 128] },
+      { "requires":"($grindstone_resolution = 4096x)", "$uv": [2816, 0], "$uv_size": [1760, 256] }
+    ]
+  },
+
+  /* Horse */
+
+  "horse_bg@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/horse",
+    "size": [176, 166],
+    "variables": [
+      { "requires": "($horse_resolution = 256x)", "$uv_size": [176, 166] },
+      { "requires": "($horse_resolution = 512x)", "$uv_size": [352, 332] },
+      { "requires": "($horse_resolution = 1024x)", "$uv_size": [704, 664] },
+      { "requires": "($horse_resolution = 2048x)", "$uv_size": [1408, 1328] },
+      { "requires": "($horse_resolution = 4096x)", "$uv_size": [2816, 2656] }
+    ]
+  },
+
+  "horse_inv_bg@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/horse",
+    "size": [90, 54],
+    "variables": [
+      { "requires": "($horse_resolution = 256x)", "$uv": [0, 166], "$uv_size": [90, 54] },
+      { "requires": "($horse_resolution = 512x)", "$uv": [0, 332], "$uv_size": [36, 108] },
+      { "requires": "($horse_resolution = 1024x)", "$uv": [0, 664], "$uv_size": [72, 216] },
+      { "requires": "($horse_resolution = 2048x)", "$uv": [0, 1328], "$uv_size": [144, 432] },
+      { "requires": "($horse_resolution = 4096x)", "$uv": [0, 2656], "$uv_size": [288, 864] }
+    ]
+  },
+
+  "saddle_slot_bg@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/horse",
+    "size": [18, 18],
+    "variables": [
+      { "requires": "($horse_resolution = 256x)", "$uv": [18, 220], "$uv_size": [18, 18] },
+      { "requires": "($horse_resolution = 512x)", "$uv": [36, 440], "$uv_size": [36, 36] },
+      { "requires": "($horse_resolution = 1024x)", "$uv": [72, 880], "$uv_size": [72, 72] },
+      { "requires": "($horse_resolution = 2048x)", "$uv": [144, 1760], "$uv_size": [144, 168] },
+      { "requires": "($horse_resolution = 4096x)", "$uv": [288, 3520], "$uv_size": [288, 288] }
+    ]
+  },
+
+  "armor_slot_bg@resources1.saddle_slot_bg": {
+    "variables": [ 
+      { "requires": "($horse_resolution = 256x)", "$uv": [0, 220], "$uv_size": [18, 18] },
+      { "requires": "($horse_resolution = 512x)", "$uv": [0, 440], "$uv_size": [36, 36] },
+      { "requires": "($horse_resolution = 1024x)", "$uv": [0, 880], "$uv_size": [72, 72] },
+      { "requires": "($horse_resolution = 2048x)", "$uv": [0, 1760], "$uv_size": [144, 168] },
+      { "requires": "($horse_resolution = 4096x)", "$uv": [0, 3520], "$uv_size": [288, 288] }
+    ]
+  },
+
+  "carpet_slot_bg@resources1.saddle_slot_bg": {
+    "variables": [
+      { "requires": "($horse_resolution = 256x)", "$uv": [36, 220], "$uv_size": [18, 18] },
+      { "requires": "($horse_resolution = 512x)", "$uv": [72, 440], "$uv_size": [36, 36] },
+      { "requires": "($horse_resolution = 1024x)", "$uv": [144, 880], "$uv_size": [72, 72] },
+      { "requires": "($horse_resolution = 2048x)", "$uv": [288, 1760], "$uv_size": [144, 168] },
+      { "requires": "($horse_resolution = 4096x)", "$uv": [576, 3520], "$uv_size": [288, 288] }
+    ]
+  },
+
+  /* Inventory */
+
+  "inventory_bg@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/inventory",
+    "size": [176, 166],
+    "variables": [
+      { "requires": "($inventory_resolution = 256x)", "$uv_size": [176, 166] },
+      { "requires": "($inventory_resolution = 512x)", "$uv_size": [352, 332] },
+      { "requires": "($inventory_resolution = 1024x)", "$uv_size": [704, 664] },
+      { "requires": "($inventory_resolution = 2048x)", "$uv_size": [1408, 1328] },
+      { "requires": "($inventory_resolution = 4096x)", "$uv_size": [2816, 2656] }
+    ]
+  },
+
+  "effect_gray_background@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/inventory",
+    "size": [120, 31],
+    "variables": [
+      { "requires": "($inventory_resolution = 256x)", "$uv": [0, 166], "$uv_size": [120, 31] },
+      { "requires": "($inventory_resolution = 512x)", "$uv": [0, 332], "$uv_size": [240, 62] },
+      { "requires": "($inventory_resolution = 1024x)", "$uv": [0, 664], "$uv_size": [480, 124] },
+      { "requires": "($inventory_resolution = 2048x)", "$uv": [0, 1328], "$uv_size": [960, 248] },
+      { "requires": "($inventory_resolution = 4096x)", "$uv": [0, 2652], "$uv_size": [1920, 496] }
+    ]
+  },
+
+  /* Others */
+
+  "armor_overlay": {
+    "type": "image",
+    "size": [16, 16],
+    "layer": 2,
+    "bindings": [
+      {
+        "binding_name": "#empty_armor_image_visible",
+        "binding_name_override": "#visible",
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection_name"
+      }
+    ]
+  },
+
+  "offhand_overlay": {
+    "type": "image",
+    "size": [16, 16],
+    "layer": 2,
+    "bindings": [
+      {
+        "binding_name": "#empty_offhand_image_visible",
+        "binding_name_override": "#visible",
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection_name"
+      }
+    ]
+  },
+
+  "inv_armor_overlay_helmet@resources1.armor_overlay": { "texture": "src/assets/minecraft/textures/item/empty_armor_slot_helmet" },
+
+  "inv_armor_overlay_chest@resources1.armor_overlay": { "texture": "src/assets/minecraft/textures/item/empty_armor_slot_chestplate" },
+
+  "inv_armor_overlay_legs@resources1.armor_overlay": { "texture": "src/assets/minecraft/textures/item/empty_armor_slot_leggings" },
+
+  "inv_armor_overlay_feet@resources1.armor_overlay": { "texture": "src/assets/minecraft/textures/item/empty_armor_slot_boots" },
+
+  "inv_armor_overlay_offhand@resources1.offhand_overlay": { "texture": "src/assets/minecraft/textures/item/empty_armor_slot_shield" },
+
+  /* Loom */
+
+  "loom_bg@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/loom",
+    "size": [176, 166],
+    "variables": [
+      { "requires": "($loom_resolution = 256x)", "$uv_size": [176, 166] },
+      { "requires": "($loom_resolution = 512x)", "$uv_size": [352, 332] },
+      { "requires": "($loom_resolution = 1024x)", "$uv_size": [704, 664] },
+      { "requires": "($loom_resolution = 2048x)", "$uv_size": [1408, 1328] },
+      { "requires": "($loom_resolution = 4096x)", "$uv_size": [2816, 2656] }
+    ]
+  },
+
+  "loom_banner_empty_slot@resources.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/loom",
+    "variables": [
+      { "requires": "($loom_resolution = 256x)", "$uv": [176, 0], "$uv_size": [16, 16] },
+      { "requires": "($loom_resolution = 512x)", "$uv": [352, 0], "$uv_size": [32, 32] },
+      { "requires": "($loom_resolution = 1024x)", "$uv": [704, 0], "$uv_size": [64, 64] },
+      { "requires": "($loom_resolution = 2048x)", "$uv": [1408, 0], "$uv_size": [128, 128] },
+      { "requires": "($loom_resolution = 4096x)", "$uv": [2816, 0], "$uv_size": [256, 256] }
+    ],
+    "size": [16, 16],
+    "bindings": [
+      {
+        "binding_name": "#empty_image_visible",
+        "binding_name_override": "#visible",
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection_name"
+      }
+    ]
+  },
+
+  "loom_dye_empty_slot@resources.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/loom",
+    "size": [16, 16],
+    "variables": [
+      { "requires": "($loom_resolution = 256x)", "$uv": [192, 0], "$uv_size": [16, 16] },
+      { "requires": "($loom_resolution = 512x)", "$uv": [384, 0], "$uv_size": [32, 32] },
+      { "requires": "($loom_resolution = 1024x)", "$uv": [768, 0], "$uv_size": [64, 64] },
+      { "requires": "($loom_resolution = 2048x)", "$uv": [1536, 0], "$uv_size": [128, 128] },
+      { "requires": "($loom_resolution = 4096x)", "$uv": [3072, 0], "$uv_size": [256, 356] }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#empty_image_visible",
+        "binding_name_override": "#visible",
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection_name"
+      }
+    ]
+  },
+    
+  "loom_pattern_item_empty_slot@resources.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/loom",
+    "variables": [
+      { "requires": "($loom_resolution = 256x)", "$uv": [208, 0],"$uv_size": [16, 16] },
+      { "requires": "($loom_resolution = 512x)", "$uv": [416, 0],"$uv_size": [32, 32] },
+      { "requires": "($loom_resolution = 1024x)", "$uv": [832, 0],"$uv_size": [64, 64] },
+      { "requires": "($loom_resolution = 2048x)", "$uv": [1664, 0],"$uv_size": [128, 128] },
+      { "requires": "($loom_resolution = 4096x)", "$uv": [3328, 0],"$uv_size": [256, 256] }
+    ],
+    "size": [16, 16],
+    "bindings": [
+      {
+        "binding_name": "#empty_image_visible",
+        "binding_name_override": "#visible",
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection_name"
+      }
+    ]
+  },
+
+  "loom_locked_scrollbox@resources.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/loom",
+    "size": [12, 15],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [119, 13],
+    "variables": [
+      { "requires": "($loom_resolution = 256x)", "$uv": [244, 0], "$uv_size": [12,15] },
+      { "requires": "($loom_resolution = 512x)", "$uv": [488, 0], "$uv_size": [24,30] },
+      { "requires": "($loom_resolution = 1024x)", "$uv": [976, 0], "$uv_size": [48,60] },
+      { "requires": "($loom_resolution = 2048x)", "$uv": [1952, 0], "$uv_size": [96,120] },
+      { "requires": "($loom_resolution = 4096x)", "$uv": [3904, 0], "$uv_size": [192,240] }
+    ]
+  },
+
+  "loom_scroll_track@resources.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/loom",
+    "size": [12, 56],
+    "offset": [0, 0],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "variables": [
+      { "requires": "($loom_resolution = 256x)", "$uv": [119,13], "$uv_size": [12,56] },
+      { "requires": "($loom_resolution = 512x)", "$uv": [238,26], "$uv_size": [24,112] },
+      { "requires": "($loom_resolution = 1024x)", "$uv": [476,52], "$uv_size": [48,224] },
+      { "requires": "($loom_resolution = 2048x)", "$uv": [952,104], "$uv_size": [96,448] },
+      { "requires": "($loom_resolution = 4096x)", "$uv": [1104,208], "$uv_size": [192,896] }
+    ]
+  },
+
+  "loom_scroll_box@resources.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/loom",
+    "size": [12, 15],
+    "variables": [
+      { "requires": "($loom_resolution = 256x)", "$uv": [232, 0], "$uv_size":[12, 15] },
+      { "requires": "($loom_resolution = 512x)", "$uv": [464, 0], "$uv_size":[24, 30] },
+      { "requires": "($loom_resolution = 1024x)", "$uv": [928, 0], "$uv_size":[48, 60] },
+      { "requires": "($loom_resolution = 2048x)", "$uv": [1856, 0], "$uv_size":[96, 120] },
+      { "requires": "($loom_resolution = 4096x)", "$uv": [3712, 0], "$uv_size":[192, 240] }
+    ]
+  },
+
+  "loom_pattern_slot_background@resources.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/loom",
+    "size": [14, 14],
+    "layer": 1,
+    "variables": [
+      { "requires": "($loom_resolution = 256x)", "$uv": [0, 166], "$uv_size":[14, 14] },
+      { "requires": "($loom_resolution = 512x)", "$uv": [0, 332], "$uv_size":[28, 28] },
+      { "requires": "($loom_resolution = 1024x)", "$uv": [0, 664], "$uv_size":[56, 56] },
+      { "requires": "($loom_resolution = 2048x)", "$uv": [0, 1328], "$uv_size":[112, 112] },
+      { "requires": "($loom_resolution = 4096x)", "$uv": [0, 2656], "$uv_size":[224, 224] }
+    ]
+  },
+  
+  "loom_pattern_hover_slot_background@resources.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/loom",
+    "size": [14, 14],
+    "layer": 1,
+    "variables": [
+      { "requires": "($loom_resolution = 256x)", "$uv": [0, 194], "$uv_size":[14, 14] },
+      { "requires": "($loom_resolution = 512x)", "$uv": [0, 388], "$uv_size":[28, 28] },
+      { "requires": "($loom_resolution = 1024x)", "$uv": [0, 776], "$uv_size":[56, 56] },
+      { "requires": "($loom_resolution = 2048x)", "$uv": [0, 1552], "$uv_size":[112, 112] },
+      { "requires": "($loom_resolution = 4096x)", "$uv": [0, 3104], "$uv_size":[224, 224] }
+    ]
+  },
+  
+  "loom_pattern_selected_slot_background@resources.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/loom",
+    "size": [14, 14],
+    "layer": 1,
+    "variables": [
+      { "requires": "($loom_resolution = 256x)", "$uv": [0, 180], "$uv_size":[14, 14] },
+      { "requires": "($loom_resolution = 512x)", "$uv": [0, 360], "$uv_size":[28, 28] },
+      { "requires": "($loom_resolution = 1024x)", "$uv": [0, 720], "$uv_size":[56, 56] },
+      { "requires": "($loom_resolution = 2048x)", "$uv": [0, 1440], "$uv_size":[112, 112] },
+      { "requires": "($loom_resolution = 4096x)", "$uv": [0, 2880], "$uv_size":[224, 224] }
+    ]
+  },
+
+  /* Redstone */
+
+  "dispenser_bg@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/dispenser",
+    "size": [176, 166],
+    "variables": [
+      { "requires": "($dispenser_resolution = 256x)", "$uv_size": [176, 166] },
+      { "requires": "($dispenser_resolution = 512x)", "$uv_size": [352, 332] },
+      { "requires": "($dispenser_resolution = 1024x)", "$uv_size": [704, 664] },
+      { "requires": "($dispenser_resolution = 2048x)", "$uv_size": [1408, 1328] },
+      { "requires": "($dispenser_resolution = 4096x)", "$uv_size": [2816, 2656] }
+    ]
+  },
+
+  "dropper_bg@resources1.dispenser_bg": { },
+
+  "hopper_bg@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/hopper",
+    "size": [176, 133],
+    "variables": [
+      { "requires": "($hopper_resolution = 256x)", "$uv_size": [176, 133] },
+      { "requires": "($hopper_resolution = 512x)", "$uv_size": [352, 266] },
+      { "requires": "($hopper_resolution = 1024x)", "$uv_size": [704, 532] },
+      { "requires": "($hopper_resolution = 2048x)", "$uv_size": [1408, 1064] },
+      { "requires": "($hopper_resolution = 4096x)", "$uv_size": [2816, 2128] }
+    ]
+  },
+
+  /* Smiting Table */
+
+  "smithing_table_bg@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/smithing",
+    "size": [176, 166],
+    "variables": [
+      { "requires": "($smithing_resolution = 256x)", "$uv_size": [176, 166] },
+      { "requires": "($smithing_resolution = 512x)", "$uv_size": [352, 332] },
+      { "requires": "($smithing_resolution = 1024x)", "$uv_size": [704, 664] },
+      { "requires": "($smithing_resolution = 2048x)", "$uv_size": [1408, 1328] },
+      { "requires": "($smithing_resolution = 4096x)", "$uv_size": [2816, 2656] }
+    ]
+  },
+
+  "smithing_arrow_cross_out@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/smithing",
+    "size": [28, 21],
+    "variables":[
+      { "requires":"($smithing_resolution = 256x)", "$uv": [176, 0], "$uv_size": [28, 21] },
+      { "requires":"($smithing_resolution = 512x)", "$uv": [352, 0], "$uv_size": [220, 32] },
+      { "requires":"($smithing_resolution = 1024x)", "$uv": [704, 0], "$uv_size": [440, 64] },
+      { "requires":"($smithing_resolution = 2048x)", "$uv": [1408, 0], "$uv_size": [880, 128] },
+      { "requires":"($smithing_resolution = 4096x)", "$uv": [2816, 0], "$uv_size": [1760, 256] }
+    ]
+  },
+
+  /* Stonecutter */
+  
+  "stonecutter_bg@resources.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/stonecutter",
+    "uv": [0, 0],
+    "size": [176, 166],
+    "variables": [
+      { "requires": "($stonecutter_resolution = 256x)", "$uv_size": [176, 166] },
+      { "requires": "($stonecutter_resolution = 512x)", "$uv_size": [352, 332] },
+      { "requires": "($stonecutter_resolution = 1024x)", "$uv_size": [704, 664] },
+      { "requires": "($stonecutter_resolution = 2048x)", "$uv_size": [1408, 1328] },
+      { "requires": "($stonecutter_resolution = 4096x)", "$uv_size": [2816, 2656] }
+    ]
+  },
+
+  "stonecutter_locked_scrollbox@resources.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/stonecutter",
+    "size": [12, 15],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [119, 15],
+    "variables": [
+      { "requires": "($stonecutter_resolution = 256x)", "$uv": [188, 0], "$uv_size": [12, 15] },
+      { "requires": "($stonecutter_resolution = 512x)", "$uv": [376, 0], "$uv_size": [24, 30] },
+      { "requires": "($stonecutter_resolution = 1024x)", "$uv": [752, 0], "$uv_size": [48, 60] },
+      { "requires": "($stonecutter_resolution = 2048x)", "$uv": [1504, 0], "$uv_size": [96, 120] },
+      { "requires": "($stonecutter_resolution = 4096x)", "$uv": [3008, 0], "$uv_size": [192, 240] }
+    ]
+  },
+
+  "stonecutter_scroll_box@resources.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/loom",
+    "size": [12, 15],
+    "variables": [
+      { "requires": "($stonecutter_resolution = 256x)", "$uv": [176, 0], "$uv_size": [12, 15] },
+      { "requires": "($stonecutter_resolution = 512x)", "$uv": [352, 0], "$uv_size": [24, 30] },
+      { "requires": "($stonecutter_resolution = 1024x)", "$uv": [704, 0], "$uv_size": [48, 60] },
+      { "requires": "($stonecutter_resolution = 2048x)", "$uv": [1408, 0], "$uv_size": [96, 120] },
+      { "requires": "($stonecutter_resolution = 4096x)", "$uv": [2816, 0], "$uv_size": [192, 240] }
+    ]
+  },
+
+  "stonecutter_slot_background@resources.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/stonecutter",
+    "size": [16, 18],
+    "layer": 1,
+    "variables":[
+      { "requires": "($stonecutter_resolution = 256x)", "$uv": [0, 166], "$uv_size": [16, 18] },
+      { "requires": "($stonecutter_resolution = 512x)", "$uv": [0, 332], "$uv_size": [32, 36] },
+      { "requires": "($stonecutter_resolution = 1024x)", "$uv": [0, 664], "$uv_size": [64, 72] },
+      { "requires": "($stonecutter_resolution = 2048x)", "$uv": [0, 1328], "$uv_size": [128, 144] },
+      { "requires": "($stonecutter_resolution = 4096x)", "$uv": [0, 2656], "$uv_size": [256, 288] }
+    ]
+  },
+
+  "stonecutter_hover_slot_background@resources.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/stonecutter",
+    "size": [16, 18],
+    "layer": 1,
+    "variables": [
+      { "requires": "($stonecutter_resolution = 256x)", "$uv": [0, 202], "$uv_size": [16, 18] },
+      { "requires": "($stonecutter_resolution = 512x)", "$uv": [0, 404], "$uv_size": [32, 36] },
+      { "requires": "($stonecutter_resolution = 1024x)", "$uv": [0, 808], "$uv_size": [64, 72] },
+      { "requires": "($stonecutter_resolution = 2048x)", "$uv": [0, 1616], "$uv_size": [128, 144] },
+      { "requires": "($stonecutter_resolution = 4096x)", "$uv": [0, 3232], "$uv_size": [256, 288] }
+    ]
+  },
+
+  "stonecutter_selected_slot_background@resources.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/stonecutter",
+    "size": [16, 18],
+    "layer": 1,
+    "variables": [
+      { "requires": "($stonecutter_resolution = 256x)", "$uv": [0, 184], "$uv_size": [16, 18] },
+      { "requires": "($stonecutter_resolution = 512x)", "$uv": [0, 368], "$uv_size": [32, 36] },
+      { "requires": "($stonecutter_resolution = 1024x)", "$uv": [0, 736], "$uv_size": [64, 72] },
+      { "requires": "($stonecutter_resolution = 2048x)", "$uv": [0, 1472], "$uv_size": [128, 144] },
+      { "requires": "($stonecutter_resolution = 4096x)", "$uv": [0, 2944], "$uv_size": [256, 288] }
+    ]
+  },
+  
+  "scroll_track@resources.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/stonecutter",
+    "size": [12, 54],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "variables": [
+      { "requires": "($stonecutter_resolution = 256x)", "$uv": [119, 15], "$uv_size": [12, 54] },
+      { "requires": "($stonecutter_resolution = 512x)", "$uv": [238, 30], "$uv_size": [24, 108] },
+      { "requires": "($stonecutter_resolution = 1024x)", "$uv": [476, 60], "$uv_size": [48, 216] },
+      { "requires": "($stonecutter_resolution = 2048x)", "$uv": [952, 120], "$uv_size": [96, 432] },
+      { "requires": "($stonecutter_resolution = 4096x)", "$uv": [1104, 240], "$uv_size": [192, 864] }
+    ]
+  },
+
+  /* Villager1 */
+
+  /* Villager2 */
+   
+  "villager2_bg@resources.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/villager2",
+    "uv": [0, 0],
+    "size": [276, 166],
+    "variables": [
+      { "requires": "($villager2_resolution = 256x)", "$uv_size": [276, 166] },
+      { "requires": "($villager2_resolution = 512x)", "$uv_size": [552, 332] },
+      { "requires": "($villager2_resolution = 1024x)", "$uv_size": [1104, 664] },
+      { "requires": "($villager2_resolution = 2048x)", "$uv_size": [2208, 1328] },
+      { "requires": "($villager2_resolution = 4096x)", "$uv_size": [4416, 2656] }
+    ]
+  },
+
+  "villager2_locked_scrollbox@resources.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/villager2",
+    "size": [6, 27],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [94, 18],
+    "layer": 2,
+    "variables": [
+      { "requires": "($villager2_resolution = 256x)", "$uv": [6, 199], "$uv_size": [6, 27] },
+      { "requires": "($villager2_resolution = 512x)", "$uv": [12, 398], "$uv_size": [12, 54] },
+      { "requires": "($villager2_resolution = 1024x)", "$uv": [24, 796], "$uv_size": [24, 108] },
+      { "requires": "($villager2_resolution = 2048x)", "$uv": [48, 1592], "$uv_size": [48, 216] },
+      { "requires": "($villager2_resolution = 4096x)", "$uv": [96, 3184], "$uv_size": [96, 432] }
+    ]
+  },
+
+  "villager2_scroll_track@resources.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/villager2",
+    "size": [6, 140],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "variables": [
+      { "requires": "($villager2_resolution = 256x)", "$uv": [94, 18], "$uv_size": [6, 140] },
+      { "requires": "($villager2_resolution = 512x)", "$uv": [188, 36], "$uv_size": [12, 280] },
+      { "requires": "($villager2_resolution = 1024x)", "$uv": [376, 72], "$uv_size": [24, 560] },
+      { "requires": "($villager2_resolution = 2048x)", "$uv": [752, 144], "$uv_size": [48, 1120] },
+      { "requires": "($villager2_resolution = 4096x)", "$uv": [1505, 288], "$uv_size": [96, 2240] }
+    ]
+  },
+
+  "villager2_scroll_box@resources.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/villager2",
+    "size": [6, 27],
+    "variables": [
+      { "requires": "($villager2_resolution = 256x)", "$uv": [0, 199], "$uv_size": [6, 27] },
+      { "requires": "($villager2_resolution = 512x)", "$uv": [0, 398], "$uv_size": [12, 54] },
+      { "requires": "($villager2_resolution = 1024x)", "$uv": [0, 796], "$uv_size": [24, 108] },
+      { "requires": "($villager2_resolution = 2048x)", "$uv": [0, 1592], "$uv_size": [48, 216] },
+      { "requires": "($villager2_resolution = 4096x)", "$uv": [0, 3184], "$uv_size": [96, 432] }
+    ]
+  },
+
+  "villager2_small_arrow@resources.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/villager2",
+    "size": [10, 9],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [55, 4],
+    "layer": 2,
+    "variables": [
+      { "requires": "($villager2_resolution = 256x)", "$uv": [15, 171], "$uv_size": [10, 9] },
+      { "requires": "($villager2_resolution = 512x)", "$uv": [30, 342], "$uv_size": [20, 18] },
+      { "requires": "($villager2_resolution = 1024x)", "$uv": [60, 684], "$uv_size": [40, 36] },
+      { "requires": "($villager2_resolution = 2048x)", "$uv": [120, 1368], "$uv_size": [80, 72] },
+      { "requires": "($villager2_resolution = 4096x)", "$uv": [240, 2736], "$uv_size": [160, 144] }
+    ]
+  },
+
+  "villager2_small_arrow_crossover@resources.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/villager2",
+    "size": [10, 9],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [55, 4],
+    "variables": [
+      { "requires": "($villager2_resolution = 256x)", "$uv": [25, 171], "$uv_size": [10, 9] },
+      { "requires": "($villager2_resolution = 512x)", "$uv": [50, 342], "$uv_size": [20, 18] },
+      { "requires": "($villager2_resolution = 1024x)", "$uv": [100, 684], "$uv_size": [40, 36] },
+      { "requires": "($villager2_resolution = 2048x)", "$uv": [200, 1368], "$uv_size": [80, 72] },
+      { "requires": "($villager2_resolution = 4096x)", "$uv": [400, 2736], "$uv_size": [160, 144] }
+    ],
+    "layer": 3,
+    "bindings": [
+      {
+        "binding_type": "collection_details"
+      },
+      {
+        "binding_name": "#trade_cross_out_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "villager2_red_slash@resources.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/villager2",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "variables": [
+      { "requires": "($villager2_resolution = 256x)", "$uv": [0, 176], "$uv_size": [9, 2] },
+      { "requires": "($villager2_resolution = 512x)", "$uv": [0, 352], "$uv_size": [18, 4] },
+      { "requires": "($villager2_resolution = 1024x)", "$uv": [0, 704], "$uv_size": [36, 8] },
+      { "requires": "($villager2_resolution = 2048x)", "$uv": [0, 1408], "$uv_size": [72, 16] },
+      { "requires": "($villager2_resolution = 4096x)", "$uv": [0, 2816], "$uv_size": [144, 32] }
+    ],
+    "layer": 2
+  },
+
+  "villager2_crossover_arrow@resources.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/villager2",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [28, 21],
+    "variables":[
+      { "requires": "($villager2_resolution = 256x)", "$uv": [312, 0], "$uv_size": [28, 21] },
+      { "requires": "($villager2_resolution = 512x)", "$uv": [624, 0], "$uv_size": [220, 32] },
+      { "requires": "($villager2_resolution = 1024x)", "$uv": [1248, 0], "$uv_size": [440, 64] },
+      { "requires": "($villager2_resolution = 2048x)", "$uv": [2496, 0], "$uv_size": [880, 128] },
+      { "requires": "($villager2_resolution = 4096x)", "$uv": [4992, 0], "$uv_size": [1760, 256] }
+    ],
+    "layer": 2
+  },
+
+  "villager2_empty_bar@resources.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/villager2",
+    "size": [102, 5],
+    "variables":[
+      { "requires": "($villager2_resolution = 256x)", "$uv": [0, 186], "$uv_size": [102, 5] },
+      { "requires": "($villager2_resolution = 512x)", "$uv": [0, 372], "$uv_size": [204, 10] },
+      { "requires": "($villager2_resolution = 1024x)", "$uv": [0, 744], "$uv_size": [408, 20] },
+      { "requires": "($villager2_resolution = 2048x)", "$uv": [0, 1488], "$uv_size": [816, 40] },
+      { "requires": "($villager2_resolution = 4096x)", "$uv": [0, 2976], "$uv_size": [1632, 80] }
+    ]
+  },
+
+  "villager2_full_bar@resources.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/villager2",
+    "size": [102, 5],
+    "variables":[
+      { "requires": "($villager2_resolution = 256x)", "$uv": [0, 191], "$uv_size": [102, 5] },
+      { "requires": "($villager2_resolution = 512x)", "$uv": [0, 382], "$uv_size": [204, 10] },
+      { "requires": "($villager2_resolution = 1024x)", "$uv": [0, 764], "$uv_size": [408, 20] },
+      { "requires": "($villager2_resolution = 2048x)", "$uv": [0, 1528], "$uv_size": [816, 40] },
+      { "requires": "($villager2_resolution = 4096x)", "$uv": [0, 3056], "$uv_size": [1632, 80] }
+    ],
+    "clip_direction": "left",
+    "clip_pixelperfect": true
+  },
+
+  "villager2_white_bar@resources.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/container/villager2",
+    "size": [102, 5],
+    "variables":[
+      { "requires": "($villager2_resolution = 256x)", "$uv": [0, 181], "$uv_size": [102, 5] },
+      { "requires": "($villager2_resolution = 512x)", "$uv": [0, 362], "$uv_size": [204, 10] },
+      { "requires": "($villager2_resolution = 1024x)", "$uv": [0, 724], "$uv_size": [408, 20] },
+      { "requires": "($villager2_resolution = 2048x)", "$uv": [0, 1448], "$uv_size": [816, 40] },
+      { "requires": "($villager2_resolution = 4096x)", "$uv": [0, 2896], "$uv_size": [1632, 80] }
+    ],
+    "clip_direction": "left",
+    "clip_pixelperfect": true
+  }
+}

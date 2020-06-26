@@ -2,9 +2,9 @@
 {
   "namespace": "video_mcjava",
 
-  "video_content_panel@screen_mcjava.scroll_screen": {
+  "video_content_panel@content.scroll_screen": {
     "$top_content": "video_mcjava.top_content",
-    "$scrolling_content": "video_mcjava.scroll_content",
+    "$middle_content": "video_mcjava.scroll_content",
     "$bottom_content": "video_mcjava.bottom_content"
   },
 
@@ -17,12 +17,12 @@
         "render_dragon_button@settings_mcjava.open_button": {
           "size": [100, 20],
           "$toggle_index": 1,
-          "enabled": false,
-          "$toggle_button_text": "Advanced",
-          "$toggle_control_name": "advanced_video_view",
           "anchor_from": "top_right",
           "anchor_to": "top_right",
-          "offset": [-8, 6]
+          "offset": [-8, 6],
+          "enabled": false,
+          "$toggle_button_text": "Advanced",
+          "$toggle_control_name": "advanced_video_view"
         }
       }
     ]
@@ -33,7 +33,7 @@
     "size": [310, "100%c"],
     "$education_ios": "($education_edition and $ios)",
     "controls": [
-      { "space_top@screen_mcjava.vspace": {} },
+      { "space_top@content.v4px": {} },
       {
         "stack_zero@screen_mcjava.stack": {
           "ignored": "($pocket_edition or $education_ios)",
@@ -226,7 +226,7 @@
           ]
         }
       },
-      { "space_bottom@screen_mcjava.vspace": { "size": [0, 4] } }
+      { "space_bottom@content.v4px": {} }
     ],
     "$slider_text_bindings": [
       {

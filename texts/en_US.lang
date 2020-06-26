@@ -51,7 +51,7 @@ container.cartography=Cartography Table
 container.enchant=Enchant
 container.grindstone=Repair & Disenchant
 container.loom=Loom
-container.uprade=Upgrade Gear
+container.upgrade=Upgrade Gear
 container.stonecutter=Stonecutter
 
 ##Settings

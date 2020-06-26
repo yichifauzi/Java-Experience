@@ -1,0 +1,130 @@
+{
+  "namespace": "compound_creator_mcjava",
+
+  "compound_creator_screen_content_panel": {
+    "type": "panel",
+    "controls": [
+      {
+        "root_panel@common.root_panel": {
+          "layer": 1,
+          "size": [176, 184],
+          "controls": [
+            { "compound_bg@resources1.compound_bg": {} },
+            {
+              "title@container_mcjava.title": {
+                "text": "compoundcreator.title",
+                "offset": [0, 5],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle"
+              }
+            },
+            { "content@compound_creator_mcjava.compound_creator_content_panel": {} },
+            {
+              "inventory": {
+                "type": "panel",
+                "layer": 3,
+                "controls": [
+                  { "inventory_panel@container_mcjava.inventory_grid_panel": {} },
+                  { "hotbar_grid@container_mcjava.hotbar_grid": {} },
+                  { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} }
+                ]
+              }
+            },
+            { "inventory_selected_icon_button@container_mcjava.inventory_selected_icon_button": {} }
+          ]
+        }
+      },
+      { "container_gamepad_helpers@common.container_gamepad_helpers": {} }
+    ]
+  },
+
+  "compound_creator_content_panel": {
+    "type": "panel",
+    "controls": [
+      { "input@compound_creator_mcjava.input_grid": {} },
+      { "output@compound_creator_mcjava.output_slot": {} }
+    ]
+  },
+
+  "input_grid": {
+    "type": "grid",
+    "size": [54, 54],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [49, 25],
+    "grid_dimensions": [ 3, 3 ],
+    "grid_item_template": "compound_creator_mcjava.input_slot",
+    "collection_name": "compcreate_input"
+  },
+
+  "input_slot@container_mcjava.container_slot": {
+    "$item_collection_name": "compcreate_input"
+  },
+
+  "output_slot@container_mcjava.container_slot": {
+    "$item_collection_name": "compcreate_output",
+    "$button_ref": "compound_creator_mcjava.output_slot_button",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [132, 43]
+  },
+
+  "output_slot_button@container_mcjava.container_slot_button_prototype": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.output_take_all_place_all",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.output_take_all_place_all",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_secondary_select",
+        "to_button_id": "button.output_take_one_place_one",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_select",
+        "to_button_id": "button.output_take_one_place_one",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_auto_place",
+        "to_button_id": "button.container_auto_place",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_secondary_select",
+        "to_button_id": "button.container_auto_place",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_inventory_drop",
+        "to_button_id": "button.drop_one",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_inventory_drop_all",
+        "to_button_id": "button.drop_all",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.output_coalesce_stack",
+        "mapping_type": "double_pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.output_coalesce_stack",
+        "mapping_type": "double_pressed"
+      },
+      {
+        "to_button_id": "button.container_slot_hovered",
+        "mapping_type": "pressed"
+      }
+    ]
+  }
+}

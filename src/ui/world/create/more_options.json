@@ -5,6 +5,7 @@
     "type": "panel",
     "$anchor_from": "top_middle",
     "$anchor_to": "top_middle",
+    "$is_world_edit|default": false,
     "controls": [
       {
         "title@screen_mcjava.title": {
@@ -26,6 +27,7 @@
       { "back@settings_mcjava.back_button": { "anchor_from": "top_middle", "anchor_to": "top_middle", "size": [150, 20], "$toggle_button_name": "more_create_options", "offset": [80, 185] } },
       {
         "create_world@world_create_mcjava.create_world_button": {
+          "ignored": "$is_world_edit",
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
           "offset": [-80, -8]
@@ -33,6 +35,7 @@
       },
       {
         "cancel@screen_mcjava.exit_button": {
+          "ignored": "$is_world_edit",
           "$button_text": "gui.cancel",
           "size": [150, 20],
           "offset": [80, -8],

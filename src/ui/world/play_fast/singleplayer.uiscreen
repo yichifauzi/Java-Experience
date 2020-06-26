@@ -14,6 +14,17 @@
     "controls": [
       { "title@content.title": { "text": "selectWorld.title", "offset": [0, 20] } },
       {
+        "quick_play@button_mcjava.button": {
+          "$pressed_button_name": "button.menu_quick_play",
+          "$button_text": "menu.quickplay",
+          "ignored": "(not $education_edition)",
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [-38, 6],
+          "size": [100, 20]
+        }
+      },
+      {
         "right@play_fast_mcjava.right_button": {
           "$toggle_button_name": "to_multiplayer",
           "$toggle_control_name": "multiplayer_view"
@@ -24,7 +35,8 @@
 
   "scroll_content": {
     "type": "stack_panel",
-    "size": [270, "100%c"],
+    "orientation": "vertical",
+    "size": [ "100%", "100%c" ],
     "controls": [
       { "space_top@content.v4px": {} },
       {
@@ -62,7 +74,7 @@
             }
           ]
         }
-      },
+      },  
       {
         "edit_mode": {
           "type": "stack_panel",
@@ -299,7 +311,7 @@
             },
             { "tooltip@tooltip_mcjava.tooltip": { "$tooltip_name": "selectWorld.versionWarning", "$name_color": [1.0, 0.6, 0.0] } },
             { "overlay@resource_packs_mcjava.overlay": { "layer": 3 } },
-            { "select@resources.world_select_hover": { "layer": 4 } }
+            { "select@resources0.world_select_hover": { "layer": 4 } }
           ]
         }
       },
@@ -309,7 +321,7 @@
           "size": [32, 32],
           "controls": [
             { "overlay@resource_packs_mcjava.overlay": { "layer": 3 } },
-            { "select@resources.world_select_hover": { "layer": 4 } }
+            { "select@resources0.world_select_hover": { "layer": 4 } }
           ]
         }
       }
@@ -358,7 +370,7 @@
               }
             },
             {
-              "select@resources.world_select_default": {
+              "select@resources0.world_select_default": {
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
                 "offset": "$overlay_offset",
@@ -382,7 +394,7 @@
               }
             },
             {
-              "select@resources.world_select_default": {
+              "select@resources0.world_select_default": {
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
                 "offset": "$overlay_offset",

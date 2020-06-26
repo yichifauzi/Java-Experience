@@ -318,7 +318,9 @@
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "offset": "$box_label_offset",
-    "text": "$box_label"
+    "text": "$box_label",
+    "bindings": "$label_bindings",
+    "$label_bindings|default": []
   },
 
   "text_box_with_label@text_box_mcjava.base_text_box_with_label": {

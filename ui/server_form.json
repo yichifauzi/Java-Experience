@@ -1,0 +1,6 @@
+{
+  "third_party_server_screen": {
+    "$screen_content": "server_form_mcjava.server_form_screen_content_panel",
+    "$screen_bg_content": "screen_mcjava.screen_background"
+  }
+}

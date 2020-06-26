@@ -1,9 +1,10 @@
+/* Version: 2.0.0 */
 /* By @FMarquesPTO. All rights reserved. */
 {
   "namespace": "anvil_mcjava",
 
   "anvil_screen_content_panel@container_mcjava.container_panel": {
-    "$container_bg": "resources.anvil_bg",
+    "$container_bg": "resources1.anvil_bg",
     "$specified_content": "anvil_mcjava.anvil_content_panel"
   },
 
@@ -11,14 +12,14 @@
     "type": "panel",
     "$container_title": "container.anvil",
     "controls": [
-      { "@container_mcjava.title": { "offset": [60, 5] } },
-      { "@item_name_box": {} },
-      { "@input_item_slot": {} },
-      { "@material_item_slot": {} },
-      { "@result_item_slot": {} },
-      { "@yields": {} },
-      { "@success_cost_label": {} },
-      { "@fail_cost_label": {} }
+      { "title@container_mcjava.title": { "offset": [60, 5] } },
+      { "item@anvil_mcjava.item_name_box": {} },
+      { "input@anvil_mcjava.input_item_slot": {} },
+      { "material@anvil_mcjava.material_item_slot": {} },
+      { "result@anvil_mcjava.result_item_slot": {} },
+      { "yields@anvil_mcjava.yields": {} },
+      { "success@anvil_mcjava.success_cost_label": {} },
+      { "fail@anvil_mcjava.fail_cost_label": {} }
     ]
   },
 
@@ -27,12 +28,10 @@
     "anchor_to": "top_left",
     "offset": [59, 20],
     "size": [110, 16],
-    "$default_box_bg": "resources.anvil_text_box",
-    "$hover_box_bg": "resources.anvil_text_box",
-    "$locked_box_bg": "resources.anvil_text_box_locked",
-    "property_bag": {
-      "#property_field": "#item_name"
-    },
+    "$default_box_bg": "resources1.anvil_text_box",
+    "$hover_box_bg": "resources1.anvil_text_box",
+    "$locked_box_bg": "resources1.anvil_text_box_locked",
+    "property_bag": { "#property_field": "#item_name" },
     "max_length": 30,
     "$text_edit_binding_name": "#text_box_item_name",
     "$text_indent_size": ["100% - 6px", "100% - 2px"],
@@ -65,9 +64,7 @@
     "offset": [99, 45],
     "anchor_to": "top_left",
     "anchor_from": "top_left",
-    "controls": [
-      { "@resources.anvil_arrow_cross_out": { "layer": 1 } }
-    ],
+    "controls": [ { "@resources1.anvil_arrow_cross_out": { "layer": 1 } } ],
     "bindings": [
       {
         "binding_name": "#cross_out_icon",
@@ -157,7 +154,7 @@
       {
         "background": {
           "type": "image",
-          "texture": "src/javaui/resources/fmarquespto/textures/white",
+          "texture": "src/core/resources/fmarquespto/textures/white",
           "layer": -5,
           "color": [0.537, 0.537, 0.537],
           "size": ["100% + 4px", "100% + 2px"]

@@ -1,9 +1,10 @@
+/* Version: 2.0.0 */
 /* By @FMarquesPTO. All rights reserved. */
 {
   "namespace": "grindstone_mcjava",
 
   "grindstone_screen_content_panel@container_mcjava.container_panel": {
-    "$container_bg": "resources.grindstone_bg",
+    "$container_bg": "resources1.grindstone_bg",
     "$specified_content": "grindstone_mcjava.grindstone_content_panel"
   },
 
@@ -11,11 +12,11 @@
     "type": "panel",
     "$container_title": "Repair & Disenchant",
     "controls": [
-      { "@container_mcjava.title": { "offset": [8, 5] } },
-      { "@input_item_slot": {} },
-      { "@additional_item_slot": {} },
-      { "@yields": {} },
-      { "@result_item_slot": {} }
+      { "title@container_mcjava.title": { "offset": [8, 5] } },
+      { "input@grindstone_mcjava.input_item_slot": {} },
+      { "additional@grindstone_mcjava.additional_item_slot": {} },
+      { "yields@grindstone_mcjava.yields": {} },
+      { "result@grindstone_mcjava.result_item_slot": {} }
     ]
   },
 
@@ -52,9 +53,7 @@
     "offset": [92, 31],
     "anchor_to": "top_left",
     "anchor_from": "top_left",
-    "controls": [
-      { "@resources.grindstone_arrow_cross_out": { "layer": 1 } }
-    ],
+    "controls": [ { "cross_out@resources1.grindstone_arrow_cross_out": { "layer": 1 } } ],
     "bindings": [
       {
         "binding_name": "#cross_out_icon",

@@ -3,6 +3,47 @@
 
   "world_edit_screen_content_panel": {
     "type": "panel",
+    "$is_world_edit": true,
+    "controls": [
+      {
+        "world_edit@world_edit_mcjava.world_edit_content_panel": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "gamerules_view",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "more_create_options_view",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "world_resource_packs_view",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "world_behavior_packs_view",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      { "more_create_options@world_create_mcjava.more_create_options_screen": {} },
+      { "gamerules@world_create_mcjava.gamerules_screen": {} },
+      { "resource_packs@world_create_mcjava.resource_packs_screen": {} },
+      { "behavior_packs@world_create_mcjava.behavior_packs_screen": {} }
+    ]
+  },
+
+  "world_edit_content_panel": {
+    "type": "panel",
     "controls": [
       { "title@screen_mcjava.title": { "text": "selectWorld.edit" } },
       { "content_panel@world_edit_mcjava.content_panel": {} }
@@ -24,7 +65,39 @@
           ]
         }
       },
-      { "space_zero@screen_mcjava.vspace": { "size": [0, 15] } },
+      { "space_0@screen_mcjava.vspace": { "size": [0, 15] } },
+      {
+        "panel_two@screen_mcjava.panel": {
+          "controls": [
+            { "gamerules@world_create_mcjava.gamerules_button": { "size": [200, 20] } }
+          ]
+        }
+      },
+      { "space_1@content.v4px": {} },
+      {
+        "panel_two@screen_mcjava.panel": {
+          "controls": [
+            { "more_options@world_create_mcjava.more_create_options_button": { "size": [200, 20] } }
+          ]
+        }
+      },
+      { "space_1@content.v4px": {} },
+      {
+        "panel_two@screen_mcjava.panel": {
+          "controls": [
+            { "resource_packs@world_create_mcjava.resource_packs_button": { "size": [200, 20] } }
+          ]
+        }
+      },
+      { "space_1@content.v4px": {} },
+      {
+        "panel_two@screen_mcjava.panel": {
+          "controls": [
+            { "behavior_packs@world_create_mcjava.behavior_packs_button": { "size": [200, 20] } }
+          ]
+        }
+      },
+      { "space_1@content.v4px": {} },
       {
         "panel_one@screen_mcjava.panel": {
           "ignored": "(not $is_pregame or not $is_world_edit)",

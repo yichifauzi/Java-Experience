@@ -1,9 +1,10 @@
+/* Version: 2.0.0 */
 /* By @FMarquesPTO. All rights reserved. */
 {
   "namespace": "smithing_table_mcjava",
 
   "smithing_table_screen_content_panel@container_mcjava.container_panel": {
-    "$container_bg": "resources.smithing_table_bg",
+    "$container_bg": "resources1.smithing_table_bg",
     "$specified_content": "smithing_table_mcjava.smithing_table_content_panel"
   },
 
@@ -11,11 +12,11 @@
     "type": "panel",
     "$container_title": "container.upgrade",
     "controls": [
-      { "@container_mcjava.title": { "offset": [60, 19] } },
-      { "@input_item_slot": {} },
-      { "@material_item_slot": {} },
-      { "@yields": {} },
-      { "@result_item_slot": {} }
+      { "title@container_mcjava.title": { "offset": [60, 19] } },
+      { "input@smithing_table_mcjava.input_item_slot": {} },
+      { "material@smithing_table_mcjava.material_item_slot": {} },
+      { "yields@smithing_table_mcjava.yields": {} },
+      { "result@smithing_table_mcjava.result_item_slot": {} }
     ]
   },
 
@@ -50,9 +51,7 @@
     "offset": [99, 45],
     "anchor_to": "top_left",
     "anchor_from": "top_left",
-    "controls": [
-      { "@resources.smithing_arrow_cross_out": { "layer": 1 } }
-    ],
+    "controls": [ { "cross_out@resources1.smithing_arrow_cross_out": { "layer": 1 } } ],
     "bindings": [
       {
         "binding_name": "#cross_out_icon",

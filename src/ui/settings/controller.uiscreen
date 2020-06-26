@@ -8,9 +8,10 @@
       {
         "controller_content_panel@screen_mcjava.scroll_screen": {
           "$top_content": "controller_mcjava.top_content",
-          "$top_content_size": ["100%", 44],
+          "$top_content_size": ["100%", 43],
           "$scrolling_content": "controller_mcjava.better_keymapping_content",
           "$bottom_content": "controller_mcjava.bottom_content",
+          "$scroll_bar_offset": [164.5, 0],
           "variables": [
             {
               "requires": "(not $better_controller_keys_grid)",
@@ -45,7 +46,7 @@
   "top_content": {
     "type": "panel",
     "controls": [
-      { "title@screen_mcjava.title": { "offset": [0, 7], "text": "options.controls.title" } },
+      { "title@screen_mcjava.title": { "offset": [-0.5, 7], "text": "options.controls.title" } },
       {
         "stack_zero": {
           "type": "stack_panel",
@@ -53,10 +54,10 @@
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",
           "size": [310, 20],
-          "offset": [0, 18],
+          "offset": [-1, 18],
           "controls": [
             { "controller_settings@controller_mcjava.controller_settings_button": {} },
-            { "fill@screen_mcjava.hfill": {} },
+            { "fill@content.hfill": {} },
             { "auto_jump@controller_mcjava.auto_jump_toggle": { "size": [150, 20] } }
           ]
         }
@@ -131,7 +132,7 @@
     "anchor_from": "bottom_middle",
     "anchor_to": "bottom_middle",
     "size": [310, 20],
-    "offset": [0, -9],
+    "offset": [-1, -9],
     "controls": [
       { "reset@controller_mcjava.reset_button": {} },
       { "fill@screen_mcjava.hfill": {} },
@@ -146,9 +147,7 @@
 
   "popup_dialog_factory": {
     "type": "factory",
-    "control_ids": {
-      "modal_dialog_popup": "@popup_mcjava.reset_controller_settings_modal"
-    }
+    "control_ids": { "modal_dialog_popup": "@popup_mcjava.reset_controller_settings_modal" }
   },
 
   "controller_settings@controller_settings_mcjava.controller_settings_content_panel": {
@@ -225,7 +224,7 @@
           "$button_tts_header": "#audible_keymapping_name",
           "anchor_from": "top_right",
           "anchor_to": "top_right",
-          "offset": [-87, 0],
+          "offset": [-88, 0],
           "bindings": [
             {
               "binding_type": "collection_details",
@@ -249,7 +248,7 @@
   },
 
   "image_binding_button@button_mcjava.button": {
-    "size": [75, 20],
+    "size": [74, 20],
     "$pressed_button_name": "button.binding_button",
     "$button_type_panel": "controller_mcjava.image_binding_button_content",
     "bindings": [
@@ -284,6 +283,10 @@
           "type": "label",
           "text": "#binding_button_text",
           "color": "$text_color",
+          "size": ["default", "default"],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "text_alignment": "center",
           "shadow": true,
           "bindings": [
             {

@@ -3,7 +3,7 @@
 
   "creative_construction_tab_content@crafting_rb_mcjava.common_tab_content": {
     "$tab_name": "construction",
-    "$page_total_number": "16",
+    /* "$page_total_number": "16", */
     "$ignore_from_sixteen": true,
     "bindings": [
       {
@@ -17,7 +17,7 @@
 
   "survival_construction_tab_content@crafting_rb_mcjava.common_tab_content": {
     "$tab_name": "construction",
-    "$page_total_number": "13",
+    /* "$page_total_number": "13", */
     "$ignore_from_thirteen": true,
     "bindings": [
       {

@@ -1,0 +1,1080 @@
+/* @FMarquesPTO. All rights reserved */
+{
+  "namespace": "resources0",
+
+  "dirt_background": {
+    "type": "image",
+    "texture": "src/assets/minecraft/textures/gui/options_background",
+    "variables": [
+      { "requires": "($options_background_resolution = '256x')", "$tiled": [2, 2] },
+      { "requires": "($options_background_resolution = '512x')", "$tiled": [1, 1] },
+      { "requires": "($options_background_resolution = '1024x')", "$tiled": [0.5, 0.5] },
+      { "requires": "($options_background_resolution = '2048x')", "$tiled": [0.25, 0.25] },
+      { "requires": "($options_background_resolution = '4096x')", "$tiled": [0.125, 0.125] }
+    ]
+  },
+
+  "shadow_top": {
+    "type": "image",
+    "texture": "src/core/resources/fmarquespto/textures/shadow_top"
+  },
+
+  "shadow_bottom": {
+    "type": "image",
+    "texture": "src/core/resources/fmarquespto/textures/shadow_bottom"
+  },
+
+  /* Widgets */
+
+  "box_default": {
+    "type": "image",
+    "texture": "src/core/resources/fmarquespto/textures/indentbox"
+  },
+
+  "box_hover": {
+    "type": "image",
+    "texture": "src/core/resources/fmarquespto/textures/indentboxhover"
+  },
+
+  /* Widgets */
+
+  "hotbar_bg@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/widgets",
+    "size": [182, 22],
+    "variables": [
+      { "requires": "($widgets_resolution = 256x)", "$uv_size": [182, 22] },
+      { "requires": "($widgets_resolution = 512x)", "$uv_size": [364, 44] },
+      { "requires": "($widgets_resolution = 1024x)", "$uv_size": [728, 88] },
+      { "requires": "($widgets_resolution = 2048x)", "$uv_size": [1456, 176] },
+      { "requires": "($widgets_resolution = 4096x)", "$uv_size": [2912, 352] }
+    ]
+  },
+
+  "hotbar_slot_selector@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/widgets",
+    "size": [24, 23],
+    "variables": [
+      { "requires": "($widgets_resolution = 256x)", "$uv": [0, 22], "$uv_size": [24, 23] },
+      { "requires": "($widgets_resolution = 512x)", "$uv": [0, 44], "$uv_size": [48, 46] },
+      { "requires": "($widgets_resolution = 1024x)", "$uv": [0, 88], "$uv_size": [96, 92] },
+      { "requires": "($widgets_resolution = 2048x)", "$uv": [0, 176], "$uv_size": [192, 184] },
+      { "requires": "($widgets_resolution = 4096x)", "$uv": [0, 352], "$uv_size": [384, 368] }
+    ]
+  },
+
+  "offhand_slot@resources.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/widgets",
+    "size": [22, 22],
+    "variables": [
+      { "requires": "($widgets_resolution = 256x)", "$uv": [24, 23], "$uv_size": [22, 22] },
+      { "requires": "($widgets_resolution = 512x)", "$uv": [48, 46], "$uv_size": [44, 44] },
+      { "requires": "($widgets_resolution = 1024x)", "$uv": [96, 92], "$uv_size": [88, 88] },
+      { "requires": "($widgets_resolution = 2048x)", "$uv": [192, 184], "$uv_size": [176, 176] },
+      { "requires": "($widgets_resolution = 4096x)", "$uv": [384, 368], "$uv_size": [352, 352] }
+    ]
+  },
+
+  "button_default@content.resizing_texture_panel": {
+    "$side_size": [200, 20],
+    "texture": "src/assets/minecraft/textures/gui/widgets",
+    "variables": [
+      { "requires": "($widgets_resolution = 256x)", "$uv": [0, 66], "$uv_size": [200, 20] },
+      { "requires": "($widgets_resolution = 512x)", "$uv": [0, 132], "$uv_size": [400, 40] },
+      { "requires": "($widgets_resolution = 1024x)", "$uv": [0, 264], "$uv_size": [800, 80] },
+      { "requires": "($widgets_resolution = 2048x)", "$uv": [0, 528], "$uv_size": [1600, 160] },
+      { "requires": "($widgets_resolution = 4096x)", "$uv": [0, 1056], "$uv_size": [3200, 320] }
+    ]
+  },
+
+  "button_hover@resources0.button_default": {
+    "variables": [
+      { "requires": "($widgets_resolution = 256x)", "$uv": [0, 86], "$uv_size": [200, 20] },
+      { "requires": "($widgets_resolution = 512x)", "$uv": [0, 172], "$uv_size": [400, 40] },
+      { "requires": "($widgets_resolution = 1024x)", "$uv": [0, 344], "$uv_size": [800, 80] },
+      { "requires": "($widgets_resolution = 2048x)", "$uv": [0, 688], "$uv_size": [1600, 160] },
+      { "requires": "($widgets_resolution = 4096x)", "$uv": [0, 1376], "$uv_size": [3200, 320] }
+    ]
+  },
+
+  "button_locked@resources0.button_default": {
+    "variables": [
+      { "requires": "($widgets_resolution = 256x)", "$uv": [0, 46], "$uv_size": [200, 20] },
+      { "requires": "($widgets_resolution = 512x)", "$uv": [0, 92], "$uv_size": [400, 40] },
+      { "requires": "($widgets_resolution = 1024x)", "$uv": [0, 184], "$uv_size": [800, 80] },
+      { "requires": "($widgets_resolution = 2048x)", "$uv": [0, 368], "$uv_size": [1600, 160] },
+      { "requires": "($widgets_resolution = 4096x)", "$uv": [0, 736], "$uv_size": [3200, 320] }
+    ]
+  },
+
+  "feedback_button_default@resources.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/widgets",
+    "size": [20, 20],
+    "variables": [
+      { "requires": "($widgets_resolution = 256x)", "$uv": [0, 106], "$uv_size": [20, 20] },
+      { "requires": "($widgets_resolution = 512x)", "$uv": [0, 212], "$uv_size": [40, 40] },
+      { "requires": "($widgets_resolution = 1024x)", "$uv": [0, 424], "$uv_size": [80, 80] },
+      { "requires": "($widgets_resolution = 2048x)", "$uv": [0, 848], "$uv_size": [160, 160] },
+      { "requires": "($widgets_resolution = 4096x)", "$uv": [0, 1696], "$uv_size": [320, 320] }
+    ]
+  },
+
+  "feedback_button_hover@resources0.feedback_button_default": {
+    "variables": [
+      { "requires": "($widgets_resolution = 256x)", "$uv": [0, 126], "$uv_size": [20, 20] },
+      { "requires": "($widgets_resolution = 512x)", "$uv": [0, 252], "$uv_size": [40, 40] },
+      { "requires": "($widgets_resolution = 1024x)", "$uv": [0, 304], "$uv_size": [80, 80] },
+      { "requires": "($widgets_resolution = 2048x)", "$uv": [0, 608], "$uv_size": [160, 160] },
+      { "requires": "($widgets_resolution = 4096x)", "$uv": [0, 1216], "$uv_size": [320, 320] }
+    ]
+  },
+
+  /* Icons */
+  
+  "empty_xp_bar@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/icons",
+    "size": [182, 5],
+    "variables": [
+      { "requires": "($icons_resolution = 256x)", "$uv": [0, 64], "$uv_size": [182, 5] },
+      { "requires": "($icons_resolution = 512x)", "$uv": [0, 128], "$uv_size": [364, 10] },
+      { "requires": "($icons_resolution = 1024x)", "$uv": [0, 248], "$uv_size": [728, 20] },
+      { "requires": "($icons_resolution = 2048x)", "$uv": [0, 496], "$uv_size": [1456, 40] },
+      { "requires": "($icons_resolution = 4096x)", "$uv": [0, 992], "$uv_size": [2912, 80] }
+    ]
+  },
+
+  "full_xp_bar@resources0.empty_xp_bar": {
+    "texture": "src/assets/minecraft/textures/gui/icons",
+    "variables": [
+      { "requires": "($icons_resolution = 256x)", "$uv": [0, 69], "$uv_size": [182, 5] },
+      { "requires": "($icons_resolution = 512x)", "$uv": [0, 138], "$uv_size": [364, 10] },
+      { "requires": "($icons_resolution = 1024x)", "$uv": [0, 276], "$uv_size": [728, 20] },
+      { "requires": "($icons_resolution = 2048x)", "$uv": [0, 552], "$uv_size": [1456, 40] },
+      { "requires": "($icons_resolution = 4096x)", "$uv": [0, 1104], "$uv_size": [2912, 80] }
+    ]
+  },
+
+  "ping_level5@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/icons",
+    "size": [10, 8],
+    "variables": [
+      { "requires": "($icons_resolution = 256x)", "$uv": [0, 176], "$uv_size": [10, 5] },
+      { "requires": "($icons_resolution = 512x)", "$uv": [0, 352], "$uv_size": [20, 10] },
+      { "requires": "($icons_resolution = 1024x)", "$uv": [0, 704], "$uv_size": [40, 20] },
+      { "requires": "($icons_resolution = 2048x)", "$uv": [0, 1408], "$uv_size": [80, 40] },
+      { "requires": "($icons_resolution = 4096x)", "$uv": [0, 2816], "$uv_size": [160, 80] }
+    ]
+  },
+
+  "loading_ping_level5@resources.ping_level1": {
+    "variables": [
+      { "requires": "($icons_resolution = 256x)", "$uv": [10, 176], "$uv_size": [10, 5] },
+      { "requires": "($icons_resolution = 512x)", "$uv": [20, 352], "$uv_size": [20, 10] },
+      { "requires": "($icons_resolution = 1024x)", "$uv": [40, 704], "$uv_size": [40, 20] },
+      { "requires": "($icons_resolution = 2048x)", "$uv": [80, 1408], "$uv_size": [80, 40] },
+      { "requires": "($icons_resolution = 4096x)", "$uv": [160, 2816], "$uv_size": [160, 80] }
+    ]
+  },
+
+  "ping_level4@resources.ping_level1": {
+    "variables": [
+      { "requires": "($icons_resolution = 256x)", "$uv": [0, 184], "$uv_size": [10, 5] },
+      { "requires": "($icons_resolution = 512x)", "$uv": [0, 368], "$uv_size": [20, 10] },
+      { "requires": "($icons_resolution = 1024x)", "$uv": [0, 736], "$uv_size": [40, 20] },
+      { "requires": "($icons_resolution = 2048x)", "$uv": [0, 1472], "$uv_size": [80, 40] },
+      { "requires": "($icons_resolution = 4096x)", "$uv": [0, 2944], "$uv_size": [160, 80] }
+    ]
+  },
+
+  "loading_ping_level4@resources.ping_level1": {
+    "variables": [
+      { "requires": "($icons_resolution = 256x)", "$uv": [10, 184], "$uv_size": [10, 5] },
+      { "requires": "($icons_resolution = 512x)", "$uv": [20, 368], "$uv_size": [20, 10] },
+      { "requires": "($icons_resolution = 1024x)", "$uv": [40, 736], "$uv_size": [40, 20] },
+      { "requires": "($icons_resolution = 2048x)", "$uv": [80, 1472], "$uv_size": [80, 40] },
+      { "requires": "($icons_resolution = 4096x)", "$uv": [160, 2944], "$uv_size": [160, 80] }
+    ]
+  },
+
+  "ping_level3@resources.ping_level1": {
+    "variables": [
+      { "requires": "($icons_resolution = 256x)", "$uv": [0, 192], "$uv_size": [10, 5] },
+      { "requires": "($icons_resolution = 512x)", "$uv": [0, 384], "$uv_size": [20, 10] },
+      { "requires": "($icons_resolution = 1024x)", "$uv": [0, 768], "$uv_size": [40, 20] },
+      { "requires": "($icons_resolution = 2048x)", "$uv": [0, 1536], "$uv_size": [80, 40] },
+      { "requires": "($icons_resolution = 4096x)", "$uv": [0, 3072], "$uv_size": [160, 80] }
+    ]
+  },
+
+  "loading_ping_level3@resources.ping_level1": {
+    "variables": [
+      { "requires": "($icons_resolution = 256x)", "$uv": [10, 192], "$uv_size": [10, 5] },
+      { "requires": "($icons_resolution = 512x)", "$uv": [20, 384], "$uv_size": [20, 10] },
+      { "requires": "($icons_resolution = 1024x)", "$uv": [40, 768], "$uv_size": [40, 20] },
+      { "requires": "($icons_resolution = 2048x)", "$uv": [80, 1536], "$uv_size": [80, 40] },
+      { "requires": "($icons_resolution = 4096x)", "$uv": [160, 3072], "$uv_size": [160, 80] }
+    ]
+  },
+
+  "ping_level2@resources.ping_level1": {
+    "variables": [
+      { "requires": "($icons_resolution = 256x)", "$uv": [0, 200], "$uv_size": [10, 5] },
+      { "requires": "($icons_resolution = 512x)", "$uv": [0, 400], "$uv_size": [20, 10] },
+      { "requires": "($icons_resolution = 1024x)", "$uv": [0, 800], "$uv_size": [40, 20] },
+      { "requires": "($icons_resolution = 2048x)", "$uv": [0, 1600], "$uv_size": [80, 40] },
+      { "requires": "($icons_resolution = 4096x)", "$uv": [0, 3200], "$uv_size": [160, 80] }
+    ]
+  },
+
+  "loading_ping_level2@resources.ping_level1": {
+    "variables": [
+      { "requires": "($icons_resolution = 256x)", "$uv": [10, 200], "$uv_size": [10, 5] },
+      { "requires": "($icons_resolution = 512x)", "$uv": [20, 400], "$uv_size": [20, 10] },
+      { "requires": "($icons_resolution = 1024x)", "$uv": [40, 800], "$uv_size": [40, 20] },
+      { "requires": "($icons_resolution = 2048x)", "$uv": [80, 1600], "$uv_size": [80, 40] },
+      { "requires": "($icons_resolution = 4096x)", "$uv": [160, 3200], "$uv_size": [160, 80] }
+    ]
+  },
+
+  "ping_level1resources.ping_level1": {
+    "variables": [
+      { "requires": "($icons_resolution = 256x)", "$uv": [0, 208], "$uv_size": [10, 5] },
+      { "requires": "($icons_resolution = 512x)", "$uv": [0, 416], "$uv_size": [20, 10] },
+      { "requires": "($icons_resolution = 1024x)", "$uv": [0, 832], "$uv_size": [40, 20] },
+      { "requires": "($icons_resolution = 2048x)", "$uv": [0, 1664], "$uv_size": [80, 40] },
+      { "requires": "($icons_resolution = 4096x)", "$uv": [0, 3328], "$uv_size": [160, 80] }
+    ]
+  },
+
+  "loading_ping_level1@resources.ping_level1": {
+    "variables": [
+      { "requires": "($icons_resolution = 256x)", "$uv": [10, 208], "$uv_size": [10, 5] },
+      { "requires": "($icons_resolution = 512x)", "$uv": [20, 416], "$uv_size": [20, 10] },
+      { "requires": "($icons_resolution = 1024x)", "$uv": [40, 832], "$uv_size": [40, 20] },
+      { "requires": "($icons_resolution = 2048x)", "$uv": [80, 1664], "$uv_size": [80, 40] },
+      { "requires": "($icons_resolution = 4096x)", "$uv": [160, 3328], "$uv_size": [160, 80] }
+    ]
+  },
+
+  "ping_offline@resources.ping_level1": {
+    "variables": [
+      { "requires": "($icons_resolution = 256x)", "$uv": [0, 216], "$uv_size": [10, 5] },
+      { "requires": "($icons_resolution = 512x)", "$uv": [0, 432], "$uv_size": [20, 10] },
+      { "requires": "($icons_resolution = 1024x)", "$uv": [0, 864], "$uv_size": [40, 20] },
+      { "requires": "($icons_resolution = 2048x)", "$uv": [0, 1728], "$uv_size": [80, 40] },
+      { "requires": "($icons_resolution = 4096x)", "$uv": [0, 3456], "$uv_size": [160, 80] }
+    ]
+  },
+
+  /* Bars */
+
+  "empty_progress_bar@content.resource_image": {
+    "$rsrc_location": "src/assets/minecraft/textures/gui/bars",
+    "size": [182, 5]
+  },
+
+  "empty_notched_bar@resources0.empty_progress_bar": { "layer": 4 },
+
+  "filled_progress_bar@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/bars",
+    "size": [182, 5],
+    "clip_direction": "left",
+    "clip_pixelperfect": true,
+    "layer": 2,
+    "bindings": [
+      {
+        "binding_name": "#progress_percentage",
+        "binding_name_override": "#clip_ratio",
+        "binding_type": "collection",
+        "binding_collection_name": "$progress_bar_collection"
+      }
+    ]
+  },
+
+  "filled_notched_bar@resources0.filled_progress_bar": { "layer": 6 },
+
+  "empty_pink_bar@resources0.empty_progress_bar": {
+    "variables": [
+      { "requires": "($bars_resolution = 256x)", "$uv": [0, 0], "$uv_size": [182, 5] },
+      { "requires": "($bars_resolution = 512x)", "$uv": [0, 0], "$uv_size": [364, 10] },
+      { "requires": "($bars_resolution = 1024x)", "$uv": [0, 0], "$uv_size": [728, 20] },
+      { "requires": "($bars_resolution = 2048x)", "$uv": [0, 0], "$uv_size": [1456, 40] },
+      { "requires": "($bars_resolution = 4096x)", "$uv": [0, 0], "$uv_size": [2912, 80] }
+    ]
+  },
+
+  "empty_aqua_bar@resources0.empty_progress_bar": {
+    "variables": [
+      { "requires": "($bars_resolution = 256x)", "$uv": [0, 10], "$uv_size": [182, 5] },
+      { "requires": "($bars_resolution = 512x)", "$uv": [0, 20], "$uv_size": [364, 10] },
+      { "requires": "($bars_resolution = 1024x)", "$uv": [0, 40], "$uv_size": [728, 20] },
+      { "requires": "($bars_resolution = 2048x)", "$uv": [0, 80], "$uv_size": [1456, 40] },
+      { "requires": "($bars_resolution = 4096x)", "$uv": [0, 160], "$uv_size": [2912, 80] }
+    ]
+  },
+
+  "empty_red_bar@resources0.empty_progress_bar": {
+    "variables": [
+      { "requires": "($bars_resolution = 256x)", "$uv": [0, 20], "$uv_size": [182, 5] },
+      { "requires": "($bars_resolution = 512x)", "$uv": [0, 40], "$uv_size": [364, 10] },
+      { "requires": "($bars_resolution = 1024x)", "$uv": [0, 80], "$uv_size": [728, 20] },
+      { "requires": "($bars_resolution = 2048x)", "$uv": [0, 160], "$uv_size": [1456, 40] },
+      { "requires": "($bars_resolution = 4096x)", "$uv": [0, 320], "$uv_size": [2912, 80] }
+    ]
+  },
+
+  "empty_green_bar@resources0.empty_progress_bar": {
+    "variables": [
+      { "requires": "($bars_resolution = 256x)", "$uv": [0, 30], "$uv_size": [182, 5] },
+      { "requires": "($bars_resolution = 512x)", "$uv": [0, 60], "$uv_size": [364, 10] },
+      { "requires": "($bars_resolution = 1024x)", "$uv": [0, 120], "$uv_size": [728, 20] },
+      { "requires": "($bars_resolution = 2048x)", "$uv": [0, 240], "$uv_size": [1456, 40] },
+      { "requires": "($bars_resolution = 4096x)", "$uv": [0, 480], "$uv_size": [2912, 80] }
+    ]
+  },
+
+  "empty_yellow_bar@resources0.empty_progress_bar": {
+    "variables": [
+      { "requires": "($bars_resolution = 256x)", "$uv": [0, 40], "$uv_size": [182, 5] },
+      { "requires": "($bars_resolution = 512x)", "$uv": [0, 80], "$uv_size": [364, 10] },
+      { "requires": "($bars_resolution = 1024x)", "$uv": [0, 160], "$uv_size": [728, 20] },
+      { "requires": "($bars_resolution = 2048x)", "$uv": [0, 320], "$uv_size": [1456, 40] },
+      { "requires": "($bars_resolution = 4096x)", "$uv": [0, 640], "$uv_size": [2912, 80] }
+    ]
+  },
+
+  "empty_purple_bar@resources0.empty_progress_bar": {
+    "variables": [
+      { "requires": "($bars_resolution = 256x)", "$uv": [0, 50], "$uv_size": [182, 5] },
+      { "requires": "($bars_resolution = 512x)", "$uv": [0, 100], "$uv_size": [364, 10] },
+      { "requires": "($bars_resolution = 1024x)", "$uv": [0, 200], "$uv_size": [728, 20] },
+      { "requires": "($bars_resolution = 2048x)", "$uv": [0, 400], "$uv_size": [1456, 40] },
+      { "requires": "($bars_resolution = 4096x)", "$uv": [0, 800], "$uv_size": [2912, 80] }
+    ]
+  },
+
+  "empty_gray_bar@resources0.empty_progress_bar": {
+    "variables": [
+      { "requires": "($bars_resolution = 256x)", "$uv": [0, 60], "$uv_size": [182, 5] },
+      { "requires": "($bars_resolution = 512x)", "$uv": [0, 120], "$uv_size": [364, 10] },
+      { "requires": "($bars_resolution = 1024x)", "$uv": [0, 240], "$uv_size": [728, 20] },
+      { "requires": "($bars_resolution = 2048x)", "$uv": [0, 480], "$uv_size": [1456, 40] },
+      { "requires": "($bars_resolution = 4096x)", "$uv": [0, 960], "$uv_size": [2912, 80] }
+    ]
+  },
+
+  "filled_pink_bar@resources0.filled_progress_bar": {
+    "variables": [
+      { "requires": "($bars_resolution = 256x)", "$uv": [0, 5], "$uv_size": [182, 5] },
+      { "requires": "($bars_resolution = 512x)", "$uv": [0, 10], "$uv_size": [364, 10] },
+      { "requires": "($bars_resolution = 1024x)", "$uv": [0, 20], "$uv_size": [728, 20] },
+      { "requires": "($bars_resolution = 2048x)", "$uv": [0, 40], "$uv_size": [1456, 40] },
+      { "requires": "($bars_resolution = 4096x)", "$uv": [0, 80], "$uv_size": [2912, 80] }
+    ]
+  },
+
+  "filled_aqua_bar@resources0.filled_progress_bar": {
+    "variables": [
+      { "requires": "($bars_resolution = 256x)", "$uv": [0, 15], "$uv_size": [182, 5] },
+      { "requires": "($bars_resolution = 512x)", "$uv": [0, 30], "$uv_size": [364, 10] },
+      { "requires": "($bars_resolution = 1024x)", "$uv": [0, 60], "$uv_size": [728, 20] },
+      { "requires": "($bars_resolution = 2048x)", "$uv": [0, 120], "$uv_size": [1456, 40] },
+      { "requires": "($bars_resolution = 4096x)", "$uv": [0, 240], "$uv_size": [2912, 80] }
+    ]
+  },
+
+  "filled_red_bar@resources0.filled_progress_bar": {
+    "variables": [
+      { "requires": "($bars_resolution = 256x)", "$uv": [0, 25], "$uv_size": [182, 5] },
+      { "requires": "($bars_resolution = 512x)", "$uv": [0, 50], "$uv_size": [364, 10] },
+      { "requires": "($bars_resolution = 1024x)", "$uv": [0, 100], "$uv_size": [728, 20] },
+      { "requires": "($bars_resolution = 2048x)", "$uv": [0, 200], "$uv_size": [1456, 40] },
+      { "requires": "($bars_resolution = 4096x)", "$uv": [0, 400], "$uv_size": [2912, 80] }
+    ]
+  },
+
+  "filled_green_bar@resources0.filled_progress_bar": {
+    "variables": [
+      { "requires": "($bars_resolution = 256x)", "$uv": [0, 35], "$uv_size": [182, 5] },
+      { "requires": "($bars_resolution = 512x)", "$uv": [0, 70], "$uv_size": [364, 10] },
+      { "requires": "($bars_resolution = 1024x)", "$uv": [0, 140], "$uv_size": [728, 20] },
+      { "requires": "($bars_resolution = 2048x)", "$uv": [0, 280], "$uv_size": [1456, 40] },
+      { "requires": "($bars_resolution = 4096x)", "$uv": [0, 360], "$uv_size": [2912, 80] }
+    ]
+  },
+
+  "filled_yellow_bar@resources0.filled_progress_bar": {
+    "variables": [
+      { "requires": "($bars_resolution = 256x)", "$uv": [0, 45], "$uv_size": [182, 5] },
+      { "requires": "($bars_resolution = 512x)", "$uv": [0, 90], "$uv_size": [364, 10] },
+      { "requires": "($bars_resolution = 1024x)", "$uv": [0, 180], "$uv_size": [728, 20] },
+      { "requires": "($bars_resolution = 2048x)", "$uv": [0, 360], "$uv_size": [1456, 40] },
+      { "requires": "($bars_resolution = 4096x)", "$uv": [0, 720], "$uv_size": [2912, 80] }
+    ]
+  },
+
+  "filled_purple_bar@resources0.filled_progress_bar": {
+    "variables": [
+      { "requires": "($bars_resolution = 256x)", "$uv": [0, 55], "$uv_size": [182, 5] },
+      { "requires": "($bars_resolution = 512x)", "$uv": [0, 110], "$uv_size": [364, 10] },
+      { "requires": "($bars_resolution = 1024x)", "$uv": [0, 220], "$uv_size": [728, 20] },
+      { "requires": "($bars_resolution = 2048x)", "$uv": [0, 440], "$uv_size": [1456, 40] },
+      { "requires": "($bars_resolution = 4096x)", "$uv": [0, 880], "$uv_size": [2912, 80] }
+    ]
+  },
+
+  "filled_gray_bar@resources0.filled_progress_bar": {
+    "variables": [
+      { "requires": "($bars_resolution = 256x)", "$uv": [0, 65], "$uv_size": [182, 5] },
+      { "requires": "($bars_resolution = 512x)", "$uv": [0, 130], "$uv_size": [364, 10] },
+      { "requires": "($bars_resolution = 1024x)", "$uv": [0, 260], "$uv_size": [728, 20] },
+      { "requires": "($bars_resolution = 2048x)", "$uv": [0, 520], "$uv_size": [1456, 40] },
+      { "requires": "($bars_resolution = 4096x)", "$uv": [0, 1040], "$uv_size": [2912, 80] }
+    ]
+  },
+
+  "empty_progress_bar": {
+    "type": "panel",
+    "size": [182, 5]
+  },
+
+  "filled_progress_bar@resources0.empty_progress_bar": {},
+
+  "empty_notched_6_bar@resources0.empty_notched_bar": {
+    "variables": [
+      { "requires": "($bars_resolution = 256x)", "$uv": [0, 80], "$uv_size": [182, 5] },
+      { "requires": "($bars_resolution = 512x)", "$uv": [0, 160], "$uv_size": [364, 10] },
+      { "requires": "($bars_resolution = 1024x)", "$uv": [0, 320], "$uv_size": [728, 20] },
+      { "requires": "($bars_resolution = 2048x)", "$uv": [0, 640], "$uv_size": [1456, 40] },
+      { "requires": "($bars_resolution = 4096x)", "$uv": [0, 1280], "$uv_size": [2912, 80] }
+    ]
+  },
+
+  "filled_notched_6_bar@resources0.filled_notched_bar": {
+    "variables": [
+      { "requires": "($bars_resolution = 256x)", "$uv": [0, 85], "$uv_size": [182, 5] },
+      { "requires": "($bars_resolution = 512x)", "$uv": [0, 170], "$uv_size": [364, 10] },
+      { "requires": "($bars_resolution = 1024x)", "$uv": [0, 340], "$uv_size": [728, 20] },
+      { "requires": "($bars_resolution = 2048x)", "$uv": [0, 680], "$uv_size": [1456, 40] },
+      { "requires": "($bars_resolution = 4096x)", "$uv": [0, 1360], "$uv_size": [2912, 80] }
+    ]
+  },
+
+  "empty_notched_10_bar@resources0.empty_notched_bar": {
+    "variables": [
+      { "requires": "($bars_resolution = 256x)", "$uv": [0, 90], "$uv_size": [182, 5] },
+      { "requires": "($bars_resolution = 512x)", "$uv": [0, 180], "$uv_size": [364, 10] },
+      { "requires": "($bars_resolution = 1024x)", "$uv": [0, 360], "$uv_size": [728, 20] },
+      { "requires": "($bars_resolution = 2048x)", "$uv": [0, 720], "$uv_size": [1456, 40] },
+      { "requires": "($bars_resolution = 4096x)", "$uv": [0, 1440], "$uv_size": [2912, 80] }
+    ]
+  },
+
+  "filled_notched_10_bar@resources0.filled_notched_bar": {
+    "variables": [
+      { "requires": "($bars_resolution = 256x)", "$uv": [0, 95], "$uv_size": [182, 5] },
+      { "requires": "($bars_resolution = 512x)", "$uv": [0, 190], "$uv_size": [364, 10] },
+      { "requires": "($bars_resolution = 1024x)", "$uv": [0, 380], "$uv_size": [728, 20] },
+      { "requires": "($bars_resolution = 2048x)", "$uv": [0, 760], "$uv_size": [1456, 40] },
+      { "requires": "($bars_resolution = 4096x)", "$uv": [0, 1520], "$uv_size": [2912, 80] }
+    ]
+  },
+
+  "empty_notched_12_bar@resources0.empty_notched_bar": {
+    "variables": [
+      { "requires": "($bars_resolution = 256x)", "$uv": [0, 100], "$uv_size": [182, 5] },
+      { "requires": "($bars_resolution = 512x)", "$uv": [0, 200], "$uv_size": [364, 10] },
+      { "requires": "($bars_resolution = 1024x)", "$uv": [0, 400], "$uv_size": [728, 20] },
+      { "requires": "($bars_resolution = 2048x)", "$uv": [0, 800], "$uv_size": [1456, 40] },
+      { "requires": "($bars_resolution = 4096x)", "$uv": [0, 1600], "$uv_size": [2912, 80] }
+    ]
+  },
+
+  "filled_notched_12_bar@resources0.filled_notched_bar": {
+    "variables": [
+      { "requires": "($bars_resolution = 256x)", "$uv": [0, 105], "$uv_size": [182, 5] },
+      { "requires": "($bars_resolution = 512x)", "$uv": [0, 210], "$uv_size": [364, 10] },
+      { "requires": "($bars_resolution = 1024x)", "$uv": [0, 420], "$uv_size": [728, 20] },
+      { "requires": "($bars_resolution = 2048x)", "$uv": [0, 840], "$uv_size": [1456, 40] },
+      { "requires": "($bars_resolution = 4096x)", "$uv": [0, 1680], "$uv_size": [2912, 80] }
+    ]
+  },
+
+  "empty_notched_20_bar@resources0.empty_notched_bar": {
+    "variables": [
+      { "requires": "($bars_resolution = 256x)", "$uv": [0, 110], "$uv_size": [182, 5] },
+      { "requires": "($bars_resolution = 512x)", "$uv": [0, 220], "$uv_size": [364, 10] },
+      { "requires": "($bars_resolution = 1024x)", "$uv": [0, 440], "$uv_size": [728, 20] },
+      { "requires": "($bars_resolution = 2048x)", "$uv": [0, 880], "$uv_size": [1456, 40] },
+      { "requires": "($bars_resolution = 4096x)", "$uv": [0, 1760], "$uv_size": [2912, 80] }
+    ]
+  },
+
+  "filled_notched_20_bar@resources0.filled_notched_bar": {
+    "variables": [
+      { "requires": "($bars_resolution = 256x)", "$uv": [0, 115], "$uv_size": [182, 5] },
+      { "requires": "($bars_resolution = 512x)", "$uv": [0, 230], "$uv_size": [364, 10] },
+      { "requires": "($bars_resolution = 1024x)", "$uv": [0, 460], "$uv_size": [728, 20] },
+      { "requires": "($bars_resolution = 2048x)", "$uv": [0, 920], "$uv_size": [1456, 40] },
+      { "requires": "($bars_resolution = 4096x)", "$uv": [0, 1840], "$uv_size": [2912, 80] }
+    ]
+  },
+
+  /* World Selection */
+
+  "world_select_default@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/world_selection",
+    "size": [32, 32],
+    "variables": [
+      { "requires": "($world_selection_resolution = 256x)", "$uv_size": [32, 32] },
+      { "requires": "($world_selection_resolution = 512x)", "$uv_size": [64, 64] },
+      { "requires": "($world_selection_resolution = 1024x)", "$uv_size": [128, 128] },
+      { "requires": "($world_selection_resolution = 2048x)", "$uv_size": [256, 256] },
+      { "requires": "($world_selection_resolution = 4096x)", "$uv_size": [512, 512] }
+    ]
+  },
+
+  "world_select_default@resources0.world_select_default": {
+    "variables": [
+      { "requires": "($world_selection_resolution = 256x)", "$uv": [0, 32], "$uv_size": [32, 32] },
+      { "requires": "($world_selection_resolution = 512x)", "$uv": [0, 64], "$uv_size": [64, 64] },
+      { "requires": "($world_selection_resolution = 1024x)", "$uv": [0, 128], "$uv_size": [128, 128] },
+      { "requires": "($world_selection_resolution = 2048x)", "$uv": [0, 256], "$uv_size": [256, 256] },
+      { "requires": "($world_selection_resolution = 4096x)", "$uv": [0, 512], "$uv_size": [512, 512] }
+    ]
+  },
+
+  "world_select_right_default@resources0.world_select_default": {
+    "variables": [
+      { "requires": "($world_selection_resolution = 256x)", "$uv": [32, 0], "$uv_size": [32, 32] },
+      { "requires": "($world_selection_resolution = 512x)", "$uv": [64, 0], "$uv_size": [64, 64] },
+      { "requires": "($world_selection_resolution = 1024x)", "$uv": [128, 0], "$uv_size": [128, 128] },
+      { "requires": "($world_selection_resolution = 2048x)", "$uv": [256, 0], "$uv_size": [256, 256] },
+      { "requires": "($world_selection_resolution = 4096x)", "$uv": [512, 0], "$uv_size": [512, 512] }
+    ]
+  },
+
+  "world_select_right_hover@resources0.world_select_default": {
+    "variables": [
+      { "requires": "($world_selection_resolution = 256x)", "$uv": [32, 32], "$uv_size": [32, 32] },
+      { "requires": "($world_selection_resolution = 512x)", "$uv": [64, 64], "$uv_size": [64, 64] },
+      { "requires": "($world_selection_resolution = 1024x)", "$uv": [128, 128], "$uv_size": [128, 128] },
+      { "requires": "($world_selection_resolution = 2048x)", "$uv": [256, 256], "$uv_size": [256, 256] },
+      { "requires": "($world_selection_resolution = 4096x)", "$uv": [512, 512], "$uv_size": [512, 512] }
+    ]
+  },
+
+  "world_select_left_default@resources0.world_select_default": {
+    "variables": [
+      { "requires": "($world_selection_resolution = 256x)", "$uv": [64, 0], "$uv_size": [32, 32] },
+      { "requires": "($world_selection_resolution = 512x)", "$uv": [128, 0], "$uv_size": [64, 64] },
+      { "requires": "($world_selection_resolution = 1024x)", "$uv": [256, 0], "$uv_size": [128, 128] },
+      { "requires": "($world_selection_resolution = 2048x)", "$uv": [512, 0], "$uv_size": [256, 256] },
+      { "requires": "($world_selection_resolution = 4096x)", "$uv": [1024, 0], "$uv_size": [512, 512] }
+    ]
+  },
+
+  "world_select_left_hover@resources0.world_select_default": {
+    "variables": [
+      { "requires": "($world_selection_resolution = 256x)", "$uv": [64, 32], "$uv_size": [32, 32] },
+      { "requires": "($world_selection_resolution = 512x)", "$uv": [128, 64], "$uv_size": [64, 64] },
+      { "requires": "($world_selection_resolution = 1024x)", "$uv": [256, 128], "$uv_size": [128, 128] },
+      { "requires": "($world_selection_resolution = 2048x)", "$uv": [512, 256], "$uv_size": [256, 256] },
+      { "requires": "($world_selection_resolution = 4096x)", "$uv": [1024, 512], "$uv_size": [512, 512] }
+    ]
+  },
+
+  "world_select_left_red_default@resources0.world_select_default": {
+    "variables": [
+      { "requires": "($world_selection_resolution = 256x)", "$uv": [96, 0], "$uv_size": [32, 32] },
+      { "requires": "($world_selection_resolution = 512x)", "$uv": [192, 0], "$uv_size": [64, 64] },
+      { "requires": "($world_selection_resolution = 1024x)", "$uv": [384, 0], "$uv_size": [128, 128] },
+      { "requires": "($world_selection_resolution = 2048x)", "$uv": [768, 0], "$uv_size": [256, 256] },
+      { "requires": "($world_selection_resolution = 4096x)", "$uv": [1536, 0], "$uv_size": [512, 512] }
+    ]
+  },
+
+  "world_select_left_red_hover@resources0.world_select_default": {
+    "variables": [
+      { "requires": "($world_selection_resolution = 256x)", "$uv": [96, 32], "$uv_size": [32, 32] },
+      { "requires": "($world_selection_resolution = 512x)", "$uv": [196, 64], "$uv_size": [64, 64] },
+      { "requires": "($world_selection_resolution = 1024x)", "$uv": [384, 128], "$uv_size": [128, 128] },
+      { "requires": "($world_selection_resolution = 2048x)", "$uv": [768, 256], "$uv_size": [256, 256] },
+      { "requires": "($world_selection_resolution = 4096x)", "$uv": [1536, 512], "$uv_size": [512, 512] }
+    ]
+  },
+
+  /* Server Selection */
+
+  "server_select_default@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/server_selection",
+    "size": [32, 32],
+    "variables": [
+      { "requires": "($server_selection_resolution = 256x)", "$uv_size": [32, 32] },
+      { "requires": "($server_selection_resolution = 512x)", "$uv_size": [64, 64] },
+      { "requires": "($server_selection_resolution = 1024x)", "$uv_size": [128, 128] },
+      { "requires": "($server_selection_resolution = 2048x)", "$uv_size": [256, 256] },
+      { "requires": "($server_selection_resolution = 4096x)", "$uv_size": [512, 512] }
+    ]
+  },
+
+  "server_select_hover@resources0.server_select_default": {
+    "variables": [
+      { "requires": "($server_selection_resolution = 256x)", "$uv": [0, 32], "$uv_size": [32, 32] },
+      { "requires": "($server_selection_resolution = 512x)", "$uv": [0, 64], "$uv_size": [64, 64] },
+      { "requires": "($server_selection_resolution = 1024x)", "$uv": [0, 128], "$uv_size": [128, 128] },
+      { "requires": "($server_selection_resolution = 2048x)", "$uv": [0, 256], "$uv_size": [256, 256] },
+      { "requires": "($server_selection_resolution = 4096x)", "$uv": [0, 512], "$uv_size": [512, 512] }
+    ]
+  },
+
+  /* Resource Packs Selection */
+  
+  "rpacks_select_default@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/resource_packs",
+    "size": [32, 32],
+    "uv": [0, 0],
+    "variables": [
+      { "requires": "($rpacks_selection_resolution = 256x)", "$uv_size": [32, 32] },
+      { "requires": "($rpacks_selection_resolution = 512x)", "$uv_size": [64, 64] },
+      { "requires": "($rpacks_selection_resolution = 1024x)", "$uv_size": [128, 128] },
+      { "requires": "($rpacks_selection_resolution = 2048x)", "$uv_size": [256, 256] },
+      { "requires": "($rpacks_selection_resolution = 4096x)", "$uv_size": [512, 512] }
+    ]
+  },
+
+  "rpacks_select_hover@resources0.rpacks_select_default": {
+    "variables": [
+      { "requires": "($rpacks_selection_resolution = 256x)", "$uv": [0, 32], "$uv_size": [32, 32] },
+      { "requires": "($rpacks_selection_resolution = 512x)", "$uv": [0, 64], "$uv_size": [64, 64] },
+      { "requires": "($rpacks_selection_resolution = 1024x)", "$uv": [0, 128], "$uv_size": [128, 128] },
+      { "requires": "($rpacks_selection_resolution = 2048x)", "$uv": [0, 256], "$uv_size": [256, 256] },
+      { "requires": "($rpacks_selection_resolution = 4096x)", "$uv": [0, 512], "$uv_size": [512, 512] }
+    ]
+  },
+
+  "rpacks_remove_default@resources0.rpacks_select_default": {
+    "variables": [
+      { "requires": "($rpacks_selection_resolution = 256x)", "$uv": [32, 0], "$uv_size": [32, 32] },
+      { "requires": "($rpacks_selection_resolution = 512x)", "$uv": [64, 0], "$uv_size": [64, 64] },
+      { "requires": "($rpacks_selection_resolution = 1024x)", "$uv": [128, 0], "$uv_size": [128, 128] },
+      { "requires": "($rpacks_selection_resolution = 2048x)", "$uv": [256, 0], "$uv_size": [256, 256] },
+      { "requires": "($rpacks_selection_resolution = 4096x)", "$uv": [512, 0], "$uv_size": [512, 512] }
+    ]
+  },
+
+  "rpacks_remove_hover@resources0.rpacks_select_default": {
+    "variables": [
+      { "requires": "($rpacks_selection_resolution = 256x)", "$uv": [32, 32], "$uv_size": [32, 32] },
+      { "requires": "($rpacks_selection_resolution = 512x)", "$uv": [64, 64], "$uv_size": [64, 64] },
+      { "requires": "($rpacks_selection_resolution = 1024x)", "$uv": [128, 128], "$uv_size": [128, 128] },
+      { "requires": "($rpacks_selection_resolution = 2048x)", "$uv": [256, 256], "$uv_size": [256, 256] },
+      { "requires": "($rpacks_selection_resolution = 4096x)", "$uv": [512, 512], "$uv_size": [512, 512] }
+    ]
+  },
+
+  "rpacks_move_up_default@resources0.rpacks_select_default": {
+    "variables": [
+      { "requires": "($rpacks_selection_resolution = 256x)", "$uv": [64, 0], "$uv_size": [32, 32] },
+      { "requires": "($rpacks_selection_resolution = 512x)", "$uv": [128, 0], "$uv_size": [64, 64] },
+      { "requires": "($rpacks_selection_resolution = 1024x)", "$uv": [256, 0], "$uv_size": [128, 128] },
+      { "requires": "($rpacks_selection_resolution = 2048x)", "$uv": [512, 0], "$uv_size": [256, 256] },
+      { "requires": "($rpacks_selection_resolution = 4096x)", "$uv": [1024, 0], "$uv_size": [512, 512] }
+    ]
+  },
+
+  "rpacks_move_up_hover@resources0.rpacks_select_default": {
+    "variables": [
+      { "requires": "($rpacks_selection_resolution = 256x)", "$uv": [64, 32], "$uv_size": [32, 32] },
+      { "requires": "($rpacks_selection_resolution = 512x)", "$uv": [128, 64], "$uv_size": [64, 64] },
+      { "requires": "($rpacks_selection_resolution = 1024x)", "$uv": [256, 128], "$uv_size": [128, 128] },
+      { "requires": "($rpacks_selection_resolution = 2048x)", "$uv": [512, 256], "$uv_size": [256, 256] },
+      { "requires": "($rpacks_selection_resolution = 4096x)", "$uv": [1024, 512], "$uv_size": [512, 512] }
+    ]
+  },
+
+  "rpacks_move_down_default@resources0.rpacks_select_default": {
+    "variables": [
+      { "requires": "($rpacks_selection_resolution = 256x)", "$uv": [96, 0], "$uv_size": [32, 32] },
+      { "requires": "($rpacks_selection_resolution = 512x)", "$uv": [192, 0], "$uv_size": [64, 64] },
+      { "requires": "($rpacks_selection_resolution = 1024x)", "$uv": [384, 0], "$uv_size": [128, 128] },
+      { "requires": "($rpacks_selection_resolution = 2048x)", "$uv": [768, 0], "$uv_size": [256, 256] },
+      { "requires": "($rpacks_selection_resolution = 4096x)", "$uv": [1534, 0], "$uv_size": [512, 512] }
+    ]
+  },
+
+  "rpacks_move_down_hover@resources0.rpacks_select_default": {
+    "variables": [
+      { "requires": "($rpacks_selection_resolution = 256x)", "$uv": [96, 32], "$uv_size": [32, 32] },
+      { "requires": "($rpacks_selection_resolution = 512x)", "$uv": [192, 64], "$uv_size": [64, 64] },
+      { "requires": "($rpacks_selection_resolution = 1024x)", "$uv": [384, 128], "$uv_size": [128, 128] },
+      { "requires": "($rpacks_selection_resolution = 2048x)", "$uv": [768, 256], "$uv_size": [256, 256] },
+      { "requires": "($rpacks_selection_resolution = 4096x)", "$uv": [1534, 512], "$uv_size": [512, 512] }
+    ]
+  },
+
+  /* Widgets - Others */ 
+
+  "checkbox_unchecked@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/checkbox",
+    "size": [20, 20],
+    "variables": [
+      { "requires": "($checkbox_resolution = 256x)", "$uv_size": [20, 20] },
+      { "requires": "($checkbox_resolution = 512x)", "$uv_size": [40, 40] },
+      { "requires": "($checkbox_resolution = 1024x)", "$uv_size": [80, 80] },
+      { "requires": "($checkbox_resolution = 2048x)", "$uv_size": [160, 160] },
+      { "requires": "($checkbox_resolution = 4096x)", "$uv_size": [320, 320] }
+    ]
+  },
+
+  "checkbox_unchecked_hover@resources0.checkbox_unchecked": {
+    "variables": [
+      { "requires": "($checkbox_resolution = 256x)", "$uv": [20, 0], "$uv_size": [20, 20] },
+      { "requires": "($checkbox_resolution = 512x)", "$uv": [40, 0], "$uv_size": [40, 40] },
+      { "requires": "($checkbox_resolution = 1024x)", "$uv": [80, 0], "$uv_size": [80, 80] },
+      { "requires": "($checkbox_resolution = 2048x)", "$uv": [160, 0], "$uv_size": [160, 160] },
+      { "requires": "($checkbox_resolution = 4096x)", "$uv": [320, 0], "$uv_size": [320, 320] }
+    ]
+  },
+
+  "checkbox_checked@resources0.checkbox_unchecked": {
+    "variables": [
+      { "requires": "($checkbox_resolution = 256x)", "$uv": [0, 20], "$uv_size": [20, 20] },
+      { "requires": "($checkbox_resolution = 512x)", "$uv": [0, 40], "$uv_size": [40, 40] },
+      { "requires": "($checkbox_resolution = 1024x)", "$uv": [0, 80], "$uv_size": [80, 80] },
+      { "requires": "($checkbox_resolution = 2048x)", "$uv": [0, 160], "$uv_size": [160, 160] },
+      { "requires": "($checkbox_resolution = 4096x)", "$uv": [0, 320], "$uv_size": [320, 320] }
+    ]
+  },
+
+  "checkbox_checked_hover@resources0.checkbox_unchecked": {
+    "variables": [
+      { "requires": "($checkbox_resolution = 256x)", "$uv": [20, 20], "$uv_size": [20, 20] },
+      { "requires": "($checkbox_resolution = 512x)", "$uv": [40, 40], "$uv_size": [40, 40] },
+      { "requires": "($checkbox_resolution = 1024x)", "$uv": [80, 80], "$uv_size": [80, 80] },
+      { "requires": "($checkbox_resolution = 2048x)", "$uv": [160, 160], "$uv_size": [160, 160] },
+      { "requires": "($checkbox_resolution = 4096x)", "$uv": [320, 320], "$uv_size": [320, 320] }
+    ]
+  },
+
+  /* Title */
+
+  "main_title_left@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/title/minecraft",
+    "size": [155, 44],
+    "uv": [0, 0],
+    "variables": [
+      { "requires": "($title_resolution = 256x)", "$uv_size": [155, 44] },
+      { "requires": "($title_resolution = 512x)", "$uv_size": [310, 88] },
+      { "requires": "($title_resolution = 1024x)", "$uv_size": [620, 176] },
+      { "requires": "($title_resolution = 2048x)", "$uv_size": [1240, 352] },
+      { "requires": "($title_resolution = 4096x)", "$uv_size": [2480, 704] }
+    ]
+  },
+
+  "main_title_right@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/title/minecraft",
+    "size": [119, 44],
+    "variables": [
+      { "requires": "($title_resolution = 256x)", "$uv": [0, 45], "$uv_size": [119, 44] },
+      { "requires": "($title_resolution = 512x)", "$uv": [0, 90], "$uv_size": [238, 88] },
+      { "requires": "($title_resolution = 1024x)", "$uv": [0, 180], "$uv_size": [476, 176] },
+      { "requires": "($title_resolution = 2048x)", "$uv": [0, 360], "$uv_size": [952, 352] },
+      { "requires": "($title_resolution = 4096x)", "$uv": [0, 720], "$uv_size": [1904, 704] }
+    ]
+  },
+  
+  "edition_java@resources.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/title/edition",
+    "size": [98, 14],
+    "variables": [
+      { "requires": "($title_resolution = 256x)", "$uv_size": [98, 14] },
+      { "requires": "($title_resolution = 512x)", "$uv_size": [196, 28] },
+      { "requires": "($title_resolution = 1024x)", "$uv_size": [392, 56] },
+      { "requires": "($title_resolution = 2048x)", "$uv_size": [784, 112] },
+      { "requires": "($title_resolution = 4096x)", "$uv_size": [1568, 224] }
+    ]
+  },
+
+  "edition_cpp@resources.resource_image": {
+    "texture": "src/core/resources/fmarquespto/textures/gui/cpp_edition",
+    "size": [88, 14],
+    "variables": [
+      { "requires": "($title_resolution = 256x)", "$uv_size": [88, 14] },
+      { "requires": "($title_resolution = 512x)", "$uv_size": [176, 28] },
+      { "requires": "($title_resolution = 1024x)", "$uv_size": [352, 56] },
+      { "requires": "($title_resolution = 2048x)", "$uv_size": [704, 112] },
+      { "requires": "($title_resolution = 4096x)", "$uv_size": [1408, 224] }
+    ]
+  },
+
+  /* Book */
+
+  "book_bg@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/book",
+    "size": [146, 180],
+    "variables": [
+      { "requires": "($book_resolution = 256x)", "$uv": [20, 1], "$uv_size": [146, 180] },
+      { "requires": "($book_resolution = 512x)", "$uv": [40, 2], "$uv_size": [292, 360] },
+      { "requires": "($book_resolution = 1024x)", "$uv": [80, 4], "$uv_size": [584, 720] },
+      { "requires": "($book_resolution = 2048x)", "$uv": [160, 8], "$uv_size": [1168, 1440] },
+      { "requires": "($book_resolution = 4096x)", "$uv": [320, 16], "$uv_size": [2336, 2880] }
+    ]
+  },
+
+  "prev_button_default@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/book",
+    "size": [18, 10],
+    "variables": [
+      { "requires": "($book_resolution = 256x)", "$uv": [3, 207], "$uv_size": [18, 10] },
+      { "requires": "($book_resolution = 512x)", "$uv": [6, 414], "$uv_size": [36, 20] },
+      { "requires": "($book_resolution = 1024x)", "$uv": [12, 828], "$uv_size": [72, 40] },
+      { "requires": "($book_resolution = 2048x)", "$uv": [24, 1656], "$uv_size": [144, 80] },
+      { "requires": "($book_resolution = 4096x)", "$uv": [48, 3312], "$uv_size": [288, 160] }
+    ]
+  },
+
+  "prev_button_hover@resources0.prev_button_default": {
+    "variables": [
+      { "requires": "($book_resolution = 256x)", "$uv": [26, 207], "$uv_size": [18, 10] },
+      { "requires": "($book_resolution = 512x)", "$uv": [52, 414], "$uv_size": [36, 20] },
+      { "requires": "($book_resolution = 1024x)", "$uv": [104, 828], "$uv_size": [72, 40] },
+      { "requires": "($book_resolution = 2048x)", "$uv": [208, 1656], "$uv_size": [144, 80] },
+      { "requires": "($book_resolution = 4096x)", "$uv": [416, 3312], "$uv_size": [288, 160] }
+    ]
+  },
+
+  "next_button_default@resources0.prev_button_default": {
+    "variables": [
+      { "requires": "($book_resolution = 256x)", "$uv": [3, 194], "$uv_size": [18, 10] },
+      { "requires": "($book_resolution = 512x)", "$uv": [6, 388], "$uv_size": [36, 20] },
+      { "requires": "($book_resolution = 1024x)", "$uv": [12, 776], "$uv_size": [72, 40] },
+      { "requires": "($book_resolution = 2048x)", "$uv": [24, 1552], "$uv_size": [144, 80] },
+      { "requires": "($book_resolution = 4096x)", "$uv": [48, 3104], "$uv_size": [288, 160] }
+    ]
+  },
+
+  "next_button_hover@resources0.prev_button_default": {
+    "variables": [
+      { "requires": "($book_resolution = 256x)", "$uv": [26, 194], "$uv_size": [18, 10] },
+      { "requires": "($book_resolution = 512x)", "$uv": [52, 388], "$uv_size": [36, 20] },
+      { "requires": "($book_resolution = 1024x)", "$uv": [104, 776], "$uv_size": [72, 40] },
+      { "requires": "($book_resolution = 2048x)", "$uv": [208, 1552], "$uv_size": [144, 80] },
+      { "requires": "($book_resolution = 4096x)", "$uv": [416, 3104], "$uv_size": [288, 160] }
+    ]
+  },
+
+  /* Recipe Book */
+
+  "recipe_book_bg@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/recipe_book",
+    "size": [147, 166],
+    "variables": [
+      { "requires": "($recipe_book_resolution = 256x)", "$uv": [1, 1], "$uv_size": [147, 166] },
+      { "requires": "($recipe_book_resolution = 512x)", "$uv": [2, 2], "$uv_size": [294, 332] },
+      { "requires": "($recipe_book_resolution = 1024x)", "$uv": [4, 4], "$uv_size": [588, 664] },
+      { "requires": "($recipe_book_resolution = 2048x)", "$uv": [8, 8], "$uv_size": [1176, 1328] },
+      { "requires": "($recipe_book_resolution = 4096x)", "$uv": [16, 16], "$uv_size": [2352, 2656] }
+    ]
+  },
+
+  "recipe_button_default@content.resource_image": {
+    "$rsrc_location": "src/assets/minecraft/textures/gui/recipe_button",
+    "size": [20, 18],
+    "variables": [
+      { "requires": "($recipe_button_resolution = 256x)", "$uv_size": [20, 18] },
+      { "requires": "($recipe_button_resolution = 512x)", "$uv_size": [40, 36] },
+      { "requires": "($recipe_button_resolution = 1024x)", "$uv_size": [80, 72] },
+      { "requires": "($recipe_button_resolution = 2048x)", "$uv_size": [160, 144] },
+      { "requires": "($recipe_button_resolution = 4096x)", "$uv_size": [320, 288] }
+    ]
+  },
+
+  "recipe_button_hover@resources0.recipe_button_default": {
+    "variables": [
+      { "requires": "($recipe_button_resolution = 256x)", "$uv": [0, 19], "$uv_size": [20, 18] },
+      { "requires": "($recipe_button_resolution = 512x)", "$uv": [0, 38], "$uv_size": [40, 36] },
+      { "requires": "($recipe_button_resolution = 1024x)", "$uv": [0, 76], "$uv_size": [80, 72] },
+      { "requires": "($recipe_button_resolution = 2048x)", "$uv": [0, 152], "$uv_size": [160, 144] },
+      { "requires": "($recipe_button_resolution = 4096x)", "$uv": [0, 304], "$uv_size": [320, 288] }
+    ]
+  },
+
+  "crafting_filter_unchecked@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/recipe_book",
+    "size": [26, 16],
+    "variables": [
+      { "requires": "($recipe_book_resolution = 256x)", "$uv": [152, 41], "$uv_size": [26, 16] },
+      { "requires": "($recipe_book_resolution = 512x)", "$uv": [304, 82], "$uv_size": [52, 32] },
+      { "requires": "($recipe_book_resolution = 1024x)", "$uv": [608, 164], "$uv_size": [104, 64] },
+      { "requires": "($recipe_book_resolution = 2048x)", "$uv": [1216, 328], "$uv_size": [208, 128] },
+      { "requires": "($recipe_book_resolution = 4096x)", "$uv": [2432, 656], "$uv_size": [416, 256] }
+    ]
+  },
+
+  "crafting_filter_unchecked_hover@resources0.crafting_filter_unchecked": {
+    "variables": [
+      { "requires": "($recipe_book_resolution = 256x)", "$uv": [152, 59], "$uv_size": [26, 16] },
+      { "requires": "($recipe_book_resolution = 512x)", "$uv": [304, 118], "$uv_size": [52, 32] },
+      { "requires": "($recipe_book_resolution = 1024x)", "$uv": [608, 236], "$uv_size": [104, 64] },
+      { "requires": "($recipe_book_resolution = 2048x)", "$uv": [1216, 472], "$uv_size": [208, 128] },
+      { "requires": "($recipe_book_resolution = 4096x)", "$uv": [2432, 944], "$uv_size": [416, 256] }
+    ]
+  },
+  
+  "crafting_filter_checked@resources0.crafting_filter_unchecked": {
+    "variables": [
+      { "requires": "($recipe_book_resolution = 256x)", "$uv": [180, 41], "$uv_size": [26, 16] },
+      { "requires": "($recipe_book_resolution = 512x)", "$uv": [360, 82], "$uv_size": [52, 32] },
+      { "requires": "($recipe_book_resolution = 1024x)", "$uv": [720, 164], "$uv_size": [104, 64] },
+      { "requires": "($recipe_book_resolution = 2048x)", "$uv": [1440, 328], "$uv_size": [208, 128] },
+      { "requires": "($recipe_book_resolution = 4096x)", "$uv": [2880, 656], "$uv_size": [416, 256] }
+    ]
+  },
+
+  "crafting_filter_checked_hover@resources0.crafting_filter_unchecked": {
+    "variables": [
+      { "requires": "($recipe_book_resolution = 256x)", "$uv": [180, 59], "$uv_size": [26, 16] },
+      { "requires": "($recipe_book_resolution = 512x)", "$uv": [360, 118], "$uv_size": [52, 32] },
+      { "requires": "($recipe_book_resolution = 1024x)", "$uv": [720, 236], "$uv_size": [104, 64] },
+      { "requires": "($recipe_book_resolution = 2048x)", "$uv": [1440, 472], "$uv_size": [208, 128] },
+      { "requires": "($recipe_book_resolution = 4096x)", "$uv": [2880, 944], "$uv_size": [416, 256] }
+    ]
+  },
+
+  "furnace_filter_unchecked@resources0.crafting_filter_unchecked": {
+    "variables": [
+      { "requires": "($recipe_book_resolution = 256x)", "$uv": [152, 182], "$uv_size": [26, 16] },
+      { "requires": "($recipe_book_resolution = 512x)", "$uv": [304, 364], "$uv_size": [52, 32] },
+      { "requires": "($recipe_book_resolution = 1024x)", "$uv": [608, 728], "$uv_size": [104, 64] },
+      { "requires": "($recipe_book_resolution = 2048x)", "$uv": [1216, 1456], "$uv_size": [208, 128] },
+      { "requires": "($recipe_book_resolution = 4096x)", "$uv": [2432, 2912], "$uv_size": [416, 256] }
+    ]
+  },
+
+  "furnace_filter_unchecked_hover@resources0.crafting_filter_unchecked": {
+    "variables": [
+      { "requires": "($recipe_book_resolution = 256x)", "$uv": [152, 200], "$uv_size": [26, 16] },
+      { "requires": "($recipe_book_resolution = 512x)", "$uv": [304, 400], "$uv_size": [52, 32] },
+      { "requires": "($recipe_book_resolution = 1024x)", "$uv": [608, 800], "$uv_size": [104, 64] },
+      { "requires": "($recipe_book_resolution = 2048x)", "$uv": [1216, 1600], "$uv_size": [208, 128] },
+      { "requires": "($recipe_book_resolution = 4096x)", "$uv": [2432, 3200], "$uv_size": [416, 256] }
+    ]
+  },
+  
+  "furnace_filter_checked@resources0.crafting_filter_unchecked": {
+    "variables": [
+      { "requires": "($recipe_book_resolution = 256x)", "$uv": [180, 182], "$uv_size": [26, 16] },
+      { "requires": "($recipe_book_resolution = 512x)", "$uv": [360, 364], "$uv_size": [52, 32] },
+      { "requires": "($recipe_book_resolution = 1024x)", "$uv": [720, 728], "$uv_size": [104, 64] },
+      { "requires": "($recipe_book_resolution = 2048x)", "$uv": [1440, 1456], "$uv_size": [208, 128] },
+      { "requires": "($recipe_book_resolution = 4096x)", "$uv": [2880, 2912], "$uv_size": [416, 256] }
+    ]
+  },
+
+  "furnace_filter_checked_hover@resources0.crafting_filter_unchecked": {
+    "variables": [
+      { "requires": "($recipe_book_resolution = 256x)", "$uv": [180, 200], "$uv_size": [26, 16] },
+      { "requires": "($recipe_book_resolution = 512x)", "$uv": [360, 400], "$uv_size": [52, 32] },
+      { "requires": "($recipe_book_resolution = 1024x)", "$uv": [720, 800], "$uv_size": [104, 64] },
+      { "requires": "($recipe_book_resolution = 2048x)", "$uv": [1440, 1600], "$uv_size": [208, 128] },
+      { "requires": "($recipe_book_resolution = 4096x)", "$uv": [2880, 3200], "$uv_size": [416, 256] }
+    ]
+  },
+
+  "recipe_book_tab_checked@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/recipe_book",
+    "size": [35, 26],
+    "variables": [
+      { "requires": "($recipe_book_resolution = 256x)", "$uv": [188, 2], "$uv_size": [35, 26] },
+      { "requires": "($recipe_book_resolution = 512x)", "$uv": [376, 4], "$uv_size": [70, 54] },
+      { "requires": "($recipe_book_resolution = 1024x)", "$uv": [752, 8], "$uv_size": [140, 108] },
+      { "requires": "($recipe_book_resolution = 2048x)", "$uv": [1504, 16], "$uv_size": [280, 216] },
+      { "requires": "($recipe_book_resolution = 4096x)", "$uv": [3008, 32], "$uv_size": [560, 432] }
+    ]
+  },
+
+  "recipe_book_tab_unchecked@resources0.recipe_book_tab_checked": {
+    "variables": [
+      { "requires": "($recipe_book_resolution = 256x)", "$uv": [151, 2], "$uv_size": [35, 26] },
+      { "requires": "($recipe_book_resolution = 512x)", "$uv": [302, 4], "$uv_size": [70, 54] },
+      { "requires": "($recipe_book_resolution = 1024x)", "$uv": [604, 8], "$uv_size": [140, 108] },
+      { "requires": "($recipe_book_resolution = 2048x)", "$uv": [1208, 16], "$uv_size": [280, 216] },
+      { "requires": "($recipe_book_resolution = 4096x)", "$uv": [2416, 32], "$uv_size": [560, 432] }
+    ]
+  },
+
+  "rb_default_slot@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/recipe_book",
+    "size": [25, 25],
+    "variables": [
+      { "requires": "($recipe_book_resolution = 256x)", "$uv": [29, 206], "$uv_size": [25, 25] },
+      { "requires": "($recipe_book_resolution = 512x)", "$uv": [58, 412], "$uv_size": [50, 50] },
+      { "requires": "($recipe_book_resolution = 1024x)", "$uv": [116, 824], "$uv_size": [100, 100] },
+      { "requires": "($recipe_book_resolution = 2048x)", "$uv": [232, 1648], "$uv_size": [200, 200] },
+      { "requires": "($recipe_book_resolution = 4096x)", "$uv": [464, 3296], "$uv_size": [400, 400] }
+    ]
+  },
+
+  "rb_red_slot@resources0.rb_default_slot": {
+    "variables": [
+      { "requires": "($recipe_book_resolution = 256x)", "$uv": [54, 206], "$uv_size": [25, 25] },
+      { "requires": "($recipe_book_resolution = 512x)", "$uv": [108, 412], "$uv_size": [50, 50] },
+      { "requires": "($recipe_book_resolution = 1024x)", "$uv": [216, 824], "$uv_size": [100, 100] },
+      { "requires": "($recipe_book_resolution = 2048x)", "$uv": [432, 1648], "$uv_size": [200, 200] },
+      { "requires": "($recipe_book_resolution = 4096x)", "$uv": [864, 3296], "$uv_size": [400, 400] }
+    ]
+  },
+
+  "rb_group_slot@resources0.rb_default_slot": {
+    "variables": [
+      { "requires": "($recipe_book_resolution = 256x)", "$uv": [29, 231], "$uv_size": [25, 25] },
+      { "requires": "($recipe_book_resolution = 512x)", "$uv": [58, 462], "$uv_size": [50, 50] },
+      { "requires": "($recipe_book_resolution = 1024x)", "$uv": [116, 924], "$uv_size": [100, 100] },
+      { "requires": "($recipe_book_resolution = 2048x)", "$uv": [232, 1848], "$uv_size": [200, 200] },
+      { "requires": "($recipe_book_resolution = 4096x)", "$uv": [464, 3696], "$uv_size": [400, 400] }
+    ]
+  },
+
+  "rb_left_button_default@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/recipe_book",
+    "size": [11, 17],
+    "variables": [
+      { "requires": "($recipe_book_resolution = 256x)", "$uv": [15, 208], "$uv_size": [11, 17] },
+      { "requires": "($recipe_book_resolution = 512x)", "$uv": [30, 416], "$uv_size": [22, 34] },
+      { "requires": "($recipe_book_resolution = 1024x)", "$uv": [60, 832], "$uv_size": [44, 68] },
+      { "requires": "($recipe_book_resolution = 2048x)", "$uv": [120, 1664], "$uv_size": [88, 136] },
+      { "requires": "($recipe_book_resolution = 4096x)", "$uv": [240, 3328], "$uv_size": [176, 272] },
+      { "requires": "($recipe_book_resolution = 8192x)", "$uv": [480, 6656], "$uv_size": [352, 544] }
+    ]
+  },
+
+  "rb_left_button_hover@resources0.rb_left_button_default": {
+    "variables": [
+      { "requires": "($recipe_book_resolution = 256x)", "$uv": [15, 226], "$uv_size": [11, 17] },
+      { "requires": "($recipe_book_resolution = 512x)", "$uv": [30, 452], "$uv_size": [22, 34] },
+      { "requires": "($recipe_book_resolution = 1024x)", "$uv": [60, 904], "$uv_size": [44, 68] },
+      { "requires": "($recipe_book_resolution = 2048x)", "$uv": [120, 1808], "$uv_size": [88, 136] },
+      { "requires": "($recipe_book_resolution = 4096x)", "$uv": [240, 3616], "$uv_size": [176, 272] }
+    ]
+  },
+
+  "rb_right_button_default@resources0.rb_left_button_default": {
+    "variables": [
+      { "requires": "($recipe_book_resolution = 256x)", "$uv": [1, 208], "$uv_size": [11, 17] },
+      { "requires": "($recipe_book_resolution = 512x)", "$uv": [2, 416], "$uv_size": [22, 34] },
+      { "requires": "($recipe_book_resolution = 1024x)", "$uv": [4, 832], "$uv_size": [44, 68] },
+      { "requires": "($recipe_book_resolution = 2048x)", "$uv": [8, 1664], "$uv_size": [88, 136] },
+      { "requires": "($recipe_book_resolution = 4096x)", "$uv": [16, 3328], "$uv_size": [176, 272] }
+    ]
+  },
+
+  "rb_right_button_hover@resources0.rb_left_button_default": {
+    "variables": [
+      { "requires": "($recipe_book_resolution = 256x)", "$uv": [1, 226], "$uv_size": [11, 17] },
+      { "requires": "($recipe_book_resolution = 512x)", "$uv": [2, 452], "$uv_size": [22, 34] },
+      { "requires": "($recipe_book_resolution = 1024x)", "$uv": [4, 904], "$uv_size": [44, 68] },
+      { "requires": "($recipe_book_resolution = 2048x)", "$uv": [8, 1808], "$uv_size": [88, 136] },
+      { "requires": "($recipe_book_resolution = 4096x)", "$uv": [16, 3616], "$uv_size": [176, 272] }
+    ]
+  } 
+}

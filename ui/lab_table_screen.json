@@ -1,0 +1,21 @@
+{
+  "namespace": "labtable",
+
+  "lab_table@content.inventory_screen_common": {
+    "$close_on_player_hurt|default": false,
+    "close_on_player_hurt": "$close_on_player_hurt",
+    "$screen_background": "common.screen_background",
+    "$screen_matrix": "lab_table_mcjava.lab_table_screen_content_panel",
+    "force_render_below": "$force_render_below",
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "lab_table_mcjava.lab_table_screen_content_panel"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "lab_table_mcjava.lab_table_screen_content_panel"
+      }
+    ]
+  }
+}

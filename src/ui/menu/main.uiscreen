@@ -1,3 +1,4 @@
+/* Version: 2.0.0 */
 /* By @FMarquesPTO. All rights reserved. */
 {
   "namespace": "main_menu_mcjava",
@@ -18,17 +19,11 @@
     "anchor_to": "top_middle",
     "offset": [0, "6% + 8px"],
     "controls": [
-      {
-        "title_stack": {
-          "type": "stack_panel",
-          "orientation": "horizontal",
-          "controls": [
-            { "left@resources.main_title_left": {} },
-            { "right@resources.main_title_right": {} }
-          ]
-        }
-      },
-      /* { "new_title@resources.main_new_title": {} }, */
+      { "title@main_menu_mcjava.title_stack": { "offset": [0, 0], "layer": 2, "$color": "" } },
+      { "top@main_menu_mcjava.title_stack": { "offset": [0, -1] } },
+      { "bottom@main_menu_mcjava.title_stack": { "offset": [0, 1] } },
+      { "right@main_menu_mcjava.title_stack": { "offset": [-1, 0] } },
+      { "left@main_menu_mcjava.title_stack": { "offset": [1, 0] } },
       { "splash_text@main_menu_mcjava.splash_text": { "offset": [-36, 8] } },
       { "edition@$edition_image": {} }
     ],
@@ -41,14 +36,28 @@
       {
         "requires": "($edition_name = cpp)",
         "$edition_image": "resources.edition_cpp"
+      },
+      {
+        "requires": "($edition_name = none)",
+        "$edition_image": ""
       }
+    ]
+  },
+
+  "title_stack": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "$color|default": "black",
+    "controls": [
+      { "left@resources.main_title_left": { "color": "$color" } },
+      { "right@resources.main_title_right": { "color": "$color" } }
     ]
   },
 
   "splash_text": {
     "type": "custom",
     "renderer": "splash_text_renderer",
-    "size": [ 2.1, 2.1 ],
+    "size": [2.1, 2.1],
     "layer": 20,
     "anchor_from": "right_middle",
     "anchor_to": "right_middle",
@@ -71,24 +80,18 @@
             {
               "play_button@main_menu_mcjava.button_box": {
                 "ignored": "$education_edition_china",
-                "controls": [
-                  { "button@content.main_play_button": {} }
-                ]
+                "controls": [ { "button@content.main_play_button": {} } ]
               }
             },
             {
               "play_button@main_menu_mcjava.button_box": {
                 "ignored": "(not $education_edition_china)",
-                "controls": [
-                  { "button@content.main_courses_button": {} }
-                ]
+                "controls": [ { "button@content.main_courses_button": {} } ]
               }
             },
             {
               "profile_button@main_menu_mcjava.button_box": {
-                "controls": [
-                  { "button@content.main_profile_button": {} }
-                ],
+                "controls": [ { "button@content.main_profile_button": {} } ],
                 "bindings": [
                   {
                     "binding_name": "#persona_enabled",
@@ -99,9 +102,7 @@
             },
             {
               "change_skin_button@main_menu_mcjava.button_box": {
-                "controls": [
-                  { "button@content.main_change_skin_button": {} }
-                ],
+                "controls": [ { "button@content.main_change_skin_button": {} } ],
                 "bindings": [
                   {
                     "binding_name": "(not #persona_enabled)",
@@ -113,25 +114,19 @@
             {
               "store_button@main_menu_mcjava.button_box": {
                 "ignored": "(($trial) or ($store_ignored))",
-                "controls": [
-                  { "button@content.main_store_button": {} }
-                ]
+                "controls": [ { "button@content.main_store_button": {} } ]
               }
             },
             {
               "switch_accounts_button@main_menu_mcjava.button_box": {
                 "ignored": "(not $education_edition) or $education_edition_china",
-                "controls": [
-                  { "button@content.main_switch_accounts_button": {} }
-                ]
+                "controls": [ { "button@content.main_switch_accounts_button": {} } ]
               }
             },
             {
               "launch_editions_button@main_menu_mcjava.button_box": {
                 "ignored": "($trial or not $supports_launching_legacy_version)",
-                "controls": [
-                  { "button@content.main_launch_editions_button": {} }
-                ],
+                "controls": [ { "button@content.main_launch_editions_button": {} } ],
                 "bindings": [
                   {
                     "binding_name": "#editions_visible",
@@ -155,9 +150,7 @@
             { "settings_button@content.main_settings_button": {} },
             {
               "space@content.h4px": {
-                "controls": [
-                  { "gamepad_helpers@start.gamepad_helpers": { "offset": [0, 36] } }
-                ]
+                "controls": [ { "gamepad_helpers@start.gamepad_helpers": { "offset": [0, 36] } } ]
               }
             },
             { "quit_button@content.main_quit_button": {} },
@@ -242,9 +235,7 @@
           "text": "$version_text",
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right",
-          "bindings": [
-            { "binding_name": "$version_text" }
-          ]
+          "bindings": [ { "binding_name": "$version_text" } ]
         }
       }
     ]

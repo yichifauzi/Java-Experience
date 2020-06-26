@@ -1,9 +1,10 @@
+/* Version: 2.0.0 */
 /* By @FMarquesPTO. All rights reserved. */
 {
   "namespace": "chests_mcjava",
 
   "small_chest_screen_content_panel@container_mcjava.container_panel": {
-    "$container_bg": "resources.generic_27_bg",
+    "$container_bg": "resources1.generic_27_bg",
     "$specified_content": "chests_mcjava.chest_content_panel",
     "$container_size": [176, 167],
     "$grid_dimensions": [9, 3],
@@ -12,34 +13,30 @@
   },
 
   "large_chest_screen_content_panel@chests_mcjava.small_chest_screen_content_panel": {
-    "$container_bg": "resources.generic_54_bg",
-    "$container_size": [176, 222],
+    "$container_bg": "resources1.generic_54_bg",
+    "$container_size": [176, 221],
     "$grid_dimensions": [9, 6],
     "$grid_size": [162, 108],
-    "$invlabel_offset": [1, -12]
+    "$invlabel_offset": [1, -11]
   },
 
-  "ender_chest_screen_content_panel@chests_mcjava.small_chest_screen_content_panel": { },
+  "ender_chest_screen_content_panel@chests_mcjava.small_chest_screen_content_panel": {},
 
   "shulker_box_screen_content_panel@container_mcjava.container_panel": {
     "$specified_content": "chests_mcjava.chest_content_panel",
     "$grid_dimensions": [9, 3],
     "$grid_size": [162, 54],
-    "$invlabel_offset": [1, -11],
-    "$container_bg": "resources.shulker_box_bg"
+    "$invlabel_offset": [1, -12],
+    "$container_bg": "resources1.shulker_box_bg"
   },
 
-  "barrel_screen_content_panel@chests_mcjava.small_chest_screen_content_panel": { },
+  "barrel_screen_content_panel@chests_mcjava.small_chest_screen_content_panel": {},
 
   "chest_content_panel": {
     "type": "panel",
     "controls": [
-      { "@container_mcjava.title": { "offset": [8, 5] } },
-      {
-        "grid@chest_grid": {
-          "offset": [7, 17]
-        }
-      }
+      { "title@container_mcjava.title": { "offset": [8, 5] } },
+      { "grid@chests_mcjava.chest_grid": { "offset": [7, 17] } }
     ]
   },
 

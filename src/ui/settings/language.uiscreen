@@ -13,7 +13,7 @@
     "type": "panel",
     "$title": "options.language.title",
     "controls": [
-      { "title@screen_mcjava.title": { "offset": [0, 16] } }
+      { "title@screen_mcjava.title": { "offset": [0, 15.5] } }
     ]
   },
 

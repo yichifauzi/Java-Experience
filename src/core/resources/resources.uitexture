@@ -4,7 +4,7 @@
 
   "resizing_texture_panel": {
     "type": "panel",
-    "size": ["100%", 20],
+    "size": ["100% + 2px", 20],
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "controls": [
@@ -12,12 +12,13 @@
         "left_panel": {
           "type": "panel",
           "size": ["50%", 21],
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
           "clips_children": true,
           "controls": [
             {
               "left@resource_image": {
+                "offset": [1, 0],
                 "size": "$side_size",
                 "anchor_from": "left_middle",
                 "anchor_to": "left_middle"
@@ -31,11 +32,12 @@
           "type": "panel",
           "size": ["50%", 21],
           "clips_children": true,
-          "anchor_from": "top_right",
-          "anchor_to": "top_right",
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
           "controls": [
             {
               "right@resource_image": {
+                "offset": [-1, 0],
                 "size": "$side_size",
                 "anchor_from": "right_middle",
                 "anchor_to": "right_middle"
@@ -424,8 +426,20 @@
     ]
   },
 
+  "offhand_slot@resources.resource_image": {
+    "$rsrc_location": "src/assets/minecraft/textures/gui/widgets",
+    "size": [22, 22],
+    "variables": [
+      { "requires": "($widgets_resolution = 256x)", "$uv": [24, 23], "$uv_size": [22, 22] },
+      { "requires": "($widgets_resolution = 512x)", "$uv": [48, 46], "$uv_size": [44, 44] },
+      { "requires": "($widgets_resolution = 1024x)", "$uv": [96, 92], "$uv_size": [88, 88] },
+      { "requires": "($widgets_resolution = 2048x)", "$uv": [192, 184], "$uv_size": [176, 176] },
+      { "requires": "($widgets_resolution = 4096x)", "$uv": [384, 368], "$uv_size": [352, 352] }
+    ]
+  },
+
   "button_default@resources.resizing_texture_panel": {
-    "$side_size|default": [200, "100%"],
+    "$side_size|default": [200, 20],
     "$rsrc_location": "src/assets/minecraft/textures/gui/widgets",
     "variables": [
       { "requires": "($widgets_resolution = 256x)", "$uv": [0, 66], "$uv_size": [200, 20] },
@@ -436,9 +450,7 @@
     ]
   },
 
-  "button_hover@resources.resizing_texture_panel": {
-    "$side_size|default": [200, "100%"],
-    "$rsrc_location": "src/assets/minecraft/textures/gui/widgets",
+  "button_hover@resources.button_default": {
     "variables": [
       { "requires": "($widgets_resolution = 256x)", "$uv": [0, 86], "$uv_size": [200, 20] },
       { "requires": "($widgets_resolution = 512x)", "$uv": [0, 172], "$uv_size": [400, 40] },
@@ -448,9 +460,7 @@
     ]
   },
 
-  "button_locked@resources.resizing_texture_panel": {
-    "$side_size|default": [200, "100%"],
-    "$rsrc_location": "src/assets/minecraft/textures/gui/widgets",
+  "button_locked@resources.button_default": {
     "variables": [
       { "requires": "($widgets_resolution = 256x)", "$uv": [0, 46], "$uv_size": [200, 20] },
       { "requires": "($widgets_resolution = 512x)", "$uv": [0, 92], "$uv_size": [400, 40] },
@@ -582,7 +592,7 @@
   },
 
   "edition_cpp@resources.resource_image": {
-    "$rsrc_location": "src/javaui/resources/textures/gui/cpp_edition",
+    "$rsrc_location": "src/core/resources/fmarquespto/textures/gui/cpp_edition",
     "size": [88, 14],
     "uv": [0, 0],
     "variables": [

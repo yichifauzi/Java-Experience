@@ -1,3 +1,4 @@
+/* Version: 2.0.0 */
 /* By @FMarquesPTO. All rights reserved. */
 {
   "namespace": "horse_mcjava",
@@ -23,7 +24,7 @@
           "size": [176, 166],
           "layer": 1,
           "controls": [
-            { "@resources.horse_bg": {} },
+            { "bg@resources1.horse_bg": {} },
             { "title@container_mcjava.title": { "offset": [8, 5] }},
             { "renderer@horse_mcjava.horse_renderer": {} },
             { "equip@horse_mcjava.equip_panel": {} },
@@ -49,9 +50,7 @@
         "equip_grid@horse_mcjava.equip_grid": {
           "offset": [0, 18],
           "bindings": [
-            {
-              "binding_name": "#equip_grid_dimensions"
-            },
+            { "binding_name": "#equip_grid_dimensions" },
             {
               "binding_name": "#has_only_carpet_slot",
               "binding_name_override": "#visible"
@@ -62,9 +61,7 @@
       {
         "equip_grid@horse_mcjava.equip_grid": {
           "bindings": [
-            {
-              "binding_name": "#equip_grid_dimensions"
-            },
+            { "binding_name": "#equip_grid_dimensions" },
             {
               "binding_name": "(not #has_only_carpet_slot)",
               "binding_name_override": "#visible"
@@ -73,7 +70,7 @@
         }
       },
       {
-        "saddle@resources.saddle_slot_bg": {
+        "saddle@resources1.saddle_slot_bg": {
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "offset": [0, 0],
@@ -87,7 +84,7 @@
         }
       },
       {
-        "armor_0@resources.armor_slot_bg": {
+        "armor_0@resources1.armor_slot_bg": {
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "offset": [0, 0],
@@ -101,7 +98,7 @@
         }
       },
       {
-        "carpet_0@resources.carpet_slot_bg": {
+        "carpet_0@resources1.carpet_slot_bg": {
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "offset": [0, 18],
@@ -115,7 +112,7 @@
         }
       },
       {
-        "armor_1@resources.armor_slot_bg": {
+        "armor_1@resources1.armor_slot_bg": {
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "offset": [0, 18],
@@ -129,7 +126,7 @@
         }
       },
       {
-        "carpet_1@resources.carpet_slot_bg": {
+        "carpet_1@resources1.carpet_slot_bg": {
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "offset": [0, 18],
@@ -165,9 +162,7 @@
                 "layer": 4,
                 "anchor_from": "center",
                 "anchor_to": "center",
-                "bindings": [
-                  { "binding_name": "#entity_id" }
-                ]
+                "bindings": [ { "binding_name": "#entity_id" } ]
               }
             }
           ]
@@ -194,9 +189,7 @@
     "anchor_to": "top_left",
     "anchor_from": "top_left",
     "size": [0, 0],
-    "controls": [
-      { "bg@resources.horse_inv_bg": { "offset": [45, 27] } }
-    ]
+    "controls": [ { "bg@resources1.horse_inv_bg": { "offset": [45, 27] } } ]
   },
 
   "inv_grid": {
@@ -209,9 +202,7 @@
     "grid_item_template": "@container_mcjava.container_slot",
     "grid_dimension_binding": "#inv_grid_dimensions",
     "$item_collection_name": "container_items",
-    "bindings": [
-      { "binding_name": "#inv_grid_dimensions" }
-    ]
+    "bindings": [ { "binding_name": "#inv_grid_dimensions" } ]
   },
 
   "equip_grid": {
@@ -222,8 +213,6 @@
     "grid_item_template": "@container_mcjava.container_slot",
     "grid_dimension_binding": "#equip_grid_dimensions",
     "$item_collection_name": "horse_equip_items",
-    "bindings": [
-      { "binding_name": "#equip_grid_dimensions" }
-    ]
+    "bindings": [ { "binding_name": "#equip_grid_dimensions" } ]
   }
 }

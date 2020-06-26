@@ -268,7 +268,7 @@
       {
         "binding_type": "view",
         "source_control_name": "sound_view",
-        "source_property_name": "(not #toggle_state)",
+        "source_property_name": "(#toggle_state = 0)",
         "target_property_name": "#visible"
       },
       {

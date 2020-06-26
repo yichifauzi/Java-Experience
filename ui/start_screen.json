@@ -1,5 +1,5 @@
 {
-  "start_screen": {
+  "start_screen@content.base_screen": {
     "$screen_content": "main_menu_mcjava.main_menu_screen_content_panel"
   }
 }

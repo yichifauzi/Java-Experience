@@ -8,7 +8,6 @@
     "focus_enabled": false,
     "focus_magnet_enabled": false,
     "follows_cursor": true,
-    "consume_events": false,
     "consume_hover_events": false,
     "always_handle_pointer": true,
     "layer": 120,

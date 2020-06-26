@@ -1,9 +1,10 @@
+/* Version: 2.0.0 */
 /* By @FMarquesPTO. All rights reserved. */
 {
   "namespace": "cartography_table_mcjava",
 
   "cartography_table_screen_content_panel@container_mcjava.container_panel": {
-    "$container_bg": "resources.cartography_table_bg",
+    "$container_bg": "resources1.cartography_table_bg",
     "$specified_content": "cartography_table_mcjava.cartography_table_content_panel",
     "$show_invlabel": false
   },
@@ -12,13 +13,13 @@
     "type": "panel",
     "$container_title": "container.cartography",
     "controls": [
-      { "@container_mcjava.title": { "offset": [8, 3] } },
-      { "@map_name_box": {} },
-      { "@input_item_slot": {} },
-      { "@additional_item_slot": {} },
-      { "@result_item_slot": {} },
-      { "@maps_panel": {} },
-      { "@map_name_button": {} }
+      { "title@container_mcjava.title": { "offset": [8, 3] } },
+      { "map_name@cartography_table_mcjava.map_name_box": {} },
+      { "input@cartography_table_mcjava.input_item_slot": {} },
+      { "additional@cartography_table_mcjava.additional_item_slot": {} },
+      { "result@cartography_table_mcjava.result_item_slot": {} },
+      { "maps@cartography_table_mcjava.maps_panel": {} },
+      { "map_name_button@cartography_table_mcjava.map_name_button": {} }
     ]
   },
 
@@ -29,14 +30,14 @@
     "anchor_to": "top_left",
     "offset": [67, 13],
     "controls": [
-      { "none@resources.ct_none_map": {} },
-      { "copy@resources.ct_clone_map": {} },
-      { "rename@resources.ct_rename_map": {} },
-      { "default@resources.ct_default_map": {} },
-      { "locator@resources.ct_locator_map": {} },
-      { "zoom@resources.ct_zoom_map": {} },
-      { "lock@resources.ct_locked_map": {} },
-      { "locked_icon@resources.ct_locked_map_icon": {} }
+      { "none@resources1.ct_none_map": {} },
+      { "copy@resources1.ct_clone_map": {} },
+      { "rename@resources1.ct_rename_map": {} },
+      { "default@resources1.ct_default_map": {} },
+      { "locator@resources1.ct_locator_map": {} },
+      { "zoom@resources1.ct_zoom_map": {} },
+      { "lock@resources1.ct_locked_map": {} },
+      { "locked_icon@resources1.ct_locked_map_icon": {} }
     ],
     "bindings": [
       {
@@ -167,7 +168,14 @@
     "$toggle_index": 100,
     "$toggle_control_name": "map_name_box_view",
     "$focus_id": "show_textbox_button",
-    "$toggle_button_type": "cartography_table_mcjava.map_name_button_content"
+    "$toggle_type_panel": "cartography_table_mcjava.map_name_button_content",
+    "$toggle_bg": "",
+    "bindings": [
+      {
+        "binding_name": "(not #is_none_mode)",
+        "binding_name_override": "#enabled"
+      }
+    ]
   },
 
   "map_name_button_content": {
@@ -177,10 +185,10 @@
       {
         "img": {
           "type": "image",
-          "texture": "src/javaui/resources/fmarquespto/textures/border",
+          "texture": "src/core/resources/fmarquespto/textures/border",
           "size": ["100%", "100%"],
           "nineslice_size": 1,
-          "visible": "($toggle_button_state = checked_hover or $toggle_button_state = unchecked_hover)"
+          "visible": "($state = checked_hover or $state = unchecked_hover)"
         }
       }
     ]

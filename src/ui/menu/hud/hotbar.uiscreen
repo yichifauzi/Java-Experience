@@ -224,10 +224,61 @@
     "size": [182, 22],
     "$show_stack_count_for_all_gamemodes": true,
     "controls": [
-      { "hotbar_bg@resources.hotbar_bg": {} },
+      { "hotbar_bg@resources0.hotbar_bg": {} },
       { "hotbar_grid@hotbar_mcjava.hotbar_grid": {} },
       { "@hotbar_mcjava.left_inv_button_panel": {} },
       { "@hotbar_mcjava.right_inv_button_panel": {} }
+    ]
+  },
+
+  "offhand_grid": {
+    "type": "panel",
+    "size": [22, 22],
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "offset": [-40, 0],
+    "controls": [
+      { "bg@resources.offhand_slot": {} },
+      {
+        "offhand_grid": {
+          "type": "grid",
+          "grid_dimensions": [1, 1],
+          "collection_name": "hotbar_items",
+          "layer": 4,
+          "controls": [
+            {
+              "item_renderer": {
+                "type": "custom",
+                "renderer": "inventory_item_renderer",
+                "layer": 5,
+                "$item_renderer_binding_condition|default": "none",
+                "property_bag": {
+                  "#item_id_aux": 33619968
+                },
+                "bindings": [
+                 /*  {
+                    "binding_type": "collection_details",
+                    "binding_collection_name": "offhand_items"
+                  }, */
+                  /* {
+                    "binding_name": "#item_id_aux",
+                    "binding_type": "collection",
+                    "binding_collection_name": "offhand_items",
+                    "binding_condition": "$item_renderer_binding_condition"
+                  }, */
+                  {
+                    "binding_name": "#shield_is_active",
+                    "binding_type": "collection",
+                    "binding_collection_name": "hotbar_items",
+                    "binding_condition": "$item_renderer_binding_condition",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
     ]
   },
 

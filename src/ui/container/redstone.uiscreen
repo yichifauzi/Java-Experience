@@ -1,19 +1,20 @@
+/* Version: 2.0.0 */
 /* By @FMarquesPTO. All rights reserved. */
 {
   "namespace": "redstone_mcjava",
 
   "dispenser_screen_content_panel@container_mcjava.container_panel": {
-    "$container_bg": "resources.dispenser_bg",
+    "$container_bg": "resources1.dispenser_bg",
     "$specified_content": "redstone_mcjava.dispenser_content_panel"
   },
 
   "dropper_screen_content_panel@redstone_mcjava.dispenser_screen_content_panel": {
-    "$container_bg": "resources.dropper_bg"
+    "$container_bg": "resources1.dropper_bg"
   },
 
   "hopper_screen_content_panel@container_mcjava.container_panel": {
     "$container_size": [176, 133],
-    "$container_bg": "resources.hopper_bg",
+    "$container_bg": "resources1.hopper_bg",
     "$specified_content": "redstone_mcjava.hopper_content_panel"
   },
 
@@ -21,14 +22,14 @@
     "type": "panel",
     "controls": [
       {
-        "@container_mcjava.title": {
+        "title@container_mcjava.title": {
           "offset": [0, 5],
           "anchor_from": "top_middle",
           "anchor_to": "top_middle"
         }
       },
       {
-        "grid@redstone_grid": {
+        "grid@redstone_mcjava.redstone_grid": {
           "size": [54, 54],
           "grid_dimensions": [3, 3],
           "offset": [61, 16]
@@ -40,9 +41,9 @@
   "hopper_content_panel": {
     "type": "panel",
     "controls": [
-      { "@container_mcjava.title": { "offset": [8, 5] } },
+      { "title@container_mcjava.title": { "offset": [8, 5] } },
       {
-        "grid@redstone_grid": {
+        "grid@redstone_mcjava.redstone_grid": {
           "size": [90, 18],
           "grid_dimensions": [5, 1],
           "offset": [43, 19]

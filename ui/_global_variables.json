@@ -11,7 +11,7 @@
   "$copyright_text": "Copyright Mojang AB. Do not distribute!",
 
   /* Options */
-  "$edition_name": "java",
+  "$edition_name": "cpp", //java - Java Edition (Default) / cpp - C++ Edition / none -
   "$disabled_vignette": false,
   "$show_loading_screens_tips": true,
 
@@ -108,7 +108,12 @@
   "$icons_resolution": "256x",
   "$bars_resolution": "256x",
   "$options_background_resolution": "256x",
+  "$checkbox_resolution": "256x",
   
+
+  "$world_selection_resolution": "256x",
+  "$server_selection_resolution": "256x",
+
   "$book_resolution": "256x",
 
   "$anvil_resolution": "256x",
@@ -131,6 +136,7 @@
   "$villager_resolution": "256x",
   "$villager2_resolution": "256x",
   "$recipe_book_resolution": "256x",
+  "$recipe_button_resolution": "256x",
 
   /* Advanced Defs */
   "$chat_size": [326, 180],

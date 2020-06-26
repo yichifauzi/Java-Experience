@@ -8,9 +8,10 @@
       {
         "mouse_content_panel@screen_mcjava.scroll_screen": {
           "$top_content": "mouse_mcjava.top_content",
-          "$top_content_size": ["100%", 44],
+          "$top_content_size": ["100%", 43],
           "$scrolling_content": "mouse_mcjava.better_keymapping_content",
           "$bottom_content": "mouse_mcjava.bottom_content",
+          "$scroll_bar_offset": [165, 0],
           "variables": [
             {
               "requires": "(not $better_mouse_keys_grid)",
@@ -45,7 +46,7 @@
   "top_content": {
     "type": "panel",
     "controls": [
-      { "title@screen_mcjava.title": { "offset": [0, 7], "text": "options.controls.title" } },
+      { "title@screen_mcjava.title": { "offset": [-1, 7], "text": "options.controls.title" } },
       {
         "stack_zero": {
           "type": "stack_panel",
@@ -253,7 +254,7 @@
     "anchor_from": "bottom_middle",
     "anchor_to": "bottom_middle",
     "size": [310, 20],
-    "offset": [0, -9],
+    "offset": [-1, -9],
     "controls": [
       { "reset@mouse_mcjava.reset_button": {} },
       { "fill@screen_mcjava.hfill": {} },
@@ -316,7 +317,7 @@
         "keymapping_button_0@binding_button": {
           "$button_tts_header": "#audible_keymapping_name",
           "anchor_from": "top_right",
-          "offset": [-88.5, 0],
+          "offset": [-83, 0],
           "anchor_to": "top_right",
           "bindings": [
             {
@@ -351,7 +352,7 @@
   },
 
   "binding_button@button_mcjava.button": {
-    "size": [75, 20],
+    "size": [74, 20],
     "$pressed_button_name": "button.binding_button",
     "$button_type_panel": "mouse_mcjava.binding_button_content",
     "bindings": [

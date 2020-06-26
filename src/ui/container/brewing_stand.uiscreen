@@ -1,9 +1,10 @@
+/* Version: 2.0.0 */
 /* By @FMarquesPTO. All rights reserved. */
 {
   "namespace": "brewing_stand_mcjava",
 
   "brewing_stand_screen_content_panel@container_mcjava.container_panel": {
-    "$container_bg": "resources.brewing_stand_bg",
+    "$container_bg": "resources1.brewing_stand_bg",
     "$specified_content": "brewing_stand_mcjava.brewing_stand_content_panel"
   },
 
@@ -18,24 +19,48 @@
         }
       },
       {
-        "arrow@resources.brewing_stand_full_arrow": {
+        "arrow@resources1.brewing_stand_full_arrow": {
           "anchor_from": "top_left",
           "anchor_to": "top_left",
-          "offset": [97, 16]
+          "offset": [97, 16],
+          "clip_direction": "up",
+          "bindings": [
+            {
+              "binding_name": "#brewing_arrow_ratio",
+              "binding_name_override": "#clip_ratio",
+              "binding_condition": "always"
+            }
+          ]
         }
       },
       {
-        "bubbles@resources.brewing_stand_full_bubbles": {
+        "bubbles@resources1.brewing_stand_full_bubbles": {
           "anchor_from": "top_left",
           "anchor_to": "top_left",
-          "offset": [63, 14]
+          "offset": [63, 14],
+          "clip_direction": "down",
+          "bindings": [
+            {
+              "binding_name": "#brewing_bubbles_ratio",
+              "binding_name_override": "#clip_ratio",
+              "binding_condition": "always"
+            }
+          ]
         }
       },
       {
-        "fuel@resources.brewing_stand_full_fuel": {
+        "fuel@resources1.brewing_stand_full_fuel": {
           "anchor_from": "top_left",
           "anchor_to": "top_left",
-          "offset": [60, 44]
+          "clip_direction": "left",
+          "offset": [60, 44],
+          "bindings": [
+            {
+              "binding_name": "#brewing_fuel_ratio",
+              "binding_name_override": "#clip_ratio",
+              "binding_condition": "always"
+            }
+          ]
         }
       },
       { "input_item@brewing_stand_mcjava.input_item": {} },

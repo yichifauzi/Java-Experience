@@ -57,6 +57,21 @@
                 "size": [176, 166],
                 "layer": 1,
                 "controls": [
+                  {
+                    "mob_effects_renderer@crafting_mcjava.mob_effects_renderer": {
+                      "size": [176, 250],
+                      "offset": ["-150% - 60px", 0],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "bindings": [
+                        {
+                          "binding_type": "global",
+                          "binding_name": "(not #is_survival_layout)",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  },
                   { "$container_bg@$container_bg": {} },
                   {
                     "screen_inventory": {
@@ -102,7 +117,16 @@
     ]
   },
 
-  
+  "mob_effects_renderer": {
+    "type": "custom",
+    "renderer": "mob_effects_renderer",
+    "layer": 1/* ,
+    "property_bag": {
+      "#x_padding": -10
+    } */
+  },
+
+  //"starting_rotation": 30,
 
   "crafting_text": {
     "type": "label",

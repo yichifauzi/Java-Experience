@@ -1,9 +1,10 @@
+/* Version: 2.0.0 */
 /* By @FMarquesPTO. All rights reserved. */
 {
   "namespace": "enchanting_table_mcjava",
 
   "enchanting_table_screen_content_panel@container_mcjava.container_panel": {
-    "$container_bg": "resources.enchanting_table_bg",
+    "$container_bg": "resources1.enchanting_table_bg",
     "$specified_content": "enchanting_table_mcjava.enchanting_table_content_panel"
   },
 
@@ -11,11 +12,11 @@
     "type": "panel",
     "$container_title": "container.enchant",
     "controls": [
-      { "@container_mcjava.title": { "offset": [12, 4] } },
-      { "@item_slot": {} },
-      { "@lapis_slot": {} },
-      { "@enchanting_book_panel": {} },
-      { "@enchantments_grid_panel": {} }
+      { "title@container_mcjava.title": { "offset": [12, 4] } },
+      { "item@enchanting_table_mcjava.item_slot": {} },
+      { "lapis@enchanting_table_mcjava.lapis_slot": {} },
+      { "book@enchanting_table_mcjava.enchanting_book_panel": {} },
+      { "enchantments@enchanting_table_mcjava.enchantments_grid_panel": {} }
     ]
   },
 
@@ -120,58 +121,22 @@
       {
         "a@enchanting_table_mcjava.dust_template": {
           "grid_position": [0, 0],
-          "variables": [
-            { "requires": "($enchanting_table_resolution = 256x)", "$uv": [0, 223], "$uv_size": [16, 16] },
-            { "requires": "($enchanting_table_resolution = 512x)", "$uv": [0, 446], "$uv_size": [32, 32] },
-            { "requires": "($enchanting_table_resolution = 1024x)", "$uv": [0, 892], "$uv_size": [64, 64] },
-            { "requires": "($enchanting_table_resolution = 2048x)", "$uv": [0, 1784], "$uv_size": [128, 128] },
-            { "requires": "($enchanting_table_resolution = 4096x)", "$uv": [0, 3568], "$uv_size": [256, 256] }
-          ],
-          "$disabled_variables": [
-            { "requires": "($enchanting_table_resolution = 256x)", "$uv": [0, 239], "$uv_size": [16, 16] },
-            { "requires": "($enchanting_table_resolution = 512x)", "$uv": [0, 478], "$uv_size": [32, 32] },
-            { "requires": "($enchanting_table_resolution = 1024x)", "$uv": [0, 956], "$uv_size": [64, 64] },
-            { "requires": "($enchanting_table_resolution = 2048x)", "$uv": [0, 1912], "$uv_size": [128, 128] },
-            { "requires": "($enchanting_table_resolution = 4096x)", "$uv": [0, 3824], "$uv_size": [256, 256] }
-          ]
+          "$dust_selected": "resources1.et_dust_level1",
+          "$dust_unselected": "resources1.et_dust_level1_disabled"
         }
       },
       {
         "b@enchanting_table_mcjava.dust_template": {
           "grid_position": [0, 1],
-          "variables": [
-            { "requires": "($enchanting_table_resolution = 256x)", "$uv": [16, 223], "$uv_size": [16, 16] },
-            { "requires": "($enchanting_table_resolution = 512x)", "$uv": [32, 446], "$uv_size": [32, 32] },
-            { "requires": "($enchanting_table_resolution = 1024x)", "$uv": [64, 892], "$uv_size": [64, 64] },
-            { "requires": "($enchanting_table_resolution = 2048x)", "$uv": [128, 1784], "$uv_size": [128, 128] },
-            { "requires": "($enchanting_table_resolution = 4096x)", "$uv": [256, 3568], "$uv_size": [256, 256] }
-          ],
-          "$disabled_variables": [
-            { "requires": "($enchanting_table_resolution = 256x)", "$uv": [16, 239], "$uv_size": [16, 16] },
-            { "requires": "($enchanting_table_resolution = 512x)", "$uv": [32, 478], "$uv_size": [32, 32] },
-            { "requires": "($enchanting_table_resolution = 1024x)", "$uv": [64, 956], "$uv_size": [64, 64] },
-            { "requires": "($enchanting_table_resolution = 2048x)", "$uv": [128, 1912], "$uv_size": [128, 128] },
-            { "requires": "($enchanting_table_resolution = 4096x)", "$uv": [256, 3824], "$uv_size": [256, 256] }
-          ]
+          "$dust_selected": "resources1.et_dust_level2",
+          "$dust_unselected": "resources1.et_dust_level2_disabled"
         }
       },
       {
         "c@enchanting_table_mcjava.dust_template": {
           "grid_position": [0, 2],
-          "variables": [
-            { "requires": "($enchanting_table_resolution = 256x)", "$uv": [33, 223], "$uv_size": [16, 16] },
-            { "requires": "($enchanting_table_resolution = 512x)", "$uv": [64, 446], "$uv_size": [32, 32] },
-            { "requires": "($enchanting_table_resolution = 1024x)", "$uv": [128, 892], "$uv_size": [64, 64] },
-            { "requires": "($enchanting_table_resolution = 2048x)", "$uv": [256, 1784], "$uv_size": [128, 128] },
-            { "requires": "($enchanting_table_resolution = 4096x)", "$uv": [512, 3568], "$uv_size": [256, 256] }
-          ],
-          "$disabled_variables": [
-            { "requires": "($enchanting_table_resolution = 256x)", "$uv": [32, 239], "$uv_size": [16, 16] },
-            { "requires": "($enchanting_table_resolution = 512x)", "$uv": [64, 478], "$uv_size": [32, 32] },
-            { "requires": "($enchanting_table_resolution = 1024x)", "$uv": [128, 956], "$uv_size": [64, 64] },
-            { "requires": "($enchanting_table_resolution = 2048x)", "$uv": [256, 1912], "$uv_size": [128, 128] },
-            { "requires": "($enchanting_table_resolution = 4096x)", "$uv": [512, 3824], "$uv_size": [256, 256] }
-          ]
+          "$dust_selected": "resources1.et_dust_level3",
+          "$dust_unselected": "resources1.et_dust_level3_disabled"
         }
       }
     ]
@@ -181,8 +146,8 @@
     "type": "panel",
     "size": [18, 19],
     "controls": [
-      { "dust_image_selectable@resources.et_dust_image_selectable": {} },
-      { "dust_image_unselectable@resources.et_dust_image_unselectable": {} }
+      { "dust_image_selectable@$dust_selected": {} },
+      { "dust_image_unselectable$dust_unselected": {} }
     ]
   },
 
@@ -191,7 +156,7 @@
     "size": [108, 19],
     "layer": 7,
     "controls": [
-      { "et_enchantments_unselectable_bg@resources.et_enchantments_unselectable_bg": {} },
+      { "et_enchantments_unselectable_bg@resources1.et_enchantments_unselectable_bg": {} },
       { "unselectable_button@enchanting_table_mcjava.unselectable_button": {} },
       { "selectable_button@enchanting_table_mcjava.selectable_button": {} }
     ]
@@ -203,12 +168,13 @@
     "layer": 1,
     "button_mappings": [],
     "controls": [
-      { "default@resources.et_enchantments_unselectable_bg": {} },
+      { "default@resources1.et_enchantments_unselectable_bg": {} },
       {
-        "hover@resources.et_enchantments_unselectable_bg": {
-          "$rsc_controls": [
+        "hover@resources1.et_enchantments_unselectable_bg": {
+          "controls": [
             {
-              "hover_text@common.hover_text": {
+              "hover_text@container_mcjava.hover_text": {
+                "$item_collection_name": "#enchant_buttons",
                 "bindings": [
                   {
                     "binding_name": "#hover_text",
@@ -221,7 +187,7 @@
           ]
         }
       },
-      { "pressed@resources.et_enchantments_unselectable_bg": {} },
+      { "pressed@resources1.et_enchantments_unselectable_bg": {} },
       { "runes_panel@enchanting_table_mcjava.runes_panel": { "$runes_color": "$enchanting_runes_fail_color" } },
       { "enchant_cost@enchanting_table_mcjava.fail_cost": {} }
     ]
@@ -245,12 +211,13 @@
       }
     ],
     "controls": [
-      { "default@resources.et_enchantments_selectable_bg": {} },
+      { "default@resources1.et_enchantments_selectable_bg": {} },
       {
-        "hover@resources.et_enchantments_selectable_hover_bg": {
-          "$rsc_controls": [
+        "hover@resources1.et_enchantments_selectable_hover_bg": {
+          "controls": [
             {
-              "hover_text@common.hover_text": {
+              "hover_text@container_mcjava.hover_text": {
+                "$item_collection_name": "#enchant_buttons",
                 "bindings": [
                   {
                     "binding_name": "#hover_text",
@@ -263,7 +230,7 @@
           ]
         }
       },
-      { "pressed@resources.et_enchantments_selectable_hover_bg": {} },
+      { "pressed@resources1.et_enchantments_selectable_hover_bg": {} },
       { "runes_panel@enchanting_table_mcjava.runes_panel": { "$runes_color": "$enchanting_runes_fail_color" } },
       { "enchant_cost@enchanting_table_mcjava.success_cost": {} }
     ]
@@ -275,9 +242,7 @@
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "offset": [19, 1],
-    "controls": [
-      { "@enchant_runes": {} }
-    ]
+    "controls": [ { "runes@enchant_runes": {} } ]
   },
 
   "enchant_runes": {
