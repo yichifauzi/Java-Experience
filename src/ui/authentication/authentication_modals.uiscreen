@@ -1,0 +1,89 @@
+/* Version: 2.0.0 */
+{
+  "namespace": "authentication_modals_mcjava",
+  
+  "authentication_modals_screen_content_panel": {
+    "type": "panel",
+    "$dialog_title_text": "#title_text",
+    "$dialog_title_text_binding_condition": "once",
+    "$dialog_title_text_binding_type": "global",
+    "controls": [ { "content@authentication_modals_content": {} } ]
+  },
+
+  "authentication_modals_content@popup_mcjava.modal_with_buttons": {
+    "$title": "authentication_modals_mcjava.title",
+    "$description": "authentication_modals_mcjava.description",
+    "$button_panel": "authentication_modals_mcjava.buttons_panel"
+  },
+
+  "title@account_banned_mcjava.title": {
+    "property_bag": {},
+    "$dialog_title_text|default": "#none",
+    "$dialog_title_text_binding_condition|default": "none",
+    "$dialog_title_text_binding_type|default": "none",
+    "text": "$dialog_title_text",
+    "bindings": [
+      {
+        "binding_name": "$dialog_title_text",
+        "binding_condition": "$dialog_title_text_binding_condition",
+        "binding_type": "$dialog_title_text_binding_type"
+      }
+    ]
+  },
+
+  "description@account_banned_mcjava.description": {
+    "localize": false,
+    "text": "#body_text",
+    "bindings": [
+      {
+        "binding_name": "#body_text",
+        "binding_condition": "once"
+      }
+    ]
+  },
+
+  "buttons_panel": {
+    "type": "stack_panel",
+    "anchor_to": "center",
+    "anchor_from": "center",
+    "size": [310, 44],
+    "controls": [
+      {
+        "top_stack": {
+          "type": "stack_panel",
+          "size": [310, 20],
+          "orientation": "horizontal",
+          "controls": [
+            {
+              "left@button_mcjava.button": {
+                "size": [150, 20],
+                "$pressed_button_name": "button.confirm",
+                "$button_text": "#left_button_text",
+                "$button_text_binding_type": "global",
+                "$button_binding_condition": "once"
+              }
+            },
+            { "space@content.hfill": {} },
+            {
+              "right@button_mcjava.button": {
+                "size": [150, 20],
+                "$pressed_button_name": "button.cancel",
+                "$button_text": "#right_button_text",
+                "$button_text_binding_type": "global",
+                "$button_binding_condition": "once"
+              }
+            }
+          ]
+        }
+      },
+      { "space@content.v4px": {} },
+      {
+        "bottom_stack": {
+          "type": "panel",
+          "size": [310, 20],
+          "controls": [ { "cancel@content.exit_button": { "size": [200, 20] } } ]
+        }
+      }
+    ]
+  }
+}

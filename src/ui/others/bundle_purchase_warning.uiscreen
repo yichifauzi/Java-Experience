@@ -1,0 +1,208 @@
+/* Version: 2.0.0 */
+{
+  "namespace": "bundle_purchase_warning_mcjava",
+
+  "bundle_purchase_warning_screen_content_panel": {
+    "type": "panel",
+    "controls": [
+      { "title@title": {} },
+      { "content@bundle_purchase_warning_content": {} }
+    ]
+  },
+
+  "title@account_banned_mcjava.title": {
+    "text": "#body_text",
+    "size": ["default", "default"],
+    "offset": [0, 10],
+    "anchor_to": "top_middle",
+    "anchor_from": "top_middle",
+    "property_bag": { "#tts_dialog_title": "#body_text"  },
+    "bindings": [
+      {
+        "binding_type": "global",
+        "binding_condition": "none",
+        "binding_name": "#body_text",
+        "binding_name_override": "#body_text"
+      },
+      {
+        "binding_type": "global",
+        "binding_condition": "once",
+        "binding_name": "#tts_dialog_title"
+      }
+    ]
+  },
+
+  "bundle_purchase_warning_content": {
+    "type": "panel",
+    "size": [408, "100% - 83px"],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [0, 32],
+    "controls": [
+      {
+        "content_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [408, "100%"],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "controls": [
+            {
+              "owned@resource_packs_mcjava.side_content_panel": {
+                "$label_text": "store.purchase.bundle.owned",
+                "$scrolling_content": "bundle_purchase_warning_mcjava.bundle_grid"
+              }
+            },
+            { "fill@screen_mcjava.hfill": {} },
+            {
+              "unowned@resource_packs_mcjava.side_content_panel": {
+                "$label_text": "store.purchase.bundle.unowned",
+                "$scrolling_content": "bundle_purchase_warning_mcjava.bundle_grid"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "bottom_content": {
+    "type": "stack_panel",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "size": [310, 20],
+    "orientation": "horizontal",
+    "offset": [0, 0],
+    "controls": [
+      { "exit@content.exit_button": { "$button_text": "gui.cancel", "size": [150, 20] } },
+      { "space@content.hfill": {} },
+      {
+        "purchase_button_panel@button_mcjava.button": {
+          "size": [150, 20],
+          "$pressed_button_name": "button.confirm_bundle_purchase",
+          "$button_text": "#bundle_purchase_confirm",
+          "$button_text_binding_type": "global",
+          "$focus_id": "purchase_button",
+          "$focus_override_down": "FOCUS_OVERRIDE_STOP",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+          "$focus_override_up": "owned_list_1"
+        }
+      }
+    ]
+  },
+
+  "bundle_grid": {
+    "type": "grid",
+    "size": [ "100%", "default" ],
+    "layer": 1,
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "grid_item_template": "bundle_purchase_warning_mcjava.bundle_grid_item_panel",
+    "grid_dimension_binding": "$bundle_grid_dimension",
+    "collection_name": "$bundle_collection_name",
+    "bindings": [ { "binding_name": "$bundle_grid_dimension" } ]
+  },
+
+  "bundle_grid_item": {
+    "type": "panel",
+    "size": [ "100%", 36],
+    "controls": [
+      { "content@bundle_purchase_warning.grid_item_content": {} },
+      {
+        "game_pad_focus_border@bundle_purchase_warning.focus_border_button": {
+          "bindings": [
+            {
+              "binding_type": "collection_details",
+              "binding_collection_name": "$bundle_collection_name"
+            },
+            {
+              "binding_name": "#focus_override_up",
+              "binding_type": "collection",
+              "binding_collection_name": "$bundle_collection_name",
+              "binding_name_override": "#focus_change_up"
+            },
+            {
+              "binding_name": "#focus_override_down",
+              "binding_type": "collection",
+              "binding_collection_name": "$bundle_collection_name",
+              "binding_name_override": "#focus_change_down"
+            },
+            {
+              "binding_name": "#focus_id_override",
+              "binding_type": "collection",
+              "binding_collection_name": "$bundle_collection_name",
+              "binding_name_override": "#focus_identifier"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "grid_item_content": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100% - 4px", "100% - 4px"],
+    "layer": 2,
+    "controls": [
+      {
+        "image_border": {
+          "type": "panel",
+          "size": [32, 32],
+          "controls": [
+            {
+              "bundle_thumbnail": {
+                "type": "image",
+                "size": [32, 32],
+                "bilinear": true,
+                "fill": true,
+                "layer": 2,
+                "bindings": [
+                  {
+                    "binding_type": "collection",
+                    "binding_collection_name": "$bundle_collection_name",
+                    "binding_name": "#keyart_path",
+                    "binding_name_override": "#texture"
+                  },
+                  {
+                    "binding_type": "collection",
+                    "binding_collection_name": "$bundle_collection_name",
+                    "binding_name": "#keyart_texture_file_system",
+                    "binding_name_override": "#texture_file_system"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      { "space@content.h2px": {} },
+      {
+        "bundle_title_panel": {
+          "type": "panel",
+          "size": ["fill", "100%"],
+          "controls": [
+            {
+              "bundle_title": {
+                "type": "label",
+                "size": ["100%", 10],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "text": "#offer_title",
+                "color": "white",
+                "layer": 3,
+                "bindings": [
+                  {
+                    "binding_type": "collection",
+                    "binding_collection_name": "$bundle_collection_name",
+                    "binding_name": "#offer_title"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,81 +1,32 @@
+/* Version: 2.0.0 */
 {
-  "small_chest_screen": {
+  "small_chest_screen@content.inventory_screen_common": {
     "force_render_below": "$force_render_below",
-    "variables": [
-      {
-        "requires": "$desktop_screen",
-        "$screen_content": "chests_mcjava.small_chest_screen_content_panel",
-        "$screen_bg_content": "common.screen_background"
-      },
-      {
-        "requires": "$pocket_screen",
-        "$screen_content": "chests_mcjava.small_chest_screen_content_panel",
-        "$screen_bg_content": "common.screen_background"
-      }
-    ]
+    "$screen_content": "chests_mcjava.small_chest_screen_content_panel",
+    "$screen_background": "content.container_screen_background"
   },
 
-  "large_chest_screen": {
+  "large_chest_screen@content.inventory_screen_common": {
     "force_render_below": "$force_render_below",
-    "variables": [
-      {
-        "requires": "$desktop_screen",
-        "$screen_content": "chests_mcjava.large_chest_screen_content_panel",
-        "$screen_bg_content": "common.screen_background"
-      },
-      {
-        "requires": "$pocket_screen",
-        "$screen_content": "chests_mcjava.large_chest_screen_content_panel",
-        "$screen_bg_content": "common.screen_background"
-      }
-    ]
+    "$screen_content": "chests_mcjava.large_chest_screen_content_panel",
+    "$screen_background": "content.container_screen_background"
   },
 
-  "ender_chest_screen": {
+  "ender_chest_screen@content.inventory_screen_common": {
     "force_render_below": "$force_render_below",
-    "variables": [
-      {
-        "requires": "$desktop_screen",
-        "$screen_content": "chests_mcjava.ender_chest_screen_content_panel",
-        "$screen_bg_content": "common.screen_background"
-      },
-      {
-        "requires": "$pocket_screen",
-        "$screen_content": "chests_mcjava.ender_chest_screen_content_panel",
-        "$screen_bg_content": "common.screen_background"
-      }
-    ]
+    "$screen_content": "chests_mcjava.ender_chest_screen_content_panel",
+    "$screen_background": "content.container_screen_background"
   },
 
-  "shulker_box_screen": {
+  "shulker_box_screen@content.inventory_screen_common": {
     "force_render_below": "$force_render_below",
-    "variables": [
-      {
-        "requires": "$desktop_screen",
-        "$screen_content": "chests_mcjava.shulker_box_screen_content_panel",
-        "$screen_bg_content": "common.screen_background"
-      },
-      {
-        "requires": "$pocket_screen",
-        "$screen_content": "chests_mcjava.shulker_box_screen_content_panel",
-        "$screen_bg_content": "common.screen_background"
-      }
-    ]
+    "$screen_content": "chests_mcjava.shulker_box_screen_content_panel",
+    "$screen_background": "content.container_screen_background"
   },
 
-  "barrel_screen": {
+  "barrel_screen@content.inventory_screen_common": {
     "force_render_below": "$force_render_below",
-    "variables": [
-      {
-        "requires": "$desktop_screen",
-        "$screen_content": "chests_mcjava.barrel_screen_content_panel",
-        "$screen_bg_content": "common.screen_background"
-      },
-      {
-        "requires": "$pocket_screen",
-        "$screen_content": "chests_mcjava.barrel_screen_content_panel",
-        "$screen_bg_content": "common.screen_background"
-      }
-    ]
+    "$screen_content": "chests_mcjava.barrel_screen_content_panel",
+    "$screen_background": "content.container_screen_background"
   }
 }

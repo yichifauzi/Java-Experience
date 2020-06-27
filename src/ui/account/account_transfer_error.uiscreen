@@ -1,0 +1,94 @@
+/* Version: 2.0.0 */
+{
+  "namespace": "account_transfer_error_mcjava",
+
+  "account_transfer_error_screen_content_panel": {
+    "type": "panel",
+    "controls": [ { "content@account_transfer_error_content": {} } ]
+  },
+
+  "account_transfer_error_content@popup_mcjava.modal_with_buttons": {
+    "$title": "account_transfer_error_mcjava.title",
+    "$description": "account_transfer_error_mcjava.description",
+    "$button_panel": "account_transfer_error_mcjava.buttons_panel"
+  },
+
+  "title@common_dialogs.standard_title_label": {
+    "$text_name": "#headline_text",
+    "color": "white",
+    "shadow": true,
+    "size": ["100%", "default"],
+    "$title_text_anchor|default": "center",
+    "$title_text_alignment|default": "center",
+    "anchor_to": "$title_text_anchor",
+    "anchor_from": "$title_text_anchor",
+    "text_alignment": "$title_text_alignment",
+    "$use_custom_title_control|default": false,
+    "$custom_title_label|default": "common.empty_panel",
+    "$title_binding_condition|default": "always",
+    "$title_text_binding_type|default": "global"
+  },
+
+  "description": {
+    "type": "stack_panel",
+    "size": ["100%", "100%c"],
+    "orientation": "vertical",
+    "layer": 1,
+    "controls": [
+      { "line1@base_text": { "size": ["100%", "default"], "$text": "#body_text" } },
+      {
+        "errors": {
+          "type": "stack_panel",
+          "size": ["100%", 10],
+          "orientation": "horizontal",
+          "controls": [
+            { "fill_0@content.hfill": {} },
+            { "line3@base_text": { "$text": "#error_number_label" } },
+            { "line4@base_text": { "$text": ": " } },
+            { "line4@base_text": { "$text": "#error_number" } },
+            { "space@content.h8px": {} },
+            { "line5@base_text": { "$text": "#correlation_id_label" } },
+            { "line4@base_text": { "$text": " "} },
+            { "line6@base_text": { "$text": "#correlation_id" } },
+            { "fill_1@content.hfill": {} }
+          ]
+        }
+      }
+    ]
+  },
+
+  "buttons_panel": {
+    "type": "stack_panel",
+    "size": [310, 20],
+    "anchor_to": "center",
+    "anchor_from": "center",
+    "orientation": "horizontal",
+    "controls": [
+      {
+        "button@button_mcjava.button": {
+          "$pressed_button_name": "button.button",
+          "$button_text": "#button_text",
+          "size": [150, 20],
+          "$button_text_binding_type": "global",
+          "bindings": [
+            {
+              "binding_name": "#button_enabled",
+              "binding_name_override": "#enabled"
+            }
+          ]
+        }
+      },
+      { "space@content.hfill": {} },
+      { "right@content.exit_button": { "size": [150, 20] } }
+    ]
+  },
+
+  "base_text": {
+    "type": "label",
+    "size": ["default", "default"],
+    "text": "$text",
+    "layer": 2,
+    "shadow": true,
+    "bindings": [ { "binding_name": "$text" } ]
+  }
+}

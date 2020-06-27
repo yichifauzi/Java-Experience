@@ -1,42 +1,48 @@
+/* Version: 2.0.0 */
 {
   "namespace": "braze_mcjava",
 
   "braze_screen_content_panel": {
     "type": "panel",
-    "$text_name": "#headline_text",
-    "controls": [
-      { "title@account_transfer_error_mcjava.title_label": {} },
-      { "content_panel@braze_mcjava.content_panel": {} }
-    ]
+    "controls": [ { "content@braze_content": {} }  ]
   },
 
-  "content_panel": {
+  "braze_content@popup_mcjava.modal_with_buttons": {
+    "$title": "braze_mcjava.title",
+    "$description": "content.v2px",
+    "$button_panel": "braze_mcjava.buttons_panel"
+  },
+
+  "title@account_banned_mcjava.title": {
+    "text": "#body_text",
+    "property_bag": {},
+    "bindings": [ { "binding_name": "#body_text" } ]
+  },
+
+  "buttons_panel": {
     "type": "stack_panel",
-    "size": ["70%", "100%c"],
-    "offset": [0, "-4%"],
-    "layer": 1,
+    "anchor_to": "center",
+    "anchor_from": "center",
+    "size": [310, 44],
     "controls": [
       {
-        "main_content": {
-          "size": ["100%", "100%c"],
-          "type": "label",
-          "layer": 1,
-          "text": "#body_text",
-          "color": "white",
-          "shadow": true,
-          "bindings": [ { "binding_name": "#body_text" } ]
+        "top_stack": {
+          "type": "stack_panel",
+          "size": [310, 20],
+          "orientation": "horizontal",
+          "controls": [
+            { "left_button@left_button": { "size": [150, 20] } },
+            { "space@screen_mcjava.hfill": {} },
+            { "right_button@right_button": { "size": [150, 20] } }
+          ]
         }
       },
-      { "space@common_mcjava.vspace": { "size": [0, 10] } },
+      { "space@screen_mcjava.vspace": {} },
       {
-        "button_panel": {
+        "bottom_stack": {
           "type": "panel",
-          "size": ["100%", 20],
-          "controls": [
-            { "left_button@braze_mcjava.left_button": { "offset": [-80, 0] } },
-            { "right_button@braze_mcjava.right_button": { "offset": [80, 0] } },
-            { "exit_button@common_mcjava.exit_button": { "offset": [0, 24] } }
-          ]
+          "size": [310, 20],
+          "controls": [ { "exit@content.exit_button": { "$button_text": "gui.cancel", "size": [200, 20] } } ]
         }
       }
     ]

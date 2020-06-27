@@ -1,17 +1,9 @@
+/* Version: 2.0.0 */
 {
-  "anvil_screen": {
+  "anvil_screen@content.inventory_screen_common": {
     "force_render_below": "$force_render_below",
-    "variables": [
-      {
-        "requires": "$desktop_screen",
-        "$screen_content": "anvil_mcjava.anvil_screen_content_panel",
-        "$screen_bg_content": "screen_mcjava.screen_background"
-      },
-      {
-        "requires": "$pocket_screen",
-        "$screen_content": "anvil_mcjava.anvil_screen_content_panel",
-        "$screen_bg_content": "common.screen_background"
-      }
-    ]
+    "close_on_player_hurt": "$close_on_player_hurt",
+    "$screen_content": "anvil_mcjava.anvil_screen_content_panel",
+    "$screen_background": "content.container_screen_background"
   }
 }

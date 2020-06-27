@@ -92,7 +92,9 @@
           "anchor_from": "bottom_left",
           "anchor_to": "bottom_left",
           "size": [18, 18],
-          "controls": [ { "fuel@furnace_recipes_mcjava.show_fuel": { "$furnace": "furnace" } } ]
+          "controls": [
+            { "fuel@furnace_recipes_mcjava.show_fuel": { "$furnace": "furnace" } }
+          ]
         }
       },
       {

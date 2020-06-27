@@ -6,6 +6,7 @@
     "$tab_source": "search",
     "$page_total_number": "3",
     "controls": [
+      { "search_box@recipes_mcjava.search_box": { "offset": [23, 10], "enabled": false } },
       {
         "page_1_panel": {
           "type": "panel",

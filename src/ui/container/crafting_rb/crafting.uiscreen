@@ -12,13 +12,13 @@
     ],
     "controls": [
       { "bg@resources.recipe_book_bg": {} },
-      { "search_box@recipes_mcjava.search_box": { "offset": [20, 10] } },
+      { "search_box@recipes_mcjava.search_box": { "offset": [23, 10] } },
       { "filter@recipes_mcjava.filter_toggle_holder": {} },
-      { "search_tab@crafting_rb_mcjava.search_tab": { "offset": [-31, 4] } },
-      { "construction_tab@crafting_rb_mcjava.construction_tab": { "offset": [-31, 30] } },
-      { "equipment_tab@crafting_rb_mcjava.equipment_tab": { "offset": [-31, 56] } },
-      { "nature_tab@crafting_rb_mcjava.nature_tab": { "offset": [-31, 82] } },
-      { "items_tab@crafting_rb_mcjava.items_tab": { "offset": [-31, 108] } },
+      { "search_tab@crafting_rb_mcjava.search_tab": { "offset": [-32, 4] } },
+      { "construction_tab@crafting_rb_mcjava.construction_tab": { "offset": [-32, 30] } },
+      { "equipment_tab@crafting_rb_mcjava.equipment_tab": { "offset": [-32, 56] } },
+      { "nature_tab@crafting_rb_mcjava.nature_tab": { "offset": [-32, 82] } },
+      { "items_tab@crafting_rb_mcjava.items_tab": { "offset": [-32, 108] } },
       { "recipe_book@$recipe_book_style": {} }
     ]
   },

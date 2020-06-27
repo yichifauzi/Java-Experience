@@ -1,5 +1,6 @@
+/* Version: 2.0.0 */
 {
-  "account_transfer_error_screen@common.base_screen": {
+  "account_transfer_error_screen@content.base_screen": {
     "button_mappings": [
       {
         "from_button_id": "button.menu_cancel",
@@ -8,6 +9,6 @@
       }
     ],
     "$screen_content": "account_transfer_error_mcjava.account_transfer_error_screen_content_panel",
-    "$screen_bg_content": "screen_mcjava.dirt_background"
+    "$screen_background": "content.dirt_background"
   }
 }

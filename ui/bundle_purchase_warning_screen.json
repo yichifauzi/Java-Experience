@@ -1,6 +1,6 @@
 /* Version: 2.0.0 */
 {
-  "adhoc_screen@content.base_screen": {
+  "bundle_purchase_warning_screen@content.base_screen": {
     "button_mappings": [
       {
         "from_button_id": "button.menu_cancel",
@@ -8,7 +8,7 @@
         "mapping_type": "global"
       }
     ],
-    "$screen_content": "adhoc_mcjava.adhoc_screen_content_panel",
+    "$screen_content": "bundle_purchase_warning_mcjava.bundle_purchase_warning_screen_content_panel",
     "$screen_background": "content.dirt_background"
   }
 }

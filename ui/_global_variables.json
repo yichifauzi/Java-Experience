@@ -2,6 +2,12 @@
   /* Debug */
   "$force_render_helpers": false,
   "$force_render_below": "(not $game_pad)",
+  "$close_on_player_hurt": false,
+
+/*"$close_anvil_on_player_hurt": false,
+  "$close_barrel_on_player_hurt": false,
+  "$close_beacon_on_player_hurt": false,
+  "$close_brewing_stand_on_player_hurt": false,*/
 
   /* Texts */
   "$minecraft_text": "Minecraft",
@@ -19,7 +25,7 @@
   "$better_mouse_keys_grid": false,
   "$better_controller_keys_grid": true,
   "$better_slider_text": true,
-  "$recipe_book": "best", //Best - All Pages (Default) / Better - Less Pages / Faster - Scrolling Panel
+  "$recipe_book": "faster", //Fabulous - number of pages depends of how many are/ Best - All Pages / Better - Less Pages (Default) / Faster - Scrolling Panel
   "$play_screen": "fast", //Better - Buttons (Default) / Faster - Switch
 
   /* Button Text Color */
@@ -75,7 +81,7 @@
 
   /* Book Text Color */
   "$book_title_text_color": [0.0, 0.0, 0.0],
-  "$book_author_text_color": [0.7, 0.7, 0.7],
+  "$book_author_text_color": [0.329, 0.329, 0.329],
   "$book_warning_text_color": [0.0, 0.0, 0.0],
   "$book_page_number_text_color": [0.0, 0.0, 0.0],
   "$book_page_text_color": [0.0, 0.0, 0.0],

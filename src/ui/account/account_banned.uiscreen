@@ -1,0 +1,70 @@
+/* Version: 2.0.0 */
+{
+  "namespace": "account_banned_mcjava",
+
+  "account_banned_screen_content_panel": {
+    "type": "panel",
+    "controls": [
+      {
+        "image@account_banned.Hammer_image": {
+          "size": [70, 54],
+          "anchor_to": "top_left",
+          "anchor_from": "top_left",
+          "offset": [10, 10]
+        }
+      },
+      { "content@account_banned_content": {} } 
+    ]
+  },
+
+  "account_banned_content@popup_mcjava.modal_with_buttons": {
+    "$title": "account_banned_mcjava.title",
+    "$description": "account_banned_mcjava.description",
+    "$button_panel": "account_banned_mcjava.buttons_panel"
+  },
+
+  "title@content.title": {
+    "size": ["100%", "default"],
+    "text_alignment": "center",
+    "anchor_to": "center",
+    "anchor_from": "center",
+    "text": "playfab.account.banned.title",
+    "property_bag": { "#tts_dialog_title": "playfab.account.banned.title" },
+    "bindings": [
+      {
+        "binding_type": "global",
+        "binding_condition": "once",
+        "binding_name": "#tts_dialog_title"
+      }
+    ]
+  },
+  
+  "description": {
+    "type": "label",
+    "size": ["default", "default"],
+    "max_size": ["80%", "default"],
+    "text_alignment": "center",
+    "shadow": true,
+    "text": "playfab.account.banned.body",
+    "color": "white"
+  },
+
+  "buttons_panel": {
+    "type": "stack_panel",
+    "size": [310, 20],
+    "anchor_to": "center",
+    "anchor_from": "center",
+    "orientation": "horizontal",
+    "controls": [
+      {
+        "view_more_info_button@button_mcjava.link_button": {
+          "size": [150, 20],
+          "$button_text": "playfab.account.banned.body.button",
+          "$link": "https://aka.ms/MCBanned"
+        }
+      },
+      { "space@content.hfill": {} },
+      { "right@content.exit_button": { "size": [150, 20] } }
+    ]
+  }
+}

@@ -70,7 +70,7 @@
     "layer": 10
   },
 
-  "dirt_bg@resources.dirt_background": {
+  "dirt_background@resources.dirt_background": {
     "layer": -20,
     "color": [0.246, 0.245, 0.245],
     "tiled_scale": "$tiled",
@@ -86,19 +86,18 @@
 
   "base_background": {
     "type": "image",
-    "texture": "src/core/resources/textures/white",
+    "texture": "src/core/resources/fmarquespto/textures/white",
+    "color": "black",
     "ignored": "$is_holographic"
   },
 
-  "screen_bg@content.base_background": {
-    "color": [0.005, 0.005, 0.005],
-    "$bg_alpha|default": 0.75,
+  "screen_background@content.base_background": {
+    "$bg_alpha|default": 0.62,
     "alpha": "$bg_alpha"
   },
 
-  "screen_container_bg@content.base_background": {
-    "color": [0.05, 0.05, 0.05],
-    "$bg_alpha|default": 0.74,
+  "container_screen_background@content.base_background": {
+    "$bg_alpha|default": 0.62,
     "alpha": "$bg_alpha"
   },
 
@@ -414,7 +413,7 @@
       },
       {
         "from_button_id": "button.menu_down",
-        "to_button_id": "button.menu_down",
+        "to_button_id": "button.menu_down", 
         "mapping_type": "global",
         "scope": "view"
       },

@@ -6,16 +6,6 @@
     "close_on_player_hurt": "$close_on_player_hurt",
     "$screen_content": "compound_creator_mcjava.compound_creator_screen_content_panel",
     "$screen_background": "common.screen_background",
-    "force_render_below": "$force_render_below",
-    "variables": [
-      {
-        "requires": "$desktop_screen",
-        "$screen_content": "compound_creator_mcjava.compound_creator_screen_content_panel"
-      },
-      {
-        "requires": "$pocket_screen",
-        "$screen_content": "compound_creator_mcjava.compound_creator_screen_content_panel"
-      }
-    ]
+    "force_render_below": "$force_render_below"
   }
 }

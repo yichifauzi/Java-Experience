@@ -1,49 +1,20 @@
+/* Version: 2.0.0 */
 {
-  "dispenser_screen": {
+  "dispenser_screen@content.inventory_screen_common": {
     "force_render_below": "$force_render_below",
-    "variables": [
-      {
-        "requires": "$desktop_screen",
-        "$screen_content": "redstone_mcjava.dispenser_screen_content_panel",
-        "$screen_bg_content": "common.screen_background"
-      },
-      {
-        "requires": "$pocket_screen",
-        "$screen_content": "redstone_mcjava.dispenser_screen_content_panel",
-        "$screen_bg_content": "common.screen_background"
-      }
-    ]
+    "$screen_content": "redstone_mcjava.dispenser_screen_content_panel",
+    "$screen_background": "content.container_screen_background"
   },
 
-  "dropper_screen": {
+  "dropper_screen@content.inventory_screen_common": {
     "force_render_below": "$force_render_below",
-    "variables": [
-      {
-        "requires": "$desktop_screen",
-        "$screen_content": "redstone_mcjava.dropper_screen_content_panel",
-        "$screen_bg_content": "common.screen_background"
-      },
-      {
-        "requires": "$pocket_screen",
-        "$screen_content": "redstone_mcjava.dropper_screen_content_panel",
-        "$screen_bg_content": "common.screen_background"
-      }
-    ]
+    "$screen_content": "redstone_mcjava.dropper_screen_content_panel",
+    "$screen_background": "content.container_screen_background"
   },
 
-  "hopper_screen": {
+  "hopper_screen@content.inventory_screen_common": {
     "force_render_below": "$force_render_below",
-    "variables": [
-      {
-        "requires": "$desktop_screen",
-        "$screen_content": "redstone_mcjava.hopper_screen_content_panel",
-        "$screen_bg_content": "common.screen_background"
-      },
-      {
-        "requires": "$pocket_screen",
-        "$screen_content": "redstone_mcjava.hopper_screen_content_panel",
-        "$screen_bg_content": "common.screen_background"
-      }
-    ]
+    "$screen_content": "redstone_mcjava.hopper_screen_content_panel",
+    "$screen_background": "content.container_screen_background"
   }
 }

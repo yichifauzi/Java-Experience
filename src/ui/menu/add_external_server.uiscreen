@@ -1,3 +1,4 @@
+/* Version: 2.0.0 */
 /* By @FMarquesPTO. All rights reserved. */
 {
   "namespace": "add_external_server_mcjava",
@@ -5,8 +6,8 @@
   "add_external_server_screen_content_panel": {
     "type": "panel",
     "controls": [
-      { "title@screen_mcjava.title": { "text": "addServer.title" } },
-      { "content_panel@add_external_server_mcjava.content_panel": {} }
+      { "title@content.title": { "text": "addServer.title" } },
+      { "content_panel@content_panel": {} }
     ]
   },
 
@@ -17,34 +18,14 @@
     "size": [200, 195],
     "offset": [0, "-38% - 0.5px"],
     "controls": [
-      { "panel_zero@add_external_server_mcjava.server_info_content": {} },
-      { "space_zero@screen_mcjava.vspace": {} },
-      {
-        "panel_one": {
-          "type": "panel",
-          "size": [200, 20],
-          "ignored": "$edit_mode",
-          "controls": [
-            { "play@add_external_server_mcjava.play_button": {} },
-            { "play_disabled@add_external_server_mcjava.play_disabled_button": {} }
-          ]
-        }
-      },
-      { "delete@add_external_server_mcjava.delete_button": {} },
-      {
-        "space_one@screen_mcjava.vspace": { "size": [0, 22] } },
-      {
-        "panel_two": {
-          "type": "panel",
-          "size": [200, 20],
-          "controls": [
-            { "save@add_external_server_mcjava.save_button": {} },
-            { "save_disabled@add_external_server_mcjava.save_disabled_button": {} }
-          ]
-        }
-      },
-      { "space_two@screen_mcjava.vspace": {} },
-      { "cancel@screen_mcjava.exit_button": { "$button_text": "gui.cancel" } }
+      { "panel_zero@server_info_content": {} },
+      { "space_zero@content.v4px": {} },
+      { "play@play_button": { "ignored": "$edit_mode" } },
+      { "delete@delete_button": { "ignored": "(not $edit_mode)" } },
+      { "space_one@content.space": { "size": [0, 22] } },
+      { "save@save_button": {} },
+      { "space_two@content.v4px": {} },
+      { "cancel@content.exit_button": { "$button_text": "gui.cancel" } }
     ]
   },
 
@@ -53,7 +34,7 @@
     "size": ["100%", 114],
     "controls": [
       {
-        "name_edit@add_external_server_mcjava.text_input_group": {
+        "name_edit@text_input_group": {
           "$text_group_size": ["100%", 34],
           "$header_offset": [1, 0],
           "$header": "addServer.enterName",
@@ -64,7 +45,7 @@
         }
       },
       {
-        "ip_input@add_external_server_mcjava.text_input_group": {
+        "ip_input@text_input_group": {
           "$text_group_size": ["100%", 40],
           "$header": "addServer.enterIp",
           "$text_box_name": "#ip_text_box",
@@ -74,7 +55,7 @@
         }
       },
       {
-        "port_input@add_external_server_mcjava.text_input_group": {
+        "port_input@text_input_group": {
           "$text_group_size": ["100%", 40],
           "$header": "addServer.enterPort",
           "$max_length": 6,
@@ -140,24 +121,9 @@
     ]
   },
 
-  "play_disabled_button@add_external_server_mcjava.play_button": {
-    "layer": 2,
-    "bindings": [
-      {
-        "binding_name": "#play_button_disabled",
-        "binding_name_override": "#visible"
-      },
-      {
-        "binding_name": "#play_button_enabled",
-        "binding_name_override": "#enabled"
-      }
-    ]
-  },
-
   "delete_button@button_mcjava.button": {
     "$pressed_button_name": "button.remove_button",
-    "$button_text": "selectServer.deleteButton",
-    "ignored": "(not $edit_mode)"
+    "$button_text": "selectServer.deleteButton"
   },
 
   "save_button@button_mcjava.button": {
@@ -166,21 +132,11 @@
     "bindings": [
       {
         "binding_name": "#save_button_enabled",
-        "binding_name_override": "#visible"
+        "binding_name_override": "#enabled"
       },
       {
-        "binding_name": "#save_button_enabled",
-        "binding_name_override": "#enabled"
-      }
-    ]
-  },
-  
-  "save_disabled_button@add_external_server_mcjava.save_button": {
-    "layer": 2,
-    "bindings": [
-      {
         "binding_name": "#save_button_disabled",
-        "binding_name_override": "#visible"
+        "binding_name_override": "#enabled"
       },
       {
         "binding_name": "#save_button_enabled",

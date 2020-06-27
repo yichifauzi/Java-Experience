@@ -1,57 +1,36 @@
+/* Version: 2.0.0 */
 {
   "namespace": "adhoc_inprogess_mcjava",
 
   "adhoc_inprogess_screen_content_panel": {
     "type": "panel",
-    "controls": [
-      { "title@adhoc_inprogess_mcjava.title_text": {} },
-      { "content_panel@adhoc_inprogess_mcjava.content_panel": {} }
-    ]
+    "controls": [ { "content@adhoc_inprogess_content": {} } ]
   },
 
-  "content_panel": {
-    "type": "stack_panel",
-    "size": ["70%", "100%c"],
-    "offset": [0, "-4%"],
-    "layer": 1,
-    "controls": [
-      {
-        "title@title_text": {
-          "size": ["100%", 15],
-          "offset": [0, 0],
-          "anchor_to": "top_middle",
-          "anchor_from": "top_middle",
-          "text": "#adhoc_title",
-          "bindings": [ { "binding_name": "#adhoc_title" } ]
-        }
-      },
-      { "space@common_mcjava.vspace": { "size": [0, 10] } },
-      {
-        "main_content": {
-          "size": ["100%", "100%c"],
-          "type": "label",
-          "layer": 1,
-          "text": "thirdPartyConsole.adhoc.inprogress",
-          "color": "white",
-          "shadow": true
-        }
-      }
-    ]
+  "adhoc_inprogess_content@popup_mcjava.modal_with_buttons": {
+    "$title": "adhoc_inprogess_mcjava.title",
+    "$description": "adhoc_inprogess_mcjava.description",
+    "$button_panel": "play.progress_loading_bars"
   },
 
   "title_text": {
     "type": "label",
     "layer": 1,
-    "text": "nx.adhoc.title",
     "color": "white",
-    "offset": "$title_text_offset",
-    "$title_text_offset|default": [0, "-31%"],
-    "size": ["70%", 15],
+    "size": ["100%", 15],
     "$title_text_anchor|default": "center",
     "$title_text_alignment|default": "center",
     "anchor_to": "$title_text_anchor",
     "anchor_from": "$title_text_anchor",
     "text_alignment": "$title_text_alignment",
+    "shadow": true,
+    "text": "#adhoc_title",
+    "bindings": [ { "binding_name": "#adhoc_title" } ]
+  },
+
+  "description@account_banned_mcjava.description": {
+    "text": "thirdPartyConsole.adhoc.inprogress",
+    "color": "white",
     "shadow": true
   }
 }

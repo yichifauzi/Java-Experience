@@ -1,6 +1,14 @@
+/* Version: 2.0.0 */
 {
-  "add_external_server_screen": {
+  "add_external_server_screen@content.base_screen": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      }      
+    ],
     "$screen_content": "add_external_server_mcjava.add_external_server_screen_content_panel",
-    "$screen_bg_content": "screen_mcjava.dirt_background"
+    "$screen_background": "content.dirt_background"
   }
 }

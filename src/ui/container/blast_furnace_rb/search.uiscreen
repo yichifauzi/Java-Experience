@@ -6,6 +6,7 @@
     "$tab_source": "search",
     "$page_total_number": "1",
     "controls": [
+      { "search_box@recipes_mcjava.search_box": { "offset": [23, 10], "enabled": false } },
       { "page_1@blast_furnace_rb_search_mcjava.search_page_1": {} }
     ],
     "bindings": [

@@ -122,7 +122,7 @@
                 "type": "panel",
                 "size": "$item_renderer_panel_size",
                 "controls": [
-                  { "stack_count_label@common.stack_count_label": { "layer": 8 } },
+                  { "stack_count_label@container_mcjava.stack_count_label": { "layer": 8 } },
                   {
                     "$item_renderer@$item_renderer": {
                       "type": "custom",
@@ -212,7 +212,7 @@
     "shadow": true,
     "anchor_to": "bottom_right",
     "anchor_from": "bottom_right",
-    "offset": [ 0, 1 ],
+    "offset": [0, 1],
     "layer": 7,
     "$stack_count_binding_name|default": "#inventory_stack_count",
     "$stack_count_binding_condition|default": "none",

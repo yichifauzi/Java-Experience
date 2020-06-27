@@ -53,7 +53,7 @@
           "controls": [
             { "jss_button@multiplayer_fast_mcjava.jss_button": {} },
             { "fill@content.hfill": {} },
-            { "add_server_button@singleplayer_fast_mcjava.add_server_button": {} }
+            { "add_server_button@multiplayer_fast_mcjava.add_server_toggle_button": {} }
           ]
         }
       },
@@ -69,6 +69,24 @@
             { "cancel_button@singleplayer_fast_mcjava.cancel_button": { "size": [150, 20] } }
           ]
         }
+      }
+    ]
+  },
+
+  "add_server_toggle_button@toggle_button_mcjava.toggle_button": {
+    "visible": "(not $is_console)",
+    "size": [100, 20],
+    "layer": 2,
+    "$toggle_button_text": "networkWorld.add_server",
+    "$toggle_group": true,
+    "$toggle_button_name": "server_navigation_toggle",
+    "$toggle_control_name": "add_server_toggle_button",
+    "$toggle_state_binding_name": "#toggle_state",
+    "$toggle_index": 100,
+    "bindings": [
+      {
+        "binding_name": "#add_server_enabled",
+        "binding_name_override": "#enabled"
       }
     ]
   },

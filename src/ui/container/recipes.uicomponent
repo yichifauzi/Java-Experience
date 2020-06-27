@@ -94,7 +94,7 @@
     "$item_left_id_aux|default": 0,
     "variables": [
       {
-        "requires": "($tab_state = checked or $tab_state = checked_hover)",
+        "requires": "($state = checked or $state = checked_hover or $state = checked_locked or $state = checked_locked_hover)",
         "$item_offset": [0, 0],
         "$left_item_offset": [-6, 0],
         "$right_item_offset": [4.5, 0]
@@ -139,7 +139,7 @@
   /* RB Toolbar */
 
   "search_box@text_box_mcjava.text_box": {
-    "size": [ 80, 16],
+    "size": [82, 16],
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "$default_box_bg": "common.empty_panel",
@@ -148,9 +148,10 @@
     "property_bag": {
       "#property_field": "#item_name"
     },
+    "$text_indent_size": ["100% - 2px", "100% - 2px"],
+    "$text_indent_offset": [1.5, 0],
     "max_length": 30,
     "$placeholder_text": "§oSearch...",
-    "$text_color": [0.62, 0.62, 0.62],
     "$text_edit_binding_name": "#text_box_item_name",
     "$text_size": [ "default", 10 ],
     "$text_edit_box_hovered_button_id": "button.search_bar_hovered",
@@ -243,7 +244,7 @@
     "size": [128, 100],
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
-    /* "visible": "($recipe_book = fast)", */
+    "offset": [0, 30],
     "controls": [
       {
         "recipe_book_scroll_panel@recipes_mcjava.scroll_panel": {
@@ -477,6 +478,7 @@
     "anchor_from": "left_middle",
     "anchor_to": "left_middle",
     "$toggle_index": 0,
+    "ignored": "$ignore_left_button",
     "$checked_toggle_bg": "resources.rb_left_button_default",
     "$unchecked_toggle_bg": "resources.rb_left_button_default",
     "$checked_hover_toggle_bg": "resources.rb_left_button_hover",
@@ -491,10 +493,10 @@
     "anchor_to": "right_middle",
     "ignored": "$ignore_right_button",
     "$toggle_index": 1,
-    "$checked_toggle_bg": "resources.rb_right_button_default",
-    "$unchecked_toggle_bg": "resources.rb_right_button_default",
-    "$checked_hover_toggle_bg": "resources.rb_right_button_hover",
-    "$unchecked_hover_toggle_bg": "resources.rb_right_button_hover",
+    "$checked_toggle_bg": "resources0.rb_right_button_default",
+    "$unchecked_toggle_bg": "resources0.rb_right_button_default",
+    "$checked_hover_toggle_bg": "resources0.rb_right_button_hover",
+    "$unchecked_hover_toggle_bg": "resources0.rb_right_button_hover",
     "$checked_locked_toggle_bg": "",
     "$unchecked_locked_toggle_bg": ""
   },

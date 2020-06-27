@@ -1,15 +1,9 @@
 {
   "ui_defs": [
-    "ui/chemistry_common_pocket.json",
-    "ui/compound_creator_screen.json",
-    "ui/compound_creator_screen_pocket.json",
-    "ui/element_constructor_screen.json",
-    "ui/element_constructor_screen_pocket.json",
     "ui/lab_table_screen.json",
     "ui/lab_table_screen_pocket.json",
     "ui/material_reducer_screen.json",
     "ui/material_reducer_screen_pocket.json",
-
     /* UI Core */
     "src/core/components/button.uicomponent",
     "src/core/components/gamepadhelper.uicomponent",
@@ -30,11 +24,15 @@
     "src/core/screen.ui",
     "src/core/screen.ui",
     "src/core/resources/resources.uitexture",
-    /* UI */
+    /* UI - Authentication */
+    "src/ui/authentication/authentication.uiscreen",
+    "src/ui/authentication/authentication_modals.uiscreen",
+    /* UI - Chemistry */
     "src/ui/chemistry/compound_creator.uiscreen",
     "src/ui/chemistry/element_constructor.uiscreen",
     "src/ui/chemistry/lab_table.uiscreen",
     "src/ui/chemistry/material_reducer.uiscreen",
+    /* UI - Containers/Inventories */
     "src/ui/container/blast_furnace_rb/blast_furnace.uiscreen",
     "src/ui/container/blast_furnace_rb/search.uiscreen",
     "src/ui/container/blast_furnace_rb/ores.uiscreen",
@@ -73,6 +71,7 @@
     "src/ui/container/survival_inventory.uiscreen",
     "src/ui/container/stonecutter.uiscreen",
     "src/ui/container/villagers.uiscreen",
+    /* UI - Menu */
     "src/ui/menu/hud/boss_bar.uiscreen",
     "src/ui/menu/hud/hotbar.uiscreen",
     "src/ui/menu/hud/hud.uiscreen",
@@ -95,15 +94,7 @@
     "src/ui/menu/popup.uiscreen",
     "src/ui/menu/sign.uiscreen",
     "src/ui/menu/structure_block.uiscreen",
-    "src/ui/others/account_transfer_error.uiscreen",
-    "src/ui/others/adhoc.uiscreen",
-    "src/ui/others/progress.uiscreen",
-    "src/ui/others/server_form.uiscreen",
-    "src/ui/others/adhoc_inprogress.uiscreen",
-    "src/ui/others/auto_save_info.uiscreen",
-    "src/ui/others/braze.uiscreen",
-    "src/ui/others/disconnect.uiscreen",
-    "src/ui/others/screenshot.uiscreen",
+    /* UI - Settings */
     "src/ui/settings/accessibility.uiscreen",
     "src/ui/settings/controller.uiscreen",
     "src/ui/settings/controller_settings.uiscreen",
@@ -120,6 +111,9 @@
     "src/ui/settings/touch.uiscreen",
     "src/ui/settings/user_profile.uiscreen",
     "src/ui/settings/video.uiscreen",
+    "src/ui/resource_packs.ui",
+    "src/ui/storage_managment.ui",
+    /* UI - World */
     "src/ui/world/create/more_options.json",
     "src/ui/world/create/behavior_packs.json",
     "src/ui/world/create/create.json",
@@ -134,7 +128,19 @@
     "src/ui/world/seed_picker.uiscreen",
     "src/ui/world/custom_templates.uiscreen",
     "src/ui/world/world_templates.uiscreen",
-    "src/ui/resource_packs.ui",
-    "src/ui/storage_managment.ui"
+    /* UI - Account */
+    "src/ui/account/account_banned.uiscreen",
+    "src/ui/account/account_transfer_error.uiscreen",
+    /* UI - Xbl */
+    /* UI - Others */
+    "src/ui/others/bundle_purchase_warning.uiscreen",
+    "src/ui/others/adhoc.uiscreen",
+    "src/ui/others/progress.uiscreen",
+    "src/ui/others/server_form.uiscreen",
+    "src/ui/others/adhoc_inprogress.uiscreen",
+    "src/ui/others/auto_save_info.uiscreen",
+    "src/ui/others/braze.uiscreen",
+    "src/ui/others/disconnect.uiscreen",
+    "src/ui/others/screenshot.uiscreen"
   ]
 }

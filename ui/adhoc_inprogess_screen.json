@@ -1,6 +1,7 @@
+/* Version: 2.0.0 */
 {
-  "adhoc_inprogress_screen@common.base_screen": {
+  "adhoc_inprogress_screen@content.base_screen": {
     "$screen_content": "adhoc_inprogress_mcjava.adhoc_inprogress_screen_content_panel",
-    "$screen_bg_content": "screen_mcjava.dirt_background"
+    "$screen_background": "content.dirt_background"
   }
 }

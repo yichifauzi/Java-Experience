@@ -1,6 +1,7 @@
+/* Version: 2.0.0 */
 {
-  "braze_screen@common.base_screen": {
+  "braze_screen@content.base_screen": {
     "$screen_content": "braze_mcjava.braze_screen_content_panel",
-    "$screen_bg_content": "screen_mcjava.dirt_background"
+    "$screen_background": "content.dirt_background"
   }
 }

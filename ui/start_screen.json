@@ -1,5 +1,19 @@
 {
   "start_screen@content.base_screen": {
+    "button_mappings": [
+      {
+        "ignored": "(not $can_quit)",
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      },
+      {
+        "ignored": "(not $nx_os)",
+        "from_button_id": "button.controller_select",
+        "to_button_id": "button.menu_offline",
+        "mapping_type": "global"
+      }
+    ],
     "$screen_content": "main_menu_mcjava.main_menu_screen_content_panel"
   }
 }

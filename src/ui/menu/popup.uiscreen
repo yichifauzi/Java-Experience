@@ -99,6 +99,7 @@
         "buttons": {
           "type": "panel",
           "size": ["100%", "100%c"],
+          "min_size": ["100%", 0],
           "controls": [
             { "button_panel@$button_panel": {} }
           ]

@@ -1,6 +1,7 @@
 {
   "chat_screen": {
     "force_render_below": "$force_render_below",
+    "close_on_player_hurt": "$close_on_player_hurt",
     "$screen_content": "chat_mcjava.chat_screen_content_panel",
     "$screen_bg_content": "common.base_screen_empty_panel"
   }

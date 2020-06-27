@@ -105,8 +105,8 @@
     "$furnace_view": "furnace_rb_view",
     "$recipe_book": "furnace_recipe_book_mcjava.furnace_recipe_book_content_panel",
     "$show_on": "furnace_recipe_book_mcjava.show_on_furnace_content_panel",
-    "$rsrc_location": "src/assets/minecraft/textures/gui/container/furnace",
-    "$container_bg": "resources.furnace_bg",
+    "$furnace_name": "furnace",
+    "$container_bg": "resources1.furnace_bg",
     "$specified_content": "furnaces_mcjava.furnace_content_panel"
   },
 
@@ -114,8 +114,8 @@
     "$furnace_view": "blast_furnace_rb_view",
     "$recipe_book": "blast_furnace_recipe_book_mcjava.blast_furnace_recipe_book_content_panel",
     "$show_on": "blast_furnace_recipe_book_mcjava.show_on_blast_furnace_content_panel",
-    "$rsrc_location": "src/assets/minecraft/textures/gui/container/blast_furnace",
-    "$container_bg": "resources.blast_furnace_bg",
+    "$furnace_name": "blast_furnace",
+    "$container_bg": "resources1.furnace_bg",
     "$specified_content": "furnaces_mcjava.furnace_content_panel"
   },
 
@@ -123,8 +123,8 @@
     "$furnace_view": "smoker_rb_view",
     "$recipe_book": "smoker_recipe_book_mcjava.smoker_recipe_book_content_panel",
     "$show_on": "smoker_recipe_book_mcjava.show_on_smoker_content_panel",
-    "$rsrc_location": "src/assets/minecraft/textures/gui/container/smoker",
-    "$container_bg": "resources.smoker_bg",
+    "$furnace_name": "smoker",
+    "$container_bg": "resources1.furnace_bg",
     "$specified_content": "furnaces_mcjava.furnace_content_panel"
   },
 
@@ -139,17 +139,33 @@
         }
       },
       {
-        "arrow@resources.furnace_full_arrow": {
+        "arrow@resources1.furnace_full_arrow": {
           "anchor_from": "top_left",
           "anchor_to": "top_left",
-          "offset": [79, 34]
+          "offset": [79, 34],
+          "clip_direction": "left",
+          "bindings": [
+            {
+              "binding_name": "#furnace_arrow_ratio",
+              "binding_name_override": "#clip_ratio",
+              "binding_condition": "always"
+            }
+          ]
         }
       },
       {
-        "flame@resources.furnace_full_flame": {
+        "flame@resources1.furnace_full_flame": {
           "anchor_from": "top_left",
           "anchor_to": "top_left",
-          "offset": [56, 36]
+          "offset": [56, 36],
+          "clip_direction": "down",
+          "bindings": [
+            {
+              "binding_name": "#furnace_flame_ratio",
+              "binding_name_override": "#clip_ratio",
+              "binding_condition": "always"
+            }
+          ]
         }
       },
       { "recipe_book_button@furnace_recipes_mcjava.furnace_recipe_book_button": {} },

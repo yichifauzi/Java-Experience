@@ -58,7 +58,7 @@
                 "layer": 1,
                 "controls": [
                   {
-                    "mob_effects_renderer@crafting_mcjava.mob_effects_renderer": {
+                    "mob_effects_renderer@hud.mob_effects_renderer": {
                       "size": [176, 250],
                       "offset": ["-150% - 60px", 0],
                       "anchor_from": "top_left",
@@ -77,9 +77,8 @@
                     "screen_inventory": {
                       "type": "panel",
                       "layer": 2,
-                      "$show_invlabel": false,
                       "controls": [
-                        { "@$specified_panel": {} },
+                        { "panel@$specified_panel": {} },
                         {
                           "inventory_grid_panel@container_mcjava.inventory_grid_panel": {
                             "$button_ref": "crafting_mcjava.inventory_container_slot_button",
@@ -117,24 +116,12 @@
     ]
   },
 
-  "mob_effects_renderer": {
-    "type": "custom",
-    "renderer": "mob_effects_renderer",
-    "layer": 1/* ,
-    "property_bag": {
-      "#x_padding": -10
-    } */
-  },
-
-  //"starting_rotation": 30,
-
   "crafting_text": {
     "type": "label",
     "text": "container.crafting",
     "color": "$container_text_color",
-    "offset": "$survival_inv_container_title_offset",
-    "anchor_from": "$survival_inv_container_title_anchor",
-    "anchor_to": "$survival_inv_container_title_anchor",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
     "layer": 10
   },
 
@@ -324,7 +311,7 @@
                 "type": "panel",
                 "size": "$item_renderer_panel_size",
                 "controls": [
-                  { "stack_count_label@common.stack_count_label": { "layer": 8 } },
+                  { "stack_count_label@container_mcjava.stack_count_label": { "layer": 8 } },
                   {
                     "$item_renderer@$item_renderer": {
                       "size": "$item_renderer_size",
@@ -337,7 +324,7 @@
                 ]
               }
             },
-            { "durability_bar@common.durability_bar": { "layer": 6 } },
+            { "durability_bar@container_mcjava.durability_bar": { "layer": 6 } },
             { "$overlay_image_control_name@$overlay_images": { "layer": 7 } }
           ]
         }
@@ -441,45 +428,28 @@
 
   "slot_background_classic": {
     "type": "panel",
+    "$sourceName": "(#container_item_background = 0)",
     "bindings": [
       {
         "binding_type": "view",
         "source_control_name": "$background_image_control_name",
         "resolve_sibling_scope": true,
-        "source_property_name": "(#container_item_background = 0)",
+        "source_property_name": "$sourceName",
         "target_property_name": "#visible"
       }
     ]
   },
 
-  "slot_background_normal": {
-    "type": "panel",
-    "bindings": [
-      {
-        "binding_type": "view",
-        "source_control_name": "$background_image_control_name",
-        "resolve_sibling_scope": true,
-        "source_property_name": "(#container_item_background = 1)",
-        "target_property_name": "#visible"
-      }
-    ]
+  "slot_background_normal@slot_background_classic": {
+    "$sourceName": "(#container_item_background = 1)"
   },
 
-  "slot_background_invert": {
-    "type": "panel",
-    "bindings": [
-      {
-        "binding_type": "view",
-        "source_control_name": "$background_image_control_name",
-        "resolve_sibling_scope": true,
-        "source_property_name": "(#container_item_background = 2)",
-        "target_property_name": "#visible"
-      }
-    ]
+  "slot_background_invert@slot_background_classic": {
+    "$sourceName": "(#container_item_background = 2)"
   },
 
-  "slot_background_red": {
-    "type": "panel",
+  "slot_background_red@slot_background_classic": {
+    "$sourceName": "(#container_item_background = 3)",
     "controls": [
       {
         "red": {
@@ -507,28 +477,10 @@
           "layer": 5
         }
       }
-    ],
-    "bindings": [
-      {
-        "binding_type": "view",
-        "source_control_name": "$background_image_control_name",
-        "resolve_sibling_scope": true,
-        "source_property_name": "(#container_item_background = 3)",
-        "target_property_name": "#visible"
-      }
     ]
   },
 
-  "slot_background_selected": {
-    "type": "panel",
-    "bindings": [
-      {
-        "binding_type": "view",
-        "source_control_name": "$background_image_control_name",
-        "resolve_sibling_scope": true,
-        "source_property_name": "(#container_item_background = 4)",
-        "target_property_name": "#visible"
-      }
-    ]
+  "slot_background_selected@slot_background_classic": {
+    "$sourceName": "(#container_item_background = 4)"
   }
 }

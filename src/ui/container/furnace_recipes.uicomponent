@@ -82,21 +82,10 @@
           "offset": [0, -12],
           "controls": [
             {
-              "left_button@toggle_button_mcjava.toggle_button": {
-                "size": [11, 17],
-                "anchor_from": "left_middle",
-                "anchor_to": "left_middle",
-                "ignored": "$ignore_left_button",
-                "$toggle_index": 0,
+              "left_button@recipes_mcjava.left_button": {
                 "$focus_id": "page_arrow_left",
                 "$toggle_button_name": "$left_button_name",
-                "$toggle_control_name": "$left_control_name",
-                "$checked_toggle_bg": "resources.rb_left_button_default",
-                "$unchecked_toggle_bg": "resources.rb_left_button_default",
-                "$checked_hover_toggle_bg": "resources.rb_left_button_hover",
-                "$unchecked_hover_toggle_bg": "resources.rb_left_button_hover",
-                "$checked_locked_toggle_bg": "resources.rb_left_button_default",
-                "$unchecked_locked_toggle_bg": "resources.rb_left_button_default"
+                "$toggle_control_name": "$left_control_name"
               }
             },
             {
@@ -111,21 +100,10 @@
               }
             },
             {
-              "right_button@toggle_button_mcjava.toggle_button": {
-                "size": [11, 17],
-                "anchor_from": "right_middle",
-                "anchor_to": "right_middle",
-                "ignored": "$ignore_right_button",
-                "$toggle_index": 1,
+              "right_button@recipes_mcjava.right_button": {
                 "$focus_id": "page_arrow_right",
                 "$toggle_button_name": "$right_button_name",
-                "$toggle_control_name": "$right_control_name",
-                "$checked_toggle_bg": "resources.rb_right_button_default",
-                "$unchecked_toggle_bg": "resources.rb_right_button_default",
-                "$checked_hover_toggle_bg": "resources.rb_right_button_hover",
-                "$unchecked_hover_toggle_bg": "resources.rb_right_button_hover",
-                "$checked_locked_toggle_bg": "resources.rb_right_button_default",
-                "$unchecked_locked_toggle_bg": "resources.rb_right_button_default"
+                "$toggle_control_name": "$right_control_name"
               }
             }
           ]
@@ -158,11 +136,27 @@
   "show_fuel": {
     "type": "panel",
     "size": [18, 18],
+    "clips_children": true,
     "layer": 1,
     "controls": [
-      { "red@red_background": {} },
-      { "white@white_overlay": {} },
-      { "lava_bucket@item_renderer": { "$item_id_aux": 21299210 } }
+      { "red@red_background": { "allow_clipping": false } },
+      { "white@white_overlay": { "allow_clipping": false } },
+      { "lava_bucket@item_renderer": { "$item_id_aux": 21299210, "offset": "@furnace_recipes_mcjava.anim_lava_bucket_offset0" } },
+      { "coal_block@item_renderer": { "$item_id_aux": 11337728, "offset": "@furnace_recipes_mcjava.anim_coalblock_offset0" } },
+      { "blaze_rod@item_renderer": { "$item_id_aux": 24182784, "offset": "@furnace_recipes_mcjava.anim_blazerod_offset0" } },
+      { "coal@item_renderer": { "$item_id_aux": 17235968, "offset": "@furnace_recipes_mcjava.anim_coal_offset0" } },
+      { "charcoal@item_renderer": { "$item_id_aux": 17235969, "offset": "@furnace_recipes_mcjava.anim_charcoal_offset0" } },
+      { "oak_log@item_renderer": { "$item_id_aux": 1114112, "offset": "@furnace_recipes_mcjava.anim_oak_log_offset0" } },
+      { "oak_planks@item_renderer": { "$item_id_aux": 327680, "offset": "@furnace_recipes_mcjava.anim_oakplanks_offset0" } },
+      { "oak_stair@item_renderer": { "$item_id_aux": 3473408, "offset": "@furnace_recipes_mcjava.anim_oakstair_offset0" } },
+      { "oak_slab@item_renderer": { "$item_id_aux": 10354688, "offset": "@furnace_recipes_mcjava.anim_oakslab_offset0" } },
+      { "oak_trapdoor@item_renderer": { "$item_id_aux": 6291456, "offset": "@furnace_recipes_mcjava.anim_oaktrapdoor_offset0" } },
+      { "oak_plate@item_renderer": { "$item_id_aux": 4718592, "offset": "@furnace_recipes_mcjava.anim_oakplate_offset0" } },
+      { "oak_fence@item_renderer": { "$item_id_aux": 5570560, "offset": "@furnace_recipes_mcjava.anim_oakfence_offset0" } },
+      { "oak_gate@item_renderer": { "$item_id_aux": 7012352, "offset": "@furnace_recipes_mcjava.anim_oakgate_offset0" } },
+      { "noteblock@item_renderer": { "$item_id_aux": 1638400, "offset": "@furnace_recipes_mcjava.anim_noteblock_offset0" } },
+      { "bookshelf@item_renderer": { "$item_id_aux": 3080192, "offset": "@furnace_recipes_mcjava.anim_bookshelf_offset0" } },
+      { "chest@item_renderer": { "$item_id_aux": 3538944, "offset": "@furnace_recipes_mcjava.anim_chest_offset0" } }
     ],
     "bindings": [
       {
@@ -196,11 +190,9 @@
     "type": "custom",
     "renderer": "inventory_item_renderer",
     "size": [16, 16],
-    "offset": [-0.5, -0.5],
+    "offset": [0, 0],
     "layer": 2,
-    "property_bag": {
-      "#item_id_aux": "$item_id_aux"
-    }
+    "property_bag": { "#item_id_aux": "$item_id_aux" }
   },
 
   /* Recipe Reset Toggle */
@@ -214,12 +206,12 @@
     "offset": [-11, 11],
     "$toggle_control_name": "($furnace + '_tab_view')",
     "$toggle_type_panel": "",
-    "$unchecked_toggle_bg": "resources.furnace_filter_unchecked",
-    "$checked_toggle_bg": "resources.furnace_filter_checked",
-    "$unchecked_hover_toggle_bg": "resources.furnace_filter_unchecked_hover",
-    "$checked_hover_toggle_bg": "resources.furnace_filter_checked_hover",
-    "$unchecked_locked_toggle_bg": "resources.furnace_filter_unchecked",
-    "$checked_locked_toggle_bg": "resources.furnace_filter_checked",
+    "$unchecked_toggle_bg": "resources0.furnace_filter_checked",
+    "$checked_toggle_bg": "resources0.furnace_filter_checked",
+    "$unchecked_hover_toggle_bg": "resources0.furnace_filter_checked_hover",
+    "$checked_hover_toggle_bg": "resources0.furnace_filter_checked_hover",
+    "$unchecked_locked_toggle_bg": "resources0.furnace_filter_checked",
+    "$checked_locked_toggle_bg": "resources0.furnace_filter_checked",
     "size": [26, 16]
   },
 
@@ -231,12 +223,12 @@
     "size": [25, 25],
     "$focus_id": "recipe_slot",
     "$toggle_type_panel": "furnace_recipes_mcjava.slot_button_content",
-    "$unchecked_toggle_bg": "resources.rb_default_slot",
-    "$checked_toggle_bg": "resources.rb_default_slot",
-    "$unchecked_hover_toggle_bg": "resources.rb_default_slot",
-    "$checked_hover_toggle_bg": "resources.rb_default_slot",
-    "$unchecked_locked_toggle_bg": "resources.rb_default_slot",
-    "$checked_locked_toggle_bg": "resources.rb_default_slot"
+    "$unchecked_toggle_bg": "resources0.rb_default_slot",
+    "$checked_toggle_bg": "resources0.rb_default_slot",
+    "$unchecked_hover_toggle_bg": "resources0.rb_default_slot",
+    "$checked_hover_toggle_bg": "resources0.rb_default_slot",
+    "$unchecked_locked_toggle_bg": "resources0.rb_default_slot",
+    "$checked_locked_toggle_bg": "resources0.rb_default_slot"
   },
 
   "slot_button_content": {
@@ -253,11 +245,211 @@
           "type": "custom",
           "renderer": "inventory_item_renderer",
           "size": [16, 16],
-          "offset": [-0.5, -0.5],
+          "offset": [0, 0],
           "layer": 10,
           "property_bag": { "#item_id_aux": "$item_id_aux" }
         }
       }
     ]
-  }
+  },
+
+  /* Anims */
+
+  "anim_lava_bucket_offset0": {
+    "anim_type": "offset",
+    "from": [0, 0],
+    "to": [0, 0],
+    "duration": 2,
+    "next": "@furnace_recipes_mcjava.anim_lava_bucket_offset1"
+  },
+
+  "anim_lava_bucket_offset1": {
+    "anim_type": "offset",
+    "from": [0, 0],
+    "to": [0, 18],
+    "duration": 0.0,
+    "next": "@furnace_recipes_mcjava.anim_lava_bucket_offset2"
+  },
+
+  "anim_lava_bucket_offset2": {
+    "anim_type": "offset",
+    "from": [0, 18],
+    "to": [0, 18],
+    "duration": 30,
+    "next": "@furnace_recipes_mcjava.anim_lava_bucket_offset3"
+  },
+
+  "anim_lava_bucket_offset3": {
+    "anim_type": "offset",
+    "from": [0, 18],
+    "to": [0, 0],
+    "duration": 0.0,
+    "next": "@furnace_recipes_mcjava.anim_lava_bucket_offset0"
+  },
+
+  "anim_coalblock_offset0": {
+    "anim_type": "offset",
+    "from": [0, 18],
+    "to": [0, 18],
+    "duration": 2,
+    "next": "@furnace_recipes_mcjava.anim_coalblock_offset1"
+  },
+
+  "anim_coalblock_offset1": {
+    "anim_type": "offset",
+    "from": [0, 18],
+    "to": [0, 0],
+    "duration": 0.0,
+    "next": "@furnace_recipes_mcjava.anim_coalblock_offset2"
+  },
+
+  "anim_coalblock_offset2": {
+    "anim_type": "offset",
+    "from": [0, 0],
+    "to": [0, 0],
+    "duration": 2,
+    "next": "@furnace_recipes_mcjava.anim_coalblock_offset3"
+  },
+
+  "anim_coalblock_offset3": {
+    "anim_type": "offset",
+    "from": [0, 0],
+    "to": [0, 18],
+    "duration": 0.0,
+    "next": "@furnace_recipes_mcjava.anim_coalblock_offset4"
+  },
+
+  "anim_coalblock_offset4": {
+    "anim_type": "offset",
+    "from": [0, 18],
+    "to": [0, 18],
+    "duration": 28,
+    "next": "@furnace_recipes_mcjava.anim_coalblock_offset0"
+  },
+
+  "anim_blazerod_offset0@anim_coalblock_offset0": {
+    "duration": 4,
+    "next": "@furnace_recipes_mcjava.anim_blazerod_offset1"
+  },
+  "anim_blazerod_offset1@anim_coalblock_offset1": { "next": "@furnace_recipes_mcjava.anim_blazerod_offset2" },
+  "anim_blazerod_offset2@anim_coalblock_offset2": { "next": "@furnace_recipes_mcjava.anim_blazerod_offset3" },
+  "anim_blazerod_offset3@anim_coalblock_offset3": { "next": "@furnace_recipes_mcjava.anim_blazerod_offset4" },
+  "anim_blazerod_offset4@anim_coalblock_offset4": { "duration": 26, "next": "@furnace_recipes_mcjava.anim_blazerod_offset0" },
+
+  "anim_coal_offset0@anim_coalblock_offset0": {
+    "duration": 6,
+    "next": "@furnace_recipes_mcjava.anim_coal_offset1"
+  },
+  "anim_coal_offset1@anim_coalblock_offset1": { "next": "@furnace_recipes_mcjava.anim_coal_offset2" },
+  "anim_coal_offset2@anim_coalblock_offset2": { "next": "@furnace_recipes_mcjava.anim_coal_offset3" },
+  "anim_coal_offset3@anim_coalblock_offset3": { "next": "@furnace_recipes_mcjava.anim_coal_offset4" },
+  "anim_coal_offset4@anim_coalblock_offset4": { "duration": 24, "next": "@furnace_recipes_mcjava.anim_coal_offset0" },
+
+  "anim_charcoal_offset0@anim_coalblock_offset0": {
+    "duration": 8,
+    "next": "@furnace_recipes_mcjava.anim_charcoal_offset1"
+  },
+  "anim_charcoal_offset1@anim_coalblock_offset1": { "next": "@furnace_recipes_mcjava.anim_charcoal_offset2" },
+  "anim_charcoal_offset2@anim_coalblock_offset2": { "next": "@furnace_recipes_mcjava.anim_charcoal_offset3" },
+  "anim_charcoal_offset3@anim_coalblock_offset3": { "next": "@furnace_recipes_mcjava.anim_charcoal_offset4" },
+  "anim_charcoal_offset4@anim_coalblock_offset4": { "duration": 22, "next": "@furnace_recipes_mcjava.anim_charcoal_offset0" },
+
+  "anim_oak_log_offset0@anim_coalblock_offset0": {
+    "duration": 10,
+    "next": "@furnace_recipes_mcjava.anim_oak_log_offset1"
+  },
+  "anim_oak_log_offset1@anim_coalblock_offset1": { "next": "@furnace_recipes_mcjava.anim_oak_log_offset2" },
+  "anim_oak_log_offset2@anim_coalblock_offset2": { "next": "@furnace_recipes_mcjava.anim_oak_log_offset3" },
+  "anim_oak_log_offset3@anim_coalblock_offset3": { "next": "@furnace_recipes_mcjava.anim_oak_log_offset4" },
+  "anim_oak_log_offset4@anim_coalblock_offset4": { "duration": 20, "next": "@furnace_recipes_mcjava.anim_oak_log_offset0" },
+
+  "anim_oakplanks_offset0@anim_coalblock_offset0": {
+    "duration": 12,
+    "next": "@furnace_recipes_mcjava.anim_oakplanks_offset1"
+  },
+  "anim_oakplanks_offset1@anim_coalblock_offset1": { "next": "@furnace_recipes_mcjava.anim_oakplanks_offset2" },
+  "anim_oakplanks_offset2@anim_coalblock_offset2": { "next": "@furnace_recipes_mcjava.anim_oakplanks_offset3" },
+  "anim_oakplanks_offset3@anim_coalblock_offset3": { "next": "@furnace_recipes_mcjava.anim_oakplanks_offset4" },
+  "anim_oakplanks_offset4@anim_coalblock_offset4": { "duration": 18, "next": "@furnace_recipes_mcjava.anim_oakplanks_offset0" },
+
+  "anim_oakstair_offset0@anim_coalblock_offset0": {
+    "duration": 14,
+    "next": "@furnace_recipes_mcjava.anim_oakstair_offset1"
+  },
+  "anim_oakstair_offset1@anim_coalblock_offset1": { "next": "@furnace_recipes_mcjava.anim_oakstair_offset2" },
+  "anim_oakstair_offset2@anim_coalblock_offset2": { "next": "@furnace_recipes_mcjava.anim_oakstair_offset3" },
+  "anim_oakstair_offset3@anim_coalblock_offset3": { "next": "@furnace_recipes_mcjava.anim_oakstair_offset4" },
+  "anim_oakstair_offset4@anim_coalblock_offset4": { "duration": 16, "next": "@furnace_recipes_mcjava.anim_oakstair_offset0" },
+
+  "anim_oakslab_offset0@anim_coalblock_offset0": {
+    "duration": 16,
+    "next": "@furnace_recipes_mcjava.anim_oakslab_offset1"
+  },
+  "anim_oakslab_offset1@anim_coalblock_offset1": { "next": "@furnace_recipes_mcjava.anim_oakslab_offset2" },
+  "anim_oakslab_offset2@anim_coalblock_offset2": { "next": "@furnace_recipes_mcjava.anim_oakslab_offset3" },
+  "anim_oakslab_offset3@anim_coalblock_offset3": { "next": "@furnace_recipes_mcjava.anim_oakslab_offset4" },
+  "anim_oakslab_offset4@anim_coalblock_offset4": { "duration": 14, "next": "@furnace_recipes_mcjava.anim_oakslab_offset0" },
+
+  "anim_oaktrapdoor_offset0@anim_coalblock_offset0": {
+    "duration": 18,
+    "next": "@furnace_recipes_mcjava.anim_oaktrapdoor_offset1"
+  },
+  "anim_oaktrapdoor_offset1@anim_coalblock_offset1": { "next": "@furnace_recipes_mcjava.anim_oaktrapdoor_offset2" },
+  "anim_oaktrapdoor_offset2@anim_coalblock_offset2": { "next": "@furnace_recipes_mcjava.anim_oaktrapdoor_offset3" },
+  "anim_oaktrapdoor_offset3@anim_coalblock_offset3": { "next": "@furnace_recipes_mcjava.anim_oaktrapdoor_offset4" },
+  "anim_oaktrapdoor_offset4@anim_coalblock_offset4": { "duration": 12, "next": "@furnace_recipes_mcjava.anim_oaktrapdoor_offset0" },
+
+  "anim_oakplate_offset0@anim_coalblock_offset0": {
+    "duration": 20,
+    "next": "@furnace_recipes_mcjava.anim_oakplate_offset1"
+  },
+  "anim_oakplate_offset1@anim_coalblock_offset1": { "next": "@furnace_recipes_mcjava.anim_oakplate_offset2" },
+  "anim_oakplate_offset2@anim_coalblock_offset2": { "next": "@furnace_recipes_mcjava.anim_oakplate_offset3" },
+  "anim_oakplate_offset3@anim_coalblock_offset3": { "next": "@furnace_recipes_mcjava.anim_oakplate_offset4" },
+  "anim_oakplate_offset4@anim_coalblock_offset4": { "duration": 10, "next": "@furnace_recipes_mcjava.anim_oakplate_offset0" },
+
+  "anim_oakfence_offset0@anim_coalblock_offset0": {
+    "duration": 22,
+    "next": "@furnace_recipes_mcjava.anim_oakfence_offset1"
+  },
+  "anim_oakfence_offset1@anim_coalblock_offset1": { "next": "@furnace_recipes_mcjava.anim_oakfence_offset2" },
+  "anim_oakfence_offset2@anim_coalblock_offset2": { "next": "@furnace_recipes_mcjava.anim_oakfence_offset3" },
+  "anim_oakfence_offset3@anim_coalblock_offset3": { "next": "@furnace_recipes_mcjava.anim_oakfence_offset4" },
+  "anim_oakfence_offset4@anim_coalblock_offset4": { "duration": 8, "next": "@furnace_recipes_mcjava.anim_oakfence_offset0" },
+
+  "anim_oakgate_offset0@anim_coalblock_offset0": {
+    "duration": 24,
+    "next": "@furnace_recipes_mcjava.anim_oakgate_offset1"
+  },
+  "anim_oakgate_offset1@anim_coalblock_offset1": { "next": "@furnace_recipes_mcjava.anim_oakgate_offset2" },
+  "anim_oakgate_offset2@anim_coalblock_offset2": { "next": "@furnace_recipes_mcjava.anim_oakgate_offset3" },
+  "anim_oakgate_offset3@anim_coalblock_offset3": { "next": "@furnace_recipes_mcjava.anim_oakgate_offset4" },
+  "anim_oakgate_offset4@anim_coalblock_offset4": { "duration": 6, "next": "@furnace_recipes_mcjava.anim_oakgate_offset0" },
+
+  "anim_noteblock_offset0@anim_coalblock_offset0": {
+    "duration": 26,
+    "next": "@furnace_recipes_mcjava.anim_noteblock_offset1"
+  },
+  "anim_noteblock_offset1@anim_coalblock_offset1": { "next": "@furnace_recipes_mcjava.anim_noteblock_offset2" },
+  "anim_noteblock_offset2@anim_coalblock_offset2": { "next": "@furnace_recipes_mcjava.anim_noteblock_offset3" },
+  "anim_noteblock_offset3@anim_coalblock_offset3": { "next": "@furnace_recipes_mcjava.anim_noteblock_offset4" },
+  "anim_noteblock_offset4@anim_coalblock_offset4": { "duration": 4, "next": "@furnace_recipes_mcjava.anim_noteblock_offset0" },
+
+  "anim_bookshelf_offset0@anim_coalblock_offset0": {
+    "duration": 28,
+    "next": "@furnace_recipes_mcjava.anim_bookshelf_offset1"
+  },
+  "anim_bookshelf_offset1@anim_coalblock_offset1": { "next": "@furnace_recipes_mcjava.anim_bookshelf_offset2" },
+  "anim_bookshelf_offset2@anim_coalblock_offset2": { "next": "@furnace_recipes_mcjava.anim_bookshelf_offset3" },
+  "anim_bookshelf_offset3@anim_coalblock_offset3": { "next": "@furnace_recipes_mcjava.anim_bookshelf_offset4" },
+  "anim_bookshelf_offset4@anim_coalblock_offset4": { "duration": 2, "next": "@furnace_recipes_mcjava.anim_bookshelf_offset0" },
+
+  "anim_chest_offset0@anim_coalblock_offset0": {
+    "duration": 30,
+    "next": "@furnace_recipes_mcjava.anim_chest_offset1"
+  },
+  "anim_chest_offset1@anim_coalblock_offset1": { "next": "@furnace_recipes_mcjava.anim_chest_offset2" },
+  "anim_chest_offset2@anim_coalblock_offset2": { "next": "@furnace_recipes_mcjava.anim_chest_offset3" },
+  "anim_chest_offset3@anim_coalblock_offset3": { "next": "@furnace_recipes_mcjava.anim_chest_offset4" },
+  "anim_chest_offset4@anim_coalblock_offset4": { "duration": 0, "next": "@furnace_recipes_mcjava.anim_chest_offset0" }
 }

@@ -4,18 +4,8 @@
   "element_constructor@content.inventory_screen_common": {
     "$close_on_player_hurt|default": false,
     "close_on_player_hurt": "$close_on_player_hurt",
-    "$screen_matrix": "element_constructor_mcjava.element_constructor_screen_content_panel",
+    "$screen_content": "element_constructor_mcjava.element_constructor_screen_content_panel",
     "$screen_background": "common.screen_background",
-    "force_render_below": "$force_render_below",
-    "variables": [
-      {
-        "requires": "$desktop_screen",
-        "$screen_content": "element_constructor_mcjava.element_constructor_screen_content_panel"
-      },
-      {
-        "requires": "$pocket_screen",
-        "$screen_content": "element_constructor_mcjava.element_constructor_screen_content_panel"
-      }
-    ]
+    "force_render_below": "$force_render_below"
   }
 }
