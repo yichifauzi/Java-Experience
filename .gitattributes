@@ -1,6 +1,8 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 
+*.hlsl linguist-language=JSON
+
 *.uiscreen linguist-language=JSON
 *.uicomponent linguist-language=JSON
 *.ui linguist-language=JSON
