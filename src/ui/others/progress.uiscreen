@@ -325,14 +325,16 @@
           "$pressed_button_name": "$middle_button_press",
           "$button_binding_condition": "once",
           "$button_text_binding_type": "global",
-          "$button_text": "$middle_button_text"
+          "$button_text": "$middle_button_text",
+          "size": [150, 20]
         }
       },
       { "space@screen_mcjava.hfill": {} },
       {
         "right@button_mcjava.button": {
           "$pressed_button_name": "$bottom_button_press",
-          "$button_text": "$bottom_button_text"
+          "$button_text": "$bottom_button_text",
+          "size": [150, 20]
         }
       }
     ]

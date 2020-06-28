@@ -113,6 +113,7 @@
   "$title_resolution": "256x",
   "$icons_resolution": "256x",
   "$bars_resolution": "256x",
+  "$toasts_resolution": "256x",
   "$options_background_resolution": "256x",
   "$checkbox_resolution": "256x",
   

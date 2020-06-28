@@ -6,6 +6,8 @@
 
   "space": { "type": "panel" },
 
+  "v1px@content.space": { "size": [0, 1] },
+
   "v2px@content.space": { "size": [0, 2] },
 
   "v4px@content.space": { "size": [0, 4] },

@@ -1,0 +1,123 @@
+/* Version: 2.0.0 */
+{
+  "namespace": "content_log_history_mcjava",
+
+  "content_log_history_screen_content_panel@content.scroll_screen": {
+    "$top_content": "content_log_history_mcjava.top_content",
+    "$middle_content": "content_log_history_mcjava.scroll_content",
+    "$bottom_content": "content_log_history_mcjava.bottom_content",
+    "$scroll_bar_offset": ["40% + 2px", 0],
+    "$jump_to_bottom_on_update": true,
+    "$always_handle_scrolling": true
+  },
+
+  "top_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "title@content.title": {
+          "text": "contentlog.history.title",
+          "bindings": [
+            {
+              "binding_type": "none",
+              "binding_condition": "none",
+              "binding_name": "contentlog.history.title",
+              "binding_name_override": "contentlog.history.title"
+            },
+            {
+              "binding_type": "global",
+              "binding_condition": "once",
+              "binding_name": "#tts_dialog_title"
+            }
+          ],
+          "property_bag": {
+            "#tts_dialog_title": "contentlog.history.title"
+          }
+        }
+      }
+    ]
+  },
+
+  "scroll_content": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": ["80%", "100%c"],
+    "controls": [
+      { "space_top@content.v4px": {} },
+      { "msg@messages_stack_panel": {} },
+      { "space_bottom@content.v2px": {} }
+    ]
+  },
+
+  "messages_stack_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "collection_name": "content_log_message",
+    "size": [ "100%", "default" ],
+    "factory": {
+      "name": "messages_factory",
+      "control_name": "content_log_message@content_log_history_mcjava.content_log_message_panel"
+    },
+    "bindings": [
+      {
+        "binding_name": "#messages_size",
+        "binding_type": "global",
+        "binding_name_override": "#collection_length"
+      }
+    ]
+  },
+
+  "content_log_message_panel": {
+    "type": "panel",
+    "size": ["100%", "100%c"],
+    "controls": [
+      {
+        "content_log_message_panel": {
+          "type": "panel",
+          "size": ["100%", "100%c"],
+          "controls": [
+            {
+              "content_log_message": {
+                "type": "label",
+                "color": "$chat_text_color",
+                "localize": false,
+                "size": ["100%", "default"],
+                "text": "#text",
+                "layer": 10,
+                "line_padding": 1,
+                "font_scale_factor": 1,
+                "bindings": [
+                  {
+                    "binding_type": "collection",
+                    "binding_name": "#content_log_text",
+                    "binding_name_override": "#text",
+                    "binding_collection_name": "content_log_message"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "bottom_content": {
+    "type": "stack_panel",
+    "size": [310, 20],
+    "offset": [0, -0.5],
+    "orientation": "horizontal",
+    "controls": [
+      {
+        "clipboard_button@button_mcjava.button": {
+          "size": [150, 20],
+          "enabled": "$supports_clipboard",
+          "$pressed_button_name": "button.copy_to_clipboard",
+          "$button_text": "contentlog.history.copyToClipboard"
+        }
+      },
+      { "fill@content.hfill": {} },
+      { "exit@content.exit_button": { "size": [150, 20], "$button_text": "gui.cancel" } }
+    ]
+  }
+}

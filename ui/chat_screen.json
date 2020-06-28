@@ -1,8 +1,21 @@
+/* Version: 2.0.0 */
 {
-  "chat_screen": {
+  "chat_screen@content.base_screen": {
     "force_render_below": "$force_render_below",
     "close_on_player_hurt": "$close_on_player_hurt",
     "$screen_content": "chat_mcjava.chat_screen_content_panel",
-    "$screen_bg_content": "common.base_screen_empty_panel"
+    "$screen_bg_content": "common.base_screen_empty_panel",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_exit",
+        "to_button_id": "button.chat_menu_cancel",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.chat_menu_cancel",
+        "mapping_type": "global"
+      }
+    ]
   }
 }

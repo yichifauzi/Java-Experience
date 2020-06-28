@@ -1,0 +1,14 @@
+/* Version: 2.0.0 */
+{
+  "choose_realm_screen@content.base_screen": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      }
+    ],
+    "$screen_content": "choose_realm_mcjava.choose_realm_screen_content_panel",
+    "$screen_background": "content.dirt_background"
+  }
+}

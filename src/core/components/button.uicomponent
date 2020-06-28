@@ -88,7 +88,7 @@
         "content_panel": {
           "type": "panel",
           "size": "$content_panel_size",
-          "$content_panel_size|default": ["100% - 4px", "100% - 4px"],
+          "$content_panel_size|default": ["100% - 2px", "100% - 2px"],
           "layer": 3,
           "controls": [
             { "content@$button_type_panel": {} }
@@ -111,11 +111,12 @@
     "font_scale_factor": "$button_font_scale_factor",
     "$button_font_scale_factor|default": 1.0,
     "offset": "$button_text_offset",
-    "$button_text_offset|default": [1, 0],
+    "$button_text_offset|default": [0, 0],
     "anchor_from": "$anchor",
     "anchor_to": "$anchor",
     "$anchor|default": "center",
-    "shadow": true,
+    "shadow": "$text_shadow",
+    "$text_shadow|default": true,
     "size": "$button_text_size",
     "$button_text_size|default": ["default", "default"],
     "max_size": "$button_text_max_size",
@@ -123,7 +124,14 @@
     "text_alignment": "$text_alignment",
     "$text_alignment|default": "center",
     "layer": 2,
-    "bindings": [
+    "variables": [
+      {
+        "requires": "$text_shadow",
+        "$button_text_offset": [1, 0]
+      }
+    ],
+    "bindings": "$text_bindings",
+    "$text_bindings|default": [
       {
         "binding_type": "$button_text_binding_type",
         "binding_condition": "$button_binding_condition",

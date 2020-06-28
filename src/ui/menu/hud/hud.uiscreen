@@ -20,8 +20,8 @@
   "hud_content_panel": {
     "type": "panel",
     "controls": [
-      { "left_helpers@hud.left_helpers": {} },
-      { "right_helpers@hud.right_helpers": {} },
+      { "left_helpers@hud_mcjava.left_helpers": {} },
+      { "right_helpers@hud_mcjava.right_helpers": {} },
       { "centered_gui_elements@hud.centered_gui_elements": {} },
       { "classic_hotbar_zone_content_panel@hotbar_mcjava.hotbar_zone_content_panel": {} },
       {
@@ -414,5 +414,143 @@
     "anim_type": "wait",
     "duration": "$chat_item_lifetime",
     "next": "@hud_mcjava.anim_chat_bg_alpha"
+  },
+
+  /* Helpers */
+
+  "left_helpers": {
+    "type": "panel",
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "offset": [ 10, 0 ],
+    "size": [ "100%", "100%c" ],
+    "max_size": [ "100%", "50%" ],
+    "controls": [
+      {
+        "stack_panel": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%c" ],
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "$tooltip_collection_name": "left_helper_collection",
+          "$tooltip_collection_prefix": "left_helpers",
+          "collection_name": "$tooltip_collection_name",
+          "factory": {
+            "name": "left_tooltip_factory",
+            "control_name": "hud_mcjava.mixed_tooltip_helper"
+          },
+          "bindings": [
+            {
+              "binding_name": "#left_helper_count",
+              "binding_name_override": "#collection_length"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "right_helpers": {
+    "type": "panel",
+    "anchor_from": "bottom_right",
+    "anchor_to": "bottom_right",
+    "size": [ "100%c", "100%c" ],
+    "max_size": [ "100%", "50%" ],
+    "controls": [
+      {
+        "stack_panel": {
+          "type": "stack_panel",
+          "size": [ "100%cm", "100%c" ],
+          "min_size": [ 75, "100%c" ],
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "$tooltip_collection_name": "right_helper_collection",
+          "$tooltip_collection_prefix": "right_helpers",
+          "collection_name": "$tooltip_collection_name",
+          "factory": {
+            "name": "right_tooltip_factory",
+            "control_name": "hud_mcjava.mixed_tooltip_helper"
+          },
+          "bindings": [
+            {
+              "binding_name": "#right_helper_count",
+              "binding_name_override": "#collection_length"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "mixed_tooltip_helper": {
+    "type": "panel",
+    "size": [ "100%c", "100%cm" ],
+    "controls": [
+      {
+        "gamepad_tooltip@hud_mcjava.tooltip_helper": {
+          "$icon_image_ref": "hud.base_icon_image",
+          "bindings": [
+            {
+              "ignored": "$force_render_helpers",
+              "binding_name": "#gamepad_button_visible",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$tooltip_collection_name"
+            }
+          ]
+        }
+      },
+      {
+        "keyboard_tooltip@hud_mcjava.keyboard_tooltip_helper": {
+          "bindings": [
+            {
+              "binding_name": "#keyboard_key_visible",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$tooltip_collection_name"
+            }
+          ]
+        }
+      }
+    ],
+    "$tooltip_collection_name|default": "",
+    "$tooltip_collection_prefix|default": "",
+    "bindings": [
+      {
+        "ignored": "$force_render_helpers",
+        "binding_name": "#tooltip_visible",
+        "binding_name_override": "#visible",
+        "binding_type": "collection",
+        "binding_condition": "always",
+        "binding_collection_name": "$tooltip_collection_name"
+      }
+    ]
+  },
+
+  "keyboard_tooltip_helper@hud_mcjava.tooltip_helper": {
+    "size": [ "100%c", "100%cm" ],
+    "$icon_image_ref": "hud.base_keyboard_icon",
+    "$tooltip_description_offset": [ 0, 2 ]
+  },
+
+  "tooltip_helper@gamepadhelper.gamepad_helper": {
+    "$gamepad_description": "hud.tooltip_helper_icon_description",
+    "controls": [
+      {
+        "icon@$icon_image_ref": {}
+      },
+      {
+        "centerer": {
+          "ignored": "($hide_description)",
+          "type": "panel",
+          "size": [ "100%c + 2px", 13 ],
+          "offset": [ 1, 0 ],
+          "layer": 1,
+          "controls": [
+            { "desc@$gamepad_description": {} }
+          ]
+        }
+      }
+    ]
   }
 }

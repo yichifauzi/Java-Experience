@@ -24,6 +24,20 @@
     "texture": "src/core/resources/fmarquespto/textures/shadow_bottom"
   },
 
+  /* Toast */
+
+  "toast_gray@content.resource_image": {
+    "texture": "src/assets/minecraft/textures/gui/toasts",
+    "size": [160, 32],
+    "variables": [
+      { "requires": "($toasts_resolution = 256x)", "$uv_size": [160, 32] },
+      { "requires": "($toasts_resolution = 512x)", "$uv_size": [320, 64] },
+      { "requires": "($toasts_resolution = 1024x)","$uv_size": [640, 128] },
+      { "requires": "($toasts_resolution = 2048x)", "$uv_size": [1280, 256] },
+      { "requires": "($toasts_resolution = 4096x)", "$uv_size": [2560, 512] }
+    ]
+  },
+
   /* Widgets */
 
   "box_default": {

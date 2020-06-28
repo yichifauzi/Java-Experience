@@ -1,0 +1,54 @@
+coin_purchase_screen
+comment_screen
+confirm_msa_unlink_screen
+convert_purchases_to_xbl_screen
+credits_screen
+edu_discovery_dialog
+emote_wheel_screen
+feed_screen
+game_tip_screen
+gamepad_disconnected
+gamepad_layout_screen
+global_pause_screen
+hdr_calibration_screen
+how_to_play_screen
+immersive_reader
+item_detail_description_screen
+late_join_pregame_screen
+library_modal_screen
+local_world_picker_screen
+manage_feed_screen
+manifest_validation_screen
+non_xbl_user_management_screen
+npc_interact_screen
+pack_settings_screen
+pdp_screen
+pdp_screenshots_section
+perf_turtle
+permissions_screen
+persona_screen
+play_screen
+portfolio_screen
+profile_card
+realms_create
+realms_pending_invitations
+realms_plus_ended_screen
+realmsPlus_screen
+realmsplus_upgrade_notice_screen
+screenshot_picker_screen
+simple_inprogress_screen
+store
+store_details
+sync_iaps_to_xbl_screen
+tabbed_upsell_screen
+token_faq_screen
+trial_upsell_screen
+win10_trial_conversion_screen
+world_conversion_complete screens
+xbl_console screens
+
+
+Done: 62
+To do: 58
+
+68.2‬% - 28/6/2020 7:22

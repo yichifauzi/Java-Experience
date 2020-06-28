@@ -127,6 +127,7 @@
     "$toggle_name|default": "this_toggle",
     "$toggle_default_state|default": false,
     "$toggle_index|default": -1,
+    "toggle_group_default_selected": "$toggle_default_selected",
     "$toggle_default_selected|default": 0,
     "$toggle_grid_collection_name|default": "",
     "$toggle_on_button|default": "toggle.toggle_on",
