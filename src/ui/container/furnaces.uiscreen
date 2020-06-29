@@ -77,6 +77,7 @@
                 "anchor_to": "top_right",
                 "layer": 1,
                 "controls": [
+                  { "close_button@container_mcjava.close_button": {} },
                   { "@$container_bg": {} },
                   {
                     "screen_inventory": {
@@ -91,7 +92,7 @@
                     }
                   },
                   { "inventory_selected_icon_button@container_mcjava.inventory_selected_icon_button": {} },
-                  { "gamepad_cursor@common.gamepad_cursor_button": {} }
+                  { "gamepad_cursor@container_mcjava.gamepad_cursor_button": {} }
                 ]
               }
             }

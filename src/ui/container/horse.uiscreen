@@ -24,6 +24,7 @@
           "size": [176, 166],
           "layer": 1,
           "controls": [
+            { "close_button@container_mcjava.close_button": {} },
             { "bg@resources1.horse_bg": {} },
             { "title@container_mcjava.title": { "offset": [8, 5] }},
             { "renderer@horse_mcjava.horse_renderer": {} },

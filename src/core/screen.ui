@@ -175,7 +175,7 @@
 
   "window_background": {
     "type": "image",
-    "texture": "src/core/resources/textures/white",
+    "texture": "src/core/assets/textures/white",
     "color": "gray",
     "ignored": "$is_holographic",
     "alpha": 1
@@ -183,7 +183,7 @@
 
   "screen_background": {
     "type": "image",
-    "texture": "src/core/resources/fmarquespto/textures/white",
+    "texture": "src/core/assets/fmarquespto/textures/white",
     "color": [0.005, 0.005, 0.005],
     "ignored": "$is_holographic",
     "$bg_alpha|default": 0.75,
@@ -192,7 +192,7 @@
 
   "screen_container_background": {
     "type": "image",
-    "texture": "src/core/resources/fmarquespto/textures/white",
+    "texture": "src/core/assets/fmarquespto/textures/white",
     "color": [0.05, 0.05, 0.05],
     "ignored": "$is_holographic",
     "$bg_alpha|default": 0.74,
@@ -201,7 +201,7 @@
 
   "shadow_top": {
     "type": "image",
-    "texture": "src/core/resources/fmarquespto/textures/shadow_top",
+    "texture": "src/core/assets/fmarquespto/textures/shadow_top",
     "size": [ "100%", 4 ],
     "anchor_from": "top_left",
     "anchor_to": "top_left",
@@ -210,7 +210,7 @@
 
   "shadow_bottom": {
     "type": "image",
-    "texture": "src/core/resources/fmarquespto/textures/shadow_bottom",
+    "texture": "src/core/assets/fmarquespto/textures/shadow_bottom",
     "size": [ "100%", 4 ],
     "anchor_from": "bottom_left",
     "anchor_to": "bottom_left",

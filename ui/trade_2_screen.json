@@ -1,17 +1,9 @@
+/* Version: 2.0.0 */
 {
-  "trade_screen": {
-    "force_render_below": "$force_render_below",
-    "$screen_background": "common.screen_background",
-    "variables": [
-      {
-        "requires": "$desktop_screen",
-        "$screen_content": "villager_trade2_mcjava.villager_trade2_screen_content_panel"
-      },
-      {
-        "requires": "$pocket_screen",
-        "$screen_content": "villager_trade2_mcjava.villager_trade2_screen_content_panel"
-      }
-    ],
+  "trade_screen@content.inventory_screen": {
+    "force_close_on_player_hurt": "$force_close_on_player_hurt",
+    "$screen_background": "content.container_screen_background",
+    "$screen_content": "villager_trade2_mcjava.villager_trade2_screen_content_panel",
     "button_mappings": [
       {
         "from_button_id": "button.menu_cancel",

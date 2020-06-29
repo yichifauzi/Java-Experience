@@ -6,6 +6,7 @@
     "anchor_from": "bottom_middle",
     "anchor_to": "bottom_middle",
     "size": [ 180, 50 ],
+    "offset": [0, -0.5],
     "controls": [
       {
         "heart_rend@hud.heart_renderer": {

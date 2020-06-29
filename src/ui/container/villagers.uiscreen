@@ -98,6 +98,7 @@
     "offset": [100, 0],
     "layer": 10,
     "controls": [
+      { "close_button@container_mcjava.close_button": {} },
       { "villager_name_label@villager_trade2_mcjava.villager_name_label": {} },
       { "exp_progress_bar@villager_trade2_mcjava.exp_progress_bar": {} },
       {

@@ -16,12 +16,12 @@
 
   "shadow_top": {
     "type": "image",
-    "texture": "src/core/resources/fmarquespto/textures/shadow_top"
+    "texture": "src/core/assets/fmarquespto/textures/shadow_top"
   },
 
   "shadow_bottom": {
     "type": "image",
-    "texture": "src/core/resources/fmarquespto/textures/shadow_bottom"
+    "texture": "src/core/assets/fmarquespto/textures/shadow_bottom"
   },
 
   /* Toast */
@@ -42,12 +42,12 @@
 
   "box_default": {
     "type": "image",
-    "texture": "src/core/resources/fmarquespto/textures/indentbox"
+    "texture": "src/core/assets/fmarquespto/textures/indentbox"
   },
 
   "box_hover": {
     "type": "image",
-    "texture": "src/core/resources/fmarquespto/textures/indentboxhover"
+    "texture": "src/core/assets/fmarquespto/textures/indentboxhover"
   },
 
   /* Widgets */
@@ -770,6 +770,16 @@
     ]
   },
 
+  "close_button_default": {
+    "type": "image",
+    "texture": "src/core/assets/fmarquespto/textures/close_button_default"
+  },
+
+  "close_button_hover": {
+    "type": "image",
+    "texture": "src/core/assets/fmarquespto/textures/close_button_hover"
+  },
+
   /* Title */
 
   "main_title_left@content.resource_image": {
@@ -810,7 +820,7 @@
   },
 
   "edition_cpp@resources.resource_image": {
-    "texture": "src/core/resources/fmarquespto/textures/gui/cpp_edition",
+    "texture": "src/core/assets/fmarquespto/textures/gui/cpp_edition",
     "size": [88, 14],
     "variables": [
       { "requires": "($title_resolution = 256x)", "$uv_size": [88, 14] },

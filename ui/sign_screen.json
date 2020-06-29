@@ -1,7 +1,15 @@
+/* Version: 2.0.0 */
 {
-  "sign_screen": {
+  "sign_screen@content.base_screen": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      }
+    ],
     "$screen_content": "sign_mcjava.sign_screen_content_panel",
-    "$screen_bg_content": "screen_mcjava.screen_background",
-    "force_render_below": "$force_render_below"
+    "$screen_background": "content.screen_background",
+    "force_close_on_player_hurt": "$force_close_on_player_hurt"
   }
 }

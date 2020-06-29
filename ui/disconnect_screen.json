@@ -1,16 +1,53 @@
+/* Version: 2.0.0 */
 {
-  "disconnect_screen": {
+  "disconnect_screen@content.base_screen": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_leave_screen",
+        "mapping_type": "global"
+      }
+    ],
     "$screen_content": "disconnect_mcjava.disconnect_screen_content_panel",
-    "$screen_bg_content": "screen_mcjava.dirt_background"
+    "$screen_background": "screen_mcjava.dirt_background"
   },
 
-  "realms_disconnect_screen": {
+  "realms_disconnect_screen@content.base_screen": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_leave_screen",
+        "mapping_type": "global"
+      }
+    ],
     "$screen_content": "disconnect_mcjava.realms_disconnect_screen_content_panel",
-    "$screen_bg_content": "screen_mcjava.dirt_background"
+    "$screen_background": "screen_mcjava.dirt_background"
   },
   
-  "realms_warning_screen": {
+  "realms_warning_screen@content.base_screen": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_leave_screen",
+        "mapping_type": "global"
+      }
+    ],
     "$screen_content": "disconnect_mcjava.realms_warning_screen_content_panel",
-    "$screen_bg_content": "screen_mcjava.dirt_background"
+    "$screen_background": "screen_mcjava.dirt_background"
   }
 }

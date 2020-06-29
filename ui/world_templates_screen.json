@@ -1,6 +1,18 @@
 {
   "world_templates_screen": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      }
+    ],
     "$screen_content": "world_templates_mcjava.world_templates_content_panel",
-    "$screen_bg_content": "content.dirt_bg"
+    "$screen_background": "content.dirt_background"
   }
 }

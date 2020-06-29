@@ -3,7 +3,10 @@
     "made_by": "@FMarquesPTO",
     "others": {
       "@HawfHuman": "(not #toggle_state)",
-      "@CrisXolt": "Variables for Resolutions. Original Idea",
+      "@CrisXolt": [
+        "Variables for Resolutions. Original Idea",
+        "Controller Mappings"
+      ],
       "@MCGaming_Lukas": "Disabled items categories",
       "abc123": "Quick Crafting"
     }

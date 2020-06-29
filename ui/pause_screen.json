@@ -1,17 +1,44 @@
+/* Version: 2.0.0 */
 {
-  "pause_screen": {
-    "force_render_below": "$force_render_below",
-    "variables": [
+  "pause_screen@content.base_screen": {
+    "cache_screen": true,
+    "button_mappings": [
       {
-        "requires": "(not $education_edition)",
-        "$screen_content": "pause_menu_mcjava.pause_menu_screen_content_panel",
-        "$screen_bg_content": "pause_menu_mcjava.screen_background"
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_continue",
+        "mapping_type": "global"
       },
       {
-        "requires": "$education_edition",
-        "$screen_content": "pause_menu_mcjava.pause_menu_screen_content_panel",
-        "$screen_bg_content": "pause_menu_mcjava.screen_background"
+        "from_button_id": "button.controller_start",
+        "to_button_id": "button.menu_continue",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_vr_realign",
+        "to_button_id": "button.menu_vr_realign",
+        "mapping_type": "global",
+        "scope": "controller"
+      },
+      {
+        "from_button_id": "button.controller_select",
+        "to_button_id": "button.to_profile_or_skins_screen",
+        "mapping_type": "global",
+        "scope": "controller"
+      },
+      {
+        "from_button_id": "button.menu_tab_left",
+        "to_button_id": "button.menu_tab_left",
+        "mapping_type": "global",
+        "scope": "view"
+      },
+      {
+        "from_button_id": "button.menu_tab_right",
+        "to_button_id": "button.menu_tab_right",
+        "mapping_type": "global",
+        "scope": "view"
       }
-    ]
+    ],
+    "$screen_content": "pause_menu_mcjava.pause_menu_screen_content_panel",
+    "$screen_background": "pause_menu_mcjava.screen_background"
   }
 }

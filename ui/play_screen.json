@@ -1,7 +1,27 @@
+/* Version: 2.0.0 */
 {
-  "play_screen": {
+  "play_screen@content.base_screen": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_tab_left",
+        "to_button_id": "button.menu_tab_left",
+        "mapping_type": "global",
+        "scope": "view"
+      },
+      {
+        "from_button_id": "button.menu_tab_right",
+        "to_button_id": "button.menu_tab_right",
+        "mapping_type": "global",
+        "scope": "view"
+      }
+    ],
     "$screen_content": "play.play_screen_content",
-    "$screen_bg_content": "content.dirt_bg"
+    "$screen_background": "content.dirt_background"
   },
 
   "play_screen_content": {
@@ -16,8 +36,6 @@
         "$content": "play_fast_mcjava.play_screen_content_panel"
       }
     ],
-    "controls": [
-      { "$content@$content": {} }
-    ]
+    "controls": [ { "$content@$content": {} } ]
   }
 }

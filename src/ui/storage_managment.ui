@@ -214,11 +214,11 @@
     "type": "stack_panel",
     "orientation": "horizontal",
     "size": ["100% - 12px", "100% - 4px"],
-    "$chevron_icon|default": "src/core/resources/fmarquespto/textures/icon/chevron_left",
+    "$chevron_icon|default": "src/core/assets/fmarquespto/textures/icon/chevron_left",
     "variables": [
       {
         "requires": "($state = unchecked or $state = unchecked_hover or $state = unchecked_locked)",
-        "$chevron_icon|default": "src/core/resources/fmarquespto/textures/icon/chevron_right"
+        "$chevron_icon|default": "src/core/assets/fmarquespto/textures/icon/chevron_right"
       }
     ],
     "controls": [
@@ -287,11 +287,11 @@
     "size": [20, 20],
     "texture": "$icon_src",
     "layer": 10,
-    "$icon_src": "src/core/resources/fmarquespto/textures/icon/not_multiselection",
+    "$icon_src": "src/core/assets/fmarquespto/textures/icon/not_multiselection",
     "variables": [
       {
         "requires": "($state = checked or $state = checked_hover or $state = checked_locked_hover)",
-        "$icon_src": "src/core/resources/fmarquespto/textures/icon/multiselection"
+        "$icon_src": "src/core/assets/fmarquespto/textures/icon/multiselection"
       }
     ]
   },

@@ -1,6 +1,19 @@
+/* Version: 2.0.0 */
 {
-  "permissions_screen": {
+  "permissions_screen@content.base_screen": {
+    "button_mappings": [
+			{
+				"from_button_id": "button.menu_cancel",
+				"to_button_id": "button.menu_exit",
+				"mapping_type": "global"
+			},
+			{
+				"from_button_id": "button.menu_exit",
+				"to_button_id": "button.menu_exit",
+				"mapping_type": "global"
+			}
+		],
     "$screen_content": "permissions_mcjava.permissions_screen_content_panel",
-    "$screen_background": "common_mcjava.screen_background"
+    "$screen_background": "content.screen_background"
   }
 }

@@ -109,7 +109,7 @@
 
   "empty_progress_bar_icon": {
     "type": "image",
-    "texture": "src/core/resources/fmarquespto/textures/white",
+    "texture": "src/core/assets/fmarquespto/textures/white",
     "size": ["100%", "100%"],
     "color": "black",
     "layer": 1
@@ -150,7 +150,7 @@
 
   "full_world_progress": {
     "type": "image",
-    "texture": "src/core/resources/fmarquespto/textures/loading/world_loading_center",
+    "texture": "src/core/assets/fmarquespto/textures/loading/world_loading_center",
     "clip_direction": "left",
     "size": ["100%", "100%"],
     "clip_pixelperfect": true,

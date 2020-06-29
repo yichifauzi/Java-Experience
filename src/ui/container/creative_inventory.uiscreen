@@ -9,8 +9,10 @@
       {
         "root_panel@common.root_panel": {
           "size": [195, 136],
-          "layer": 1,
+          "layer": 3,
+          "$toggle_reset_on_focus_lost": false,
           "controls": [
+            { "close_button@container_mcjava.close_button": {} },
             { "tab_navigation@creative_inv_mcjava.tab_navigation_layout_panel": {} },
             { "title@creative_inv_mcjava.tab_title": {} },
             { "construction@creative_inv_mcjava.tab_construction_content": {} },
@@ -523,7 +525,7 @@
               "highlight_slot_image": {
                 "type": "image",
                 "layer": 5,
-                "texture": "src/core/resources/fmarquespto/textures/white",
+                "texture": "src/core/assets/fmarquespto/textures/white",
                 "size": [ 16, 16 ],
                 "alpha": 0.5
               }
@@ -540,7 +542,7 @@
               "highlight_slot_image": {
                 "type": "image",
                 "layer": 5,
-                "texture": "src/core/resources/fmarquespto/textures/white",
+                "texture": "src/core/assets/fmarquespto/textures/white",
                 "size": [ 16, 16 ],
                 "alpha": 0.5
               }

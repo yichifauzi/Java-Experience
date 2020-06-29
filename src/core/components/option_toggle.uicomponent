@@ -85,11 +85,11 @@
         "scope": "view"
       },
       {
-        "ignored": "(not $controller_mapping)",
+        "ignored": "(not $use_controller_mapping)",
         "from_button_id": "$controller_mapping_from_id",
         "to_button_id": "$controller_mapping_to_id",
         "mapping_type": "$controller_mapping_type",
-        "scope": "controller"
+        "scope": "$controller_mapping_scope"
       },
       {
         "ignored": "(not $enable_directional_toggling)",
@@ -115,13 +115,14 @@
     "$double_mapping|default": false,
     "$custom_mapping|default": false,
     "$double_mapping_id|default": false,
-    "$controller_mapping|default": false,
+    "$use_controller_mapping|default": false,
     "$controller_mapping_from_id|default": "",
     "$controller_mapping_to_id|default": "",
-    "$controller_mapping_type|default": "",
+    "$controller_mapping_type|default": "global",
+    "controller_mapping_scope|default": "",
     "$custom_mapping_from_id|default": "",
     "$custom_mapping_to_id|default": "",
-    "$custom_mapping_type|default": "",
+    "$custom_mapping_type|default": "global",
     "$enable_directional_toggling|default": false,
     "$toggle_group|default": false,
     "$toggle_name|default": "this_toggle",

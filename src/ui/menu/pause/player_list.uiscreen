@@ -83,7 +83,7 @@
       {
         "player_banner": {
           "type": "image",
-          "texture": "src/core/resources/fmarquespto/textures/white",
+          "texture": "src/core/assets/fmarquespto/textures/white",
           "alpha": 0.3,
           "color": "black",
           "size": ["100%", "100%"],
@@ -97,7 +97,7 @@
 
   "player_banner": {
     "type": "image",
-    "texture": "src/core/resources/fmarquespto/textures/white",
+    "texture": "src/core/assets/fmarquespto/textures/white",
     "alpha": 0.3,
     "color": "black",
     "size": ["100%", "100%"],

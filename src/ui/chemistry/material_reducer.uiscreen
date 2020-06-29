@@ -72,7 +72,7 @@
           "type": "image",
           "layer": 4,
           "size": ["100% - 2px", "100% - 2px"],
-          "texture": "src/core/resources/fmarquespto/textures/white",
+          "texture": "src/core/assets/fmarquespto/textures/white",
           "color": "red",
           "alpha": 0.35,
           "bindings": [

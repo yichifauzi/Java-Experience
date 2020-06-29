@@ -1,7 +1,19 @@
+/* Version: 2.0.0 */
 {
-  "in_bed_screen": {
-    "force_render_below": "$force_render_below",
+  "in_bed_screen@content.base_screen": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.wake_up_button",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_exit",
+        "to_button_id": "button.wake_up_button",
+        "mapping_type": "global"
+      }
+    ],
     "$screen_content": "bed_mcjava.in_bed_screen_content_panel",
-    "$screen_bg_content": "bed_mcjava.screen_background"
+    "$screen_background": "bed_mcjava.screen_background"
   }
 }

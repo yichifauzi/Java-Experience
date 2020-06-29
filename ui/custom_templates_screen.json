@@ -1,7 +1,14 @@
+/* Version: 2.0.0 */
 {
-  "custom_templates_screen@common.base_screen": {
-    "force_render_below": false,
+  "custom_templates_screen@content.base_screen": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      }
+    ],
     "$screen_content": "custom_templates_mcjava.custom_templates_screen_content_panel",
-    "$screen_bg_content": "content.dirt_bg"
+    "$screen_background": "content.dirt_background"
   }
 }

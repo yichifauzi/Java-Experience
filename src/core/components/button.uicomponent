@@ -126,7 +126,7 @@
     "layer": 2,
     "variables": [
       {
-        "requires": "$text_shadow",
+        "requires": "(not $text_shadow)",
         "$button_text_offset": [1, 0]
       }
     ],

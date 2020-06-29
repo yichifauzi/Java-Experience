@@ -1,4 +1,4 @@
-
+/* Version: 2.0.0 */
 {
   "settings_screen_base@settings_common.screen_base": {
     "$screen_content": "",
@@ -7,22 +7,22 @@
 
   "screen_world_create@settings_screen_base": {
     "$screen_content": "world_create_mcjava.world_create_screen_content_panel",
-    "$screen_background": "screen_mcjava.dirt_background"
+    "$screen_background": "content.dirt_background"
   },
 
   "screen_template_create@settings_screen_base": {
     "$screen_content": "world_create_mcjava.world_create_screen_content_panel",
-    "$screen_background": "screen_mcjava.dirt_background"
+    "$screen_background": "content.dirt_background"
   },
 
   "screen_world_edit@settings_screen_base": {
     "$screen_content": "world_edit_mcjava.world_edit_screen_content_panel",
-    "$screen_background": "screen_mcjava.dirt_background"
+    "$screen_background": "content.dirt_background"
   },
 
   "screen_controls_and_settings@settings_screen_base": {
     "$screen_content": "settings_mcjava.settings_screen_content_panel",
-    "$screen_background": "screen_mcjava.dirt_background"
+    "$screen_background": "content.dirt_background"
   },
 
   "screen_world_controls_and_settings@settings_screen_base": {
@@ -33,11 +33,11 @@
   "screen_realm_controls_and_settings@settings_screen_base": {
     "$is_realms": true,
     "$screen_content": "settings_mcjava.settings_screen_content_panel",
-    "$screen_background": "screen_mcjava.dirt_background"
+    "$screen_background": "content.dirt_background"
   },
 
   "screen_realm_settings@settings_screen_base": {
     "$screen_content": "configure_realm_mcjava.configure_realm_screen_content_panel",
-    "$screen_background": "screen_mcjava.dirt_background"
+    "$screen_background": "content.dirt_background"
   }
 }

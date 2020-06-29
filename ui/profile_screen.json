@@ -1,6 +1,29 @@
+/* Version: 2.0.0 */
 {
-  "profile_screen": {
-    "$screen_safe": "profile_mcjava.profile_screen_content_panel",
-    "$screen_bg_content": "profile_mcjava.profile_background"
+  "profile_screen@content.base_screen": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.try_exiting",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_tab_left",
+        "to_button_id": "button.pressedArrowLeft",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_tab_right",
+        "to_button_id": "button.pressedArrowRight",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.controller_select",
+        "to_button_id": "button.coin_wallet",
+        "mapping_type": "global"
+      }
+    ],
+    "$screen_matrix": "profile_mcjava.profile_screen_content_panel",
+    "$screen_background": "profile_mcjava.profile_background"
   }
 }

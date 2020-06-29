@@ -3,20 +3,20 @@
 
   "profile_background": {
     "type": "image",
-    "texture": "src/core/resources/fmarquespto/textures/white",
+    "texture": "src/core/assets/fmarquespto/textures/white",
     "color": [0.188, 0.188, 0.188],
     "size": ["100%", "100%"]
   },
 
   "background": {
     "type": "image",
-    "texture": "src/core/resources/fmarquespto/textures/white",
+    "texture": "src/core/assets/fmarquespto/textures/white",
     "size": ["100%", "100%"]
   },
 
   "side_border": {
     "type": "image",
-    "texture": "src/core/resources/fmarquespto/textures/white",
+    "texture": "src/core/assets/fmarquespto/textures/white",
     "size": [1, "100%"],
     "color": [0.2745, 0.2745, 0.2745]
   },
@@ -226,7 +226,7 @@
 
   "edit_appearance_button@profile_mcjava.side_button": {
     "$pressed_button_name": "button.edit_appearance_preset",
-    "$icon": "src/core/resources/launcher/textures/profile",
+    "$icon": "src/core/assets/launcher/textures/profile",
     "$button_text": "#edit_appearance_text",
     "$button_text_binding_type": "global",
     "$button_binding_condition": "always",
@@ -242,7 +242,7 @@
 
   "delete_appearance_button@profile_mcjava.side_button": {
     "$button_text": "Delete",
-    "$icon": "src/core/resources/launcher/textures/delete",
+    "$icon": "src/core/assets/launcher/textures/delete",
     "$pressed_button_name": "button.delete_appearance_preset",
     "bindings": [
       {
@@ -255,13 +255,13 @@
   },
 
   "achievements_button@profile_mcjava.side_button": {
-    "$icon": "src/core/resources/launcher/textures/news",
+    "$icon": "src/core/assets/launcher/textures/news",
     "$pressed_button_name": "button.achievements",
     "$button_text": "gui.achievements"
   },
 
   "settings_button@profile_mcjava.side_button": {
-    "$icon": "src/core/resources/launcher/textures/settings",
+    "$icon": "src/core/assets/launcher/textures/settings",
     "$pressed_button_name": "button.settings",
     "$button_text": "menu.options"
   },  
@@ -535,7 +535,7 @@
               "add_button": {
                 "size": [18, 18],
                 "type": "image",
-                "texture": "src/core/resources/launcher/textures/plus",
+                "texture": "src/core/assets/launcher/textures/plus",
                 "layer": 2
               }
             },
@@ -551,7 +551,7 @@
             {
               "hover@background": {
                 "alpha": 0.05,
-                "texture": "src/core/resources/launcher/textures/bordered_white"
+                "texture": "src/core/assets/launcher/textures/bordered_white"
               }
             }
           ],

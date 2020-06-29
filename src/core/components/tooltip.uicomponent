@@ -16,7 +16,7 @@
       {
         "bg": {
           "type": "image",
-          "texture": "src/core/resources/fmarquespto/textures/tooltip",
+          "texture": "src/core/assets/fmarquespto/textures/tooltip",
           "size": ["100%c + 8px", "100%c + 8px"],
           "offset": ["50%c + 12px", "50%c - 12px"],
           "nineslice_size": 2,

@@ -45,13 +45,13 @@
   "form_bg": {
     "type": "image",
     "size": [176, 133],
-    "texture": "src/core/resources/fmarquespto/textures/server_form"
+    "texture": "src/core/assets/fmarquespto/textures/server_form"
   },
 
   "form_custom_bg": {
     "type": "image",
     "size": [176, 133],
-    "texture": "src/core/resources/fmarquespto/textures/server_form_custom"
+    "texture": "src/core/assets/fmarquespto/textures/server_form_custom"
   },
 
   "long_form": {
@@ -207,7 +207,7 @@
                   {
                     "highlight_slot_image": {
                       "type": "image",
-                      "texture": "src/core/resources/fmarquespto/textures/white",
+                      "texture": "src/core/assets/fmarquespto/textures/white",
                       "size": [16, 16],
                       "color": "$highlight_slot_bg_color",
                       "alpha": "$highlight_slot_bg_alpha"
@@ -244,7 +244,7 @@
                   {
                     "highlight_slot_image": {
                       "type": "image",
-                      "texture": "src/core/resources/fmarquespto/textures/white",
+                      "texture": "src/core/assets/fmarquespto/textures/white",
                       "size": [16, 16],
                       "color": "$highlight_slot_bg_color",
                       "alpha": "$highlight_slot_bg_alpha"

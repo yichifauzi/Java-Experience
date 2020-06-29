@@ -3,11 +3,14 @@
 
   "blast_furnace_recipe_book_content_panel@common.root_panel": {
     "size": [147, 166],
+    "$top_helper_offset": [0, -18],
+    "$bottom_helper_offset": [0, -59],
     "controls": [
       { "bg@resources.recipe_book_bg": {} },
-      { "search_tab@blast_furnace_recipe_book_mcjava.search_tab": { "offset": [ -31, 4 ] } },
-      { "ores_tab@blast_furnace_recipe_book_mcjava.ores_tab": { "offset": [ -31, 30 ] } },
-      { "minerals_tab@blast_furnace_recipe_book_mcjava.minerals_tab": { "offset": [ -31, 56 ] } },
+      { "gamepad_helper_bumpers@crafting_rb_mcjava.gamepad_helper_bumpers": {} },
+      { "search_tab@blast_furnace_recipe_book_mcjava.search_tab": { "offset": [-32, 3] } },
+      { "ores_tab@blast_furnace_recipe_book_mcjava.ores_tab": { "offset": [-32, 30] } },
+      { "minerals_tab@blast_furnace_recipe_book_mcjava.minerals_tab": { "offset": [-32, 57] } },
       { "blast_furnace_recipes_panel@blast_furnace_recipe_book_mcjava.blast_furnace_recipes_panel": {} }
     ]
   },
@@ -16,29 +19,20 @@
     "$item_id_aux": 22609920,
     "$tab_control_name": "search_tab_view",
     "$toggle_index": 0,
-    "$toggle_default_state": true,
-    "$focus_id": "search_tab",
-    "$focus_override_down": "minerals_tab",
-    "$focus_override_up": "FOCUS_OVERRIDE_STOP"
+    "$toggle_default_state": true
   },
 
   "ores_tab@furnace_recipes_mcjava.left_tab": {
     "$item_id_aux": 4784128,
     "$tab_control_name": "ores_tab_view",
-    "$toggle_index": 1,
-    "$focus_id": "ores_tab",
-    "$focus_override_up": "search_tab",
-    "$focus_override_down": "minerals_tab"
+    "$toggle_index": 1
   },
 
   "minerals_tab@furnace_recipes_mcjava.left_tab": {
     "$item_left_id_aux": 16777216,
     "$item_right_id_aux": 20709376,
     "$tab_control_name": "minerals_tab_view",
-    "$toggle_index": 2,
-    "$focus_id": "minerals_tab",
-    "$focus_override_up": "ores_tab",
-    "$focus_override_down": "FOCUS_OVERRIDE_STOP"
+    "$toggle_index": 2
   },
 
   "blast_furnace_recipes_panel": {

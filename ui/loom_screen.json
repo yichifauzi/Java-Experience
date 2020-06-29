@@ -1,9 +1,6 @@
+/* Version: 2.0.0 */
 {
-  "namespace": "loom",
-
-  "loom_screen": {
-    "$screen_bg_content": "common.screen_background",
-    "force_render_below": "$force_render_below",
+  "loom_screen@content.inventory_screen": {
     "button_mappings": [
       {
         "from_button_id": "button.menu_cancel",
@@ -80,15 +77,7 @@
         "mapping_type": "global"
       }
     ],
-    "variables": [
-      {
-        "requires": "$desktop_screen",
-        "$screen_content": "loom_mcjava.loom_screen_content_panel"
-      },
-      {
-        "requires": "$pocket_screen",
-        "$screen_content": "loom_mcjava.loom_screen_content_panel"
-      }
-    ]
+    "$screen_content": "loom_mcjava.loom_screen_content_panel",
+    "$screen_background": "content.screen_background"
   }
 }

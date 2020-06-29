@@ -1,7 +1,6 @@
 /* Version: 2.0.0 */
 {
-  "enchanting_screen@content.inventory_screen_common": {
-    "force_render_below": "$force_render_below",
+  "enchanting_screen@content.inventory_screen": {
     "$screen_content": "enchanting_table_mcjava.enchanting_table_screen_content_panel",
     "$screen_background": "content.container_screen_background"
   }

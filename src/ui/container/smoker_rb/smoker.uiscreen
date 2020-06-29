@@ -3,10 +3,13 @@
 
   "smoker_recipe_book_content_panel@common.root_panel": {
     "size": [147, 166],
+    "$top_helper_offset": [0, -18],
+    "$bottom_helper_offset": [0, -86],
     "controls": [
       { "bg@resources.recipe_book_bg": {} },
-      { "search_tab@smoker_recipe_book_mcjava.search_tab": { "offset": [ -31, 4 ] } },
-      { "food_tab@smoker_recipe_book_mcjava.food_tab": { "offset": [ -31, 30 ] } },
+      { "gamepad_helper_bumpers@crafting_rb_mcjava.gamepad_helper_bumpers": {} },
+      { "search_tab@smoker_recipe_book_mcjava.search_tab": { "offset": [ -32, 3 ] } },
+      { "food_tab@smoker_recipe_book_mcjava.food_tab": { "offset": [ -32, 30 ] } },
       { "smoker_recipes_panel@smoker_recipes_panel": {} }
     ]
   },
@@ -15,19 +18,13 @@
     "$item_id_aux": 22609920,
     "$tab_control_name": "search_tab_view",
     "$toggle_index": 0,
-    "$toggle_default_state": true,
-    "$focus_id": "search_tab",
-    "$focus_override_down": "food_tab",
-    "$focus_override_up": "FOCUS_OVERRIDE_STOP"
+    "$toggle_default_state": true
   },
 
   "food_tab@furnace_recipes_mcjava.left_tab": {
     "$item_id_aux": 20905984,
     "$tab_control_name": "food_tab_view",
-    "$toggle_index": 1,
-    "$focus_id": "food_tab",
-    "$focus_override_up": "search_tab",
-    "$focus_override_down": "FOCUS_OVERRIDE_STOP"
+    "$toggle_index": 1
   },
   
   "smoker_recipes_panel": {

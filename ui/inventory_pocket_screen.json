@@ -1,6 +1,6 @@
 /* Version: 2.0.0 */
 {
-  "inventory_screen_pocket_base@content.inventory_screen_common": {
+  "inventory_screen_pocket_base@content.inventory_screen": {
     "button_mappings": [
       {
         "from_button_id": "button.menu_cancel",
@@ -94,15 +94,17 @@
     ]
   },
 
-  "crafting_screen_pocket@crafting_pocket.inventory_screen_pocket_base": {
+  "crafting_screen_pocket": {
+    "send_telemetry": false,
+    "force_close_on_player_hurt": "$force_close_on_player_hurt",
     "$screen_content": "crafting_table_mcjava.crafting_table_screen_content_panel",
-    "$screen_background": "content.container_screen_background",
-    "force_render_below": "$force_render_below"
+    "$screen_background": "content.container_screen_background"
   },
 
   "inventory_screen": {
+    "send_telemetry": false,
+    "force_close_on_player_hurt": "$force_close_on_player_hurt",
     "$screen_content": "crafting.inv_panel",
-    "$screen_background": "content.container_screen_background",
-    "force_render_below": "$force_render_below"
+    "$screen_background": "content.container_screen_background"
   }
 }

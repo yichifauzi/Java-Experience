@@ -247,13 +247,13 @@
 
   "scroll_track_image": {
     "type": "image",
-    "texture": "src/core/resources/fmarquespto/textures/white",
+    "texture": "src/core/assets/fmarquespto/textures/white",
     "color": [0.0, 0.0, 0.0]
   },
 
   "scroll_box_image": {
     "type": "image",
-    "texture": "src/core/resources/fmarquespto/textures/scrollbox",
+    "texture": "src/core/assets/fmarquespto/textures/scrollbox",
     "size": ["100%", "100%"]
   },
 

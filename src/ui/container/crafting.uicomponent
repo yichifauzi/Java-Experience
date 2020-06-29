@@ -57,21 +57,7 @@
                 "size": [176, 166],
                 "layer": 1,
                 "controls": [
-                  {
-                    "mob_effects_renderer@hud.mob_effects_renderer": {
-                      "size": [176, 250],
-                      "offset": ["-150% - 60px", 0],
-                      "anchor_from": "top_left",
-                      "anchor_to": "top_left",
-                      "bindings": [
-                        {
-                          "binding_type": "global",
-                          "binding_name": "(not #is_survival_layout)",
-                          "binding_name_override": "#visible"
-                        }
-                      ]
-                    }
-                  },
+                  { "close_button@container_mcjava.close_button": {} },
                   { "$container_bg@$container_bg": {} },
                   {
                     "screen_inventory": {
@@ -454,7 +440,7 @@
       {
         "red": {
           "type": "image",
-          "texture": "src/core/resources/fmarquespto/textures/white",
+          "texture": "src/core/assets/fmarquespto/textures/white",
           "$red_cell_size|default": [ "100% - 2px", "100% - 2px" ],
           "size": "$red_cell_size",
           "anchor_to": "center",
@@ -467,7 +453,7 @@
       {
         "red": {
           "type": "image",
-          "texture": "src/core/resources/fmarquespto/textures/white",
+          "texture": "src/core/assets/fmarquespto/textures/white",
           "$red_cell_size|default": [ "100% - 2px", "100% - 2px" ],
           "size": "$red_cell_size",
           "anchor_to": "center",

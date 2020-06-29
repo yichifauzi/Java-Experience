@@ -3,11 +3,10 @@
 
   /* Recipe Book Toggle Button */
 
-  "furnace_recipe_book_button@toggle_button_mcjava.toggle_button": {
+  "furnace_rb_button@toggle_button_mcjava.toggle_button": {
     "size": [20, 18],
     "anchor_from": "top_left",
     "anchor_to": "top_left",
-    "offset": [20, 34],
     "layer": 10,
     "$toggle_index": 1,
     "$toggle_control_name": "$furnace_view",
@@ -23,12 +22,35 @@
     "$focus_id": "recipe_book_layout_toggle"
   },
 
+  "furnace_recipe_book_button": {
+    "type": "panel",
+    "size": [20, 18],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [20, 34],
+    "layer": 10,
+    "$use_controller_mapping": true,
+    "$controller_mapping_from_id": "button.controller_back",
+    "$controller_mapping_to_id": "button.menu_select",
+    "controls": [
+      {
+        "gamepad_helper@gamepadhelper.gamepad_helper_rb_button": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [0, -24]
+        }
+      },
+      { "furnace_rb_button@furnace_rb_button": {} }
+    ]
+  },
+
   /* Common Tab */
 
   "left_tab@tab_mcjava.tab": {
     "size": [35, 26],
     "$toggle_focus_enabled": false,
     "$tab_name": "nav_tab",
+    "$toggle_binding_type": "global",
     "$toggle_default_selected": 0,
     "$tab_type_panel": "recipes_mcjava.tab_with_item_renderer_panel",
     "$unchecked_tab_bg": "resources.recipe_book_tab_unchecked",
@@ -105,6 +127,36 @@
                 "$toggle_button_name": "$right_button_name",
                 "$toggle_control_name": "$right_control_name"
               }
+            },
+            {
+              "gamepadhelpers_panel": {
+                "type": "panel",
+                "controls": [
+                  {
+                    "gamepad_helper_left_trigger@gamepadhelper.gamepad_helper_left_trigger": {
+                      "ignored": "$ignore_left_button",
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "offset": [-26, -1]
+                    }
+                  },
+                  {
+                    "gamepad_helper_right_trigger@gamepadhelper.gamepad_helper_right_trigger": {
+                      "ignored": "$ignore_right_button",
+                      "anchor_from": "right_middle",
+                      "anchor_to": "right_middle",
+                      "offset": [28, -1]
+                    }
+                  }
+                ],
+                "bindings": [
+                  {
+                    "ignored": "$render_gamepadhelpers",
+                    "binding_name": "#gamepad_helper_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
             }
           ]
         }
@@ -170,7 +222,7 @@
 
   "red_background": {
     "type": "image",
-    "texture": "src/core/resources/fmarquespto/textures/white",
+    "texture": "src/core/assets/fmarquespto/textures/white",
     "$red_cell_size|default": [ "100% - 2px", "100% - 2px" ],
     "size": "$red_cell_size",
     "anchor_to": "center",

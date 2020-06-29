@@ -24,7 +24,7 @@
     "src/core/resources1.ui",
     "src/core/screen.ui",
     "src/core/screen.ui",
-    "src/core/resources/resources.uitexture",
+    "src/core/assets/resources.uitexture",
     /* UI - Authentication */
     "src/ui/authentication/authentication.uiscreen",
     "src/ui/authentication/authentication_modals.uiscreen",

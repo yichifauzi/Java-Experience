@@ -81,7 +81,7 @@
             {
               "underline": {
                 "type": "image",
-                "texture": "src/core/resources/fmarquespto/textures/white",
+                "texture": "src/core/assets/fmarquespto/textures/white",
                 "size": ["100% + 2px", "1px"],
                 "anchor_from": "bottom_middle",
                 "anchor_to": "bottom_middle",
@@ -246,7 +246,7 @@
 
   "overlay": {
     "type": "image",
-    "texture": "src/core/resources/fmarquespto/textures/white",
+    "texture": "src/core/assets/fmarquespto/textures/white",
     "color": [0.70, 0.70, 0.70],
     "size": [32, 32],
     "anchor_from": "top_left",
@@ -296,7 +296,7 @@
   },
 
   "default_icon_image@resource_packs_mcjava.icon_image": {
-    "texture": "src/core/resources/fmarquespto/textures/pack"
+    "texture": "src/core/assets/fmarquespto/textures/pack"
   },
 
   "available_icon_image@resource_packs_mcjava.icon_image_system": {
@@ -712,7 +712,7 @@
             {
               "icon": {
                 "type": "image",
-                "texture": "src/core/resources/fmarquespto/textures/conf"
+                "texture": "src/core/assets/fmarquespto/textures/conf"
               }
             }
           ]
@@ -725,7 +725,7 @@
             {
               "icon": {
                 "type": "image",
-                "texture": "src/core/resources/fmarquespto/textures/confhover"
+                "texture": "src/core/assets/fmarquespto/textures/confhover"
               }
             }
           ]
@@ -738,7 +738,7 @@
             {
               "icon": {
                 "type": "image",
-                "texture": "src/core/resources/fmarquespto/textures/confhover"
+                "texture": "src/core/assets/fmarquespto/textures/confhover"
               }
             }
           ]

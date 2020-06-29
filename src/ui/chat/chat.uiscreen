@@ -30,7 +30,7 @@
       {
         "focus_border": {
           "type": "image",
-          "texture": "src/core/resources/fmarquespto/textures/border",
+          "texture": "src/core/assets/fmarquespto/textures/border",
           "color": "white",
           "size": ["100%", "100%"],
           "layer": 2
@@ -316,7 +316,7 @@
   "keyboard_image": {
     "type": "image",
     "size": [12, 12],
-    "texture": "src/core/resources/fmarquespto/textures/icon/keyboard"
+    "texture": "src/core/assets/fmarquespto/textures/icon/keyboard"
   },
 
   "text_edit_box@text_box_mcjava.text_box": {

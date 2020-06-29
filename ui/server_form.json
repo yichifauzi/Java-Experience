@@ -1,6 +1,14 @@
+/* Version: 2.0.0 */
 {
-  "third_party_server_screen": {
+  "third_party_server_screen@content.base_screen": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      }
+    ],
     "$screen_content": "server_form_mcjava.server_form_screen_content_panel",
-    "$screen_bg_content": "screen_mcjava.screen_background"
+    "$screen_background": "content.screen_background"
   }
 }

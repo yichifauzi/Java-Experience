@@ -88,7 +88,7 @@
 
   "base_background": {
     "type": "image",
-    "texture": "src/core/resources/fmarquespto/textures/white",
+    "texture": "src/core/assets/fmarquespto/textures/white",
     "color": "black",
     "ignored": "$is_holographic"
   },
@@ -105,7 +105,7 @@
 
   "shadow_top": {
     "type": "image",
-    "texture": "src/core/resources/fmarquespto/textures/shadow_top",
+    "texture": "src/core/assets/fmarquespto/textures/shadow_top",
     "size": ["100%", 4],
     "anchor_from": "top_left",
     "anchor_to": "top_left",
@@ -113,7 +113,7 @@
   },
 
   "shadow_bottom@content.shadow_top": {
-    "texture": "src/core/resources/fmarquespto/textures/shadow_bottom",
+    "texture": "src/core/assets/fmarquespto/textures/shadow_bottom",
     "anchor_from": "bottom_left",
     "anchor_to": "bottom_left"
   },
@@ -392,7 +392,7 @@
     ]
   },
 
-  "inventory_screen_common@base_screen": {
+  "inventory_screen@base_screen": {
     "cache_screen": true,
     "$gamepad_cursor|default": true,
     "gamepad_cursor": "$gamepad_cursor",

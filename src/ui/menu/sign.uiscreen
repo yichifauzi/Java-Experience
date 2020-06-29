@@ -42,13 +42,13 @@
     "texture": "$sign_texture_location",
     "size": [94, 101],
     "offset": [-1, 0],
-    "$sign_texture_location|default": "src/core/resources/fmarquespto/textures/sign",
+    "$sign_texture_location|default": "src/core/assets/fmarquespto/textures/sign",
     "variables": [
-      { "requires": "($sign_texture = 'textures/ui/sign_acacia')", "$sign_texture_location": "src/core/resources/fmarquespto/textures/sign_acacia" },
-      { "requires": "($sign_texture = 'textures/ui/sign_spruce')", "$sign_texture_location": "src/core/resources/fmarquespto/textures/sign_spruce" },
-      { "requires": "($sign_texture = 'textures/ui/sign_birch')", "$sign_texture_location": "src/core/resources/fmarquespto/textures/sign_birch" },
-      { "requires": "($sign_texture = 'textures/ui/sign_jungle')", "$sign_texture_location": "src/core/resources/fmarquespto/textures/sign_jungle" },
-      { "requires": "($sign_texture = 'textures/ui/sign_darkoak')", "$sign_texture_location": "src/core/resources/fmarquespto/textures/sign_darkoak" }
+      { "requires": "($sign_texture = 'textures/ui/sign_acacia')", "$sign_texture_location": "src/core/assets/fmarquespto/textures/sign_acacia" },
+      { "requires": "($sign_texture = 'textures/ui/sign_spruce')", "$sign_texture_location": "src/core/assets/fmarquespto/textures/sign_spruce" },
+      { "requires": "($sign_texture = 'textures/ui/sign_birch')", "$sign_texture_location": "src/core/assets/fmarquespto/textures/sign_birch" },
+      { "requires": "($sign_texture = 'textures/ui/sign_jungle')", "$sign_texture_location": "src/core/assets/fmarquespto/textures/sign_jungle" },
+      { "requires": "($sign_texture = 'textures/ui/sign_darkoak')", "$sign_texture_location": "src/core/assets/fmarquespto/textures/sign_darkoak" }
     ]
   }
 }

@@ -290,7 +290,7 @@
   "player_position": {
     "type": "image",
     "size": [ "100%c + 2px", "100%c - 1px" ],
-    "texture": "src/core/resources/fmarquespto/textures/white",
+    "texture": "src/core/assets/fmarquespto/textures/white",
     "color": "$player_position_bg_color",
     "anchor_from": "$player_position_anchor",
     "anchor_to": "$player_position_anchor",
@@ -332,11 +332,20 @@
 
   "chat_panel": {
     "type": "panel",
-    "clips_children": false,
+    "clips_children": true,
     "anchor_from": "$chat_anchor",
     "anchor_to": "$chat_anchor",
     "size": "$chat_size",
     "offset": "$chat_offset",
+    "anims": [
+      "@gamepadhelper.anim_gamepadhelper_exit_push",
+      "@gamepadhelper.anim_gamepadhelper_exit_pop",
+      "@gamepadhelper.anim_gamepadhelper_entrance_push",
+      "@gamepadhelper.anim_gamepadhelper_entrance_pop"
+    ],
+    "animation_reset_name": "screen_animation_reset",
+    "disable_anim_fast_forward": true,
+    "propagate_alpha": true,
     "controls": [
       {
         "stack_panel": {
@@ -347,9 +356,7 @@
           "factory": {
             "name": "chat_item_factory",
             "max_children_size": 50,
-            "control_ids": {
-              "chat_item": "chat_item@hud_mcjava.chat_grid_item"
-            }
+            "control_ids": { "chat_item": "chat_item@hud_mcjava.chat_grid_item" }
           }
         }
       }
@@ -425,6 +432,15 @@
     "offset": [ 10, 0 ],
     "size": [ "100%", "100%c" ],
     "max_size": [ "100%", "50%" ],
+    "anims": [
+      "@gamepadhelper.anim_gamepadhelper_exit_push",
+      "@gamepadhelper.anim_gamepadhelper_exit_pop",
+      "@gamepadhelper.anim_gamepadhelper_entrance_push",
+      "@gamepadhelper.anim_gamepadhelper_entrance_pop"
+    ],
+    "animation_reset_name": "screen_animation_reset",
+    "disable_anim_fast_forward": true,
+    "propagate_alpha": true,
     "controls": [
       {
         "stack_panel": {
@@ -456,6 +472,15 @@
     "anchor_to": "bottom_right",
     "size": [ "100%c", "100%c" ],
     "max_size": [ "100%", "50%" ],
+    "anims": [
+      "@gamepadhelper.anim_gamepadhelper_exit_push",
+      "@gamepadhelper.anim_gamepadhelper_exit_pop",
+      "@gamepadhelper.anim_gamepadhelper_entrance_push",
+      "@gamepadhelper.anim_gamepadhelper_entrance_pop"
+    ],
+    "animation_reset_name": "screen_animation_reset",
+    "disable_anim_fast_forward": true,
+    "propagate_alpha": true,
     "controls": [
       {
         "stack_panel": {
@@ -491,7 +516,7 @@
           "$icon_image_ref": "hud.base_icon_image",
           "bindings": [
             {
-              "ignored": "$force_render_helpers",
+              "ignored": "$render_gamepadhelpers",
               "binding_name": "#gamepad_button_visible",
               "binding_name_override": "#visible",
               "binding_type": "collection",
@@ -517,7 +542,7 @@
     "$tooltip_collection_prefix|default": "",
     "bindings": [
       {
-        "ignored": "$force_render_helpers",
+        "ignored": "$render_gamepadhelpers",
         "binding_name": "#tooltip_visible",
         "binding_name_override": "#visible",
         "binding_type": "collection",

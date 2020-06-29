@@ -1,13 +1,8 @@
 {
   /* Debug */
-  "$force_render_helpers": false,
-  "$force_render_below": "(not $game_pad)",
-  "$close_on_player_hurt": false,
-
-/*"$close_anvil_on_player_hurt": false,
-  "$close_barrel_on_player_hurt": false,
-  "$close_beacon_on_player_hurt": false,
-  "$close_brewing_stand_on_player_hurt": false,*/
+  "$render_gamepadhelpers": true,
+  "$render_touch_close_btn": false,
+  "$force_close_on_player_hurt": false,
 
   /* Texts */
   "$minecraft_text": "Minecraft",
@@ -116,13 +111,9 @@
   "$toasts_resolution": "256x",
   "$options_background_resolution": "256x",
   "$checkbox_resolution": "256x",
-  
-
   "$world_selection_resolution": "256x",
   "$server_selection_resolution": "256x",
-
   "$book_resolution": "256x",
-
   "$anvil_resolution": "256x",
   "$beacon_resolution": "256x",
   "$brewing_stand_resolution": "256x",
@@ -145,39 +136,9 @@
   "$recipe_book_resolution": "256x",
   "$recipe_button_resolution": "256x",
 
-  /* Advanced Defs */
+  /* Chat */
   "$chat_size": [326, 180],
   "$chat_offset": [0, -40],
   "$chat_anchor": "bottom_left",
-  "$chat_lines_spacing": 0,
-
-  "$crafting_table_container_title_offset": [29, 5],
-  "$crafting_table_container_title_anchor": "top_left",
-  "$survival_inv_container_title_offset": [97, 7],
-  "$survival_inv_container_title_anchor": "top_left",
-
-  /* Ultimate Advanced Defs */
-  "$crafting_table_container_crafting_grid_offset": [29, 16],
-  "$crafting_table_container_crafting_grid_anchor": "top_left",
-  "$crafting_table_container_output_grid_offset": [123, 34],
-  "$crafting_table_container_output_grid_anchor": "top_left",
-  "$crafting_table_container_recipe_book_button_offset": [5, 34],
-  "$crafting_table_container_recipe_book_button_anchor": "top_left",
-  "$furnaces_container_recipe_book_button_offset": [15, 34],
-  "$furnaces_container_recipe_book_button_anchor": "top_left",
-
-  "$survival_inv_container_player_renderer_offset": [26, 8],
-  "$survival_inv_container_player_renderer_anchor": "top_left",
-  "$survival_inv_container_player_armor_offset": [7, 7],
-  "$survival_inv_container_player_armor_anchor": "top_left",
-  "$survival_inv_container_player_offhand_offset": [76, 61],
-  "$survival_inv_container_player_offhand_anchor": "top_left",
-  "$survival_inv_container_crafting_grid_offset": [97, 17],
-  "$survival_inv_container_crafting_grid_anchor": "top_left",
-  "$survival_inv_container_output_grid_offset": [153, 27],
-  "$survival_inv_container_output_grid_anchor": "top_left",
-  "$survival_inv_container_invalid_crafting_icon_offset": [134, 28],
-  "$survival_inv_container_invalid_crafting_icon_anchor": "top_left",
-  "$survival_inv_container_recipe_book_button_offset": [104, 61],
-  "$survival_inv_container_recipe_book_button_anchor": "top_left"
+  "$chat_lines_spacing": 0
 }

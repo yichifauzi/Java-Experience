@@ -1,11 +1,10 @@
+/* Version: 2.0.0 */
 {
   "namespace": "matreduce",
   
-  "material_reducer@content.inventory_screen_common": {
-    "$close_on_player_hurt|default": false,
-    "close_on_player_hurt": "$close_on_player_hurt",
+  "material_reducer@content.inventory_screen": {
+    "force_close_on_player_hurt": "$force_close_on_player_hurt",
     "$screen_content": "material_reducer_mcjava.material_reducer_screen_content_panel",
-    "$screen_background": "common.screen_background",
-    "force_render_below": "$force_render_below"
+    "$screen_background": "content.screen_background"
   }
 }

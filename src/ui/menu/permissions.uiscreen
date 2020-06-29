@@ -43,7 +43,7 @@
 
   "black_bg": {
     "type": "image",
-    "texture": "src/core/resources/fmarquespto/textures/white",
+    "texture": "src/core/assets/fmarquespto/textures/white",
     "color": "black",
     "size": ["100%", "100%"],
     "alpha": 0.35,

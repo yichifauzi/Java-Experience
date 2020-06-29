@@ -154,7 +154,7 @@
       {
         "background": {
           "type": "image",
-          "texture": "src/core/resources/fmarquespto/textures/white",
+          "texture": "src/core/assets/fmarquespto/textures/white",
           "layer": -5,
           "color": [0.537, 0.537, 0.537],
           "size": ["100% + 4px", "100% + 2px"]

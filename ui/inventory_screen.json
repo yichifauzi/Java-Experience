@@ -1,6 +1,6 @@
 /* Version: 2.0.0 */
 {
-  "inventory_screen_base@content.inventory_screen_common": {
+  "inventory_screen_base@content.inventory_screen": {
     "button_mappings": [
       {
         "from_button_id": "button.menu_cancel",
@@ -95,15 +95,17 @@
   },
 
   "crafting_screen": {
+    "send_telemetry": false,
+    "force_close_on_player_hurt": "$force_close_on_player_hurt",
     "$screen_content": "crafting_table_mcjava.crafting_table_screen_content_panel",
-    "$screen_background": "content.container_screen_background",
-    "force_render_below": "$force_render_below"
+    "$screen_background": "content.container_screen_background"
   },
 
   "inventory_screen": {
+    "send_telemetry": false,
+    "force_close_on_player_hurt": "$force_close_on_player_hurt",
     "$screen_content": "crafting.inv_panel",
-    "$screen_background": "content.container_screen_background",
-    "force_render_below": "$force_render_below"
+    "$screen_background": "content.container_screen_background"
   },
 
   "inv_panel": {
@@ -148,15 +150,16 @@
           "controls": [
             { "container_gamepad_helpers_second_row@crafting.container_gamepad_helpers_second_row": {} },
             {
-              "container_gamepad_helpers@common.container_gamepad_helpers": {
-                "$helper_x_control": "crafting.inventory_x_gamepad_helper",
-                "$helper_y_control": "crafting.inventory_y_gamepad_helper",
-                "$helper_a_control": "crafting.inventory_a_gamepad_helper"
+              "container_gamepad_helpers@gamepadhelper.container_gamepad_helpers": {
+                "$helper_x_control": "gamepadhelper.inventory_x_gamepad_helper",
+                "$helper_y_control": "gamepadhelper.inventory_y_gamepad_helper",
+                "$helper_a_control": "gamepadhelper.inventory_a_gamepad_helper"
               }
             }
           ],
           "bindings": [
             {
+              "ignored": "$render_gamepadhelpers",
               "binding_name": "#gamepad_helper_visible",
               "binding_name_override": "#visible"
             }
@@ -185,6 +188,42 @@
             }
           ],
           "offset": "$offset"
+        }
+      }
+    ]
+  },
+
+  "container_gamepad_helpers_second_row": {
+    "type": "stack_panel",
+    "size": [ "100%c", "100%c" ],
+    "orientation": "horizontal",
+    "controls": [
+      {
+        "buffer_panel_left": {
+          "type": "panel",
+          "size": [ 10, 0 ]
+        }
+      },
+      {
+        "thumbstick_visibility": {
+          "type": "panel",
+          "size": [ "100%c", "100%c" ],
+
+          "controls": [
+            {
+              "gamepad_helper_thumbstick_left@gamepadhelper.gamepad_helper_thumbstick_left": {
+                "$gamepad_helper_size": [ "100%c", 20 ],
+                "bindings": [
+                  {
+                    "ignored": "$render_gamepadhelpers",
+                    "binding_name": "#gamepad_helper_ls_visible",
+                    "binding_name_override": "#visible",
+                    "binding_condition": "always"
+                  }
+                ]
+              }
+            }
+          ]
         }
       }
     ]

@@ -1,7 +1,14 @@
+/* Version: 2.0.0 */
 {
-  "command_block_screen": {
+  "command_block_screen@content.base_screen": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      }
+    ],
     "$screen_content": "command_block_mcjava.command_block_screen_content_panel",
-    "$screen_bg_content": "screen_mcjava.screen_background",
-    "force_render_below": true
+    "$screen_background": "content.screen_background"
   }
 }

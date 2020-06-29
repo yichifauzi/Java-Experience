@@ -185,7 +185,7 @@
       {
         "img": {
           "type": "image",
-          "texture": "src/core/resources/fmarquespto/textures/border",
+          "texture": "src/core/assets/fmarquespto/textures/border",
           "size": ["100%", "100%"],
           "nineslice_size": 1,
           "visible": "($state = checked_hover or $state = unchecked_hover)"
