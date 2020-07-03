@@ -1,11 +1,12 @@
+/* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "seed_picker_mcjava",
+  "namespace": "seed_picker_ui",
 
   "seed_picker_screen_content_panel@content.scroll_screen": {
-    "$top_content": "seed_picker_mcjava.top_content",
+    "$top_content": "seed_picker_ui.top_content",
     "$top_content_size": ["100%", 44],
-    "$middle_content": "seed_picker_mcjava.scroll_content",
-    "$bottom_content": "seed_picker_mcjava.bottom_content",
+    "$middle_content": "seed_picker_ui.scroll_content",
+    "$bottom_content": "seed_picker_ui.bottom_content",
     "$no_clip_path": true,
     "$scroll_clip_path": false
   },
@@ -13,8 +14,8 @@
   "top_content": {
     "type": "panel",
     "controls": [
-      { "title@screen_mcjava.title": { "offset": [0, 5], "text": "seedPicker.title" } },
-      { "search_box@seed_picker_mcjava.search_box": {} }
+      { "title@screen_ui.title": { "offset": [0, 5], "text": "seedPicker.title" } },
+      { "search_box@seed_picker_ui.search_box": {} }
     ]
   },
 
@@ -29,8 +30,8 @@
           "size": ["100%", "100%c"],
           "clips_children": true,
           "controls": [
-            { "seeds_selection_panel@seed_picker_mcjava.seeds_selection_panel": {} },
-            { "seeds_grid@seed_picker_mcjava.seeds_grid": {} }
+            { "seeds_selection_panel@seed_picker_ui.seeds_selection_panel": {} },
+            { "seeds_grid@seed_picker_ui.seeds_grid": {} }
           ]
         }
       },
@@ -42,7 +43,7 @@
     "type": "panel",
     "size": [310, 20],
     "controls": [
-      { "seed_use@seed_picker_mcjava.seed_use_panel": {} },
+      { "seed_use@seed_picker_ui.seed_use_panel": {} },
       {
         "back@content.exit_button": {
           "$button_text": "gui.cancel",
@@ -53,7 +54,7 @@
     ]
   },
 
-  "search_box@text_box_mcjava.text_box": {
+  "search_box@text_box_ui.text_box": {
     "size": [202, 22],
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
@@ -68,9 +69,10 @@
     "size": ["100%", "default"],
     "anchor_to": "top_left",
     "anchor_from": "top_left",
-    "grid_item_template": "seed_picker_mcjava.seed_item_grid",
+    "grid_item_template": "seed_picker_ui.seed_item_grid",
     "grid_rescaling_type": "horizontal",
     "collection_name": "ugc_items",
+    "$collection_name": "ugc_items",
     "bindings": [
       {
         "binding_name": "#ugc_max_grid_items",
@@ -83,7 +85,7 @@
     "type": "panel",
     "size": ["100%", 36],
     "layer": 2,
-    "controls": [ { "item@seed_picker_mcjava.seeds_grid_item_content_panel": {} } ]
+    "controls": [ { "item@seed_picker_ui.seeds_grid_item_content_panel": {} } ]
   },
 
   "seeds_grid_item_content_panel": {
@@ -93,8 +95,8 @@
     "anchor_to": "center",
     "layer": 2,
     "controls": [
-      { "screenshot@seed_picker_mcjava.world_image": { "layer": 4 } },
-      { "seed_item_button@seed_picker_mcjava.seed_item_button": {} },
+      { "screenshot@seed_picker_ui.world_image": { "layer": 4 } },
+      { "seed_item_button@seed_picker_ui.seed_item_button": {} },
       {
         "text_panel": {
           "type": "panel",
@@ -103,7 +105,7 @@
           "anchor_to": "top_left",
           "offset": [34, 0],
           "layer": 2,
-          "controls": [ { "text_panel@seed_picker_mcjava.seeds_item_text_panel": {} } ]
+          "controls": [ { "text_panel@seed_picker_ui.seeds_item_text_panel": {} } ]
         }
       }
     ]
@@ -161,7 +163,7 @@
           "orientation": "horizontal",
           "size": ["100%", "10px"],
           "controls": [
-            { "seed_name@seed_picker_mcjava.world_label": { "size": [ "fill", 10] } }
+            { "seed_name@seed_picker_ui.world_label": { "size": [ "fill", 10] } }
           ]
         }
       },
@@ -183,26 +185,26 @@
           "offset": [17, 0],
           "anchor_to": "top_middle",
           "anchor_from": "top_middle",
-          "collection_name": "$collection_name",
+          "collection_name": "ugc_items",
           "controls": [
-            { "1@seed_picker_mcjava.select_item_button": { "$item_index": 1 } },
-            { "2@seed_picker_mcjava.select_item_button": { "$item_index": 2 } },
-            { "3@seed_picker_mcjava.select_item_button": { "$item_index": 3 } },
-            { "4@seed_picker_mcjava.select_item_button": { "$item_index": 4 } },
-            { "5@seed_picker_mcjava.select_item_button": { "$item_index": 5 } },
-            { "6@seed_picker_mcjava.select_item_button": { "$item_index": 6 } },
-            { "7@seed_picker_mcjava.select_item_button": { "$item_index": 7 } },
-            { "8@seed_picker_mcjava.select_item_button": { "$item_index": 8 } },
-            { "9@seed_picker_mcjava.select_item_button": { "$item_index": 9 } },
-            { "10@seed_picker_mcjava.select_item_button": { "$item_index": 10 } },
-            { "11@seed_picker_mcjava.select_item_button": { "$item_index": 11 } },
-            { "12@seed_picker_mcjava.select_item_button": { "$item_index": 12 } },
-            { "13@seed_picker_mcjava.select_item_button": { "$item_index": 13 } },
-            { "14@seed_picker_mcjava.select_item_button": { "$item_index": 14 } },
-            { "15@seed_picker_mcjava.select_item_button": { "$item_index": 15 } },
-            { "16@seed_picker_mcjava.select_item_button": { "$item_index": 16 } },
-            { "17@seed_picker_mcjava.select_item_button": { "$item_index": 17 } },
-            { "18@seed_picker_mcjava.select_item_button": { "$item_index": 18 } }
+            { "1@seed_picker_ui.select_item_button": { "$item_index": 1 } },
+            { "2@seed_picker_ui.select_item_button": { "$item_index": 2 } },
+            { "3@seed_picker_ui.select_item_button": { "$item_index": 3 } },
+            { "4@seed_picker_ui.select_item_button": { "$item_index": 4 } },
+            { "5@seed_picker_ui.select_item_button": { "$item_index": 5 } },
+            { "6@seed_picker_ui.select_item_button": { "$item_index": 6 } },
+            { "7@seed_picker_ui.select_item_button": { "$item_index": 7 } },
+            { "8@seed_picker_ui.select_item_button": { "$item_index": 8 } },
+            { "9@seed_picker_ui.select_item_button": { "$item_index": 9 } },
+            { "10@seed_picker_ui.select_item_button": { "$item_index": 10 } },
+            { "11@seed_picker_ui.select_item_button": { "$item_index": 11 } },
+            { "12@seed_picker_ui.select_item_button": { "$item_index": 12 } },
+            { "13@seed_picker_ui.select_item_button": { "$item_index": 13 } },
+            { "14@seed_picker_ui.select_item_button": { "$item_index": 14 } },
+            { "15@seed_picker_ui.select_item_button": { "$item_index": 15 } },
+            { "16@seed_picker_ui.select_item_button": { "$item_index": 16 } },
+            { "17@seed_picker_ui.select_item_button": { "$item_index": 17 } },
+            { "18@seed_picker_ui.select_item_button": { "$item_index": 18 } }
           ]
         }
       }
@@ -236,7 +238,7 @@
                 "layer": -4
               }
             },
-            { "overlay@resource_packs_mcjava.overlay": { "layer": 3 } },
+            { "overlay@resource_packs_ui.overlay": { "layer": 3 } },
             { "select@resources.world_select_hover": { "layer": 4 } }
           ]
         }
@@ -246,7 +248,7 @@
           "type": "panel",
           "size": [32, 32],
           "controls": [
-            { "overlay@resource_packs_mcjava.overlay": { "layer": 3 } },
+            { "overlay@resource_packs_ui.overlay": { "layer": 3 } },
             { "select@resources.world_select_hover": { "layer": 4 } }
           ]
         }
@@ -258,19 +260,20 @@
     "type": "panel",
     "size": [234, 36],
     "collection_index": "($item_index - 1)",
-    "controls": [ { "select@seed_picker_mcjava.select_button": {} } ]
+    "controls": [ { "select@seed_picker_ui.select_button": {} } ]
   },
 
-  "select_button@toggle_button_mcjava.toggle_button": {
+  "select_button@toggle_button_ui.toggle_button": {
     "$toggle_button_name": "selection",
     "anchor_from": "right_middle",
     "anchor_to": "right_middle",
     "size": [234, 36],
     "$toggle_index": "$item_index",
-    "$toggle_state_panel": "seed_picker_mcjava.select_button_content",
+    "$toggle_state_panel": "seed_picker_ui.select_button_content",
     "$toggle_control_name": "('item_' + ($item_index))",
     "$double_mapping": true,
     "$double_mapping_id": "button.ugc_item",
+    "$collection_name": "ugc_items",
     "$toggle_bindings": [
       {
         "binding_type": "collection_details",
@@ -347,7 +350,7 @@
           "size": [32, 32],
           "visible": "$show_tool",
           "controls": [
-            { "overlay@resource_packs_mcjava.overlay": { "layer": 5 } },
+            { "overlay@resource_packs_ui.overlay": { "layer": 5 } },
             { "select@resources.world_select_default": { "layer": 6 } }
           ]
         }
@@ -362,33 +365,33 @@
     "offset": [-80, -0.5],
     "size": [150, 20],
     "layer": 10,
-    "$item_template": "seed_picker_mcjava.seed_use_button",
+    "$item_template": "seed_picker_ui.seed_use_button",
     "controls": [
       {
         "seed_use@content.locked_button": {
           "size": [150, 20],
-          "$button_text": "seedPicker.use",
+          "$button_text": "gui.done",
           "layer": 1
         }
       },
-      { "1@seed_picker_mcjava.use_grid_item": { "$item_index": 0, "$rindex": "1" } },
-      { "2@seed_picker_mcjava.use_grid_item": { "$item_index": 1, "$rindex": "2" } },
-      { "3@seed_picker_mcjava.use_grid_item": { "$item_index": 2,"$rindex": "3" } },
-      { "4@seed_picker_mcjava.use_grid_item": { "$item_index": 3, "$rindex": "4" } },
-      { "5@seed_picker_mcjava.use_grid_item": { "$item_index": 4, "$rindex": "5" } },
-      { "6@seed_picker_mcjava.use_grid_item": { "$item_index": 5, "$rindex": "6" } },
-      { "7@seed_picker_mcjava.use_grid_item": { "$item_index": 6, "$rindex": "7" } },
-      { "8@seed_picker_mcjava.use_grid_item": { "$item_index": 7, "$rindex": "8" } },
-      { "9@seed_picker_mcjava.use_grid_item": { "$item_index": 8, "$rindex": "9" } },
-      { "10@seed_picker_mcjava.use_grid_item": { "$item_index": 9, "$rindex": "10" } },
-      { "11@seed_picker_mcjava.use_grid_item": { "$item_index": 10, "$rindex": "11" } },
-      { "12@seed_picker_mcjava.use_grid_item": { "$item_index": 11, "$rindex": "12" } },
-      { "13@seed_picker_mcjava.use_grid_item": { "$item_index": 12, "$rindex": "13" } },
-      { "14@seed_picker_mcjava.use_grid_item": { "$item_index": 13, "$rindex": "14" } },
-      { "15@seed_picker_mcjava.use_grid_item": { "$item_index": 14, "$rindex": "15" } },
-      { "16@seed_picker_mcjava.use_grid_item": { "$item_index": 15, "$rindex": "16" } },
-      { "17@seed_picker_mcjava.use_grid_item": { "$item_index": 16, "$rindex": "17" } },
-      { "18@seed_picker_mcjava.use_grid_item": { "$item_index": 17, "$rindex": "18" } }
+      { "1@seed_picker_ui.use_grid_item": { "$item_index": 0, "$rindex": "1" } },
+      { "2@seed_picker_ui.use_grid_item": { "$item_index": 1, "$rindex": "2" } },
+      { "3@seed_picker_ui.use_grid_item": { "$item_index": 2,"$rindex": "3" } },
+      { "4@seed_picker_ui.use_grid_item": { "$item_index": 3, "$rindex": "4" } },
+      { "5@seed_picker_ui.use_grid_item": { "$item_index": 4, "$rindex": "5" } },
+      { "6@seed_picker_ui.use_grid_item": { "$item_index": 5, "$rindex": "6" } },
+      { "7@seed_picker_ui.use_grid_item": { "$item_index": 6, "$rindex": "7" } },
+      { "8@seed_picker_ui.use_grid_item": { "$item_index": 7, "$rindex": "8" } },
+      { "9@seed_picker_ui.use_grid_item": { "$item_index": 8, "$rindex": "9" } },
+      { "10@seed_picker_ui.use_grid_item": { "$item_index": 9, "$rindex": "10" } },
+      { "11@seed_picker_ui.use_grid_item": { "$item_index": 10, "$rindex": "11" } },
+      { "12@seed_picker_ui.use_grid_item": { "$item_index": 11, "$rindex": "12" } },
+      { "13@seed_picker_ui.use_grid_item": { "$item_index": 12, "$rindex": "13" } },
+      { "14@seed_picker_ui.use_grid_item": { "$item_index": 13, "$rindex": "14" } },
+      { "15@seed_picker_ui.use_grid_item": { "$item_index": 14, "$rindex": "15" } },
+      { "16@seed_picker_ui.use_grid_item": { "$item_index": 15, "$rindex": "16" } },
+      { "17@seed_picker_ui.use_grid_item": { "$item_index": 16, "$rindex": "17" } },
+      { "18@seed_picker_ui.use_grid_item": { "$item_index": 17, "$rindex": "18" } }
     ]
   },
 
@@ -404,7 +407,7 @@
     ]
   },
 
-  "seed_use_button@button_mcjava.button": {
+  "seed_use_button@button_ui.button": {
     "$pressed_button_name": "button.ugc_item",
     "bindings": [
       {
@@ -413,6 +416,6 @@
       }
     ],
     "size": [150, 20],
-    "$button_text": "seedPicker.use"
+    "$button_text": "gui.done"
   }
 }

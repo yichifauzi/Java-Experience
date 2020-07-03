@@ -1,12 +1,13 @@
+/* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "patch_notes_mcjava",
+  "namespace": "patch_notes_ui",
 
   "patch_notes_screen_content_panel": {
     "type": "panel",
     "controls": [
-      { "title@screen_mcjava.title": { "text": "Patch Notes" } },
-      { "content_panel@patch_notes_mcjava.content_panel": {} },
-      { "bottom_content@patch_notes_mcjava.bottom_content": {} }
+      { "title@screen_ui.title": { "text": "options.patchNotes" } },
+      { "content_panel@patch_notes_ui.content_panel": {} },
+      { "bottom_content@patch_notes_ui.bottom_content": {} }
     ]
   },
 
@@ -19,17 +20,17 @@
     "offset": [0, 32],
     "layer": 20,
     "controls": [
-      { "space_left@screen_mcjava.vspace": { "size": [40, 0] } },
-      { "right_panel@patch_notes_mcjava.right_panel": { "type": "panel", "size": [222, "100%"] } },
-      { "space@screen_mcjava.hspace": { "size": [8, 0] } },
+      { "space_left@screen_ui.vspace": { "size": [40, 0] } },
+      { "right_panel@patch_notes_ui.right_panel": { "type": "panel", "size": [222, "100%"] } },
+      { "space@screen_ui.hspace": { "size": [8, 0] } },
       {
-        "selection_content_panel@resource_packs_mcjava.side_content_panel": {
+        "selection_content_panel@resource_packs_ui.side_content_panel": {
           "size": ["fill", "100%"],
           "$scroll_bar_offset": ["50% - 6px", 0],
-          "$scrolling_content": "patch_notes_mcjava.scrolling_content"
+          "$scrolling_content": "patch_notes_ui.scrolling_content"
         }
       },
-      { "space_right@screen_mcjava.vspace": { "size": [40, 0] } }
+      { "space_right@screen_ui.vspace": { "size": [40, 0] } }
     ]
   },
 
@@ -61,7 +62,7 @@
   },
 
   "scrolling_content": {
-    "type": "panel",
+    "type": "stack_panel",
     "size": ["100% - 8px", "100%c + 8px"],
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
@@ -76,6 +77,7 @@
           "offset": [0, 4],
           "shadow": true,
           "text": "#patch_description",
+          "layer": 2,
           "bindings": [
             {
               "binding_name": "#patch_description",
@@ -104,7 +106,7 @@
     "controls": [ { "continue_button@continue_button": {} } ]
   },
   
-  "continue_button@button_mcjava.button": {
+  "continue_button@button_ui.button": {
     "$button_text": "patchNotes.continue",
     "$pressed_button_name": "button.menu_exit",
     "$button_focus_precedence": 1

@@ -1,31 +1,31 @@
 /* Version: 2.0.0 */
 /* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "grindstone_mcjava",
+  "namespace": "grindstone_ui",
 
-  "grindstone_screen_content_panel@container_mcjava.container_panel": {
+  "grindstone_screen_content_panel@container_ui.container_panel": {
     "$container_bg": "resources1.grindstone_bg",
-    "$specified_content": "grindstone_mcjava.grindstone_content_panel"
+    "$specified_content": "grindstone_ui.grindstone_content_panel"
   },
 
   "grindstone_content_panel": {
     "type": "panel",
-    "$container_title": "Repair & Disenchant",
+    "$container_title": "container.repairAndDisenchant",
     "controls": [
-      { "title@container_mcjava.title": { "offset": [8, 5] } },
-      { "input@grindstone_mcjava.input_item_slot": {} },
-      { "additional@grindstone_mcjava.additional_item_slot": {} },
-      { "yields@grindstone_mcjava.yields": {} },
-      { "result@grindstone_mcjava.result_item_slot": {} }
+      { "title@container_ui.title": { "offset": [8, 5] } },
+      { "input@grindstone_ui.input_item_slot": {} },
+      { "additional@grindstone_ui.additional_item_slot": {} },
+      { "yields@grindstone_ui.yields": {} },
+      { "result@grindstone_ui.result_item_slot": {} }
     ]
   },
 
-  "grindstone_item_slot@container_mcjava.container_slot": {
+  "grindstone_item_slot@container_ui.container_slot": {
     "anchor_to": "top_left",
     "anchor_from": "top_left"
   },
 
-  "input_item_slot@grindstone_mcjava.grindstone_item_slot": {
+  "input_item_slot@grindstone_ui.grindstone_item_slot": {
     "offset": [48, 18],
     "$item_collection_name": "grindstone_input_items",
     "$focus_id_binding_type": "none",
@@ -36,7 +36,7 @@
     "$focus_override_right": "grindstone_result"
   },
 
-  "additional_item_slot@grindstone_mcjava.grindstone_item_slot": {
+  "additional_item_slot@grindstone_ui.grindstone_item_slot": {
     "offset": [48, 39],
     "$item_collection_name": "grindstone_additional_items",
     "$focus_id_binding_type": "none",
@@ -62,17 +62,17 @@
     ]
   },
 
-  "result_item_slot@grindstone_mcjava.grindstone_item_slot": {
+  "result_item_slot@grindstone_ui.grindstone_item_slot": {
     "offset": [128, 33],
     "$item_collection_name": "grindstone_result_items",
-    "$button_ref": "grindstone_mcjava.grindstone_output_slot_button",
+    "$button_ref": "grindstone_ui.grindstone_output_slot_button",
     "$focus_id_binding_type": "none",
     "$focus_id": "grindstone_result",
     "$focus_override_left_binding_type": "none",
     "$focus_override_left": "grindstone_material"
   },
 
-  "grindstone_output_slot_button@container_mcjava.container_slot_button_prototype": {
+  "grindstone_output_slot_button@container_ui.container_slot_button_prototype": {
     "button_mappings": [
       {
         "from_button_id": "button.menu_select",

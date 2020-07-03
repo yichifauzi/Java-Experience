@@ -89,6 +89,6 @@
         "mapping_type": "global"
       }
     ],
-    "$screen_content": "hud_mcjava.hud_screen_content_panel"
+    "$screen_content": "hud_ui.hud_screen_content_panel"
   }
 }

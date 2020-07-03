@@ -3,8 +3,8 @@
   "namespace": "elemconstruct",
   
   "element_constructor@content.inventory_screen": {
-    "force_close_on_player_hurt": "$force_close_on_player_hurt",
-    "$screen_content": "element_constructor_mcjava.element_constructor_screen_content_panel",
+    "close_on_player_hurt": "$force_close_on_player_hurt",
+    "$screen_content": "element_constructor_ui.element_constructor_screen_content_panel",
     "$screen_background": "content.screen_background"
   }
 }

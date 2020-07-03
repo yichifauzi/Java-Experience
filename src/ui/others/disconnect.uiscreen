@@ -1,19 +1,20 @@
+/* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "disconnect_mcjava",
+  "namespace": "disconnect_ui",
 
   "disconnect_screen_content_panel": {
     "type": "panel",
-    "$button_panel|default": "disconnect_mcjava.disconnect_button_panel",
+    "$button_panel|default": "disconnect_ui.disconnect_button_panel",
     "controls": [
-      { "title_panel@disconnect_mcjava.title_panel": {} },
+      { "title_panel@disconnect_ui.title_panel": {} },
       { "gamepad_helpers@disconnect.gamepad_helpers": {} },
       { "$button_panel@$button_panel": {} }
     ]
   },
 
-  "realms_disconnect_screen_content_panel@disconnect_mcjava.disconnect_screen_content_panel": { "$button_panel": "disconnect_mcjava.realms_disconnect_button_panel" },
+  "realms_disconnect_screen_content_panel@disconnect_ui.disconnect_screen_content_panel": { "$button_panel": "disconnect_ui.realms_disconnect_button_panel" },
 
-  "realms_warning_screen_content_panel@disconnect_mcjava.disconnect_screen_content_panel": { "$button_panel": "disconnect_mcjava.realms_warning_button_panel" },
+  "realms_warning_screen_content_panel@disconnect_ui.disconnect_screen_content_panel": { "$button_panel": "disconnect_ui.realms_warning_button_panel" },
 
   "title_panel": {
     "type": "panel",
@@ -21,8 +22,8 @@
     "anchor_from": "center",
     "anchor_to": "center",
     "controls": [
-      { "disconnect_title_text@disconnect_mcjava.disconnect_title_text": {} },
-      { "disconnect_text@disconnect_mcjava.disconnect_text": {} }
+      { "disconnect_title_text@disconnect_ui.disconnect_title_text": {} },
+      { "disconnect_text@disconnect_ui.disconnect_text": {} }
     ]
   },
 
@@ -31,7 +32,7 @@
     "size": [310, 20],
     "anchor_to": "center",
     "anchor_from": "center",
-    "controls": [ { "ok@disconnect_mcjava.ok_button": {} } ]
+    "controls": [ { "ok@disconnect_ui.ok_button": {} } ]
   },
 
   "realms_disconnect_button_panel": {
@@ -50,14 +51,14 @@
     ],
     "controls": [
       {
-        "check_store@disconnect_mcjava.check_store_button": {
+        "check_store@disconnect_ui.check_store_button": {
           "size": [150, 20],
           "anchor_to": "top_left",
           "anchor_from": "top_left"
         }
       },
       {
-        "ok@disconnect_mcjava.ok_button": {
+        "ok@disconnect_ui.ok_button": {
           "size": "$right_size",
           "anchor_to": "$right_anchor",
           "anchor_from": "$right_anchor"
@@ -82,14 +83,14 @@
     ],
     "controls": [
       {
-        "check_store@disconnect_mcjava.check_store_button": {
+        "check_store@disconnect_ui.check_store_button": {
           "size": [150, 20],
           "anchor_to": "top_left",
           "anchor_from": "top_left"
         }
       },
       {
-        "ok@disconnect_mcjava.continue_button": {
+        "ok@disconnect_ui.continue_button": {
           "size": "$right_size",
           "anchor_to": "$right_anchor",
           "anchor_from": "$right_anchor"
@@ -114,7 +115,7 @@
     "shadow": true
   },
 
-  "disconnect_text@disconnect_mcjava.disconnect_screen_text": {
+  "disconnect_text@disconnect_ui.disconnect_screen_text": {
     "$title_text_offset": [0, "-18% + 28px"],
     "text": "#disconnect_text",
     "bindings": [
@@ -127,7 +128,7 @@
     "property_bag": { "#tts_dialog_body": "#disconnect_text" }
   },
 
-  "disconnect_title_text@disconnect_mcjava.disconnect_screen_text": {
+  "disconnect_title_text@disconnect_ui.disconnect_screen_text": {
     "size": ["default", 10],
     "text": "#title_text",
     "bindings": [
@@ -140,28 +141,28 @@
     "property_bag": { "#tts_dialog_title": "#title_text" }
   },
 
-  "button_template@button_mcjava.button": {
+  "button_template@button_ui.button": {
     "anchor_to": "center",
     "anchor_from": "center"
   },
 
-  "continue_button@disconnect_mcjava.button_template": {
+  "continue_button@disconnect_ui.button_template": {
     "$pressed_button_name": "button.menu_continue",
     "$button_text": "gui.continue"
   },
 
-  "check_store_button@disconnect_mcjava.button_template": {
+  "check_store_button@disconnect_ui.button_template": {
     "$pressed_button_name": "button.menu_check_store",
     "$button_text": "gui.store",
     "ignored": "($is_holographic or $nx_os or $is_berwick)"
   },
 
-  "exit_button@disconnect_mcjava.button_template": {
+  "exit_button@disconnect_ui.button_template": {
     "$pressed_button_name": "button.menu_leave_screen",
     "$button_text": "gui.back"
   },
   
-  "ok_button@disconnect_mcjava.button_template": {
+  "ok_button@disconnect_ui.button_template": {
     "$pressed_button_name": "button.menu_leave_screen",
     "$button_text": "gui.ok"
   }

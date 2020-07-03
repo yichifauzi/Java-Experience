@@ -1,5 +1,7 @@
+/* Version: 2.0.0 */
+/* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "material_reducer_mcjava",
+  "namespace": "material_reducer_ui",
 
   "material_reducer_screen_content_panel": {
     "type": "panel",
@@ -11,26 +13,26 @@
           "controls": [
             { "material_reducer_bg@resources1.material_reducer_bg": {} },
             {
-              "title@container_mcjava.title": {
+              "title@container_ui.title": {
                 "text": "materialreducer.title",
                 "offset": [0, 4],
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle"
               }
             },
-            { "content@material_reducer_mcjava.material_reducer_content_panel": {} },
+            { "content@material_reducer_ui.material_reducer_content_panel": {} },
             {
               "inventory": {
                 "type": "panel",
                 "layer": 3,
                 "controls": [
-                  { "inventory_panel@container_mcjava.inventory_grid_panel": {} },
-                  { "hotbar_grid@container_mcjava.hotbar_grid": {} },
+                  { "inventory_panel@container_ui.inventory_grid_panel": {} },
+                  { "hotbar_grid@container_ui.hotbar_grid": {} },
                   { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} }
                 ]
               }
             },
-            { "inventory_selected_icon_button@container_mcjava.inventory_selected_icon_button": {} }
+            { "inventory_selected_icon_button@container_ui.inventory_selected_icon_button": {} }
           ]
         }
       },
@@ -41,8 +43,8 @@
   "material_reducer_content_panel": {
     "type": "panel",
     "controls": [
-      { "input@material_reducer_mcjava.input_slot": {} },
-      { "output_slots@material_reducer_mcjava.output_slots": {} }
+      { "input@material_reducer_ui.input_slot": {} },
+      { "output_slots@material_reducer_ui.output_slots": {} }
     ]
   },
 
@@ -54,11 +56,11 @@
     "offset": [79, 15],
     "controls": [
       {
-        "slot@container_mcjava.container_slot": {
+        "slot@container_ui.container_slot": {
           "size": [18, 18],
           "layer": 2,
           "$item_collection_name": "matreduce_input",
-          "$button_ref": "material_reducer_mcjava.one_touch_button",
+          "$button_ref": "material_reducer_ui.one_touch_button",
           "bindings": [
             {
               "binding_name": "#input_enabled",
@@ -72,7 +74,7 @@
           "type": "image",
           "layer": 4,
           "size": ["100% - 2px", "100% - 2px"],
-          "texture": "src/core/assets/fmarquespto/textures/white",
+          "texture": "src/core/assets/fmarquespto/white",
           "color": "red",
           "alpha": 0.35,
           "bindings": [
@@ -86,7 +88,7 @@
     ]
   },
 
-  "one_touch_button@container_mcjava.container_slot_button_prototype": {
+  "one_touch_button@container_ui.container_slot_button_prototype": {
     "$take_all_place_all": "button.matreduce_take_all_place_all",
     "$coalesce_stack": "button.matreduce_coalesce_stack",
     "button_mappings": [
@@ -160,55 +162,15 @@
     "grid_dimensions": [5, 2],
     "collection_name": "matreduce_output",
     "controls": [
-      {
-        "a@material_reducer_mcjava.output_item": {
-          "$grid_position": [ 0, 0 ]
-        }
-      },
-      {
-        "b@material_reducer_mcjava.output_item": {
-          "$grid_position": [ 1, 0 ]
-        }
-      },
-      {
-        "c@material_reducer_mcjava.output_item": {
-          "$grid_position": [ 2, 0 ]
-        }
-      },
-      {
-        "d@material_reducer_mcjava.output_item": {
-          "$grid_position": [ 3, 0 ]
-        }
-      },
-      {
-        "e@material_reducer_mcjava.output_item": {
-          "$grid_position": [ 4, 0 ]
-        }
-      },
-      {
-        "f@material_reducer_mcjava.output_item": {
-          "$grid_position": [ 0, 1 ],
-          "$offset": [ 13, 0 ]
-        }
-      },
-      {
-        "g@material_reducer_mcjava.output_item": {
-          "$grid_position": [ 1, 1 ],
-          "$offset": [ 13, 0 ]
-        }
-      },
-      {
-        "h@material_reducer_mcjava.output_item": {
-          "$grid_position": [ 2, 1 ],
-          "$offset": [ 13, 0 ]
-        }
-      },
-      {
-        "i@material_reducer_mcjava.output_item": {
-          "$grid_position": [ 3, 1 ],
-          "$offset": [ 13, 0 ]
-        }
-      }
+      { "a@material_reducer_ui.output_item": { "$grid_position": [ 0, 0 ] } },
+      { "b@material_reducer_ui.output_item": { "$grid_position": [ 1, 0 ] } },
+      { "c@material_reducer_ui.output_item": { "$grid_position": [ 2, 0 ] } },
+      { "d@material_reducer_ui.output_item": { "$grid_position": [ 3, 0 ] } },
+      { "e@material_reducer_ui.output_item": { "$grid_position": [ 4, 0 ] } },
+      { "f@material_reducer_ui.output_item": { "$grid_position": [ 0, 1 ], "$offset": [ 13, 0 ] } },
+      { "g@material_reducer_ui.output_item": { "$grid_position": [ 1, 1 ], "$offset": [ 13, 0 ] } },
+      { "h@material_reducer_ui.output_item": { "$grid_position": [ 2, 1 ], "$offset": [ 13, 0 ] } },
+      { "i@material_reducer_ui.output_item": { "$grid_position": [ 3, 1 ], "$offset": [ 13, 0 ] } }
     ]
   },
 
@@ -218,7 +180,7 @@
     "size": [18, 18],
     "controls": [
       {
-        "slot@container_mcjava.container_slot": {
+        "slot@container_ui.container_slot": {
           "$offset|default": [ 0, 0 ],
           "offset": "$offset",
           "$item_collection_name": "matreduce_output"

@@ -1,5 +1,6 @@
+/* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "scoreboard_mcjava",
+  "namespace": "scoreboard_ui",
 
   "scoreboard_sidebar": {
     "type": "stack_panel",
@@ -20,7 +21,7 @@
               "bg": {
                 "type": "image",
                 "size": ["100%", 10],
-                "texture": "src/core/assets/fmarquespto/textures/white",
+                "texture": "src/core/assets/fmarquespto/white",
                 "color": "$scoreboard_header_bg_color",
                 "alpha": "$scoreboard_header_bg_alpha"
               }
@@ -51,7 +52,7 @@
       {
         "list": {
           "type": "image",
-          "texture": "src/core/assets/fmarquespto/textures/white",
+          "texture": "src/core/assets/fmarquespto/white",
           "color": "$scoreboard_list_bg_color",
           "alpha": "$scoreboard_list_bg_alpha",
           "inherit_max_sibling_width": true,
@@ -68,7 +69,7 @@
                 "collection_name": "scoreboard_players",
                 "factory": {
                   "name": "player_list_factory",
-                  "control_name": "scoreboard_mcjava.scoreboard_sidebar_player"
+                  "control_name": "scoreboard_ui.scoreboard_sidebar_player"
                 },
                 "bindings": [
                   {
@@ -85,12 +86,13 @@
                 "anchor_from": "top_right",
                 "anchor_to": "top_right",
                 "offset": [-0.5, 0.5],
+                "ignored": "$scoreboard_ignore_numbers",
                 "size": [ "100%cm", "100%c" ],
                 "orientation": "vertical",
                 "collection_name": "scoreboard_scores",
                 "factory": {
                   "name": "player_score_factory",
-                  "control_name": "scoreboard_mcjava.scoreboard_sidebar_score"
+                  "control_name": "scoreboard_ui.scoreboard_sidebar_score"
                 },
                 "bindings": [
                   {

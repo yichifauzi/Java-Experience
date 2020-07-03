@@ -61,12 +61,12 @@
 
   "text_box_default": {
     "type": "image",
-    "texture": "src/core/assets/fmarquespto/textures/indentbox"
+    "texture": "src/core/assets/fmarquespto/indentbox"
   },
 
   "text_box_hover": {
     "type": "image",
-    "texture": "src/core/assets/fmarquespto/textures/indentboxhover"
+    "texture": "src/core/assets/fmarquespto/indentboxhover"
   },
 
   "tab_items_bg@resources.resource_image": {
@@ -266,11 +266,11 @@
     "$rsrc_location": "src/assets/minecraft/textures/gui/container/creative_inventory/tab_items",
     "size": [14, 110],
     "variables": [
-      { "requires": "($inventory_resolution = 256x)", "$uv": [174, 17], "$uv_size": [14, 110] },
-      { "requires": "($inventory_resolution = 512x)", "$uv": [348, 34], "$uv_size": [28, 220] },
-      { "requires": "($inventory_resolution = 1024x)", "$uv": [696, 68], "$uv_size": [56, 440] },
-      { "requires": "($inventory_resolution = 2048x)", "$uv": [1392, 136], "$uv_size": [112, 880] },
-      { "requires": "($inventory_resolution = 4096x)", "$uv": [2784, 272], "$uv_size": [224, 1760] }
+      { "requires": "($inventory_resolution = 256x)", "$uv": [174, 18], "$uv_size": [14, 110] },
+      { "requires": "($inventory_resolution = 512x)", "$uv": [348, 36], "$uv_size": [28, 220] },
+      { "requires": "($inventory_resolution = 1024x)", "$uv": [696, 72], "$uv_size": [56, 440] },
+      { "requires": "($inventory_resolution = 2048x)", "$uv": [1392, 144], "$uv_size": [112, 880] },
+      { "requires": "($inventory_resolution = 4096x)", "$uv": [2784, 288], "$uv_size": [224, 1760] }
     ]
   },
 
@@ -341,12 +341,12 @@
 
   "shadow_top": {
     "type": "image",
-    "texture": "src/core/assets/fmarquespto/textures/shadow_top"
+    "texture": "src/core/assets/fmarquespto/shadow_top"
   },
 
   "shadow_bottom": {
     "type": "image",
-    "texture": "src/core/assets/fmarquespto/textures/shadow_bottom"
+    "texture": "src/core/assets/fmarquespto/shadow_bottom"
   },
 
   "effect_gray_background@resources.resource_image": {
@@ -570,7 +570,7 @@
 
   "main_new_title": {
     "type": "image",
-    "texture": "src/core/assets/fmarquespto/textures/minecraft",
+    "texture": "src/core/assets/fmarquespto/minecraft",
     "size": [276, 46]
   },
 
@@ -592,7 +592,7 @@
   },
 
   "edition_cpp@resources.resource_image": {
-    "$rsrc_location": "src/core/assets/fmarquespto/textures/gui/cpp_edition",
+    "$rsrc_location": "src/core/assets/fmarquespto/gui/cpp_edition",
     "size": [88, 14],
     "uv": [0, 0],
     "variables": [

@@ -1,6 +1,6 @@
 /* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "player_list_mcjava",
+  "namespace": "player_list_ui",
 
   "player_list_content_panel": {
     "type": "panel",
@@ -15,9 +15,9 @@
           "anchor_to": "bottom_middle",
           "offset": [0, -8],
           "controls": [
-            { "invite_players_button@pause_menu_mcjava.invite_players_button": {} },
-            { "fill@screen_mcjava.hfill": {} },
-            { "pause_menu_button@player_list_mcjava.pause_menu_button": {} }
+            { "invite_players_button@pause_menu_ui.invite_players_button": {} },
+            { "fill@screen_ui.hfill": {} },
+            { "pause_menu_button@player_list_ui.pause_menu_button": {} }
           ]
         }
       }
@@ -31,10 +31,10 @@
     "size": [274, 73],
     "offset": [0, 32],
     "controls": [
-      { "bg@screen_mcjava.screen_background": { "anchor_from": "top_left", "anchor_to": "top_left", "size": ["100% + 0.5px", "100% + 1px"], "alpha": 0.4 } },
-      { "0@player_list_mcjava.list_content": { "$grid_offset": [1, 1] } },
-      { "1@player_list_mcjava.list_content": { "anchor_from": "top_middle", "anchor_to": "top_middle", "$grid_offset": [1, -71]  } },
-      { "2@player_list_mcjava.list_content": { "anchor_from": "top_right", "anchor_to": "top_right", "$grid_offset": [1, -143]  } }
+      { "bg@screen_ui.screen_background": { "anchor_from": "top_left", "anchor_to": "top_left", "size": ["100% + 0.5px", "100% + 1px"], "alpha": 0.4 } },
+      { "0@player_list_ui.list_content": { "$grid_offset": [1, 1] } },
+      { "1@player_list_ui.list_content": { "anchor_from": "top_middle", "anchor_to": "top_middle", "$grid_offset": [1, -71]  } },
+      { "2@player_list_ui.list_content": { "anchor_from": "top_right", "anchor_to": "top_right", "$grid_offset": [1, -143]  } }
     ]
   },
 
@@ -47,7 +47,7 @@
     "use_last_focus": true,
     "clips_children": true,
     "controls": [
-      { "players_grid_panel@player_list_mcjava.players_grid": {} }
+      { "players_grid_panel@player_list_ui.players_grid": {} }
     ]
   },
 
@@ -55,7 +55,7 @@
     "type": "grid",
     "size": ["100%", "default"],
     "offset": "$grid_offset",
-    "grid_item_template": "player_list_mcjava.player_grid_item",
+    "grid_item_template": "player_list_ui.player_grid_item",
     "grid_dimension_binding": "#players_grid_dimension",
     "collection_name": "players_collection",
     "anchor_to": "top_left",
@@ -67,7 +67,7 @@
     "type": "panel",
     "size": [91, 9],
     "controls": [
-      { "player_grid_item_content@player_list_mcjava.player_grid_item_content": {} }
+      { "player_grid_item_content@player_list_ui.player_grid_item_content": {} }
     ]
   },
 
@@ -78,12 +78,12 @@
     "anchor_to": "top_left",
     "offset": [0, 0],
     "controls": [
-      { "player_button@player_list_mcjava.player_button": {} },
-      { "player_banner@player_list_mcjava.player_banner": {} },
+      { "player_button@player_list_ui.player_button": {} },
+      { "player_banner@player_list_ui.player_banner": {} },
       {
         "player_banner": {
           "type": "image",
-          "texture": "src/core/assets/fmarquespto/textures/white",
+          "texture": "src/core/assets/fmarquespto/white",
           "alpha": 0.3,
           "color": "black",
           "size": ["100%", "100%"],
@@ -97,7 +97,7 @@
 
   "player_banner": {
     "type": "image",
-    "texture": "src/core/assets/fmarquespto/textures/white",
+    "texture": "src/core/assets/fmarquespto/white",
     "alpha": 0.3,
     "color": "black",
     "size": ["100%", "100%"],
@@ -109,7 +109,7 @@
         "player_grid_banner_no_focus": {
           "type": "panel",
           "controls": [
-            { "player_button_content@player_list_mcjava.player_button_content": {} }
+            { "player_button_content@player_list_ui.player_button_content": {} }
           ]
         }
       }
@@ -130,7 +130,7 @@
     "anchor_to": "top_left",
     "layer": 10,
     "controls": [
-      { "@player_list_mcjava.player_button_content": {} }
+      { "@player_list_ui.player_button_content": {} }
     ],
     "button_mappings": [
       {
@@ -166,9 +166,9 @@
     "size": ["100%", "100%"],
     "layer": 3,
     "controls": [
-      { "player_pic_panel@player_list_mcjava.player_pic_panel": { "layer": 1 } },
-      { "@screen_mcjava.vspace": { "size": [2, 0] } },
-      { "player_gamertag@player_list_mcjava.gametag_wrapper": { "layer": 1 } },
+      { "player_pic_panel@player_list_ui.player_pic_panel": { "layer": 1 } },
+      { "@screen_ui.vspace": { "size": [2, 0] } },
+      { "player_gamertag@player_list_ui.gametag_wrapper": { "layer": 1 } },
       { "platform_icon@pause.platform_icon_panel": { "layer": 1 } }
     ]
   },
@@ -180,8 +180,8 @@
     "anchor_from": "left_middle",
     "ignored": "$education_edition",
     "controls": [
-      { "player_gamer_pic@player_list_mcjava.player_gamer_pic": {} },
-      { "player_local_icon@player_list_mcjava.player_local_icon": {} }
+      { "player_gamer_pic@player_list_ui.player_gamer_pic": {} },
+      { "player_local_icon@player_list_ui.player_local_icon": {} }
     ]
   },
 
@@ -235,7 +235,7 @@
     "anchor_from": "left_middle",
     "anchor_to": "left_middle",
     "controls": [
-      { "gamertag@player_list_mcjava.player_gamertag": {} }
+      { "gamertag@player_list_ui.player_gamertag": {} }
     ]
   },
 
@@ -255,7 +255,7 @@
     ]
   },
 
-  "pause_menu_button@toggle_button_mcjava.toggle_button": {
+  "pause_menu_button@toggle_button_ui.toggle_button": {
     "$toggle_index": 0,
     "size": [150, 20],
     "$toggle_button_text": "gui.done",

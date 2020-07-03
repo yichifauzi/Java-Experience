@@ -1,5 +1,6 @@
+/* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "more_create_options_mcjava",
+  "namespace": "more_create_options_ui",
 
   "more_create_options_screen_content_panel": {
     "type": "panel",
@@ -8,25 +9,25 @@
     "$is_world_edit|default": false,
     "controls": [
       {
-        "title@screen_mcjava.title": {
+        "title@screen_ui.title": {
           "offset": [0, 19],
           "text": "selectWorld.create"
         }
       },
-      { "world_name@more_create_options_mcjava.world_seed_box": { "offset": [0, 46] } },
-      { "world_name@more_create_options_mcjava.edu_world_seed_box": { "offset": [0, 46] } },
-      { "seed_info_panel@more_create_options_mcjava.seed_info_panel": { "offset": [55, 84] } },
-      { "experimental_gameplay@more_create_options_mcjava.experimental_gameplay_toggle": { "offset": [-80, 100] } },
-      { "no_cheats_world_type@more_create_options_mcjava.no_cheats_world_type_panel": { "offset": [80, 100] } },
-      { "cheats_enabled_world_type@more_create_options_mcjava.cheats_enabled_world_type_panel": { "offset": [80, 100] } },
-      { "experimental_gameplay_info@more_create_options_mcjava.experimental_gameplay_info_panel": { "offset": [4, 121] } },
-      { "allow_cheats@more_create_options_mcjava.allow_cheats_toggle": { "offset": [-80, 151] } },
-      { "game_settings@more_create_options_mcjava.bonus_chest_toggle": { "offset": [80, 151] } },
-      { "allow_cheats_info@more_create_options_mcjava.allow_cheats_info_panel": { "offset": [1, 171] } },
-      { "game_settings@more_create_options_mcjava.bonus_map_toggle": { "offset": [-80, 185] } },
-      { "back@settings_mcjava.back_button": { "anchor_from": "top_middle", "anchor_to": "top_middle", "size": [150, 20], "$toggle_button_name": "more_create_options", "offset": [80, 185] } },
+      { "world_name@more_create_options_ui.world_seed_box": { "offset": [0, 46] } },
+      { "world_name@more_create_options_ui.edu_world_seed_box": { "offset": [0, 46] } },
+      { "seed_info_panel@more_create_options_ui.seed_info_panel": { "offset": [55, 84] } },
+      { "experimental_gameplay@more_create_options_ui.experimental_gameplay_toggle": { "offset": [-80, 100] } },
+      { "no_cheats_world_type@more_create_options_ui.no_cheats_world_type_panel": { "offset": [80, 100] } },
+      { "cheats_enabled_world_type@more_create_options_ui.cheats_enabled_world_type_panel": { "offset": [80, 100] } },
+      { "experimental_gameplay_info@more_create_options_ui.experimental_gameplay_info_panel": { "offset": [4, 121] } },
+      { "allow_cheats@more_create_options_ui.allow_cheats_toggle": { "offset": [-80, 151] } },
+      { "game_settings@more_create_options_ui.bonus_chest_toggle": { "offset": [80, 151] } },
+      { "allow_cheats_info@more_create_options_ui.allow_cheats_info_panel": { "offset": [1, 171] } },
+      { "game_settings@more_create_options_ui.bonus_map_toggle": { "offset": [-80, 185] } },
+      { "back@settings_ui.back_button": { "anchor_from": "top_middle", "anchor_to": "top_middle", "size": [150, 20], "$toggle_button_name": "more_create_options", "offset": [80, 185] } },
       {
-        "create_world@world_create_mcjava.create_world_button": {
+        "create_world@world_create_ui.create_world_button": {
           "ignored": "$is_world_edit",
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
@@ -34,7 +35,7 @@
         }
       },
       {
-        "cancel@screen_mcjava.exit_button": {
+        "cancel@screen_ui.exit_button": {
           "ignored": "$is_world_edit",
           "$button_text": "gui.cancel",
           "size": [150, 20],
@@ -46,7 +47,7 @@
     ]
   },
 
-  "world_seed_box@text_box_mcjava.text_box_with_label_and_button": {
+  "world_seed_box@text_box_ui.text_box_with_label_and_button": {
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "$tts_section_header": "createWorldScreen.worldPreferences",
@@ -71,7 +72,7 @@
     "$pressed_button_name": "button.redirect_to_upsell"
   },
 
-  "edu_world_seed_box@text_box_mcjava.text_box_with_label": {
+  "edu_world_seed_box@text_box_ui.text_box_with_label": {
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "$tts_section_header": "createWorldScreen.worldPreferences",
@@ -82,11 +83,11 @@
     "$text_box_name": "world_seed_text_box"
   },
 
-  "experimental_gameplay_toggle@option_toggle_mcjava.option_toggle": {
+  "experimental_gameplay_toggle@option_toggle_ui.option_toggle": {
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "$tts_section_header": "createWorldScreen.worldSettings",
-    "$option_toggle_text": "selectWorld.experimentalGameplay",
+    "$option_toggle_text": "createWorldScreen.experimentalgameplay",
     "$option_binding_name": "#experimental_gameplay",
     "$option_enabled_binding_name": "#experimental_gameplay_enabled",
     "$toggle_name": "experimental_gameplay",
@@ -98,7 +99,7 @@
     ]
   },
 
-  "no_cheats_world_type_panel@switch_option_mcjava.switch_option_panel": {
+  "no_cheats_world_type_panel@switch_option_ui.switch_option_panel": {
     "size": [150, 20],
     "$options_enabled": "#world_type_dropdown_enabled",
     "$switch_option_label": "selectWorld.mapType",
@@ -106,16 +107,16 @@
     "anchor_to": "top_middle",
     "controls": [
       {
-        "infinite@switch_option_mcjava.switch_option": {
+        "infinite@switch_option_ui.switch_option": {
           "$option_action_text": "generator.default",
           "$this_action": "#world_type_radio_infinite",
           "$next_action": "#world_type_radio_old"
         }
       },
-      { "alt@more_create_options_mcjava.alt_flat_world_toggle_panel": {} },
+      { "alt@more_create_options_ui.alt_flat_world_toggle_panel": {} },
       {
-        "small@switch_option_mcjava.switch_option": {
-          "$option_action_text": "generator.small",
+        "small@switch_option_ui.switch_option": {
+          "$option_action_text": "generator.old",
           "$this_action": "#world_type_radio_old",
           "$next_action": "#world_type_radio_infinite"
         }
@@ -134,7 +135,7 @@
     "size": [150, 20],
     "controls": [
       {
-        "alt_flat_world_toggle@toggle_mcjava.toggle": {
+        "alt_flat_world_toggle@toggle_ui.toggle": {
           "$state_checked_text": "generator.flat",
           "$state_unchecked_text": "generator.flat",
           "$option_binding_name": "#world_type_radio_old",
@@ -151,7 +152,7 @@
     ]
   },
 
-  "cheats_enabled_world_type_panel@switch_option_mcjava.switch_option_panel": {
+  "cheats_enabled_world_type_panel@switch_option_ui.switch_option_panel": {
     "size": [150, 20],
     "$options_enabled": "#world_type_dropdown_enabled",
     "$switch_option_label": "selectWorld.mapType",
@@ -159,22 +160,22 @@
     "anchor_to": "top_middle",
     "controls": [
       {
-        "infinite@switch_option_mcjava.switch_option": {
+        "infinite@switch_option_ui.switch_option": {
           "$option_action_text": "generator.default",
           "$this_action": "#world_type_radio_infinite",
           "$next_action": "#world_type_radio_flat"
         }
       },
       {
-        "flat@switch_option_mcjava.switch_option": {
+        "flat@switch_option_ui.switch_option": {
           "$option_action_text": "generator.flat",
           "$this_action": "#world_type_radio_flat",
           "$next_action": "#world_type_radio_old"
         }
       },
       {
-        "small@switch_option_mcjava.switch_option": {
-          "$option_action_text": "generator.small",
+        "small@switch_option_ui.switch_option": {
+          "$option_action_text": "generator.old",
           "$this_action": "#world_type_radio_old",
           "$next_action": "#world_type_radio_infinite"
         }
@@ -188,7 +189,7 @@
     ]
   },
 
-  "allow_cheats_toggle@option_toggle_mcjava.option_toggle": {
+  "allow_cheats_toggle@option_toggle_ui.option_toggle": {
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "$option_toggle_text": "selectWorld.allowCommands",
@@ -214,26 +215,27 @@
           "text": "$text",
           "color": [0.62, 0.62, 0.62],
           "shadow": true,
-          "text_alignment": "left"
+          "text_alignment": "left",
+          "layer": 5
         }
       }
     ]
   },
 
-  "seed_info_panel@more_create_options_mcjava.info_panel": {
+  "seed_info_panel@more_create_options_ui.info_panel": {
     "$text": "selectWorld.seedInfo",
     "$info_offset": [0, 1]
   },
 
-  "experimental_gameplay_info_panel@more_create_options_mcjava.info_panel": {
+  "experimental_gameplay_info_panel@more_create_options_ui.info_panel": {
     "$text": "selectWorld.experimentalGameplay.info"
   },
 
-  "allow_cheats_info_panel@more_create_options_mcjava.info_panel": {
+  "allow_cheats_info_panel@more_create_options_ui.info_panel": {
     "$text": "selectWorld.allowCommands.info"
   },
 
-  "bonus_map_toggle@option_toggle_mcjava.option_toggle": {
+  "bonus_map_toggle@option_toggle_ui.option_toggle": {
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "$option_toggle_text": "createWorldScreen.startWithMap",
@@ -242,7 +244,7 @@
     "$toggle_name": "start_with_map"
   },
 
-  "bonus_chest_toggle@option_toggle_mcjava.option_toggle": {
+  "bonus_chest_toggle@option_toggle_ui.option_toggle": {
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "$option_toggle_text": "createWorldScreen.bonusChest",

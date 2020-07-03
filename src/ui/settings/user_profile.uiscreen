@@ -1,12 +1,12 @@
 /* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "user_profile_mcjava",
+  "namespace": "user_profile_ui",
   
   "user_profile_content_panel": {
     "type": "panel",
     "controls": [
-      { "title@screen_mcjava.title": { "text": "options.userProfile.title" } },
-      { "content_panel@user_profile_mcjava.content_panel": {} }
+      { "title@screen_ui.title": { "text": "options.profileTitle" } },
+      { "content_panel@user_profile_ui.content_panel": {} }
     ]
   },
 
@@ -17,96 +17,96 @@
     "size": [ 310, 195],
     "offset": [ 0, "-36%" ],
     "controls": [
-      { "name_controls@user_profile_mcjava.name_controls": {} },
-      { "signin_controls@user_profile_mcjava.signin_controls": {} },
-      { "gamertag_controls@user_profile_mcjava.gamertag_controls": {} },
-      { "space_zero@screen_mcjava.vspace": {} },
+      { "name_controls@user_profile_ui.name_controls": {} },
+      { "signin_controls@user_profile_ui.signin_controls": {} },
+      { "gamertag_controls@user_profile_ui.gamertag_controls": {} },
+      { "space_zero@screen_ui.vspace": {} },
       {
-        "panel_zero@screen_mcjava.stack": {
+        "panel_zero@screen_ui.stack": {
           "ignored": "($is_console or $is_settopbox or $win10_edition or $osx_edition or $education_edition)",
           "controls": [
-            { "auto_update_mode@user_profile_mcjava.auto_update_mode_multioption": {} },
-            { "fill@screen_mcjava.hfill": {} },
-            { "allow_cellular_data_toggle@user_profile_mcjava.allow_cellular_data_toggle": {} }
+            { "auto_update_mode@user_profile_ui.auto_update_mode_multioption": {} },
+            { "fill@screen_ui.hfill": {} },
+            { "allow_cellular_data_toggle@user_profile_ui.allow_cellular_data_toggle": {} }
           ]
         }
       },
       {
-        "panel_one@screen_mcjava.stack": {
+        "panel_one@screen_ui.stack": {
           "ignored": "(not $is_console and not $is_settopbox and not $win10_edition and not $osx_edition)",
           "controls": [
-            { "auto_update_mode@user_profile_mcjava.auto_update_mode_multioption": {} },
-            { "fill@screen_mcjava.hfill": {} },
-            { "auto_update_enabled_toggle@user_profile_mcjava.auto_update_enabled_toggle": { "$disabled": "$nx_os" } }
+            { "auto_update_mode@user_profile_ui.auto_update_mode_multioption": {} },
+            { "fill@screen_ui.hfill": {} },
+            { "auto_update_enabled_toggle@user_profile_ui.auto_update_enabled_toggle": { "$disabled": "$nx_os" } }
           ]
         }
       },
-      { "space_zero@screen_mcjava.vspace": {} },
+      { "space_zero@screen_ui.vspace": {} },
       {
-        "panel_one@screen_mcjava.stack": {
+        "panel_one@screen_ui.stack": {
           "controls": [
-            { "option_content_gui_log@user_profile_mcjava.option_content_gui_log": {} },
-            { "fill@screen_mcjava.hfill": {} },
-            { "option_content_file_log@user_profile_mcjava.option_content_file_log": {} }
+            { "option_content_gui_log@user_profile_ui.option_content_gui_log": {} },
+            { "fill@screen_ui.hfill": {} },
+            { "option_content_file_log@user_profile_ui.option_content_file_log": {} }
           ]
         }
       },
-      { "space_zero@screen_mcjava.vspace": {} },
+      { "space_zero@screen_ui.vspace": {} },
       {
-        "panel_one@screen_mcjava.stack": {
+        "panel_one@screen_ui.stack": {
           "controls": [
-            { "open_content_log_history@user_profile_mcjava.open_content_log_history": {} },
-            { "fill@screen_mcjava.hfill": {} },
-            { "allow_cellular_data_toggle@user_profile_mcjava.allow_cellular_data_toggle": {} }
+            { "open_content_log_history@user_profile_ui.open_content_log_history": {} },
+            { "fill@screen_ui.hfill": {} },
+            { "allow_cellular_data_toggle@user_profile_ui.allow_cellular_data_toggle": {} }
           ]
         }
       },
-      { "space_zero@screen_mcjava.vspace": {} },
+      { "space_zero@screen_ui.vspace": {} },
       {
-        "panel_one@screen_mcjava.stack": {
+        "panel_one@screen_ui.stack": {
           "ignored": "($is_holographic or $win10_edition)",
           "controls": [
-            { "file_storage_multioption@user_profile_mcjava.file_storage_multioption": { "$enabled": "$storage_location_switch_enabled" } },
-            { "fill@screen_mcjava.hfill": {} },
-            { "allow_cellular_data_toggle@user_profile_mcjava.allow_cellular_data_toggle": {} }
+            { "file_storage_multioption@user_profile_ui.file_storage_multioption": { "$enabled": "$storage_location_switch_enabled" } },
+            { "fill@screen_ui.hfill": {} },
+            { "allow_cellular_data_toggle@user_profile_ui.allow_cellular_data_toggle": {} }
           ]
         }
       },
-      { "space_zero@screen_mcjava.vspace": {} },
+      { "space_zero@screen_ui.vspace": {} },
       {
-        "panel_one@screen_mcjava.stack": {
+        "panel_one@screen_ui.stack": {
           "ignored": "$is_holographic",
           "controls": [
-            { "file_storage_multioption@user_profile_mcjava.file_storage_multioption": {} },
-            { "fill@screen_mcjava.hfill": {} },
-            { "terms_and_conditions_link_button@user_profile_mcjava.terms_and_conditions_link_button": {} },
-            { "terms_and_conditions_content_popup_button@user_profile_mcjava.terms_and_conditions_content_popup_button": {} }
+            { "file_storage_multioption@user_profile_ui.file_storage_multioption": {} },
+            { "fill@screen_ui.hfill": {} },
+            { "terms_and_conditions_link_button@user_profile_ui.terms_and_conditions_link_button": {} },
+            { "terms_and_conditions_content_popup_button@user_profile_ui.terms_and_conditions_content_popup_button": {} }
           ]
         }
       },
-      { "space_zero@screen_mcjava.vspace": {} },
+      { "space_zero@screen_ui.vspace": {} },
       {
-        "panel_one@screen_mcjava.stack": {
+        "panel_one@screen_ui.stack": {
           "controls": [
-            { "credits_button@user_profile_mcjava.credits_button": {} },
-            { "fill@screen_mcjava.hfill": {} },
-            { "attribution_link_button@user_profile_mcjava.attribution_link_button": {} },
-            { "attribution_popup_button@user_profile_mcjava.attribution_popup_button": {} }
+            { "credits_button@user_profile_ui.credits_button": {} },
+            { "fill@screen_ui.hfill": {} },
+            { "attribution_link_button@user_profile_ui.attribution_link_button": {} },
+            { "attribution_popup_button@user_profile_ui.attribution_popup_button": {} }
           ]
         }
       },
-      { "space_zero@screen_mcjava.vspace": { "size": [0, 16.5] } },
+      { "space_zero@screen_ui.vspace": { "size": [0, 16.5] } },
       {
-        "panel_one@screen_mcjava.panel": {
+        "panel_one@screen_ui.panel": {
           "controls": [
-            { "credits_button@settings_mcjava.back_button": {} }
+            { "credits_button@settings_ui.back_button": {} }
           ]
         }
       }
     ]
   },
 
-  "terms_and_conditions_link_button@button_mcjava.link_button": {
+  "terms_and_conditions_link_button@button_ui.link_button": {
     "size": [150, 20],
     "ignored": "$fire_tv",
     "enabled": "$thirdpartyconsole",
@@ -120,7 +120,7 @@
     ]
   },
 
-  "terms_and_conditions_content_popup_button@button_mcjava.action_button": {
+  "terms_and_conditions_content_popup_button@button_ui.action_button": {
     "size": [150, 20],
     "ignored": "(not $fire_tv)",
     "enabled": "$thirdpartyconsole",
@@ -128,7 +128,7 @@
     "$button_text": "options.termsAndConditions"
   },
 
-  "allow_cellular_data_toggle@option_toggle_mcjava.option_toggle": {
+  "allow_cellular_data_toggle@option_toggle_ui.option_toggle": {
     "$disabled": "$education_edition_china",
     "$option_toggle_text": "options.allowCellularData",
     "$option_binding_name": "#allow_cellular_data",
@@ -136,13 +136,13 @@
     "$toggle_name": "allow_cellular_data"
   },
 
-  "credits_button@button_mcjava.action_button": {
+  "credits_button@button_ui.action_button": {
     "size": [150, 20],
     "$pressed_button_name": "button.credits",
     "$button_text": "options.credits"
   },
 
-  "attribution_link_button@button_mcjava.link_button": {
+  "attribution_link_button@button_ui.link_button": {
     "size": [150, 20],
     "ignored": "($is_holographic or $fire_tv)",
     "enabled": "(not $education_edition_china)",
@@ -162,101 +162,30 @@
     }
   },
 
-  "attribution_popup_button@button_mcjava.action_button": {
+  "attribution_popup_button@button_ui.action_button": {
     "size": [150, 20],
     "ignored": "(not $is_holographic and not $fire_tv)",
     "$pressed_button_name": "button.attribution_popup",
     "$button_text": "options.attribution"
   },
 
-/* 
-
-
-
-
-     
-      {
-        "stack_zero@screen_mcjava.stack": {
-          "size": [310, 20],
-          "ignored": "(not $education_edition)",
-          "controls": [
-            { "@user_profile_mcjava.switch_accounts_panel": {} },
-            { "fill_zero@screen_mcjava.hfill": {} },
-            { "@user_profile_mcjava.use_sso": {} }
-          ]
-        }
-      },
-   
-      },
-      { "space@screen_mcjava.vspace": {} },
-      {
-        "stack_two@screen_mcjava.stack": {
-          "controls": [
-            { "@user_profile_mcjava.cross_platform_enabled_toggle": {} },
-            { "fill_zero@screen_mcjava.hfill": {} },
-            { "@user_profile_mcjava.option_toggle_0": {} }
-          ]
-        }
-      },
-      { "space@screen_mcjava.vspace": {} },
-      {
-        "stack_three@screen_mcjava.stack": {
-          "controls": [
-            { "@user_profile_mcjava.option_toggle_1": {} },
-            { "fill_zero@screen_mcjava.hfill": {} },
-            { "@user_profile_mcjava.link_button": {} }
-          ]
-        }
-      },
-      { "space@screen_mcjava.vspace": {} },
-      {
-        "stack_three@screen_mcjava.stack": {
-          "controls": [
-            { "@user_profile_mcjava.file_storage_multioption": {} },
-            { "@user_profile_mcjava.credits_button": {} },
-            { "fill_zero@screen_mcjava.hfill": {} },
-            { "@user_profile_mcjava.option_content_file_log": {} }
-          ]
-        }
-      },
-      { "space@screen_mcjava.vspace": {} },
-      {
-        "stack_three@screen_mcjava.stack": {
-          "controls": [
-            { "@user_profile_mcjava.option_content_gui_log": {} },
-            { "fill_zero@screen_mcjava.hfill": {} },
-            { "@user_profile_mcjava.open_content_log_history": {} }
-          ]
-        }
-      },
-      { "space@screen_mcjava.vspace": { "size": [0, 16] } },
-      {
-        "stack_four@screen_mcjava.panel": {
-          "controls": [
-            { "@settings_mcjava.back_button": { "$button_name": "navigation_tab" } }
-          ]
-        }
-      }
-    ]
-  }, */
-
   /* Content */
 
-  "option_content_file_log@option_toggle_mcjava.option_toggle": {
+  "option_content_file_log@option_toggle_ui.option_toggle": {
     "$option_toggle_text": "options.content_log_file",
     "$option_binding_name": "#content_log_file",
     "$option_enabled_binding_name": "#content_log_file_enabled",
     "$toggle_name": "content_log_file"
   },
 
-  "option_content_gui_log@option_toggle_mcjava.option_toggle": {
+  "option_content_gui_log@option_toggle_ui.option_toggle": {
     "$option_toggle_text": "options.content_log_gui",
     "$option_binding_name": "#content_log_gui",
     "$option_enabled_binding_name": "#content_log_gui_enabled",
     "$toggle_name": "content_log_gui"
   },
 
-  "open_content_log_history@button_mcjava.action_button": {
+  "open_content_log_history@button_ui.action_button": {
     "size": [150, 20],
     "$pressed_button_name": "button.open_content_log_history",
     "$button_text": "contentlog.history.title",
@@ -288,10 +217,10 @@
         }
       },
       {
-        "switch_accounts@button_mcjava.button": {
+        "switch_accounts@button_ui.button": {
           "size": [ 310, 20 ],
           "enabled": "$is_pregame",
-          "$button_content": "user_profile_mcjava.switch_accounts_button_content",
+          "$button_content": "user_profile_ui.switch_accounts_button_content",
           "$pressed_button_name": "button.switch_accounts"
         }
       }
@@ -337,7 +266,7 @@
     ]
   },
 
-  "use_sso@option_toggle_mcjava.option_toggle": {
+  "use_sso@option_toggle_ui.option_toggle": {
     "$option_toggle_text": "options.adUseSingleSignOn",
     "$option_binding_name": "#ad_use_single_sign_on",
     "$toggle_name": "ad_use_single_sign_on"
@@ -347,7 +276,7 @@
     "type": "panel",
     "$option_toggle_text": "options.name",
     /* "controls": [
-      { "@user_profile_mcjava.name_control": {} }
+      { "@user_profile_ui.name_control": {} }
     ], */
     "bindings": [
       {
@@ -367,8 +296,8 @@
     "$optionox_name": "player_name_text_box",
     "$toggle_enabled_binding_name": "#player_name_enabled"/* ,
     "controls": [
-      { "option_toggle_text@text_box_mcjava.option_toggle_text": {} },
-      { "option_text_edit_control@text_input_mcjava.option_text_input_control": {} }
+      { "option_toggle_text@text_box_ui.option_toggle_text": {} },
+      { "option_text_edit_control@text_input_ui.option_text_input_control": {} }
     ] */
   },
 
@@ -376,7 +305,7 @@
     "type": "panel",
     "size": [310, 28],
     "controls": [
-      { "@user_profile_mcjava.signin_control": {} }
+      { "@user_profile_ui.signin_control": {} }
     ],
     "bindings": [
       {
@@ -398,7 +327,7 @@
           "size": [ "100%", 20 ],
           "controls": [
             {
-              "action_button@button_mcjava.action_button": {
+              "action_button@button_ui.action_button": {
                 "$pressed_button_name": "sign_in_button",
                 "$button_text": "xbox.signInLong",
                 "size": [310, 20]
@@ -414,7 +343,7 @@
     "type": "stack_panel",
     "size": [310, "100%c"],
     "controls": [
-      { "@user_profile_mcjava.gamertag_control": {} }
+      { "@user_profile_ui.gamertag_control": {} }
     ],
     "bindings": [
       {
@@ -528,7 +457,7 @@
           ],
           "controls": [
             {
-              "action_button_0@button_mcjava.action_button": {
+              "action_button_0@button_ui.action_button": {
                 "ignored": "($is_windows_10_mobile)",
                 "size": [150, 20 ],
                 "anchor_from": "top_left",
@@ -538,7 +467,7 @@
               }
             },
             {
-              "action_button_1@button_mcjava.action_button": {
+              "action_button_1@button_ui.action_button": {
                 "size": "$manage_button_size",
                 "anchor_from": "top_right",
                 "anchor_to": "top_right",
@@ -547,7 +476,7 @@
               }
             },
             {
-              "manage_invites_popup_button@button_mcjava.action_button": {
+              "manage_invites_popup_button@button_ui.action_button": {
                 "size": [310, 20 ],
                 "anchor_from": "bottom_left",
                 "anchor_to": "bottom_left",
@@ -557,7 +486,7 @@
               }
             },
             {
-              "link_button@button_mcjava.link_button": {
+              "link_button@button_ui.link_button": {
                 "size": [310, 20 ],
                 "anchor_from": "bottom_left",
                 "anchor_to": "bottom_left",
@@ -581,7 +510,7 @@
           "size": [ 310, 28 ],
           "controls": [
             {
-              "action_button@button_mcjava.action_button": {
+              "action_button@button_ui.action_button": {
                 "size": [310, 20],
                 "$pressed_button_name": "sign_out_button",
                 "$button_text": "xbox.signOutLong",
@@ -596,26 +525,26 @@
     ]
   },
 
-  "auto_update_mode_multioption@switch_option_mcjava.switch_option_panel": {
-    "$switch_option_label": "Auto Update",
+  "auto_update_mode_multioption@switch_option_ui.switch_option_panel": {
+    "$switch_option_label": "options.autoUpdate",
     "size": [150, 20],
     "controls": [
       {
-        "off@switch_option_mcjava.switch_option": {
+        "off@switch_option_ui.switch_option": {
           "$option_action_text": "options.autoUpdateMode.off",
           "$this_action": "#auto_update_mode_off",
           "$next_action": "#auto_update_mode_on_wifi_only"
         }
       },
       {
-        "on_wifi_only@switch_option_mcjava.switch_option": {
+        "on_wifi_only@switch_option_ui.switch_option": {
           "$option_action_text": "options.autoUpdateMode.on.withWifiOnly",
           "$this_action": "#auto_update_mode_on_wifi_only",
           "$next_action": "#auto_update_mode_on_with_cellular"
         }
       },
       {
-        "on_with_cellular@switch_option_mcjava.switch_option": {
+        "on_with_cellular@switch_option_ui.switch_option": {
           "$option_action_text": "options.autoUpdateMode.on.withCellular",
           "$this_action": "#auto_update_mode_on_with_cellular",
           "$next_action": "#auto_update_mode_off"
@@ -624,7 +553,7 @@
     ]
   },
 
-  "auto_update_enabled_toggle@option_toggle_mcjava.option_toggle": {
+  "auto_update_enabled_toggle@option_toggle_ui.option_toggle": {
     /* "ignored": "((not $is_console and not $is_settopbox and not $win10_edition and not $osx_edition) or $nx_os)", */
     "$option_toggle_text": "options.autoUpdateEnabled",
     "$option_binding_name": "#auto_update",
@@ -632,7 +561,7 @@
     "$toggle_name": "auto_update_enabled"
   },
 
-  "cross_platform_enabled_toggle@option_toggle_mcjava.option_toggle": {
+  "cross_platform_enabled_toggle@option_toggle_ui.option_toggle": {
     /* "ignored": "(not $supports_cross_platform_play_toggle)", */
     "$option_toggle_text": "options.crossPlatformPlay",
     "$option_binding_name": "#crossplatform_toggle",
@@ -640,7 +569,7 @@
     "$toggle_name": "crossplatform_toggle"
   },
 
-  "option_toggle_0@option_toggle_mcjava.option_toggle": {
+  "option_toggle_0@option_toggle_ui.option_toggle": {
     /* "ignored": "($is_console or $is_settopbox or $win10_edition or $osx_edition or $education_edition_china)", */
     "$option_toggle_text": "options.allowCellularData",
     "$option_binding_name": "#allow_cellular_data",
@@ -648,7 +577,7 @@
     "$toggle_name": "allow_cellular_data"
   },
 
-  "option_toggle_1@option_toggle_mcjava.option_toggle": {
+  "option_toggle_1@option_toggle_ui.option_toggle": {
     "$option_toggle_text": "options.websocketEncryption",
     "$option_binding_name": "#websocket_encryption",
     "$option_enabled_binding_name": "#websocket_encryption_enabled",
@@ -656,7 +585,7 @@
     "ignored": "($console_edition or $education_edition_china)"
   },
 
-  "link_button@button_mcjava.link_button": {
+  "link_button@button_ui.link_button": {
     /* "ignored": "(not $education_edition or $education_edition_china or $is_holographic or $fire_tv)", */
     "$button_text": "options.goToFeedbackWebsite",
     "size": [150, 20],
@@ -665,20 +594,20 @@
     }
   },
 
-  "file_storage_multioption@switch_option_mcjava.switch_option_panel": {
+  "file_storage_multioption@switch_option_ui.switch_option_panel": {
     "size": [150, 20],
     "$option_enabled_binding_name": "#file_storage_location_enabled",
-    "$switch_option_label": "File Storage",
+    "$switch_option_label": "options.filelocation.title",
     "controls": [
       {
-        "off@switch_option_mcjava.switch_option": {
+        "off@switch_option_ui.switch_option": {
           "$option_action_text": "options.filelocation.external",
           "$this_action": "#storage_location_radio_external",
           "$next_action": "#storage_location_radio_package"
         }
       },
       {
-        "on_wifi_only@switch_option_mcjava.switch_option": {
+        "on_wifi_only@switch_option_ui.switch_option": {
           "$option_action_text": "options.filelocation.appdata",
           "$this_action": "#storage_location_radio_package",
           "$next_action": "#storage_location_radio_external"

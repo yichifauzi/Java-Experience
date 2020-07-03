@@ -1,14 +1,14 @@
 /* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "settings_mcjava",
+  "namespace": "settings_ui",
 
   "settings_screen_content_panel": {
     "type": "panel",
     "$is_realms|default": false,
     "controls": [
-      { "settings@settings_mcjava.settings_content_panel": {} },
+      { "settings@settings_ui.settings_content_panel": {} },
       {
-        "debug@debug_mcjava.debug_content_panel": {
+        "debug@debug_settings_ui.debug_settings_content_panel": {
           "bindings": [
             {
               "binding_type": "view",
@@ -20,7 +20,7 @@
         }
       },
       {
-        "accessibility@accessibility_mcjava.accessibility_content_panel": {
+        "accessibility@accessibility_ui.accessibility_content_panel": {
           "bindings": [
             {
               "binding_type": "view",
@@ -32,7 +32,7 @@
         }
       },
       {
-        "user_profile@user_profile_mcjava.user_profile_content_panel": {
+        "user_profile@user_profile_ui.user_profile_content_panel": {
           "bindings": [
             {
               "binding_type": "view",
@@ -44,7 +44,7 @@
         }
       },
       {
-        "sound@sound_mcjava.sound_content_panel": {
+        "sound@sound_ui.sound_content_panel": {
           "bindings": [
             {
               "binding_type": "view",
@@ -56,7 +56,7 @@
         }
       },
       {
-        "video@video_mcjava.video_content_panel": {
+        "video@video_ui.video_content_panel": {
           "bindings": [
             {
               "binding_type": "view",
@@ -68,7 +68,7 @@
         }
       },
       {
-        "controls@controls_mcjava.controls_content_panel": {
+        "controls@controls_ui.controls_content_panel": {
           "bindings": [
             {
               "binding_type": "view",
@@ -80,7 +80,7 @@
         }
       },
       {
-        "mouse@mouse_mcjava.mouse_content_panel": {
+        "mouse@mouse_ui.mouse_content_panel": {
           "bindings": [
             {
               "binding_type": "view",
@@ -92,7 +92,7 @@
         }
       },
       {
-        "controller@controller_mcjava.controller_content_panel": {
+        "controller@controller_ui.controller_content_panel": {
           "bindings": [
             {
               "binding_type": "view",
@@ -104,7 +104,7 @@
         }
       },
       {
-        "touch@touch_mcjava.touch_content_panel": {
+        "touch@touch_ui.touch_content_panel": {
           "bindings": [
             {
               "binding_type": "view",
@@ -116,7 +116,7 @@
         }
       },
       {
-        "language@language_mcjava.language_content_panel": {
+        "language@language_ui.language_content_panel": {
           "bindings": [
             {
               "binding_type": "view",
@@ -128,7 +128,20 @@
         }
       },
       {
-        "storage_management@storage_mcjava.storage_management_content_panel": {
+        "game_settings@game_settings_ui.game_settings_content_panel": {
+          "ignored": "$is_pregame",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "game_settings_view",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "storage_management@storage_ui.storage_management_content_panel": {
           "ignored": "(not $is_pregame)",
           "bindings": [
             {
@@ -141,8 +154,7 @@
         }
       },
       {
-        "global_resource_packs@global_resource_packs_mcjava.global_resource_packs_content_panel": {
-          "ignored": "(not $is_pregame)",
+        "global_resource_packs@global_resource_packs_ui.global_resource_packs_content_panel": {
           "bindings": [
             {
               "binding_type": "view",
@@ -159,7 +171,7 @@
   "settings_content_panel": {
     "type": "panel",
     "controls": [
-      { "title@screen_mcjava.title": { "text": "Options" } },
+      { "title@screen_ui.title": { "text": "options.title" } },
       {
         "content": {
           "type": "stack_panel",
@@ -169,74 +181,73 @@
           "offset": [ 0, "-36%" ],
           "controls": [
             {
-              "stack_0@settings_mcjava.stack": {
+              "stack_0@settings_ui.stack": {
                 "controls": [
-                  { "fov@settings_mcjava.fov_slider": {} },
-                  { "fill@screen_mcjava.hfill": {} },
-                  { "difficulty@settings_mcjava.difficulty_panel": { "ignored": "$is_pregame" } },
-                  { "fov@settings_mcjava.fov_toggle": { "ignored": "(not $is_pregame)" } }
+                  { "fov@settings_ui.fov_slider": {} },
+                  { "fill@screen_ui.hfill": {} },
+                  { "difficulty@settings_ui.difficulty_panel": { "ignored": "$is_pregame" } },
+                  { "fov@settings_ui.fov_toggle": { "ignored": "(not $is_pregame)" } }
                 ]
               }
             },
-            { "space_0@screen_mcjava.vspace": { "size": [0, 10] } },
+            { "space_0@screen_ui.vspace": { "size": [0, 10] } },
             {
-              "stack_1@settings_mcjava.stack": {
+              "stack_1@settings_ui.stack": {
                 "controls": [
-                  { "debug@settings_mcjava.debug_button": { "enabled": "(not $is_publish)" } },
-                  { "fill@screen_mcjava.hfill": {} },
-                  { "realms@settings_mcjava.realms_button": { "ignored": "(not $is_realms)" } }
+                  { "debug@settings_ui.debug_button": { "visible": "(not $is_publish)" } },
+                  { "fill@screen_ui.hfill": {} },
+                  { "realms@settings_ui.realms_button": { "ignored": "(not $is_realms)" } }
                 ]
               }
             },
-            { "space_1@screen_mcjava.vspace": {} },
+            { "space_1@screen_ui.vspace": {} },
             {
-              "stack_2@settings_mcjava.stack": {
+              "stack_2@settings_ui.stack": {
                 "controls": [
-                  { "user_profile@settings_mcjava.user_profile_button": {} },
-                  { "fill@screen_mcjava.hfill": {} },
-                  { "sound@settings_mcjava.sound_button": {} }
+                  { "user_profile@settings_ui.user_profile_button": {} },
+                  { "fill@screen_ui.hfill": {} },
+                  { "sound@settings_ui.sound_button": {} }
                 ]
               }
             },
-            { "space_2@screen_mcjava.vspace": {} },
+            { "space_2@screen_ui.vspace": {} },
             {
-              "stack_3@settings_mcjava.stack": {
+              "stack_3@settings_ui.stack": {
                 "controls": [
-                  { "video@settings_mcjava.video_button": {} },
-                  { "fill@screen_mcjava.hfill": {} },
-                  { "controls@settings_mcjava.controls_button": {} }
+                  { "video@settings_ui.video_button": {} },
+                  { "fill@screen_ui.hfill": {} },
+                  { "controls@settings_ui.controls_button": {} }
                 ]
               }
             },
-            { "space_3@screen_mcjava.vspace": {} },
+            { "space_3@screen_ui.vspace": {} },
             {
-              "stack_4@settings_mcjava.stack": {
+              "stack_4@settings_ui.stack": {
                 "controls": [
-                  { "language@settings_mcjava.language_button": {} },
-                  { "fill@screen_mcjava.hfill": {} },
-                  { "storage@settings_mcjava.storage_management_button": { "enabled": "(not $lock_storage_management)", "$toggle_index": "$storage_management_forced_index", "ignored": "(not $is_pregame)" } },
-                  { "gamerules_button@settings_mcjava.gamerules_button": {"ignored": "$is_pregame" } }
+                  { "language@settings_ui.language_button": {} },
+                  { "fill@screen_ui.hfill": {} },
+                  { "storage@settings_ui.storage_management_button": { "enabled": "(not $lock_storage_management)", "$toggle_index": "$storage_management_forced_index", "ignored": "(not $is_pregame)" } },
+                  { "game_settings_button@settings_ui.game_settings_button": { "ignored": "$is_pregame" } }
                 ]
               }
             },
-            { "space_4@screen_mcjava.vspace": {} },
+            { "space_4@screen_ui.vspace": {} },
             {
-              "stack_5@settings_mcjava.stack": {
+              "stack_5@settings_ui.stack": {
                 "controls": [
-                  { "global_resource_packs@settings_mcjava.global_resource_packs_button": { "ignored": "(not $is_pregame)" } },
-                  { "fill_0@screen_mcjava.hfill": { "ignored": "(not $is_pregame)" } },
-                  { "accessibility@settings_mcjava.accessibility_button": {} },
-                  { "fill_1@screen_mcjava.hfill": { "ignored": "$is_pregame" } }
+                  { "global_resource_packs@settings_ui.global_resource_packs_button": {} },
+                  { "fill_0@content.hfill": {} },
+                  { "accessibility@settings_ui.accessibility_button": {} }
                 ]
               }
             },
-            { "space_5@screen_mcjava.vspace": { "size": [0, 34] } },
+            { "space_5@screen_ui.vspace": { "size": [0, 34] } },
             {
-              "stack_6@settings_mcjava.stack": {
+              "stack_6@settings_ui.stack": {
                 "controls": [
-                  { "fill_left@screen_mcjava.hfill": {} },
-                  { "cancel@screen_mcjava.exit_button": { "$button_tts_header": "accessibility.button.back" } },
-                  { "fill_right@screen_mcjava.hfill": {} }
+                  { "fill_left@screen_ui.hfill": {} },
+                  { "cancel@screen_ui.exit_button": { "$button_tts_header": "accessibility.button.back" } },
+                  { "fill_right@screen_ui.hfill": {} }
                 ]
               }
             }
@@ -256,6 +267,12 @@
         "ignored": "(not $is_realms)",
         "binding_type": "view",
         "source_control_name": "realms_view",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "game_settings_view",
         "source_property_name": "(not #toggle_state)",
         "target_property_name": "#visible"
       },
@@ -302,7 +319,6 @@
         "target_property_name": "#visible"
       },
       {
-        "ignored": "(not $is_pregame)",
         "binding_type": "view",
         "source_control_name": "global_resource_packs_view",
         "source_property_name": "(not #toggle_state)",
@@ -313,13 +329,6 @@
         "source_control_name": "accessibility_view",
         "source_property_name": "(not #toggle_state)",
         "target_property_name": "#visible"
-      },
-      {
-        "ignored": "$is_pregame",
-        "binding_type": "view",
-        "source_control_name": "gamerules_view",
-        "source_property_name": "(not #toggle_state)",
-        "target_property_name": "#visible"
       }
     ]
   },
@@ -328,7 +337,7 @@
     "type": "panel",
     "controls": [
       {
-        "default@screen_mcjava.screen_background": {
+        "default@content.screen_background": {
           "bindings": [
             {
               "binding_type": "view",
@@ -361,6 +370,27 @@
               "target_property_name": "#visible"
             },
             {
+              "ignored": "$is_pregame",
+              "binding_type": "view",
+              "source_control_name": "world_rps_view",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            },
+            {
+              "ignored": "$is_pregame",
+              "binding_type": "view",
+              "source_control_name": "world_bps_view",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            },
+            {
+              "ignored": "$is_pregame",
+              "binding_type": "view",
+              "source_control_name": "world_gr_view",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            },
+            {
               "ignored": "(not $is_pregame)",
               "binding_type": "view",
               "source_control_name": "storage_management_button_toggle",
@@ -368,7 +398,6 @@
               "target_property_name": "#visible"
             },
             {
-              "ignored": "(not $is_pregame)",
               "binding_type": "view",
               "source_control_name": "global_resource_packs_view",
               "source_property_name": "(not #toggle_state)",
@@ -378,7 +407,7 @@
         }
       },
       {
-        "dirt@screen_mcjava.dirt_background": {
+        "dirt@content.dirt_background": {
           "bindings": [
             {
               "binding_type": "view",
@@ -411,6 +440,27 @@
               "target_property_name": "#visible"
             },
             {
+              "ignored": "$is_pregame",
+              "binding_type": "view",
+              "source_control_name": "world_rps_view",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            },
+            {
+              "ignored": "$is_pregame",
+              "binding_type": "view",
+              "source_control_name": "world_bps_view",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            },
+            {
+              "ignored": "$is_pregame",
+              "binding_type": "view",
+              "source_control_name": "world_gr_view",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            },
+            {
               "ignored": "(not $is_pregame)",
               "binding_type": "view",
               "source_control_name": "storage_management_button_toggle",
@@ -418,7 +468,6 @@
               "target_property_name": "#visible"
             },
             {
-              "ignored": "(not $is_pregame)",
               "binding_type": "view",
               "source_control_name": "global_resource_packs_view",
               "source_property_name": "#toggle_state",
@@ -436,7 +485,7 @@
     "size": [310, 20]
   },
 
-  "fov_slider@slider_mcjava.slider": {
+  "fov_slider@slider_ui.slider": {
     "enabled": "(not $is_holographic and not $is_reality_mode)",
     "$slider_label": "#field_of_view_slider_label",
     "$slider_tts_text_value": "#field_of_view_text_value",
@@ -449,48 +498,44 @@
         "$slider_type_panel": "percentage_slider.fov_slider_text_panel"
       }
     ],
-    "$slider_text_bindings": [
-      {
-        "binding_name": "$slider_label"
-      }
-    ]
+    "$slider_text_bindings": [ { "binding_name": "$slider_label" } ]
   },
 
-  "fov_toggle@option_toggle_mcjava.option_toggle": {
+  "fov_toggle@option_toggle_ui.option_toggle": {
     "$option_toggle_text": "options.fov.toggle",
     "$option_binding_name": "#field_of_view_toggle",
     "$option_enabled_binding_name": "#field_of_view_toggle_enabled",
     "$toggle_name": "field_of_view_toggle"
   },
 
-  "difficulty_panel@switch_option_mcjava.switch_option_panel": {
+  "difficulty_panel@switch_option_ui.switch_option_panel": {
     "size": [150, 20],
     "$option_enabled_binding_name": "#world_difficulty_dropdown_enabled",
     "$switch_option_label": "options.difficulty",
     "controls": [
       {
-        "peaceful@switch_option_mcjava.switch_option": {
+        "peaceful@switch_option_ui.switch_option": {
           "$option_action_text": "options.difficulty.peaceful",
           "$this_action": "#world_difficulty_radio_peaceful",
           "$next_action": "#world_difficulty_radio_easy"
         }
       },
       {
-        "easy@switch_option_mcjava.switch_option": {
+        "easy@switch_option_ui.switch_option": {
           "$option_action_text": "options.difficulty.easy",
           "$this_action": "#world_difficulty_radio_easy",
           "$next_action": "#world_difficulty_radio_normal"
         }
       },
       {
-        "normal@switch_option_mcjava.switch_option": {
+        "normal@switch_option_ui.switch_option": {
           "$option_action_text": "options.difficulty.normal",
           "$this_action": "#world_difficulty_radio_normal",
           "$next_action": "#world_difficulty_radio_hard"
         }
       },
       {
-        "hard@switch_option_mcjava.switch_option": {
+        "hard@switch_option_ui.switch_option": {
           "$option_action_text": "options.difficulty.hard",
           "$this_action": "#world_difficulty_radio_hard",
           "$next_action": "#world_difficulty_radio_peaceful"
@@ -499,85 +544,82 @@
     ]
   },
 
-  "open_button@toggle_button_mcjava.toggle_button": {
+  "open_button@toggle_button_ui.toggle_button": {
     "size": [150, 20],
     "$toggle_button_name": "navigation_tab"
   },
 
-  "back_button@toggle_button_mcjava.toggle_button": {
+  "back_button@toggle_button_ui.toggle_button": {
     "size": [200, 20],
     "$toggle_button_name": "navigation_tab",
     "$cancel_mapping": true,
     "$toggle_button_text": "gui.done"
   },
 
-  "debug_button@settings_mcjava.open_button": {
+  "debug_button@settings_ui.open_button": {
     "$toggle_index": 100,
-    "$toggle_button_text": "Debug...",
-    "$toggle_control_name": "debug_view"/* ,
-    "visible": "(not $is_publish)" */
+    "$toggle_button_text": "options.debug",
+    "$toggle_control_name": "debug_view"
   },
 
-  "realms_button@settings_mcjava.open_button": {
+  "realms_button@settings_ui.open_button": {
     "$toggle_index": 101,
-    "$toggle_button_text": "Realms...",
+    "$toggle_button_text": "selectWorld.tab.realms",
     "$toggle_control_name": "realms_view"
   },
 
-  "user_profile_button@settings_mcjava.open_button": {
+  "user_profile_button@settings_ui.open_button": {
     "$toggle_index": "$profile_forced_index",
     "$toggle_button_text": "options.user_profile",
     "$toggle_control_name": "user_profile_view"
   },
   
-  "sound_button@settings_mcjava.open_button": {
+  "sound_button@settings_ui.open_button": {
     "$toggle_index": 103,
     "$toggle_button_text": "options.sounds",
     "$toggle_control_name": "sound_view"
   },
 
-  "video_button@settings_mcjava.open_button": {
+  "video_button@settings_ui.open_button": {
     "$toggle_index": 104,
     "$toggle_button_text": "options.video",
     "$toggle_control_name": "video_view"
   },
 
-  "controls_button@settings_mcjava.open_button": {
+  "controls_button@settings_ui.open_button": {
     "$toggle_index": 105,
     "$toggle_button_text": "options.controls",
     "$toggle_control_name": "controls_view"
   },
 
-  "language_button@settings_mcjava.open_button": {
+  "language_button@settings_ui.open_button": {
     "$toggle_index": 106,
     "$toggle_button_text": "options.language",
     "$toggle_control_name": "language_view"
   },
 
-  "storage_management_button@settings_mcjava.open_button": {
+  "storage_management_button@settings_ui.open_button": {
     "$toggle_button_text": "options.storage",
     "$toggle_control_name": "storage_management_button_toggle",
     "enabled": "(not $trial)",
-    "$toggle_property_bag": {
-      "#panel_title": "menu.storageManagement"
-    }
+    "$toggle_property_bag": { "#panel_title": "menu.storageManagement" }
   },
 
-  "global_resource_packs_button@settings_mcjava.open_button": {
+  "global_resource_packs_button@settings_ui.open_button": {
     "$toggle_index": 108,
     "$toggle_button_text": "options.resourcePacks",
     "$toggle_control_name": "global_resource_packs_view"
   },
 
-  "accessibility_button@settings_mcjava.open_button": {
+  "accessibility_button@settings_ui.open_button": {
     "$toggle_index": 109,
     "$toggle_button_text": "options.accessibility",
     "$toggle_control_name": "accessibility_view"
   },
 
-  "gamerules_button@settings_mcjava.open_button": {
+  "game_settings_button@settings_ui.open_button": {
     "$toggle_index": 108,
-    "$toggle_button_text": "Game Settings...",
-    "$toggle_control_name": "in_gamerules_view"
+    "$toggle_button_text": "selectWorld.settings",
+    "$toggle_control_name": "game_settings_view"
   }
 }

@@ -1,14 +1,15 @@
+/* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "screenshot_mcjava",
+  "namespace": "screenshot_ui",
 
   "screenshot_screen_content_panel": {
     "type": "panel",
     "controls": [
-      { "title@screen_mcjava.title": { "text": "menu.screenshot" } },
+      { "title@screen_ui.title": { "text": "screenshot.title" } },
       { "gamepad_helpers@feed_common.gamepad_helpers": {} },
-      { "content_panel@screenshot_mcjava.content_panel": {} },
+      { "content_panel@screenshot_ui.content_panel": {} },
       {
-        "close_button@button_mcjava.button": {
+        "close_button@button_ui.button": {
           "$pressed_button_name": "button.menu_exit",
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
@@ -40,7 +41,7 @@
           "layer": 1,
           "size": ["100%", "100%"],
           "controls": [
-            { "new_post_share_post@screenshot_mcjava.new_post_share_post": { "size": ["100%", 22], "offset": [0, "90%"] } },
+            { "new_post_share_post@screenshot_ui.new_post_share_post": { "size": ["100%", 22], "offset": [0, "90%"] } },
             {
               "screenshot_image@screenshot.screenshot_image": {
                 "size": ["100%", "75%"],
@@ -64,7 +65,7 @@
     "size": ["100% + 2px", 22],
     "controls": [
       {
-        "share_text_box@text_box_mcjava.text_box": {
+        "share_text_box@text_box_ui.text_box": {
           "size": [202, 22],
           "anchor_from": "top_left",
           "anchor_to": "top_left",
@@ -76,12 +77,12 @@
         }
       },
       {
-        "share_button@button_mcjava.button": {
+        "share_button@button_ui.button": {
           "$pressed_button_name": "button.share_screenshot",
           "size": [80, 20],
           "anchor_from": "right_middle",
           "anchor_to": "right_middle",
-          "$button_text": "Share"
+          "$button_text": "creenshot.post"
         }
       }
     ]

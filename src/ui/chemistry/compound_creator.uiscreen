@@ -1,5 +1,7 @@
+/* Version: 2.0.0 */
+/* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "compound_creator_mcjava",
+  "namespace": "compound_creator_ui",
 
   "compound_creator_screen_content_panel": {
     "type": "panel",
@@ -11,26 +13,26 @@
           "controls": [
             { "compound_bg@resources1.compound_bg": {} },
             {
-              "title@container_mcjava.title": {
+              "title@container_ui.title": {
                 "text": "compoundcreator.title",
                 "offset": [0, 5],
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle"
               }
             },
-            { "content@compound_creator_mcjava.compound_creator_content_panel": {} },
+            { "content@compound_creator_ui.compound_creator_content_panel": {} },
             {
               "inventory": {
                 "type": "panel",
                 "layer": 3,
                 "controls": [
-                  { "inventory_panel@container_mcjava.inventory_grid_panel": {} },
-                  { "hotbar_grid@container_mcjava.hotbar_grid": {} },
+                  { "inventory_panel@container_ui.inventory_grid_panel": {} },
+                  { "hotbar_grid@container_ui.hotbar_grid": {} },
                   { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} }
                 ]
               }
             },
-            { "inventory_selected_icon_button@container_mcjava.inventory_selected_icon_button": {} }
+            { "inventory_selected_icon_button@container_ui.inventory_selected_icon_button": {} }
           ]
         }
       },
@@ -41,8 +43,8 @@
   "compound_creator_content_panel": {
     "type": "panel",
     "controls": [
-      { "input@compound_creator_mcjava.input_grid": {} },
-      { "output@compound_creator_mcjava.output_slot": {} }
+      { "input@compound_creator_ui.input_grid": {} },
+      { "output@compound_creator_ui.output_slot": {} }
     ]
   },
 
@@ -53,23 +55,23 @@
     "anchor_to": "top_left",
     "offset": [49, 25],
     "grid_dimensions": [ 3, 3 ],
-    "grid_item_template": "compound_creator_mcjava.input_slot",
+    "grid_item_template": "compound_creator_ui.input_slot",
     "collection_name": "compcreate_input"
   },
 
-  "input_slot@container_mcjava.container_slot": {
+  "input_slot@container_ui.container_slot": {
     "$item_collection_name": "compcreate_input"
   },
 
-  "output_slot@container_mcjava.container_slot": {
+  "output_slot@container_ui.container_slot": {
     "$item_collection_name": "compcreate_output",
-    "$button_ref": "compound_creator_mcjava.output_slot_button",
+    "$button_ref": "compound_creator_ui.output_slot_button",
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "offset": [132, 43]
   },
 
-  "output_slot_button@container_mcjava.container_slot_button_prototype": {
+  "output_slot_button@container_ui.container_slot_button_prototype": {
     "button_mappings": [
       {
         "from_button_id": "button.menu_select",

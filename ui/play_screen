@@ -29,11 +29,11 @@
     "variables": [
       {
         "requires": "($play_screen = better)",
-        "$content": "play_mcjava.play_screen_content_panel"
+        "$content": "play_ui.play_screen_content_panel"
       },
       {
         "requires": "($play_screen = fast)",
-        "$content": "play_fast_mcjava.play_screen_content_panel"
+        "$content": "play_fast_ui.play_screen_content_panel"
       }
     ],
     "controls": [ { "$content@$content": {} } ]

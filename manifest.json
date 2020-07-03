@@ -17,5 +17,17 @@
   "metadata": {
     "authors": ["FMarquesPTO"],
     "url": "https://twitter.com/FMarquesPTO"
-  }
+  },
+  "subpacks": [
+    {
+      "folder_name": "default",
+      "name": "default",
+      "memory_tier": 1
+    },
+    {
+      "folder_name": "default2",
+      "name": "defaultw",
+      "memory_tier": 2
+    }
+  ]
 }

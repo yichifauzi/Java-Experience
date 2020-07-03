@@ -77,7 +77,7 @@
         "mapping_type": "global"
       }
     ],
-    "$screen_content": "loom_mcjava.loom_screen_content_panel",
+    "$screen_content": "loom_ui.loom_screen_content_panel",
     "$screen_background": "content.screen_background"
   }
 }

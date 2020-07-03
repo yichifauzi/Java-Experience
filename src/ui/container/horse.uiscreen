@@ -1,13 +1,13 @@
 /* Version: 2.0.0 */
 /* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "horse_mcjava",
+  "namespace": "horse_ui",
 
   "horse_screen_content_panel": {
     "type": "panel",
     "controls": [
       { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
-      { "invisible_exit_background@container_mcjava.invisible_exit_background": {} },
+      { "invisible_exit_bg@container_ui.invisible_exit_bg": {} },
       {
         "flying_item_renderer@common.flying_item_renderer": {
           "layer": 8,
@@ -24,16 +24,16 @@
           "size": [176, 166],
           "layer": 1,
           "controls": [
-            { "close_button@container_mcjava.close_button": {} },
+            { "close_button@container_ui.close_button": {} },
             { "bg@resources1.horse_bg": {} },
-            { "title@container_mcjava.title": { "offset": [8, 5] }},
-            { "renderer@horse_mcjava.horse_renderer": {} },
-            { "equip@horse_mcjava.equip_panel": {} },
-            { "inv@horse_mcjava.invs_grid_panel": {} },
-            { "inventory_grid_panel@container_mcjava.inventory_grid_panel": {} },
-            { "hotbar_grid@container_mcjava.hotbar_grid": {} },
-            { "inventory_selected_icon_button@container_mcjava.inventory_selected_icon_button": {} },
-            { "gamepad_cursor@common.gamepad_cursor_button": {} }
+            { "title@container_ui.title": { "offset": [8, 5] }},
+            { "renderer@horse_ui.horse_renderer": {} },
+            { "equip@horse_ui.equip_panel": {} },
+            { "inv@horse_ui.invs_grid_panel": {} },
+            { "inventory_grid_panel@container_ui.inventory_grid_panel": {} },
+            { "hotbar_grid@container_ui.hotbar_grid": {} },
+            { "inventory_selected_icon_button@container_ui.inventory_selected_icon_button": {} },
+            { "gamepad_cursor@container_ui.gamepad_cursor_button": {} }
           ]
         }
       }
@@ -48,7 +48,7 @@
     "offset": [7, 17],
     "controls": [
       {
-        "equip_grid@horse_mcjava.equip_grid": {
+        "equip_grid@horse_ui.equip_grid": {
           "offset": [0, 18],
           "bindings": [
             { "binding_name": "#equip_grid_dimensions" },
@@ -60,7 +60,7 @@
         }
       },
       {
-        "equip_grid@horse_mcjava.equip_grid": {
+        "equip_grid@horse_ui.equip_grid": {
           "bindings": [
             { "binding_name": "#equip_grid_dimensions" },
             {
@@ -180,8 +180,8 @@
     "offset": [79, 17],
     "clips_children": true,
     "controls": [
-      { "inventory_bg@horse_mcjava.inventory_bg_panel": {} },
-      { "grid@horse_mcjava.inv_grid": {} }
+      { "inventory_bg@horse_ui.inventory_bg_panel": {} },
+      { "grid@horse_ui.inv_grid": {} }
     ]
   },
 
@@ -200,7 +200,7 @@
     "layer": 3,
     "size": ["default", "default"],
     "collection_name": "container_items",
-    "grid_item_template": "@container_mcjava.container_slot",
+    "grid_item_template": "@container_ui.container_slot",
     "grid_dimension_binding": "#inv_grid_dimensions",
     "$item_collection_name": "container_items",
     "bindings": [ { "binding_name": "#inv_grid_dimensions" } ]
@@ -211,7 +211,7 @@
     "anchor_to": "top_left",
     "anchor_from": "top_left",
     "collection_name": "horse_equip_items",
-    "grid_item_template": "@container_mcjava.container_slot",
+    "grid_item_template": "@container_ui.container_slot",
     "grid_dimension_binding": "#equip_grid_dimensions",
     "$item_collection_name": "horse_equip_items",
     "bindings": [ { "binding_name": "#equip_grid_dimensions" } ]

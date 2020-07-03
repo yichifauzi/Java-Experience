@@ -1,5 +1,6 @@
+/* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "server_form_mcjava",
+  "namespace": "server_form_ui",
 
   "server_form_screen_content_panel": {
     "type": "panel",
@@ -9,15 +10,15 @@
         "server_form_factory": {
           "type": "factory",
           "control_ids": {
-            "long_form": "@server_form_mcjava.long_form",
-            "custom_form": "@server_form_mcjava.custom_form"
+            "long_form": "@server_form_ui.long_form",
+            "custom_form": "@server_form_ui.custom_form"
           }
         }
       }
     ]
   },
 
-  "title@screen_mcjava.title": {
+  "title@screen_ui.title": {
     "text": "#title_text",
     "anchor_from": "top_left",
     "anchor_to": "top_left",
@@ -45,13 +46,13 @@
   "form_bg": {
     "type": "image",
     "size": [176, 133],
-    "texture": "src/core/assets/fmarquespto/textures/server_form"
+    "texture": "src/core/assets/fmarquespto/server_form"
   },
 
   "form_custom_bg": {
     "type": "image",
     "size": [176, 133],
-    "texture": "src/core/assets/fmarquespto/textures/server_form_custom"
+    "texture": "src/core/assets/fmarquespto/server_form_custom"
   },
 
   "long_form": {
@@ -77,7 +78,7 @@
     "anchor_to": "top_left",
     "factory":{
       "name": "buttons",
-      "control_name": "server_form_mcjava.dynamic_button"
+      "control_name": "server_form_ui.dynamic_button"
     },
     "collection_name": "form_buttons",
     "bindings": [
@@ -185,10 +186,10 @@
                 "size": [18, 18],
                 "controls": [
                   {
-                    "tooltip@tooltip_mcjava.tooltip": {
+                    "tooltip@tooltip_ui.tooltip": {
                       "$tooltip_controls": [
                         {
-                          "name@tooltip_mcjava.name": {
+                          "name@tooltip_ui.name": {
                             "text": "$button_text",
                             "bindings": [
                               {
@@ -207,7 +208,7 @@
                   {
                     "highlight_slot_image": {
                       "type": "image",
-                      "texture": "src/core/assets/fmarquespto/textures/white",
+                      "texture": "src/core/assets/fmarquespto/white",
                       "size": [16, 16],
                       "color": "$highlight_slot_bg_color",
                       "alpha": "$highlight_slot_bg_alpha"
@@ -222,10 +223,10 @@
                 "size": [18, 18],
                 "controls": [
                   {
-                    "tooltip@tooltip_mcjava.tooltip": {
+                    "tooltip@tooltip_ui.tooltip": {
                       "$tooltip_controls": [
                         {
-                          "name@tooltip_mcjava.name": {
+                          "name@tooltip_ui.name": {
                             "text": "$button_text",
                             "bindings": [
                               {
@@ -244,7 +245,7 @@
                   {
                     "highlight_slot_image": {
                       "type": "image",
-                      "texture": "src/core/assets/fmarquespto/textures/white",
+                      "texture": "src/core/assets/fmarquespto/white",
                       "size": [16, 16],
                       "color": "$highlight_slot_bg_color",
                       "alpha": "$highlight_slot_bg_alpha"
@@ -276,14 +277,14 @@
       { "@title": {} },
       { "@form_custom_bg": {} },
       {
-        "custom_form_panel@scrolling_mcjava.scrolling_panel" : {
+        "custom_form_panel@scrolling_ui.scrolling_panel" : {
           "offset": [0, 18],
           "anchor_to": "top_middle",
           "$scroll_bg": "common.empty_panel",
           "anchor_from": "top_middle",
           "$show_background": false,
           "size": [160, 106],
-          "$scrolling_content": "server_form_mcjava.custom_form_scrolling_content",
+          "$scrolling_content": "server_form_ui.custom_form_scrolling_content",
           "$scroll_size": [0, "100% - 4px" ],
           "$scrolling_pane_size": [160, "100%"],
           "$scrolling_pane_offset": [0, 0 ],
@@ -301,9 +302,9 @@
     "anchor_to": "top_middle",
     "controls": [
       { "space@content.v2px": { "size": [0, 0.5] } },
-      { "generated_form@server_form_mcjava.generated_contents": {} },
+      { "generated_form@server_form_ui.generated_contents": {} },
       {
-        "submit_button@button_mcjava.button": {
+        "submit_button@button_ui.button": {
           "$pressed_button_name": "button.submit_custom_form",
           "anchor_from": "top_left",
           "anchor_to": "top_left",
@@ -330,11 +331,11 @@
       "name": "buttons",
       "control_ids": {
         "label": "",
-        "toggle": "@server_form_mcjava.custom_toggle",
-        "slider": "@server_form_mcjava.custom_slider",
-        "step_slider": "@server_form_mcjava.custom_step_slider",
+        "toggle": "@server_form_ui.custom_toggle",
+        "slider": "@server_form_ui.custom_slider",
+        "step_slider": "@server_form_ui.custom_step_slider",
         "dropdown": "@server_form.custom_dropdown",
-        "input": "@server_form_mcjava.custom_input"
+        "input": "@server_form_ui.custom_input"
       }
     },
     "collection_name": "custom_form",
@@ -346,7 +347,7 @@
     ]
   },
 
-  "custom_input@text_box_mcjava.text_box_with_label": {
+  "custom_input@text_box_ui.text_box_with_label": {
     "size": ["100%", 22],
     "$box_size": ["100%", 22],
     "$option_label": "#custom_text",
@@ -369,7 +370,7 @@
     ]
   },
 
-  "custom_toggle@option_toggle_mcjava.option_toggle": {
+  "custom_toggle@option_toggle_ui.option_toggle": {
     "size": ["100%", 20],
     "$option_toggle_text": "#custom_text",
     "$toggle_name": "custom_toggle",
@@ -388,7 +389,7 @@
     ]
   },
 
-  "custom_slider@slider_mcjava.option_slider": {
+  "custom_slider@slider_ui.option_slider": {
     "size": ["100%", 20],
     "$slider_label": "#custom_slider_text",
     "$slider_name": "custom_slider",
@@ -407,7 +408,7 @@
     ]
   },
 
-  "custom_step_slider@slider_mcjava.custom_slider": {
+  "custom_step_slider@slider_ui.custom_slider": {
     "size": ["100%", 20],
     "$slider_label": "#custom_slider_step_text",
     "$slider_name": "custom_slider_step",

@@ -1,14 +1,14 @@
 /* Version: 2.0.0 */
 /* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "main_menu_mcjava",
+  "namespace": "main_menu_ui",
 
   "main_menu_screen_content_panel": {
     "type": "panel",
     "controls": [
-      { "title@main_menu_mcjava.title_panel": {} },
-      { "menu_panel@main_menu_mcjava.menu_panel": {} },
-      { "footer_panel@main_menu_mcjava.footer_panel": {} }
+      { "title@main_menu_ui.title_panel": {} },
+      { "menu_panel@main_menu_ui.menu_panel": {} },
+      { "footer_panel@main_menu_ui.footer_panel": {} }
     ]
   },
 
@@ -19,12 +19,12 @@
     "anchor_to": "top_middle",
     "offset": [0, "6% + 8px"],
     "controls": [
-      { "title@main_menu_mcjava.title_stack": { "offset": [0, 0], "layer": 2, "$color": "" } },
-      { "top@main_menu_mcjava.title_stack": { "offset": [0, -1] } },
-      { "bottom@main_menu_mcjava.title_stack": { "offset": [0, 1] } },
-      { "right@main_menu_mcjava.title_stack": { "offset": [-1, 0] } },
-      { "left@main_menu_mcjava.title_stack": { "offset": [1, 0] } },
-      { "splash_text@main_menu_mcjava.splash_text": { "offset": [-36, 8] } },
+      { "title@main_menu_ui.title_stack": { "offset": [0, 0], "layer": 2, "$color": "" } },
+      { "top@main_menu_ui.title_stack": { "offset": [0, -1] } },
+      { "bottom@main_menu_ui.title_stack": { "offset": [0, 1] } },
+      { "right@main_menu_ui.title_stack": { "offset": [-1, 0] } },
+      { "left@main_menu_ui.title_stack": { "offset": [1, 0] } },
+      { "splash_text@main_menu_ui.splash_text": { "offset": [-36, 8] } },
       { "edition@$edition_image": {} }
     ],
     "$edition_image|default": "",
@@ -78,19 +78,19 @@
           "type": "stack_panel",
           "controls": [
             {
-              "play_button@main_menu_mcjava.button_box": {
+              "play_button@main_menu_ui.button_box": {
                 "ignored": "$education_edition_china",
                 "controls": [ { "button@content.main_play_button": {} } ]
               }
             },
             {
-              "play_button@main_menu_mcjava.button_box": {
+              "play_button@main_menu_ui.button_box": {
                 "ignored": "(not $education_edition_china)",
                 "controls": [ { "button@content.main_courses_button": {} } ]
               }
             },
             {
-              "profile_button@main_menu_mcjava.button_box": {
+              "profile_button@main_menu_ui.button_box": {
                 "controls": [ { "button@content.main_profile_button": {} } ],
                 "bindings": [
                   {
@@ -101,7 +101,7 @@
               }
             },
             {
-              "change_skin_button@main_menu_mcjava.button_box": {
+              "change_skin_button@main_menu_ui.button_box": {
                 "controls": [ { "button@content.main_change_skin_button": {} } ],
                 "bindings": [
                   {
@@ -112,19 +112,19 @@
               }
             },
             {
-              "store_button@main_menu_mcjava.button_box": {
+              "store_button@main_menu_ui.button_box": {
                 "ignored": "(($trial) or ($store_ignored))",
                 "controls": [ { "button@content.main_store_button": {} } ]
               }
             },
             {
-              "switch_accounts_button@main_menu_mcjava.button_box": {
+              "switch_accounts_button@main_menu_ui.button_box": {
                 "ignored": "(not $education_edition) or $education_edition_china",
                 "controls": [ { "button@content.main_switch_accounts_button": {} } ]
               }
             },
             {
-              "launch_editions_button@main_menu_mcjava.button_box": {
+              "launch_editions_button@main_menu_ui.button_box": {
                 "ignored": "($trial or not $supports_launching_legacy_version)",
                 "controls": [ { "button@content.main_launch_editions_button": {} } ],
                 "bindings": [
@@ -198,13 +198,13 @@
     "anchor_to": "bottom_middle",
     "offset": [0, -2],
     "controls": [
-      { "mc_text@main_menu_mcjava.mc_text": {} },
-      { "space@main_menu_mcjava.space_text": {} },
-      { "version_text@main_menu_mcjava.version_text": {} },
-      { "space@main_menu_mcjava.space_text": { "text": "$additional_text", "shadow": true } },
-      { "trial_text@main_menu_mcjava.trial_text": {} },
+      { "mc_text@main_menu_ui.mc_text": {} },
+      { "space@main_menu_ui.space_text": {} },
+      { "version_text@main_menu_ui.version_text": {} },
+      { "space@main_menu_ui.space_text": { "text": "$additional_text", "shadow": true } },
+      { "trial_text@main_menu_ui.trial_text": {} },
       { "space@content.hfill": {} },
-      { "copyright_text@main_menu_mcjava.copyright_text": {} }
+      { "copyright_text@main_menu_ui.copyright_text": {} }
     ]
   },
 
@@ -219,7 +219,7 @@
     "shadow": true
   },
 
-  "mc_text@main_menu_mcjava.base_text": {
+  "mc_text@main_menu_ui.base_text": {
     "text": "$minecraft_text"
   },
 
@@ -231,7 +231,7 @@
     "clips_children": true,
     "controls": [
       {
-        "text@main_menu_mcjava.base_text": {
+        "text@main_menu_ui.base_text": {
           "text": "$version_text",
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right",
@@ -241,7 +241,7 @@
     ]
   }, 
 
-  "trial_text@main_menu_mcjava.base_text": {
+  "trial_text@main_menu_ui.base_text": {
     "text": "$trial_version_text",
     "bindings": [
       {
@@ -255,7 +255,7 @@
     ]
   },
 
-  "copyright_text@main_menu_mcjava.base_text": {
+  "copyright_text@main_menu_ui.base_text": {
     "text": "$copyright_text"
   }
 }

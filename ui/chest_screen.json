@@ -1,32 +1,32 @@
 /* Version: 2.0.0 */
 {
   "small_chest_screen@content.inventory_screen": {
-    "force_close_on_player_hurt": "$force_close_on_player_hurt",
-    "$screen_content": "chests_mcjava.small_chest_screen_content_panel",
+    "close_on_player_hurt": "$force_close_on_player_hurt",
+    "$screen_content": "chests_ui.small_chest_screen_content_panel",
     "$screen_background": "content.container_screen_background"
   },
 
   "large_chest_screen@content.inventory_screen": {
-    "force_close_on_player_hurt": "$force_close_on_player_hurt",
-    "$screen_content": "chests_mcjava.large_chest_screen_content_panel",
+    "close_on_player_hurt": "$force_close_on_player_hurt",
+    "$screen_content": "chests_ui.large_chest_screen_content_panel",
     "$screen_background": "content.container_screen_background"
   },
 
   "ender_chest_screen@content.inventory_screen": {
-    "force_close_on_player_hurt": "$force_close_on_player_hurt",
-    "$screen_content": "chests_mcjava.ender_chest_screen_content_panel",
+    "close_on_player_hurt": "$force_close_on_player_hurt",
+    "$screen_content": "chests_ui.ender_chest_screen_content_panel",
     "$screen_background": "content.container_screen_background"
   },
 
   "shulker_box_screen@content.inventory_screen": {
-    "force_close_on_player_hurt": "$force_close_on_player_hurt",
-    "$screen_content": "chests_mcjava.shulker_box_screen_content_panel",
+    "close_on_player_hurt": "$force_close_on_player_hurt",
+    "$screen_content": "chests_ui.shulker_box_screen_content_panel",
     "$screen_background": "content.container_screen_background"
   },
 
   "barrel_screen@content.inventory_screen": {
-    "force_close_on_player_hurt": "$force_close_on_player_hurt",
-    "$screen_content": "chests_mcjava.barrel_screen_content_panel",
+    "close_on_player_hurt": "$force_close_on_player_hurt",
+    "$screen_content": "chests_ui.barrel_screen_content_panel",
     "$screen_background": "content.container_screen_background"
   }
 }

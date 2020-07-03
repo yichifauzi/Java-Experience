@@ -8,7 +8,7 @@
         "mapping_type": "global"
       }
     ],
-    "$screen_content": "adhoc_mcjava.adhoc_screen_content_panel",
+    "$screen_content": "adhoc_ui.adhoc_screen_content_panel",
     "$screen_background": "content.dirt_background"
   }
 }

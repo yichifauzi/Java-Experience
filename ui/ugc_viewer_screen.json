@@ -8,7 +8,7 @@
         "mapping_type": "global"
       }
     ],
-    "$screen_content": "seed_picker_mcjava.seed_picker_screen_content_panel",
+    "$screen_content": "seed_picker_ui.seed_picker_screen_content_panel",
     "$screen_background": "content.dirt_background"
   }
 }

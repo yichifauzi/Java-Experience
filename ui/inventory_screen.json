@@ -96,14 +96,14 @@
 
   "crafting_screen": {
     "send_telemetry": false,
-    "force_close_on_player_hurt": "$force_close_on_player_hurt",
-    "$screen_content": "crafting_table_mcjava.crafting_table_screen_content_panel",
+    "close_on_player_hurt": "$force_close_on_player_hurt",
+    "$screen_content": "crafting_table_ui.crafting_table_screen_content_panel",
     "$screen_background": "content.container_screen_background"
   },
 
   "inventory_screen": {
     "send_telemetry": false,
-    "force_close_on_player_hurt": "$force_close_on_player_hurt",
+    "close_on_player_hurt": "$force_close_on_player_hurt",
     "$screen_content": "crafting.inv_panel",
     "$screen_background": "content.container_screen_background"
   },
@@ -112,7 +112,7 @@
     "type": "panel",
     "controls": [
       {
-        "1@creative_inv_mcjava.creative_inv_screen_content_panel": {
+        "1@creative_inv_ui.creative_inv_screen_content_panel": {
           "bindings": [
             {
               "binding_type": "global",
@@ -123,7 +123,7 @@
         }
       },
       {
-        "0@survival_inv_mcjava.survival_inv_screen_content_panel": {
+        "0@survival_inv_ui.survival_inv_screen_content_panel": {
           "bindings": [
             {
               "binding_type": "global",
@@ -139,9 +139,9 @@
   "crafting_screen_content": {
     "type": "panel",
     "controls": [
-      { "inventory_take_progress_icon_button@container_mcjava.inventory_take_progress_icon_button": {} },
-      { "inventory_selected_icon_button@container_mcjava.inventory_selected_icon_button": {} },
-      { "hold_icon@container_mcjava.inventory_take_progress_icon_button": {} },
+      { "inventory_take_progress_icon_button@container_ui.inventory_take_progress_icon_button": {} },
+      { "inventory_selected_icon_button@container_ui.inventory_selected_icon_button": {} },
+      { "hold_icon@container_ui.inventory_take_progress_icon_button": {} },
       {
         "controller_gamepad_helpers_stack_panel": {
           "type": "stack_panel",

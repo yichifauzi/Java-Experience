@@ -1,9 +1,10 @@
+/* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "crafting_rb_nature_mcjava",
+  "namespace": "crafting_rb_nature_ui",
 
-  "creative_nature_tab_content@crafting_rb_mcjava.common_tab_content": {
+  "creative_nature_tab_content@crafting_rb_ui.common_tab_content": {
     "$tab_name": "nature",
-    /* "$page_total_number": "14", */
+    "$page_total_number": "14",
     "$ignore_from_fourteen": true,
     "bindings": [
       {
@@ -15,9 +16,9 @@
     ]
   },
 
-  "survival_nature_tab_content@crafting_rb_mcjava.common_tab_content": {
+  "survival_nature_tab_content@crafting_rb_ui.common_tab_content": {
     "$tab_name": "nature",
-    /* "$page_total_number": "3", */
+    "$page_total_number": "3",
     "$ignore_from_three": true,
     "bindings": [
       {

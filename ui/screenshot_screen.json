@@ -32,7 +32,7 @@
         "scope": "view"
       }
     ],
-    "$screen_content": "screenshot_mcjava.screenshot_screen_content_panel",
+    "$screen_content": "screenshot_ui.screenshot_screen_content_panel",
     "$screen_background": "content.screen_background"
   }
 }

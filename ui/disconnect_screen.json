@@ -13,8 +13,8 @@
         "mapping_type": "global"
       }
     ],
-    "$screen_content": "disconnect_mcjava.disconnect_screen_content_panel",
-    "$screen_background": "screen_mcjava.dirt_background"
+    "$screen_content": "disconnect_ui.disconnect_screen_content_panel",
+    "$screen_background": "content.dirt_background"
   },
 
   "realms_disconnect_screen@content.base_screen": {
@@ -30,8 +30,8 @@
         "mapping_type": "global"
       }
     ],
-    "$screen_content": "disconnect_mcjava.realms_disconnect_screen_content_panel",
-    "$screen_background": "screen_mcjava.dirt_background"
+    "$screen_content": "disconnect_ui.realms_disconnect_screen_content_panel",
+    "$screen_background": "content.dirt_background"
   },
   
   "realms_warning_screen@content.base_screen": {
@@ -47,7 +47,7 @@
         "mapping_type": "global"
       }
     ],
-    "$screen_content": "disconnect_mcjava.realms_warning_screen_content_panel",
-    "$screen_background": "screen_mcjava.dirt_background"
+    "$screen_content": "disconnect_ui.realms_warning_screen_content_panel",
+    "$screen_background": "content.dirt_background"
   }
 }

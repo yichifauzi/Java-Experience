@@ -13,8 +13,8 @@
 		    "mapping_type": "global"
 	    }
     ],
-    "force_close_on_player_hurt": true,
-    "$screen_content": "mob_effects_mcjava.mob_effects_screen_content_panel",
+    "close_on_player_hurt": true,
+    "$screen_content": "mob_effects_ui.mob_effects_screen_content_panel",
     "$screen_background": "content.screen_background"
   }
 }

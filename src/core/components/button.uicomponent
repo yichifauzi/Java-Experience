@@ -1,24 +1,24 @@
 /* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "button_mcjava",
+  "namespace": "button_ui",
 
   "button_base@common.button": {
     "sound_name": "ui.button.click"
   },
 
-  "button@button_mcjava.button_base": {
+  "button@button_ui.button_base": {
     "locked_control": "locked",
     "size": [200, 20],
-    "$button_state_panel|default": "button_mcjava.button_state_panel",
-    "$button_type_panel|default": "button_mcjava.button_label",
+    "$button_state_panel|default": "button_ui.button_state_panel",
+    "$button_type_panel|default": "button_ui.button_label",
     "$button_text_binding_type|default": "none",
     "$button_binding_condition|default": "none",
     "$button_text_grid_collection_name|default": "",
     "$text_locked_color|default": "$button_locked_text_color",
-    "$default_button_bg|default": "resources.button_default",
-    "$hover_button_bg|default": "resources.button_hover",
-    "$pressed_button_bg|default": "resources.button_hover",
-    "$locked_button_bg|default": "resources.button_locked",
+    "$default_button_bg|default": "resources0.button_default",
+    "$hover_button_bg|default": "resources0.button_hover",
+    "$pressed_button_bg|default": "resources0.button_hover",
+    "$locked_button_bg|default": "resources0.button_locked",
     "$state|default": "",
     "controls": [
       {
@@ -78,7 +78,7 @@
     "$tooltip_name|default": "null",
     "controls": [
       {
-        "tooltip@tooltip_mcjava.tooltip": {
+        "tooltip@tooltip_ui.tooltip": {
           "visible": "($state = hover)",
           "ignored": "($tooltip_name = null)"
         }
@@ -90,9 +90,7 @@
           "size": "$content_panel_size",
           "$content_panel_size|default": ["100% - 2px", "100% - 2px"],
           "layer": 3,
-          "controls": [
-            { "content@$button_type_panel": {} }
-          ]
+          "controls": [ { "content@$button_type_panel": {} } ]
         }
       }
     ]
@@ -111,7 +109,7 @@
     "font_scale_factor": "$button_font_scale_factor",
     "$button_font_scale_factor|default": 1.0,
     "offset": "$button_text_offset",
-    "$button_text_offset|default": [0, 0],
+    "$button_text_offset|default": [1, 0],
     "anchor_from": "$anchor",
     "anchor_to": "$anchor",
     "$anchor|default": "center",
@@ -124,12 +122,6 @@
     "text_alignment": "$text_alignment",
     "$text_alignment|default": "center",
     "layer": 2,
-    "variables": [
-      {
-        "requires": "(not $text_shadow)",
-        "$button_text_offset": [1, 0]
-      }
-    ],
     "bindings": "$text_bindings",
     "$text_bindings|default": [
       {

@@ -3,8 +3,8 @@
   "namespace": "compcreate",
 
   "compound_creator@content.inventory_screen": {
-    "force_close_on_player_hurt": "$force_close_on_player_hurt",
-    "$screen_content": "compound_creator_mcjava.compound_creator_screen_content_panel",
+    "close_on_player_hurt": "$force_close_on_player_hurt",
+    "$screen_content": "compound_creator_ui.compound_creator_screen_content_panel",
     "$screen_background": "content.screen_background"
   }
 }

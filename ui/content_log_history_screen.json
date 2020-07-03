@@ -1,7 +1,7 @@
 /* Version: 2.0.0 */
 {
   "content_log_history_screen@content.base_screen": {
-    "$screen_content": "content_log_history_mcjava.content_log_history_screen_content_panel",
+    "$screen_content": "content_log_history_ui.content_log_history_screen_content_panel",
     "$screen_background": "content.dirt_background",
     "button_mappings": [
       {

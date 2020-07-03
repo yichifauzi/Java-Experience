@@ -1,6 +1,6 @@
 /* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "resource_packs_mcjava",
+  "namespace": "resource_packs_ui",
 
   "resource_packs_centered_content_panel": {
     "type": "stack_panel",
@@ -9,18 +9,19 @@
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "offset": [0, 32],
+    "layer": 2,
     "controls": [
       { 
-        "available_packs_content_panel@resource_packs_mcjava.side_content_panel": {
+        "available_packs_content_panel@resource_packs_ui.side_content_panel": {
           "$scroll_bar_offset": [ 97, 0 ],
-          "$scrolling_content": "resource_packs_mcjava.available_packs_scrolling_content"
+          "$scrolling_content": "resource_packs_ui.available_packs_scrolling_content"
         }
       },
-      { "fill@screen_mcjava.hfill": {} },
+      { "fill@screen_ui.hfill": {} },
       {
-        "selected_packs_content_panel@resource_packs_mcjava.side_content_panel": {
+        "selected_packs_content_panel@resource_packs_ui.side_content_panel": {
           "$scroll_bar_offset": [ 97, 0 ],
-          "$scrolling_content": "resource_packs_mcjava.selected_packs_scrolling_content"
+          "$scrolling_content": "resource_packs_ui.selected_packs_scrolling_content"
         }
       }
     ]
@@ -29,9 +30,10 @@
   "side_content_panel": {
     "type": "panel",
     "size": [200, "100%"],
+    "$dirt_scroll": true,
     "controls": [
-      { "scroll@scrolling_mcjava.scrolling_panel": {} },
-      { "dark_dirt_background@screen_mcjava.dark_dirt_background": {} }
+      { "scroll@scrolling_ui.scrolling_panel": {} },
+      { "dark_dirt_background@screen_ui.dark_dirt_background": {} }
     ]
   },
 
@@ -40,9 +42,9 @@
     "size": [200, "100%c" ],
     "layer": 2,
     "controls": [
-      { "scroll_top_title@resource_packs_mcjava.scroll_top_title": { "$text": "$available_packs_title"} },
-      { "available_packs_grid@resource_packs_mcjava.available_packs_grid": {} },
-      { "invalid_packs_grid@resource_packs_mcjava.invalid_packs_grid": { "$ignore_selected_bg": true } }
+      { "scroll_top_title@resource_packs_ui.scroll_top_title": { "$text": "$available_packs_title"} },
+      { "available_packs_grid@resource_packs_ui.available_packs_grid": {} },
+      { "invalid_packs_grid@resource_packs_ui.invalid_packs_grid": { "$ignore_selected_bg": true } }
     ]
   },
 
@@ -51,10 +53,10 @@
     "size": [200, "100%c" ],
     "layer": 2,
     "controls": [
-      { "scroll_top_title@resource_packs_mcjava.scroll_top_title": { "$text": "$selected_packs_title"} },
-      { "selected_pack_grid@resource_packs_mcjava.selected_packs_grid": {} },
+      { "scroll_top_title@resource_packs_ui.scroll_top_title": { "$text": "$selected_packs_title"} },
+      { "selected_pack_grid@resource_packs_ui.selected_packs_grid": {} },
       {
-        "default_pack_content_panel@resource_packs_mcjava.pack_content_panel": {
+        "default_pack_content_panel@resource_packs_ui.pack_content_panel": {
           "$pack_name": "default",
           "$ignore_selected_bg": true
         }
@@ -66,7 +68,7 @@
 
   "scroll_top_title": {
     "type": "panel",
-    "size": ["100%", 13],
+    "size": ["100%", 14],
     "controls": [
       {
         "title_text": {
@@ -75,14 +77,14 @@
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",
           "text_alignment": "center",
-          "offset": [0, 2],
+          "offset": [-1, 2],
           "layer": 2,
           "controls": [
             {
               "underline": {
                 "type": "image",
-                "texture": "src/core/assets/fmarquespto/textures/white",
-                "size": ["100% + 2px", "1px"],
+                "texture": "src/core/assets/fmarquespto/white",
+                "size": ["100% + 1px", "1px"],
                 "anchor_from": "bottom_middle",
                 "anchor_to": "bottom_middle",
                 "offset": [0, 0],
@@ -107,7 +109,7 @@
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "controls": [
-            { "pack_button@resource_packs_mcjava.pack_button": {} }
+            { "pack_button@resource_packs_ui.pack_button": {} }
           ]
         }
       }
@@ -124,9 +126,9 @@
     "$pack_collecion_name|default": "",
     "$pressed_button_name": "$pack_pressed_name",
     "controls": [
-      { "default@resource_packs_mcjava.pack_button_content": { "$default_state": true } },
-      { "pressed@resource_packs_mcjava.pack_button_content": { "$hover_state": true } },
-      { "hover@resource_packs_mcjava.pack_button_content": { "$hover_state": true } }
+      { "default@resource_packs_ui.pack_button_content": { "$default_state": true } },
+      { "pressed@resource_packs_ui.pack_button_content": { "$hover_state": true } },
+      { "hover@resource_packs_ui.pack_button_content": { "$hover_state": true } }
     ],
     "bindings": [
       {
@@ -142,16 +144,16 @@
     "anchor_from": "center",
     "anchor_to": "center",
 
-    "$pack_icon_name": "('resource_packs_mcjava.' + $pack_name + '_icon_image')",
-    "$pack_name_label": "('resource_packs_mcjava.' + $pack_name + '_pack_name_label')",
-    "$pack_description_label": "('resource_packs_mcjava.' + $pack_name + '_pack_description_label')",
-    "$input_button_panel": "('resource_packs_mcjava.' + $pack_name + '_input_button_panel')",
+    "$pack_icon_name": "('resource_packs_ui.' + $pack_name + '_icon_image')",
+    "$pack_name_label": "('resource_packs_ui.' + $pack_name + '_pack_name_label')",
+    "$pack_description_label": "('resource_packs_ui.' + $pack_name + '_pack_description_label')",
+    "$input_button_panel": "('resource_packs_ui.' + $pack_name + '_input_button_panel')",
 
     "$ignore_selected_bg|default": false,
     "controls": [
       { "icon_image@$pack_icon_name": {} },
       {
-        "overlay@resource_packs_mcjava.overlay": {
+        "overlay@resource_packs_ui.overlay": {
           "ignored": "(not $hover_state)",
           "bindings": [
             {
@@ -164,7 +166,7 @@
         }
       },
       {
-        "overlay@resource_packs_mcjava.overlay": {
+        "overlay@resource_packs_ui.overlay": {
           "visible": "($pack_name = invalid)",
           "color": [0.47, 0, 0],
           "alpha": 1,
@@ -223,16 +225,29 @@
       {
         "full_panel": {
           "type": "stack_panel",
-          "orientation": "vertical",
+          "orientation": "horizontal",
           "size": ["100%", "fill"],
           "controls": [
             {
               "description_panel": {
                 "layer": 4,
                 "type": "panel",
-                "size": ["100%", 21],
+                "size": ["fill", 21],
                 "controls": [
                   { "pack_description_label@$pack_description_label": {} }
+                ]
+              }
+            },
+            {
+              "space@content.h2px": {
+                "size": [18, "100%"],
+                "bindings": [
+                  {
+                    "binding_collection_name": "$button_collection_name",
+                    "binding_name": "#direction_button_visible",
+                    "binding_name_override": "#visible",
+                    "binding_type": "collection"
+                  }
                 ]
               }
             }
@@ -246,7 +261,7 @@
 
   "overlay": {
     "type": "image",
-    "texture": "src/core/assets/fmarquespto/textures/white",
+    "texture": "src/core/assets/fmarquespto/white",
     "color": [0.70, 0.70, 0.70],
     "size": [32, 32],
     "anchor_from": "top_left",
@@ -295,19 +310,19 @@
     "type": "panel"
   },
 
-  "default_icon_image@resource_packs_mcjava.icon_image": {
-    "texture": "src/core/assets/fmarquespto/textures/pack"
+  "default_icon_image@resource_packs_ui.icon_image": {
+    "texture": "src/core/assets/fmarquespto/pack"
   },
 
-  "available_icon_image@resource_packs_mcjava.icon_image_system": {
+  "available_icon_image@resource_packs_ui.icon_image_system": {
     "$icon_collection_name": "$available_pack_items"
   },
 
-  "selected_icon_image@resource_packs_mcjava.icon_image_system": {
+  "selected_icon_image@resource_packs_ui.icon_image_system": {
     "$icon_collection_name": "$selected_pack_items"
   },
 
-  "invalid_icon_image@resource_packs_mcjava.icon_image": {
+  "invalid_icon_image@resource_packs_ui.icon_image": {
     "texture": "src/assets/minecraft/textures/misc/unknown_pack"
   },
 
@@ -335,19 +350,19 @@
     "type": "panel"
   },
 
-  "default_pack_name_label@resource_packs_mcjava.pack_name_label": {
+  "default_pack_name_label@resource_packs_ui.pack_name_label": {
     "text": "Default"
   },
 
-  "available_pack_name_label@resource_packs_mcjava.pack_name_label": {
+  "available_pack_name_label@resource_packs_ui.pack_name_label": {
     "$name_collection_name": "$available_pack_items"
   },
 
-  "selected_pack_name_label@resource_packs_mcjava.pack_name_label": {
+  "selected_pack_name_label@resource_packs_ui.pack_name_label": {
     "$name_collection_name": "$selected_pack_items"
   },
 
-  "invalid_pack_name_label@resource_packs_mcjava.pack_name_label": {
+  "invalid_pack_name_label@resource_packs_ui.pack_name_label": {
     "$name_collection_name": "$invalid_pack_items"
   },
 
@@ -376,19 +391,19 @@
     "type": "panel"
   },
 
-  "default_pack_description_label@resource_packs_mcjava.pack_description_label": {
+  "default_pack_description_label@resource_packs_ui.pack_description_label": {
     "text": "The default look and feel of Minecraft"
   },
   
-  "available_pack_description_label@resource_packs_mcjava.pack_description_label": {
+  "available_pack_description_label@resource_packs_ui.pack_description_label": {
     "$desc_collection_name": "$available_pack_items"
   },
 
-  "selected_pack_description_label@resource_packs_mcjava.pack_description_label": {
+  "selected_pack_description_label@resource_packs_ui.pack_description_label": {
     "$desc_collection_name": "$selected_pack_items"
   },
 
-  "invalid_pack_description_label@resource_packs_mcjava.pack_description_label": {
+  "invalid_pack_description_label@resource_packs_ui.pack_description_label": {
     "$desc_collection_name": "$invalid_pack_items"
   },
 
@@ -401,7 +416,7 @@
     "$pack_name": "selected",
     "factory": {
       "name": "selected_pack_factory",
-      "control_name": "resource_packs_mcjava.pack_content_panel"
+      "control_name": "resource_packs_ui.pack_content_panel"
     },
     "collection_name": "$selected_pack_items",
     "$pack_collecion_name": "$selected_pack_items",
@@ -422,7 +437,7 @@
     "$pack_name": "available",
     "factory": {
       "name": "available_pack_factory",
-      "control_name": "resource_packs_mcjava.pack_content_panel"
+      "control_name": "resource_packs_ui.pack_content_panel"
     },
     "collection_name": "$available_pack_items",
     "$pack_collecion_name": "$available_pack_items",
@@ -448,7 +463,7 @@
     "orientation": "vertical",
     "factory": {
       "name": "invalid_pack_factory",
-      "control_name": "resource_packs_mcjava.pack_content_panel"
+      "control_name": "resource_packs_ui.pack_content_panel"
     },
     "$pack_name": "invalid",
     "$pack_collecion_name": "$invalid_pack_items",
@@ -474,6 +489,7 @@
     "layer": 1,
     "anchor_from": "top_left",
     "anchor_to": "top_left",
+    "size": ["100%", "100%"],
     "button_mappings": [
       {
         "from_button_id": "button.menu_cancel",
@@ -516,35 +532,37 @@
 
   "default_input_button_panel@screen.empty": {},
 
-  "available_input_button_panel@resource_packs_mcjava.input_button_panel": {
-    "size": [ 32, 32 ],
+  "available_input_button_panel@resource_packs_ui.input_button_panel": {
     "controls": [
       {
         "content": {
           "type": "panel",
-          "size": [ "100%", "100%" ],
+          "size": [32, 32],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
           "layer": 2,
           "controls": [
-            { "selected_pack_plus_button@resource_packs_mcjava.selected_pack_plus_button": {} }
+            { "selected_pack_plus_button@resource_packs_ui.selected_pack_plus_button": {} }
           ]
         }
       }
     ]
   },
 
-  "selected_input_button_panel@resource_packs_mcjava.input_button_panel": {
-    "size": [ 32, 32 ],
+  "selected_input_button_panel@resource_packs_ui.input_button_panel": {
     "controls": [
       {
         "content": {
           "type": "panel",
-          "size": [ "100%", "100%" ],
+          "size": [32, 32],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
           "layer": 2,
           "$overlay_alpha": 0,
           "$button_collection_name": "$selected_pack_items",
           "controls": [
-            { "selected_pack_minus_button@resource_packs_mcjava.selected_pack_minus_button": {} },
-            { "selected_pack_settings_button@resource_packs_mcjava.selected_pack_options_button": {} },
+            { "overlay@resource_packs_ui.overlay": {} },
+            { "selected_pack_minus_button@resource_packs_ui.selected_pack_minus_button": {} },
             {
               "horizontal_stack": {
                 "type": "stack_panel",
@@ -552,9 +570,9 @@
                 "anchor_from": "top_right",
                 "anchor_to": "top_right",
                 "controls": [
-                  { "selected_pack_up_button@resource_packs_mcjava.selected_pack_up_button": {} },
-                  { "s@screen_mcjava.vfill": {} },
-                  { "selected_pack_down_button@resource_packs_mcjava.selected_pack_down_button": {} }
+                  { "selected_pack_up_button@resource_packs_ui.selected_pack_up_button": {} },
+                  { "s@screen_ui.vfill": {} },
+                  { "selected_pack_down_button@resource_packs_ui.selected_pack_down_button": {} }
                 ],
                 "bindings": [
                   {
@@ -565,32 +583,23 @@
                   }
                 ]
               }
-            },
-            {
-              "horizontal_stack": {
-                "type": "stack_panel",
-                "size": [15, "100% + 5px"],
-                "anchor_from": "right_middle",
-                "anchor_to": "right_middle",
-                "controls": [
-                  { "selected_pack_up_button@resource_packs_mcjava.selected_pack_up_button": {} },
-                  { "s@screen_mcjava.vfill": {} },
-                  { "selected_pack_down_button@resource_packs_mcjava.selected_pack_down_button": {} }
-                ],
-                "bindings": [
-                  {
-                    "binding_type": "collection",
-                    "binding_collection_name": "$button_collection_name",
-                    "binding_name": "#has_pack_settings",
-                    "binding_name_override": "#visible"
-                  }
-                ]
-              }
             }
           ]
         }
       },
-      { "overlay@resource_packs_mcjava.overlay": {} }
+      {
+        "vertical_stack": {
+          "type": "stack_panel",
+          "size": [16, "100%c"],
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "offset": [0, 0],
+          "controls": [
+            { "selected_pack_warning_button@resource_packs_ui.selected_pack_warning_button": {} },
+            { "selected_pack_settings_button@resource_packs_ui.selected_pack_options_button": {} }
+          ]
+        }
+      }
     ]
   },
 
@@ -608,6 +617,7 @@
     "anchor_from": "$btn_anchor",
     "anchor_to": "$btn_anchor",
     "$btn_anchor|default": "top_left",
+    "layer": 5,
     "variables": [
       {
         "requires": "($visible_binding_name = '' and $visible_binding_type = collection)",
@@ -642,7 +652,7 @@
   "selected_pack_movement_button_content": {
     "type": "panel",
     "controls": [
-      { "overlay@resource_packs_mcjava.overlay": { "alpha": "$overlay_alpha" } },
+      { "overlay@resource_packs_ui.overlay": { "alpha": "$overlay_alpha" } },
       {
         "overlay": {
           "type": "image",
@@ -656,7 +666,7 @@
     ]
   },
 
-  "selected_pack_minus_button@resource_packs_mcjava.selected_pack_movement_button": {
+  "selected_pack_minus_button@resource_packs_ui.selected_pack_movement_button": {
     "size": [ 16, 32 ],
     "$img_default_uv": [32, 0],
     "$img_hover_uv": [32, 32],
@@ -666,7 +676,7 @@
     "$visible_binding_name": "#can_move"
   },
 
-  "selected_pack_up_button@resource_packs_mcjava.selected_pack_movement_button": {
+  "selected_pack_up_button@resource_packs_ui.selected_pack_movement_button": {
     "$pressed_button_name": "$button.sort_up",
     "$visible_binding_name": "#can_sort_up",
     "size": [15, 14],
@@ -676,7 +686,7 @@
     "$img_uv_size": [15, 14]
   },
 
-  "selected_pack_down_button@resource_packs_mcjava.selected_pack_movement_button": {
+  "selected_pack_down_button@resource_packs_ui.selected_pack_movement_button": {
     "$pressed_button_name": "$button.sort_down",
     "size": [15, 14],
     "$img_default_uv": [81, 18],
@@ -686,7 +696,7 @@
     "$visible_binding_name": "#can_sort_down"
   },
 
-  "selected_pack_plus_button@resource_packs_mcjava.selected_pack_movement_button": {
+  "selected_pack_plus_button@resource_packs_ui.selected_pack_movement_button": {
     "size": [32, 32],
     "default_focus_precedence": 1,
     "$pressed_button_name": "$button.move_left",
@@ -697,11 +707,77 @@
     "$enabled_binding_name": "(not $platform_locked)"
   },
 
+  "selected_pack_warning_button@common.button": {
+    "$pressed_button_name": "$button.report_errors",
+    "size": [16, 16],
+    "controls": [
+      {
+        "default": {
+          "type": "panel",
+          "controls": [
+            {
+              "icon": {
+                "type": "image",
+                "size": [11, 11],
+                "texture": "src/core/assets/fmarquespto/icon/manif"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "hover": {
+          "type": "panel",
+          "controls": [
+            { "focus@focus_border": {} },
+            {
+              "icon": {
+                "type": "image",
+                "size": [11, 11],
+                "texture": "src/core/assets/fmarquespto/icon/manifhover"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "pressed": {
+          "type": "panel",
+          "controls": [
+            { "focus@focus_border": {} },
+            {
+              "icon": {
+                "type": "image",
+                "size": [11, 11],
+                "texture": "src/core/assets/fmarquespto/icon/manifhover"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_collection_name": "$button_collection_name",
+        "binding_type": "collection_details"
+      },
+      {
+        "binding_collection_name": "$button_collection_name",
+        "binding_name": "(not #report_generating)",
+        "binding_name_override": "#enabled",
+        "binding_type": "collection"
+      },
+      {
+        "binding_collection_name": "$button_collection_name",
+        "binding_name": "#report_button_visible",
+        "binding_name_override": "#visible",
+        "binding_type": "collection"
+      }
+    ]
+  },
+
   "selected_pack_options_button@common.button": {
-    "size": [11, 11],
-    "anchor_from": "right_middle",
-    "anchor_to": "right_middle",
-    "offset": [-3, 0],
+    "size": [16, 16],
     "$pressed_button_name": "$button.pack_settings",
     "layer": 20,
     "controls": [
@@ -712,7 +788,8 @@
             {
               "icon": {
                 "type": "image",
-                "texture": "src/core/assets/fmarquespto/textures/conf"
+                "size": [11, 11],
+                "texture": "src/core/assets/fmarquespto/icon/conf"
               }
             }
           ]
@@ -722,10 +799,12 @@
         "hover": {
           "type": "panel",
           "controls": [
+            { "focus@focus_border": {} },
             {
               "icon": {
                 "type": "image",
-                "texture": "src/core/assets/fmarquespto/textures/confhover"
+                "size": [11, 11],
+                "texture": "src/core/assets/fmarquespto/icon/confhover"
               }
             }
           ]
@@ -735,10 +814,12 @@
         "pressed": {
           "type": "panel",
           "controls": [
+            { "focus@focus_border": {} },
             {
               "icon": {
                 "type": "image",
-                "texture": "src/core/assets/fmarquespto/textures/confhover"
+                "size": [11, 11],
+                "texture": "src/core/assets/fmarquespto/icon/confhover"
               }
             }
           ]
@@ -755,6 +836,20 @@
       {
         "binding_type": "collection_details",
         "binding_collection_name": "$button_collection_name"
+      }
+    ]
+  },
+
+  "focus_border": {
+    "type": "image",
+    "size": ["100%", "100%"],
+    "texture": "src/core/assets/fmarquespto/border",
+    "layer": 10,
+    "bindings": [
+      {
+        "binding_name": "#is_using_gamepad",
+        "binding_name_override": "#visible",
+        "binding_type": "global"
       }
     ]
   }

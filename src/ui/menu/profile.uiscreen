@@ -1,22 +1,23 @@
+/* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "profile_mcjava",
+  "namespace": "profile_ui",
 
   "profile_background": {
     "type": "image",
-    "texture": "src/core/assets/fmarquespto/textures/white",
+    "texture": "src/core/assets/fmarquespto/white",
     "color": [0.188, 0.188, 0.188],
     "size": ["100%", "100%"]
   },
 
   "background": {
     "type": "image",
-    "texture": "src/core/assets/fmarquespto/textures/white",
+    "texture": "src/core/assets/fmarquespto/white",
     "size": ["100%", "100%"]
   },
 
   "side_border": {
     "type": "image",
-    "texture": "src/core/assets/fmarquespto/textures/white",
+    "texture": "src/core/assets/fmarquespto/white",
     "size": [1, "100%"],
     "color": [0.2745, 0.2745, 0.2745]
   },
@@ -29,22 +30,22 @@
     "color": [0.30, 0.30, 0.30]
   },
 
-  "side_button@button_mcjava.button": {
+  "side_button@button_ui.button": {
     "size": ["100%", 30],
     "$text_font_type": "smooth",
     "$text_shadow": false,
-    "$button_type_panel": "profile_mcjava.side_button_content",
+    "$button_type_panel": "profile_ui.side_button_content",
     "$default_button_bg": "common.empty_panel",
-    "$hover_button_bg": "profile_mcjava.side_button_hover",
+    "$hover_button_bg": "profile_ui.side_button_hover",
     "$locked_button_bg": "common.empty_panel"
   },
 
-  "launcher_button@button_mcjava.button": {
+  "launcher_button@button_ui.button": {
     "size": [124, 28.5],
     "$text_font_type": "smooth",
-    "$default_button_bg": "resources_mcjava.launcher_button_default",
-    "$hover_button_bg": "resources_mcjava.launcher_button_hover",
-    "$locked_button_bg": "resources_mcjava.launcher_button_default"
+    "$default_button_bg": "resources_ui.launcher_button_default",
+    "$hover_button_bg": "resources_ui.launcher_button_hover",
+    "$locked_button_bg": "resources_ui.launcher_button_default"
   },
 
   "profile_screen_content_panel": {
@@ -56,8 +57,8 @@
           "size": ["100%", "100%"],
           "orientation": "horizontal",
           "controls": [
-            { "left@profile_mcjava.left_content_panel": {} },
-            { "right@profile_mcjava.right_content_panel": {} }
+            { "left@profile_ui.left_content_panel": {} },
+            { "right@profile_ui.right_content_panel": {} }
           ]
         }
       },
@@ -80,21 +81,21 @@
     "type": "panel",
     "size": [150, "100%"],
     "controls": [
-      { "bg@profile_mcjava.background": { "color": [0.117, 0.117, 0.117] } },
+      { "bg@profile_ui.background": { "color": [0.117, 0.117, 0.117] } },
       {
         "stack": {
           "type": "stack_panel",
           "size": [ "100%", "100%" ],
           "layer": 250,
           "controls": [
-            { "@screen_mcjava.vspace": {"size": [0, 2]} },
+            { "@screen_ui.vspace": {"size": [0, 2]} },
             { "@inventory_panel": {} },
-            { "@screen_mcjava.vfill": {} },
-            { "edit_button@profile_mcjava.edit_appearance_button": {} },
-            { "delete_button@profile_mcjava.delete_appearance_button": {} },
-            // { "random_button@profile_mcjava.random_appearance_button": {} },
-            { "achievements_button@profile_mcjava.achievements_button": { "ignored": "(not $supports_xbl_achievements)" } },
-            { "@profile_mcjava.settings_button": {} }
+            { "@screen_ui.vfill": {} },
+            { "edit_button@profile_ui.edit_appearance_button": {} },
+            { "delete_button@profile_ui.delete_appearance_button": {} },
+            // { "random_button@profile_ui.random_appearance_button": {} },
+            { "achievements_button@profile_ui.achievements_button": { "ignored": "(not $supports_xbl_achievements)" } },
+            { "@profile_ui.settings_button": {} }
           ]
         }
       }
@@ -112,8 +113,8 @@
           "size": ["100%", "10%"],
           "layer": 5,
           "controls": [
-            { "@screen_mcjava.title": { "text": "Profile", "layer": 10, "font_type": "smooth", "shadow": false, "offset": [10, 0], "$anchor": "left_middle" } },
-            { "@profile_mcjava.background": { "color": [0.1568, 0.1568, 0.1568] } }
+            { "@screen_ui.title": { "text": "Profile", "layer": 10, "font_type": "smooth", "shadow": false, "offset": [10, 0], "$anchor": "left_middle" } },
+            { "@profile_ui.background": { "color": [0.1568, 0.1568, 0.1568] } }
           ]
         }
       },
@@ -215,7 +216,7 @@
         }
       },
       {
-        "@button_mcjava.button_label": {
+        "@button_ui.button_label": {
           "$text_anchor": "left_middle",
           "$text_alignment": "left",
           "$text_offset": [36, 0]
@@ -224,7 +225,7 @@
     ]
   },
 
-  "edit_appearance_button@profile_mcjava.side_button": {
+  "edit_appearance_button@profile_ui.side_button": {
     "$pressed_button_name": "button.edit_appearance_preset",
     "$icon": "src/core/assets/launcher/textures/profile",
     "$button_text": "#edit_appearance_text",
@@ -240,7 +241,7 @@
     "$focus_id": "edit_appearance_button"
   },
 
-  "delete_appearance_button@profile_mcjava.side_button": {
+  "delete_appearance_button@profile_ui.side_button": {
     "$button_text": "Delete",
     "$icon": "src/core/assets/launcher/textures/delete",
     "$pressed_button_name": "button.delete_appearance_preset",
@@ -254,13 +255,13 @@
     "$focus_id": "delete_appearance_button"
   },
 
-  "achievements_button@profile_mcjava.side_button": {
+  "achievements_button@profile_ui.side_button": {
     "$icon": "src/core/assets/launcher/textures/news",
     "$pressed_button_name": "button.achievements",
     "$button_text": "gui.achievements"
   },
 
-  "settings_button@profile_mcjava.side_button": {
+  "settings_button@profile_ui.side_button": {
     "$icon": "src/core/assets/launcher/textures/settings",
     "$pressed_button_name": "button.settings",
     "$button_text": "menu.options"
@@ -282,7 +283,7 @@
     "offset": [28, "-10%"],
     "controls": [
       {
-        "preset_arrow_button@button_mcjava.button": {
+        "preset_arrow_button@button_ui.button": {
           "size": ["100%", 30],
           "$pressed_button_name|default": "button.pressedArrowLeft",
           "$enabled_binding_Name|default": "#arrow_left_enabled",
@@ -298,7 +299,7 @@
               "$enabled_binding_Name": "#arrow_right_enabled"
             }
           ],
-          "$hover_button_bg": "profile_mcjava.arrow_button_hover",
+          "$hover_button_bg": "profile_ui.arrow_button_hover",
           "$locked_button_bg": "common.empty_panel",
           "$button_text": "<",
           "bindings": [
@@ -329,7 +330,7 @@
     ],
     "controls": [
       {
-        "@screen_mcjava.title": {
+        "@screen_ui.title": {
           "text": "§lCurrent",
           "offset": [0, "-5%"],
           "shadow": false,
@@ -402,7 +403,7 @@
           "size": ["100%", "100%c"],
           "controls": [
             {
-              "left_appearance_preset@profile_mcjava.persona_appearance_preset_panel": {
+              "left_appearance_preset@profile_ui.persona_appearance_preset_panel": {
                 "size": ["100%", "125%x"],
                 "$preset_appearance_layer": "$left_appearance_preset_layer",
                 "anchor_to": "left_middle",
@@ -423,7 +424,7 @@
               }
             },
             {
-              "right_appearance_preset@profile_mcjava.persona_appearance_preset_panel": {
+              "right_appearance_preset@profile_ui.persona_appearance_preset_panel": {
                 "size": ["100%", "125%x"],
                 "$preset_appearance_layer": "$right_appearance_preset_layer",
                 "anchor_to": "right_middle",
@@ -617,9 +618,9 @@
     "$add_coin_not_visible|default": false,
     "controls": [
       {
-        "inventory_button@profile_mcjava.side_button": {
+        "inventory_button@profile_ui.side_button": {
           "layer": 3,
-          "$button_type_panel": "profile_mcjava.xbl_status_panel",
+          "$button_type_panel": "profile_ui.xbl_status_panel",
           "anchor_from": "left_middle",
           "anchor_to": "left_middle",
           "$is_inventory_screen|default": false,

@@ -1,6 +1,6 @@
 /* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "screen_mcjava",
+  "namespace": "screen_ui",
 
   "empty_panel": {
     "type": "panel"
@@ -51,7 +51,7 @@
     "$top_content_layer|default": 2,
     "$bottom_content_layer|default": 2,
     "controls": [
-    /*   { "dirt_background@screen_mcjava.dirt_background": {} }, */
+    /*   { "dirt_background@screen_ui.dirt_background": {} }, */
       {
         "screen_stack": {
           "type": "stack_panel",
@@ -64,7 +64,7 @@
                 "size": "$top_content_size",
                 "layer": "$top_content_layer",
                 "controls": [
-                  { "bg@screen_mcjava.dirt_background_panel": { "$bg_anchor": "top_left" } },
+                  { "bg@screen_ui.dirt_background_panel": { "$bg_anchor": "top_left" } },
                   { "$top_content@$top_content": {} }
                 ]
               }
@@ -76,7 +76,7 @@
                 "clips_children": "$middle_clip_path",
                 "layer": 1,
                 "controls": [
-                  { "scrolling@scrolling_mcjava.scrolling_panel": {} }
+                  { "scrolling@scrolling_ui.scrolling_panel": {} }
                 ]
               }
             },
@@ -86,7 +86,7 @@
                 "size": "$bottom_content_size",
                 "layer": "$bottom_content_layer",
                 "controls": [
-                  { "bg@screen_mcjava.dirt_background_panel": { "$overlay_bg_size": ["100%", "100%"], "$bg_anchor": "bottom_left" } },
+                  { "bg@screen_ui.dirt_background_panel": { "$overlay_bg_size": ["100%", "100%"], "$bg_anchor": "bottom_left" } },
                   { "$bottom_content@$bottom_content": {} }
                 ]
               }
@@ -105,7 +105,7 @@
     "visible": "$middle_clip_path",
     "controls": [
       {
-        "dirt_background@screen_mcjava.dirt_background": {
+        "dirt_background@screen_ui.dirt_background": {
           "size": "$overlay_bg_size",
           "layer": -1,
           "$overlay_bg_size|default": ["100%", "100%"],
@@ -129,17 +129,17 @@
     "layer": 10
   },
 
-  "exit_button@button_mcjava.button": {
+  "exit_button@button_ui.button": {
     "$pressed_button_name": "button.menu_exit",
     "$button_text": "gui.done"
   },
 
-  "locked@button_mcjava.button_state_panel": {
+  "locked@button_ui.button_state_panel": {
     "$button_bg": "resources.button_locked",
     "size": [200, 20],
     "$text_color": [0.62, 0.62, 0.62],
     /* Text bindings */
-    "$button_type_panel": "button_mcjava.button_label",
+    "$button_type_panel": "button_ui.button_label",
     "$button_text_binding_type|default": "none",
     "$button_binding_condition|default": "none",
     "$button_text_grid_collection_name|default": ""
@@ -165,7 +165,7 @@
   },
   
  
-  "dark_dirt_background@screen_mcjava.dirt_background": {
+  "dark_dirt_background@screen_ui.dirt_background": {
     "size": ["100%", "100%"],
     "color": [0.125, 0.13, 0.13],
     "layer": 1,
@@ -183,7 +183,7 @@
 
   "screen_background": {
     "type": "image",
-    "texture": "src/core/assets/fmarquespto/textures/white",
+    "texture": "src/core/assets/fmarquespto/white",
     "color": [0.005, 0.005, 0.005],
     "ignored": "$is_holographic",
     "$bg_alpha|default": 0.75,
@@ -192,7 +192,7 @@
 
   "screen_container_background": {
     "type": "image",
-    "texture": "src/core/assets/fmarquespto/textures/white",
+    "texture": "src/core/assets/fmarquespto/white",
     "color": [0.05, 0.05, 0.05],
     "ignored": "$is_holographic",
     "$bg_alpha|default": 0.74,
@@ -201,20 +201,20 @@
 
   "shadow_top": {
     "type": "image",
-    "texture": "src/core/assets/fmarquespto/textures/shadow_top",
+    "texture": "src/core/assets/fmarquespto/shadow_top",
     "size": [ "100%", 4 ],
     "anchor_from": "top_left",
     "anchor_to": "top_left",
-    "layer": 30
+    "layer": 35
   },
 
   "shadow_bottom": {
     "type": "image",
-    "texture": "src/core/assets/fmarquespto/textures/shadow_bottom",
+    "texture": "src/core/assets/fmarquespto/shadow_bottom",
     "size": [ "100%", 4 ],
     "anchor_from": "bottom_left",
     "anchor_to": "bottom_left",
-    "layer": 30
+    "layer": 35
   },
   
   "grid_index_panel": {

@@ -1,11 +1,11 @@
 /* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "mob_effects_mcjava",
+  "namespace": "mob_effects_ui",
 
   "mob_effects_screen_content_panel": {
     "type": "panel",
     "controls": [
-      { "content_panel@mob_effects_mcjava.mob_effects_content_panel": {} }
+      { "content_panel@mob_effects_ui.mob_effects_content_panel": {} }
     ]
   },
 
@@ -17,18 +17,18 @@
     "offset": [0, 32],
     "controls": [
       {
-        "scrolling_panel@scrolling_mcjava.scrolling_panel": {
+        "scrolling_panel@scrolling_ui.scrolling_panel": {
           "size": [310, "100% - 40px"],
           "anchor_from": "top_middle",
           "$scroll_bg": "common.empty_panel",
           "anchor_to": "top_middle",
           "$scroll_bar_offset": [120, 0],
           "$scroll_clip_path": true,
-          "$scrolling_content": "mob_effects_mcjava.mob_effect_grid_panel",
+          "$scrolling_content": "mob_effects_ui.mob_effect_grid_panel",
           "$always_handle_scrolling": true
         }
       },
-      { "exit@mob_effects_mcjava.cancel_button": {} }
+      { "exit@mob_effects_ui.cancel_button": {} }
     ]
   },
 
@@ -36,7 +36,7 @@
     "type": "panel",
     "size": [310, "100%c"],
     "controls": [
-      { "mob_effect_grid@mob_effects_mcjava.mob_effect_grid": {} }
+      { "mob_effect_grid@mob_effects_ui.mob_effect_grid": {} }
     ]
   },
 
@@ -45,7 +45,7 @@
     "anchor_from": "top_right",
     "anchor_to": "top_right",
     "size": [310, "default"],
-    "grid_item_template": "mob_effects_mcjava.mob_effect_grid_item",
+    "grid_item_template": "mob_effects_ui.mob_effect_grid_item",
     "grid_dimension_binding": "#mob_effect_grid_size",
     "collection_name": "mob_effects_collection",
     "bindings": [ { "binding_name": "#mob_effect_grid_size" } ]
@@ -61,9 +61,9 @@
           "size": [120, 31],
           "controls": [
             { "bg@resources.effect_gray_background": {} },
-            { "name@mob_effects_mcjava.effect_name": { "layer": 1 } },
-            { "timer@mob_effects_mcjava.effect_timer": { "layer": 1 } },
-            { "icon@mob_effects_mcjava.effect_icon": { "layer": 1 } }
+            { "name@mob_effects_ui.effect_name": { "layer": 1 } },
+            { "timer@mob_effects_ui.effect_timer": { "layer": 1 } },
+            { "icon@mob_effects_ui.effect_icon": { "layer": 1 } }
           ]
         }
       }
@@ -124,7 +124,7 @@
     ]
   },
 
-  "cancel_button@button_mcjava.button": {
+  "cancel_button@button_ui.button": {
     "$button_text": "gui.done",
     "anchor_from": "bottom_middle",
     "anchor_to": "bottom_middle",

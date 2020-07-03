@@ -25,7 +25,7 @@
         "scope": "view"
       }
     ],
-    "$screen_content": "structure_block_mcjava.structure_block_screen_content_panel",
-    "$screen_background": "screen_mcjava.screen_background"
+    "$screen_content": "structure_block_ui.structure_block_screen_content_panel",
+    "$screen_background": "screen_ui.screen_background"
   }
 }

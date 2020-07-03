@@ -1,6 +1,6 @@
 /* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "tooltip_mcjava",
+  "namespace": "tooltip_ui",
 
   "tooltip": {
     "type": "button",
@@ -16,8 +16,8 @@
       {
         "bg": {
           "type": "image",
-          "texture": "src/core/assets/fmarquespto/textures/tooltip",
-          "size": ["100%c + 8px", "100%c + 8px"],
+          "texture": "src/core/assets/fmarquespto/tooltip",
+          "size": ["100%c + 8px", "100%c + 6px"],
           "offset": ["50%c + 12px", "50%c - 12px"],
           "nineslice_size": 2,
           "bindings": "$tooltip_bindings",
@@ -33,7 +33,7 @@
                 "controls": "$tooltip_controls",
                 "layer": 10,
                 "$tooltip_controls|default": [
-                  { "name@tooltip_mcjava.name": {} }
+                  { "name@tooltip_ui.name": {} }
                 ]
               }
             }

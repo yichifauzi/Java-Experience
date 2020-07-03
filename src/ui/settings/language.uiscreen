@@ -1,20 +1,18 @@
 /* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "language_mcjava",
+  "namespace": "language_ui",
 
-  "language_content_panel@screen_mcjava.scroll_screen": {
-    "$top_content": "language_mcjava.top_content",
-    "$scrolling_content": "language_mcjava.languages_content",
-    "$bottom_content": "language_mcjava.bottom_content",
+  "language_content_panel@screen_ui.scroll_screen": {
+    "$top_content": "language_ui.top_content",
+    "$scrolling_content": "language_ui.languages_content",
+    "$bottom_content": "language_ui.bottom_content",
     "$bottom_content_size": ["100%", 61]
   },
 
   "top_content": {
     "type": "panel",
-    "$title": "options.language.title",
-    "controls": [
-      { "title@screen_mcjava.title": { "offset": [0, 15.5] } }
-    ]
+    "$title": "options.language",
+    "controls": [ { "title@screen_ui.title": { "offset": [0, 15.5] } } ]
   },
 
   "languages_content": {
@@ -31,7 +29,7 @@
               "language_list_grid": {
                 "type": "grid",
                 "size": ["100%", "100%c"],
-                "grid_item_template": "language_mcjava.language_grid_item",
+                "grid_item_template": "language_ui.language_grid_item",
                 "grid_dimension_binding": "#language_grid_dimension",
                 "collection_name": "languages",
                 "bindings": [
@@ -55,19 +53,20 @@
     "size": [310, 61],
     "controls": [
       {
-        "back@settings_mcjava.back_button": {
+        "back@settings_ui.back_button": {
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",
           "offset": [0, 23]
         }
       },
-      { "warning@language_mcjava.warning_panel": {} }
+      { "warning@language_ui.warning_panel": {} }
     ]
   },
 
-  "language_grid_item@radio_button_mcjava.radio_button": {
+  "language_grid_item@radio_button_ui.radio_button": {
     "$toggle_state_binding_name": "#language_initial_selected",
     "$radio_button_label": "#language_description",
+    "$radio_text_offset": [0, -2],
     "$text_bindings": [
       {
         "binding_name": "#language_description",
@@ -106,7 +105,7 @@
           "shadow": true
         }
       },
-      { "warning@language_mcjava.warning": {} },
+      { "warning@language_ui.warning": {} },
       {
         "par_right": {
           "type": "label",

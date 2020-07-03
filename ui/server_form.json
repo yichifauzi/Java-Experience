@@ -8,7 +8,7 @@
         "mapping_type": "global"
       }
     ],
-    "$screen_content": "server_form_mcjava.server_form_screen_content_panel",
+    "$screen_content": "server_form_ui.server_form_screen_content_panel",
     "$screen_background": "content.screen_background"
   }
 }

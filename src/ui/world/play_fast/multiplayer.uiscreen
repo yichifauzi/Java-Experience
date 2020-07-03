@@ -1,10 +1,11 @@
+/* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "multiplayer_fast_mcjava",
+  "namespace": "multiplayer_fast_ui",
 
   "multiplayer_screen_content_panel@content.scroll_screen": {
-    "$top_content": "multiplayer_fast_mcjava.top_content",
-    "$middle_content": "multiplayer_fast_mcjava.scroll_content",
-    "$bottom_content": "multiplayer_fast_mcjava.bottom_content",
+    "$top_content": "multiplayer_fast_ui.top_content",
+    "$middle_content": "multiplayer_fast_ui.scroll_content",
+    "$bottom_content": "multiplayer_fast_ui.bottom_content",
     "$bottom_content_size": ["100%", 64],
     "$scroll_bar_offset": [147, 0]
   },
@@ -14,13 +15,13 @@
     "controls": [
       { "title@content.title": { "text": "multiplayer.title", "offset": [0, 20] } },
       {
-        "left@play_fast_mcjava.left_button": {
+        "left@play_fast_ui.left_button": {
           "$toggle_button_name": "to_multiplayer",
           "$toggle_control_name": ""
         }
       },
       {
-        "right@play_fast_mcjava.right_button": {
+        "right@play_fast_ui.right_button": {
           "$toggle_button_name": "to_realms",
           "$toggle_control_name": "realms_view"
         }
@@ -33,7 +34,7 @@
     "size": [270, "100%c"],
     "controls": [
       { "space_top@content.v4px": {} },
-      { "tpf_grid@multiplayer_fast_mcjava.third_party_featured_server_grid": {} },
+      { "tpf_grid@multiplayer_fast_ui.third_party_featured_server_grid": {} },
       { "space_bottom@content.v2px": {} }
     ]
   },
@@ -51,9 +52,9 @@
           "orientation": "horizontal",
           "size": ["100%", 20],
           "controls": [
-            { "jss_button@multiplayer_fast_mcjava.jss_button": {} },
+            { "jss_button@multiplayer_fast_ui.jss_button": {} },
             { "fill@content.hfill": {} },
-            { "add_server_button@multiplayer_fast_mcjava.add_server_toggle_button": {} }
+            { "add_server_button@multiplayer_fast_ui.add_server_toggle_button": {} }
           ]
         }
       },
@@ -64,16 +65,16 @@
           "orientation": "horizontal",
           "size": ["100%", 20],
           "controls": [
-            { "ess_button@singleplayer_fast_mcjava.ess_button": {} },
+            { "ess_button@singleplayer_fast_ui.ess_button": {} },
             { "fill@content.hfill": {} },
-            { "cancel_button@singleplayer_fast_mcjava.cancel_button": { "size": [150, 20] } }
+            { "cancel_button@singleplayer_fast_ui.cancel_button": { "size": [150, 20] } }
           ]
         }
       }
     ]
   },
 
-  "add_server_toggle_button@toggle_button_mcjava.toggle_button": {
+  "add_server_toggle_button@toggle_button_ui.toggle_button": {
     "visible": "(not $is_console)",
     "size": [100, 20],
     "layer": 2,
@@ -95,7 +96,7 @@
     "type": "grid",
     "size": [ "100%", "default" ],
     "layer": 1,
-    "grid_item_template": "multiplayer_fast_mcjava.featured_server_world_item_panel",
+    "grid_item_template": "multiplayer_fast_ui.featured_server_world_item_panel",
     "grid_dimension_binding": "#third_party_featured_item_grid_dimension",
     "collection_name": "third_party_server_network_worlds",
     "$collection_name": "third_party_server_network_worlds",
@@ -103,7 +104,7 @@
     "anchor_from": "top_left",
     "ttsSectionContainer": true,
     "$toggle_index_binding_name": "#third_party_toggle_index",
-    "$server_icon": "multiplayer_fast_mcjava.third_party_server_screenshot",
+    "$server_icon": "multiplayer_fast_ui.third_party_server_screenshot",
     "bindings": [
       { "binding_name": "#third_party_featured_item_grid_dimension" },
       {
@@ -117,7 +118,7 @@
     "type": "panel",
     "size": ["100%", 36],
     "layer": 6,
-    "controls": [ { "item_content@multiplayer_fast_mcjava.featured_server_world_item_content": {} } ]
+    "controls": [ { "item_content@multiplayer_fast_ui.featured_server_world_item_content": {} } ]
   },
   
   "featured_server_world_item_content": {
@@ -127,8 +128,8 @@
     "anchor_to": "center",
     "layer": 20,
     "controls": [
-      { "screenshot@multiplayer_fast_mcjava.base_icon": { "layer": 8 } },
-      { "item_buttons@multiplayer_fast_mcjava.server_item_button_panel": {} }/* ,
+      { "screenshot@multiplayer_fast_ui.base_icon": { "layer": 8 } },
+      { "item_buttons@multiplayer_fast_ui.server_item_button_panel": {} }/* ,
       {
         "text_panel": {
           "type": "panel",
@@ -171,7 +172,7 @@
     ]
   },
 
-  "third_party_server_screenshot@multiplayer_fast_mcjava.base_icon": {
+  "third_party_server_screenshot@multiplayer_fast_ui.base_icon": {
     "bindings": [
       {
         "binding_name": "#third_party_screenshot_visible",
@@ -188,8 +189,8 @@
     "size": [270, 36],
     "layer": 6,
     "controls": [
-      { "tool@multiplayer_fast_mcjava.server_item_tool_button": {} },
-      { "large@multiplayer_fast_mcjava.server_item_large_button": {}  }
+      { "tool@multiplayer_fast_ui.server_item_tool_button": {} },
+      { "large@multiplayer_fast_ui.server_item_large_button": {}  }
     ]
   },
 
@@ -285,7 +286,7 @@
                     }
                   },
                   {
-                    "overlay@resource_packs_mcjava.overlay": {
+                    "overlay@resource_packs_ui.overlay": {
                       "anchor_from": "top_left",
                       "anchor_to": "top_left",
                       "offset": "$overlay_offset",
@@ -322,7 +323,7 @@
                     }
                   },
                   {
-                    "overlay@resource_packs_mcjava.overlay": {
+                    "overlay@resource_packs_ui.overlay": {
                       "anchor_from": "top_left",
                       "anchor_to": "top_left",
                       "offset": "$overlay_offset",
@@ -350,7 +351,7 @@
     "type": "panel",
     "controls": [
       {
-        "overlay@resource_packs_mcjava.overlay": {
+        "overlay@resource_packs_ui.overlay": {
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "offset": "$overlay_offset",
@@ -382,7 +383,7 @@
         }
       },
       {
-        "overlay@resource_packs_mcjava.overlay": {
+        "overlay@resource_packs_ui.overlay": {
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "offset": "$overlay_offset",
@@ -409,7 +410,7 @@
           "type": "panel",
           "controls": [
             {
-              "jss_button@button_mcjava.button": {
+              "jss_button@button_ui.button": {
                 "$pressed_button_name": "button.connect_to_third_party_server",
                 "$button_text": "networkWorld.join_server",
                 "size": [100, 20],
@@ -435,7 +436,7 @@
           "type": "panel",
           "controls": [
             {
-              "jss_button@button_mcjava.button": {
+              "jss_button@button_ui.button": {
                 "$pressed_button_name": "button.menu_network_server_item",
                 "$button_text": "networkWorld.join_server",
                 "size": [100, 20],
@@ -465,7 +466,7 @@
     ] */
   },
 
-  "add_server_button@button_mcjava.button": {
+  "add_server_button@button_ui.button": {
     "$pressed_button_name": "button.menu_network_add_external",
     "$button_text": "selectServer.add",
     "size": [100, 20],
@@ -478,7 +479,7 @@
     ]
   },
 
-  "esw_button@toggle_button_mcjava.toggle_button": {
+  "esw_button@toggle_button_ui.toggle_button": {
     "size": [70, 20],
     "$toggle_index": 1,
     "$toggle_button_text": "selectWorld.edit",
@@ -495,7 +496,7 @@
     ] 
   },
 
-  "featured_servers_button@play_mcjava.grid_button": {
+  "featured_servers_button@play_ui.grid_button": {
     "$pressed_button_name": "button.connect_to_third_party_server",
     "bindings": [
       {
@@ -509,7 +510,7 @@
     ],
     "$button_text": "selectServer.select"
   },
-  "more_servers_button@play_mcjava.grid_button": {
+  "more_servers_button@play_ui.grid_button": {
     "$pressed_button_name": "button.menu_network_world_item",
     "bindings": [
       {
@@ -525,7 +526,7 @@
     ],
     "$button_text": "selectServer.select"
   },
-  "network_servers_button@play_mcjava.grid_button": {
+  "network_servers_button@play_ui.grid_button": {
     "$pressed_button_name": "button.menu_network_world_item",
     "bindings": [
       {

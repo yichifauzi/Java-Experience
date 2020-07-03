@@ -10,6 +10,6 @@
     "should_steal_mouse": false,
     "render_only_when_topmost": false,
     "screen_draws_last": true,
-    "$screen_content": "toast_mcjava.toast_screen_content_panel"
+    "$screen_content": "toast_ui.toast_screen_content_panel"
   }
 }

@@ -14,7 +14,7 @@
         }
       },
       { "background@content.dirt_background": {} },
-      { "main_content_panel@safe_zone_mcjava.safe_zone_screen_content_panel": {} }
+      { "main_content_panel@safe_zone_ui.safe_zone_screen_content_panel": {} }
     ],
     "button_mappings": [
       {

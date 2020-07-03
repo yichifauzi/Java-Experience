@@ -11,6 +11,6 @@
     "render_only_when_topmost": false,
     "screen_draws_last": true,
     "always_accepts_input": true,
-    "$screen_content": "debug_mcjava.debug_screen_content_panel"
+    "$screen_content": "debug_ui.debug_screen_content_panel"
   }
 }

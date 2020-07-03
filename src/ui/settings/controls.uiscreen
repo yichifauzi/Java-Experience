@@ -1,12 +1,13 @@
+/* Version: 2.0.0 */
 /* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "controls_mcjava",
+  "namespace": "controls_ui",
 
   "controls_content_panel": {
     "type": "panel",
     "layer": 50,
     "controls": [
-      { "bg@screen_mcjava.screen_background": { "alpha": 0.4 } },
+      { "bg@content.screen_background": { "alpha": 0.4 } },
       {
         "content": {
           "type": "input_panel",
@@ -14,7 +15,7 @@
           "layer": 50,
           "controls": [
             {
-              "mouse_exit@settings_mcjava.back_button": {
+              "mouse_exit@settings_ui.back_button": {
                 "offset": [0, "120%"],
                 "size": [0, 0]
               }
@@ -27,30 +28,30 @@
                 "size": [310, 195],
                 "offset": [0, "-36%"],
                 "controls": [
-                  { "space_top@screen_mcjava.vspace": { "size": [0, 78] } },
+                  { "space_top@content.v2px": { "size": [0, 78] } },
                   {
-                    "stack_0@screen_mcjava.stack": {
+                    "stack_0@content.stack": {
                       "controls": [
-                        { "fill@screen_mcjava.hfill": {} },
-                        { "mouse@controls_mcjava.mouse_button": {} }
+                        { "fill@content.hfill": {} },
+                        { "mouse@controls_ui.mouse_button": {} }
                       ]
                     }
                   },
-                  { "space_0@screen_mcjava.vspace": {} },
+                  { "space_0@content.v4px": {} },
                   {
-                    "stack_1@screen_mcjava.stack": {
+                    "stack_1@content.stack": {
                       "controls": [
-                        { "fill@screen_mcjava.hfill": {} },
-                        { "controller@controls_mcjava.controller_button": {} }
+                        { "fill@content.hfill": {} },
+                        { "controller@controls_ui.controller_button": {} }
                       ]
                     }
                   },
-                  { "space_1@screen_mcjava.vspace": {} },
+                  { "space_1@content.v4px": {} },
                   {
-                    "stack_2@screen_mcjava.stack": {
+                    "stack_2@content.stack": {
                       "controls": [
-                        { "fill@screen_mcjava.hfill": {} },
-                        { "touch@controls_mcjava.touch_button": {} }
+                        { "fill@content.hfill": {} },
+                        { "touch@controls_ui.touch_button": {} }
                       ]
                     }
                   }
@@ -63,19 +64,19 @@
     ]
   },
 
-  "mouse_button@settings_mcjava.open_button": {
+  "mouse_button@settings_ui.open_button": {
     "$toggle_index": 110,
     "$toggle_button_text": "options.mouse",
     "$toggle_control_name": "mouse_view"
   },
 
-  "controller_button@settings_mcjava.open_button": {
+  "controller_button@settings_ui.open_button": {
     "$toggle_index": 111,
     "$toggle_button_text": "options.controller",
     "$toggle_control_name": "controller_view"
   },
 
-  "touch_button@settings_mcjava.open_button": {
+  "touch_button@settings_ui.open_button": {
     "$toggle_index": 112,
     "$toggle_button_text": "options.touch",
     "$toggle_control_name": "touch_view"
@@ -98,7 +99,7 @@
     ]
   },
 
-  "keymapping_grid_item@screen_mcjava.grid_index_panel": {
+  "keymapping_grid_item@content.grid_index_panel": {
     "size": ["100%", 20],
     "collection_name": "$keymapping_collection"
   }

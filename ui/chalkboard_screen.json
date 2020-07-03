@@ -8,7 +8,7 @@
         "mapping_type": "global"
       }
     ],
-    "$screen_content": "chalkboard_mcjava.chalkboard_screen_content_panel",
+    "$screen_content": "chalkboard_ui.chalkboard_screen_content_panel",
     "$screen_background": "content.screen_background"
   }
 }

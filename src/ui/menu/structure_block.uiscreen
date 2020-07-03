@@ -1,23 +1,23 @@
 /* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "structure_block_mcjava",
+  "namespace": "structure_block_ui",
   
   "structure_block_screen_content_panel": {
     "type": "panel",
     "controls": [
-      { "title@structure_block_mcjava.title_text": {} },
-      { "content@structure_block_mcjava.structure_block_content_panel": {} },
-      { "advanced@structure_block_mcjava.structure_viewer_content_panel": {} },
+      { "title@structure_block_ui.title_text": {} },
+      { "content@structure_block_ui.structure_block_content_panel": {} },
+      { "advanced@structure_block_ui.structure_viewer_content_panel": {} },
       {
-        "stack@screen_mcjava.stack": {
+        "stack@screen_ui.stack": {
           "size": [308, 20],
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",
           "offset": [0, "75%"],
           "controls": [
-            { "done@screen_mcjava.exit_button": { "size": [150, 20] } },
-            { "fill@screen_mcjava.hfill": {} },
-            { "advanced@structure_block_mcjava.structure_button": {} }
+            { "done@screen_ui.exit_button": { "size": [150, 20] } },
+            { "fill@screen_ui.hfill": {} },
+            { "advanced@structure_block_ui.structure_button": {} }
           ]
         }
       }
@@ -31,15 +31,15 @@
     "anchor_to": "top_middle",
     "offset": [0, 28],
     "controls": [
-      { "console_title@command_block_mcjava.base_label": { "$text": "Structure Name" } },
-      { "structure_name_wrapper@structure_block_mcjava.structure_name_wrapper": {} },
-      { "show_bounding_box_panel@structure_block_mcjava.show_bounding_box_panel": {} },
-      { "remove_blocks_panel@structure_block_mcjava.remove_blocks_panel": {} },
-      { "mode_panel@structure_block_mcjava.mode_panel": {} },
-      { "buttons_panel@structure_block_mcjava.buttons_panel": {} },
-      { "save_mode_content_panel@structure_block_mcjava.save_mode_content_panel": {} },
-      { "load_mode_content_panel@structure_block_mcjava.load_mode_content_panel": {} },
-      { "3d_export_mode_content_panel@structure_block_mcjava.3d_export_mode_content_panel": {} }
+      { "console_title@command_block_ui.base_label": { "$text": "structure_block.structure_name" } },
+      { "structure_name_wrapper@structure_block_ui.structure_name_wrapper": {} },
+      { "show_bounding_box_panel@structure_block_ui.show_bounding_box_panel": {} },
+      { "remove_blocks_panel@structure_block_ui.remove_blocks_panel": {} },
+      { "mode_panel@structure_block_ui.mode_panel": {} },
+      { "buttons_panel@structure_block_ui.buttons_panel": {} },
+      { "save_mode_content_panel@structure_block_ui.save_mode_content_panel": {} },
+      { "load_mode_content_panel@structure_block_ui.load_mode_content_panel": {} },
+      { "3d_export_mode_content_panel@structure_block_ui.3d_export_mode_content_panel": {} }
     ],
     "bindings": [
       {
@@ -54,8 +54,8 @@
   "save_mode_content_panel": {
     "type": "panel",
     "controls": [
-      { "include_player_panel@structure_block_mcjava.include_player_panel": {} },
-      { "detect_panel@structure_block_mcjava.detect_panel": {} },
+      { "include_player_panel@structure_block_ui.include_player_panel": {} },
+      { "detect_panel@structure_block_ui.detect_panel": {} },
       {
         "size_offset_panel": {
           "type": "stack_panel",
@@ -64,9 +64,9 @@
           "anchor_to": "top_left",
           "offset": [0, 40],
           "controls": [
-            { "console_title@command_block_mcjava.base_label": { "$text": "Relative Position" } },
+            { "console_title@command_block_ui.base_label": { "$text": "structure_block.position" } },
             {
-              "size_panel@structure_block_mcjava.grid_axis_selection_panel": {
+              "size_panel@structure_block_ui.grid_axis_selection_panel": {
                 "size": [242, 22],
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
@@ -75,10 +75,10 @@
                 "$grid_axis_edit_box_name": "#save_offset_edit_box"
               }
             },
-            { "space@screen_mcjava.vspace": { "size": [0, 8] } },
-            { "console_title@command_block_mcjava.base_label": { "$text": "Structure Size" } },
+            { "space@screen_ui.vspace": { "size": [0, 8] } },
+            { "console_title@command_block_ui.base_label": { "$text": "structure_block.size" } },
             {
-              "offset_panel@structure_block_mcjava.grid_axis_selection_panel": {
+              "offset_panel@structure_block_ui.grid_axis_selection_panel": {
                 "size": [242, 22],
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
@@ -111,9 +111,9 @@
           "anchor_to": "top_left",
           "offset": [0, 40],
           "controls": [
-            { "console_title@command_block_mcjava.base_label": { "$text": "Relative Position" } },
+            { "console_title@command_block_ui.base_label": { "$text": "Relative Position" } },
             {
-              "offset_panel@structure_block_mcjava.grid_axis_selection_panel": {
+              "offset_panel@structure_block_ui.grid_axis_selection_panel": {
                 "size": [242, 22],
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
@@ -146,9 +146,9 @@
           "anchor_to": "top_left",
           "offset": [0, 40],
           "controls": [
-            { "console_title@command_block_mcjava.base_label": { "$text": "Relative Position" } },
+            { "console_title@command_block_ui.base_label": { "$text": "structure_block.position" } },
             {
-              "size_panel@structure_block_mcjava.grid_axis_selection_panel": {
+              "size_panel@structure_block_ui.grid_axis_selection_panel": {
                 "size": [242, 22],
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
@@ -157,10 +157,10 @@
                 "$grid_axis_edit_box_name": "#export_offset_edit_box"
               }
             },
-            { "space@screen_mcjava.vspace": { "size": [0, 8] } },
-            { "console_title@command_block_mcjava.base_label": { "$text": "Structure Size" } },
+            { "space@screen_ui.vspace": { "size": [0, 8] } },
+            { "console_title@command_block_ui.base_label": { "$text": "structure_block.size" } },
             {
-              "offset_panel@structure_block_mcjava.grid_axis_selection_panel": {
+              "offset_panel@structure_block_ui.grid_axis_selection_panel": {
                 "size": [242, 22],
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
@@ -197,7 +197,7 @@
           "anchor_to": "top_middle",
           "offset": [0, 8],
           "controls": [
-            { "structure_renderer@structure_block_mcjava.structure_renderer": {} }
+            { "structure_renderer@structure_block_ui.structure_renderer": {} }
           ]
         }
       }
@@ -214,9 +214,9 @@
 
   /* Content */
 
-  "title_text@screen_mcjava.title": {
+  "title_text@screen_ui.title": {
     "offset": [ 0, 10 ],
-    "text": "Structure Block"
+    "text": "structure_block.title"
   },
 
   "structure_button": {
@@ -250,23 +250,23 @@
     ]
   },
 
-  "show_structure_button@toggle_button_mcjava.toggle_button": {
+  "show_structure_button@toggle_button_ui.toggle_button": {
     "size": [150, 20],
     "$toggle_button_name": "structure",
     "$toggle_index": 1,
-    "$toggle_button_text": "Show Structure",
+    "$toggle_button_text": "structure_block.show",
     "$toggle_control_name": "structure_view"
   },
 
-  "hide_structure_button@toggle_button_mcjava.toggle_button": {
+  "hide_structure_button@toggle_button_ui.toggle_button": {
     "size": [150, 20],
     "$toggle_button_name": "structure",
     "$toggle_index": 0,
-    "$toggle_button_text": "Hide Structure",
+    "$toggle_button_text": "structure_block.hide",
     "$toggle_control_name": "structure_view"
   },
 
-  "mode_panel@switch_option_mcjava.switch_option_panel": {
+  "mode_panel@switch_option_ui.switch_option_panel": {
     "size": [50, 20],
     "$options_enabled": "#mode_dropdown_enabled",
     "anchor_from": "bottom_left",
@@ -274,63 +274,63 @@
     "offset": [0, -25],
     "$options": [
       {
-        "save@switch_option_mcjava.switch_option": {
+        "save@switch_option_ui.switch_option": {
           "size": [50, 20],
-          "$switch_option_label": "Save",
+          "$switch_option_label": "structure_block.mode.save",
           "$this_action": "#structure_save_mode",
           "$next_action": "#structure_load_mode"
         }
       },
       {
-        "load@switch_option_mcjava.switch_option": {
+        "load@switch_option_ui.switch_option": {
           "ignored": "(not $data_support and not $3DExport_support)",
           "size": [50, 20],
-          "$switch_option_label": "Load",
+          "$switch_option_label": "structure_block.mode.load",
           "$this_action": "#structure_load_mode",
           "$next_action|default": "#structure_data_mode"
         }
       },
       {
-        "load@switch_option_mcjava.switch_option": {
+        "load@switch_option_ui.switch_option": {
           "ignored": "(not $data_support)",
           "size": [50, 20],
-          "$switch_option_label": "Load",
+          "$switch_option_label": "structure_block.mode.load",
           "$this_action": "#structure_load_mode",
           "$next_action|default": "#structure_data_mode"
         }
       },
       {
-        "load@switch_option_mcjava.switch_option": {
+        "load@switch_option_ui.switch_option": {
           "ignored": "$data_support",
           "size": [50, 20],
-          "$switch_option_label": "Load",
+          "$switch_option_label": "structure_block.mode.load",
           "$this_action": "#structure_load_mode",
           "$next_action|default": "#structure_3d_export_mode"
         }
       },
       {
-        "data@switch_option_mcjava.switch_option": {
+        "data@switch_option_ui.switch_option": {
           "size": [50, 20],
           "ignored": "(not $data_support)",
-          "$switch_option_label": "Data",
+          "$switch_option_label": "structure_block.mode.data",
           "$this_action": "#structure_data_mode",
           "$next_action|default": "#structure_3d_export_mode"
         }
       },
       {
-        "data@switch_option_mcjava.switch_option": {
+        "data@switch_option_ui.switch_option": {
           "size": [50, 20],
           "ignored": "$data_support",
-          "$switch_option_label": "Data",
+          "$switch_option_label": "structure_block.mode.data",
           "$this_action": "#structure_data_mode",
           "$next_action|default": "#structure_save_mode"
         }
       },
       {
-        "hard@switch_option_mcjava.switch_option": {
+        "hard@switch_option_ui.switch_option": {
           "size": [50, 20],
           "ignored": "(not $3DExport_support)",
-          "$switch_option_label": "3D Export",
+          "$switch_option_label": "structure_block.mode.export",
           "$this_action": "#structure_3d_export_mode",
           "$next_action": "#structure_save_mode"
         }
@@ -338,7 +338,7 @@
     ]
   },
 
-  "text_edit_control@text_box_mcjava.text_box": {
+  "text_edit_control@text_box_ui.text_box": {
     "property_bag": {
       "#property_field": "#item_name"
     },
@@ -353,7 +353,7 @@
     "offset": [0, 10],
     "controls": [
       {
-        "structure_name@structure_block_mcjava.text_edit_control": {
+        "structure_name@structure_block_ui.text_edit_control": {
           "size": [ "100%", 22],
           "max_length": 30,
           "$text_box_name": "#structure_name",
@@ -383,14 +383,14 @@
           "$text_box_name": "$grid_axis_edit_box_name",
           "controls": [
             {
-              "X@structure_block_mcjava.axis_selection_panel": {
+              "X@structure_block_ui.axis_selection_panel": {
                 "collection_index": 0,
                 "size": [81, 22],
                 "$offset": [0, 0]
               }
             },
             {
-              "Y@structure_block_mcjava.axis_selection_panel": {
+              "Y@structure_block_ui.axis_selection_panel": {
                 "collection_index": 1,
                 "size": [80, 22 ],
                 "$offset": [-1, 0],
@@ -398,7 +398,7 @@
               }
             },
             {
-              "Z@structure_block_mcjava.axis_selection_panel": {
+              "Z@structure_block_ui.axis_selection_panel": {
                 "collection_index": 2,
                 "size": [81, 22 ],
                 "$offset": [-2, 0],
@@ -417,7 +417,7 @@
     "anchor_to": "top_left",
     "controls": [
       {
-        "edit_box@structure_block_mcjava.text_edit_control": {
+        "edit_box@structure_block_ui.text_edit_control": {
           "$text_box_max_length|default": 3,
           "size": [ "100%", "100%" ],
           "offset": "$offset",
@@ -437,8 +437,8 @@
     "offset": [0, 79],
     "controls": [
       {
-        "console_title@command_block_mcjava.base_label": {
-          "$text": "Remove Blocks:",
+        "console_title@command_block_ui.base_label": {
+          "$text": "structure_block.invisible_blocks",
           "$text_anchor": "top_right",
           "$text_alignment": "right"
         }
@@ -452,16 +452,16 @@
           "offset": [0, 11],
           "controls": [
             {
-              "toggle@option_toggle_mcjava.option_toggle": {
+              "toggle@option_toggle_ui.option_toggle": {
                 "size": [50, 20],
                 "anchor_from": "top_right",
                 "anchor_to": "top_right",
-                "$toggle_type_panel": "structure_block_mcjava.toggle_option_panel",
+                "$toggle_type_panel": "structure_block_ui.toggle_option_panel",
                 "$option_binding_name": "#remove_blocks_binding_name",
                 "$option_enabled_binding_name": "#remove_blocks_enabled",
                 "$toggle_name": "#remove_blocks_toggle",
-                "$first_label_text": "OFF",
-                "$second_label_text": "Remove",
+                "$first_label_text": "options.off",
+                "$second_label_text": "options.on",
                 "$first_label_visible_binding_name": "#remove_blocks_toggle_off",
                 "$second_label_visible_binding_name": "#remove_blocks_toggle_on"
               }
@@ -480,7 +480,7 @@
     "offset": [0, 120],
     "controls": [
       {
-        "console_title@command_block_mcjava.base_label": {
+        "console_title@command_block_ui.base_label": {
           "$text": "Detect structure size and position:",
           "$text_anchor": "top_left",
           "$text_alignment": "left"
@@ -495,7 +495,7 @@
           "offset": [0, 11],
           "controls": [
             {
-              "detect_button@button_mcjava.button": {
+              "detect_button@button_ui.button": {
                 "$pressed_button_name": "button.structure_detect",
                 "$button_text": "structure_block.detect",
                 "size": [50, 20],
@@ -517,8 +517,8 @@
     "offset": [0, 40],
     "controls": [
       {
-        "console_title@command_block_mcjava.base_label": {
-          "$text": "Show Bounding Box:",
+        "console_title@command_block_ui.base_label": {
+          "$text": "structure_block.show_bounding_box",
           "$text_anchor": "top_right",
           "$text_alignment": "right"
         }
@@ -532,11 +532,11 @@
           "offset": [0, 11],
           "controls": [
             {
-              "toggle@option_toggle_mcjava.option_toggle": {
+              "toggle@option_toggle_ui.option_toggle": {
                 "size": [50, 20],
                 "anchor_from": "top_right",
                 "anchor_to": "top_right",
-                "$toggle_type_panel": "structure_block_mcjava.toggle_option_panel",
+                "$toggle_type_panel": "structure_block_ui.toggle_option_panel",
                 "$option_binding_name": "#show_bounding_box_binding_name",
                 "$option_enabled_binding_name": "#show_bounding_box_enabled",
                 "$toggle_name": "#show_bounding_box_toggle",
@@ -560,8 +560,8 @@
     "offset": [0, 120],
     "controls": [
       {
-        "console_title@command_block_mcjava.base_label": {
-          "$text": "Include Players:",
+        "console_title@command_block_ui.base_label": {
+          "$text": "3d_export.include_players",
           "$text_anchor": "top_right",
           "$text_alignment": "right"
         }
@@ -575,16 +575,16 @@
           "offset": [0, 11],
           "controls": [
             {
-              "toggle@option_toggle_mcjava.option_toggle": {
+              "toggle@option_toggle_ui.option_toggle": {
                 "$enabled": true,
                 "size": [50, 20],
                 "anchor_from": "top_right",
                 "anchor_to": "top_right",
-                "$toggle_type_panel": "structure_block_mcjava.toggle_option_panel",
+                "$toggle_type_panel": "structure_block_ui.toggle_option_panel",
                 "$option_binding_name": "#include_players_binding_name",
                 "$option_enabled_binding_name": "#include_players_enabled",
                 "$toggle_name": "#include_players_toggle",
-                "$first_label_text": "3d_export.off",
+                "$first_label_text": "options.off",
                 "$second_label_text": "3d_export.include",
                 "$first_label_visible_binding_name": "#include_players_toggle_off",
                 "$second_label_visible_binding_name": "#include_players_toggle_on"
@@ -655,37 +655,37 @@
     "offset": [0, 156],
     "controls": [
       {
-        "save_panel@structure_block_mcjava.save_button_panel": {
+        "save_panel@structure_block_ui.save_button_panel": {
           "layer": 3,
           "ignored": "(not $file_picking_supported)"
         }
       },
       {
-        "save_panel_no_export@structure_block_mcjava.save_button_panel_no_export": {
+        "save_panel_no_export@structure_block_ui.save_button_panel_no_export": {
           "layer": 3,
           "ignored": "($file_picking_supported)"
         }
       },
       {
-        "load_panel_no_export@structure_block_mcjava.load_button_panel_no_export": {
+        "load_panel_no_export@structure_block_ui.load_button_panel_no_export": {
           "layer": 3,
           "ignored": "($file_picking_supported)"
         }
       },
       {
-        "load_panel@structure_block_mcjava.load_button_panel": {
+        "load_panel@structure_block_ui.load_button_panel": {
           "layer": 3,
           "ignored": "(not $file_picking_supported)"
         }
       },
       {
-        "3d_export_panel@structure_block_mcjava.3d_export_button_panel": {
+        "3d_export_panel@structure_block_ui.3d_export_button_panel": {
           "ignored": "(not $3DExport_support)",
           "layer": 3
         }
       },
       {
-        "data_panel@structure_block_mcjava.data_button_panel": {
+        "data_panel@structure_block_ui.data_button_panel": {
           "layer": 3,
           "ignored": "(not $data_support)"
         }
@@ -700,15 +700,15 @@
     "anchor_from": "top_right",
     "anchor_to": "top_right",
     "controls": [
-      { "reset_button@structure_block_mcjava.reset_button": {} },
+      { "reset_button@structure_block_ui.reset_button": {} },
       {
-        "space_zero@screen_mcjava.hfill": {
+        "space_zero@screen_ui.hfill": {
           "size": [4, 0]
         }
       },
-      { "export_button@structure_block_mcjava.export_button": {} },
-      { "fill_zero@screen_mcjava.vspace": { "size": [4, 0] } },
-      { "save@structure_block_mcjava.save_button": {} }
+      { "export_button@structure_block_ui.export_button": {} },
+      { "fill_zero@screen_ui.vspace": { "size": [4, 0] } },
+      { "save@structure_block_ui.save_button": {} }
     ],
     "bindings": [
       {
@@ -725,9 +725,9 @@
     "anchor_from": "top_right",
     "anchor_to": "top_right",
     "controls": [
-      { "reset_button@structure_block_mcjava.reset_button": {} },
-      { "space_zero@screen_mcjava.hfill": {} },
-      { "save@structure_block_mcjava.save_button": {} }
+      { "reset_button@structure_block_ui.reset_button": {} },
+      { "space_zero@screen_ui.hfill": {} },
+      { "save@structure_block_ui.save_button": {} }
     ],
     "bindings": [
       {
@@ -744,11 +744,11 @@
     "anchor_from": "top_right",
     "anchor_to": "top_right",
     "controls": [
-      { "reset_button@structure_block_mcjava.reset_button": {} },
-      { "space_zero@screen_mcjava.vspace": { "size": [4, 0] } },
-      { "export_button@structure_block_mcjava.export_button": {} },
-      { "space_zero@screen_mcjava.vspace": { "size": [4, 0] } },
-      { "load@structure_block_mcjava.load_button": {} }
+      { "reset_button@structure_block_ui.reset_button": {} },
+      { "space_zero@screen_ui.vspace": { "size": [4, 0] } },
+      { "export_button@structure_block_ui.export_button": {} },
+      { "space_zero@screen_ui.vspace": { "size": [4, 0] } },
+      { "load@structure_block_ui.load_button": {} }
     ],
     "bindings": [
       {
@@ -765,9 +765,9 @@
     "anchor_from": "top_right",
     "anchor_to": "top_right",
     "controls": [
-      { "reset_button@structure_block_mcjava.reset_button": {} },
-      { "space_zero@screen_mcjava.vspace": { "size": [4, 0] } },
-      { "load@structure_block_mcjava.load_button": {} }
+      { "reset_button@structure_block_ui.reset_button": {} },
+      { "space_zero@screen_ui.vspace": { "size": [4, 0] } },
+      { "load@structure_block_ui.load_button": {} }
     ],
     "bindings": [
       {
@@ -784,9 +784,9 @@
     "anchor_from": "top_right",
     "anchor_to": "top_right",
     "controls": [
-      { "reset_button@structure_block_mcjava.reset_button": {} },
-      { "space_zero@screen_mcjava.vspace": { "size": [4, 0] } },
-      { "3d_export@structure_block_mcjava.3d_export_button": {} }
+      { "reset_button@structure_block_ui.reset_button": {} },
+      { "space_zero@screen_ui.vspace": { "size": [4, 0] } },
+      { "3d_export@structure_block_ui.3d_export_button": {} }
     ], 
     "bindings": [
       {
@@ -803,7 +803,7 @@
     "anchor_from": "top_right",
     "anchor_to": "top_right",
     "controls": [
-      { "reset_button@structure_block_mcjava.reset_button": {} }
+      { "reset_button@structure_block_ui.reset_button": {} }
     ],
     "bindings": [
       {
@@ -813,7 +813,7 @@
     ]
   },
 
-  "3d_export_button@button_mcjava.button": {
+  "3d_export_button@button_ui.button": {
     "size": [50, 20],
     "$pressed_button_name": "button.structure_3D_export",
     "$button_text": "structure_block.export",
@@ -826,7 +826,7 @@
     ]
   },
 
-  "save_button@button_mcjava.button": {
+  "save_button@button_ui.button": {
     "size": [50, 20],
     "$pressed_button_name": "button.structure_save",
     "$button_text": "structure_block.save",
@@ -839,7 +839,7 @@
     ]
   },
 
-  "export_button@button_mcjava.button": {
+  "export_button@button_ui.button": {
     "size": [50, 20],
     "$pressed_button_name": "button.structure_export",
     "$button_text": "structure_block.export",
@@ -852,7 +852,7 @@
     ]
   },
 
-  "load_button@@button_mcjava.button": {
+  "load_button@@button_ui.button": {
     "size": [50, 20],
     "$pressed_button_name": "button.structure_load",
     "$button_text": "structure_block.load",
@@ -865,7 +865,7 @@
     ]
   },
 
-  "reset_button@button_mcjava.button": {
+  "reset_button@button_ui.button": {
     "size": [50, 20],
     "$pressed_button_name": "button.structure_reset",
     "$button_text": "structure_block.reset"
@@ -890,6 +890,7 @@
         "binding_name_override": "#visible"
       }
     ],
+    "layer": 20,
     "controls": [
       {
         "renderer": {

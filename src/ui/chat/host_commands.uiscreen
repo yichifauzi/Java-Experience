@@ -1,8 +1,9 @@
 /* Version: 2.0.0 */
+/* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "host_commands_mcjava",
+  "namespace": "host_commands_ui",
 
-  "host_main_button@button_mcjava.button": {
+  "host_main_button@button_ui.button": {
     "$pressed_button_name": "button.host_toggle",
     "anchor_from": "bottom_right",
     "anchor_to": "bottom_right",
@@ -11,10 +12,10 @@
     "$focus_override_left": "chat_settings_button_focus_id",
     "$button_text": "/",
     "$text_shadow": false,
-    "$default_button_bg": "chat_mcjava.indentbox",
-    "$hover_button_bg": "chat_mcjava.indentboxhover",
-    "$pressed_button_bg": "chat_mcjava.indentboxhover",
-    "$locked_button_bg": "chat_mcjava.indentbox",
+    "$default_button_bg": "chat_ui.indentbox",
+    "$hover_button_bg": "chat_ui.indentboxhover",
+    "$pressed_button_bg": "chat_ui.indentboxhover",
+    "$locked_button_bg": "chat_ui.indentbox",
     "bindings": [
       {
         "binding_name": "#cheats_on",
@@ -31,22 +32,22 @@
     ]
   },
 
-  "main_light_button@button_mcjava.button": {
+  "main_light_button@button_ui.button": {
     "$button_size|default": ["100%", 20],
     "size": "$button_size",
-    "$default_button_bg": "chat_mcjava.indentbox",
-    "$hover_button_bg": "chat_mcjava.indentboxhover",
-    "$pressed_button_bg": "chat_mcjava.indentboxhover",
-    "$locked_button_bg": "chat_mcjava.indentbox"
+    "$default_button_bg": "chat_ui.indentbox",
+    "$hover_button_bg": "chat_ui.indentboxhover",
+    "$pressed_button_bg": "chat_ui.indentboxhover",
+    "$locked_button_bg": "chat_ui.indentbox"
   },
 
-  "main_dark_button@button_mcjava.button": {
+  "main_dark_button@button_ui.button": {
     "$button_size|default": ["100%", 20],
     "size": "$button_size",
-    "$default_button_bg": "chat_mcjava.indentbox",
-    "$hover_button_bg": "chat_mcjava.indentboxhover",
-    "$pressed_button_bg": "chat_mcjava.indentboxhover",
-    "$locked_button_bg": "chat_mcjava.indentbox",
+    "$default_button_bg": "chat_ui.indentbox",
+    "$hover_button_bg": "chat_ui.indentboxhover",
+    "$pressed_button_bg": "chat_ui.indentboxhover",
+    "$locked_button_bg": "chat_ui.indentbox",
     "$bgb_alpha": 0.65
   },
 
@@ -68,9 +69,7 @@
           "$button_text_binding_type": "collection",
           "$button_text_grid_collection_name": "$grid_collection_name",
           "$pressed_button_name": "button.sub_command",
-          "property_bag": {
-            "#sub_command": ""
-          },
+          "property_bag": { "#sub_command": "" },
           "bindings": [
             {
               "binding_type": "collection",
@@ -110,7 +109,7 @@
         "host_main_grid@host_options.host_grid": {
           "$grid_dimension_binding": "#host_main_grid_dimension",
           "$grid_collection_name": "host_main_collection",
-          "$grid_item_template": "host_commands_mcjava.host_menu_grid_item"
+          "$grid_item_template": "host_commands_ui.host_menu_grid_item"
         }
       }
     ],
@@ -134,11 +133,7 @@
       }
     ],
     "controls": [
-      {
-        "return@return_from_sub_command_button": {
-          "$button_text": "hostOption.teleport"
-        }
-      },
+      { "return@return_from_sub_command_button": { "$button_text": "hostOption.teleport" } },
       {
         "sub_tab": {
           "type": "panel",
@@ -149,7 +144,7 @@
                 "offset": "$offset_sub_tabs",
                 "$grid_dimension_binding": "#host_teleport_grid_dimension",
                 "$grid_collection_name": "host_teleport_collection",
-                "$grid_item_template": "host_commands_mcjava.host_teleport_grid_item"
+                "$grid_item_template": "host_commands_ui.host_teleport_grid_item"
               }
             }
           ]
@@ -163,25 +158,25 @@
     "size": ["100%", 20],
     "controls": [
       {
-        "host_option_toggle@toggle_collection_mcjava.toggle_collection": {
+        "host_option_toggle@toggle_collection_ui.toggle_collection": {
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "size": [ "100%", "100%" ],
           "$toggle_default_selected": 0,
           "$radio_toggle_group": true,
           "$toggle_name": "navigation_tab",
-          "$toggle_type_panel": "button_mcjava.button_label",
+          "$toggle_type_panel": "button_ui.button_label",
           "$button_text": "#button_text",
           "$button_text_binding_type": "collection",
           "$button_text_grid_collection_name": "$grid_collection_name",
           "$toggle_grid_collection_name": "$grid_collection_name",
           "$toggle_state_binding_name": "#toggle_selected",
-          "$checked_toggle_bg": "chat_mcjava.indentbox",
-          "$unchecked_toggle_bg": "chat_mcjava.indentbox",
-          "$unchecked_hover_toggle_bg": "chat_mcjava.indentboxhover",
-          "$checked_hover_toggle_bg": "chat_mcjava.indentboxhover",
-          "$unchecked_locked_toggle_bg": "chat_mcjava.indentbox",
-          "$checked_locked_toggle_bg": "chat_mcjava.indentbox",
+          "$checked_toggle_bg": "chat_ui.indentbox",
+          "$unchecked_toggle_bg": "chat_ui.indentbox",
+          "$unchecked_hover_toggle_bg": "chat_ui.indentboxhover",
+          "$checked_hover_toggle_bg": "chat_ui.indentboxhover",
+          "$unchecked_locked_toggle_bg": "chat_ui.indentbox",
+          "$checked_locked_toggle_bg": "chat_ui.indentbox",
           "$bgb_alpha": 0.65,
           "$toggle_binding_type": "collection",
           "$button_binding_condition": "none",
@@ -201,9 +196,7 @@
           "$button_text_binding_type": "collection",
           "$button_text_grid_collection_name": "$grid_collection_name",
           "$pressed_button_name": "button.teleport_clear",
-          "property_bag": {
-            "#button_navigation": 0
-          },
+          "property_bag": { "#button_navigation": 0 },
           "bindings": [
             {
               "binding_type": "collection",
@@ -251,7 +244,7 @@
                 "anchor_to": "center",
                 "$show_background": false,
                 "$master_background_visible": false,
-                "$master_scrolling_content": "host_commands_mcjava.host_friends_tab",
+                "$master_scrolling_content": "host_commands_ui.host_friends_tab",
                 "offset": "$offset_second_sub_tabs"
               }
             }
@@ -269,7 +262,7 @@
         "players_grid@host_options.host_grid": {
           "$grid_dimension_binding": "#players_grid_dimension",
           "$grid_collection_name": "players_collection",
-          "$grid_item_template": "host_commands_mcjava.player_grid_item"
+          "$grid_item_template": "host_commands_ui.player_grid_item"
         }
       }
     ]
@@ -315,11 +308,7 @@
       }
     ],
     "controls": [
-      {
-        "return@return_from_sub_command_button": {
-          "$button_text": "hostOption.time"
-        }
-      },
+      { "return@return_from_sub_command_button": { "$button_text": "hostOption.time" } },
       {
         "sub_tab": {
           "type": "panel",
@@ -338,7 +327,7 @@
                 "$master_scrolling_content": "host_options.host_grid",
                 "$grid_dimension_binding": "#host_time_grid_dimension",
                 "$grid_collection_name": "host_time_collection",
-                "$grid_item_template": "host_commands_mcjava.host_sub_command_grid_item"
+                "$grid_item_template": "host_commands_ui.host_sub_command_grid_item"
               }
             }
           ]
@@ -359,11 +348,7 @@
       }
     ],
     "controls": [
-      {
-        "return@return_from_sub_command_button": {
-          "$button_text": "hostOption.weather"
-        }
-      },
+      { "return@return_from_sub_command_button": { "$button_text": "hostOption.weather" } },
       {
         "sub_tab": {
           "type": "panel",
@@ -374,7 +359,7 @@
                 "offset": "$offset_sub_tabs",
                 "$grid_dimension_binding": "#host_weather_grid_dimension",
                 "$grid_collection_name": "host_weather_collection",
-                "$grid_item_template": "host_commands_mcjava.host_sub_command_grid_item"
+                "$grid_item_template": "host_commands_ui.host_sub_command_grid_item"
               }
             }
           ]

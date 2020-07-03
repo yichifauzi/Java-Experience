@@ -1,11 +1,12 @@
 /* Version: 2.0.0 */
+/* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "content_log_history_mcjava",
+  "namespace": "content_log_history_ui",
 
   "content_log_history_screen_content_panel@content.scroll_screen": {
-    "$top_content": "content_log_history_mcjava.top_content",
-    "$middle_content": "content_log_history_mcjava.scroll_content",
-    "$bottom_content": "content_log_history_mcjava.bottom_content",
+    "$top_content": "content_log_history_ui.top_content",
+    "$middle_content": "content_log_history_ui.scroll_content",
+    "$bottom_content": "content_log_history_ui.bottom_content",
     "$scroll_bar_offset": ["40% + 2px", 0],
     "$jump_to_bottom_on_update": true,
     "$always_handle_scrolling": true
@@ -56,7 +57,7 @@
     "size": [ "100%", "default" ],
     "factory": {
       "name": "messages_factory",
-      "control_name": "content_log_message@content_log_history_mcjava.content_log_message_panel"
+      "control_name": "content_log_message@content_log_history_ui.content_log_message_panel"
     },
     "bindings": [
       {
@@ -109,7 +110,7 @@
     "orientation": "horizontal",
     "controls": [
       {
-        "clipboard_button@button_mcjava.button": {
+        "clipboard_button@button_ui.button": {
           "size": [150, 20],
           "enabled": "$supports_clipboard",
           "$pressed_button_name": "button.copy_to_clipboard",

@@ -1,15 +1,15 @@
 /* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "death_menu_mcjava",
+  "namespace": "death_menu_ui",
 
   "death_menu_screen_content_panel": {
     "type": "panel",
     "controls": [
-      { "title@death_menu_mcjava.title_text": {} },
-      { "menu@death_menu_mcjava.menu_content_panel": {} },
-      { "locked_menu@death_menu_mcjava.menu_locked_content_panel": {} },
+      { "title@death_menu_ui.title_text": {} },
+      { "menu@death_menu_ui.menu_content_panel": {} },
+      { "locked_menu@death_menu_ui.menu_locked_content_panel": {} },
       {
-        "controller_a@bed_mcjava.a_button_panel": {
+        "controller_a@bed_ui.a_button_panel": {
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
           "offset": [0, "-15%"]
@@ -25,9 +25,9 @@
     "anchor_from": "center",
     "anchor_to": "top_middle",
     "controls": [
-      { "respawn@death_menu_mcjava.respawn_button": {} },
-      { "space@screen_mcjava.vspace": {} },
-      { "quit@death_menu_mcjava.quit_button": {} }
+      { "respawn@death_menu_ui.respawn_button": {} },
+      { "space@screen_ui.vspace": {} },
+      { "quit@death_menu_ui.quit_button": {} }
     ],
     "bindings": [
       {
@@ -44,13 +44,13 @@
     "anchor_from": "center",
     "anchor_to": "top_middle",
     "controls": [
-      { "respawn@death_menu_mcjava.respawn_locked_button": {} },
-      { "space@screen_mcjava.vspace": {} },
-      { "quit@death_menu_mcjava.quit_locked_button": {} }
+      { "respawn@death_menu_ui.respawn_locked_button": {} },
+      { "space@screen_ui.vspace": {} },
+      { "quit@death_menu_ui.quit_locked_button": {} }
     ]
   },
 
-  "title_text@screen_mcjava.title": {
+  "title_text@screen_ui.title": {
     "offset": [0, "15%"],
     "text": "deathScreen.title",
     "font_size": "large"
@@ -64,7 +64,7 @@
     "ignored": "$is_holographic"
   },
 
-  "respawn_button@button_mcjava.button": {
+  "respawn_button@button_ui.button": {
     "$button_text": "deathScreen.respawn",
     "$pressed_button_name": "button.respawn_button",
     "bindings": [
@@ -75,7 +75,7 @@
     ]
   },
 
-  "quit_button@button_mcjava.button": {
+  "quit_button@button_ui.button": {
     "$button_text": "deathScreen.titleScreen",
     "$pressed_button_name": "button.main_menu_button",
     "variables": [
@@ -92,11 +92,11 @@
     ]
   },
 
-  "respawn_locked_button@screen_mcjava.locked": {
+  "respawn_locked_button@screen_ui.locked": {
     "$button_text": "deathScreen.respawn"
   },
 
-  "quit_locked_button@screen_mcjava.locked": {
+  "quit_locked_button@screen_ui.locked": {
     "$button_text": "deathScreen.titleScreen",
     "variables": [
       {
@@ -123,9 +123,9 @@
                 "$left_button_text": "deathScreen.titleScreen",
                 "$cancel_button_text": "gui.back",
                 "controls": [
-                  { "respawn@popup_mcjava.modal_cancel_button": {} },
-                  { "space@screen_mcjava.vspace": {} },
-                  { "quit@popup_mcjava.modal_left_button": {} }
+                  { "respawn@popup_ui.modal_cancel_button": {} },
+                  { "space@screen_ui.vspace": {} },
+                  { "quit@popup_ui.modal_left_button": {} }
                 ]
               }
             }

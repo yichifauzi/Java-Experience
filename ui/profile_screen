@@ -23,7 +23,7 @@
         "mapping_type": "global"
       }
     ],
-    "$screen_matrix": "profile_mcjava.profile_screen_content_panel",
-    "$screen_background": "profile_mcjava.profile_background"
+    "$screen_matrix": "profile_ui.profile_screen_content_panel",
+    "$screen_background": "profile_ui.profile_background"
   }
 }

@@ -1,8 +1,8 @@
 /* Version: 2.0.0 */
 {
   "chat_screen@content.base_screen": {
-    "force_close_on_player_hurt": "$force_close_on_player_hurt",
-    "$screen_content": "chat_mcjava.chat_screen_content_panel",
+    "close_on_player_hurt": "$force_close_on_player_hurt",
+    "$screen_content": "chat_ui.chat_screen_content_panel",
     "$screen_background": "common.base_screen_empty_panel",
     "button_mappings": [
       {

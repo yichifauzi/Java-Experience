@@ -1,29 +1,29 @@
 /* Version: 2.0.0 */
 /* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "anvil_mcjava",
+  "namespace": "anvil_ui",
 
-  "anvil_screen_content_panel@container_mcjava.container_panel": {
+  "anvil_screen_content_panel@container_ui.container_panel": {
     "$container_bg": "resources1.anvil_bg",
-    "$specified_content": "anvil_mcjava.anvil_content_panel"
+    "$specified_content": "anvil_ui.anvil_content_panel"
   },
 
   "anvil_content_panel": {
     "type": "panel",
-    "$container_title": "container.anvil",
+    "$container_title": "container.repair",
     "controls": [
-      { "title@container_mcjava.title": { "offset": [60, 5] } },
-      { "item@anvil_mcjava.item_name_box": {} },
-      { "input@anvil_mcjava.input_item_slot": {} },
-      { "material@anvil_mcjava.material_item_slot": {} },
-      { "result@anvil_mcjava.result_item_slot": {} },
-      { "yields@anvil_mcjava.yields": {} },
-      { "success@anvil_mcjava.success_cost_label": {} },
-      { "fail@anvil_mcjava.fail_cost_label": {} }
+      { "title@container_ui.title": { "offset": [60, 5] } },
+      { "item@anvil_ui.item_name_box": {} },
+      { "input@anvil_ui.input_item_slot": {} },
+      { "material@anvil_ui.material_item_slot": {} },
+      { "result@anvil_ui.result_item_slot": {} },
+      { "yields@anvil_ui.yields": {} },
+      { "success@anvil_ui.success_cost_label": {} },
+      { "fail@anvil_ui.fail_cost_label": {} }
     ]
   },
 
-  "item_name_box@text_box_mcjava.text_box": {
+  "item_name_box@text_box_ui.text_box": {
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "offset": [59, 20],
@@ -38,19 +38,19 @@
     "$text_indent_offset": [3, 0]
   },
 
-  "anvil_item_slot@container_mcjava.container_slot": {
+  "anvil_item_slot@container_ui.container_slot": {
     "anchor_to": "top_left",
     "anchor_from": "top_left"
   },
 
-  "input_item_slot@anvil_mcjava.anvil_item_slot": {
+  "input_item_slot@anvil_ui.anvil_item_slot": {
     "offset": [26, 46],
     "$item_collection_name": "anvil_input_items",
     "$focus_id": "anvil_input",
     "$focus_override_right": "anvil_material"
   },
 
-  "material_item_slot@anvil_mcjava.anvil_item_slot": {
+  "material_item_slot@anvil_ui.anvil_item_slot": {
     "offset": [75, 46],
     "$item_collection_name": "anvil_material_items",
     "$focus_id": "anvil_material",
@@ -73,15 +73,15 @@
     ]
   },
 
-  "result_item_slot@anvil_mcjava.anvil_item_slot": {
+  "result_item_slot@anvil_ui.anvil_item_slot": {
     "offset": [133, 46],
     "$item_collection_name": "anvil_result_items",
-    "$button_ref": "anvil_mcjava.anvil_output_slot_button",
+    "$button_ref": "anvil_ui.anvil_output_slot_button",
     "$focus_id": "anvil_result",
     "$focus_override_left": "anvil_material"
   },
 
-  "anvil_output_slot_button@container_mcjava.container_slot_button_prototype": {
+  "anvil_output_slot_button@container_ui.container_slot_button_prototype": {
     "button_mappings": [
       {
         "from_button_id": "button.menu_select",
@@ -154,7 +154,7 @@
       {
         "background": {
           "type": "image",
-          "texture": "src/core/assets/fmarquespto/textures/white",
+          "texture": "src/core/assets/fmarquespto/white",
           "layer": -5,
           "color": [0.537, 0.537, 0.537],
           "size": ["100% + 4px", "100% + 2px"]
@@ -163,7 +163,7 @@
     ]
   },
 
-  "fail_cost_label@anvil_mcjava.cost_label": {
+  "fail_cost_label@anvil_ui.cost_label": {
     "color": "$anvil_cost_fail_text_color",
     "bindings": [
       {
@@ -177,7 +177,7 @@
     ]
   },
 
-  "success_cost_label@anvil_mcjava.cost_label": {
+  "success_cost_label@anvil_ui.cost_label": {
     "color": "$anvil_cost_success_text_color",
     "bindings": [
       {

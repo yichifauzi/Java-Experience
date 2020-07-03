@@ -13,5 +13,5 @@ struct PS_Output
 ROOT_SIGNATURE
 void main(in PS_Input PSInput, out PS_Output PSOutput)
 {
-	PSOutput.color.rgba = float4(1.0f, 1.0f, 1.0f, 0.4);
+	PSOutput.color.rgba = float4(0.0f, 0.0f, 0.0f, 0.4);
 }

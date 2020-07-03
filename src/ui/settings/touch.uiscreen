@@ -1,20 +1,20 @@
 /* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "touch_mcjava",
+  "namespace": "touch_ui",
 
-  "touch_content_panel@screen_mcjava.scroll_screen": {
-    "$top_content": "touch_mcjava.top_content",
-    "$scrolling_content": "touch_mcjava.scroll_content",
-    "$bottom_content": "touch_mcjava.bottom_content"
+  "touch_content_panel@screen_ui.scroll_screen": {
+    "$top_content": "touch_ui.top_content",
+    "$scrolling_content": "touch_ui.scroll_content",
+    "$bottom_content": "touch_ui.bottom_content"
   },
 
   "top_content": {
     "type": "panel",
     "controls": [
       {
-        "title@screen_mcjava.title": {
+        "title@screen_ui.title": {
           "offset": [0, 7],
-          "text": "options.controls.title"
+          "text": "controls.title"
         }
       }
     ]
@@ -26,15 +26,15 @@
     "$anchor_from": "top_middle",
     "$anchor_to": "top_middle",
     "controls": [
-      { "sensitivity@touch_mcjava.sensitivity_slider": { "offset": [-80, 4] } },
-      { "invert_y_axis@touch_mcjava.invert_y_axis_toggle": { "offset": [80, 4] } },
-      { "auto_jump@touch_mcjava.auto_jump_toggle": { "offset": [-80, 28] } },
-      { "destroy_vibration@touch_mcjava.destroy_vibration_toggle": { "offset": [80, 28] } },
-      { "split_controls@touch_mcjava.split_controls_toggle": { "offset": [-80, 52] } },
-      { "left_handed@touch_mcjava.left_handed_toggle": { "offset": [80, 52] } },
-      { "swap_jump_and_sneak@touch_mcjava.swap_jump_and_sneak_toggle": { "offset": [-80, 76] } },
-      { "hotbar_only_touch@touch_mcjava.hotbar_only_touch_toggle": { "offset": [80, 76] } },
-      { "button_size@touch_mcjava.button_size_slider": { "offset": [-80, 100] } }
+      { "sensitivity@touch_ui.sensitivity_slider": { "offset": [-80, 4] } },
+      { "invert_y_axis@touch_ui.invert_y_axis_toggle": { "offset": [80, 4] } },
+      { "auto_jump@touch_ui.auto_jump_toggle": { "offset": [-80, 28] } },
+      { "destroy_vibration@touch_ui.destroy_vibration_toggle": { "offset": [80, 28] } },
+      { "split_controls@touch_ui.split_controls_toggle": { "offset": [-80, 52] } },
+      { "left_handed@touch_ui.left_handed_toggle": { "offset": [80, 52] } },
+      { "swap_jump_and_sneak@touch_ui.swap_jump_and_sneak_toggle": { "offset": [-80, 76] } },
+      { "hotbar_only_touch@touch_ui.hotbar_only_touch_toggle": { "offset": [80, 76] } },
+      { "button_size@touch_ui.button_size_slider": { "offset": [-80, 100] } }
     ]
   },
 
@@ -46,10 +46,10 @@
     "size": [310, 20],
     "offset": [0, -9],
     "controls": [
-      { "reset@touch_mcjava.reset_button": {} },
-      { "fill@screen_mcjava.hfill": {} },
+      { "reset@touch_ui.reset_button": {} },
+      { "fill@screen_ui.hfill": {} },
       {
-        "back@settings_mcjava.back_button": {
+        "back@settings_ui.back_button": {
           "$toggle_button_name": "navigation_tab",
           "size": [150, 20]
         }
@@ -60,11 +60,11 @@
   "popup_dialog_factory": {
     "type": "factory",
     "control_ids": {
-      "modal_dialog_popup": "@popup_mcjava.reset_touch_settings_modal"
+      "modal_dialog_popup": "@popup_ui.reset_touch_settings_modal"
     }
   },
 
-  "sensitivity_slider@slider_mcjava.slider": {
+  "sensitivity_slider@slider_ui.slider": {
     "$slider_label": "#touch_sensitivity_slider_label",
     "$slider_name": "touch_sensitivity",
     "$slider_value_binding_name": "#touch_sensitivity",
@@ -77,28 +77,28 @@
     ]
   },
 
-  "invert_y_axis_toggle@option_toggle_mcjava.option_toggle": {
+  "invert_y_axis_toggle@option_toggle_ui.option_toggle": {
     "$option_toggle_text": "options.invertYAxis",
     "$option_binding_name": "#touch_invert_y_axis",
     "$option_enabled_binding_name": "#touch_invert_y_axis_enabled",
     "$toggle_name": "touch_invert_y_axis"
   },
 
-  "auto_jump_toggle@option_toggle_mcjava.option_toggle": {
+  "auto_jump_toggle@option_toggle_ui.option_toggle": {
     "$option_toggle_text": "options.autojump",
     "$option_binding_name": "#touch_autojump",
     "$option_enabled_binding_name": "#touch_autojump_enabled",
     "$toggle_name": "touch_autojump"
   },
 
-  "destroy_vibration_toggle@option_toggle_mcjava.option_toggle": {
+  "destroy_vibration_toggle@option_toggle_ui.option_toggle": {
     "$option_toggle_text": "options.destroyvibration",
     "$option_binding_name": "#touch_vibration",
     "$option_enabled_binding_name": "#touch_vibration_enabled",
     "$toggle_name": "touch_vibration"
   },
 
-  "option_toggle_3@option_toggle_mcjava.option_toggle": {
+  "option_toggle_3@option_toggle_ui.option_toggle": {
     "ignored": true,
     "$option_toggle_text": "options.toggleCrouch",
     "$option_binding_name": "#touch_toggle_crouch",
@@ -106,35 +106,35 @@
     "$toggle_name": "touch_toggle_crouch"
   },
 
-  "split_controls_toggle@option_toggle_mcjava.option_toggle": {
+  "split_controls_toggle@option_toggle_ui.option_toggle": {
     "$option_toggle_text": "options.usetouchpad",
     "$option_binding_name": "#split_controls",
     "$option_enabled_binding_name": "#split_controls_enabled",
     "$toggle_name": "split_controls"
   },
 
-  "left_handed_toggle@option_toggle_mcjava.option_toggle": {
+  "left_handed_toggle@option_toggle_ui.option_toggle": {
     "$option_toggle_text": "options.lefthanded",
     "$option_binding_name": "#left_handed",
     "$option_enabled_binding_name": "#left_handed_enabled",
     "$toggle_name": "left_handed"
   },
 
-  "swap_jump_and_sneak_toggle@option_toggle_mcjava.option_toggle": {
+  "swap_jump_and_sneak_toggle@option_toggle_ui.option_toggle": {
     "$option_toggle_text": "options.swapJumpAndSneak",
     "$option_binding_name": "#swap_jump_and_sneak",
     "$option_enabled_binding_name": "#swap_jump_and_sneak_enabled",
     "$toggle_name": "swap_jump_and_sneak"
   },
 
-  "hotbar_only_touch_toggle@option_toggle_mcjava.option_toggle": {
+  "hotbar_only_touch_toggle@option_toggle_ui.option_toggle": {
     "$option_toggle_text": "options.hotbarOnlyTouch",
     "$option_binding_name": "#hotbar_only_touch",
     "$option_enabled_binding_name": "#hotbar_only_touch_enabled",
     "$toggle_name": "hotbar_only_touch"
   },
 
-  "button_size_slider@slider_mcjava.slider": {
+  "button_size_slider@slider_ui.slider": {
     "$slider_label": "#button_size_slider_label",
     "$slider_name": "button_size",
     "$slider_value_binding_name": "#button_size",
@@ -147,7 +147,7 @@
     ]
   },
 
-  "reset_button@button_mcjava.action_button": {
+  "reset_button@button_ui.action_button": {
     "size": [150, 20],
     "$pressed_button_name": "button.reset_touch_bindings",
     "$button_text": "options.resetSettings",

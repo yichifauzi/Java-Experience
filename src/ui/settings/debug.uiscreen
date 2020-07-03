@@ -1,8 +1,8 @@
 /* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "debug_mcjava",
+  "namespace": "debug_settings_ui",
 
-  "debug_content_panel": {
+  "debug_settings_content_panel": {
     "type": "panel"
   }
 }

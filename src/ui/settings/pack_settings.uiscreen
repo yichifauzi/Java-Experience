@@ -1,0 +1,166 @@
+/* Version: 2.0.0 */
+/* By @FMarquesPTO. All rights reserved. */
+{
+  "namespace": "pack_settings_ui",
+
+  "pack_settings_screen_content_panel": {
+    "type": "panel",
+    "controls": [
+      { "title@pack_settings_ui.title": {} },
+      { "tier_content_panel@pack_settings_ui.tier_content_panel": {} }
+    ]
+  },
+
+  "title@account_banned_ui.title": {
+    "text": "#pack_settings_title",
+    "size": ["default", "default"],
+    "offset": [0, 12],
+    "anchor_to": "top_middle",
+    "anchor_from": "top_middle",
+    "property_bag": { "#tts_dialog_title": "#pack_settings_title"  },
+    "bindings": [
+      {
+        "binding_type": "global",
+        "binding_condition": "none",
+        "binding_name": "#pack_settings_title",
+        "binding_name_override": "#pack_settings_title"
+      },
+      {
+        "binding_type": "global",
+        "binding_condition": "once",
+        "binding_name": "#tts_dialog_title"
+      }
+    ]
+  },
+
+  "tier_content_panel": {
+    "type": "stack_panel",
+    "size": [310, "100%c" ],
+    "offset": [0, "-36%"],
+    "anchor_to": "top_middle",
+    "anchor_from": "center",
+    "controls": [
+      {
+        "slider_panel": {
+          "type": "panel",
+          "size": [ "100%", 20 ],
+          "bindings": [
+            {
+              "binding_name": "#has_content_tiering",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "content_tier_slider@slider_ui.slider": {
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "$slider_select_on_hover": true,
+                "$slider_deselected_button": "button.menu_exit",
+                "size": [ "100%", 20],
+                "layer": 1,
+                "$slider_name": "content_tier_slider",
+                "$slider_binding_type": "global",
+                "$slider_value_binding_name": "#content_tier_value",
+                "$slider_steps_binding_type": "global",
+                "$slider_steps_binding_name": "#content_tier_steps",
+                "$slider_enabled_binding_type": "global",
+                "$slider_enabled_binding_name": "#has_content_tiering",
+                "$slider_type_panel": "pack_settings_ui.slider_text_panel",
+                "$slider_tts_header": "",
+                "$slider_tts_text_value": "#content_tier_slider_text_value"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "incompatible_label_panel": {
+          "type": "panel",
+          "size": [ "100%", "100%c + 2px" ],
+          "bindings": [
+            {
+              "binding_name": "#has_content_tiering",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "label": {
+                "type": "label",
+                "text": "#text",
+                "color": "$error_text_color",
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "layer": 1,
+                "size": [ "100%-8px", "default" ],
+                "offset": [ 4, -2 ],
+                "bindings": [
+                  {
+                    "binding_name": "(not #content_tier_supported)",
+                    "binding_name_override": "#visible"
+                  },
+                  {
+                    "binding_name": "#incompatible_reason",
+                    "binding_name_override": "#text"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      { "space@content.v8px": {} },
+      {
+        "exit@content.panel": {
+          "controls": [ { "btn@content.exit_button": {} } ]
+        }
+      }
+    ]
+  },
+
+  "slider_text_panel": {
+    "type": "panel",
+    "controls": [
+      {
+        "content_tier_label": {
+          "type": "label",
+          "text": "#text",
+          "color": "$text_color",
+          "shadow": true,
+          "layer": 1,
+          "localize": false,
+          "bindings": [
+            {
+              "binding_name": "#content_tier_label",
+              "binding_name_override": "#text"
+            },
+            {
+              "binding_name": "#content_tier_supported",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "unsupported_content_tier_label": {
+          "type": "label",
+          "text": "#text",
+          "color": "$error_text_color",
+          "layer": 1,
+          "localize": false,
+          "bindings": [
+            {
+              "binding_name": "#content_tier_label",
+              "binding_name_override": "#text"
+            },
+            {
+              "binding_name": "(not #content_tier_supported)",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

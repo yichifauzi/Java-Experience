@@ -1,20 +1,20 @@
+/* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "world_behavior_packs_mcjava",
+  "namespace": "world_behavior_packs_ui",
 
   "world_behavior_packs_screen_content_panel": {
     "type": "panel",
     "controls": [
-      { "title@screen_mcjava.title": { "text": "options.behaviorPacks.title" } },
-      { "content@world_behavior_packs_mcjava.world_behavior_packs_content_panel": {} },
-      { "bottom@world_behavior_packs_mcjava.bottom_content": {} }
+      { "title@content.title": { "offset": [0, 7], "text": "options.behaviorPacks.title" } },
+      { "subtitle@content.title": { "offset": [0, 19], "text": "behaviorPacks.dropInfo", "color": [0.333, 0.333, 0.333], "visible": "$is_pregame" } },
+      { "content@world_behavior_packs_ui.world_behavior_packs_content_panel": {} },
+      { "bottom@world_behavior_packs_ui.bottom_content": {} }
     ]
   },
 
-  "world_behavior_packs_content_panel": {
-    "type": "panel",
-    "size": ["100%","100%"],
-    "$available_packs_title": "behaviorPack.available.title",
-    "$selected_packs_title": "behaviorPack.selected.title",
+  "world_behavior_packs_content_panel@resource_packs_ui.resource_packs_centered_content_panel": {
+    "$available_packs_title": "resourcePack.available.title",
+    "$selected_packs_title": "resourcePack.selected.title",
     "$selected_pack_items": "#selected_pack_items_addon",
     "$available_pack_items": "#available_pack_items_addon",
     "$realms_pack_items": "#realms_pack_items_addon",
@@ -63,18 +63,25 @@
     "$no_available_packs_visibility_binding": "#no_available_packs_visibility_addon",
     "$no_realms_packs_visibility_binding": "#no_realms_packs_visibility_addon",
     "$no_unowned_packs_visibility_binding": "#no_unowned_packs_visibility_addon",
-    "$view_more_unowned_content_button_visibility_binding": "#suggested_content_visible_addon",
-    "controls": [
-      { "content@resource_packs_mcjava.resource_packs_centered_content_panel": {} }
-    ]
+    "$view_more_unowned_content_button_visibility_binding": "#suggested_content_visible_addon"
   },
 
-  "bottom_content@screen_mcjava.panel": {
+  "bottom_content@content.panel": {
     "anchor_from": "bottom_middle",
     "anchor_to": "bottom_middle",
     "offset": [0, -28],
     "controls": [
-      { "back@world_create_mcjava.back_button": { "$toggle_button_name": "world_behavior_packs" } }
+      { 
+        "back@world_create_ui.back_button": {
+          "$toggle_button_name": "world_behavior_packs",
+          "variables": [
+            {
+              "requires": "(not $is_pregame)",
+              "$toggle_button_name": "game_settings"
+            }
+          ]
+        }
+      }
     ]
   }
 }

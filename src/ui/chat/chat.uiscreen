@@ -1,16 +1,16 @@
 /* Version: 2.0.0 */
+/* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "chat_mcjava",
+  "namespace": "chat_ui",
 
   "chat_screen_content_panel": {
     "type": "panel",
     "controls": [
-      { "container_gamepad_helpers@container_mcjava.invisible_exit_background": {} },
-      { "messages@chat_mcjava.messages_scrolling_panel": {} },
-      { "commands@chat_mcjava.commands_panel": {} },
-      { "host_main_panel@host_commands_mcjava.host_panel": { "layer": 4 } },
-      { "bottom_content@chat_mcjava.bottom_content": {} },
-      { "popup_factory@chat_settings_mcjava.popup_factory": {} }
+      { "messages@chat_ui.messages_scrolling_panel": {} },
+      { "commands@chat_ui.commands_panel": {} },
+      { "host_main_panel@host_commands_ui.host_panel": { "layer": 4 } },
+      { "bottom_content@chat_ui.bottom_content": {} },
+      { "popup_factory@chat_settings_ui.popup_factory": {} }
     ]
   },
 
@@ -30,7 +30,7 @@
       {
         "focus_border": {
           "type": "image",
-          "texture": "src/core/assets/fmarquespto/textures/border",
+          "texture": "src/core/assets/fmarquespto/border",
           "color": "white",
           "size": ["100%", "100%"],
           "layer": 2
@@ -47,7 +47,7 @@
     "$scrolling_content_anchor_from": "bottom_left",
     "$scrolling_content_anchor_to": "bottom_left",
     "anchor_to": "bottom_left",
-    "$scrolling_content": "chat_mcjava.messages_stack_panel",
+    "$scrolling_content": "chat_ui.messages_stack_panel",
     "$scroll_size": [0, "100%"],
     "$jump_to_bottom_on_update": true,
     "$show_background": false,
@@ -68,7 +68,7 @@
           "factory": {
             "name": "messages_factory",
             "max_children_size": 100,
-            "control_ids": { "chat_screen_messages": "chat_screen_messages@chat_mcjava.message_tts_wrapper" }
+            "control_ids": { "chat_screen_messages": "chat_screen_messages@chat_ui.message_tts_wrapper" }
           }
         }
       }
@@ -76,7 +76,7 @@
   },
 
   "message_tts_wrapper@common.tts_label_focus_wrapper": {
-    "$tts_label_panel": "chat_mcjava.messages_text",
+    "$tts_label_panel": "chat_ui.messages_text",
     "size": ["100%", "100%c"],
     "$focus_border_visible_binding": "#host_options_menu_not_open_and_tts_enabled"
   },
@@ -90,7 +90,7 @@
         "chat_background": {
           "type": "image",
           "texture": "textures/ui/Black",
-          "alpha": 1,
+          "alpha": 0.5,
           "size": ["100%", "100%c - 1px"],
           "controls": [
             {
@@ -149,7 +149,7 @@
             {
               "auto_complete_grid": {
                 "type": "grid",
-                "grid_item_template": "chat_mcjava.auto_complete_panel_contents_with_item",
+                "grid_item_template": "chat_ui.auto_complete_panel_contents_with_item",
                 "grid_fill_direction": "vertical",
                 "collection_name": "auto_complete",
                 "anchor_from": "bottom_left",
@@ -245,7 +245,7 @@
     "controls": [
       { "chat_settings@chat_settings_button": {} },
       { "space_0@content.h2px": {} },
-      { "host_main@host_commands_mcjava.host_main_button": { "ignored": "$is_pregame" } },
+      { "host_main@host_commands_ui.host_main_button": { "ignored": "$is_pregame" } },
       {
         "space_1@content.h2px": {
           "ignored": "$is_pregame",
@@ -257,7 +257,7 @@
           ]
         }
       },
-      { "input@chat_mcjava.text_edit_box": {} },
+      { "input@chat_ui.text_edit_box": {} },
       {
         "space_2@content.h2px": {
           "bindings": [
@@ -268,16 +268,27 @@
           ]
         }
       },
-      { "keyboard_button@chat_mcjava.keyboard_button": {} },
+      { "keyboard_button@chat_ui.keyboard_button": {} },
+      {
+        "space_2@content.h2px": {
+          "bindings": [
+            {
+              "binding_name": "(#using_touch or #using_gamepad)",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      { "send_button@chat_ui.send_button": {} },
       { "space_3@content.h2px": {} }
     ]
   },
 
-  "chat_settings_button@button_mcjava.button": {
-    "$default_button_bg": "chat_mcjava.indentbox",
-    "$hover_button_bg": "chat_mcjava.indentboxhover",
-    "$pressed_button_bg": "chat_mcjava.indentboxhover",
-    "$locked_button_bg": "chat_mcjava.indentbox",
+  "chat_settings_button@button_ui.button": {
+    "$default_button_bg": "chat_ui.indentbox",
+    "$hover_button_bg": "chat_ui.indentboxhover",
+    "$pressed_button_bg": "chat_ui.indentboxhover",
+    "$locked_button_bg": "chat_ui.indentbox",
     "size": ["100%y", "100%"],
     "$text_shadow": false,
     "$button_text": "Q",
@@ -286,16 +297,15 @@
     "$button_tts_header": "chat.settings"
   },
 
-  "keyboard_button@button_mcjava.button": {
+  "keyboard_button@button_ui.button": {
     "size": ["100%y", "100%"],
-    "$button_text": "",
     "$focus_id": "keyboard_button_focus_id",
     "$focus_override_left": "text_edit_box_focus_id",
-    "$button_type_panel": "chat_mcjava.keyboard_image",
-    "$default_button_bg": "chat_mcjava.indentbox",
-    "$hover_button_bg": "chat_mcjava.indentboxhover",
-    "$pressed_button_bg": "chat_mcjava.indentboxhover",
-    "$locked_button_bg": "chat_mcjava.indentbox",
+    "$button_type_panel": "chat_ui.keyboard_image",
+    "$default_button_bg": "chat_ui.indentbox",
+    "$hover_button_bg": "chat_ui.indentboxhover",
+    "$pressed_button_bg": "chat_ui.indentboxhover",
+    "$locked_button_bg": "chat_ui.indentbox",
     "$pressed_button_name": "button.keyboard_toggle",
     "bindings": [
       {
@@ -313,20 +323,40 @@
     ]
   },
 
+  "send_button@button_ui.button": {
+    "$pressed_button_name": "button.send",
+    "$anchor": "bottom_right",
+    "size": ["100%y", "100%"],
+    "$tts_enabled|default": true,
+    "focus_enabled": "$tts_enabled",
+    "$default_button_bg": "chat_ui.indentbox",
+    "$hover_button_bg": "chat_ui.indentboxhover",
+    "$pressed_button_bg": "chat_ui.indentboxhover",
+    "$locked_button_bg": "chat_ui.indentbox",
+    "$button_type_panel": "chat.send_panel",
+    "$button_tts_header": "accessibility.chat.tts.sendChatMessage",
+    "bindings": [
+      {
+        "binding_name": "#send_button_visible",
+        "binding_name_override": "#enabled"
+      }
+    ]
+  },
+
   "keyboard_image": {
     "type": "image",
     "size": [12, 12],
-    "texture": "src/core/assets/fmarquespto/textures/icon/keyboard"
+    "texture": "src/core/assets/fmarquespto/icon/keyboard"
   },
 
-  "text_edit_box@text_box_mcjava.text_box": {
+  "text_edit_box@text_box_ui.text_box": {
     "size": ["fill", "100%"],
     "max_length": 512,
     "$text_indent_size": ["100% - 4px", "100%"],
     "$text_indent_offset": [2, 0],
-    "$default_box_bg": "chat_mcjava.indentbox",
-    "$hover_box_bg": "chat_mcjava.indentboxhover",
-    "$locked_box_bg": "chat_mcjava.indentbox",
+    "$default_box_bg": "chat_ui.indentbox",
+    "$hover_box_bg": "chat_ui.indentboxhover",
+    "$locked_box_bg": "chat_ui.indentbox",
     "always_listening": true,
     "$text_box_name": "#message_text_box",
     "$text_edit_box_content_binding_name": "#message_text_box_content",

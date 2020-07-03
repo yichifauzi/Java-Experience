@@ -3,8 +3,8 @@
   "namespace": "labtable",
 
   "lab_table@content.inventory_screen": {
-    "force_close_on_player_hurt": "$force_close_on_player_hurt",
+    "close_on_player_hurt": "$force_close_on_player_hurt",
     "$screen_background": "common.screen_background",
-    "$screen_content": "lab_table_mcjava.lab_table_screen_content_panel"
+    "$screen_content": "lab_table_ui.lab_table_screen_content_panel"
   }
 }

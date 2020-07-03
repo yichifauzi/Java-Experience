@@ -1,42 +1,58 @@
+/* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "furnace_recipe_book_mcjava",
+  "namespace": "furnace_recipe_book_ui",
 
   "furnace_recipe_book_content_panel@common.root_panel": {
+    "type": "input_panel",
     "size": [147, 166],
     "$furnace": "furnace",
     "$top_helper_offset": [0, -18],
     "$bottom_helper_offset": [0, -34],
     "controls": [
       { "bg@resources.recipe_book_bg": {} },
-      { "gamepad_helper_bumpers@crafting_rb_mcjava.gamepad_helper_bumpers": {} },
-      { "search_tab@furnace_recipe_book_mcjava.search_tab": { "offset": [-32, 3] } },
-      { "food_tab@furnace_recipe_book_mcjava.food_tab": { "offset": [-32, 30] } },
-      { "stone_tab@furnace_recipe_book_mcjava.stone_tab": { "offset": [-32, 57] } },
-      { "misc_tab@furnace_recipe_book_mcjava.misc_tab": { "offset": [-32, 84] } },
-      { "food_content_panel@furnace_recipe_book_mcjava.furnace_recipes_panel": {} }
+      { "gamepad_helper_bumpers@crafting_rb_ui.gamepad_helper_bumpers": {} },
+      { "search_tab@furnace_recipe_book_ui.search_tab": { "offset": [-32, 3] } },
+      { "food_tab@furnace_recipe_book_ui.food_tab": { "offset": [-32, 30] } },
+      { "stone_tab@furnace_recipe_book_ui.stone_tab": { "offset": [-32, 57] } },
+      { "misc_tab@furnace_recipe_book_ui.misc_tab": { "offset": [-32, 84] } },
+      { "food_content_panel@furnace_recipe_book_ui.furnace_recipes_panel": {} }
+    ],
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_tab_left",
+        "to_button_id": "button.menu_tab_left",
+        "mapping_type": "global",
+        "scope": "view"
+      },
+      {
+        "from_button_id": "button.menu_tab_right",
+        "to_button_id": "button.menu_tab_right",
+        "mapping_type": "global",
+        "scope": "view"
+      }
     ]
   },
 
-  "search_tab@furnace_recipes_mcjava.left_tab": {
+  "search_tab@furnace_recipes_ui.left_tab": {
     "$item_id_aux": 22609920,
     "$tab_control_name": "search_tab_view",
     "$toggle_index": 0,
     "$toggle_default_state": true
   },
 
-  "food_tab@furnace_recipes_mcjava.left_tab": {
+  "food_tab@furnace_recipes_ui.left_tab": {
     "$item_id_aux": 20905984,
     "$tab_control_name": "food_tab_view",
     "$toggle_index": 1
   },
 
-  "stone_tab@furnace_recipes_mcjava.left_tab": {
+  "stone_tab@furnace_recipes_ui.left_tab": {
     "$item_id_aux": 65536,
     "$tab_control_name": "stone_tab_view",
     "$toggle_index": 2
   },
 
-  "misc_tab@furnace_recipes_mcjava.left_tab": {
+  "misc_tab@furnace_recipes_ui.left_tab": {
     "$item_left_id_aux": 21299210,
     "$item_right_id_aux": 25427968,
     "$tab_control_name": "misc_tab_view",
@@ -47,11 +63,11 @@
     "type": "panel",
     "$furnace": "furnace",
     "controls": [
-      { "default_slot_button@furnace_recipes_mcjava.default_slot_button": {} },
-      { "search_recipes@furnace_rb_search_mcjava.search_tab": {} },
-      { "food_recipes@furnace_rb_food_mcjava.food_tab": {} },
-      { "stone_recipes@furnace_rb_stone_mcjava.stone_tab": {} },
-      { "misc_recipes@furnace_rb_misc_mcjava.misc_tab": {} }
+      { "default_slot_button@furnace_recipes_ui.default_slot_button": {} },
+      { "search_recipes@furnace_rb_search_ui.search_tab": {} },
+      { "food_recipes@furnace_rb_food_ui.food_tab": {} },
+      { "stone_recipes@furnace_rb_stone_ui.stone_tab": {} },
+      { "misc_recipes@furnace_rb_misc_ui.misc_tab": {} }
     ]
   },
 
@@ -70,10 +86,10 @@
           "anchor_to": "top_left",
           "size": [18, 18],
           "controls": [
-            { "search_input_recipes@furnace_rb_search_mcjava.search_input_recipes": {} },
-            { "food_input_recipes@furnace_rb_food_mcjava.food_input_recipes": {} },
-            { "stone_input_recipes@furnace_rb_stone_mcjava.stone_input_recipes": {} },
-            { "misc_input_recipes@furnace_rb_misc_mcjava.misc_input_recipes": {} }
+            { "search_input_recipes@furnace_rb_search_ui.search_input_recipes": {} },
+            { "food_input_recipes@furnace_rb_food_ui.food_input_recipes": {} },
+            { "stone_input_recipes@furnace_rb_stone_ui.stone_input_recipes": {} },
+            { "misc_input_recipes@furnace_rb_misc_ui.misc_input_recipes": {} }
           ]
         }
       },
@@ -84,7 +100,7 @@
           "anchor_to": "bottom_left",
           "size": [18, 18],
           "controls": [
-            { "fuel@furnace_recipes_mcjava.show_fuel": { "$furnace": "furnace" } }
+            { "fuel@furnace_recipes_ui.show_fuel": { "$furnace": "furnace" } }
           ]
         }
       },
@@ -95,12 +111,12 @@
           "anchor_to": "right_middle",
           "offset": [-4, 0],
           "size": [18, 18],
-          "$red_cell_size": [24, 24],
+          "$slot_size": [24, 24],
           "controls": [
-            { "search_output_recipes@furnace_rb_search_mcjava.search_output_recipes": {} },
-            { "food_output_recipes@furnace_rb_food_mcjava.food_output_recipes": {} },
-            { "stone_output_recipes@furnace_rb_stone_mcjava.stone_output_recipes": {} },
-            { "misc_output_recipes@furnace_rb_misc_mcjava.misc_output_recipes": {} }
+            { "search_output_recipes@furnace_rb_search_ui.search_output_recipes": {} },
+            { "food_output_recipes@furnace_rb_food_ui.food_output_recipes": {} },
+            { "stone_output_recipes@furnace_rb_stone_ui.stone_output_recipes": {} },
+            { "misc_output_recipes@furnace_rb_misc_ui.misc_output_recipes": {} }
           ]
         }
       }

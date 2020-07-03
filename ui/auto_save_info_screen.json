@@ -1,7 +1,7 @@
 /* Version: 2.0.0 */
 {
   "auto_save_info_screen@content.base_screen": {
-    "$screen_content": "auto_save_info_mcjava.auto_save_info_screen_content_panel",
+    "$screen_content": "auto_save_info_ui.auto_save_info_screen_content_panel",
     "$screen_background": "content.dirt_background"
   }
 }

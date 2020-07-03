@@ -1,12 +1,12 @@
 /* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "permissions_mcjava",
+  "namespace": "permissions_ui",
 
   "permissions_screen_content_panel": {
     "type": "panel",
     "controls": [
-      { "content@permissions_mcjava.main_content_panel": {} },
-      { "bottom_content@permissions_mcjava.bottom_content": {} }
+      { "content@permissions_ui.main_content_panel": {} },
+      { "bottom_content@permissions_ui.bottom_content": {} }
     ]
   },
 
@@ -15,7 +15,7 @@
     "size": ["70%", "100%" ],
     "controls": [
       {
-        "selector_area@permissions_mcjava.selector_area": {
+        "selector_area@permissions_ui.selector_area": {
           "size": [202, 202],
           "anchor_from": "top_left",
           "anchor_to": "top_left",
@@ -23,7 +23,7 @@
         }
       },
       {
-        "content_area@permissions_mcjava.content_area": {
+        "content_area@permissions_ui.content_area": {
           "size": [154, 182],
           "anchor_from": "top_right",
           "anchor_to": "top_right",
@@ -31,7 +31,7 @@
         }
       },
       {
-        "exit@screen_mcjava.exit_button": {
+        "exit@screen_ui.exit_button": {
           "size": [200, 20],
           "anchor_from": "top_right",
           "anchor_to": "top_right",
@@ -43,7 +43,7 @@
 
   "black_bg": {
     "type": "image",
-    "texture": "src/core/assets/fmarquespto/textures/white",
+    "texture": "src/core/assets/fmarquespto/white",
     "color": "black",
     "size": ["100%", "100%"],
     "alpha": 0.35,
@@ -55,14 +55,14 @@
     "$modal_binding_name": "#selector_area_focused",
     "layer": 2,
     "controls": [
-      { "top_shadow@screen_mcjava.shadow_top": {} },
-      { "bg@permissions_mcjava.black_bg": {} },
+      { "top_shadow@screen_ui.shadow_top": {} },
+      { "bg@permissions_ui.black_bg": {} },
       {
-        "player_scrolling_panel@scrolling_mcjava.scrolling_panel": {
+        "player_scrolling_panel@scrolling_ui.scrolling_panel": {
           "$scrolling_content": "permissions.players_grid_panel"
         }
       },
-      { "bottom_shadow@screen_mcjava.shadow_bottom": {} }
+      { "bottom_shadow@screen_ui.shadow_bottom": {} }
     ]
   },
 
@@ -70,15 +70,15 @@
     "$menu_cancel_button_id": "button.back_to_selector_area",
     "$modal_binding_name": "#content_area_focused",
     "controls": [
-      { "top_shadow@screen_mcjava.shadow_top": {} },
-      { "bg@permissions_mcjava.black_bg": {} },
+      { "top_shadow@screen_ui.shadow_top": {} },
+      { "bg@permissions_ui.black_bg": {} },
       {
-        "permissions_options_scrolling_panel@scrolling_mcjava.scrolling_panel": {
+        "permissions_options_scrolling_panel@scrolling_ui.scrolling_panel": {
           "$scroll_bar_offset": ["50% - 5px", 0 ],
-          "$scrolling_content": "permissions_mcjava.permissions_options_panel"
+          "$scrolling_content": "permissions_ui.permissions_options_panel"
         }
       },
-      { "bottom_shadow@screen_mcjava.shadow_bottom": {} }
+      { "bottom_shadow@screen_ui.shadow_bottom": {} }
     ]
   },
 
@@ -92,7 +92,7 @@
           "size": [ "100% - 10px", "100%c" ],
           "offset": [-3, 0],
           "controls": [
-            { "permissions_options_stack_panel@permissions_mcjava.permissions_options_stack_panel": {} }
+            { "permissions_options_stack_panel@permissions_ui.permissions_options_stack_panel": {} }
           ]
         }
       }
@@ -110,14 +110,14 @@
           "size": [ "100%", 4 ]
         }
       },
-      { "permission_level_dropdown@permissions_mcjava.permission_level_panel": {} },
+      { "permission_level_dropdown@permissions_ui.permission_level_panel": {} },
       {
         "permissions_padding_1": {
           "type": "panel",
           "size": [ "100%", 2 ]
         }
       },
-      { "permissions_options_grid@permissions_mcjava.permissions_options_grid": {} },
+      { "permissions_options_grid@permissions_ui.permissions_options_grid": {} },
       {
         "permissions_padding_3": {
           "type": "panel",
@@ -127,13 +127,13 @@
     ]
   },
 
-  "permission_level_panel@switch_option_mcjava.switch_option_panel": {
+  "permission_level_panel@switch_option_ui.switch_option_panel": {
     "size": [152, 20],
     "$toggle_enabled_binding_name": "#can_edit_permissions",
     "$switch_option_label": "Permissions",
     "controls": [
       {
-        "peaceful@switch_option_mcjava.switch_option": {
+        "peaceful@switch_option_ui.switch_option": {
           "size": ["100%- 2px", 20],
           "$option_action_text": "permissions.level.visitor",
           "$this_action": "#permission_level_radio_visitor",
@@ -141,7 +141,7 @@
         }
       },
       {
-        "easy@switch_option_mcjava.switch_option": {
+        "easy@switch_option_ui.switch_option": {
           "size": ["100%- 2px", 20],
           "$option_action_text": "permissions.level.member",
           "$this_action": "#permission_level_radio_member",
@@ -149,7 +149,7 @@
         }
       },
       {
-        "normal@switch_option_mcjava.switch_option": {
+        "normal@switch_option_ui.switch_option": {
           "size": ["100%- 2px", 20],
           "$option_action_text": "permissions.level.operator",
           "$this_action": "#permission_level_radio_operator",
@@ -157,7 +157,7 @@
         }
       },
       {
-        "hard@switch_option_mcjava.switch_option": {
+        "hard@switch_option_ui.switch_option": {
           "size": ["100%- 2px", 20],
           "$option_action_text": "permissions.level.custom",
           "$this_action": "#permission_level_radio_custom",
@@ -171,7 +171,7 @@
     "type": "grid",
     "size": [ "100%", "default" ],
     "collection_name": "permissions_collection",
-    "grid_item_template": "permissions_mcjava.permissions_options_grid_item",
+    "grid_item_template": "permissions_ui.permissions_options_grid_item",
     "grid_dimension_binding": "#permissions_grid_dimension",
     "bindings": [ { "binding_name": "#permissions_grid_dimension" } ]
   },
@@ -182,7 +182,7 @@
     "size": [ "100%", 22 ],
     "controls": [
       {
-        "option_toggle@option_toggle_mcjava.option_toggle": {
+        "option_toggle@option_toggle_ui.option_toggle": {
           "size": ["100%", 20],
           "$option_toggle_text": "#option_name",
           "$option_toggle_state_text": "#option_state_name",

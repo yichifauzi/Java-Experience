@@ -96,14 +96,14 @@
 
   "crafting_screen_pocket": {
     "send_telemetry": false,
-    "force_close_on_player_hurt": "$force_close_on_player_hurt",
-    "$screen_content": "crafting_table_mcjava.crafting_table_screen_content_panel",
+    "close_on_player_hurt": "$force_close_on_player_hurt",
+    "$screen_content": "crafting_table_ui.crafting_table_screen_content_panel",
     "$screen_background": "content.container_screen_background"
   },
 
   "inventory_screen": {
     "send_telemetry": false,
-    "force_close_on_player_hurt": "$force_close_on_player_hurt",
+    "close_on_player_hurt": "$force_close_on_player_hurt",
     "$screen_content": "crafting.inv_panel",
     "$screen_background": "content.container_screen_background"
   }

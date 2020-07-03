@@ -1,25 +1,25 @@
 /* Version: 2.0.0 */
 /* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "cartography_table_mcjava",
+  "namespace": "cartography_table_ui",
 
-  "cartography_table_screen_content_panel@container_mcjava.container_panel": {
+  "cartography_table_screen_content_panel@container_ui.container_panel": {
     "$container_bg": "resources1.cartography_table_bg",
-    "$specified_content": "cartography_table_mcjava.cartography_table_content_panel",
+    "$specified_content": "cartography_table_ui.cartography_table_content_panel",
     "$show_invlabel": false
   },
 
   "cartography_table_content_panel": {
     "type": "panel",
-    "$container_title": "container.cartography",
+    "$container_title": "tile.cartography_table.name",
     "controls": [
-      { "title@container_mcjava.title": { "offset": [8, 3] } },
-      { "map_name@cartography_table_mcjava.map_name_box": {} },
-      { "input@cartography_table_mcjava.input_item_slot": {} },
-      { "additional@cartography_table_mcjava.additional_item_slot": {} },
-      { "result@cartography_table_mcjava.result_item_slot": {} },
-      { "maps@cartography_table_mcjava.maps_panel": {} },
-      { "map_name_button@cartography_table_mcjava.map_name_button": {} }
+      { "title@container_ui.title": { "offset": [8, 3] } },
+      { "map_name@cartography_table_ui.map_name_box": {} },
+      { "input@cartography_table_ui.input_item_slot": {} },
+      { "additional@cartography_table_ui.additional_item_slot": {} },
+      { "result@cartography_table_ui.result_item_slot": {} },
+      { "maps@cartography_table_ui.maps_panel": {} },
+      { "map_name_button@cartography_table_ui.map_name_button": {} }
     ]
   },
 
@@ -49,12 +49,12 @@
     ]
   },
 
-  "cartography_item_slot@container_mcjava.container_slot": {
+  "cartography_item_slot@container_ui.container_slot": {
     "anchor_from": "top_left",
     "anchor_to": "top_left"
   },
 
-  "input_item_slot@cartography_table_mcjava.cartography_item_slot": {
+  "input_item_slot@cartography_table_ui.cartography_item_slot": {
     "offset": [14, 14],
     "$item_collection_name": "cartography_input_items",
     "$focus_id_binding_type": "none",
@@ -67,7 +67,7 @@
     "$focus_override_right": "cartography_result"
   },
 
-  "additional_item_slot@cartography_table_mcjava.cartography_item_slot": {
+  "additional_item_slot@cartography_table_ui.cartography_item_slot": {
     "offset": [14, 51],
     "$item_collection_name": "cartography_additional_items",
     "$focus_id_binding_type": "none",
@@ -80,17 +80,17 @@
     "$focus_override_right": "cartography_result"
   },
 
-  "result_item_slot@cartography_table_mcjava.cartography_item_slot": {
+  "result_item_slot@cartography_table_ui.cartography_item_slot": {
     "offset": [144, 38],
     "$item_collection_name": "cartography_result_items",
-    "$button_ref": "cartography_table_mcjava.cartography_table_output_slot_button",
+    "$button_ref": "cartography_table_ui.cartography_table_output_slot_button",
     "$focus_id_binding_type": "none",
     "$focus_id": "cartography_result",
     "$focus_override_left_binding_type": "none",
     "$focus_override_left": "cartography_additional"
   },
 
-  "cartography_table_output_slot_button@container_mcjava.no_coalesce_container_slot_button": {
+  "cartography_table_output_slot_button@container_ui.no_coalesce_container_slot_button": {
     "button_mappings": [
       {
         "from_button_id": "button.menu_select",
@@ -139,7 +139,7 @@
     ]
   },
 
-  "map_name_box@text_box_mcjava.text_box": {
+  "map_name_box@text_box_ui.text_box": {
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "offset": [65, 39],
@@ -158,7 +158,7 @@
     ]
   },
 
-  "map_name_button@toggle_button_mcjava.toggle_button": {
+  "map_name_button@toggle_button_ui.toggle_button": {
     "$toggle_button_name": "cartography",
     "$toggle_group": false,
     "size": [17, 17],
@@ -168,7 +168,7 @@
     "$toggle_index": 100,
     "$toggle_control_name": "map_name_box_view",
     "$focus_id": "show_textbox_button",
-    "$toggle_type_panel": "cartography_table_mcjava.map_name_button_content",
+    "$toggle_type_panel": "cartography_table_ui.map_name_button_content",
     "$toggle_bg": "",
     "bindings": [
       {
@@ -183,9 +183,9 @@
     "size": [17, 17],
     "controls": [
       {
-        "img": {
+        "border": {
           "type": "image",
-          "texture": "src/core/assets/fmarquespto/textures/border",
+          "texture": "src/core/assets/fmarquespto/border",
           "size": ["100%", "100%"],
           "nineslice_size": 1,
           "visible": "($state = checked_hover or $state = unchecked_hover)"

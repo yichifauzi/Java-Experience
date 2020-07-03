@@ -1,6 +1,6 @@
 /* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "tab_mcjava",
+  "namespace": "tab_ui",
 
   "tab": {
     "type": "panel",
@@ -14,19 +14,35 @@
     "$unchecked_hover_tab_bg|default": "",
     "$checked_locked_tab_bg|default": "",
     "$unchecked_locked_tab_bg|default": "",
+    "$toggle_index|default": -1,
+    "$binding_type": "global",
+    "$binding_condition": "once",
     "controls": [
       {
-        "$tab_control_name@option_toggle_mcjava.toggle_base": {
+        "$tab_control_name@common.toggle": {
           "size": "$tab_control_size",
           "$tab_control_size|default": ["100%", "100%"],
           "toggle_name": "$tab_name",
+          "toggle_group_forced_index": "$toggle_index",
           "radio_toggle_group": true,
           "$tab_type_panel|default": "",
-          "$tab_state_panel|default": "tab_mcjava.tab_state_panel",
+          "$tab_state_panel|default": "tab_ui.tab_state_panel",
           "$toggle_tts_name": "accessibility.tab.tts.title",
           "$toggle_tts_enabled_binding_type": "global",
           "$toggle_reset_on_focus_lost|default": true,
           "reset_on_focus_lost": "$toggle_reset_on_focus_lost",
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.menu_select",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "button.menu_ok",
+              "mapping_type": "focused"
+            }
+          ],
           "controls": [
             {
               "unchecked@$tab_state_panel": {
@@ -36,9 +52,23 @@
               }
             },
             {
+              "checked@$tab_state_panel": {
+                "$tab_bg": "$checked_tab_bg",
+                "$state": "checked",
+                "layer": 1
+              }
+            },
+            {
               "unchecked_hover@$tab_state_panel": {
                 "$tab_bg": "$unchecked_hover_tab_bg",
                 "$state": "unchecked_hover",
+                "layer": 1
+              }
+            },
+            {
+              "checked_hover@$tab_state_panel": {
+                "$tab_bg": "$checked_hover_tab_bg",
+                "$state": "checked_hover",
                 "layer": 1
               }
             },
@@ -53,20 +83,6 @@
               "unchecked_locked_hover@$tab_state_panel": {
                 "$tab_bg": "$unchecked_locked_tab_bg",
                 "$state": "unchecked_locked_hover",
-                "layer": 1
-              }
-            },
-            {
-              "checked@$tab_state_panel": {
-                "$tab_bg": "$checked_tab_bg",
-                "$state": "checked",
-                "layer": 1
-              }
-            },
-            {
-              "checked_hover@$tab_state_panel": {
-                "$tab_bg": "$checked_hover_tab_bg",
-                "$state": "checked_hover",
                 "layer": 1
               }
             },
@@ -94,7 +110,7 @@
     "type": "panel",
     "$tooltip_name|default": "null",
     "controls": [
-      { "@tooltip_mcjava.tooltip": { "visible": "($state = unchecked_hover or $state = checked_hover or $state = unchecked_locked_hover or $state = checked_locked_hover)", "ignored": "($tooltip_name = 'null')" } },
+      { "@tooltip_ui.tooltip": { "visible": "($state = unchecked_hover or $state = checked_hover)", "ignored": "($tooltip_name = 'null')" } },
       { "@$tab_bg": {} },
       { "@$tab_type_panel": {} }
     ]

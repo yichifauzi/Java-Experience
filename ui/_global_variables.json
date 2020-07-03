@@ -1,6 +1,6 @@
 {
   /* Debug */
-  "$render_gamepadhelpers": true,
+  "$render_gamepadhelpers": false,
   "$render_touch_close_btn": false,
   "$force_close_on_player_hurt": false,
 
@@ -16,12 +16,13 @@
   "$disabled_vignette": false,
   "$show_loading_screens_tips": true,
 
-  "$lock_storage_management": true,
+  "$lock_storage_management": false,
   "$better_mouse_keys_grid": false,
   "$better_controller_keys_grid": true,
   "$better_slider_text": true,
-  "$recipe_book": "faster", //Fabulous - number of pages depends of how many are/ Best - All Pages / Better - Less Pages (Default) / Faster - Scrolling Panel
-  "$play_screen": "fast", //Better - Buttons (Default) / Faster - Switch
+  "$recipe_book": "better", //fabulous - number of pages depends of how many are/ best - All Pages / better - Less Pages (Default) / faster - Scrolling Panel
+  "$play_screen": "fast", //better - Buttons (Default) / faster - Switch
+  "$container_exit_way": "invisible", //invisible - an invisible bg when clicked exit the container (Default) / visible_button - a visible button to exit the container
 
   /* Button Text Color */
   "$button_default_text_color": [1.0, 1.0, 1.0],
@@ -63,7 +64,6 @@
   "$jukebox_text_color_5": [0, 0.666, 0.666], //Dark Aqua
   "$jukebox_text_color_6": [0, 0.666, 0], //Dark Green
   "$jukebox_text_color_7": [1.0, 0.666, 0], //Gold
-  "$jukebox_text_rainbow_color_time": 0.5,
 
   /* Scoreboard Text Color */
   "$scoreboard_header_text_color": [1.0, 1.0, 1.0],
@@ -73,6 +73,7 @@
   "$scoreboard_list_bg_color": [0.0, 0.0, 0.0],
   "$scoreboard_header_bg_alpha": 0.4,
   "$scoreboard_list_bg_alpha": 0.3,
+  "$scoreboard_ignore_numbers": false,
 
   /* Book Text Color */
   "$book_title_text_color": [0.0, 0.0, 0.0],

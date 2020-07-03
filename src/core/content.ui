@@ -45,17 +45,18 @@
     "size": ["100%", 20]
   },
 
-  "exit_button@button_mcjava.button": {
+  "exit_button@button_ui.button": {
     "$pressed_button_name": "button.menu_exit",
     "$button_text": "gui.done"
   },
 
-  "locked_button@button_mcjava.button_state_panel": {
+  "locked_button@button_ui.button_state_panel": {
     "$button_bg": "resources.button_locked",
     "size": [200, 20],
     "$text_color": [0.62745, 0.62745, 0.62745],
+    "$text_locked_color": [0.62745, 0.62745, 0.62745],
     /* Text bindings */
-    "$button_type_panel": "button_mcjava.button_label",
+    "$button_type_panel": "button_ui.button_label",
     "$button_text_binding_type|default": "none",
     "$button_binding_condition|default": "none",
     "$button_text_grid_collection_name|default": ""
@@ -79,7 +80,7 @@
     "tiled": true
   },
 
-  "dark_dirt_background@content.dirt_bg": {
+  "dark_dirt_background@content.dirt_background": {
     "layer": 1,
     "color": [0.125, 0.13, 0.13],
     "anchor_from": "top_left",
@@ -88,32 +89,32 @@
 
   "base_background": {
     "type": "image",
-    "texture": "src/core/assets/fmarquespto/textures/white",
+    "texture": "src/core/assets/fmarquespto/white",
     "color": "black",
     "ignored": "$is_holographic"
   },
 
   "screen_background@content.base_background": {
-    "$bg_alpha|default": 0.62,
+    "$bg_alpha|default": 0.70,
     "alpha": "$bg_alpha"
   },
 
   "container_screen_background@content.base_background": {
-    "$bg_alpha|default": 0.62,
+    "$bg_alpha|default": 0.70,
     "alpha": "$bg_alpha"
   },
 
   "shadow_top": {
     "type": "image",
-    "texture": "src/core/assets/fmarquespto/textures/shadow_top",
+    "texture": "src/core/assets/fmarquespto/shadow_top",
     "size": ["100%", 4],
     "anchor_from": "top_left",
     "anchor_to": "top_left",
-    "layer": 30
+    "layer": 35
   },
 
   "shadow_bottom@content.shadow_top": {
-    "texture": "src/core/assets/fmarquespto/textures/shadow_bottom",
+    "texture": "src/core/assets/fmarquespto/shadow_bottom",
     "anchor_from": "bottom_left",
     "anchor_to": "bottom_left"
   },
@@ -183,7 +184,7 @@
                 "size": "$middle_content_size",
                 "layer": 1,
                 "controls": [
-                  { "scrolling@scrolling_mcjava.scrolling_panel": { "$scrolling_content": "$middle_content" } }
+                  { "scrolling@scrolling_ui.scrolling_panel": { "$scrolling_content": "$middle_content" } }
                 ]
               }
             },
@@ -231,7 +232,7 @@
     "visible": "$no_clip_path",
     "controls": [
       {
-        "dirt_background@screen_mcjava.dirt_background": {
+        "dirt_background@content.dirt_background": {
           "size": ["100%", "100%"],
           "layer": -1,
           "anchor_from": "$bg_anchor",
@@ -292,6 +293,7 @@
     "size": ["100% + 2px", 20],
     "anchor_from": "top_left",
     "anchor_to": "top_left",
+    "$texture_location|default": "",
     "controls": [
       {
         "left_panel": {
@@ -302,7 +304,8 @@
           "clips_children": true,
           "controls": [
             {
-              "left@resource_image": {
+              "left@content.resource_image": {
+                "texture": "$texture_location",
                 "offset": [1, 0],
                 "size": "$side_size",
                 "anchor_from": "left_middle",
@@ -321,7 +324,8 @@
           "anchor_to": "right_middle",
           "controls": [
             {
-              "right@resource_image": {
+              "right@content.resource_image": {
+                "texture": "$texture_location",
                 "offset": [-1, 0],
                 "size": "$side_size",
                 "anchor_from": "right_middle",
@@ -348,7 +352,7 @@
     "$screen_matrix|default": "content.safezone_all_corners_screen_panel",
     "$screen_content|default": "common.base_screen_empty_panel",
     "$screen_background|default": "common.base_screen_empty_panel",
-    "$popup_factory|default": "common.popup_dialog_factory",
+    "$popup_factory|default": "content.popup_dialog_factory",
     "controls": [
       {
         "variables_button_mappings_and_controls": {
@@ -383,7 +387,7 @@
             }
           ],
           "controls": [
-            { "bg_no_safezone_screen_panel@$screen_background": { "layer": 1 } },
+            { "bg_no_safezone_screen_panel@$screen_background": { "layer": 0 } },
             { "safezone_screen_matrix@$screen_matrix": {} },
             { "popup_dialog_factory@$popup_factory": { "layer": 5 } }
           ]
@@ -511,15 +515,175 @@
   "popup_dialog_factory": {
     "type": "factory",
     "control_ids": {
-      "modal_dialog_popup": "@popup_mcjava.modal_popup",
+      "modal_dialog_popup": "@popup_ui.modal_popup",
       "storage_dependency_popup": "@storage_management_popup.storage_dependency_modal",
       "storage_sharing_popup": "@storage_management_popup.sharing_popup_content"
     }
   },
 
+  /* Loading Animations */
+
+  //oooooo Oooooo oOoooo ooOooo oooOoo ooooOo oooooO
+
+  "meter_loading": {
+    "type": "panel",
+    "size": [42, 10],
+    "clips_children": true,
+    "controls": [
+      { "0@content.meter_label": { "text": "Oooooo", "offset": "@content.anim_meter0_offset0" } },
+      { "1@content.meter_label": { "text": "oOoooo", "offset": "@content.anim_meter1_offset0" } },
+      { "2@content.meter_label": { "text": "ooOooo", "offset": "@content.anim_meter2_offset0" } },
+      { "3@content.meter_label": { "text": "oooOoo", "offset": "@content.anim_meter3_offset0" } },
+      { "4@content.meter_label": { "text": "ooooOo", "offset": "@content.anim_meter4_offset0" } },
+      { "5@content.meter_label": { "text": "oooooO", "offset": "@content.anim_meter5_offset0" } },
+      { "6@content.meter_label": { "text": "oooooo", "offset": "@content.anim_meter6_offset0" } }
+    ]
+  },
+
+  "meter_label": {
+    "type": "label",
+    "color": [0.62, 0.62, 0.62],
+    "shadow": true,
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "offset": [160, 0]
+  },
+
+  "anim_meter0_offset0": {
+    "anim_type": "offset",
+    "from": [0, 0],
+    "to": [0, 0],
+    "duration": 0.5,
+    "next": "@content.anim_meter0_offset1"
+  },
+
+  "anim_meter0_offset1": {
+    "anim_type": "offset",
+    "from": [0, 0],
+    "to": [160, 0],
+    "duration": 0.000,
+    "next": "@content.anim_meter0_offset2"
+  },
+
+  "anim_meter0_offset2": {
+    "anim_type": "offset",
+    "from": [160, 0],
+    "to": [160, 0],
+    "duration": 3.0,
+    "next": "@content.anim_meter0_offset3"
+  },
+
+  "anim_meter0_offset3": {
+    "anim_type": "offset",
+    "from": [160, 0],
+    "to": [0, 0],
+    "duration": 0.000,
+    "next": "@content.anim_meter0_offset0"
+  },
+
+  "anim_meter1_offset0": {
+    "anim_type": "offset",
+    "from": [160, 0],
+    "to": [160, 0],
+    "duration": 0.5,
+    "next": "@content.anim_meter1_offset1"
+  },
+
+  "anim_meter1_offset1": {
+    "anim_type": "offset",
+    "from": [160, 0],
+    "to": [0, 0],
+    "duration": 0.000,
+    "next": "@content.anim_meter1_offset2"
+  },
+
+  "anim_meter1_offset2": {
+    "anim_type": "offset",
+    "from": [0, 0],
+    "to": [0, 0],
+    "duration": 0.5,
+    "next": "@content.anim_meter1_offset3"
+  },
+
+  "anim_meter1_offset3": {
+    "anim_type": "offset",
+    "from": [0, 0],
+    "to": [160, 0],
+    "duration": 0.000,
+    "next": "@content.anim_meter1_offset4"
+  },
+
+  "anim_meter1_offset4": {
+    "anim_type": "offset",
+    "from": [160, 0],
+    "to": [160, 0],
+    "duration": 2.5,
+    "next": "@content.anim_meter1_offset0"
+  },
+
+  "anim_meter2_offset0@anim_meter1_offset0": {
+    "duration": 1.0,
+    "next": "@content.anim_meter2_offset1"
+  },
+  "anim_meter2_offset1@anim_meter1_offset1": { "next": "@content.anim_meter2_offset2" },
+  "anim_meter2_offset2@anim_meter1_offset2": { "next": "@content.anim_meter2_offset3" },
+  "anim_meter2_offset3@anim_meter1_offset3": { "next": "@content.anim_meter2_offset4" },
+  "anim_meter2_offset4@anim_meter1_offset4": {
+    "duration": 2.0,
+    "next": "@content.anim_meter2_offset0" 
+  },
+
+  "anim_meter3_offset0@anim_meter1_offset0": {
+    "duration": 1.5,
+    "next": "@content.anim_meter3_offset1"
+  },
+  "anim_meter3_offset1@anim_meter1_offset1": { "next": "@content.anim_meter3_offset2" },
+  "anim_meter3_offset2@anim_meter1_offset2": { "next": "@content.anim_meter3_offset3" },
+  "anim_meter3_offset3@anim_meter1_offset3": { "next": "@content.anim_meter3_offset4" },
+  "anim_meter3_offset4@anim_meter1_offset4": {
+    "duration": 1.5,
+    "next": "@content.anim_meter3_offset0" 
+  },
+
+  "anim_meter4_offset0@anim_meter1_offset0": {
+    "duration": 2.0,
+    "next": "@content.anim_meter4_offset1"
+  },
+  "anim_meter4_offset1@anim_meter1_offset1": { "next": "@content.anim_meter4_offset2" },
+  "anim_meter4_offset2@anim_meter1_offset2": { "next": "@content.anim_meter4_offset3" },
+  "anim_meter4_offset3@anim_meter1_offset3": { "next": "@content.anim_meter4_offset4" },
+  "anim_meter4_offset4@anim_meter1_offset4": {
+    "duration": 1.0,
+    "next": "@content.anim_meter4_offset0" 
+  },
+
+  "anim_meter5_offset0@anim_meter1_offset0": {
+    "duration": 2.5,
+    "next": "@content.anim_meter5_offset1"
+  },
+  "anim_meter5_offset1@anim_meter1_offset1": { "next": "@content.anim_meter5_offset2" },
+  "anim_meter5_offset2@anim_meter1_offset2": { "next": "@content.anim_meter5_offset3" },
+  "anim_meter5_offset3@anim_meter1_offset3": { "next": "@content.anim_meter5_offset4" },
+  "anim_meter5_offset4@anim_meter1_offset4": {
+    "duration": 0.5,
+    "next": "@content.anim_meter5_offset0" 
+  },
+
+  "anim_meter6_offset0@anim_meter1_offset0": {
+    "duration": 3.0,
+    "next": "@content.anim_meter6_offset1"
+  },
+  "anim_meter6_offset1@anim_meter1_offset1": { "next": "@content.anim_meter6_offset2" },
+  "anim_meter6_offset2@anim_meter1_offset2": { "next": "@content.anim_meter6_offset3" },
+  "anim_meter6_offset3@anim_meter1_offset3": { "next": "@content.anim_meter6_offset4" },
+  "anim_meter6_offset4@anim_meter1_offset4": {
+    "duration": 0.0,
+    "next": "@content.anim_meter6_offset0" 
+  },
+
   /* Main Menu */
 
-  "main_play_button@button_mcjava.button": {
+  "main_play_button@button_ui.button": {
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "default_focus_precedence": 1,
@@ -536,28 +700,28 @@
     ]
   },
 
-  "main_course_button@button_mcjava.button": {
+  "main_course_button@button_ui.button": {
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "$pressed_button_name": "button.menu_courses",
-    "$button_text": "menu.courses"
+    "$button_text": "course.edu.courses"
   },
 
-  "main_profile_button@button_mcjava.button": {
+  "main_profile_button@button_ui.button": {
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "$pressed_button_name": "button.to_profile_screen",
-    "$button_text": "menu.profile"
+    "$button_text": "profileScreen.header"
   },
 
-  "main_change_skin_button@button_mcjava.button": {
+  "main_change_skin_button@button_ui.button": {
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "$pressed_button_name": "button.menu_skins",
     "$button_text": "menu.skins"
   },
 
-  "main_store_button@button_mcjava.button": {
+  "main_store_button@button_ui.button": {
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "$pressed_button_name": "button.menu_store",
@@ -578,18 +742,18 @@
     ]
   },
 
-  "main_switch_accounts_button@button_mcjava.button": {
+  "main_switch_accounts_button@button_ui.button": {
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "$pressed_button_name": "button.switch_accounts",
-    "$button_text": "menu.switchAccounts"
+    "$button_text": "accounts.switch"
   },
 
-  "main_launch_editions_button@button_mcjava.button": {
+  "main_launch_editions_button@button_ui.button": {
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "$pressed_button_name": "button.launch_editions",
-    "$button_text": "menu.launchEditions"
+    "$button_text": "menu.editions"
   },
 
   "feedback_panel": {
@@ -613,13 +777,13 @@
     ]
   },
 
-  "edu_feedback_button@button_mcjava.button": {
+  "edu_feedback_button@button_ui.button": {
     "size": [20, 20],
     "$button_text": "",
     "$pressed_button_name": "button.edu_feedback"
   },
 
-  "release_feedback_button@button_mcjava.link_button": {
+  "release_feedback_button@button_ui.link_button": {
     "size": [20, 20],
     "$link": "https://aka.ms/minecraftfb",
     "$button_text": ""
@@ -630,13 +794,13 @@
     "$link": "https://aka.ms/minecraftfbbeta"
   },
 
-  "main_settings_button@button_mcjava.button": {
+  "main_settings_button@button_ui.button": {
     "size": [98, 20],
     "$pressed_button_name": "button.menu_settings",
     "$button_text": "menu.options"
   },
 
-  "main_quit_button@button_mcjava.button": {
+  "main_quit_button@button_ui.button": {
     "size": [98, 20],
     "$pressed_button_name": "button.menu_exit",
     "$button_text": "menu.quit"

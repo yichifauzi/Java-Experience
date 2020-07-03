@@ -1,46 +1,46 @@
 /* Version: 2.0.0 */
 {
   "modal_progress_screen@progress_screen": {
-    "$screen_content": "world_progress_mcjava.modal_screen_content_panel"
+    "$screen_content": "world_progress_ui.modal_screen_content_panel"
   },
 
   "delete_progress_screen@modal_progress_screen": {
-    "$screen_content": "world_progress_mcjava.delete_progress_screen_content_panel",
+    "$screen_content": "world_progress_ui.delete_progress_screen_content_panel",
     "$screen_background": "content.dirt_background"
   },
 
   "realms_loading_progress_screen@progress_screen": {
-    "$screen_content": "world_progress_mcjava.realms_progress_screen_content_panel",
+    "$screen_content": "world_progress_ui.realms_progress_screen_content_panel",
     "$screen_background": "content.dirt_background"
   },
 
   "world_loading_progress_screen@progress_screen": {
-    "$screen_content": "world_progress_mcjava.world_progress_screen_content_panel",
+    "$screen_content": "world_progress_ui.world_progress_screen_content_panel",
     "$screen_background": "content.dirt_background"
   },
 
   "overworld_loading_progress_screen@world_loading_progress_screen": {
-    "$screen_content": "world_progress_mcjava.overworld_progress_screen_content_panel",
+    "$screen_content": "world_progress_ui.overworld_progress_screen_content_panel",
     "$screen_background": "content.dirt_background"
   },
 
   "nether_loading_progress_screen@world_loading_progress_screen": {
-    "$screen_content": "world_progress_mcjava.nether_progress_screen_content_panel",
+    "$screen_content": "world_progress_ui.nether_progress_screen_content_panel",
     "$screen_background": "content.dirt_background"
   },
 
   "theend_loading_progress_screen@world_loading_progress_screen": {
-    "$screen_content": "world_progress_mcjava.the_end_progress_screen_content_panel",
+    "$screen_content": "world_progress_ui.the_end_progress_screen_content_panel",
     "$screen_background": "content.dirt_background"
   },
 
   "world_saving_progress_screen@progress_screen": {
-    "$screen_content": "world_progress_mcjava.world_save_progress_screen_content_panel",
+    "$screen_content": "world_progress_ui.world_save_progress_screen_content_panel",
     "$screen_background": "content.dirt_background"
   },
 
   "world_convert_modal_progress_screen@progress.progress_screen": {
-    "$screen_content": "world_progress_mcjava.world_convert_progress_screen_content_panel",
+    "$screen_content": "world_progress_ui.world_convert_progress_screen_content_panel",
     "$screen_background": "content.dirt_background"
   },
 

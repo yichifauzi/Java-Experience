@@ -1,6 +1,7 @@
 /* Version: 2.0.0 */
+/* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "book_mcjava",
+  "namespace": "book_ui",
 
   "book_screen_content_panel": {
     "type": "panel",
@@ -12,8 +13,8 @@
           "anchor_from": "center",
           "anchor_to": "center",
           "controls": [
-            { "book_and_buttons_panel@book_mcjava.book_and_buttons_panel": { "bindings": [ { "binding_name": "#viewing", "binding_name_override": "#visible" } ] } },
-            { "cover_and_buttons_panel@book_mcjava.cover_and_buttons_panel": { "bindings": [ { "binding_name": "#signing", "binding_name_override": "#visible" } ] } },
+            { "book_and_buttons_panel@book_ui.book_and_buttons_panel": { "bindings": [ { "binding_name": "#viewing", "binding_name_override": "#visible" } ] } },
+            { "cover_and_buttons_panel@book_ui.cover_and_buttons_panel": { "bindings": [ { "binding_name": "#signing", "binding_name_override": "#visible" } ] } },
             { "pick_panel@book.pick_panel": { "bindings": [ { "binding_name": "#picking", "binding_name_override": "#visible" } ] } },
             {
               "export_progress@progress.modal_progress_panel_no_cancel": {
@@ -43,13 +44,13 @@
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",
           "controls": [
-            { "book_grid@book_mcjava.book_grid": {} },
-            { "prev_button@book_mcjava.prev_button": {} },
-            { "next_button@book_mcjava.next_button": {} }
+            { "book_grid@book_ui.book_grid": {} },
+            { "prev_button@book_ui.prev_button": {} },
+            { "next_button@book_ui.next_button": {} }
           ]
         }
       },
-      { "book_buttons_panel@book_mcjava.book_buttons_panel": { "anchor_from": "bottom_middle", "anchor_to": "bottom_middle" } }
+      { "book_buttons_panel@book_ui.book_buttons_panel": { "anchor_from": "bottom_middle", "anchor_to": "bottom_middle" } }
     ]
   },
 
@@ -64,14 +65,14 @@
           "size": [200, 20],
           "controls": [
             {
-              "sign_button@button_mcjava.button": {
+              "sign_button@button_ui.button": {
                 "$pressed_button_name": "button.sign_book",
                 "$button_text": "book.signButton",
                 "size": [98, 20]
               }
             },
             { "space@content.h4px": {} },
-            { "exit@screen_mcjava.exit_button": { "size": [98, 20] } }
+            { "exit@screen_ui.exit_button": { "size": [98, 20] } }
           ],
           "bindings": [
             {
@@ -86,7 +87,7 @@
           "type": "panel",
           "size": [200, 20],
           "ignored": "$education_edition",
-          "controls": [ { "exit@screen_mcjava.exit_button": { "size": [200, 20] } } ],
+          "controls": [ { "exit@screen_ui.exit_button": { "size": [200, 20] } } ],
           "bindings": [
             {
               "binding_name": "(not #editable)",
@@ -103,14 +104,14 @@
           "ignored": "(not $education_edition)",
           "controls": [
             {
-              "export_button@button_mcjava.button": {
+              "export_button@button_ui.button": {
                 "$pressed_button_name": "button.export_book",
-                "$button_text": "Export",
+                "$button_text": "book.export",
                 "size": [98, 20]
               }
             },
             { "space@content.h4px": {} },
-            { "exit@screen_mcjava.exit_button": { "size": [98, 20] } }
+            { "exit@screen_ui.exit_button": { "size": [98, 20] } }
           ],
           "bindings": [
             {
@@ -121,9 +122,9 @@
         }
       },
       {
-        "im_content_button@button_mcjava.button": {
+        "im_content_button@button_ui.button": {
           "ignored": "(not $education_edition)",
-          "$button_text": "Immersive Reader",
+          "$button_text": "key.immersivereader",
           "$pressed_button_name": "button.immersive_reader",
           "size": [200, 20],
           "offset": [0, 24]
@@ -146,13 +147,13 @@
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",
           "controls": [
-            { "cover_content_panel@book_mcjava.cover_content_panel": {} },
+            { "cover_content_panel@book_ui.cover_content_panel": {} },
             { "@resources0.book_bg": {} }
           ]
         }
       },
       {
-        "sign_book_buttons@book_mcjava.sign_book_buttons": {
+        "sign_book_buttons@book_ui.sign_book_buttons": {
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle"
         }
@@ -163,11 +164,11 @@
   "cover_content_panel": {
     "type": "panel",
     "controls": [
-      { "title_label@book_mcjava.title_label": {} },
-      { "title_text_box@book_mcjava.title_text_box": {} },
-      { "author_text_box@book_mcjava.author_label": {} },
-      { "author_text_box@book_mcjava.author_text_box": {} },
-      { "warning_label@book_mcjava.warning_label": {} }
+      { "title_label@book_ui.title_label": {} },
+      { "title_text_box@book_ui.title_text_box": {} },
+      { "author_text_box@book_ui.author_label": {} },
+      { "author_text_box@book_ui.author_text_box": {} },
+      { "warning_label@book_ui.warning_label": {} }
     ]
   },
   
@@ -201,8 +202,8 @@
     "$numbers_offset": [-17, 15],
     "$textbox_offset": [-16, 29],
     "controls": [
-      { "page_panel_left@book_mcjava.left_page_panel": { "grid_position": [0, 0] } },
-      { "page_panel_right@book_mcjava.right_page_panel": { "grid_position": [1, 0] } }
+      { "page_panel_left@book_ui.left_page_panel": { "grid_position": [0, 0] } },
+      { "page_panel_right@book_ui.right_page_panel": { "grid_position": [1, 0] } }
     ]
   },
 
@@ -211,7 +212,7 @@
     "size": "$page_size",
     "$page_content_offset|default": [0, 0],
     "controls": [
-      { "page_content_panel@book_mcjava.page_content_panel": {} },
+      { "page_content_panel@book_ui.page_content_panel": {} },
       { "@resources0.book_bg": {} }
     ]
   },
@@ -221,7 +222,7 @@
     "size": "$page_size",
     "$page_content_offset|default": [0, 0],
     "controls": [
-      { "page_content_panel@book_mcjava.page_content_panel": {} },
+      { "page_content_panel@book_ui.page_content_panel": {} },
       { "@resources0.book_bg": {} }
     ]
   },
@@ -230,9 +231,9 @@
     "type": "panel",
     "offset": "$page_content_offset",
     "controls": [
-      { "page_text@book_mcjava.page_text": {} },
+      { "page_text@book_ui.page_text": {} },
       { "page_photo@book.page_photo": {} },
-      { "page_number_label@book_mcjava.page_number_label": {} }
+      { "page_number_label@book_ui.page_number_label": {} }
     ],
     "bindings": [
       {
@@ -283,7 +284,7 @@
     "$enable_profanity_filter": true
   },
 
-  "page_text@book_mcjava.page_text_edit": {
+  "page_text@book_ui.page_text_edit": {
     "size": [113, 124],
     "offset": "$textbox_offset",
     "anchor_from": "$anchor",
@@ -296,7 +297,7 @@
     "$enable_profanity_filter": true
   },
 
-  "prev_button@book_mcjava.base_button": {
+  "prev_button@book_ui.base_button": {
     "size": [18, 10],
     "offset": [29, -12],
     "anchor_from": "bottom_left",
@@ -310,7 +311,7 @@
     "$hover_button_bg": "resources0.prev_button_hover"
   },
 
-  "next_button@book_mcjava.base_button": {
+  "next_button@book_ui.base_button": {
     "size": [18, 10],
     "offset": [-29, -12],
     "anchor_from": "bottom_right",
@@ -348,7 +349,7 @@
     "anchor_from": "top_middle",
     "max_length": "$max_title_length",
     "$text_alignment": "center",
-    "$place_holder_text": "-",
+    "$place_holder_text": "_",
     "$text_box_text_color": "$book_title_text_color",
     "$place_holder_text_color": "gray",
     "$color": "$book_title_text_color",
@@ -418,7 +419,7 @@
           "size": [200, 20],
           "controls": [
             {
-              "sign_book_button@button_mcjava.button": {
+              "sign_book_button@button_ui.button": {
                 "$pressed_button_name": "button.finalize",
                 "$button_text": "book.finalizeButton",
                 "size": [98, 20],
@@ -432,7 +433,7 @@
             },
             { "padding_1": { "type": "panel", "size": [4, 0] } },
             {
-              "cancel_sign_button@button_mcjava.button": {
+              "cancel_sign_button@button_ui.button": {
                 "size": [98, 20],
                 "$pressed_button_name": "button.book_exit",
                 "$button_text": "gui.cancel"

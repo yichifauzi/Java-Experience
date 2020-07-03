@@ -1,6 +1,6 @@
 /* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "option_toggle_mcjava",
+  "namespace": "option_toggle_ui",
 
   "toggle_base@common.toggle": {
     "sound_name": "ui.button.click",
@@ -45,9 +45,7 @@
         "binding_name_override": "#focus_enabled"
       }
     ],
-    "$toggle_property_bag|default": {
-      "#toggle_state": true
-    },
+    "$toggle_property_bag|default": { "#toggle_state": true },
     "$button_mappings|default": [
       {
         "from_button_id": "button.menu_select",
@@ -119,7 +117,7 @@
     "$controller_mapping_from_id|default": "",
     "$controller_mapping_to_id|default": "",
     "$controller_mapping_type|default": "global",
-    "controller_mapping_scope|default": "",
+    "$controller_mapping_scope|default": "",
     "$custom_mapping_from_id|default": "",
     "$custom_mapping_to_id|default": "",
     "$custom_mapping_type|default": "global",
@@ -139,12 +137,10 @@
   "option_toggle": {
     "type": "panel",
     "size": [150, 20],
-    "controls": [
-      { "control@option_toggle_mcjava.option_toggle_control": {} }
-    ]   
+    "controls": [ { "control@option_toggle_ui.option_toggle_control": {} } ]   
   },
 
-  "option_toggle_control@option_toggle_mcjava.toggle_base": {
+  "option_toggle_control@option_toggle_ui.toggle_base": {
     "$toggle_state_binding_name|default": "$option_binding_name",
     "$toggle_enabled_binding_name|default": "$option_enabled_binding_name",
     "$option_enabled_binding_type|default": "global",
@@ -161,8 +157,8 @@
       }
     ],
     "$enable_directional_toggling": false,
-    "$toggle_state_panel|default": "option_toggle_mcjava.toggle_state_panel",
-    "$toggle_type_panel|default": "option_toggle_mcjava.option_toggle_text_panel",
+    "$toggle_state_panel|default": "option_toggle_ui.toggle_state_panel",
+    "$toggle_type_panel|default": "option_toggle_ui.option_toggle_text_panel",
     "$unchecked_toggle_bg|default": "resources.button_default",
     "$checked_toggle_bg|default": "resources.button_default",
     "$unchecked_hover_toggle_bg|default": "resources.button_hover",
@@ -259,10 +255,13 @@
 
   "toggle_state_panel": {
     "type": "panel",
+    "size": ["100%", "100%"],
+    "anchor_from": "center",
+    "anchor_to": "center",
     "$tooltip_name|default": "null",
     "controls": [
       {
-        "tooltip@tooltip_mcjava.tooltip": {
+        "tooltip@tooltip_ui.tooltip": {
           "visible": "($state = checked_hover or $state = unchecked_hover or $state = checked_locked_hover or $state = unchecked_locked_hover)",
           "ignored": "($tooltip_name = null)"
         }
@@ -272,11 +271,9 @@
         "content_panel": {
           "type": "panel",
           "size": "$content_panel_size",
-          "$content_panel_size|default": ["100% - 4px", "100% - 4px"],
+          "$content_panel_size|default": ["100% - 2px", "100% - 2px"],
           "layer": 3,
-          "controls": [
-            { "content@$toggle_type_panel": {} }
-          ]
+          "controls": [ { "content@$toggle_type_panel": {} } ]
         }
       }
     ]
@@ -286,12 +283,12 @@
     "type": "stack_panel",
     "orientation": "horizontal",
     "size": ["100%c", 10],
-    "offset": [0.5, 0],
+    "offset": [1, 0],
     "$button_text_max_size": ["default", "default"],
     "$show_argument|default": true,
     "controls": [
       {
-        "option_toggle_label@button_mcjava.button_label": {
+        "option_toggle_label@button_ui.button_label": {
           "text": "$option_toggle_text",
           "bindings": "$toggle_text_bindings",
           "visible": "$show_argument",
@@ -301,7 +298,7 @@
       {
         "space": {
           "type": "label",
-          "text": ": ",
+          "text": "gui.comma.spaced",
           "color": "$text_color",
           "size": ["default", "default"],
           "visible": "$show_argument",
@@ -310,7 +307,7 @@
         }
       },
       {
-        "option_toggle_state_text@button_mcjava.button_label": {
+        "option_toggle_state_text@button_ui.button_label": {
           "text": "$option_toggle_state_text",
           "color": "$state_text_color",
           "bindings": "$toggle_state_text_bindings",

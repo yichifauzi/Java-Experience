@@ -1,21 +1,21 @@
 /* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "mouse_mcjava",
+  "namespace": "mouse_ui",
 
   "mouse_content_panel": {
     "type": "panel",
     "controls": [
       {
-        "mouse_content_panel@screen_mcjava.scroll_screen": {
-          "$top_content": "mouse_mcjava.top_content",
+        "mouse_content_panel@screen_ui.scroll_screen": {
+          "$top_content": "mouse_ui.top_content",
           "$top_content_size": ["100%", 43],
-          "$scrolling_content": "mouse_mcjava.better_keymapping_content",
-          "$bottom_content": "mouse_mcjava.bottom_content",
+          "$scrolling_content": "mouse_ui.better_keymapping_content",
+          "$bottom_content": "mouse_ui.bottom_content",
           "$scroll_bar_offset": [165, 0],
           "variables": [
             {
               "requires": "(not $better_mouse_keys_grid)",
-              "$scrolling_content": "mouse_mcjava.faster_keymapping_content"
+              "$scrolling_content": "mouse_ui.faster_keymapping_content"
             }
           ],
           "bindings": [
@@ -29,7 +29,7 @@
         }
       },
       {
-        "mouse_settings@mouse_settings_mcjava.mouse_settings_content_panel": {
+        "mouse_settings@mouse_settings_ui.mouse_settings_content_panel": {
           "bindings": [
             {
               "binding_type": "view",
@@ -46,7 +46,7 @@
   "top_content": {
     "type": "panel",
     "controls": [
-      { "title@screen_mcjava.title": { "offset": [-1, 7], "text": "options.controls.title" } },
+      { "title@screen_ui.title": { "offset": [-1, 7], "text": "controls.title" } },
       {
         "stack_zero": {
           "type": "stack_panel",
@@ -56,9 +56,9 @@
           "size": [310, 20],
           "offset": [0, 18],
           "controls": [
-            { "mouse_settings@mouse_mcjava.mouse_settings_button": {} },
-            { "fill@screen_mcjava.hfill": {} },
-            { "auto_jump@mouse_mcjava.auto_jump_toggle": { "size": [150, 20] } }
+            { "mouse_settings@mouse_ui.mouse_settings_button": {} },
+            { "fill@screen_ui.hfill": {} },
+            { "auto_jump@mouse_ui.auto_jump_toggle": { "size": [150, 20] } }
           ]
         }
       }
@@ -69,7 +69,7 @@
     "type": "panel",
     "size": [318, "100%c"],
     "controls": [
-      { "space_top@screen_mcjava.vspace": {} },
+      { "space_top@screen_ui.vspace": {} },
       {
         "keyboard_standart_options": {
           "type": "stack_panel",
@@ -100,7 +100,7 @@
           "controls": [ { "grid@full_keymapping_grid": {} } ]
         }
       },
-      { "space_bottom@screen_mcjava.vspace": {} }
+      { "space_bottom@screen_ui.vspace": {} }
     ]
   },
 
@@ -108,7 +108,7 @@
     "type": "grid",
     "size": ["100%", "default"],
     "layer": 1,
-    "grid_item_template": "mouse_mcjava.mouse_keymapping_item",
+    "grid_item_template": "mouse_ui.mouse_keymapping_item",
     "grid_dimension_binding": "$keymapping_grid_dimension",
     "collection_name": "$keymapping_collection",
     "anchor_to": "top_left",
@@ -124,7 +124,7 @@
   "better_keymapping_content": {
     "type": "panel",
     "size": [318, "100%c"],
-    "$item_template": "mouse_mcjava.mouse_keymapping_item",
+    "$item_template": "mouse_ui.mouse_keymapping_item",
     "controls": [
       {
         "keyboard_standart_options": {
@@ -139,40 +139,40 @@
             }
           ],
           "controls": [
-            { "movement@controls_mcjava.keymapping_title": { "$keys_title": "key.categories.movement" } },
-            { "jump@controls_mcjava.keymapping_grid_item": { "$item_label": "key.jump", "$bindName": "(not (#binding_button_text = 'Space')))", "$item_index": 15 } },
-            { "sneak@controls_mcjava.keymapping_grid_item": { "$item_label": "key.sneak", "$bindName": "(not (#binding_button_text = 'Shift'))", "$item_index": 16 } },
-            { "sprint@controls_mcjava.keymapping_grid_item": { "$item_label": "key.sprint", "$bindName": "(not (#binding_button_text = 'Control'))", "$item_index": 17 } },
-            { "strafe_left@controls_mcjava.keymapping_grid_item": { "$item_label": "key.left", "$bindName": "(not (#binding_button_text = 'a'))", "$item_index": 18 } },
-            { "strafe_right@controls_mcjava.keymapping_grid_item": { "$item_label": "key.right", "$bindName": "(not (#binding_button_text = 'd'))", "$item_index": 19 } },
-            { "walk_backwards@controls_mcjava.keymapping_grid_item": { "$item_label": "key.back", "$bindName": "(not (#binding_button_text = 's'))", "$item_index": 20 } },
-            { "walk_forwards@controls_mcjava.keymapping_grid_item": { "$item_label": "key.forward", "$bindName": "(not (#binding_button_text = 'w'))", "$item_index": 21 } },
-            { "gameplay@controls_mcjava.keymapping_title": { "$keys_title": "key.categories.gameplay" } },
-            { "attack_or_destroy@controls_mcjava.keymapping_grid_item": { "$item_label": "key.attack", "$bindName": "(not (#binding_button_text = 'Button1'))", "$item_index": 0 } },
-            { "pick_block@controls_mcjava.keymapping_grid_item": { "$item_label": "key.pickItem", "$bindName": "(not (#binding_button_text = 'Button3'))", "$item_index": 1 } },
-            { "use_item_or_place_block@controls_mcjava.keymapping_grid_item": { "$item_label": "key.use", "$bindName": "(not (#binding_button_text = 'Button2'))", "$item_index": 2 } },
-            { "inventory@controls_mcjava.keymapping_title": { "$keys_title": "key.categories.inventory" } },
-            { "drop_selected_item@controls_mcjava.keymapping_grid_item": { "$item_label": "key.drop", "$item_index": 3, "$bindName": "(not (#binding_button_text = 'q')" } },
-            { "hotbar_one@controls_mcjava.keymapping_grid_item": { "$item_label": "key.hotbar.1", "$bindName": "(not (#binding_button_text = '1'))", "$item_index": 4 } },
-            { "hotbar_two@controls_mcjava.keymapping_grid_item": { "$item_label": "key.hotbar.2", "$bindName": "(not (#binding_button_text = '2'))", "$item_index": 5 } },
-            { "hotbar_three@controls_mcjava.keymapping_grid_item": { "$item_label": "key.hotbar.3", "$bindName": "(not (#binding_button_text = '3'))", "$item_index": 6 } },
-            { "hotbar_four@controls_mcjava.keymapping_grid_item": { "$item_label": "key.hotbar.4", "$bindName": "(not (#binding_button_text = '4'))", "$item_index": 7 } },
-            { "hotbar_five@controls_mcjava.keymapping_grid_item": { "$item_label": "key.hotbar.5", "$bindName": "(not (#binding_button_text = '5'))", "$item_index": 8 } },
-            { "hotbar_six@controls_mcjava.keymapping_grid_item": { "$item_label": "key.hotbar.6", "$bindName": "(not (#binding_button_text = '6'))", "$item_index": 9 } },
-            { "hotbar_seven@controls_mcjava.keymapping_grid_item": { "$item_label": "key.hotbar.7", "$bindName": "(not (#binding_button_text = '7'))", "$item_index": 10 } },
-            { "hotbar_eight@controls_mcjava.keymapping_grid_item": { "$item_label": "key.hotbar.8", "$bindName": "(not (#binding_button_text = '8'))", "$item_index": 11 } },
-            { "hotbar_nine@controls_mcjava.keymapping_grid_item": { "$item_label": "key.hotbar.9", "$bindName": "(not (#binding_button_text = '9'))", "$item_index": 12 } },
-            { "open_and_close_inventory@controls_mcjava.keymapping_grid_item": { "$item_label": "key.inventory", "$bindName": "(not (#binding_button_text = 'e'))", "$item_index": 13 } },
-            { "multiplayer@controls_mcjava.keymapping_title": { "$keys_title": "key.categories.multiplayer" } },
-            { "open_chat@controls_mcjava.keymapping_grid_item": { "$item_label": "key.chat", "$bindName": "(not (#binding_button_text = 't, Return'))", "$item_index": 23 } },
-            { "open_command@controls_mcjava.keymapping_grid_item": { "$item_label": "key.command", "$bindName": "(not (#binding_button_text = '~'))", "$item_index": 24 } },
-            { "miscellaneous@controls_mcjava.keymapping_title": { "$keys_title": "Miscellaneous" } },
-            { "toggle_perspetive@controls_mcjava.keymapping_grid_item": { "$item_label": "key.togglePerspective", "$bindName": "(not (#binding_button_text = 'F5'))", "$item_index": 14 } },
-            { "mob_effects@controls_mcjava.keymapping_grid_item": { "$item_label": "key.mobEffects", "$bindName": "(not (#binding_button_text = 'z'))", "$item_index": 22 } },
-            { "emote@controls_mcjava.keymapping_grid_item": { "$item_label": "key.emote", "$bindName": "(not (#binding_button_text = 'b'))", "$item_index": 25 } },
-            { "menu_tab_left@controls_mcjava.keymapping_grid_item": { "$item_label": "key.tabLeft", "$bindName": "(not (#binding_button_text = '['))", "$item_index": 26 } },
-            { "menu_tab_right@controls_mcjava.keymapping_grid_item": { "$item_label": "key.tabRight", "$bindName": "(not (#binding_button_text = ']'))", "$item_index": 27 } },
-            { "space_bottom@screen_mcjava.vspace": {} }
+            { "movement@controls_ui.keymapping_title": { "$keys_title": "key.categories.movement" } },
+            { "jump@controls_ui.keymapping_grid_item": { "$item_label": "key.jump", "$bindName": "(not (#binding_button_text = 'Space')))", "$item_index": 15 } },
+            { "sneak@controls_ui.keymapping_grid_item": { "$item_label": "key.sneak", "$bindName": "(not (#binding_button_text = 'Shift'))", "$item_index": 16 } },
+            { "sprint@controls_ui.keymapping_grid_item": { "$item_label": "key.sprint", "$bindName": "(not (#binding_button_text = 'Control'))", "$item_index": 17 } },
+            { "strafe_left@controls_ui.keymapping_grid_item": { "$item_label": "key.left", "$bindName": "(not (#binding_button_text = 'a'))", "$item_index": 18 } },
+            { "strafe_right@controls_ui.keymapping_grid_item": { "$item_label": "key.right", "$bindName": "(not (#binding_button_text = 'd'))", "$item_index": 19 } },
+            { "walk_backwards@controls_ui.keymapping_grid_item": { "$item_label": "key.back", "$bindName": "(not (#binding_button_text = 's'))", "$item_index": 20 } },
+            { "walk_forwards@controls_ui.keymapping_grid_item": { "$item_label": "key.forward", "$bindName": "(not (#binding_button_text = 'w'))", "$item_index": 21 } },
+            { "gameplay@controls_ui.keymapping_title": { "$keys_title": "key.categories.gameplay" } },
+            { "attack_or_destroy@controls_ui.keymapping_grid_item": { "$item_label": "key.attack", "$bindName": "(not (#binding_button_text = 'Button1'))", "$item_index": 0 } },
+            { "pick_block@controls_ui.keymapping_grid_item": { "$item_label": "key.pickItem", "$bindName": "(not (#binding_button_text = 'Button3'))", "$item_index": 1 } },
+            { "use_item_or_place_block@controls_ui.keymapping_grid_item": { "$item_label": "key.use", "$bindName": "(not (#binding_button_text = 'Button2'))", "$item_index": 2 } },
+            { "inventory@controls_ui.keymapping_title": { "$keys_title": "key.categories.inventory" } },
+            { "drop_selected_item@controls_ui.keymapping_grid_item": { "$item_label": "key.drop", "$item_index": 3, "$bindName": "(not (#binding_button_text = 'q')" } },
+            { "hotbar_one@controls_ui.keymapping_grid_item": { "$item_label": "key.hotbar.1", "$bindName": "(not (#binding_button_text = '1'))", "$item_index": 4 } },
+            { "hotbar_two@controls_ui.keymapping_grid_item": { "$item_label": "key.hotbar.2", "$bindName": "(not (#binding_button_text = '2'))", "$item_index": 5 } },
+            { "hotbar_three@controls_ui.keymapping_grid_item": { "$item_label": "key.hotbar.3", "$bindName": "(not (#binding_button_text = '3'))", "$item_index": 6 } },
+            { "hotbar_four@controls_ui.keymapping_grid_item": { "$item_label": "key.hotbar.4", "$bindName": "(not (#binding_button_text = '4'))", "$item_index": 7 } },
+            { "hotbar_five@controls_ui.keymapping_grid_item": { "$item_label": "key.hotbar.5", "$bindName": "(not (#binding_button_text = '5'))", "$item_index": 8 } },
+            { "hotbar_six@controls_ui.keymapping_grid_item": { "$item_label": "key.hotbar.6", "$bindName": "(not (#binding_button_text = '6'))", "$item_index": 9 } },
+            { "hotbar_seven@controls_ui.keymapping_grid_item": { "$item_label": "key.hotbar.7", "$bindName": "(not (#binding_button_text = '7'))", "$item_index": 10 } },
+            { "hotbar_eight@controls_ui.keymapping_grid_item": { "$item_label": "key.hotbar.8", "$bindName": "(not (#binding_button_text = '8'))", "$item_index": 11 } },
+            { "hotbar_nine@controls_ui.keymapping_grid_item": { "$item_label": "key.hotbar.9", "$bindName": "(not (#binding_button_text = '9'))", "$item_index": 12 } },
+            { "open_and_close_inventory@controls_ui.keymapping_grid_item": { "$item_label": "key.inventory", "$bindName": "(not (#binding_button_text = 'e'))", "$item_index": 13 } },
+            { "multiplayer@controls_ui.keymapping_title": { "$keys_title": "key.categories.multiplayer" } },
+            { "open_chat@controls_ui.keymapping_grid_item": { "$item_label": "key.chat", "$bindName": "(not (#binding_button_text = 't, Return'))", "$item_index": 23 } },
+            { "open_command@controls_ui.keymapping_grid_item": { "$item_label": "key.command", "$bindName": "(not (#binding_button_text = '~'))", "$item_index": 24 } },
+            { "miscellaneous@controls_ui.keymapping_title": { "$keys_title": "Miscellaneous" } },
+            { "toggle_perspetive@controls_ui.keymapping_grid_item": { "$item_label": "key.togglePerspective", "$bindName": "(not (#binding_button_text = 'F5'))", "$item_index": 14 } },
+            { "mob_effects@controls_ui.keymapping_grid_item": { "$item_label": "key.mobEffects", "$bindName": "(not (#binding_button_text = 'z'))", "$item_index": 22 } },
+            { "emote@controls_ui.keymapping_grid_item": { "$item_label": "key.emote", "$bindName": "(not (#binding_button_text = 'b'))", "$item_index": 25 } },
+            { "menu_tab_left@controls_ui.keymapping_grid_item": { "$item_label": "key.tabLeft", "$bindName": "(not (#binding_button_text = '['))", "$item_index": 26 } },
+            { "menu_tab_right@controls_ui.keymapping_grid_item": { "$item_label": "key.tabRight", "$bindName": "(not (#binding_button_text = ']'))", "$item_index": 27 } },
+            { "space_bottom@screen_ui.vspace": {} }
           ]
         }
       },
@@ -189,59 +189,59 @@
             }
           ],
           "controls": [
-            { "movement@controls_mcjava.keymapping_title": { "$keys_title": "key.categories.movement" } },
-            { "jump@controls_mcjava.keymapping_grid_item": { "$item_label": "key.jump", "$bindName": "(#binding_button_text = 'Space')", "$item_index": 32 } },
-            { "sneak@controls_mcjava.keymapping_grid_item": { "$item_label": "key.sneak", "$bindName": "(#binding_button_text = 'Shift')", "$item_index": 33 } },
-            { "sprint@controls_mcjava.keymapping_grid_item": { "$item_label": "key.sprint", "$bindName": "(#binding_button_text = 'Control')", "$item_index": 34 } },
-            { "strafe_left@controls_mcjava.keymapping_grid_item": { "$item_label": "key.left", "$bindName": "(#binding_button_text = 'a')", "$item_index": 35 } },
-            { "strafe_right@controls_mcjava.keymapping_grid_item": { "$item_label": "key.right", "$bindName": "(#binding_button_text = 'd')", "$item_index": 36 } },
-            { "walk_backwards@controls_mcjava.keymapping_grid_item": { "$item_label": "key.back", "$bindName": "(#binding_button_text = 's')", "$item_index": 37 } },
-            { "walk_forwards@controls_mcjava.keymapping_grid_item": { "$item_label": "key.forward", "$bindName": "(#binding_button_text = 'w')", "$item_index": 38 } },
-            { "gameplay@controls_mcjava.keymapping_title": { "$keys_title": "key.categories.gameplay" } },
-            { "attack_or_destroy@controls_mcjava.keymapping_grid_item": { "$item_label": "key.attack", "$bindName": "(#binding_button_text = 'q')", "$item_index": 17 } },
-            { "pick_block@controls_mcjava.keymapping_grid_item": { "$item_label": "key.pickItem", "$bindName": "(#binding_button_text = 'x')", "$item_index": 18 } },
-            { "use_item_or_place_block@controls_mcjava.keymapping_grid_item": { "$item_label": "key.use", "$bindName": "(#binding_button_text = 'e')", "$item_index": 19 } },
-            { "inventory@controls_mcjava.keymapping_title": { "$keys_title": "key.categories.inventory" } },
-            { "drop_selected_item@controls_mcjava.keymapping_grid_item": { "$item_label": "key.drop", "$item_index": 20, "$bindName": "(#binding_button_text = 'z')" } },
-            { "hotbar_one@controls_mcjava.keymapping_grid_item": { "$item_label": "key.hotbar.1", "$bindName": "(#binding_button_text = '1')", "$item_index": 21 } },
-            { "hotbar_two@controls_mcjava.keymapping_grid_item": { "$item_label": "key.hotbar.2", "$bindName": "(#binding_button_text = '2')", "$item_index": 22 } },
-            { "hotbar_three@controls_mcjava.keymapping_grid_item": { "$item_label": "key.hotbar.3", "$bindName": "(#binding_button_text = '3')", "$item_index": 23 } },
-            { "hotbar_four@controls_mcjava.keymapping_grid_item": { "$item_label": "key.hotbar.4", "$bindName": "(#binding_button_text = '4')", "$item_index": 24 } },
-            { "hotbar_five@controls_mcjava.keymapping_grid_item": { "$item_label": "key.hotbar.5", "$bindName": "(#binding_button_text = '5')", "$item_index": 25 } },
-            { "hotbar_six@controls_mcjava.keymapping_grid_item": { "$item_label": "key.hotbar.6", "$bindName": "(#binding_button_text = '6')", "$item_index": 26 } },
-            { "hotbar_seven@controls_mcjava.keymapping_grid_item": { "$item_label": "key.hotbar.7", "$bindName": "(#binding_button_text = '7')", "$item_index": 27 } },
-            { "hotbar_eight@controls_mcjava.keymapping_grid_item": { "$item_label": "key.hotbar.8", "$bindName": "(#binding_button_text = '8')", "$item_index": 28 } },
-            { "hotbar_nine@controls_mcjava.keymapping_grid_item": { "$item_label": "key.hotbar.9", "$bindName": "(#binding_button_text = '9')", "$item_index": 29 } },
-            { "open_and_close_inventory@controls_mcjava.keymapping_grid_item": { "$item_label": "key.inventory", "$bindName": "(#binding_button_text = 'c')", "$item_index": 30 } },
-            { "multiplayer@controls_mcjava.keymapping_title": { "$keys_title": "key.categories.multiplayer" } },
-            { "open_chat@controls_mcjava.keymapping_grid_item": { "$item_label": "key.chat", "$bindName": "(#binding_button_text = 't, Return')", "$item_index": 40 } },
-            { "open_command@controls_mcjava.keymapping_grid_item": { "$item_label": "key.command", "$bindName": "(#binding_button_text = '~')", "$item_index": 41 } },
-            { "miscellaneous@controls_mcjava.keymapping_title": { "$keys_title": "Miscellaneous" } },
-            { "toggle_perspetive@controls_mcjava.keymapping_grid_item": { "$item_label": "key.togglePerspective", "$bindName": "(#binding_button_text = 'F5')", "$item_index": 31 } },
-            { "mob_effects@controls_mcjava.keymapping_grid_item": { "$item_label": "key.mobEffects", "$bindName": "(#binding_button_text = 'Tab')", "$item_index": 39 } },
-            { "emote@controls_mcjava.keymapping_grid_item": { "$item_label": "key.emote", "$bindName": "(#binding_button_text = 'b')", "$item_index": 42 } },
-            { "menu_tab_left@controls_mcjava.keymapping_grid_item": { "$item_label": "key.tabLeft", "$bindName": "(#binding_button_text = '[')", "$item_index": 43 } },
-            { "menu_tab_right@controls_mcjava.keymapping_grid_item": { "$item_label": "key.tabRight", "$bindName": "(#binding_button_text = ']')", "$item_index": 44 } },
-            { "additional@controls_mcjava.keymapping_title": { "$keys_title": "key.categories.additional" } },
+            { "movement@controls_ui.keymapping_title": { "$keys_title": "key.categories.movement" } },
+            { "jump@controls_ui.keymapping_grid_item": { "$item_label": "key.jump", "$bindName": "(#binding_button_text = 'Space')", "$item_index": 32 } },
+            { "sneak@controls_ui.keymapping_grid_item": { "$item_label": "key.sneak", "$bindName": "(#binding_button_text = 'Shift')", "$item_index": 33 } },
+            { "sprint@controls_ui.keymapping_grid_item": { "$item_label": "key.sprint", "$bindName": "(#binding_button_text = 'Control')", "$item_index": 34 } },
+            { "strafe_left@controls_ui.keymapping_grid_item": { "$item_label": "key.left", "$bindName": "(#binding_button_text = 'a')", "$item_index": 35 } },
+            { "strafe_right@controls_ui.keymapping_grid_item": { "$item_label": "key.right", "$bindName": "(#binding_button_text = 'd')", "$item_index": 36 } },
+            { "walk_backwards@controls_ui.keymapping_grid_item": { "$item_label": "key.back", "$bindName": "(#binding_button_text = 's')", "$item_index": 37 } },
+            { "walk_forwards@controls_ui.keymapping_grid_item": { "$item_label": "key.forward", "$bindName": "(#binding_button_text = 'w')", "$item_index": 38 } },
+            { "gameplay@controls_ui.keymapping_title": { "$keys_title": "key.categories.gameplay" } },
+            { "attack_or_destroy@controls_ui.keymapping_grid_item": { "$item_label": "key.attack", "$bindName": "(#binding_button_text = 'q')", "$item_index": 17 } },
+            { "pick_block@controls_ui.keymapping_grid_item": { "$item_label": "key.pickItem", "$bindName": "(#binding_button_text = 'x')", "$item_index": 18 } },
+            { "use_item_or_place_block@controls_ui.keymapping_grid_item": { "$item_label": "key.use", "$bindName": "(#binding_button_text = 'e')", "$item_index": 19 } },
+            { "inventory@controls_ui.keymapping_title": { "$keys_title": "key.categories.inventory" } },
+            { "drop_selected_item@controls_ui.keymapping_grid_item": { "$item_label": "key.drop", "$item_index": 20, "$bindName": "(#binding_button_text = 'z')" } },
+            { "hotbar_one@controls_ui.keymapping_grid_item": { "$item_label": "key.hotbar.1", "$bindName": "(#binding_button_text = '1')", "$item_index": 21 } },
+            { "hotbar_two@controls_ui.keymapping_grid_item": { "$item_label": "key.hotbar.2", "$bindName": "(#binding_button_text = '2')", "$item_index": 22 } },
+            { "hotbar_three@controls_ui.keymapping_grid_item": { "$item_label": "key.hotbar.3", "$bindName": "(#binding_button_text = '3')", "$item_index": 23 } },
+            { "hotbar_four@controls_ui.keymapping_grid_item": { "$item_label": "key.hotbar.4", "$bindName": "(#binding_button_text = '4')", "$item_index": 24 } },
+            { "hotbar_five@controls_ui.keymapping_grid_item": { "$item_label": "key.hotbar.5", "$bindName": "(#binding_button_text = '5')", "$item_index": 25 } },
+            { "hotbar_six@controls_ui.keymapping_grid_item": { "$item_label": "key.hotbar.6", "$bindName": "(#binding_button_text = '6')", "$item_index": 26 } },
+            { "hotbar_seven@controls_ui.keymapping_grid_item": { "$item_label": "key.hotbar.7", "$bindName": "(#binding_button_text = '7')", "$item_index": 27 } },
+            { "hotbar_eight@controls_ui.keymapping_grid_item": { "$item_label": "key.hotbar.8", "$bindName": "(#binding_button_text = '8')", "$item_index": 28 } },
+            { "hotbar_nine@controls_ui.keymapping_grid_item": { "$item_label": "key.hotbar.9", "$bindName": "(#binding_button_text = '9')", "$item_index": 29 } },
+            { "open_and_close_inventory@controls_ui.keymapping_grid_item": { "$item_label": "key.inventory", "$bindName": "(#binding_button_text = 'c')", "$item_index": 30 } },
+            { "multiplayer@controls_ui.keymapping_title": { "$keys_title": "key.categories.multiplayer" } },
+            { "open_chat@controls_ui.keymapping_grid_item": { "$item_label": "key.chat", "$bindName": "(#binding_button_text = 't, Return')", "$item_index": 40 } },
+            { "open_command@controls_ui.keymapping_grid_item": { "$item_label": "key.command", "$bindName": "(#binding_button_text = '~')", "$item_index": 41 } },
+            { "miscellaneous@controls_ui.keymapping_title": { "$keys_title": "Miscellaneous" } },
+            { "toggle_perspetive@controls_ui.keymapping_grid_item": { "$item_label": "key.togglePerspective", "$bindName": "(#binding_button_text = 'F5')", "$item_index": 31 } },
+            { "mob_effects@controls_ui.keymapping_grid_item": { "$item_label": "key.mobEffects", "$bindName": "(#binding_button_text = 'Tab')", "$item_index": 39 } },
+            { "emote@controls_ui.keymapping_grid_item": { "$item_label": "key.emote", "$bindName": "(#binding_button_text = 'b')", "$item_index": 42 } },
+            { "menu_tab_left@controls_ui.keymapping_grid_item": { "$item_label": "key.tabLeft", "$bindName": "(#binding_button_text = '[')", "$item_index": 43 } },
+            { "menu_tab_right@controls_ui.keymapping_grid_item": { "$item_label": "key.tabRight", "$bindName": "(#binding_button_text = ']')", "$item_index": 44 } },
+            { "additional@controls_ui.keymapping_title": { "$keys_title": "key.categories.additional" } },
 
-            { "look_up_slight@controls_mcjava.keymapping_grid_item": { "$item_label": "key.lookUpSlight", "$bindName": "(#binding_button_text = 'Subtract')", "$item_index":  0 } },
-            { "look_down_slight@controls_mcjava.keymapping_grid_item": { "$item_label": "key.lookDownSlight", "$bindName": "(#binding_button_text = 'Add')", "$item_index":  1 } },
-            { "look_up_right@controls_mcjava.keymapping_grid_item": { "$item_label": "key.lookUpRight", "$bindName": "(#binding_button_text = 'NP 9')", "$item_index":  2 } },
-            { "look_up@controls_mcjava.keymapping_grid_item": { "$item_label": "key.lookUp", "$bindName": "(#binding_button_text = 'NP 8')", "$item_index":  3 } },
-            { "look_up_left@controls_mcjava.keymapping_grid_item": { "$item_label": "key.lookUpLeft", "$bindName": "(#binding_button_text = 'NP 7')", "$item_index":  4 } },
-            { "look_right@controls_mcjava.keymapping_grid_item": { "$item_label": "key.lookRight", "$bindName": "(#binding_button_text = 'NP 6')", "$item_index":  5 } },
-            { "look_center@controls_mcjava.keymapping_grid_item": { "$item_label": "key.lookCenter", "$bindName": "(#binding_button_text = 'NP 5, End, \\')", "$item_index":  6 } },
-            { "look_left@controls_mcjava.keymapping_grid_item": { "$item_label": "key.lookLeft", "$bindName": "(#binding_button_text = 'NP 4')", "$item_index":  7 } },
-            { "look_down_right@controls_mcjava.keymapping_grid_item": { "$item_label": "key.lookDownRight", "$bindName": "(#binding_button_text = 'NP 3')", "$item_index":  8 } },
-            { "look_down@controls_mcjava.keymapping_grid_item": { "$item_label": "key.lookDown", "$bindName": "(#binding_button_text = 'NP 2')", "$item_index":  9 } },
-            { "look_down_left@controls_mcjava.keymapping_grid_item": { "$item_label": "key.lookDownLeft", "$bindName": "(#binding_button_text = 'NP 1')", "$item_index": 10 } },
-            { "look_up_smooth@controls_mcjava.keymapping_grid_item": { "$item_label": "key.lookUpSmooth", "$bindName": "(#binding_button_text = 'Up Arrow')", "$item_index": 11 } },
-            { "look_down_smooth@controls_mcjava.keymapping_grid_item": { "$item_label": "key.lookDownSmooth", "$bindName": "(#binding_button_text = 'Down Arrow')", "$item_index": 12 } },
-            { "look_left_smooth@controls_mcjava.keymapping_grid_item": { "$item_label": "key.lookLeftSmooth", "$bindName": "(#binding_button_text = 'Left Arrow')", "$item_index": 13 } },
-            { "look_right_smooth@controls_mcjava.keymapping_grid_item": { "$item_label": "key.lookRightSmooth", "$bindName": "(#binding_button_text = 'Right Arrow')", "$item_index": 14 } },
-            { "cycle_item_left@controls_mcjava.keymapping_grid_item": { "$item_label": "key.cycleItemLeft", "$bindName": "(#binding_button_text = 'Up Pgn')", "$item_index": 15 } },
-            { "cycle_item_right@controls_mcjava.keymapping_grid_item": { "$item_label": "key.cycleItemRight", "$bindName": "(#binding_button_text = 'Down Pgn')", "$item_index": 16 } },
-            { "space_bottom@screen_mcjava.vspace": {} }
+            { "look_up_slight@controls_ui.keymapping_grid_item": { "$item_label": "key.lookUpSlight", "$bindName": "(#binding_button_text = 'Subtract')", "$item_index":  0 } },
+            { "look_down_slight@controls_ui.keymapping_grid_item": { "$item_label": "key.lookDownSlight", "$bindName": "(#binding_button_text = 'Add')", "$item_index":  1 } },
+            { "look_up_right@controls_ui.keymapping_grid_item": { "$item_label": "key.lookUpRight", "$bindName": "(#binding_button_text = 'NP 9')", "$item_index":  2 } },
+            { "look_up@controls_ui.keymapping_grid_item": { "$item_label": "key.lookUp", "$bindName": "(#binding_button_text = 'NP 8')", "$item_index":  3 } },
+            { "look_up_left@controls_ui.keymapping_grid_item": { "$item_label": "key.lookUpLeft", "$bindName": "(#binding_button_text = 'NP 7')", "$item_index":  4 } },
+            { "look_right@controls_ui.keymapping_grid_item": { "$item_label": "key.lookRight", "$bindName": "(#binding_button_text = 'NP 6')", "$item_index":  5 } },
+            { "look_center@controls_ui.keymapping_grid_item": { "$item_label": "key.lookCenter", "$bindName": "(#binding_button_text = 'NP 5, End, \\')", "$item_index":  6 } },
+            { "look_left@controls_ui.keymapping_grid_item": { "$item_label": "key.lookLeft", "$bindName": "(#binding_button_text = 'NP 4')", "$item_index":  7 } },
+            { "look_down_right@controls_ui.keymapping_grid_item": { "$item_label": "key.lookDownRight", "$bindName": "(#binding_button_text = 'NP 3')", "$item_index":  8 } },
+            { "look_down@controls_ui.keymapping_grid_item": { "$item_label": "key.lookDown", "$bindName": "(#binding_button_text = 'NP 2')", "$item_index":  9 } },
+            { "look_down_left@controls_ui.keymapping_grid_item": { "$item_label": "key.lookDownLeft", "$bindName": "(#binding_button_text = 'NP 1')", "$item_index": 10 } },
+            { "look_up_smooth@controls_ui.keymapping_grid_item": { "$item_label": "key.lookUpSmooth", "$bindName": "(#binding_button_text = 'Up Arrow')", "$item_index": 11 } },
+            { "look_down_smooth@controls_ui.keymapping_grid_item": { "$item_label": "key.lookDownSmooth", "$bindName": "(#binding_button_text = 'Down Arrow')", "$item_index": 12 } },
+            { "look_left_smooth@controls_ui.keymapping_grid_item": { "$item_label": "key.lookLeftSmooth", "$bindName": "(#binding_button_text = 'Left Arrow')", "$item_index": 13 } },
+            { "look_right_smooth@controls_ui.keymapping_grid_item": { "$item_label": "key.lookRightSmooth", "$bindName": "(#binding_button_text = 'Right Arrow')", "$item_index": 14 } },
+            { "cycle_item_left@controls_ui.keymapping_grid_item": { "$item_label": "key.cycleItemLeft", "$bindName": "(#binding_button_text = 'Up Pgn')", "$item_index": 15 } },
+            { "cycle_item_right@controls_ui.keymapping_grid_item": { "$item_label": "key.cycleItemRight", "$bindName": "(#binding_button_text = 'Down Pgn')", "$item_index": 16 } },
+            { "space_bottom@screen_ui.vspace": {} }
           ]
         }
       }
@@ -256,13 +256,13 @@
     "size": [310, 20],
     "offset": [-1, -9],
     "controls": [
-      { "reset@mouse_mcjava.reset_button": {} },
-      { "fill@screen_mcjava.hfill": {} },
-      { "back@settings_mcjava.back_button": { "size": [150, 20] } }
+      { "reset@mouse_ui.reset_button": {} },
+      { "fill@screen_ui.hfill": {} },
+      { "back@settings_ui.back_button": { "size": [150, 20] } }
     ]
   },
 
-  "mouse_settings_button@toggle_button_mcjava.toggle_button": {
+  "mouse_settings_button@toggle_button_ui.toggle_button": {
     "$toggle_button_name": "mouse_settings",
     "size": [150, 20],
     "$toggle_index": 1,
@@ -270,7 +270,7 @@
     "$toggle_control_name": "mouse_settings_view"
   },
 
-  "auto_jump_toggle@option_toggle_mcjava.option_toggle": {
+  "auto_jump_toggle@option_toggle_ui.option_toggle": {
     "$option_toggle_text": "options.autoJump",
     "$option_binding_name": "#mouse_autoJump",
     "$option_enabled_binding_name": "#mouse_autojump_enabled",
@@ -333,7 +333,7 @@
         }
       },
       {
-        "keymapping_button_1@mouse_mcjava.reset_binding_button": {
+        "keymapping_button_1@mouse_ui.reset_binding_button": {
           "anchor_from": "top_right",
           "anchor_to": "top_right",
           "offset": [-27.5, 0],
@@ -351,10 +351,10 @@
     ]
   },
 
-  "binding_button@button_mcjava.button": {
+  "binding_button@button_ui.button": {
     "size": [74, 20],
     "$pressed_button_name": "button.binding_button",
-    "$button_type_panel": "mouse_mcjava.binding_button_content",
+    "$button_type_panel": "mouse_ui.binding_button_content",
     "bindings": [
       {
         "binding_type": "collection_details",
@@ -386,7 +386,7 @@
     ]
   },
 
-  "reset_binding_button@button_mcjava.button": {
+  "reset_binding_button@button_ui.button": {
     "layer": 1,
     "size": [50, 20],
     "$button_text": "controls.reset",
@@ -407,11 +407,11 @@
     ]
   },
 
-  "reset_binding_button_locked@screen_mcjava.locked": {
+  "reset_binding_button_locked@screen_ui.locked": {
     "type": "input_panel",
     "focus_enabled": false,
     "layer": 10,
-    "$button_text": "Reset",
+    "$button_text": "controls.reset",
     "$text_locked_color": [0.62, 0.62, 0.62],
     "size": [50, 20],
     "bindings": [
@@ -425,7 +425,7 @@
     ]
   },
 
-  "reset_button@button_mcjava.action_button": {
+  "reset_button@button_ui.action_button": {
     "$pressed_button_name": "button.reset_keyboard_bindings",
     "$button_text": "controls.resetAll",
     "size": [150, 20]

@@ -1,13 +1,13 @@
 /* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "bed_mcjava",
+  "namespace": "bed_ui",
 
   "in_bed_screen_content_panel": {
     "type": "panel",
     "controls": [
-      { "leave_bed@bed_mcjava.leave_button": {} },
-      { "open_chat@bed_mcjava.chat_button": {} },
-      { "controller_a@bed_mcjava.a_button_panel": {} }
+      { "leave_bed@bed_ui.leave_button": {} },
+      { "open_chat@bed_ui.chat_button": {} },
+      { "controller_a@bed_ui.a_button_panel": {} }
     ]
   },
 
@@ -19,7 +19,7 @@
     "alpha": 0.4
   },
   
-  "leave_button@button_mcjava.button": {
+  "leave_button@button_ui.button": {
     "anchor_from": "bottom_middle",
     "anchor_to": "bottom_middle",
     "offset": [0, -44],
@@ -38,7 +38,7 @@
     ]
   },
 
-  "chat_button@button_mcjava.button": {
+  "chat_button@button_ui.button": {
     "anchor_from": "bottom_middle",
     "anchor_to": "bottom_middle",
     "offset": [0, -20],

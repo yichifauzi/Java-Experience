@@ -13,7 +13,7 @@
 				"mapping_type": "global"
 			}
 		],
-    "$screen_content": "permissions_mcjava.permissions_screen_content_panel",
+    "$screen_content": "permissions_ui.permissions_screen_content_panel",
     "$screen_background": "content.screen_background"
   }
 }

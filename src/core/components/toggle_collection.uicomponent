@@ -1,6 +1,6 @@
 /* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "toggle_collection_mcjava",
+  "namespace": "toggle_collection_ui",
 
   "toggle_collection": {
     "type": "panel",
@@ -22,11 +22,11 @@
     "$toggle_focus_wrap_enabled|default": true,
     "$toggle_focus_magnet_enabled|default": true,
     "controls": [
-      { "$toggle_view_binding_name@toggle_collection_mcjava.toggle_collection_control": {} }      
+      { "$toggle_view_binding_name@toggle_collection_ui.toggle_collection_control": {} }      
     ]
   },
 
-  "toggle_collection_control@option_toggle_mcjava.toggle_base": {
+  "toggle_collection_control@option_toggle_ui.toggle_base": {
     "focus_wrap_enabled": false,
     "bindings": [
       {
@@ -58,8 +58,8 @@
         "binding_name_override": "#toggle_on_hover"
       }
     ],
-    "$toggle_state_panel|default": "toggle_button_mcjava.toggle_state_panel",
-    "$toggle_type_panel|default": "toggle_button_mcjava.toggle_button_label",
+    "$toggle_state_panel|default": "toggle_button_ui.toggle_state_panel",
+    "$toggle_type_panel|default": "toggle_button_ui.toggle_button_label",
     "$checked_toggle_bg|default": "resources.button_default",
     "$unchecked_toggle_bg|default": "resources.button_default",
     "$checked_hover_toggle_bg|default": "resources.button_hover",

@@ -1,0 +1,7 @@
+/* Version: 2.0.0 */
+{
+  "globalpause_screen@content.base_screen": {
+    "$screen_content": "global_pause_ui.global_pause_screen_content_panel",
+    "$screen_background": "content.screen_background"
+  }
+}

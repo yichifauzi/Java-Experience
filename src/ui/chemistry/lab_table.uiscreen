@@ -1,5 +1,7 @@
+/* Version: 2.0.0 */
+/* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "lab_table_mcjava",
+  "namespace": "lab_table_ui",
 
   "lab_table_screen_content_panel": {
     "type": "panel",
@@ -11,26 +13,26 @@
           "controls": [
             { "lab_table_bg@resources1.lab_table_bg": {} },
             {
-              "title@container_mcjava.title": {
+              "title@container_ui.title": {
                 "text": "labtable.title",
                 "offset": [0, 5],
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle"
               }
             },
-            { "content@lab_table_mcjava.lab_table_content_panel": {} },
+            { "content@lab_table_ui.lab_table_content_panel": {} },
             {
               "inventory": {
                 "type": "panel",
                 "layer": 3,
                 "controls": [
-                  { "inventory_panel@container_mcjava.inventory_grid_panel": {} },
-                  { "hotbar_grid@container_mcjava.hotbar_grid": {} },
+                  { "inventory_panel@container_ui.inventory_grid_panel": {} },
+                  { "hotbar_grid@container_ui.hotbar_grid": {} },
                   { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} }
                 ]
               }
             },
-            { "inventory_selected_icon_button@container_mcjava.inventory_selected_icon_button": {} }
+            { "inventory_selected_icon_button@container_ui.inventory_selected_icon_button": {} }
           ]
         }
       },
@@ -41,8 +43,8 @@
   "lab_table_content_panel": {
     "type": "panel",
     "controls": [
-      { "input@lab_table_mcjava.input_grid": {} },
-      { "combine@lab_table_mcjava.combine_button": {} }
+      { "input@lab_table_ui.input_grid": {} },
+      { "combine@lab_table_ui.combine_button": {} }
     ]
   },
 
@@ -53,11 +55,11 @@
     "offset": [7, 65],
     "anchor_from": "top_left",
     "anchor_to": "top_left",
-    "grid_item_template": "lab_table_mcjava.input_slot",
+    "grid_item_template": "lab_table_ui.input_slot",
     "collection_name": "labtable_input"
   },
 
-  "input_slot@container_mcjava.container_slot": {
+  "input_slot@container_ui.container_slot": {
     "$item_collection_name": "labtable_input"
   },
 
@@ -69,7 +71,7 @@
     "size": [86, 18],
     "controls": [
       {
-        "button@button_mcjava.button": {
+        "button@button_ui.button": {
           "size": [86, 18],
           "$default_button_bg": "resources1.lab_button_default",
           "$hover_button_bg": "resources1.lab_button_hover",

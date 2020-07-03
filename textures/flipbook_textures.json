@@ -1,0 +1,7 @@
+[
+  {
+    "flipbook_texture": "textures/items/apple",
+    "atlas_tile": "apple_item",
+    "frames": [0, 1, 2, 1]
+  }
+]

@@ -1,19 +1,20 @@
 /* Version: 2.0.0 */
+/* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "braze_mcjava",
+  "namespace": "braze_ui",
 
   "braze_screen_content_panel": {
     "type": "panel",
     "controls": [ { "content@braze_content": {} }  ]
   },
 
-  "braze_content@popup_mcjava.modal_with_buttons": {
-    "$title": "braze_mcjava.title",
+  "braze_content@popup_ui.modal_with_buttons": {
+    "$title": "braze_ui.title",
     "$description": "content.v2px",
-    "$button_panel": "braze_mcjava.buttons_panel"
+    "$button_panel": "braze_ui.buttons_panel"
   },
 
-  "title@account_banned_mcjava.title": {
+  "title@account_banned_ui.title": {
     "text": "#body_text",
     "property_bag": {},
     "bindings": [ { "binding_name": "#body_text" } ]
@@ -32,12 +33,12 @@
           "orientation": "horizontal",
           "controls": [
             { "left_button@left_button": { "size": [150, 20] } },
-            { "space@screen_mcjava.hfill": {} },
+            { "space@screen_ui.hfill": {} },
             { "right_button@right_button": { "size": [150, 20] } }
           ]
         }
       },
-      { "space@screen_mcjava.vspace": {} },
+      { "space@screen_ui.vspace": {} },
       {
         "bottom_stack": {
           "type": "panel",
@@ -48,14 +49,14 @@
     ]
   },
 
-  "left_button@button_mcjava.button": {
+  "left_button@button_ui.button": {
     "$pressed_button_name": "button.left_button",
     "$button_text": "#leftButton_text",
     "size": [150, 20],
     "$button_text_binding_type": "global"
   },
 
-  "right_button@button_mcjava.button": {
+  "right_button@button_ui.button": {
     "$pressed_button_name": "button.right_button",
     "$button_text": "#rightButton_text",
     "size": [150, 20],

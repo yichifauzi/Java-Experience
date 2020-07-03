@@ -1,29 +1,36 @@
+/* Version: 2.0.0 */
+/* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "world_progress_mcjava",
+  "namespace": "world_progress_ui",
 
   "world_progress_screen_content_panel": {
     "type": "panel",
     "controls": [
-      { "content@world_progress_mcjava.worlds_content_panel": {} },
-      { "popup_dialog_factory@world_progress_mcjava.popup_dialog_factory": {} }
+      { "content@world_progress_ui.worlds_content_panel": {} },
+      { "popup_dialog_factory@world_progress_ui.popup_dialog_factory": {} }
     ]
   },
 
   "overworld_progress_screen_content_panel": {
     "type": "panel",
     "controls": [
-      { "content@world_progress_mcjava.dimension_content_panel": {} },
-      { "popup_dialog_factory@world_progress_mcjava.popup_dialog_factory": {} }
+      { "content@world_progress_ui.dimension_content_panel": {} },
+      { "popup_dialog_factory@world_progress_ui.popup_dialog_factory": {} }
     ]
   },
 
-  "nether_progress_screen_content_panel@world_progress_mcjava.overworld_progress_screen_content_panel": {},
-  "the_end_progress_screen_content_panel@world_progress_mcjava.overworld_progress_screen_content_panel": {},
-  "world_convert_progress_screen_content_panel@world_progress_mcjava.world_progress_screen_content_panel": {},
-  "delete_progress_screen_content_panel@world_progress_mcjava.world_progress_screen_content_panel": {},
-  "modal_progress_screen_content_panel@world_progress_mcjava.world_progress_screen_content_panel": {},
+  "realms_progress_screen_content_panel@world_progress_ui.world_progress_screen_content_panel": {},
+  "nether_progress_screen_content_panel@world_progress_ui.overworld_progress_screen_content_panel": {},
+  "the_end_progress_screen_content_panel@world_progress_ui.overworld_progress_screen_content_panel": {},
+  "world_convert_progress_screen_content_panel@world_progress_ui.world_progress_screen_content_panel": {},
+  "delete_progress_screen_content_panel@world_progress_ui.world_progress_screen_content_panel": {},
+  "modal_progress_screen_content_panel@world_progress_ui.world_progress_screen_content_panel": {},
 
-  "world_save_progress_screen_content_panel@world_progress_mcjava.world_progress_screen_content_panel": {
+  "modal_screen_content_panel": {
+
+  },
+
+  "world_save_progress_screen_content_panel@world_progress_ui.world_progress_screen_content_panel": {
     "type": "panel",
     "layer": 50,
     "controls": [
@@ -33,11 +40,11 @@
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",
           "shadow": true,
-          "text": "menu.savingLevel",
+          "text": "menu.saving",
           "offset": [0, 70]
         }
       },
-      { "popup_dialog_factory@world_progress_mcjava.popup_dialog_factory": {} }
+      { "popup_dialog_factory@world_progress_ui.popup_dialog_factory": {} }
     ]
   },
 
@@ -54,7 +61,7 @@
         }
       },
       {
-        "world_progress@world_progress_mcjava.world_progress": {
+        "world_progress@world_progress_ui.world_progress": {
           "anchor_from": "center",
           "anchor_to": "center"
         }
@@ -64,13 +71,30 @@
     ]
   },
 
+  "dimension_content_panel": {
+    "type": "panel",
+    "controls": [
+      {
+        "progress_title_text@progress.progress_title_text": {
+          "color": "white",
+          "text": "multiplayer.downloadingTerrain",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "shadow": true,
+          "offset": [0, 70]
+        }
+      },
+      { "@progress_bar_text": {} }
+    ]
+  },
+
   "world_progress": {
     "type": "panel",
     "size": [90, 90],
     "offset": [0, 10],
     "layer": 5,
     "controls": [
-      { "full_progress_bar_icon@world_progress_mcjava.full_world_progress": { "layer": 4 } },
+      { "full_progress_bar_icon@world_progress_ui.full_world_progress": { "layer": 4 } },
       { "@empty_progress_bar_icon": {} }
     ],
     "bindings": [
@@ -93,12 +117,12 @@
     "bindings": [ { "binding_name": "#progress_text" } ]
   },
 
-  "cancel_button@button_mcjava.button": {
+  "cancel_button@button_ui.button": {
     "$pressed_button_name": "button.menu_exit",
     "$button_text": "gui.cancel",
     "anchor_from": "bottom_middle", 
     "anchor_to": "bottom_middle",
-    "offset": [0, "30%"],
+    "offset": [0, "-30%"],
     "bindings": [
       {
         "binding_name": "#cancel_visible",
@@ -109,71 +133,40 @@
 
   "empty_progress_bar_icon": {
     "type": "image",
-    "texture": "src/core/assets/fmarquespto/textures/white",
+    "texture": "src/core/assets/fmarquespto/white",
     "size": ["100%", "100%"],
     "color": "black",
     "layer": 1
   },
 
-  "percentage": {
-    "type": "stack_panel",
-    "orientation": "horizontal",
-    "size": ["100%c", 10],
-    "anchor_from": "top_middle", 
-    "anchor_to": "top_middle",
-    "offset": [0, -20],
-    "controls": [
-      {
-        "per": {
-          "type": "label",
-          "text": "$per",
-          "layer": 1,
-          "bindings": [
-            {
-              "binding_name": "$1",
-              "binding_name_override": "#visible"
-            }
-          ]
-        }
-      },
-      {
-        "percent": {
-          "type": "label",
-          "color": "$text_color",
-          "shadow": true,
-          "layer": 10,
-          "text": "gui.percentage"
-        }
-      }
-    ]
-  },
-
   "full_world_progress": {
     "type": "image",
-    "texture": "src/core/assets/fmarquespto/textures/loading/world_loading_center",
-    "clip_direction": "left",
+    "texture": "src/core/assets/fmarquespto/world_loading",
     "size": ["100%", "100%"],
-    "clip_pixelperfect": true,
-    "layer": 5,
-    "bindings": [
-      {
-        "binding_name": "#loading_bar_percentage",
-        "binding_name_override": "#clip_ratio"
-      }
-    ]
+    "uv": "@world_progress_ui.anim_world_progress",
+    "uv_size": [45, 45]
+  },
+
+  "anim_world_progress": {
+    "anim_type": "flip_book",
+    "initial_uv": [0, 0],
+    "frame_count": 50,
+    "frame_step": 1,
+    "fps": 15,
+    "reversible": false
   },
 
   "popup_dialog_factory": {
     "type": "factory",
     "control_ids": {
       "test": "dialog@progress.popup_dialog_base",
-      "add_on_only": "add_on_only@world_progress_mcjava.add_on_only",
-      "add_on_confirmation": "add_on_only@world_progress_mcjava.add_on_confirmation",
-      "add_on_with_optional_texture_pack": "add_on_only@world_progress_mcjava.add_on_with_optional_texture_pack",
-      "add_on_with_texture_pack": "add_on_only@world_progress_mcjava.add_on_with_texture_pack",
-      "texture_pack_optional": "add_on_only@world_progress_mcjava.texture_pack_optional",
-      "texture_pack_required": "add_on_only@world_progress_mcjava.texture_pack_required",
-      "online_safety_dialog": "online_safety_dialog@world_progress_mcjava.online_safety_popup"
+      "add_on_only": "add_on_only@world_progress_ui.add_on_only",
+      "add_on_confirmation": "add_on_only@world_progress_ui.add_on_confirmation",
+      "add_on_with_optional_texture_pack": "add_on_only@world_progress_ui.add_on_with_optional_texture_pack",
+      "add_on_with_texture_pack": "add_on_only@world_progress_ui.add_on_with_texture_pack",
+      "texture_pack_optional": "add_on_only@world_progress_ui.texture_pack_optional",
+      "texture_pack_required": "add_on_only@world_progress_ui.texture_pack_required",
+      "online_safety_dialog": "online_safety_dialog@world_progress_ui.online_safety_popup"
     }
   },
 
@@ -217,16 +210,16 @@
     "$top_button_press|default": "",
     "$top_button_text|default": "",
     "controls": [
-      { "bg@screen_mcjava.dirt_background": {} },
+      { "bg@content.dirt_background": {} },
       {
-        "modal@popup_mcjava.modal_with_buttons": {
-          "$title": "world_progress_mcjava.simple_popup_title",
-          "$description": "world_progress_mcjava.simple_popup_description",
-          "$button_panel": "world_progress_mcjava.simple_popup_two_buttons_panel",
+        "modal@popup_ui.modal_with_buttons": {
+          "$title": "world_progress_ui.simple_popup_title",
+          "$description": "world_progress_ui.simple_popup_description",
+          "$button_panel": "world_progress_ui.simple_popup_two_buttons_panel",
           "variables": [
             {
               "requires": "$use_top_button",
-              "$button_panel": "world_progress_mcjava.simple_popup_three_buttons_panel"
+              "$button_panel": "world_progress_ui.simple_popup_three_buttons_panel"
             }
           ]
         }
@@ -245,13 +238,13 @@
     "shadow": true
   },
 
-  "simple_popup_description@world_progress_mcjava.simple_popup_title": {
+  "simple_popup_description@world_progress_ui.simple_popup_title": {
     "size": ["default", "default"],
     "max_size": ["80%", "default"],
     "text": "$description_text"  
   },
 
-  "add_on_only@world_progress_mcjava.simple_popup_base": {
+  "add_on_only@world_progress_ui.simple_popup_base": {
     "$title_text": "progressScreen.dialog.title.onlyBehavior",
     "$description_text": "progressScreen.dialog.message.onlyBehavior",
     "$top_button_text": "#empty_binding",
@@ -261,7 +254,7 @@
     "$bottom_button_text": "progressScreen.dialog.button.leave"
   },
 
-  "add_on_confirmation@world_progress_mcjava.simple_popup_base": {
+  "add_on_confirmation@world_progress_ui.simple_popup_base": {
     "$title_text": "progressScreen.dialog.title.scriptConfirm",
     "$description_text": "progressScreen.dialog.message.scriptConfirm",
     "$top_button_text": "#empty_binding",
@@ -271,7 +264,7 @@
     "$bottom_button_text": "progressScreen.dialog.button.leave"
   },
 
-  "add_on_with_optional_texture_pack@world_progress_mcjava.simple_popup_base": {
+  "add_on_with_optional_texture_pack@world_progress_ui.simple_popup_base": {
     "$title_text": "progressScreen.dialog.title.behaviorAndResourcePack",
     "$description_text": "progressScreen.dialog.message.behaviorAndResourcePack",
     "$use_top_button": true,
@@ -283,7 +276,7 @@
     "$bottom_button_text": "progressScreen.dialog.button.leave"
   },
 
-  "add_on_with_texture_pack@world_progress_mcjava.simple_popup_base": {
+  "add_on_with_texture_pack@world_progress_ui.simple_popup_base": {
     "$title_text": "progressScreen.dialog.title.behaviorAndResourcePack",
     "$description_text": "progressScreen.dialog.message.behaviorAndResourcePack",
     "$top_button_text": "#empty_binding",
@@ -293,7 +286,7 @@
     "$bottom_button_text": "progressScreen.dialog.button.leave"
   },
 
-  "texture_pack_optional@world_progress_mcjava.simple_popup_base": {
+  "texture_pack_optional@world_progress_ui.simple_popup_base": {
     "$title_text": "progressScreen.dialog.title.resourcePack",
     "$description_text": "progressScreen.dialog.message.resourcePackOptional",
     "$top_button_text": "#empty_binding",
@@ -303,7 +296,7 @@
     "$bottom_button_text": "progressScreen.dialog.button.join"
   },
 
-  "texture_pack_required@world_progress_mcjava.simple_popup_base": {
+  "texture_pack_required@world_progress_ui.simple_popup_base": {
     "$title_text": "progressScreen.dialog.title.resourcePack",
     "$description_text": "progressScreen.dialog.message.resourcePackRequired",
     "$top_button_text": "#empty_binding",
@@ -321,7 +314,7 @@
     "orientation": "horizontal",
     "controls": [
       {
-        "left@button_mcjava.button": {
+        "left@button_ui.button": {
           "$pressed_button_name": "$middle_button_press",
           "$button_binding_condition": "once",
           "$button_text_binding_type": "global",
@@ -329,9 +322,9 @@
           "size": [150, 20]
         }
       },
-      { "space@screen_mcjava.hfill": {} },
+      { "space@content.hfill": {} },
       {
-        "right@button_mcjava.button": {
+        "right@button_ui.button": {
           "$pressed_button_name": "$bottom_button_press",
           "$button_text": "$bottom_button_text",
           "size": [150, 20]
@@ -353,7 +346,7 @@
           "orientation": "horizontal",
           "controls": [
             {
-              "left@button_mcjava.button": {
+              "left@button_ui.button": {
                 "size": [150, 20],
                 "$pressed_button_name": "$top_button_press",
                 "$button_binding_condition": "once",
@@ -361,9 +354,9 @@
                 "$button_text": "$top_button_text"
               }
             },
-            { "space@screen_mcjava.hfill": {} },
+            { "space@content.hfill": {} },
             {
-              "right@button_mcjava.button": {
+              "right@button_ui.button": {
                 "size": [150, 20],
                 "$pressed_button_name": "$middle_button_press",
                 "$button_binding_condition": "once",
@@ -374,14 +367,14 @@
           ]
         }
       },
-      { "space@screen_mcjava.vspace": {} },
+      { "space@content.vspace": {} },
       {
         "bottom_stack": {
           "type": "panel",
           "size": [310, 20],
           "controls": [
             {
-              "bottom_button@button_mcjava.button": {
+              "bottom_button@button_ui.button": {
                 "size": [200, 20],
                 "$pressed_button_name": "$bottom_button_press",
                 "$button_text": "$bottom_button_text"
@@ -397,18 +390,18 @@
     "type": "panel",
     "layer": 100,
     "controls": [
-      { "bg@screen_mcjava.dirt_background": {} },
+      { "bg@content.dirt_background": {} },
       {
-        "modal@popup_mcjava.modal_with_buttons": {
-          "$title": "world_progress_mcjava.online_safety_title",
-          "$description": "world_progress_mcjava.online_safety_description",
-          "$button_panel": "world_progress_mcjava.online_safety_buttons_panel",
+        "modal@popup_ui.modal_with_buttons": {
+          "$title": "world_progress_ui.online_safety_title",
+          "$description": "world_progress_ui.online_safety_description",
+          "$button_panel": "world_progress_ui.online_safety_buttons_panel",
           "anchor_to": "top_middle",
           "anchor_from": "top_middle",
           "offset": [0, 30],
           "$top_space": [0, 30],
           "$bottom_space": ["100%", 40],
-          "$bottom_controls": [ { "checkbox@world_progress_mcjava.online_safety_checkbox": {} } ]
+          "$bottom_controls": [ { "checkbox@world_progress_ui.online_safety_checkbox": {} } ]
         }
       }
     ]
@@ -458,14 +451,14 @@
           "tts_value_order_priority": 101,
           "$toggle_enabled_binding_type": "global",
           "controls": [
-            { "unchecked@world_progress_mcjava.online_safety_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_unchecked" } },
-            { "checked@world_progress_mcjava.online_safety_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_checked" } },
-            { "unchecked_hover@world_progress_mcjava.online_safety_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_unchecked_hover" } },
-            { "checked_hover@world_progress_mcjava.online_safety_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_checked_hover" } },
-            { "unchecked_locked@world_progress_mcjava.online_safety_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_unchecked" } },
-            { "checked_locked@world_progress_mcjava.online_safety_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_checked" } },
-            { "unchecked_locked_hover@world_progress_mcjava.online_safety_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_unchecked" } },
-            { "checked_locked_hover@world_progress_mcjava.online_safety_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_checked" } }
+            { "unchecked@world_progress_ui.online_safety_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_unchecked" } },
+            { "checked@world_progress_ui.online_safety_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_checked" } },
+            { "unchecked_hover@world_progress_ui.online_safety_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_unchecked_hover" } },
+            { "checked_hover@world_progress_ui.online_safety_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_checked_hover" } },
+            { "unchecked_locked@world_progress_ui.online_safety_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_unchecked" } },
+            { "checked_locked@world_progress_ui.online_safety_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_checked" } },
+            { "unchecked_locked_hover@world_progress_ui.online_safety_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_unchecked" } },
+            { "checked_locked_hover@world_progress_ui.online_safety_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_checked" } }
           ]
         }
       }
@@ -480,7 +473,7 @@
     "anchor_to": "top_middle",
     "controls": [
       { "checkbox_visuals@$checkbox_bg": { "size": [20, 20] } },
-      { "@screen_mcjava.hspace": {} },
+      { "@content.hspace": {} },
       {
         "buffer_panel": {
           "type": "panel",
@@ -508,19 +501,19 @@
     "anchor_from": "center",
     "orientation": "horizontal",
     "controls": [
-      { "left@world_progress_mcjava.online_safety_proceed_button": {} },
-      { "space@screen_mcjava.hfill": {} },
-      { "right@world_progress_mcjava.online_safety_back_button": {} }
+      { "left@world_progress_ui.online_safety_proceed_button": {} },
+      { "space@content.hfill": {} },
+      { "right@world_progress_ui.online_safety_back_button": {} }
     ]
   },
 
-  "online_safety_proceed_button@button_mcjava.button": {
+  "online_safety_proceed_button@button_ui.button": {
     "size": [150, 20],
     "$pressed_button_name": "button.proceed",
     "$button_text": "onlinePlay.proceed"
   },
 
-  "online_safety_back_button@button_mcjava.button": {
+  "online_safety_back_button@button_ui.button": {
     "size": [150, 20],
     "$pressed_button_name": "button.back",
     "$button_text": "onlinePlay.Back"

@@ -25,6 +25,9 @@
     "src/core/screen.ui",
     "src/core/screen.ui",
     "src/core/assets/resources.uitexture",
+    /* UI - Account */
+    "src/ui/account/account_banned.uiscreen",
+    "src/ui/account/account_transfer_error.uiscreen",
     /* UI - Authentication */
     "src/ui/authentication/authentication.uiscreen",
     "src/ui/authentication/authentication_modals.uiscreen",
@@ -81,6 +84,7 @@
     "src/ui/debug/content_log.uiscreen",
     "src/ui/debug/content_log_history.uiscreen",
     "src/ui/debug/safe_zone.uiscreen",
+    "src/ui/debug/perf_turtle.uiscreen",
     /* UI - Education */
     "src/ui/education/chalkboard.uiscreen", 
     /* UI - Menu */
@@ -113,6 +117,7 @@
     "src/ui/settings/controller_settings.uiscreen",
     "src/ui/settings/controls.uiscreen",
     "src/ui/settings/debug.uiscreen",
+    "src/ui/settings/game_settings.uiscreen",
     "src/ui/settings/global_resource_packs.uiscreen",
     "src/ui/settings/language.uiscreen",
     "src/ui/settings/percentage_slider.uiscreen",
@@ -124,8 +129,14 @@
     "src/ui/settings/touch.uiscreen",
     "src/ui/settings/user_profile.uiscreen",
     "src/ui/settings/video.uiscreen",
+    "src/ui/settings/pack_settings.uiscreen",
+    "src/ui/settings/manifest_validation.uiscreen",
     "src/ui/resource_packs.ui",
     "src/ui/storage_managment.ui",
+    /* UI - Store */
+    "src/ui/store/pdp.uiscreen",
+    "src/ui/store/pdp_screenshots.ui",
+    "src/ui/store/store.ui",
     /* UI - World */
     "src/ui/world/create/more_options.json",
     "src/ui/world/create/behavior_packs.json",
@@ -141,9 +152,6 @@
     "src/ui/world/seed_picker.uiscreen",
     "src/ui/world/custom_templates.uiscreen",
     "src/ui/world/world_templates.uiscreen",
-    /* UI - Account */
-    "src/ui/account/account_banned.uiscreen",
-    "src/ui/account/account_transfer_error.uiscreen",
     /* UI - Xbl */
     /* UI - Others */
     "src/ui/others/bundle_purchase_warning.uiscreen",
@@ -154,6 +162,9 @@
     "src/ui/others/auto_save_info.uiscreen",
     "src/ui/others/braze.uiscreen",
     "src/ui/others/disconnect.uiscreen",
-    "src/ui/others/screenshot.uiscreen"
+    "src/ui/others/simple_inprogress.uiscreen",
+    "src/ui/others/screenshot.uiscreen",
+    "src/ui/others/emote_wheel.uiscreen",
+    "src/ui/others/global_pause.uiscreen"
   ]
 }

@@ -2,7 +2,7 @@
 {
   "death_screen@content.base_screen": {
     "load_screen_immediately": true,
-    "$screen_content": "death_menu_mcjava.death_menu_screen_content_panel",
-    "$screen_background": "death_menu_mcjava.background_gradient"
+    "$screen_content": "death_menu_ui.death_menu_screen_content_panel",
+    "$screen_background": "death_menu_ui.background_gradient"
   }
 }

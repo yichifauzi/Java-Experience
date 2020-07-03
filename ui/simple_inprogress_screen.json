@@ -1,0 +1,7 @@
+/* Version: 2.0.0 */
+{
+  "simple_inprogress_screen@content.base_screen": {
+    "$screen_content": "simple_inprogress_ui.simple_inprogress_screen_content_panel",
+    "$screen_background": "content.dirt_background"
+  }
+}

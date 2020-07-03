@@ -1,6 +1,7 @@
 /* Version: 2.0.0 */
+/* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "auto_save_info_mcjava",
+  "namespace": "auto_save_info_ui",
 
   "auto_save_info_screen_content_panel": {
     "type": "panel",
@@ -10,10 +11,10 @@
     ]
   },
 
-  "auto_save_info_content@popup_mcjava.modal_with_buttons": {
-    "$title": "auto_save_info_mcjava.title",
-    "$description": "auto_save_info_mcjava.description",
-    "$button_panel": "auto_save_info_mcjava.buttons_panel"
+  "auto_save_info_content@popup_ui.modal_with_buttons": {
+    "$title": "auto_save_info_ui.title",
+    "$description": "auto_save_info_ui.description",
+    "$button_panel": "auto_save_info_ui.buttons_panel"
   },
 
   "title": {
@@ -57,7 +58,7 @@
     ]
   },
 
-  "accept_button@button_mcjava.button": {
+  "accept_button@button_ui.button": {
     "size": [150, 20],
     "$pressed_button_name": "button.info_accept",
     "$button_text": "gui.ok"

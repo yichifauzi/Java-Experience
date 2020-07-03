@@ -1,20 +1,20 @@
+/* Version: 2.0.0 */
 /* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "crafting_table_mcjava",
+  "namespace": "crafting_table_ui",
 
-  "crafting_table_screen_content_panel@crafting_mcjava.crafting_screen_content_panel": {
+  "crafting_table_screen_content_panel@crafting_ui.crafting_screen_content_panel": {
     "$container_bg": "resources1.crafting_table_bg",
-    "$specified_panel": "crafting_table_mcjava.crafting_table_content_panel"
+    "$specified_panel": "crafting_table_ui.crafting_table_content_panel"
   },
 
   "crafting_table_content_panel": {
     "type": "panel",
     "controls": [
-      { "recipe_book_button@recipes_mcjava.recipe_book_button": { "offset": [5, 34] } },
-      { "title@crafting_mcjava.crafting_text": { "offset": [29, 5] } },
-      { "crafting@crafting_table_mcjava.crafting_grid": {} },
-      { "arrow_button@crafting_mcjava.crafting_arrow_button": { "size": [22, 15], "offset": [90, 35] } },
-      { "output@crafting_table_mcjava.output_slot": {} }
+      { "recipe_book_button@recipes_ui.recipe_book_button": { "offset": [5, 34] } },
+      { "title@crafting_ui.crafting_text": { "offset": [29, 5] } },
+      { "crafting@crafting_table_ui.crafting_grid": {} },
+      { "output@crafting_table_ui.output_slot": {} }
     ]
   },
 
@@ -28,29 +28,29 @@
     "collection_name": "crafting_input_items",
     "controls": [
       {
-        "crafting_input_item_top_left@crafting_mcjava.crafting_input_grid_item": {
+        "crafting_input_item_top_left@crafting_ui.crafting_input_grid_item": {
           "grid_position": [0, 0],
           "$focus_id_binding_type": "none",
           "$focus_id": "crafting_input_top_left",
           "$focus_left_binding_type": "none"
         }
       },
-      { "crafting_input_item_top_mid@crafting_mcjava.crafting_input_grid_item": { "grid_position": [1, 0] } },
-      { "crafting_input_item_top_right@crafting_mcjava.crafting_input_grid_item": { "grid_position": [2, 0] } },
+      { "crafting_input_item_top_mid@crafting_ui.crafting_input_grid_item": { "grid_position": [1, 0] } },
+      { "crafting_input_item_top_right@crafting_ui.crafting_input_grid_item": { "grid_position": [2, 0] } },
       {
-        "crafting_input_item_mid_left@crafting_mcjava.crafting_input_grid_item": {
+        "crafting_input_item_mid_left@crafting_ui.crafting_input_grid_item": {
           "grid_position": [0, 1],
           "$focus_id_binding_type": "none",
           "$focus_id": "crafting_input_mid_left",
           "$focus_left_binding_type": "none"
         }
       },
-      { "crafting_input_item_middle@crafting_mcjava.crafting_input_grid_item": {"grid_position": [1, 1] }  },
-      { "crafting_input_item_mid_right@crafting_mcjava.crafting_input_grid_item": { "grid_position": [2, 1] } },
-      { "crafting_input_item_bot_left@crafting_mcjava.crafting_input_grid_item": { "grid_position": [0, 2] } },
-      { "crafting_input_item_bot_mid@crafting_mcjava.crafting_input_grid_item": { "grid_position": [1, 2] } },
+      { "crafting_input_item_middle@crafting_ui.crafting_input_grid_item": {"grid_position": [1, 1] }  },
+      { "crafting_input_item_mid_right@crafting_ui.crafting_input_grid_item": { "grid_position": [2, 1] } },
+      { "crafting_input_item_bot_left@crafting_ui.crafting_input_grid_item": { "grid_position": [0, 2] } },
+      { "crafting_input_item_bot_mid@crafting_ui.crafting_input_grid_item": { "grid_position": [1, 2] } },
       {
-        "crafting_input_item_bot_right@crafting_mcjava.crafting_input_grid_item": {
+        "crafting_input_item_bot_right@crafting_ui.crafting_input_grid_item": {
           "grid_position": [2, 2],
           "$focus_right_binding_type": "none",
           "$focus_right": "crafting_output_item"
@@ -69,14 +69,14 @@
     "size": [18, 18],
     "controls": [
       {
-        "work_bench_output@crafting_mcjava.inventory_container_slot": {
+        "work_bench_output@crafting_ui.inventory_container_slot": {
           "$item_collection_name": "crafting_output_items",
-          "$button_ref": "crafting_mcjava.output_no_coalesce_container_slot_button",
+          "$button_ref": "crafting_ui.output_no_coalesce_container_slot_button",
           "$stack_count_binding_condition": "always",
           "$item_renderer_binding_condition": "always",
-          "$background_images": "crafting_mcjava.crafting_slot_backgrounds",
+          "$background_images": "crafting_ui.crafting_slot_backgrounds",
           "$focus_id_binding_type": "none",
-          "$red_cell_size": [24, 24],
+          "$slot_size": [24, 24],
           "$focus_id": "crafting_output_item",
           "$focus_right_binding_type": "none",
           "$focus_right": "FOCUS_OVERRIDE_STOP"

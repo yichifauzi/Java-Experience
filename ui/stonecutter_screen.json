@@ -1,9 +1,9 @@
 /* Version: 2.0.0 */
 {
   "stonecutter_screen@content.inventory_screen": {
-    "force_close_on_player_hurt": "$force_close_on_player_hurt",
+    "close_on_player_hurt": "$force_close_on_player_hurt",
     "$screen_background": "content.container_screen_background",
-    "$screen_content": "stonecutter_mcjava.stonecutter_screen_content_panel",
+    "$screen_content": "stonecutter_ui.stonecutter_screen_content_panel",
     "button_mappings": [
       {
         "from_button_id": "button.menu_cancel",

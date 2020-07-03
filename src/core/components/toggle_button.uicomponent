@@ -1,6 +1,6 @@
 /* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "toggle_button_mcjava",
+  "namespace": "toggle_button_ui",
 
   "toggle_button": {
     "type": "panel",
@@ -8,15 +8,15 @@
     "$toggle_button_text|default": "toggle_button_text",
     "$toggle_control_name|default": "this_thing",
     "controls": [
-      { "$toggle_control_name@toggle_button_mcjava.toggle_button_control": {} }      
+      { "$toggle_control_name@toggle_button_ui.toggle_button_control": {} }      
     ]
   },
 
-  "toggle_button_control@option_toggle_mcjava.toggle_base": {
+  "toggle_button_control@option_toggle_ui.toggle_base": {
     "$toggle_group|default": true,
     "toggle_name": "$toggle_button_name",
-    "$toggle_state_panel|default": "toggle_button_mcjava.toggle_state_panel",
-    "$toggle_type_panel|default": "toggle_button_mcjava.toggle_button_label",
+    "$toggle_state_panel|default": "toggle_button_ui.toggle_state_panel",
+    "$toggle_type_panel|default": "toggle_button_ui.toggle_button_label",
     "$checked_toggle_bg|default": "resources.button_default",
     "$unchecked_toggle_bg|default": "resources.button_default",
     "$checked_hover_toggle_bg|default": "resources.button_hover",
@@ -98,7 +98,7 @@
     "$tooltip_name|default": "null",
     "controls": [
       {
-        "tooltip@tooltip_mcjava.tooltip": {
+        "tooltip@tooltip_ui.tooltip": {
           "visible": "($state = checked_hover or $state = unchecked_hover or $state = checked_locked_hover or $state = unchecked_locked_hover)",
           "ignored": "($tooltip_name = null)"
         }
@@ -118,7 +118,7 @@
     ]
   },
 
-  "toggle_button_label@button_mcjava.button_label": {
+  "toggle_button_label@button_ui.button_label": {
     "text": "$toggle_button_text",
     "bindings": "$text_bindings",
     "$text_bindings|default": []

@@ -1,18 +1,18 @@
+/* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "world_resource_packs_mcjava",
+  "namespace": "world_resource_packs_ui",
 
   "world_resource_packs_screen_content_panel": {
     "type": "panel",
     "controls": [
-      { "title@screen_mcjava.title": { "text": "options.resourcePacks.title" } },
-      { "content@world_resource_packs_mcjava.world_resource_packs_content_panel": {} },
-      { "bottom@world_resource_packs_mcjava.bottom_content": {} }
+      { "title@content.title": { "offset": [0, 7], "text": "options.resourcePacks.title" } },
+      { "subtitle@content.title": { "offset": [0, 19], "text": "resourcePacks.dropInfo", "color": [0.333, 0.333, 0.333], "visible": "$is_pregame" } },
+      { "content@world_resource_packs_ui.world_resource_packs_content_panel": {} },
+      { "bottom@world_resource_packs_ui.bottom_content": {} }
     ]
   },
 
-  "world_resource_packs_content_panel": {
-    "type": "panel",
-    "size": ["100%", "100%"],
+  "world_resource_packs_content_panel@resource_packs_ui.resource_packs_centered_content_panel": {
     "$available_packs_title": "resourcePack.available.title",
     "$selected_packs_title": "resourcePack.selected.title",
     "$selected_pack_items": "#selected_pack_items_level",
@@ -66,31 +66,31 @@
     "$no_realms_packs_visibility_binding": "#no_realms_packs_visibility_level",
     "$no_unowned_packs_visibility_binding": "#no_unowned_packs_visibility_level",
     "$view_more_unowned_content_button_visibility_binding": "#suggested_content_visible_level",
-    "$force_pack_download_binding_type": "global",
-    "controls": [
-      { "content@resource_packs_mcjava.resource_packs_centered_content_panel": {} }
-    ]
+    "$force_pack_download_binding_type": "global"
   },
 
-  "bottom_content@screen_mcjava.panel": {
+  "bottom_content@content.panel": {
     "size": [310, 20],
     "anchor_from": "bottom_middle",
     "anchor_to": "bottom_middle",
     "offset": [0, -28],
     "controls": [
-      { "force_user_panel@world_resource_packs_mcjava.force_user_panel": {} },
+      { "force_user_panel@world_resource_packs_ui.force_user_panel": {} },
       {
-        "stack@screen_mcjava.stack": {
+        "stack@content.stack": {
           "controls": [
-            { "force_user@world_resource_packs_mcjava.force_user_agreement_toggle": {} },
-            { "fill@screen_mcjava.hfill": {} },
+            { "force_user@world_resource_packs_ui.force_user_agreement_toggle": {} },
+            { "fill@content.hfill": {} },
             {
-              "back@world_create_mcjava.back_button": {
-                "size": [
-                  150,
-                  20
-                ],
-                "$toggle_button_name": "world_resource_packs"
+              "back@world_create_ui.back_button": {
+                "size": [150, 20],
+                "$toggle_button_name": "world_resource_packs",
+                "variables": [
+                  {
+                    "requires": "(not $is_pregame)",
+                    "$toggle_button_name": "game_settings"
+                  }
+                ]
               }
             }
           ]
@@ -99,7 +99,7 @@
     ]
   },
 
-  "force_user_agreement_toggle@option_toggle_mcjava.option_toggle": {
+  "force_user_agreement_toggle@option_toggle_ui.option_toggle": {
     "$option_toggle_text": "Force User Agreement",
     "$tts_control_type_order_priority": 100,
     "$tts_value_order_priority": 101,
@@ -125,7 +125,7 @@
           "shadow": true
         }
       },
-      { "force_user@world_resource_packs_mcjava.force_user": {} },
+      { "force_user@world_resource_packs_ui.force_user": {} },
       {
         "par_right": {
           "type": "label",

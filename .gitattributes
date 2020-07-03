@@ -1,15 +1,15 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 
- linguist-vendored=false
+linguist-vendored=false
 
 *.hlsl linguist-language=HLSL
 *.glsl linguist-language=GLSL
 
-*.json linguist-language=JSON
+*.json linguist-language=JSONC
 
-*.uiscreen linguist-language=JSON
-*.uicomponent linguist-language=JSON
-*.ui linguist-language=JSON
-*.uicontent linguist-language=JSON
-*.uitexture linguist-language=JSON
+*.uiscreen linguist-language=JSONC
+*.uicomponent linguist-language=JSONC
+*.ui linguist-language=JSONC
+*.uicontent linguist-language=JSONC
+*.uitexture linguist-language=JSONC

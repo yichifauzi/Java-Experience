@@ -1,12 +1,12 @@
 /* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "jigsaw_block_mcjava",
+  "namespace": "jigsaw_block_ui",
   
   "jigsaw_block_screen_content_panel": {
     "type": "panel",
     "controls": [
       {
-        "target_pool_title_and_edit@jigsaw_block_mcjava.data_item_title_and_edit_box": {
+        "target_pool_title_and_edit@jigsaw_block_ui.data_item_title_and_edit_box": {
           "offset": [0, 9],
           "$data_title": "jigsaw.title.target_pool",
           "$data_text_box_name": "text_box.target_pool_text_box",
@@ -14,7 +14,7 @@
         }
       },
       {
-        "name_title_and_edit@jigsaw_block_mcjava.data_item_title_and_edit_box": {
+        "name_title_and_edit@jigsaw_block_ui.data_item_title_and_edit_box": {
           "offset": [0, 44],
           "$data_title": "jigsaw.title.name",
           "$data_text_box_name": "text_box.name_text_box",
@@ -22,7 +22,7 @@
         }
       },
       {
-        "target_title_and_edit@jigsaw_block_mcjava.data_item_title_and_edit_box": {
+        "target_title_and_edit@jigsaw_block_ui.data_item_title_and_edit_box": {
           "offset": [0, 79],
           "$data_title": "jigsaw.title.target",
           "$data_text_box_name": "text_box.target_text_box",
@@ -30,7 +30,7 @@
         }
       },
       {
-        "final_block_title_and_edit@jigsaw_block_mcjava.data_item_title_and_edit_box": {
+        "final_block_title_and_edit@jigsaw_block_ui.data_item_title_and_edit_box": {
           "offset": [0, 114],
           "$data_title": "jigsaw.title.final_block",
           "$data_text_box_name": "text_box.final_block_text_box",
@@ -38,15 +38,15 @@
         }
       },
       {
-        "joing_type_title_and_toggle@jigsaw_block_mcjava.data_item_title_and_toggle": {
+        "joing_type_title_and_toggle@jigsaw_block_ui.data_item_title_and_toggle": {
           "offset": [0, 150],
           "$data_title": "jigsaw.title.joint_type",
           "$toggle_name": "toggle.joint_type_toggle,",
           "$toggle_state_binding_name": "#joint_type_toggle_state"
         }
       },
-      { "done_button@jigsaw_block_mcjava.done_button": { "offset": [-77, 180] } },
-      { "cancel_button@jigsaw_block_mcjava.cancel_button": { "offset": [81, 180] } }
+      { "done_button@jigsaw_block_ui.done_button": { "offset": [-77, 180] } },
+      { "cancel_button@jigsaw_block_ui.cancel_button": { "offset": [81, 180] } }
     ]
   },
 
@@ -56,9 +56,9 @@
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "controls": [
-      { "data_title@jigsaw_block_mcjava.base_label": { "text": "$data_title", "color": [0.62, 0.62, 0.62] } },
+      { "data_title@jigsaw_block_ui.base_label": { "text": "$data_title", "color": [0.62, 0.62, 0.62] } },
       {
-        "data_text_edit@jigsaw_block_mcjava.text_edit_box": {
+        "data_text_edit@jigsaw_block_ui.text_edit_box": {
           "$text_box_name": "$data_text_box_name",
           "$text_edit_box_content_binding_name": "$data_text_box_value"
         }
@@ -80,7 +80,7 @@
           "inherit_max_sibling_height": true,
           "controls": [
             {
-              "data_title@jigsaw_block_mcjava.base_label": {
+              "data_title@jigsaw_block_ui.base_label": {
                 "text": "$data_title",
                 "anchor_from": "left_middle",
                 "anchor_to": "left_middle"
@@ -91,12 +91,12 @@
       },
       { "buffer_1@jigsaw_editor.horizontal_buffer": {} },
       {
-        "data_toggle@option_toggle_mcjava.option_toggle": {
+        "data_toggle@option_toggle_ui.option_toggle": {
           "size": [ "fill", 20],
           "$button_binding_condition": "none",
           "$button_text_grid_collection_name": "",
           "$button_text_binding_type": "global",
-          "$toggle_type_panel": "button_mcjava.button_label",
+          "$toggle_type_panel": "button_ui.button_label",
           "$button_text": "#joint_type_toggle_text",
           "$toggle_name": "toggle.joint_type_toggle",
           "$toggle_binding_type": "global",
@@ -116,14 +116,14 @@
     "layer": 1
   },
 
-  "text_edit_box@text_box_mcjava.text_box": {
+  "text_edit_box@text_box_ui.text_box": {
     "size": [302, 22],
     "anchor_from": "bottom_left",
     "anchor_to": "bottom_left",
     "max_length": 40
   },
 
-  "done_button@button_mcjava.button": {
+  "done_button@button_ui.button": {
     "size": [150, 20],
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
@@ -131,7 +131,7 @@
     "$pressed_button_name": "button.exit_done"
   },
 
-  "cancel_button@button_mcjava.button": {
+  "cancel_button@button_ui.button": {
     "size": [150, 20],
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",

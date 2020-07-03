@@ -1,12 +1,13 @@
+/* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "blast_furnace_rb_ores_mcjava",
+  "namespace": "blast_furnace_rb_ores_ui",
 
   "ores_tab": {
     "type": "panel",
     "$tab_source": "ores",
     "$page_total_number": "1",
     "controls": [
-      { "page_1@blast_furnace_rb_ores_mcjava.ores_page_1": {} }
+      { "page_1@blast_furnace_rb_ores_ui.ores_page_1": {} }
     ],
     "bindings": [
       {
@@ -18,11 +19,11 @@
     ]
   },
 
-  "ores_page_1@furnace_recipes_mcjava.page_content_panel": {
+  "ores_page_1@furnace_recipes_ui.page_content_panel": {
     "$page_current_number": "1",
     "$page_recipes": [
       {
-        "redstone_dust@furnace_recipes_mcjava.slot_button": {
+        "redstone_dust@furnace_recipes_ui.slot_button": {
           "$toggle_index": 12,
           "$item": "redstone_dust",
           "$itemLangName": "item.redstone.name",
@@ -39,7 +40,7 @@
     "type": "panel",
     "$tab_source": "ores",
     "controls": [
-      { "redstone@furnace_recipes_mcjava.show_item": { "$item": "redstone_dust", "$item_id_aux": 4784128 } }
+      { "redstone@furnace_recipes_ui.show_item": { "$item": "redstone_dust", "$item_id_aux": 4784128 } }
     ]
   },
 
@@ -47,7 +48,7 @@
     "type": "panel",
     "$tab_source": "ores",
     "controls": [
-      { "redstone@furnace_recipes_mcjava.show_item": { "$item": "redstone_dust", "$item_id_aux": 21692416 } }
+      { "redstone@furnace_recipes_ui.show_item": { "$item": "redstone_dust", "$item_id_aux": 21692416 } }
     ]
   }
 }

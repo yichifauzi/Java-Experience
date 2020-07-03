@@ -1,11 +1,13 @@
+/* Version: 2.0.0 */
 /* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "crafting_mcjava",
+  "namespace": "crafting_ui",
 
   "crafting_screen_content_panel": {
     "type": "panel",
     "controls": [
       { "base@crafting.crafting_screen_content": {} },
+      { "invisible_exit_bg@container_ui.invisible_exit_bg": {} },
       {
         "stack": {
           "type": "stack_panel",
@@ -16,7 +18,7 @@
           "layer": 5,
           "controls": [
             {
-              "recipe_book@crafting_rb_mcjava.recipe_book_content_panel": {
+              "recipe_book@crafting_rb_ui.recipe_book_content_panel": {
                 "bindings": [
                   {
                     "binding_type": "global",
@@ -57,8 +59,8 @@
                 "size": [176, 166],
                 "layer": 1,
                 "controls": [
-                  { "close_button@container_mcjava.close_button": {} },
-                  { "$container_bg@$container_bg": {} },
+                  { "close_button@container_ui.close_button": {} },
+                  { "bg@$container_bg": {} },
                   {
                     "screen_inventory": {
                       "type": "panel",
@@ -66,15 +68,15 @@
                       "controls": [
                         { "panel@$specified_panel": {} },
                         {
-                          "inventory_grid_panel@container_mcjava.inventory_grid_panel": {
-                            "$button_ref": "crafting_mcjava.inventory_container_slot_button",
-                            "$background_images": "crafting_mcjava.crafting_slot_backgrounds"
+                          "inventory_grid_panel@container_ui.inventory_grid_panel": {
+                            "$button_ref": "crafting_ui.inventory_container_slot_button",
+                            "$background_images": "crafting_ui.crafting_slot_backgrounds"
                           }
                         },
                         {
-                          "hotbar_grid@container_mcjava.hotbar_grid": {
-                            "$button_ref": "crafting_mcjava.inventory_container_slot_button",
-                            "$background_images": "crafting_mcjava.crafting_slot_backgrounds"
+                          "hotbar_grid@container_ui.hotbar_grid": {
+                            "$button_ref": "crafting_ui.inventory_container_slot_button",
+                            "$background_images": "crafting_ui.crafting_slot_backgrounds"
                           }
                         }
                       ]
@@ -111,44 +113,13 @@
     "layer": 10
   },
 
-  //QuickCrafting - abc55
-  "crafting_arrow_button": {
-    "type": "button",
-    "offset": [ 135, 29 ],
-    "size": [ 16, 13 ],
-    "anchor_from": "top_left",
-    "anchor_to": "top_left",
-    "property_bag": {
-      "#collection_name": "crafting_output_items",
-      "#collection_index": 0
-    },
-    "bindings": [
-      {
-        "binding_name": "#using_touch",
-        "binding_name_override": "#visible"
-      }
-    ],
-    "button_mappings": [
-      {
-        "from_button_id": "button.menu_select",
-        "to_button_id": "button.crafting_output_tertiary",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.menu_ok",
-        "to_button_id": "button.crafting_output_tertiary",
-        "mapping_type": "pressed"
-      }
-    ]
-  },
-
-  "crafting_input_grid_item@crafting_mcjava.inventory_container_slot": {
+  "crafting_input_grid_item@crafting_ui.inventory_container_slot": {
     "$item_collection_name": "crafting_input_items",
     "$item_renderer_binding_condition": "always",
     "$slot_backgrounds_binding_condition": "always"
   },
 
-  "inventory_container_slot_button@container_mcjava.container_slot_button_prototype": {
+  "inventory_container_slot_button@container_ui.container_slot_button_prototype": {
     "$button_take_half_place_one|default": "button.container_take_half_place_one",
     "$button_auto_place|default": "button.container_auto_place",
     "$button_take_all_place_all|default": "button.container_take_all_place_all",
@@ -221,7 +192,7 @@
     ]
   },
 
-  "no_coalesce_container_slot_button@crafting_mcjava.inventory_container_slot_button": {
+  "no_coalesce_container_slot_button@crafting_ui.inventory_container_slot_button": {
     "button_mappings": [
       {
         "from_button_id": "button.menu_cancel",
@@ -279,9 +250,9 @@
     ]
   },
 
-  "inventory_container_slot@container_mcjava.container_slot": {
-    "$button_ref|default": "crafting_mcjava.inventory_container_slot_button",
-    "$background_images|default": "crafting_mcjava.crafting_slot_backgrounds",
+  "inventory_container_slot@container_ui.container_slot": {
+    "$button_ref|default": "crafting_ui.inventory_container_slot_button",
+    "$background_images|default": "crafting_ui.crafting_slot_backgrounds",
     "$overlay_image_control_name|default": "overlay",
     "$overlay_images|default": "crafting.container_overlay_images",
     "$cell_image_size|default": [18, 18],
@@ -297,7 +268,7 @@
                 "type": "panel",
                 "size": "$item_renderer_panel_size",
                 "controls": [
-                  { "stack_count_label@container_mcjava.stack_count_label": { "layer": 8 } },
+                  { "stack_count_label@container_ui.stack_count_label": { "layer": 8 } },
                   {
                     "$item_renderer@$item_renderer": {
                       "size": "$item_renderer_size",
@@ -310,7 +281,7 @@
                 ]
               }
             },
-            { "durability_bar@container_mcjava.durability_bar": { "layer": 6 } },
+            { "durability_bar@container_ui.durability_bar": { "layer": 6 } },
             { "$overlay_image_control_name@$overlay_images": { "layer": 7 } }
           ]
         }
@@ -320,7 +291,7 @@
     ]
   },
 
-  "output_no_coalesce_container_slot_button@crafting_mcjava.no_coalesce_container_slot_button": {
+  "output_no_coalesce_container_slot_button@crafting_ui.no_coalesce_container_slot_button": {
     "$button_take_all_place_all": "button.crafting_output_primary",
     "$button_take_half_place_one": "button.crafting_output_secondary",
     "$button_auto_place": "button.crafting_output_tertiary",
@@ -395,11 +366,11 @@
     "type": "panel",
     "$slot_backgrounds_binding_condition|default": "visible",
     "controls": [
-      { "slot_classic@crafting_mcjava.slot_background_classic": {} },
-      { "slot_normal@crafting_mcjava.slot_background_normal": {} },
-      { "slot_invert@crafting_mcjava.slot_background_invert": {} },
-      { "slot_red@crafting_mcjava.slot_background_red": {} },
-      { "slot_selected@crafting_mcjava.slot_background_selected": {} },
+      { "slot_classic@crafting_ui.slot_background_classic": {} },
+      { "slot_normal@crafting_ui.slot_background_normal": {} },
+      { "slot_invert@crafting_ui.slot_background_invert": {} },
+      { "slot_red@crafting_ui.slot_background_red": {} },
+      { "slot_selected@crafting_ui.slot_background_selected": {} },
       { "slot_hint@game_tip.cell_image_classic_hint": {} }
     ],
     "bindings": [
@@ -438,32 +409,29 @@
     "$sourceName": "(#container_item_background = 3)",
     "controls": [
       {
-        "red": {
-          "type": "image",
-          "texture": "src/core/assets/fmarquespto/textures/white",
-          "$red_cell_size|default": [ "100% - 2px", "100% - 2px" ],
-          "size": "$red_cell_size",
-          "anchor_to": "center",
-          "anchor_from": "center",
+        "red@slot_bg": {
           "color": "red",
           "alpha": 0.35,
           "layer": 2
         }
       },
       {
-        "red": {
-          "type": "image",
-          "texture": "src/core/assets/fmarquespto/textures/white",
-          "$red_cell_size|default": [ "100% - 2px", "100% - 2px" ],
-          "size": "$red_cell_size",
-          "anchor_to": "center",
-          "anchor_from": "center",
+        "red@slot_bg": {
           "color": "white",
           "alpha": 0.2,
           "layer": 5
         }
       }
     ]
+  },
+
+  "slot_bg": {
+    "type": "image",
+    "texture": "src/core/assets/fmarquespto/white",
+    "$slot_size|default": ["100% - 2px", "100% - 2px"],
+    "size": "$slot_size",
+    "anchor_to": "center",
+    "anchor_from": "center"
   },
 
   "slot_background_selected@slot_background_classic": {

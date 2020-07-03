@@ -1,0 +1,161 @@
+/* Version: 2.0.0 */
+/* By @FMarquesPTO. All rights reserved. */
+{
+  "namespace": "game_settings_ui",
+
+  "game_settings_content_panel": {
+    "type": "panel",
+    "controls": [
+      {
+        "game_settings@game_settings_content": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "world_rps_view",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "world_bps_view",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "world_gr_view",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "rps@world_resource_packs_ui.world_resource_packs_screen_content_panel": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "world_rps_view",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "bps@world_behavior_packs_ui.world_behavior_packs_screen_content_panel": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "world_bps_view",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "gamerules@gamerules_ui.gamerules_screen_content_panel": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "world_gr_view",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "game_settings_content": {
+    "type": "panel",
+    "controls": [
+      { "title@screen_ui.title": { "text": "selectWorld.settings" } },
+      {
+        "content": {
+          "type": "stack_panel",
+          "anchor_from": "center",
+          "anchor_to": "top_middle",
+          "size": [310, 195],
+          "offset": [ 0, "-36%" ],
+          "controls": [
+            {
+              "stack_0@settings_ui.stack": {
+                "$label_bindings": [
+                  {
+                    "binding_name": "#world_seed_enabled",
+                    "binding_name_override": "#visible"
+                  }
+                ],
+                "$button_bindings": [
+                  {
+                    "binding_name": "#world_seed_enabled",
+                    "binding_name_override": "#visible"
+                  }
+                ],
+                "controls": [
+                  { "fill@content.hfill": {} },
+                  { "difficulty@more_create_options_ui.world_seed_box": {} },
+                  { "fill@content.hfill": {} }
+                ]
+              }
+            },
+            { "space_0@content.v2px": { "size": [0, 34] } },
+            {
+              "stack_1@settings_ui.stack": {
+                "controls": [
+                  { "rps@game_settings_ui.resource_packs_button": {} },
+                  { "fill@content.hfill": {} },
+                  { "bps@game_settings_ui.behavior_packs_button": {} }
+                ]
+              }
+            },
+            { "space_1@content.v4px": {} },
+            {
+              "stack_1@settings_ui.stack": {
+                "controls": [
+                  { "rps@game_settings_ui.gamerules_button": {} },
+                  { "fill@content.hfill": {} }
+                ]
+              }
+            },
+            { "space_2@content.vfill": {} },
+            { "space_3@content.v4px": {} },
+            {
+              "stack_6@settings_ui.stack": {
+                "controls": [
+                  { "fill_left@content.hfill": {} },
+                  { "cancel@settings_ui.back_button": {} },
+                  { "fill_right@content.hfill": {} }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "resource_packs_button@settings_ui.open_button": {
+    "$toggle_index": 1,
+    "$toggle_button_name": "game_settings",
+    "$toggle_button_text": "menu.resourcepacks",
+    "$toggle_control_name": "world_rps_view"
+  },
+  
+  "behavior_packs_button@settings_ui.open_button": {
+    "$toggle_index": 2,
+    "$toggle_button_name": "game_settings",
+    "$toggle_button_text": "menu.behaviors",
+    "$toggle_control_name": "world_bps_view"
+  },
+
+  "gamerules_button@settings_ui.open_button": {
+    "$toggle_index": 3,
+    "$toggle_button_name": "game_settings",
+    "$toggle_button_text": "selectWorld.gameRules",
+    "$toggle_control_name": "world_gr_view"
+  }
+}

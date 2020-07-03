@@ -1,16 +1,17 @@
 /* Version: 2.0.0 */
+/* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "account_transfer_error_mcjava",
+  "namespace": "account_transfer_error_ui",
 
   "account_transfer_error_screen_content_panel": {
     "type": "panel",
-    "controls": [ { "content@account_transfer_error_content": {} } ]
+    "controls": [ { "content@account_transfer_error_ui.account_transfer_error_content": {} } ]
   },
 
-  "account_transfer_error_content@popup_mcjava.modal_with_buttons": {
-    "$title": "account_transfer_error_mcjava.title",
-    "$description": "account_transfer_error_mcjava.description",
-    "$button_panel": "account_transfer_error_mcjava.buttons_panel"
+  "account_transfer_error_content@popup_ui.modal_with_buttons": {
+    "$title": "account_transfer_error_ui.title",
+    "$description": "account_transfer_error_ui.description",
+    "$button_panel": "account_transfer_error_ui.buttons_panel"
   },
 
   "title@common_dialogs.standard_title_label": {
@@ -65,7 +66,7 @@
     "orientation": "horizontal",
     "controls": [
       {
-        "button@button_mcjava.button": {
+        "button@button_ui.button": {
           "$pressed_button_name": "button.button",
           "$button_text": "#button_text",
           "size": [150, 20],

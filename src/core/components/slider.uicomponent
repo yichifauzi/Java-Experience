@@ -1,6 +1,6 @@
 /* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "slider_mcjava",
+  "namespace": "slider_ui",
 
   "base_slider@common.slider": {
     "property_bag": "$slider_property_bag",
@@ -24,15 +24,16 @@
   "slider": {
     "type": "panel",
     "size": [150, 20],
+    "$slider_tts_header": "$slider_label",
     "controls": [
-      { "control@slider_mcjava.slider_control": {} }
+      { "control@slider_ui.slider_control": {} }
     ] 
   },
 
-  "slider_control@slider_mcjava.base_slider": {
+  "slider_control@slider_ui.base_slider": {
     "size": ["100% - 8px", "100%"],
-    "$slider_state_panel|default": "slider_mcjava.slider_state_panel",
-    "$slider_type_panel|default": "slider_mcjava.slider_text_panel",
+    "$slider_state_panel|default": "slider_ui.slider_state_panel",
+    "$slider_type_panel|default": "slider_ui.slider_text_panel",
     "$default_slider_bg|default": "resources.button_locked",
     "$hover_slider_bg|default": "resources.button_locked",
     "$default_sb_bg|default": "resources.button_default",
@@ -48,13 +49,12 @@
     "enabled": "$enabled",
     "$enabled": true,
     "$state|default": "",
-    "$slider_tts_header": "$slider_label",
     "$slider_tts_header_binding_type": "global",
     "$slider_enabled_binding_name|default": "",
     "$slider_enabled_binding_type": "global",
     "$text_locked_color|default": "$button_locked_text_color",
     "controls": [
-      { "slider_box@slider_mcjava.slider_box": { "$slider_track_button": "$slider_name" } },
+      { "slider_box@slider_ui.slider_box": { "$slider_track_button": "$slider_name" } },
       {
         "slider_bar_default@$slider_state_panel": {
           "size": [ "100% + 8px", "100%" ],
@@ -147,7 +147,7 @@
     "anchor_to": "center",
     "$slider_percentage|default": false,
     "controls": [
-      { "option_label@slider_mcjava.slider_label": {} },
+      { "option_label@slider_ui.slider_label": {} },
       {
         "percent": {
           "type": "label",
@@ -161,7 +161,7 @@
     ]
   },
 
-  "slider_label@button_mcjava.button_label": {
+  "slider_label@button_ui.button_label": {
     "text": "$slider_label",
     "bindings": "$slider_text_bindings",
     "layer": "$text_layer",

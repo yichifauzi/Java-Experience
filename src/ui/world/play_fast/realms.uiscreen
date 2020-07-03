@@ -1,17 +1,18 @@
+/* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "realms_fast_mcjava",
+  "namespace": "realms_fast_ui",
 
   "realms_screen_content_panel@content.scroll_screen": {
-    "$top_content": "realms_fast_mcjava.top_content",
-    "$middle_content": "realms_fast_mcjava.scroll_content",
-    "$bottom_content": "realms_fast_mcjava.bottom_content"
+    "$top_content": "realms_fast_ui.top_content",
+    "$middle_content": "realms_fast_ui.scroll_content",
+    "$bottom_content": "realms_fast_ui.bottom_content"
   },
 
   "top_content": {
     "type": "panel",
     "controls": [
       {
-        "left@play_fast_mcjava.left_button": {
+        "left@play_fast_ui.left_button": {
           "$toggle_button_name": "to_realms",
           "$toggle_control_name": ""
         }
@@ -51,7 +52,7 @@
                 ]
               }
             },
-            { "space_0@screen_mcjava.vspace": { "size": [0, 18] } },
+            { "space_0@screen_ui.vspace": { "size": [0, 18] } },
             {
               "panel_1": {
                 "type": "panel",
@@ -106,14 +107,14 @@
                 ]
               }
             },
-            { "space_1@screen_mcjava.vspace": { "size": [0, 58] } },
+            { "space_1@screen_ui.vspace": { "size": [0, 58] } },
             {
               "panel_4": {
                 "type": "panel",
                 "size": ["100%", 20],
                 "controls": [
                   {
-                    "back@play_fast_mcjava.left_button": {
+                    "back@play_fast_ui.left_button": {
                       "$toggle_button_name": "to_realms",
                       "anchor_from": "center",
                       "anchor_to": "center",

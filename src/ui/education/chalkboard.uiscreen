@@ -1,6 +1,7 @@
 /* Version: 2.0.0 */
+/* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "chalkboard_mcjava",
+  "namespace": "chalkboard_ui",
 
   "chalkboard_screen_content_panel": {
     "type": "panel",
@@ -21,7 +22,7 @@
         "title": {
           "type": "stack_panel",
           "size": ["100%", "100%c"],
-          "controls": [ { "title@chalkboard_mcjava.title": {} } ]
+          "controls": [ { "title@chalkboard_ui.title": {} } ]
         }
       },
       { "space_0@content.v10px": {} },
@@ -29,7 +30,7 @@
         "middle": {
           "type": "panel",
           "size": ["100%", "100%c"],
-          "controls": [ { "middle@chalkboard_mcjava.middle_content": {} } ]
+          "controls": [ { "middle@chalkboard_ui.middle_content": {} } ]
         }
       },
       { "space_1@content.space": { "size": [0, 40] } },
@@ -71,7 +72,7 @@
     "size": ["100%", "100%c"],
     "controls": [
       {
-        "edit_box@chalkboard_mcjava.text_edit_control": {
+        "edit_box@chalkboard_ui.text_edit_control": {
           "size": "$text_box_size",
           "max_length": "$max_input_length"
         }
@@ -79,7 +80,7 @@
     ]
   },
 
-  "text_edit_control@text_box_mcjava.multiline_text_edit_box": {
+  "text_edit_control@text_box_ui.multiline_text_edit_box": {
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "constrain_to_rect": false,
@@ -92,7 +93,7 @@
     "type": "stack_panel",
     "size": ["100%", "100%c"],
     "controls": [
-      { "locked_toggle@chalkboard_mcjava.lock_control": {} },
+      { "locked_toggle@chalkboard_ui.lock_control": {} },
       { "space@content.v4px": {} },
       {
         "exit": {
@@ -122,14 +123,14 @@
           "$toggle_enabled_binding_name": "#lock_visible",
           "$toggle_name": "locked_toggle",
           "controls": [
-            { "unchecked@chalkboard_mcjava.locked_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_unchecked" } },
-            { "checked@chalkboard_mcjava.locked_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_checked" } },
-            { "unchecked_hover@chalkboard_mcjava.locked_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_unchecked_hover" } },
-            { "checked_hover@chalkboard_mcjava.locked_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_checked_hover" } },
-            { "unchecked_locked@chalkboard_mcjava.locked_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_unchecked" } },
-            { "checked_locked@chalkboard_mcjava.locked_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_checked" } },
-            { "unchecked_locked_hover@chalkboard_mcjava.locked_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_unchecked" } },
-            { "checked_locked_hover@chalkboard_mcjava.locked_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_checked" } }
+            { "unchecked@chalkboard_ui.locked_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_unchecked" } },
+            { "checked@chalkboard_ui.locked_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_checked" } },
+            { "unchecked_hover@chalkboard_ui.locked_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_unchecked_hover" } },
+            { "checked_hover@chalkboard_ui.locked_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_checked_hover" } },
+            { "unchecked_locked@chalkboard_ui.locked_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_unchecked" } },
+            { "checked_locked@chalkboard_ui.locked_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_checked" } },
+            { "unchecked_locked_hover@chalkboard_ui.locked_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_unchecked" } },
+            { "checked_locked_hover@chalkboard_ui.locked_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_checked" } }
           ]
         }
       }

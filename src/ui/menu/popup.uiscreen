@@ -1,21 +1,21 @@
 /* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "popup_mcjava",
+  "namespace": "popup_ui",
 
   "modal_popup": {
     "type": "panel",
     "variables": [
       {
         "requires": "($three_buttons_visible or $destructive_three_buttons_visible)",
-        "$button_panel": "popup_mcjava.three_buttons_panel"
+        "$button_panel": "popup_ui.three_buttons_panel"
       },
       {
         "requires": "($two_buttons_visible or $destructive_two_buttons_visible)",
-        "$button_panel": "popup_mcjava.two_buttons_panel"
+        "$button_panel": "popup_ui.two_buttons_panel"
       },
       {
         "requires": "$single_button_visible",
-        "$button_panel": "popup_mcjava.single_button_panel"
+        "$button_panel": "popup_ui.single_button_panel"
       },
       {
         "requires": "$no_buttons_visible",
@@ -26,8 +26,8 @@
       {
         "modal_input@popup_dialog.modal_input_panel": {
           "controls": [
-            { "modal_bg_buttons@popup_mcjava.modal_with_buttons": { "$visibility_source_control_name|default": "modal_bg_buttons", "layer": 2 } },
-            { "dirt_background@screen_mcjava.dirt_background": { "layer": 1 } }
+            { "modal_bg_buttons@popup_ui.modal_with_buttons": { "$visibility_source_control_name|default": "modal_bg_buttons", "layer": 2 } },
+            { "dirt_background@screen_ui.dirt_background": { "layer": 1 } }
           ]
         }
       }
@@ -36,7 +36,7 @@
 
   /* Modal Buttons */
 
-  "modal_left_button@button_mcjava.button": {
+  "modal_left_button@button_ui.button": {
     "size": [150, 20],
     "$pressed_button_name": "$popup_dialog_left_button_name",
     "$button_text": "#modal_left_button_text",
@@ -44,7 +44,7 @@
     "default_focus_precedence": "$left_focus_number"
   },
 
-  "modal_right_button@button_mcjava.button": {
+  "modal_right_button@button_ui.button": {
     "size": [150, 20],
     "$pressed_button_name": "$popup_dialog_middle_button_name",
     "$button_text": "#modal_middle_button_text",
@@ -52,7 +52,7 @@
     "default_focus_precedence": "$middle_focus_number"
   },
 
-  "modal_cancel_button@button_mcjava.button": { 
+  "modal_cancel_button@button_ui.button": { 
     "size": [ 150, 20 ],
     "$pressed_button_name": "$popup_dialog_rightcancel_button_name",
     "$button_text": "#modal_rightcancel_button_text",
@@ -68,8 +68,8 @@
     "anchor_to": "top_middle",
     "anchor_from": "center",
     "offset": [0, "-26%"],
-    "$title|default": "popup_mcjava.modal_title_text",
-    "$description|default": "popup_mcjava.modal_label_panel",
+    "$title|default": "popup_ui.modal_title_text",
+    "$description|default": "popup_ui.modal_label_panel",
     "$top_space|default": [0, 10],
     "$bottom_space|default": [0, 40],
     "$top_controls|default": [],
@@ -84,7 +84,7 @@
           ]
         }
       },
-      { "space_0@screen_mcjava.vspace": { "size": "$top_space", "controls": "$top_controls" } },
+      { "space_0@screen_ui.vspace": { "size": "$top_space", "controls": "$top_controls" } },
       {
         "desc": {
           "type": "panel",
@@ -94,7 +94,7 @@
           ]
         }
       },
-      { "space_1@screen_mcjava.vspace": { "size": "$bottom_space", "controls": "$bottom_controls" } },
+      { "space_1@screen_ui.vspace": { "size": "$bottom_space", "controls": "$bottom_controls" } },
       {
         "buttons": {
           "type": "panel",
@@ -171,7 +171,7 @@
     "anchor_from": "center",
     "size": [200, 20],
     "controls": [
-      { "middle@popup_mcjava.modal_right_button": { "size": [200, 20] } }
+      { "middle@popup_ui.modal_right_button": { "size": [200, 20] } }
     ]
   },
   
@@ -182,9 +182,9 @@
     "anchor_from": "center",
     "orientation": "horizontal",
     "controls": [
-      { "left@popup_mcjava.modal_left_button": {} },
-      { "space@screen_mcjava.hfill": {} },
-      { "right@popup_mcjava.modal_cancel_button": {} }
+      { "left@popup_ui.modal_left_button": {} },
+      { "space@screen_ui.hfill": {} },
+      { "right@popup_ui.modal_cancel_button": {} }
     ]
   },
 
@@ -201,12 +201,12 @@
           "orientation": "horizontal",
           "controls": [
             { "modal_left_button@modal_left_button": { "size": [150, 20] } },
-            { "space@screen_mcjava.hfill": {} },
+            { "space@screen_ui.hfill": {} },
             { "modal_right_button@modal_right_button": { "size": [150, 20] } }
           ]
         }
       },
-      { "space@screen_mcjava.vspace": {} },
+      { "space@screen_ui.vspace": {} },
       {
         "bottom_stack": {
           "type": "panel",

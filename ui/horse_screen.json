@@ -1,8 +1,8 @@
 /* Version: 2.0.0 */
 {
   "horse_screen@content.inventory_screen": {
-    "force_close_on_player_hurt": "$force_close_on_player_hurt",
-    "$screen_content": "horse_mcjava.horse_screen_content_panel",
+    "close_on_player_hurt": "$force_close_on_player_hurt",
+    "$screen_content": "horse_ui.horse_screen_content_panel",
     "$screen_background": "content.container_screen_background"
   }
 }

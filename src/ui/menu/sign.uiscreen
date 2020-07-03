@@ -1,10 +1,11 @@
+/* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "sign_mcjava",
+  "namespace": "sign_ui",
 
   "sign_screen_content_panel": {
     "type": "panel",
     "controls": [
-      { "title@screen_mcjava.title": { "offset": [0, "10%"], "text": "sign.edit" } },
+      { "title@screen_ui.title": { "offset": [0, "10%"], "text": "sign.edit" } },
       {
         "input_eating_panel": {
           "type": "input_panel",
@@ -14,10 +15,10 @@
           "anchor_to": "top_middle",
           "offset": [2, "18%"],
           "focus_enabled": false,
-          "controls": [ { "text_edit@sign_mcjava.sign_text_multiline": {} } ]
+          "controls": [ { "text_edit@sign_ui.sign_text_multiline": {} } ]
         }
       },
-      { "exit@screen_mcjava.exit_button": { "anchor_from": "bottom_middle", "anchor_to": "bottom_middle", "offset": [0, "-20%"], "layer": 100 } }
+      { "exit@screen_ui.exit_button": { "anchor_from": "bottom_middle", "anchor_to": "bottom_middle", "offset": [0, "-20%"], "layer": 100 } }
     ]
   },
 
@@ -33,8 +34,8 @@
     "$text_box_name": "#sign_text_multi",
     "max_length": 32500,
     "$text_color_binding_type": "global",
-    "$text_background_default": "sign_mcjava.sign_background",
-    "$text_background_hover": "sign_mcjava.sign_background"
+    "$text_background_default": "sign_ui.sign_background",
+    "$text_background_hover": "sign_ui.sign_background"
   },
 
   "sign_background": {
@@ -42,13 +43,13 @@
     "texture": "$sign_texture_location",
     "size": [94, 101],
     "offset": [-1, 0],
-    "$sign_texture_location|default": "src/core/assets/fmarquespto/textures/sign",
+    "$sign_texture_location|default": "src/core/assets/fmarquespto/sign",
     "variables": [
-      { "requires": "($sign_texture = 'textures/ui/sign_acacia')", "$sign_texture_location": "src/core/assets/fmarquespto/textures/sign_acacia" },
-      { "requires": "($sign_texture = 'textures/ui/sign_spruce')", "$sign_texture_location": "src/core/assets/fmarquespto/textures/sign_spruce" },
-      { "requires": "($sign_texture = 'textures/ui/sign_birch')", "$sign_texture_location": "src/core/assets/fmarquespto/textures/sign_birch" },
-      { "requires": "($sign_texture = 'textures/ui/sign_jungle')", "$sign_texture_location": "src/core/assets/fmarquespto/textures/sign_jungle" },
-      { "requires": "($sign_texture = 'textures/ui/sign_darkoak')", "$sign_texture_location": "src/core/assets/fmarquespto/textures/sign_darkoak" }
+      { "requires": "($sign_texture = 'textures/ui/sign_acacia')", "$sign_texture_location": "src/core/assets/fmarquespto/sign_acacia" },
+      { "requires": "($sign_texture = 'textures/ui/sign_spruce')", "$sign_texture_location": "src/core/assets/fmarquespto/sign_spruce" },
+      { "requires": "($sign_texture = 'textures/ui/sign_birch')", "$sign_texture_location": "src/core/assets/fmarquespto/sign_birch" },
+      { "requires": "($sign_texture = 'textures/ui/sign_jungle')", "$sign_texture_location": "src/core/assets/fmarquespto/sign_jungle" },
+      { "requires": "($sign_texture = 'textures/ui/sign_darkoak')", "$sign_texture_location": "src/core/assets/fmarquespto/sign_darkoak" }
     ]
   }
 }

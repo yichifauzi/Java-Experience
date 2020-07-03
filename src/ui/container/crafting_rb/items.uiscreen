@@ -1,9 +1,10 @@
+/* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "crafting_rb_items_mcjava",
+  "namespace": "crafting_rb_items_ui",
 
-  "creative_items_tab_content@crafting_rb_mcjava.common_tab_content": {
+  "creative_items_tab_content@crafting_rb_ui.common_tab_content": {
     "$tab_name": "items",
-    /* "$page_total_number": "19", */
+    "$page_total_number": "19",
     "$ignore_from_nineteen": true,
     "bindings": [
       {
@@ -15,9 +16,9 @@
     ]
   },
 
-  "survival_items_tab_content@crafting_rb_mcjava.common_tab_content": {
+  "survival_items_tab_content@crafting_rb_ui.common_tab_content": {
     "$tab_name": "items",
-    /* "$page_total_number": "10", */
+    "$page_total_number": "10",
     "$ignore_from_ten": true,
     "bindings": [
       {

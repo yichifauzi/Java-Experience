@@ -1,6 +1,7 @@
 /* Version: 2.0.0 */
+/* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "authentication_modals_mcjava",
+  "namespace": "authentication_modals_ui",
   
   "authentication_modals_screen_content_panel": {
     "type": "panel",
@@ -10,13 +11,13 @@
     "controls": [ { "content@authentication_modals_content": {} } ]
   },
 
-  "authentication_modals_content@popup_mcjava.modal_with_buttons": {
-    "$title": "authentication_modals_mcjava.title",
-    "$description": "authentication_modals_mcjava.description",
-    "$button_panel": "authentication_modals_mcjava.buttons_panel"
+  "authentication_modals_content@popup_ui.modal_with_buttons": {
+    "$title": "authentication_modals_ui.title",
+    "$description": "authentication_modals_ui.description",
+    "$button_panel": "authentication_modals_ui.buttons_panel"
   },
 
-  "title@account_banned_mcjava.title": {
+  "title@account_banned_ui.title": {
     "property_bag": {},
     "$dialog_title_text|default": "#none",
     "$dialog_title_text_binding_condition|default": "none",
@@ -31,7 +32,7 @@
     ]
   },
 
-  "description@account_banned_mcjava.description": {
+  "description@account_banned_ui.description": {
     "localize": false,
     "text": "#body_text",
     "bindings": [
@@ -55,7 +56,7 @@
           "orientation": "horizontal",
           "controls": [
             {
-              "left@button_mcjava.button": {
+              "left@button_ui.button": {
                 "size": [150, 20],
                 "$pressed_button_name": "button.confirm",
                 "$button_text": "#left_button_text",
@@ -65,7 +66,7 @@
             },
             { "space@content.hfill": {} },
             {
-              "right@button_mcjava.button": {
+              "right@button_ui.button": {
                 "size": [150, 20],
                 "$pressed_button_name": "button.cancel",
                 "$button_text": "#right_button_text",

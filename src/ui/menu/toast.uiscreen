@@ -1,6 +1,7 @@
 /* Version: 2.0.0 */
+/* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "toast_mcjava",
+  "namespace": "toast_ui",
 
   "toast_screen_content_panel": {
     "type": "panel",
@@ -8,13 +9,13 @@
     "factory": {
       "name": "toast_factory",
       "control_ids": {
-        "popup": "popup@toast_mcjava.popup",
-        "splitscreen_join_popup": "splitscreen_join_popup@toast_mcjava.splitscreen_join_popup"
+        "popup": "popup@toast_ui.popup",
+        "splitscreen_join_popup": "splitscreen_join_popup@toast_ui.splitscreen_join_popup"
       }
     },
     "controls": [
-      { "content_log@content_log_mcjava.content_log_screen_content_panel": {} },
-      { "perf_turtle_panel@perf_turtle.perf_turtle_panel": {} }
+      { "content_log@content_log_ui.content_log_screen_content_panel": {} },
+      { "perf_turtle_panel@perf_turtle_ui.perf_turtle_content_panel": {} }
     ]
   },
 
@@ -23,7 +24,8 @@
     "anchor_from": "top_right",
     "anchor_to": "top_right",
     "size": [160, 32],
-    "offset": "@toast_mcjava.popup_anim_start",
+    "offset": "@toast_ui.popup_anim_start",
+    "$alpha_anims": [],
     "controls": [
       { "background@resources0.toast_gray": {} },
       {
@@ -80,7 +82,7 @@
               "text_panel": {
                 "type": "panel",
                 "size": [ "fill", "100%" ],
-                "controls": [ { "text_stack_panel@toast_mcjava.text_stack_panel": {} } ]
+                "controls": [ { "text_stack_panel@toast_ui.text_stack_panel": {} } ]
               }
             }
           ]
@@ -165,13 +167,13 @@
     "from": [0, -33],
     "to": [0, 0],
     "duration": 0.70,
-    "next": "@toast_mcjava.popup_anim_wait"
+    "next": "@toast_ui.popup_anim_wait"
   },
 
   "popup_anim_wait": {
     "anim_type": "wait",
     "duration": "$display_time",
-    "next": "@toast_mcjava.popup_anim_end"
+    "next": "@toast_ui.popup_anim_end"
   },
 
   "popup_anim_end": {

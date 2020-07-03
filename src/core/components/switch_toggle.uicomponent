@@ -1,6 +1,6 @@
 /* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "switch_toggle_mcjava",
+  "namespace": "switch_toggle_ui",
 
   "switch_toggle": {
     "type": "panel",
@@ -8,12 +8,12 @@
     "$toggle_button_text|default": "toggle_button_text",
     "$toggle_control_name|default": "this_thing",
     "controls": [
-      { "$toggle_control_name@switch_toggle_mcjava.switch_toggle_control": {} }      
+      { "$toggle_control_name@switch_toggle_ui.switch_toggle_control": {} }      
     ]
   },
 
-  "switch_toggle_control@option_toggle_mcjava.toggle_base": {
-    "$toggle_state_panel|default": "switch_toggle_mcjava.switch_state_panel",
+  "switch_toggle_control@option_toggle_ui.toggle_base": {
+    "$toggle_state_panel|default": "switch_toggle_ui.switch_state_panel",
     "$toggle_type_panel|default": "",
     "$unchecked_toggle_bg|default": "",
     "$checked_toggle_bg|default": "",
@@ -215,7 +215,7 @@
     "$tooltip_name|default": "null",
     "controls": [
       {
-        "tooltip@tooltip_mcjava.tooltip": {
+        "tooltip@tooltip_ui.tooltip": {
           "visible": "($state = checked_hover or $state = unchecked_hover or $state = checked_locked_hover or $state = unchecked_locked_hover)",
           "ignored": "($tooltip_name = null)"
         }

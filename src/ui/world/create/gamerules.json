@@ -1,18 +1,19 @@
+/* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "gamerules_mcjava",
+  "namespace": "gamerules_ui",
 
-  "gamerules_screen_content_panel@screen_mcjava.scroll_screen": {
-    "$top_content": "gamerules_mcjava.top_content",
+  "gamerules_screen_content_panel@screen_ui.scroll_screen": {
+    "$top_content": "gamerules_ui.top_content",
     "$top_content_size": ["100%", 43],
-    "$scrolling_content": "gamerules_mcjava.scroll_content",
+    "$scrolling_content": "gamerules_ui.scroll_content",
     "$scroll_bar_offset": [126, 0],
-    "$bottom_content": "gamerules_mcjava.bottom_content"
+    "$bottom_content": "gamerules_ui.bottom_content"
   },
 
   "top_content": {
     "type": "panel",
     "controls": [
-      { "title@screen_mcjava.title": { "text": "editGamerule.title", "offset": [0, 19] } }
+      { "title@screen_ui.title": { "text": "editGamerule.title", "offset": [0, 19] } }
     ]
   },
 
@@ -20,19 +21,19 @@
     "type": "stack_panel",
     "size": [220, "100%c"],
     "$tooltip_controls": [
-      { "name@tooltip_mcjava.name": { "color": [1, 1, 0.333] } },
-      { "bottom@tooltip_mcjava.bottom": { "color": [0.62, 0.62, 0.62] } }
+      { "name@tooltip_ui.name": { "color": [1, 1, 0.333] } },
+      { "bottom@tooltip_ui.bottom": { "color": [0.62, 0.62, 0.62] } }
     ],
-    "$toggle_state_panel": "gamerules_mcjava.gamerule_toggle_state_panel",
+    "$toggle_state_panel": "gamerules_ui.gamerule_toggle_state_panel",
     "controls": [
       { "player@category": { "$category_text": "gamerule.category.player" } },
       { "@immediate_respawn_toggle": { "$tooltip_name": "doImmediateRespawn", "$tooltip_bottom": "editGamerule.default.off" } },
       { "@keep_inventory_toggle": { "$tooltip_name": "keepInventory", "$tooltip_bottom": "editGamerule.default.off" } },
       { "@natural_regeneration_toggle": { "$tooltip_name": "naturalRegeneration", "$tooltip_bottom": "editGamerule.default.on" } },
       { "respawn_radius@respawn_radius": { "$tooltip_name": "spawnRadius", "$tooltip_bottom": "editGamerule.default.spawnRadius" } },
-      { "space@screen_mcjava.vspace": { "size": [0, 2] } },
+      { "space@screen_ui.vspace": { "size": [0, 2] } },
       { "@pvp_toggle": { "$tooltip_name": "pvp", "$tooltip_bottom": "editGamerule.default.on" } },
-      { "@show_coordinates_toggle": { "$tooltip_name": "showCoordinates", "$tooltip_bottom": "editGamerule.default.on" } },
+      { "@show_coordinates_toggle": { "$tooltip_name": "showCoordinates", "$tooltip_bottom": "editGamerule.default.off" } },
       { "mobs@category": { "$category_text": "gamerule.category.mobs" } },
       { "@mob_griefing_toggle": { "$tooltip_name": "mobGriefing", "$tooltip_bottom": "editGamerule.default.on" } },
       { "spawing@category": { "$category_text": "gamerule.category.spawning" } },
@@ -48,14 +49,14 @@
       { "@weather_cycle_toggle": { "$tooltip_name": "doWeatherCycle",  "$tooltip_bottom": "editGamerule.default.on" } },
       { "@tnt_explodes_toggle": { "$tooltip_name": "tntExplodes",  "$tooltip_bottom": "editGamerule.default.on" } },
       { "@random_tick_speed_box": { "$tooltip_name": "randomTickSpeed",  "$tooltip_bottom": "editGamerule.default.randomTickSpeed" } },
-      { "space@screen_mcjava.vspace": { "size": [0, 2] } },
+      { "space@screen_ui.vspace": { "size": [0, 2] } },
       { "misc@category": { "$category_text": "gamerule.category.misc" } },
       { "@command_blocks_enabled_toggle": { "$tooltip_name": "commandBlockEnabled",  "$tooltip_bottom": "editGamerule.default.on" } },
-      { "space@screen_mcjava.vspace": {} }
+      { "space@screen_ui.vspace": {} }
     ]
   },
 
-  "respawn_radius@text_box_mcjava.text_box_with_label": {
+  "respawn_radius@text_box_ui.text_box_with_label": {
     "size": [220, 20],
     "$box_size": [44, 22],
     "$box_label_shadow": false,
@@ -70,7 +71,7 @@
     "$text_edit_box_text_type": "NumberChars"
   },
 
-  "random_tick_speed_box@text_box_mcjava.text_box_with_label_and_action_button": {
+  "random_tick_speed_box@text_box_ui.text_box_with_label_and_action_button": {
     "size": [220, 20],
     "$box_size": [44, 22],
     "$box_label_shadow": false,
@@ -84,11 +85,16 @@
     "$text_max_length": 4,
     "$text_edit_box_text_type": "NumberChars",
     "$text_box_name": "random_tick_speed_text_box",
-    "$button_content": "resources_mcjava.reset_icon",
+    "$button_type_panel": "gamerules_ui.reset_icon",
     "$pressed_button_name": "reset_random_tick_speed"
   },
 
-  "keep_inventory_toggle@option_toggle_mcjava.option_toggle": {
+  "reset_icon": {
+    "type": "image",
+    "texture": "src/core/assets/fmarquespto/icon/reset"
+  },
+
+  "keep_inventory_toggle@option_toggle_ui.option_toggle": {
     "size": [220, 24],
     "$option_toggle_text": "gamerule.keepInventory",
     "$option_binding_name": "#keep_inventory",
@@ -97,7 +103,7 @@
     "$toggle_binding_condition": "always_when_visible"
   },
 
-  "natural_regeneration_toggle@option_toggle_mcjava.option_toggle": {
+  "natural_regeneration_toggle@option_toggle_ui.option_toggle": {
     "size": [220, 24],
     "$option_toggle_text": "gamerule.naturalRegeneration",
     "$option_binding_name": "#natural_regeneration",
@@ -106,7 +112,7 @@
     "$toggle_binding_condition": "always_when_visible"
   },
 
-  "immediate_respawn_toggle@option_toggle_mcjava.option_toggle": {
+  "immediate_respawn_toggle@option_toggle_ui.option_toggle": {
     "size": [220, 24],
     "$option_toggle_text": "gamerule.doImmediateRespawn",
     "$option_binding_name": "#immediaterespawn",
@@ -115,7 +121,7 @@
     "$toggle_binding_condition": "always_when_visible"
   },
 
-  "mob_spawn_toggle@option_toggle_mcjava.option_toggle": {
+  "mob_spawn_toggle@option_toggle_ui.option_toggle": {
     "size": [220, 24],
     "$option_toggle_text": "gamerule.doMobSpawning",
     "$option_binding_name": "#mob_spawn",
@@ -123,13 +129,13 @@
     "$toggle_name": "mob_spawn",
     "$toggle_binding_condition": "always_when_visible",
     "$tooltip_controls": [
-      { "name@tooltip_mcjava.name": { "color": [1, 1, 0.333] } },
-      { "desc@tooltip_mcjava.desc": { "max_size": [128, "default"] } },
-      { "bottom@tooltip_mcjava.bottom": { "color": [0.62, 0.62, 0.62] } }
+      { "name@tooltip_ui.name": { "color": [1, 1, 0.333] } },
+      { "desc@tooltip_ui.desc": { "max_size": [128, "default"] } },
+      { "bottom@tooltip_ui.bottom": { "color": [0.62, 0.62, 0.62] } }
     ]
   },
 
-  "mob_griefing_toggle@option_toggle_mcjava.option_toggle": {
+  "mob_griefing_toggle@option_toggle_ui.option_toggle": {
     "size": [220, 24],
     "$option_toggle_text": "gamerule.mobGriefing",
     "$option_binding_name": "#mob_griefing",
@@ -138,7 +144,7 @@
     "$toggle_binding_condition": "always_when_visible"
   },
 
-  "entities_drop_loot_toggle@option_toggle_mcjava.option_toggle": {
+  "entities_drop_loot_toggle@option_toggle_ui.option_toggle": {
     "size": [220, 24],
     "$option_toggle_text": "gamerule.doEntityDrops",
     "$option_binding_name": "#entities_drop_loot",
@@ -146,13 +152,13 @@
     "$toggle_name": "entities_drop_loot",
     "$toggle_binding_condition": "always_when_visible",
     "$tooltip_controls": [
-      { "name@tooltip_mcjava.name": { "color": [1, 1, 0.333] } },
-      { "desc@tooltip_mcjava.desc": { "max_size": [128, "default"] } },
-      { "bottom@tooltip_mcjava.bottom": { "color": [0.62, 0.62, 0.62] } }
+      { "name@tooltip_ui.name": { "color": [1, 1, 0.333] } },
+      { "desc@tooltip_ui.desc": { "max_size": [128, "default"] } },
+      { "bottom@tooltip_ui.bottom": { "color": [0.62, 0.62, 0.62] } }
     ]
   },
 
-  "mob_loot_toggle@option_toggle_mcjava.option_toggle": {
+  "mob_loot_toggle@option_toggle_ui.option_toggle": {
     "size": [220, 24],
     "$option_toggle_text": "gamerule.doMobLoot",
     "$option_binding_name": "#mob_loot",
@@ -160,13 +166,13 @@
     "$toggle_name": "mob_loot",
     "$toggle_binding_condition": "always_when_visible",
     "$tooltip_controls": [
-      { "name@tooltip_mcjava.name": { "color": [1, 1, 0.333] } },
-      { "desc@tooltip_mcjava.desc": { "max_size": [128, "default"] } },
-      { "bottom@tooltip_mcjava.bottom": { "color": [0.62, 0.62, 0.62] } }
+      { "name@tooltip_ui.name": { "color": [1, 1, 0.333] } },
+      { "desc@tooltip_ui.desc": { "max_size": [128, "default"] } },
+      { "bottom@tooltip_ui.bottom": { "color": [0.62, 0.62, 0.62] } }
     ]
   },
   
-  "tile_drops_toggle@option_toggle_mcjava.option_toggle": {
+  "tile_drops_toggle@option_toggle_ui.option_toggle": {
     "size": [220, 24],
     "$option_toggle_text": "gamerule.doTileDrops",
     "$option_binding_name": "#tile_drops",
@@ -174,13 +180,13 @@
     "$toggle_name": "tile_drops",
     "$toggle_binding_condition": "always_when_visible",
     "$tooltip_controls": [
-      { "name@tooltip_mcjava.name": { "color": [1, 1, 0.333] } },
-      { "desc@tooltip_mcjava.desc": { "max_size": [128, "default"] } },
-      { "bottom@tooltip_mcjava.bottom": { "color": [0.62, 0.62, 0.62] } }
+      { "name@tooltip_ui.name": { "color": [1, 1, 0.333] } },
+      { "desc@tooltip_ui.desc": { "max_size": [128, "default"] } },
+      { "bottom@tooltip_ui.bottom": { "color": [0.62, 0.62, 0.62] } }
     ]
   },
 
-  "always_day_toggle@option_toggle_mcjava.option_toggle": {
+  "always_day_toggle@option_toggle_ui.option_toggle": {
     "size": [220, 24],
     "$option_toggle_text": "gamerule.alwaysDay",
     "$option_binding_name": "#always_day",
@@ -189,7 +195,7 @@
     "$toggle_binding_condition": "always_when_visible"
   },
 
-  "daylight_cycle_toggle@option_toggle_mcjava.option_toggle": {
+  "daylight_cycle_toggle@option_toggle_ui.option_toggle": {
     "size": [220, 24],
     "$option_toggle_text": "gamerule.doDaylightCycle",
     "$option_binding_name": "#daylight_cycle",
@@ -198,7 +204,7 @@
     "$toggle_binding_condition": "always_when_visible"
   },
 
-  "weather_cycle_toggle@option_toggle_mcjava.option_toggle": {
+  "weather_cycle_toggle@option_toggle_ui.option_toggle": {
     "size": [220, 24],
     "$option_toggle_text": "gamerule.doWeatherCycle",
     "$option_binding_name": "#weather_cycle",
@@ -207,7 +213,7 @@
     "$toggle_binding_condition": "always_when_visible"
   },
 
-  "command_blocks_enabled_toggle@option_toggle_mcjava.option_toggle": {
+  "command_blocks_enabled_toggle@option_toggle_ui.option_toggle": {
     "size": [220, 24],
     "$option_toggle_text": "gamerule.commandBlockEnabled",
     "$option_binding_name": "#command_blocks_enabled",
@@ -216,7 +222,7 @@
     "$toggle_binding_condition": "always_when_visible"
   },
 
-  "pvp_toggle@option_toggle_mcjava.option_toggle": {
+  "pvp_toggle@option_toggle_ui.option_toggle": {
     "size": [220, 24],
     "$option_toggle_text": "gamerule.pvp",
     "$option_binding_name": "#pvp",
@@ -225,7 +231,7 @@
     "$toggle_binding_condition": "always_when_visible"
   },
 
-  "show_coordinates_toggle@option_toggle_mcjava.option_toggle": {
+  "show_coordinates_toggle@option_toggle_ui.option_toggle": {
     "size": [220, 24],
     "$option_toggle_text": "gamerule.showCoordinates",
     "$option_binding_name": "#show_coordinates",
@@ -234,7 +240,7 @@
     "$toggle_binding_condition": "always_when_visible"
   },
 
-  "fire_spreads_toggle@option_toggle_mcjava.option_toggle": {
+  "fire_spreads_toggle@option_toggle_ui.option_toggle": {
     "size": [220, 24],
     "$option_toggle_text": "gamerule.doFireTick",
     "$option_binding_name": "#fire_spreads",
@@ -243,7 +249,7 @@
     "$toggle_binding_condition": "always_when_visible"
   },
 
-  "tnt_explodes_toggle@option_toggle_mcjava.option_toggle": {
+  "tnt_explodes_toggle@option_toggle_ui.option_toggle": {
     "size": [220, 24],
     "$option_toggle_text": "gamerule.tntExplodes",
     "$option_binding_name": "#tnt_explodes",
@@ -276,9 +282,15 @@
     "size": [200, 32],
     "controls": [
       {
-        "back@world_create_mcjava.back_button": {
+        "back@world_create_ui.back_button": {
           "offset": [0, -0.5],
-          "$toggle_button_name": "gamerules"
+          "$toggle_button_name": "gamerules",
+          "variables": [
+            {
+              "requires": "(not $is_pregame)",
+              "$toggle_button_name": "game_settings"
+            }
+          ]
         }
       }
     ]
@@ -291,7 +303,7 @@
     "$tooltip_name|default": "null",
     "controls": [
       {
-        "tooltip@tooltip_mcjava.tooltip": {
+        "tooltip@tooltip_ui.tooltip": {
           "visible": "($state = checked_hover or $state = unchecked_hover or $state = checked_locked_hover or $state = unchecked_locked_hover)",
           "ignored": "($tooltip_name = null)"
         }

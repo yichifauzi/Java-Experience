@@ -58,7 +58,7 @@
   "anim_gamepadhelper_exit_push": {
     "anim_type": "alpha",
     "easing": "out_cubic",
-    "duration": 0,
+    "duration": 0.00,
     "from": 1.0,
     "to": 0.0,
     "play_event": "screen.exit_push",
@@ -68,7 +68,7 @@
   "anim_gamepadhelper_exit_pop": {
     "anim_type": "alpha",
     "easing": "out_cubic",
-    "duration": 0,
+    "duration": 0.00,
     "from": 1.0,
     "to": 0.0,
     "play_event": "screen.exit_pop",
@@ -78,7 +78,7 @@
   "anim_gamepadhelper_entrance_push": {
     "anim_type": "alpha",
     "easing": "out_cubic",
-    "duration": 0,
+    "duration": 0.00,
     "from": 0.0,
     "to": 1.0,
     "play_event": "screen.entrance_push",
@@ -88,7 +88,7 @@
   "anim_gamepadhelper_entrance_pop": {
     "anim_type": "alpha",
     "easing": "out_cubic",
-    "duration": 0,
+    "duration": 0.00,
     "from": 0.0,
     "to": 1.0,
     "play_event": "screen.entrance_pop",
@@ -483,12 +483,12 @@
 
   /* Villager Trade2 */
 
-  "gamepad_helper_x@common.gamepad_helper_x": {
+  "trade2_gamepad_helper_x@gamepad_helper_x": {
     "$gamepad_helper_visible_binding_name": "#gamepad_helper_x_visible",
     "$gamepad_helper_binding_condition": "always"
   },
 
-  "gamepad_helper_y@common.gamepad_helper_y": {
+  "trade2_gamepad_helper_y@gamepad_helper_y": {
     "$gamepad_helper_visible_binding_name": "#gamepad_helper_y_visible",
     "$gamepad_helper_binding_condition": "always"
   }

@@ -1,18 +1,18 @@
 /* Version: 2.0.0 */
 /* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "chests_mcjava",
+  "namespace": "chests_ui",
 
-  "small_chest_screen_content_panel@container_mcjava.container_panel": {
+  "small_chest_screen_content_panel@container_ui.container_panel": {
     "$container_bg": "resources1.generic_27_bg",
-    "$specified_content": "chests_mcjava.chest_content_panel",
+    "$specified_content": "chests_ui.chest_content_panel",
     "$container_size": [176, 167],
     "$grid_dimensions": [9, 3],
     "$grid_size": [162, 54],
     "$invlabel_offset": [1, -11]
   },
 
-  "large_chest_screen_content_panel@chests_mcjava.small_chest_screen_content_panel": {
+  "large_chest_screen_content_panel@chests_ui.small_chest_screen_content_panel": {
     "$container_bg": "resources1.generic_54_bg",
     "$container_size": [176, 221],
     "$grid_dimensions": [9, 6],
@@ -20,23 +20,23 @@
     "$invlabel_offset": [1, -11]
   },
 
-  "ender_chest_screen_content_panel@chests_mcjava.small_chest_screen_content_panel": {},
+  "ender_chest_screen_content_panel@chests_ui.small_chest_screen_content_panel": {},
 
-  "shulker_box_screen_content_panel@container_mcjava.container_panel": {
-    "$specified_content": "chests_mcjava.chest_content_panel",
+  "shulker_box_screen_content_panel@container_ui.container_panel": {
+    "$specified_content": "chests_ui.chest_content_panel",
     "$grid_dimensions": [9, 3],
     "$grid_size": [162, 54],
     "$invlabel_offset": [1, -12],
     "$container_bg": "resources1.shulker_box_bg"
   },
 
-  "barrel_screen_content_panel@chests_mcjava.small_chest_screen_content_panel": {},
+  "barrel_screen_content_panel@chests_ui.small_chest_screen_content_panel": {},
 
   "chest_content_panel": {
     "type": "panel",
     "controls": [
-      { "title@container_mcjava.title": { "offset": [8, 5] } },
-      { "grid@chests_mcjava.chest_grid": { "offset": [7, 17] } }
+      { "title@container_ui.title": { "offset": [8, 5] } },
+      { "grid@chests_ui.chest_grid": { "offset": [7, 17] } }
     ]
   },
 
@@ -47,7 +47,7 @@
     "collection_name": "container_items",
     "size": "$grid_size",
     "grid_dimensions": "$grid_dimensions",
-    "grid_item_template": "container_mcjava.container_slot",
+    "grid_item_template": "container_ui.container_slot",
     "$item_collection_name": "container_items"
   }
 }

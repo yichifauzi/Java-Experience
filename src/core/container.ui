@@ -1,22 +1,22 @@
 /* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "container_mcjava",
+  "namespace": "container_ui",
 
   "container_panel": {
     "type": "panel",
     "$container_size|default": [176, 166],
     "$specified_content|default": "",
-    "$inv_grid_panel|default": "container_mcjava.inventory_grid_panel",
-    "$hotbar_grid_panel|default": "container_mcjava.hotbar_grid",
+    "$inv_grid_panel|default": "container_ui.inventory_grid_panel",
+    "$hotbar_grid_panel|default": "container_ui.hotbar_grid",
     "controls": [
       { "container_gamepad_helpers@gamepadhelper.container_gamepad_helpers": {} },
-      { "invisible_exit_background@container_mcjava.invisible_exit_background": {} },
+      { "invisible_exit_bg@container_ui.invisible_exit_bg": {} },
       {
         "root_panel@common.root_panel": {
           "size": "$container_size",
           "layer": 1,
           "controls": [
-            { "close_button@container_mcjava.close_button": {} },
+            { "close_button@container_ui.close_button": {} },
             { "bg@$container_bg": {} },
             {
               "screen_inventory": {
@@ -26,12 +26,12 @@
                   { "$specified_content@$specified_content": {} },
                   { "inventory_grid_panel@$inv_grid_panel": {} },
                   { "hotbar_grid@$hotbar_grid_panel": {} },
-                  { "inventory_take_progress_icon_button@container_mcjava.inventory_take_progress_icon_button": {} }
+                  { "inventory_take_progress_icon_button@container_ui.inventory_take_progress_icon_button": {} }
                 ]
               }
             },
-            { "inventory_selected_icon_button@container_mcjava.inventory_selected_icon_button": {} },
-            { "gamepad_cursor@container_mcjava.gamepad_cursor_button": {} }
+            { "inventory_selected_icon_button@container_ui.inventory_selected_icon_button": {} },
+            { "gamepad_cursor@container_ui.gamepad_cursor_button": {} }
           ]
         }
       }
@@ -58,6 +58,7 @@
     "tts_name": "$button_tts_name",
     "tts_control_header": "$button_tts_header",
     "tts_section_header": "$tts_section_header",
+    "ignored": "($container_exit_way = invisible)",
     "bindings": [
       {
         "ignored": "$render_touch_close_btn",
@@ -85,6 +86,31 @@
       { "default@resources0.close_button_default": {} },
       { "hover@resources0.close_button_hover": {} },
       { "pressed@resources0.close_button_hover": {} }
+    ]
+  },
+
+  "invisible_exit_bg": {
+    "type": "input_panel",
+    "size": ["30%", "10% + 20px"],
+    "focus_enabled": false,
+    "ignored": "($container_exit_way = visible_button)",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "focused"
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#using_touch",
+        "binding_name_override": "#visible"
+      }
     ]
   },
   
@@ -123,7 +149,7 @@
     "$item_renderer_size|default": [16, 16],
     "$item_renderer_offset|default": [0, 0],
     "$cell_overlay_ref|default": "common.empty_panel",
-    "$button_ref|default": "container_mcjava.container_slot_button_prototype",
+    "$button_ref|default": "container_ui.container_slot_button_prototype",
     "$highlight_slot_required|default": true,
     "$stack_count_required|default": true,
     "$durability_bar_required|default": true,
@@ -140,7 +166,7 @@
                 "type": "panel",
                 "size": "$item_renderer_panel_size",
                 "controls": [
-                  { "stack_count_label@container_mcjava.stack_count_label": { "layer": 8 } },
+                  { "stack_count_label@container_ui.stack_count_label": { "layer": 8 } },
                   {
                     "$item_renderer@$item_renderer": {
                       "type": "custom",
@@ -156,7 +182,7 @@
                 ]
               }
             },
-            { "durability_bar@container_mcjava.durability_bar": { "layer": 6 } }
+            { "durability_bar@container_ui.durability_bar": { "layer": 6 } }
           ]
         }
       },
@@ -243,8 +269,8 @@
     "focus_wrap_enabled": false,
     "focus_magnet_enabled": true,
     "default_focus_precedence": 1,
-    "$highlight_hover_control|default": "container_mcjava.highlight_hover_slot_panel",
-    "$highlight_pressed_control|default": "container_mcjava.highlight_pressed_slot_panel",
+    "$highlight_hover_control|default": "container_ui.highlight_hover_slot_panel",
+    "$highlight_pressed_control|default": "container_ui.highlight_pressed_slot_panel",
     "hover_control": "hover",
     "pressed_control": "pressed",
     "layer": 1,
@@ -356,7 +382,7 @@
     ]
   },
 
-  "no_coalesce_container_slot_button@container_mcjava.container_slot_button_prototype": {
+  "no_coalesce_container_slot_button@container_ui.container_slot_button_prototype": {
     "button_mappings": [
       {
         "from_button_id": "button.menu_select",
@@ -415,9 +441,9 @@
     "type": "panel",
     "layer": 4,
     "controls": [
-      { "highlight_slot_image@container_mcjava.highlight_slot_image": {} },
+      { "highlight_slot_image@container_ui.highlight_slot_image": {} },
       {
-        "hover_text@container_mcjava.hover_text": {
+        "hover_text@container_ui.hover_text": {
           "layer": 50,
           "$hover_text_binding_name|default": "#hover_text",
           "bindings": [
@@ -438,7 +464,7 @@
     "layer": 4,
     "controls": [
       {
-        "highlight_slot_image@container_mcjava.highlight_slot_image": {
+        "highlight_slot_image@container_ui.highlight_slot_image": {
           "bindings": [
             {
               "binding_name": "(not #using_touch)",
@@ -448,7 +474,7 @@
         }
       },
       {
-        "hover_text@container_mcjava.hover_text": {
+        "hover_text@container_ui.hover_text": {
           "layer": 50,
           "$hover_text_binding_name|default": "#hover_text",
           "bindings": [
@@ -476,11 +502,27 @@
     "anchor_to": "center",
     "allow_clipping": false,
     "consume_hover_events": false,
+    "$hover_text_bindings|default": [
+      {
+        "binding_name": "#hover_text",
+        "binding_name_override": "#hover_text",
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection_name"
+      }
+    ],
+    "$hover_text_parent_bindings|default": [
+      {
+        "binding_name": "(not (#hover_text = ''))",
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection_name",
+        "binding_name_override": "#visible"
+      }
+    ],
     "controls": [
       {
         "hover_text": {
           "type": "image",
-          "texture": "src/core/assets/fmarquespto/textures/tooltip",
+          "texture": "src/core/assets/fmarquespto/tooltip",
           "nineslice_size": 3,
           "size": ["100%c + 8px", "100%c + 6px"],
           "offset": ["50%c + 12px", "50%c - 12px"],
@@ -494,25 +536,11 @@
                 "text": "#hover_text",
                 "shadow": true,
                 "layer": 10,
-                "bindings": [
-                  {
-                    "binding_name": "#hover_text",
-                    "binding_name_override": "#hover_text",
-                    "binding_type": "collection",
-                    "binding_collection_name": "$item_collection_name"
-                  }
-                ]
+                "bindings": "$hover_text_bindings"
               }
             }
           ],
-          "bindings": [
-            {
-              "binding_name": "(not (#hover_text = ''))",
-              "binding_type": "collection",
-              "binding_collection_name": "$item_collection_name",
-              "binding_name_override": "#visible"
-            }
-          ]
+          "bindings": "$hover_text_parent_bindings"
         }
       }
     ]
@@ -520,7 +548,7 @@
 
   "highlight_slot_image": {
     "type": "image",
-    "texture": "src/core/assets/fmarquespto/textures/white",
+    "texture": "src/core/assets/fmarquespto/white",
     "size": [16, 16],
     "color": "$highlight_slot_bg_color",
     "ignored": "(not $highlight_slot_required)",
@@ -529,11 +557,11 @@
 
   /* Inventory/Hotbar Slot Grid */
 
-  "grid_item_for_inventory@container_mcjava.container_slot": {
+  "grid_item_for_inventory@container_ui.container_slot": {
     "$item_collection_name": "inventory_items"
   },
 
-  "grid_item_for_hotbar@container_mcjava.container_slot": {
+  "grid_item_for_hotbar@container_ui.container_slot": {
     "$item_collection_name": "hotbar_items"
   },
 
@@ -564,7 +592,7 @@
           "type": "grid",
           "size": [162, 54],
           "grid_dimensions": [9, 3],
-          "grid_item_template": "container_mcjava.grid_item_for_inventory",
+          "grid_item_template": "container_ui.grid_item_for_inventory",
           "collection_name": "inventory_items"
         }
       }
@@ -578,7 +606,7 @@
     "anchor_to": "bottom_middle",
     "offset": "$hotbar_offset",
     "grid_dimensions": [ 9, 1 ],
-    "grid_item_template": "container_mcjava.grid_item_for_hotbar",
+    "grid_item_template": "container_ui.grid_item_for_hotbar",
     "collection_name": "hotbar_items",
     "$hotbar_offset|default": [ 0, -7 ]
   },
@@ -599,9 +627,9 @@
     "sound_pitch": 1.0,
     "always_handle_pointer": true,
     "controls": [
-      { "default@container_mcjava.inventory_hold_icon": {} },
-      { "hover@container_mcjava.inventory_hold_icon": {} },
-      { "pressed@container_mcjava.inventory_hold_icon": {} }
+      { "default@container_ui.inventory_hold_icon": {} },
+      { "hover@container_ui.inventory_hold_icon": {} },
+      { "pressed@container_ui.inventory_hold_icon": {} }
     ]
   },
 
@@ -622,10 +650,10 @@
     "always_handle_pointer": true,
     "$durability_bar_required|default": true,
     "controls": [
-      { "default@container_mcjava.inventory_icon_panel": {} },
-      { "pressed@container_mcjava.inventory_icon_panel": {} },
-      { "hover@container_mcjava.inventory_icon_panel": {} },
-      { "durability_bar_grabbed@container_mcjava.durability_bar_grabbed": {} }
+      { "default@container_ui.inventory_icon_panel": {} },
+      { "pressed@container_ui.inventory_icon_panel": {} },
+      { "hover@container_ui.inventory_icon_panel": {} },
+      { "durability_bar_grabbed@container_ui.durability_bar_grabbed": {} }
     ]
   },
 
@@ -653,8 +681,8 @@
   "inventory_icon_panel": {
     "type": "panel",
     "controls": [
-      { "selected_item_icon@container_mcjava.inventory_selected_icon": {} },
-      { "selected_stack_size_text@container_mcjava.inventory_selected_stack_size_text": {} },
+      { "selected_item_icon@container_ui.inventory_selected_icon": {} },
+      { "selected_stack_size_text@container_ui.inventory_selected_stack_size_text": {} },
       {
         "hover_text@common.hover_text": {
           "layer": 59,
@@ -771,7 +799,7 @@
 
   "gamepad_cursor_image": {
     "type": "image",
-    "texture": "src/core/assets/fmarquespto/textures/pointer",
+    "texture": "src/core/assets/fmarquespto/pointer",
     "size": [ 14, 14 ],
     "layer": 60,
     "follows_cursor": true,
@@ -787,8 +815,8 @@
 
   /* Container Scrolls */
 
-  "container_scroll_panel@scrolling_mcjava.scrolling_panel": {
-    "$scrolling_content|default": "container_mcjava.container_grid",
+  "container_scroll_panel@scrolling_ui.scrolling_panel": {
+    "$scrolling_content|default": "container_ui.container_grid",
     "$scroll_clip_path": true,
     "$scrolling_panel_base_button_mappings": [
       {
@@ -826,7 +854,7 @@
     "anchor_to": "top_left",
     "anchor_from": "top_left",
     "$item_collection_name|default": "inventory_items",
-    "$grid_item_template|default": "container_mcjava.container_slot",
+    "$grid_item_template|default": "container_ui.container_slot",
     "collection_name": "$item_collection_name",
     "grid_item_template": "$grid_item_template",
     "bindings": [

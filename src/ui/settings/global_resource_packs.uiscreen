@@ -1,20 +1,18 @@
 /* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "global_resource_packs_mcjava",
+  "namespace": "global_resource_packs_ui",
 
   "global_resource_packs_content_panel": {
     "type": "panel",
     "controls": [
-      { "title@screen_mcjava.title": { "text": "options.resourcePacks.title" } },
-      { "content_panel@global_resource_packs_mcjava.content_panel": {} },
-      { "bottom_content@global_resource_packs_mcjava.bottom_content": {} }
+      { "title@content.title": { "offset": [0, 7], "text": "options.resourcePacks.title" } },
+      { "subtitle@content.title": { "offset": [0, 19], "text": "resourcePacks.dropInfo", "color": [0.333, 0.333, 0.333], "visible": "$is_pregame" } },
+      { "content_panel@global_resource_packs_ui.content_panel": {} },
+      { "bottom_content@global_resource_packs_ui.bottom_content": {} }
     ]
   },
   
-  "content_panel": {
-    "type": "panel",
-    "size": ["100%", "100%"],
-    "layer": 2,
+  "content_panel@resource_packs_ui.resource_packs_centered_content_panel": {
     "$available_packs_title": "resourcePack.available.title",
     "$selected_packs_title": "resourcePack.selected.title",
     "$selected_pack_items": "#selected_pack_items_global",
@@ -69,18 +67,13 @@
     "$no_available_packs_visibility_binding": "#no_available_packs_visibility_global",
     "$no_realms_packs_visibility_binding": "#no_realms_packs_visibility_global",
     "$no_unowned_packs_visibility_binding": "#no_unowned_packs_visibility_global",
-    "$view_more_unowned_content_button_visibility_binding": "#suggested_content_visible_global",
-    "controls": [
-      { "content@resource_packs_mcjava.resource_packs_centered_content_panel": {} }
-    ]
+    "$view_more_unowned_content_button_visibility_binding": "#suggested_content_visible_global"
   },
 
-  "bottom_content@screen_mcjava.panel": {
+  "bottom_content@content.panel": {
     "anchor_from": "bottom_middle",
     "anchor_to": "bottom_middle",
     "offset": [0, -28],
-    "controls": [
-      { "back@settings_mcjava.back_button": {} }
-    ]
+    "controls": [ { "back@settings_ui.back_button": {} } ]
   }
 }

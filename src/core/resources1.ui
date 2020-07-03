@@ -1,3 +1,4 @@
+/* By @FMarquesPTO. All rights reserved. */
 {
   "namespace": "resources1",
 
@@ -534,6 +535,16 @@
     ]
   },
 
+  /* Creative Inventory */
+
+  "creative_scroll_bg@content.resource_image": {
+    "type": "image",
+    "texture": "src/assets/minecraft/textures/gui/container/creative_inventory/tab_items",
+    "uv": [8, 17],
+    "size": [162, 900],
+    "uv_size": [162, 90]
+  },
+
   /* Enchanting Table */
 
   "enchanting_table_bg@content.resource_image": {
@@ -867,7 +878,7 @@
     ]
   },
 
-  "loom_banner_empty_slot@resources.resource_image": {
+  "loom_banner_empty_slot@content.resource_image": {
     "texture": "src/assets/minecraft/textures/gui/container/loom",
     "variables": [
       { "requires": "($loom_resolution = 256x)", "$uv": [176, 0], "$uv_size": [16, 16] },
@@ -887,7 +898,7 @@
     ]
   },
 
-  "loom_dye_empty_slot@resources.resource_image": {
+  "loom_dye_empty_slot@content.resource_image": {
     "texture": "src/assets/minecraft/textures/gui/container/loom",
     "size": [16, 16],
     "variables": [
@@ -907,7 +918,7 @@
     ]
   },
     
-  "loom_pattern_item_empty_slot@resources.resource_image": {
+  "loom_pattern_item_empty_slot@content.resource_image": {
     "texture": "src/assets/minecraft/textures/gui/container/loom",
     "variables": [
       { "requires": "($loom_resolution = 256x)", "$uv": [208, 0],"$uv_size": [16, 16] },
@@ -927,7 +938,7 @@
     ]
   },
 
-  "loom_locked_scrollbox@resources.resource_image": {
+  "loom_locked_scrollbox@content.resource_image": {
     "texture": "src/assets/minecraft/textures/gui/container/loom",
     "size": [12, 15],
     "anchor_from": "top_left",
@@ -942,7 +953,7 @@
     ]
   },
 
-  "loom_scroll_track@resources.resource_image": {
+  "loom_scroll_track@content.resource_image": {
     "texture": "src/assets/minecraft/textures/gui/container/loom",
     "size": [12, 56],
     "offset": [0, 0],
@@ -957,7 +968,7 @@
     ]
   },
 
-  "loom_scroll_box@resources.resource_image": {
+  "loom_scroll_box@content.resource_image": {
     "texture": "src/assets/minecraft/textures/gui/container/loom",
     "size": [12, 15],
     "variables": [
@@ -969,7 +980,7 @@
     ]
   },
 
-  "loom_pattern_slot_background@resources.resource_image": {
+  "loom_pattern_slot_background@content.resource_image": {
     "texture": "src/assets/minecraft/textures/gui/container/loom",
     "size": [14, 14],
     "layer": 1,
@@ -982,7 +993,7 @@
     ]
   },
   
-  "loom_pattern_hover_slot_background@resources.resource_image": {
+  "loom_pattern_hover_slot_background@content.resource_image": {
     "texture": "src/assets/minecraft/textures/gui/container/loom",
     "size": [14, 14],
     "layer": 1,
@@ -995,7 +1006,7 @@
     ]
   },
   
-  "loom_pattern_selected_slot_background@resources.resource_image": {
+  "loom_pattern_selected_slot_background@content.resource_image": {
     "texture": "src/assets/minecraft/textures/gui/container/loom",
     "size": [14, 14],
     "layer": 1,
@@ -1064,9 +1075,8 @@
 
   /* Stonecutter */
   
-  "stonecutter_bg@resources.resource_image": {
+  "stonecutter_bg@content.resource_image": {
     "texture": "src/assets/minecraft/textures/gui/container/stonecutter",
-    "uv": [0, 0],
     "size": [176, 166],
     "variables": [
       { "requires": "($stonecutter_resolution = 256x)", "$uv_size": [176, 166] },
@@ -1077,7 +1087,7 @@
     ]
   },
 
-  "stonecutter_locked_scrollbox@resources.resource_image": {
+  "stonecutter_locked_scrollbox@content.resource_image": {
     "texture": "src/assets/minecraft/textures/gui/container/stonecutter",
     "size": [12, 15],
     "anchor_from": "top_left",
@@ -1092,7 +1102,7 @@
     ]
   },
 
-  "stonecutter_scroll_box@resources.resource_image": {
+  "stonecutter_scroll_box@content.resource_image": {
     "texture": "src/assets/minecraft/textures/gui/container/loom",
     "size": [12, 15],
     "variables": [
@@ -1104,7 +1114,7 @@
     ]
   },
 
-  "stonecutter_slot_background@resources.resource_image": {
+  "stonecutter_slot_background@content.resource_image": {
     "texture": "src/assets/minecraft/textures/gui/container/stonecutter",
     "size": [16, 18],
     "layer": 1,
@@ -1117,10 +1127,7 @@
     ]
   },
 
-  "stonecutter_hover_slot_background@resources.resource_image": {
-    "texture": "src/assets/minecraft/textures/gui/container/stonecutter",
-    "size": [16, 18],
-    "layer": 1,
+  "stonecutter_hover_slot_background@stonecutter_slot_background": {
     "variables": [
       { "requires": "($stonecutter_resolution = 256x)", "$uv": [0, 202], "$uv_size": [16, 18] },
       { "requires": "($stonecutter_resolution = 512x)", "$uv": [0, 404], "$uv_size": [32, 36] },
@@ -1130,10 +1137,7 @@
     ]
   },
 
-  "stonecutter_selected_slot_background@resources.resource_image": {
-    "texture": "src/assets/minecraft/textures/gui/container/stonecutter",
-    "size": [16, 18],
-    "layer": 1,
+  "stonecutter_selected_slot_background@stonecutter_slot_background": {
     "variables": [
       { "requires": "($stonecutter_resolution = 256x)", "$uv": [0, 184], "$uv_size": [16, 18] },
       { "requires": "($stonecutter_resolution = 512x)", "$uv": [0, 368], "$uv_size": [32, 36] },
@@ -1143,7 +1147,7 @@
     ]
   },
   
-  "scroll_track@resources.resource_image": {
+  "scroll_track@content.resource_image": {
     "texture": "src/assets/minecraft/textures/gui/container/stonecutter",
     "size": [12, 54],
     "anchor_from": "top_left",
@@ -1161,7 +1165,7 @@
 
   /* Villager2 */
    
-  "villager2_bg@resources.resource_image": {
+  "villager2_bg@content.resource_image": {
     "texture": "src/assets/minecraft/textures/gui/container/villager2",
     "uv": [0, 0],
     "size": [276, 166],
@@ -1174,7 +1178,7 @@
     ]
   },
 
-  "villager2_locked_scrollbox@resources.resource_image": {
+  "villager2_locked_scrollbox@content.resource_image": {
     "texture": "src/assets/minecraft/textures/gui/container/villager2",
     "size": [6, 27],
     "anchor_from": "top_left",
@@ -1190,7 +1194,7 @@
     ]
   },
 
-  "villager2_scroll_track@resources.resource_image": {
+  "villager2_scroll_track@content.resource_image": {
     "texture": "src/assets/minecraft/textures/gui/container/villager2",
     "size": [6, 140],
     "anchor_from": "top_left",
@@ -1204,7 +1208,7 @@
     ]
   },
 
-  "villager2_scroll_box@resources.resource_image": {
+  "villager2_scroll_box@content.resource_image": {
     "texture": "src/assets/minecraft/textures/gui/container/villager2",
     "size": [6, 27],
     "variables": [
@@ -1216,7 +1220,7 @@
     ]
   },
 
-  "villager2_small_arrow@resources.resource_image": {
+  "villager2_small_arrow@content.resource_image": {
     "texture": "src/assets/minecraft/textures/gui/container/villager2",
     "size": [10, 9],
     "anchor_from": "top_left",
@@ -1232,12 +1236,7 @@
     ]
   },
 
-  "villager2_small_arrow_crossover@resources.resource_image": {
-    "texture": "src/assets/minecraft/textures/gui/container/villager2",
-    "size": [10, 9],
-    "anchor_from": "top_left",
-    "anchor_to": "top_left",
-    "offset": [55, 4],
+  "villager2_small_arrow_crossover@villager2_small_arrow": {
     "variables": [
       { "requires": "($villager2_resolution = 256x)", "$uv": [25, 171], "$uv_size": [10, 9] },
       { "requires": "($villager2_resolution = 512x)", "$uv": [50, 342], "$uv_size": [20, 18] },
@@ -1245,19 +1244,10 @@
       { "requires": "($villager2_resolution = 2048x)", "$uv": [200, 1368], "$uv_size": [80, 72] },
       { "requires": "($villager2_resolution = 4096x)", "$uv": [400, 2736], "$uv_size": [160, 144] }
     ],
-    "layer": 3,
-    "bindings": [
-      {
-        "binding_type": "collection_details"
-      },
-      {
-        "binding_name": "#trade_cross_out_visible",
-        "binding_name_override": "#visible"
-      }
-    ]
+    "layer": 3
   },
 
-  "villager2_red_slash@resources.resource_image": {
+  "villager2_red_slash@content.resource_image": {
     "texture": "src/assets/minecraft/textures/gui/container/villager2",
     "anchor_from": "top_left",
     "anchor_to": "top_left",
@@ -1271,7 +1261,7 @@
     "layer": 2
   },
 
-  "villager2_crossover_arrow@resources.resource_image": {
+  "villager2_crossover_arrow@content.resource_image": {
     "texture": "src/assets/minecraft/textures/gui/container/villager2",
     "anchor_from": "top_left",
     "anchor_to": "top_left",
@@ -1286,7 +1276,7 @@
     "layer": 2
   },
 
-  "villager2_empty_bar@resources.resource_image": {
+  "villager2_empty_bar@content.resource_image": {
     "texture": "src/assets/minecraft/textures/gui/container/villager2",
     "size": [102, 5],
     "variables":[
@@ -1298,31 +1288,23 @@
     ]
   },
 
-  "villager2_full_bar@resources.resource_image": {
-    "texture": "src/assets/minecraft/textures/gui/container/villager2",
-    "size": [102, 5],
-    "variables":[
+  "villager2_full_bar@villager2_empty_bar": {
+    "variables": [
       { "requires": "($villager2_resolution = 256x)", "$uv": [0, 191], "$uv_size": [102, 5] },
       { "requires": "($villager2_resolution = 512x)", "$uv": [0, 382], "$uv_size": [204, 10] },
       { "requires": "($villager2_resolution = 1024x)", "$uv": [0, 764], "$uv_size": [408, 20] },
       { "requires": "($villager2_resolution = 2048x)", "$uv": [0, 1528], "$uv_size": [816, 40] },
       { "requires": "($villager2_resolution = 4096x)", "$uv": [0, 3056], "$uv_size": [1632, 80] }
-    ],
-    "clip_direction": "left",
-    "clip_pixelperfect": true
+    ]
   },
 
-  "villager2_white_bar@resources.resource_image": {
-    "texture": "src/assets/minecraft/textures/gui/container/villager2",
-    "size": [102, 5],
-    "variables":[
+  "villager2_white_bar@villager2_full_bar": {
+    "variables": [
       { "requires": "($villager2_resolution = 256x)", "$uv": [0, 181], "$uv_size": [102, 5] },
       { "requires": "($villager2_resolution = 512x)", "$uv": [0, 362], "$uv_size": [204, 10] },
       { "requires": "($villager2_resolution = 1024x)", "$uv": [0, 724], "$uv_size": [408, 20] },
       { "requires": "($villager2_resolution = 2048x)", "$uv": [0, 1448], "$uv_size": [816, 40] },
       { "requires": "($villager2_resolution = 4096x)", "$uv": [0, 2896], "$uv_size": [1632, 80] }
-    ],
-    "clip_direction": "left",
-    "clip_pixelperfect": true
+    ]
   }
 }

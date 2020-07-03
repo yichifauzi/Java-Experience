@@ -1,11 +1,12 @@
 /* Version: 2.0.0 */
+/* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "choose_realm_mcjava",
+  "namespace": "choose_realm_ui",
 
   "choose_realm_screen_content_panel@content.scroll_screen": {
-    "$top_content": "choose_realm_mcjava.top_content",
-    "$middle_content": "choose_realm_mcjava.scroll_content",
-    "$bottom_content": "choose_realm_mcjava.bottom_content"
+    "$top_content": "choose_realm_ui.top_content",
+    "$middle_content": "choose_realm_ui.scroll_content",
+    "$bottom_content": "choose_realm_ui.bottom_content"
   },
 
   "top_content": {
@@ -15,7 +16,7 @@
     ]
   },
 
-  "title@account_banned_mcjava.title": {
+  "title@account_banned_ui.title": {
     "text": "#window_title_text",
     "size": ["default", "default"],
     "offset": [0, 10],
@@ -79,7 +80,7 @@
     "layer": 1,
     "anchor_to": "top_left",
     "anchor_from": "top_left",
-    "grid_item_template": "choose_realm_mcjava.realms_world_item_panel",
+    "grid_item_template": "choose_realm_ui.realms_world_item_panel",
     "grid_dimension_binding": "#realms_grid_dimension",
     "collection_name": "realms_collection",
     "bindings": [ { "binding_name": "#realms_grid_dimension" } ]
@@ -93,13 +94,13 @@
     "size": ["100%", 36],
     "controls": [
       {
-        "realms_world_item_button@choose_realm_mcjava.realms_world_item_button": {
+        "realms_world_item_button@choose_realm_ui.realms_world_item_button": {
           "size": ["100%", "100%" ],
           "layer": 1
         }
       },
-      { "realm_screenshot@choose_realm_mcjava.realm_screenshot": {} },
-      { "item_text_panel@choose_realm_mcjava.item_text_panel": {} }
+      { "realm_screenshot@choose_realm_ui.realm_screenshot": {} },
+      { "item_text_panel@choose_realm_ui.item_text_panel": {} }
     ]
   },
 
@@ -138,7 +139,7 @@
     ]
   },
 
-  "ten_player_button@button_mcjava.action_button": {
+  "ten_player_button@button_ui.action_button": {
     "size": [150, 20],
     "$button_text": "chooseRealmScreen.realmsplusbuttontext",
     "default_focus_precedence": 2,
@@ -151,7 +152,7 @@
     ]
   },
 
-  "two_player_button@button_mcjava.button": {
+  "two_player_button@button_ui.button": {
     "$pressed_button_name": "button.two_player",
     "$button_text": "chooseRealmScreen.realmsbuttontext",
     "size": [150, 20],

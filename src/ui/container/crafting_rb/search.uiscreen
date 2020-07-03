@@ -1,7 +1,8 @@
+/* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "crafting_rb_search_mcjava",
+  "namespace": "crafting_rb_search_ui",
 
-  "creative_search_tab_content@crafting_rb_mcjava.common_tab_content": {
+  "creative_search_tab_content@crafting_rb_ui.common_tab_content": {
     "$tab_name": "search",
     "$page_total_number": "58",
     "variables": [
@@ -21,7 +22,7 @@
     ]
   },
 
-  "survival_search_tab_content@crafting_rb_mcjava.common_tab_content": {
+  "survival_search_tab_content@crafting_rb_ui.common_tab_content": {
     "$tab_name": "search",
     "$page_total_number": "30",
     "$ignore_from_thirty": true,

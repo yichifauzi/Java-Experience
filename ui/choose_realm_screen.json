@@ -8,7 +8,7 @@
         "mapping_type": "global"
       }
     ],
-    "$screen_content": "choose_realm_mcjava.choose_realm_screen_content_panel",
+    "$screen_content": "choose_realm_ui.choose_realm_screen_content_panel",
     "$screen_background": "content.dirt_background"
   }
 }

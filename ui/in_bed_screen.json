@@ -13,7 +13,7 @@
         "mapping_type": "global"
       }
     ],
-    "$screen_content": "bed_mcjava.in_bed_screen_content_panel",
-    "$screen_background": "bed_mcjava.screen_background"
+    "$screen_content": "bed_ui.in_bed_screen_content_panel",
+    "$screen_background": "bed_ui.screen_background"
   }
 }

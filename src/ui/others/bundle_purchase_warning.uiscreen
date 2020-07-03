@@ -1,6 +1,7 @@
 /* Version: 2.0.0 */
+/* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "bundle_purchase_warning_mcjava",
+  "namespace": "bundle_purchase_warning_ui",
 
   "bundle_purchase_warning_screen_content_panel": {
     "type": "panel",
@@ -10,7 +11,7 @@
     ]
   },
 
-  "title@account_banned_mcjava.title": {
+  "title@account_banned_ui.title": {
     "text": "#body_text",
     "size": ["default", "default"],
     "offset": [0, 10],
@@ -48,16 +49,16 @@
           "anchor_to": "top_middle",
           "controls": [
             {
-              "owned@resource_packs_mcjava.side_content_panel": {
+              "owned@resource_packs_ui.side_content_panel": {
                 "$label_text": "store.purchase.bundle.owned",
-                "$scrolling_content": "bundle_purchase_warning_mcjava.bundle_grid"
+                "$scrolling_content": "bundle_purchase_warning_ui.bundle_grid"
               }
             },
-            { "fill@screen_mcjava.hfill": {} },
+            { "fill@screen_ui.hfill": {} },
             {
-              "unowned@resource_packs_mcjava.side_content_panel": {
+              "unowned@resource_packs_ui.side_content_panel": {
                 "$label_text": "store.purchase.bundle.unowned",
-                "$scrolling_content": "bundle_purchase_warning_mcjava.bundle_grid"
+                "$scrolling_content": "bundle_purchase_warning_ui.bundle_grid"
               }
             }
           ]
@@ -77,7 +78,7 @@
       { "exit@content.exit_button": { "$button_text": "gui.cancel", "size": [150, 20] } },
       { "space@content.hfill": {} },
       {
-        "purchase_button_panel@button_mcjava.button": {
+        "purchase_button_panel@button_ui.button": {
           "size": [150, 20],
           "$pressed_button_name": "button.confirm_bundle_purchase",
           "$button_text": "#bundle_purchase_confirm",
@@ -97,7 +98,7 @@
     "layer": 1,
     "anchor_to": "top_left",
     "anchor_from": "top_left",
-    "grid_item_template": "bundle_purchase_warning_mcjava.bundle_grid_item_panel",
+    "grid_item_template": "bundle_purchase_warning_ui.bundle_grid_item_panel",
     "grid_dimension_binding": "$bundle_grid_dimension",
     "collection_name": "$bundle_collection_name",
     "bindings": [ { "binding_name": "$bundle_grid_dimension" } ]

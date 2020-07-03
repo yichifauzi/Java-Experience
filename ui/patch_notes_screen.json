@@ -1,7 +1,7 @@
 /* Version: 2.0.0 */
 {
   "patch_notes_screen@content.base_screen": {
-    "$screen_content": "patch_notes_mcjava.patch_notes_screen_content_panel",
-    "$screen_background": "screen_mcjava.dirt_background"
+    "$screen_content": "patch_notes_ui.patch_notes_screen_content_panel",
+    "$screen_background": "screen_ui.dirt_background"
   }
 }

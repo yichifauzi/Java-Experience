@@ -1,107 +1,122 @@
+##Custom Gui
+gui.comma=:
+gui.comma.spaced=: 
 gui.parenteses.left=(
 gui.parenteses.right=)
 gui.percentage=%
+gui.plus=+
+gui.minus=-
 
-record.nowPlaying=Now playing: %s
-
-options.fov.label=FOV
+##Lang Binding Reset
+entity.wither.name=0
+entity.ender_dragon.name=1
+raid.name=2
+raid.progress=3
 options.fov=0
 
 entity.wither.name.new=Wither
-entity.wither.name=0
-
 entity.ender_dragon.name.new=Ender Dragon
-entity.ender_dragon.name=1
-
 raid.name.new=Raid
 raid.progress.new=Mobs remaining:
-raid.name=2
-raid.progress=3
+options.fov.label=FOV
 
+##Others
 map.position.agent=Agent XYZ: %s / %s / %s
 map.position=XYZ: %s / %s / %s
 
-##Main Menu
-menu.play=Play
-menu.courses=Courses
-menu.profile=Profile
-menu.skins=Change Skins
-menu.store=Marketplace
-menu.options=Options...
-menu.quit=Quit Game
-menu.switchAccounts=Switch Account
-menu.launchEditions=Launch Editions
-
-menu.savingLevel=Saving world
-menu.savingChunks=Saving chunks
-menu.returnToGame=Back to Game
-menu.permissions=Permissions
-menu.playersMenu=Players
-menu.takeScreenshot=Take Screenshot
-menu.sendFeedback=Give Feedback
-menu.invitePlayer=Invite Players
-menu.takeScreenshot.short=Screenshot
-menu.returnToMenu=Save and Quit to Title
-menu.disconnect=Disconnect
+##Recipe Book
+gui.recipebook.search_hint=§oSearch...
+gui.recipebook.toggleRecipes.all=Showing all
+gui.recipebook.toggleRecipes.reset=Reset
+gui.recipebook.toggleRecipes.craftable=Showing craftable
 
 ##Containers
 merchant.trades=Trades
-container.anvil=Repair & Name
-container.cartography=Cartography Table
-container.enchant=Enchant
-container.grindstone=Repair & Disenchant
-container.loom=Loom
-container.upgrade=Upgrade Gear
-container.stonecutter=Stonecutter
+
+##Menu
+menu.options=Options...
+menu.quit=Quit Game
+menu.playersMenu=Players
+menu.sendFeedback=Give Feedback
+menu.returnToMenu=Save and Quit to Title
+progressScreen.message.resourceLoading=Reading World Data
+
+##Command Block
+advMode.command=Console Command
+advMode.mode.sequence=Chain
+advMode.mode.auto=Repeat
+advMode.mode.redstone=Impulse
+advMode.mode.conditional=Conditional
+advMode.mode.unconditional=Unconditional
+advMode.mode.redstoneTriggered=Needs Redstone
+advMode.mode.autoexec.bat=Always Active
+advMode.execOnFirstTick=Execute on First Tick
+
+##Structure Block
+structure_block.position=Relative Position
+structure_block.size=Structure Size
+structure_block.show=Show Structure
+structure_block.hide=Hide Structure
+structure_block.detect_size=Detect structure size and position:
 
 ##Settings
-options.graphics.fancy.tooltip="Fancy" graphics balances performance and quality for the majority of machines.
-options.graphics.fast.tooltip="Fast" graphics reduces the amount of visible rain and snow. Transparency effects are disabled for various blocks such as tree-leaves.
+options.fov.format=%s
+options.fov.toggle=Dynamic FOV
 
+options.accessibility=Accessibility Settings...
+options.accessibility.title=Accessibility Settings
 options.perspective=Perspective
 options.perspective.firstPerson=First Person
 options.perspective.thirdBack=Third Per. Back
 options.perspective.thirdFront=Third Per. Front
-options.title=Options
-options.accessibility=Accessibility Settings...
-options.accessibility.title=Accessibility Settings
-options.user_profile=Profile...
-options.user_profile.title=User Profile Settings
-options.sounds=Music & Sounds...
-options.sounds.title=Music & Sound Options
-options.video=Video Settings...
-options.video.title=Video Settings
-options.controls=Controls...
-options.mouse=Mouse...
-options.mouse_settings=Mouse Settings...
-options.mouse_settings.title=Mouse Settings
-options.language=Language...
-options.language.title=Language...
-options.languageWarning=Language translations may not be 100%% accurate
-options.controller=Controller...
-options.controller_settings=Controller Settings...
-options.controller_settings.title=Controller Settings
-options.resourcePacks=Resource Packs...
-options.resourcePacks.title=Select Resource Pack
-options.behaviorPacks=Behavior Packs...
-options.behaviorPacks.title=Select Behavior Pack
-resourcePack.available.title=§lAvailable
-resourcePack.selected.title=§lSelected
-options.touch=Touch...
-options.storage=Storage Managment...
-options.storage.title=Your Storage
-options.controls.title=Controls
-options.fov.format=%s
-options.fov.toggle=Dynamic FOV
 options.enableChatTextToSpeech=Narrator For Chat
 options.enableAutoPlatformTextToSpeech=Narrator For Text
 options.enableUITextToSpeech=Narrator For System
 options.enableOpenChatMessage=Can Chat Message
+
+options.mouse=Mouse...
+options.touch=Touch...
+options.hotbarOnlyTouch=Only Affect Hotbar
+options.mouse_settings=Mouse Settings...
+options.mouse_settings.title=Mouse Settings
+options.controller=Controller...
+options.controller_settings=Controller Settings...
+options.controller_settings.title=Controller Settings
+options.gamepadcursorsensitivity=Cursor Sensitivity
+options.graphics.fancy.tooltip="Fancy" graphics balances performance and quality for the majority of machines.
+options.graphics.fast.tooltip="Fast" graphics reduces the amount of visible rain and snow. Transparency effects are disabled for various blocks such as tree-leaves.
+options.autoJump=Auto-Jump
+controls.reset=Reset
+controls.resetAll=Reset Keys
+
+options.resourcePacks=Resource Packs...
+options.behaviorPacks=Behavior Packs
+options.resourcePacks.title=Select Resource Pack
+options.behaviorPacks.title=Select Behavior Pack
+resourcePacks.dropInfo=Drag and drop files into 'resource_packs' folder to add packs
+behaviorPacks.dropInfo=Drag and drop files into 'behavior_packs' folder to add packs
+resourcePack.available.title=§lAvailable
+resourcePack.selected.title=§lSelected
+pack.source.builtin=built-in
+
+options.language=Language...
+options.languageWarning=Language translations may not be 100%% accurate
+
+options.sounds=Music & Sounds...
+options.sounds.title=Music & Sound Options
 options.sound=Volume
 options.music=Music
+
+options.storage=Storage Managment...
+storageManager.selection.single=Single Selection
+storageManager.selection.multi=Multi Selection
+
+options.user_profile=Profile...
+options.autoUpdate=Auto Update
+
+options.video=Video Settings...
+options.video.advanced=Advanced
 options.graphics=Graphics
-options.graphics.fancy=Fancy
-options.graphics.fast=Fast
 options.transparentleaves=Leaves
 options.transparentleaves.fancy=Fancy
 options.transparentleaves.fast=Fast
@@ -116,179 +131,26 @@ options.bubbleparticles=Bubbles Particles
 options.bubbleparticles.fancy=Fancy
 options.bubbleparticles.fast=Fast
 options.maxFramerate=Max Framerate
-options.autoJump=Auto-Jump
-controls.reset=Reset
-controls.resetAll=Reset Keys
-key.sprint=Sprint
-key.forward=Walk Forwards
-key.left=Strafe Left
-key.back=Walk Backwards
-key.right=Strafe Right
-key.jump=Jump
-key.inventory=Open/Close Inventory
-key.drop=Drop Selected Item
-key.chat=Open Chat
-key.sneak=Sneak
-key.attack=Attack/Destroy
-key.use=Use Item/Place Block
-key.pickItem=Pick Block
-key.command=Open Command
-key.togglePerspective=Toggle Perspective
-key.hotbar.1=Hotbar Slot 1
-key.hotbar.2=Hotbar Slot 2
-key.hotbar.3=Hotbar Slot 3
-key.hotbar.4=Hotbar Slot 4
-key.hotbar.5=Hotbar Slot 5
-key.hotbar.6=Hotbar Slot 6
-key.hotbar.7=Hotbar Slot 7
-key.hotbar.8=Hotbar Slot 8
-key.hotbar.9=Hotbar Slot 9
-key.mobEffects=Mob Effects
-key.emote=Emotes
-key.tabLeft=Menu Tab Left
-key.tabRight=Menu Tab Right
-key.lookUpSlight=Look Up Slight
-key.lookDownSlight=Look Down Slight
-key.lookUpRight=Look Up Right
-key.lookUp=Look Up
-key.lookUpLeft=Look Up Left
-key.lookRight=Look Right
-key.lookCenter=Look Center
-key.lookLeft=Look Left
-key.lookDownRight=Look Down Right
-key.lookDown=Look Down
-key.lookDownLeft=Look Down Left
-key.lookUpSmooth=Look Up Smooth
-key.lookDownSmooth=Look Down Smooth
-key.lookLeftSmooth=Look Left Smooth
-key.lookRightSmooth=Look Right Smooth
-key.cycleItemLeft=Cycle Item Left
-key.cycleItemRight=Cycle Item Right
-key.categories.movement=Movement
-key.categories.misc=Miscellaneous
-key.categories.multiplayer=Multiplayer
-key.categories.gameplay=Gameplay
-key.categories.inventory=Inventory
+
 key.categories.additional=Additional
 
 controllerLayoutScreen.unassigned= 
 
-keyboard.keyName.backspace=Back
-keyboard.keyName.tab=Tab
-keyboard.keyName.return=Return
-keyboard.keyName.pause=Pause
-keyboard.keyName.lshift=Shift
-keyboard.keyName.control=Control
-keyboard.keyName.capsLock=Caps Lock
-keyboard.keyName.escape=Escape
-keyboard.keyName.space=Space
-keyboard.keyName.pgDown=Down Pgn
-keyboard.keyName.pgUp=Up Pgn
-keyboard.keyName.end=End
-keyboard.keyName.home=Home
-keyboard.keyName.left=Left Arrow
-keyboard.keyName.up=Up Arrow
-keyboard.keyName.right=Right Arrow
-keyboard.keyName.down=Down Arrow
-keyboard.keyName.insert=Insert
-keyboard.keyName.delete=Delete
-keyboard.keyName.0=0
-keyboard.keyName.1=1
-keyboard.keyName.2=2
-keyboard.keyName.3=3
-keyboard.keyName.4=4
-keyboard.keyName.5=5
-keyboard.keyName.6=6
-keyboard.keyName.7=7
-keyboard.keyName.8=8
-keyboard.keyName.9=9
-keyboard.keyName.a=a
-keyboard.keyName.b=b
-keyboard.keyName.c=c
-keyboard.keyName.d=d
-keyboard.keyName.e=e
-keyboard.keyName.f=f
-keyboard.keyName.g=g
-keyboard.keyName.h=h
-keyboard.keyName.i=i
-keyboard.keyName.j=j
-keyboard.keyName.k=k
-keyboard.keyName.l=l
-keyboard.keyName.m=m
-keyboard.keyName.n=n
-keyboard.keyName.o=o
-keyboard.keyName.p=p
-keyboard.keyName.q=q
-keyboard.keyName.r=r
-keyboard.keyName.s=s
-keyboard.keyName.t=t
-keyboard.keyName.u=u
-keyboard.keyName.v=v
-keyboard.keyName.w=w
-keyboard.keyName.x=x
-keyboard.keyName.y=y
-keyboard.keyName.z=z
-keyboard.keyName.f1=F1
-keyboard.keyName.f2=F2
-keyboard.keyName.f3=F3
-keyboard.keyName.f4=F4
-keyboard.keyName.f5=F5
-keyboard.keyName.f6=F6
-keyboard.keyName.f7=F7
-keyboard.keyName.f8=F8
-keyboard.keyName.f9=F9
-keyboard.keyName.f10=F10
-keyboard.keyName.f11=F11
-keyboard.keyName.f12=F12
-keyboard.keyName.f13=F13
-keyboard.keyName.numpad0=NP 0
-keyboard.keyName.numpad1=NP 1
-keyboard.keyName.numpad2=NP 2
-keyboard.keyName.numpad3=NP 3
-keyboard.keyName.numpad4=NP 4
-keyboard.keyName.numpad5=NP 5
-keyboard.keyName.numpad6=NP 6
-keyboard.keyName.numpad7=NP 7
-keyboard.keyName.numpad8=NP 8
-keyboard.keyName.numpad9=NP 9
-keyboard.keyName.scroll=Scroll
-keyboard.keyName.equals=+
-keyboard.keyName.add=Add
-keyboard.keyName.minus=-
-keyboard.keyName.subtract=Subtract
-keyboard.keyName.multiply=Multiply
-keyboard.keyName.divide=Divide
-keyboard.keyName.decimal=Decimal
-keyboard.keyName.grave=Grave
-keyboard.keyName.numLock=Num Lock
-keyboard.keyName.slash=~
-keyboard.keyName.semicolon=;
-keyboard.keyName.apostrophe=APOSTROPHE
-keyboard.keyName.comma=,
-keyboard.keyName.period=.
-keyboard.keyName.backslash=\
-keyboard.keyName.lbracket=[
-keyboard.keyName.rbracket=]
+##Create New World & Edit World
+accessibility.play.editWorld=Edit World
+selectWorld.settings=Game Settings
+selectWorld.resultFolder=Will be saved with:
+selectWorld.gameModePlayer=Personal GMode
+selectWorld.enterSeed=Seed for the world generator
+selectWorld.allowCommands=Allow Cheats
+createWorldScreen.experimentalgameplay=Experimental Gameplay
+selectWorld.experimentalGameplay.info=Test out new features comming to Minecraft
+selectWorld.forceUser.info=Force users to use this resources
+selectWorld.bonusItems=Bonus Chest
+generator.flat=Superflat
 
-options.resetSettings=Reset Settings
-options.difficulty=Difficulty
-options.difficulty.peaceful=Peaceful
-options.difficulty.easy=Easy
-options.difficulty.normal=Normal
-options.difficulty.hard=Hard
-
-##Create World Upsell
-createWorldUpsell.title=Create New World or Realm
-createWorldUpsell.newWorld=New World
-createWorldUpsell.newRealm=New Realm
-
-##World Templates
-worldTemplates.title=Templates
-worldTemplates.world=World
-worldTemplates.realm=Realms
-worldTemplates.help=Help
-
-##Gamerules
+##Gamerules/Resource/Behavior
+selectWorld.gameRules=Game Rules
 editGamerule.title=Edit game rules
 gamerule.category.chat=§lChat
 gamerule.category.spawning=§lSpawning
@@ -301,7 +163,6 @@ editGamerule.default.on=Default: true
 editGamerule.default.off=Default: false
 editGamerule.default.spawnRadius=Default: 5
 editGamerule.default.randomTickSpeed=Default: 1
-
 gamerule.doImmediateRespawn=Respawn immediately
 gamerule.naturalRegeneration=Regenerate health
 gamerule.doMobSpawning=Spawn mobs
@@ -320,99 +181,31 @@ gamerule.spawnRadius=Respawn location radius
 gamerule.randomTickSpeed=Random tick speed rate
 gamerule.pvp=Allow PVP
 gamerule.showCoordinates=Show Coordinates
-
 gamerule.doMobLoot.description=Controls resource drops, including experience orbs
 gamerule.doEntityDrops.description=Controls drops from minecarts (including inventories), item frames, boats, etc.
 gamerule.doMobSpawning.description=Some entities might have separate rules
 gamerule.doTileDrops.description=Controls resource drops, including experience orbs
 
-##Create New World & Edit World
-selectWorld.create=Create New World
-selectWorld.edit=Edit World
-selectWorld.settings=Game Settings
-selectWorld.resultFolder=Will be saved with:
-selectWorld.gameMode=Game Mode
-selectWorld.gameModePlayer=Personal GMode
-selectWorld.gameMode.default=Default
-selectWorld.gameMode.survival=Survival
-selectWorld.gameMode.survival.line1=Search for resources, craft, gain
-selectWorld.gameMode.survival.line2=levels, health and hunger
-selectWorld.gameMode.creative=Creative
-selectWorld.gameMode.creative.line1=Unlimited resources, free flying and
-selectWorld.gameMode.creative.line2=destroy blocks instantly
-selectWorld.gameMode.spectator=Spectator
-selectWorld.gameMode.spectator.line1=You can look but don't touch
-selectWorld.gameMode.spectator.line2=
-selectWorld.gameMode.hardcore=Hardcore
-selectWorld.gameMode.hardcore.line1=Same as survival mode, locked at hardest
-selectWorld.gameMode.hardcore.line2=difficulty, and one life only
-selectWorld.gameMode.adventure=Adventure
-selectWorld.gameMode.adventure.line1=Same as survival mode, but blocks can't
-selectWorld.gameMode.adventure.line2=be added or removed
-selectWorld.enterSeed=Seed for the world generator
-selectWorld.seedInfo=Leave blank for a random seed
-selectWorld.moreWorldOptions=More World Options...
-selectWorld.mapFeatures=Generate Structures
-selectWorld.mapFeatures.info=illages, dungeons etc
-selectWorld.mapType=World Type
-selectWorld.mapType.normal=Normal
-selectWorld.allowCommands=Allow Cheats
-selectWorld.allowCommands.info= Commands like /gamemode, /experience
-selectWorld.hardcoreMode=Hardcore
-selectWorld.hardcoreMode.info= World is deleted upon death
-selectWorld.experimentalGameplay=Experimental Gameplay
-selectWorld.experimentalGameplay.info=Test out new features comming to Minecraft
-selectWorld.forceUser.info=Force users to use this resources to join
-selectWorld.bonusItems= Bonus Chest
-generator.default=Default
-generator.flat=Superflat
-generator.small=Small
-seedPicker.title=Seed Picker
-seedPicker.use=Done
+##Create World Upsell
+createWorldUpsell.newWorld=New World
+createWorldUpsell.newRealm=New Realm
+
+##World Templates
+worldTemplates.title=Templates
+worldTemplates.world=World
+worldTemplates.realm=Realms
+worldTemplates.help=Help
 
 createWorldScreen.gameMode.adventure=Adventure Mode
 createWorldScreen.gameMode.creative=Creative Mode
 createWorldScreen.gameMode.survival=Survival Mode
 
-selectWorld.title=Select World
-selectWorld.select=Play Selected World
-selectWorld.create=Create New World
-selectWorld.createDemo=Play New Demo World
 selectWorld.import=Import
 selectWorld.edit=Edit
 selectWorld.versionWarning=Backup this world because loading it in the beta can cause corruption!
 
-multiplayer.title=Play Multiplayer
-selectServer.add=Add Server
-
-##Add External Server
-addServer.title=Edit Server Info
-addServer.enterName=Server Name
-addServer.enterIp=Server Address
-addServer.enterPort=Server Port
-addServer.add=Done
-selectServer.deleteButton=Delete
-selectServer.playButton=Play
-
-##Command Block
-advMode.setCommand=Set Console Command for Block
-advMode.command=Console Command
-advMode.previousOutput=Previous Output
-advMode.mode.sequence=Chain
-advMode.mode.auto=Repeat
-advMode.mode.redstone=Impulse
-advMode.mode.conditional=Conditional
-advMode.mode.unconditional=Unconditional
-advMode.mode.redstoneTriggered=Needs Redstone
-advMode.mode.autoexec.bat=Always Active
-advMode.execOnFirstTick=Execute on First Tick
-
 ##Loadings
 multiplayer.downloadingTerrain=Loading terrain...
-
-##Beacon
-block.minecraft.beacon.primary=Primary Power
-block.minecraft.beacon.secondary=Secondary Power
 
 ##Potions
 potion.nightVision=§9Night Vision§f

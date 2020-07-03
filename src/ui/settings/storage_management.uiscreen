@@ -1,13 +1,13 @@
 /* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "storage_mcjava",
+  "namespace": "storage_ui",
 
   "storage_management_content_panel": {
     "type": "panel",
     "controls": [
-      { "title@screen_mcjava.title": { "text": "options.storage.title" } },
-      { "content_panel@storage_mcjava.content_panel": {} },
-      { "bottom_content@storage_mcjava.bottom_content": {} }
+      { "title@screen_ui.title": { "text": "menu.storageManagement" } },
+      { "content_panel@storage_ui.content_panel": {} },
+      { "bottom_content@storage_ui.bottom_content": {} }
     ]
   },
 
@@ -22,21 +22,21 @@
     "layer": 20,
     "$scroll_bar_offset": ["50% - 4px", 0],
     "controls": [
-      { "space_left@screen_mcjava.hspace": {"size": [40, 0] } },
+      { "space_left@screen_ui.hspace": {"size": [40, 0] } },
       {
-        "selection_content_panel@resource_packs_mcjava.side_content_panel": {
-          "$scrolling_content": "storage_managment_mcjava.selection_scroll_content"
+        "selection_content_panel@resource_packs_ui.side_content_panel": {
+          "$scrolling_content": "storage_managment_ui.selection_scroll_content"
         }
       },
       {
-        "space@screen_mcjava.hspace": { "size": [8, 0] } },
+        "space@screen_ui.hspace": { "size": [8, 0] } },
       {
-        "selection_content_panel@resource_packs_mcjava.side_content_panel": {
+        "selection_content_panel@resource_packs_ui.side_content_panel": {
           "size": [ "fill", "100%"],
-          "$scrolling_content": "storage_managment_mcjava.storage_scroll_content"
+          "$scrolling_content": "storage_managment_ui.storage_scroll_content"
         }
       },
-      { "space_right@screen_mcjava.hspace": { "size": [40, 0] } }
+      { "space_right@screen_ui.hspace": { "size": [40, 0] } }
     ]
   },
  
@@ -48,11 +48,11 @@
     "offset": [0, -28],
     "$text_locked_color": "$button_locked_text_color",
     "controls": [
-      { "locked@storage_managment_mcjava.delete_button_locked": { "offset": [-80, 0] } },
-      { "delete@storage_managment_mcjava.delete_button": { "offset": [-80, 0] } },
-      { "multiselect_button@storage_managment_mcjava.multiselect_button": { "offset": [-170, 0] } },
+      { "locked@storage_managment_ui.delete_button_locked": { "offset": [-80, 0] } },
+      { "delete@storage_managment_ui.delete_button": { "offset": [-80, 0] } },
+      { "multiselect_button@storage_managment_ui.multiselect_button": { "offset": [-170, 0] } },
       {
-        "back@settings_mcjava.back_button": {
+        "back@settings_ui.back_button": {
           "$toggle_button_name": "navigation_tab",
           "size": [150, 20],
           "offset": [80, 0]

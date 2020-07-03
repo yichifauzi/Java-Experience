@@ -1,21 +1,20 @@
 /* Version: 2.0.0 */
+/* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "authentication_mcjava",
+  "namespace": "authentication_ui",
 
   "authentication_screen_content_panel": {
     "type": "panel",
     "controls": [
       {
-        "sign_in@popup_mcjava.modal_with_buttons": {
+        "sign_in@popup_ui.modal_with_buttons": {
           "$dialog_title_text": "#sign_in_modal_title",
           "$dialog_title_text_binding_type": "global",
-          "$title": "authentication_modals_mcjava.title",
+          "$title": "authentication_modals_ui.title",
           "$top_space": ["100%", "100%c"],
-          "$top_controls": [
-            { "title@title": {} }
-          ],
+          "$top_controls": [ { "title@title": {} } ],
           "$description": "content.v2px",
-          "$button_panel": "authentication_mcjava.sign_in_buttons_panel",
+          "$button_panel": "authentication_ui.sign_in_buttons_panel",
           "bindings": [
             {
               "binding_name": "#sign_in_visible",
@@ -25,16 +24,14 @@
         }
       },
       {
-        "sign_in_ios@popup_mcjava.modal_with_buttons": {
+        "sign_in_ios@popup_ui.modal_with_buttons": {
           "$dialog_title_text": "#sign_in_modal_title",
           "$dialog_title_text_binding_type": "global",
-          "$title": "authentication_modals_mcjava.title",
+          "$title": "authentication_modals_ui.title",
           "$top_space": ["100%", "100%c"],
-          "$top_controls": [
-            { "title@title": {} }
-          ],
-          "$description": "authentication_mcjava.sign_in_ios_description",
-          "$button_panel": "authentication_mcjava.sign_in_ios_buttons_panel",
+          "$top_controls": [ { "title@title": {} } ],
+          "$description": "authentication_ui.sign_in_ios_description",
+          "$button_panel": "authentication_ui.sign_in_ios_buttons_panel",
           "bindings": [
             {
               "binding_name": "#sign_in_ios_visible",
@@ -54,7 +51,7 @@
         }
       },
       {
-        "eula@authentication_mcjava.eula_modal": {
+        "eula@authentication_ui.eula_modal": {
           "bindings": [
             {
               "binding_name": "#eula_visible",
@@ -64,7 +61,7 @@
         }
       },
       {
-        "purchase_panel@authentication_mcjava.purchase_content_panel": {
+        "purchase_panel@authentication_ui.purchase_content_panel": {
           "bindings": [
             {
               "binding_name": "#edu_store_visible",
@@ -92,7 +89,7 @@
     "controls": [
       {
         "title_label_wrapper@common.tts_label_focus_wrapper": {
-          "$tts_label_panel": "authentication_mcjava.title_label",
+          "$tts_label_panel": "authentication_ui.title_label",
           "anchor_from": "top_middle",
           "anchor_to": "top_middle"
         }
@@ -129,13 +126,13 @@
     ]
   },
 
-  "sign_in_ios_description@account_banned_mcjava.description": {
+  "sign_in_ios_description@account_banned_ui.description": {
     "text": "authentication.educationOnly"
   },
 
   "sign_in_ios_buttons_panel@split_button_panel": {
-    "$button_a": "authentication_mcjava.sign_in_ios_button",
-    "$button_b": "authentication_mcjava.to_app_store",
+    "$button_a": "authentication_ui.sign_in_ios_button",
+    "$button_b": "authentication_ui.to_app_store",
     "bindings": [
       {
         "binding_name": "#sign_in_ios_buttons_visible",
@@ -159,7 +156,7 @@
     ]
   },
 
-  "sign_in_button@button_mcjava.button": {
+  "sign_in_button@button_ui.button": {
     "$pressed_button_name": "button.signIn",
     "$button_text": "#sign_in_button_text",
     "$button_text_binding_type": "global",
@@ -171,24 +168,24 @@
     ]
   },
 
-  "sign_in_ios_button@button_mcjava.button": {
+  "sign_in_ios_button@button_ui.button": {
     "$pressed_button_name": "button.signIn",
     "$button_text": "authentication.signIn"
   },
 
-  "to_app_store@button_mcjava.link_button": {
+  "to_app_store@button_ui.link_button": {
     "$button_text": "authentication.minecraftInstead",
     "$link": "https://itunes.apple.com/us/app/minecraft/id479516143?mt=8"
   },
 
-  "eula_modal@popup_mcjava.modal_with_buttons": {
-    "$title": "authentication_modals_mcjava.title",
+  "eula_modal@popup_ui.modal_with_buttons": {
+    "$title": "authentication_modals_ui.title",
     "$dialog_title_text": "eula.title",
-    "$description": "authentication_mcjava.eula_description",
-    "$button_panel": "authentication_mcjava.eula_buttons_panel"
+    "$description": "authentication_ui.eula_description",
+    "$button_panel": "authentication_ui.eula_buttons_panel"
   },
 
-  "eula_description@account_banned_mcjava.description": {
+  "eula_description@account_banned_ui.description": {
     "text": "eula.intro"
   },
 
@@ -205,12 +202,12 @@
     ]
   },
 
-  "eula_hyperlink@button_mcjava.link_button": {
+  "eula_hyperlink@button_ui.link_button": {
     "$button_text": "eula.view",
     "$link": "https://education.minecraft.net/eula"
   },
 
-  "accept_eula_button@button_mcjava.button": {
+  "accept_eula_button@button_ui.button": {
     "$pressed_button_name": "button.acceptEula",
     "$button_text": "eula.acceptButton"
   },
@@ -221,7 +218,7 @@
     "$close_button_to_button_id": "button.cancel_purchase",
     "controls": [
       {
-        "prompt@authentication_mcjava.purchase_prompt_content": {
+        "prompt@authentication_ui.purchase_prompt_content": {
           "bindings": [
             {
               "binding_name": "#asking_to_buy_visible",
@@ -231,7 +228,7 @@
         }
       },
       {
-        "confirm@authentication_mcjava.purchase_confirm_content": {
+        "confirm@authentication_ui.purchase_confirm_content": {
           "bindings": [
             {
               "binding_name": "#confirming_purchase_visible",
@@ -243,14 +240,14 @@
     ]
   },
 
-  "purchase_prompt_content@popup_mcjava.modal_with_buttons": {
-    "$title": "authentication_modals_mcjava.title",
+  "purchase_prompt_content@popup_ui.modal_with_buttons": {
+    "$title": "authentication_modals_ui.title",
     "$dialog_title_text": "authentication.trialEndedTitle",
-    "$description": "authentication_mcjava.purchase_prompt_description",
-    "$button_panel": "authentication_mcjava.purchase_prompt_buttons_panel"
+    "$description": "authentication_ui.purchase_prompt_description",
+    "$button_panel": "authentication_ui.purchase_prompt_buttons_panel"
   },
 
-  "purchase_prompt_description@account_banned_mcjava.description": {
+  "purchase_prompt_description@account_banned_ui.description": {
     "text": "authentication.store.intro"
   },
 
@@ -262,7 +259,7 @@
     "orientation": "horizontal",
     "controls": [
       {
-        "purchase@button_mcjava.button": {
+        "purchase@button_ui.button": {
           "$pressed_button_name": "button.buy",
           "size": [150, 20],
           "$button_text": "#edu_store_purchase_button_text",
@@ -272,7 +269,7 @@
       },
       { "space@content.hfill": {} },
       {
-        "signout@button_mcjava.button": {
+        "signout@button_ui.button": {
           "$pressed_button_name": "button.cancel_purchase_show_demo_choice",
           "size": [150, 20],
           "$button_text": "xbox.signout"
@@ -281,14 +278,14 @@
     ]
   },
 
-  "purchase_confirm_content@popup_mcjava.modal_with_buttons": {
-    "$title": "authentication_modals_mcjava.title",
+  "purchase_confirm_content@popup_ui.modal_with_buttons": {
+    "$title": "authentication_modals_ui.title",
     "$dialog_title_text": "authentication.store.confirmPurchase",
-    "$description": "authentication_mcjava.purchase_confirm_description",
-    "$button_panel": "authentication_mcjava.purchase_confirm_buttons_panel"
+    "$description": "authentication_ui.purchase_confirm_description",
+    "$button_panel": "authentication_ui.purchase_confirm_buttons_panel"
   },
 
-  "purchase_confirm_description@account_banned_mcjava.description": {
+  "purchase_confirm_description@account_banned_ui.description": {
     "text": "#text",
     "bindings": [
       {
@@ -341,17 +338,17 @@
     ]
   },
 
-  "view_terms_button@button_mcjava.link_button": {
+  "view_terms_button@button_ui.link_button": {
     "$button_text": "authentication.store.viewTermsAndConditions",
     "property_bag": { "#hyperlink": "https://aka.ms/meeterms" }
   },
 
-  "privacy_policy_button@button_mcjava.link_button": {
+  "privacy_policy_button@button_ui.link_button": {
     "$button_text": "authentication.store.viewPrivacyPolicy",
     "property_bag": { "#hyperlink": "https://aka.ms/privacy" }
   },
 
-  "confirm_button@button_mcjava.button": {
+  "confirm_button@button_ui.button": {
     "anchor_from": "bottom_middle",
     "anchor_to": "bottom_middle",
     "$pressed_button_name": "button.confirm",
@@ -379,14 +376,14 @@
           "focus_change_up": "2users",
           "focus_identifier": "checkbox_control",
           "controls": [
-            { "unchecked@authentication_mcjava.agree_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_unchecked" } },
-            { "checked@authentication_mcjava.agree_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_checked" } },
-            { "unchecked_hover@authentication_mcjava.agree_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_unchecked_hover" } },
-            { "checked_hover@authentication_mcjava.agree_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_checked_hover" } },
-            { "unchecked_locked@authentication_mcjava.agree_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_unchecked" } },
-            { "checked_locked@authentication_mcjava.agree_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_checked" } },
-            { "unchecked_locked_hover@authentication_mcjava.agree_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_unchecked" } },
-            { "checked_locked_hover@authentication_mcjava.agree_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_checked" } }
+            { "unchecked@authentication_ui.agree_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_unchecked" } },
+            { "checked@authentication_ui.agree_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_checked" } },
+            { "unchecked_hover@authentication_ui.agree_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_unchecked_hover" } },
+            { "checked_hover@authentication_ui.agree_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_checked_hover" } },
+            { "unchecked_locked@authentication_ui.agree_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_unchecked" } },
+            { "checked_locked@authentication_ui.agree_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_checked" } },
+            { "unchecked_locked_hover@authentication_ui.agree_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_unchecked" } },
+            { "checked_locked_hover@authentication_ui.agree_checkbox_state_panel": { "$checkbox_bg": "resources.checkbox_checked" } }
           ]
         }
       }

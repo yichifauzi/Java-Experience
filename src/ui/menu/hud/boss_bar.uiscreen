@@ -1,8 +1,9 @@
+/* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "boss_bar_mcjava",
+  "namespace": "boss_bar_ui",
 
   "boss_health_grid@hud.boss_health_grid": {
-    "grid_item_template": "boss_bar_mcjava.boss_health_panel",
+    "grid_item_template": "boss_bar_ui.boss_health_panel",
     "anchor_to": "top_middle",
     "anchor_from": "top_middle",
     "size": [182, 171]
@@ -15,8 +16,8 @@
     "anchor_to": "top_middle",
     "$progress_bar_collection": "boss_bars",
     "controls": [
-      { "boss_name@boss_bar_mcjava.boss_name_panel": {} },
-      { "progress_bar@boss_bar_mcjava.boss_bars_panel": {} }
+      { "boss_name@boss_bar_ui.boss_name_panel": {} },
+      { "progress_bar@boss_bar_ui.boss_bars_panel": {} }
     ],
     "bindings": [
       {
@@ -36,28 +37,28 @@
     "offset": [0, 2],
     "controls": [
       {
-        "default_bar@boss_bar_mcjava.base_boss_bar_name": {
+        "default_bar@boss_bar_ui.base_boss_bar_name": {
           "bindings": [],
           "$boss_bar_name_color": "$default_boss_bar_name_text_color",
           "layer": -2
         }
       },
       {
-        "ender_dragon_bar@boss_bar_mcjava.base_boss_bar_name": {
+        "ender_dragon_bar@boss_bar_ui.base_boss_bar_name": {
           "$langBossName": "(#bossName = '1')",
           "$boss_bar_name": "entity.ender_dragon.name.new",
           "$boss_bar_name_color": "$ender_dragon_boss_bar_name_text_color"
         }
       },
       {
-        "wither_bar@boss_bar_mcjava.base_boss_bar_name": {
+        "wither_bar@boss_bar_ui.base_boss_bar_name": {
           "$langBossName": "(#bossName = '0')",
           "$boss_bar_name": "entity.wither.name.new",
           "$boss_bar_name_color": "$wither_boss_bar_name_text_color"
         }
       },
       {
-        "raids_bar@boss_bar_mcjava.base_boss_bar_name": {
+        "raids_bar@boss_bar_ui.base_boss_bar_name": {
           "$langBossName": "(#bossName = '2')",
           "$boss_bar_name": "raid.name.new",
           "$boss_bar_name_color": "$raids_boss_bar_name_text_color"
@@ -68,9 +69,9 @@
           "type": "panel",
           "$boss_bar_name_color": "$raids_boss_bar_name_text_color",
           "controls": [
-            { "raids_remaing_2_bar@boss_bar_mcjava.base_boss_bar_name_stack": { "$langBossName": "(#bossName = '2 - 3 2')", "$count": "2" } },
-            { "raids_remaing_1_bar@boss_bar_mcjava.base_boss_bar_name_stack": { "$langBossName": "(#bossName = '2 - 3 1')", "$count": "1" } },
-            { "raids_remaing_0_bar@boss_bar_mcjava.base_boss_bar_name_stack": { "$langBossName": "(#bossName = '2 - 3 0')", "$count": "0" } }
+            { "raids_remaing_2_bar@boss_bar_ui.base_boss_bar_name_stack": { "$langBossName": "(#bossName = '2 - 3 2')", "$count": "2" } },
+            { "raids_remaing_1_bar@boss_bar_ui.base_boss_bar_name_stack": { "$langBossName": "(#bossName = '2 - 3 1')", "$count": "1" } },
+            { "raids_remaing_0_bar@boss_bar_ui.base_boss_bar_name_stack": { "$langBossName": "(#bossName = '2 - 3 0')", "$count": "0" } }
           ]
         }
       }
@@ -136,7 +137,7 @@
     "offset": [0, -2],
     "controls": [
       {
-        "default_bar@boss_bar_mcjava.base_boss_bar": {
+        "default_bar@boss_bar_ui.base_boss_bar": {
           "bindings": [],
           "$empty_bar_color": "('resources.empty_' + $default_bar_color + '_bar')",
           "$filled_bar_color": "('resources.filled_' + $default_bar_color + '_bar')",
@@ -146,7 +147,7 @@
         }
       },
       {
-        "ender_dragon_bar@boss_bar_mcjava.base_boss_bar": {
+        "ender_dragon_bar@boss_bar_ui.base_boss_bar": {
           "$langBossName": "(#bossName = '1')",
           "$empty_bar_color": "('resources.empty_' + $ender_dragon_bar_color + '_bar')",
           "$filled_bar_color": "('resources.filled_' + $ender_dragon_bar_color + '_bar')",
@@ -155,7 +156,7 @@
         }
       },
       {
-        "wither_bar@boss_bar_mcjava.base_boss_bar": {
+        "wither_bar@boss_bar_ui.base_boss_bar": {
           "$langBossName": "(#bossName = '0')",
           "$empty_bar_color": "('resources.empty_' + $wither_bar_color + '_bar')",
           "$filled_bar_color": "('resources.filled_' + $wither_bar_color + '_bar')",
@@ -163,15 +164,15 @@
           "$filled_bar_notched": "('resources.filled_' + $wither_bar_style + '_bar')"
         }
       },
-      { "raids_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = '2')" } },
+      { "raids_bar@boss_bar_ui.base_boss_bar": { "$langBossName": "(#bossName = '2')" } },
       {
         "raids_remaing_bars": {
           "type": "panel",
           "size": [182, 5],
           "controls": [
-            { "raids_remaing_2_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = '2 - 3 2')" } },
-            { "raids_remaing_1_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = '2 - 3 1')" } },
-            { "raids_remaing_0_bar@boss_bar_mcjava.base_boss_bar": { "$langBossName": "(#bossName = '2 - 3 0')" } }
+            { "raids_remaing_2_bar@boss_bar_ui.base_boss_bar": { "$langBossName": "(#bossName = '2 - 3 2')" } },
+            { "raids_remaing_1_bar@boss_bar_ui.base_boss_bar": { "$langBossName": "(#bossName = '2 - 3 1')" } },
+            { "raids_remaing_0_bar@boss_bar_ui.base_boss_bar": { "$langBossName": "(#bossName = '2 - 3 0')" } }
           ]
         }
       }

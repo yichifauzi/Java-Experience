@@ -1,13 +1,14 @@
+/* Version: 2.0.0 */
 /* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "furnaces_mcjava",
+  "namespace": "furnaces_ui",
 
   "furnace_container_panel": {
     "type": "panel",
     "$specified_content|default": "",
     "controls": [
       { "container_gamepad_helpers@gamepadhelper.container_gamepad_helpers": {} },
-      { "container_gamepad_helpers@container_mcjava.invisible_exit_background": {} },
+      { "invisible_exit_bg@container_ui.invisible_exit_bg": {} },
       {
         "flying_item_renderer@common.flying_item_renderer": {
           "layer": 8,
@@ -77,7 +78,7 @@
                 "anchor_to": "top_right",
                 "layer": 1,
                 "controls": [
-                  { "close_button@container_mcjava.close_button": {} },
+                  { "close_button@container_ui.close_button": {} },
                   { "@$container_bg": {} },
                   {
                     "screen_inventory": {
@@ -85,14 +86,14 @@
                       "layer": 2,
                       "controls": [
                         { "@$specified_content": {} },
-                        { "inventory_grid_panel@container_mcjava.inventory_grid_panel": {} },
-                        { "hotbar_grid@container_mcjava.hotbar_grid": {} },
-                        { "inventory_take_progress_icon_button@container_mcjava.inventory_take_progress_icon_button": {} }
+                        { "inventory_grid_panel@container_ui.inventory_grid_panel": {} },
+                        { "hotbar_grid@container_ui.hotbar_grid": {} },
+                        { "inventory_take_progress_icon_button@container_ui.inventory_take_progress_icon_button": {} }
                       ]
                     }
                   },
-                  { "inventory_selected_icon_button@container_mcjava.inventory_selected_icon_button": {} },
-                  { "gamepad_cursor@container_mcjava.gamepad_cursor_button": {} }
+                  { "inventory_selected_icon_button@container_ui.inventory_selected_icon_button": {} },
+                  { "gamepad_cursor@container_ui.gamepad_cursor_button": {} }
                 ]
               }
             }
@@ -102,38 +103,38 @@
     ]
   },
 
-  "furnace_screen_content_panel@furnaces_mcjava.furnace_container_panel": {
+  "furnace_screen_content_panel@furnaces_ui.furnace_container_panel": {
     "$furnace_view": "furnace_rb_view",
-    "$recipe_book": "furnace_recipe_book_mcjava.furnace_recipe_book_content_panel",
-    "$show_on": "furnace_recipe_book_mcjava.show_on_furnace_content_panel",
+    "$recipe_book": "furnace_recipe_book_ui.furnace_recipe_book_content_panel",
+    "$show_on": "furnace_recipe_book_ui.show_on_furnace_content_panel",
     "$furnace_name": "furnace",
     "$container_bg": "resources1.furnace_bg",
-    "$specified_content": "furnaces_mcjava.furnace_content_panel"
+    "$specified_content": "furnaces_ui.furnace_content_panel"
   },
 
-  "blast_furnace_screen_content_panel@furnaces_mcjava.furnace_container_panel": {
+  "blast_furnace_screen_content_panel@furnaces_ui.furnace_container_panel": {
     "$furnace_view": "blast_furnace_rb_view",
-    "$recipe_book": "blast_furnace_recipe_book_mcjava.blast_furnace_recipe_book_content_panel",
-    "$show_on": "blast_furnace_recipe_book_mcjava.show_on_blast_furnace_content_panel",
+    "$recipe_book": "blast_furnace_recipe_book_ui.blast_furnace_recipe_book_content_panel",
+    "$show_on": "blast_furnace_recipe_book_ui.show_on_blast_furnace_content_panel",
     "$furnace_name": "blast_furnace",
     "$container_bg": "resources1.furnace_bg",
-    "$specified_content": "furnaces_mcjava.furnace_content_panel"
+    "$specified_content": "furnaces_ui.furnace_content_panel"
   },
 
-  "smoker_screen_content_panel@furnaces_mcjava.furnace_container_panel": {
+  "smoker_screen_content_panel@furnaces_ui.furnace_container_panel": {
     "$furnace_view": "smoker_rb_view",
-    "$recipe_book": "smoker_recipe_book_mcjava.smoker_recipe_book_content_panel",
-    "$show_on": "smoker_recipe_book_mcjava.show_on_smoker_content_panel",
+    "$recipe_book": "smoker_recipe_book_ui.smoker_recipe_book_content_panel",
+    "$show_on": "smoker_recipe_book_ui.show_on_smoker_content_panel",
     "$furnace_name": "smoker",
     "$container_bg": "resources1.furnace_bg",
-    "$specified_content": "furnaces_mcjava.furnace_content_panel"
+    "$specified_content": "furnaces_ui.furnace_content_panel"
   },
 
   "furnace_content_panel": {
     "type": "panel",
     "controls": [
       {
-        "title@container_mcjava.title": {
+        "title@container_ui.title": {
           "offset": [0, 5],
           "anchor_from": "top_middle",
           "anchor_to": "top_middle"
@@ -169,19 +170,20 @@
           ]
         }
       },
-      { "recipe_book_button@furnace_recipes_mcjava.furnace_recipe_book_button": {} },
+      { "recipe_book_button@furnace_recipes_ui.furnace_recipe_book_button": {} },
       { "show_on@$show_on": {} },
-      { "ingredient@furnaces_mcjava.ingredient_item": {} },
-      { "fuel@furnaces_mcjava.fuel_item": {} },
-      { "output@furnaces_mcjava.output_item": {} }
+      { "ingredient@furnaces_ui.ingredient_item": {} },
+      { "fuel@furnaces_ui.fuel_item": {} },
+      { "output@furnaces_ui.output_item": {} }
     ]
   },
 
-  "furnace_item_slot@container_mcjava.container_slot": {
+  "furnace_item_slot@container_ui.container_slot": {
     "anchor_from": "top_left",
     "anchor_to": "top_left"
   },
-  "ingredient_item@furnaces_mcjava.furnace_item_slot": {
+
+  "ingredient_item@furnaces_ui.furnace_item_slot": {
     "offset": [55, 16],
     "$item_collection_name": "furnace_ingredient_items",
     "$focus_id": "furnace_ingredient_item",
@@ -191,7 +193,7 @@
     "$focus_override_up_binding_type": "none"
   },
 
-  "fuel_item@furnaces_mcjava.furnace_item_slot": {
+  "fuel_item@furnaces_ui.furnace_item_slot": {
     "offset": [55, 52],
     "$item_collection_name": "furnace_fuel_items",
     "$focus_id": "furnace_fuel_item",
@@ -201,7 +203,7 @@
     "$focus_override_left_binding_type": "none"
   },
 
-  "output_item@furnaces_mcjava.furnace_item_slot": {
+  "output_item@furnaces_ui.furnace_item_slot": {
     "offset": [115, 34],
     "$item_collection_name": "furnace_output_items",
     "$focus_id": "furnace_output_item",

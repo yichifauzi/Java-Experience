@@ -1,22 +1,23 @@
+/* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "world_templates_mcjava",
+  "namespace": "world_templates_ui",
 
   "world_templates_content_panel@content.scroll_screen": {
-    "$top_content": "world_templates_mcjava.top_content",
-    "$middle_content": "world_templates_mcjava.scroll_content",
-    "$bottom_content": "world_templates_mcjava.bottom_content",
+    "$top_content": "world_templates_ui.top_content",
+    "$middle_content": "world_templates_ui.scroll_content",
+    "$bottom_content": "world_templates_ui.bottom_content",
     "$bottom_content_size": ["100%", 61]
   },
 
   "top_content": {
     "type": "panel",
     "controls": [
-      { "title@screen_mcjava.title": { "offset": [0, 16], "text": "worldTemplates.title" } },
-      { "more@world_templates_mcjava.see_more_custom_templates_button": {} }
+      { "title@screen_ui.title": { "offset": [0, 16], "text": "worldTemplates.title" } },
+      { "more@world_templates_ui.see_more_custom_templates_button": {} }
     ]
   },
 
-  "see_more_custom_templates_button@button_mcjava.button": {
+  "see_more_custom_templates_button@button_ui.button": {
     "anchor_from": "top_right",
     "anchor_to": "top_right",
     "offset": [-10, 6],
@@ -44,7 +45,7 @@
           "type": "stack_panel",
           "orientation": "vertical",
           "size": ["100%", "100%c"],
-          "controls": [ { "realms_plus_template_item_grid@world_templates_mcjava.realms_plus_template_item_grid": {} } ],
+          "controls": [ { "realms_plus_template_item_grid@world_templates_ui.realms_plus_template_item_grid": {} } ],
           "bindings": [
             {
               "binding_name": "#realms_plus_list_visible",
@@ -53,8 +54,8 @@
           ]
         }
       },
-      { "template@world_templates_mcjava.world_template_item_grid": {} },
-      { "custom@world_templates_mcjava.custom_world_template_item_grid": {} },
+      { "template@world_templates_ui.world_template_item_grid": {} },
+      { "custom@world_templates_ui.custom_world_template_item_grid": {} },
       {
         "suggested_content_panel": {
           "type": "stack_panel",
@@ -66,7 +67,7 @@
               "binding_name_override": "#visible"
             }
           ],
-          "controls": [ { "suggested@world_templates_mcjava.suggested_template_grid": {} } ]
+          "controls": [ { "suggested@world_templates_ui.suggested_template_grid": {} } ]
         }
       },
       { "space_bottom@content.v2px": {} }
@@ -80,11 +81,11 @@
     "size": [310, 44],
     "offset": [0, -8],
     "controls": [
-      { "new_world_toggle@world_templates_mcjava.new_world_toggle": {} },
-      { "new_realm_toggle@world_templates_mcjava.new_realm_toggle": {} },
-      { "generate_random_button@world_templates_mcjava.generate_random_button": {} },
-      { "cancel_button@world_templates_mcjava.cancel_button": {} },
-      { "help_button@world_templates_mcjava.help_button": {}  }
+      { "new_world_toggle@world_templates_ui.new_world_toggle": {} },
+      { "new_realm_toggle@world_templates_ui.new_realm_toggle": {} },
+      { "generate_random_button@world_templates_ui.generate_random_button": {} },
+      { "cancel_button@world_templates_ui.cancel_button": {} },
+      { "help_button@world_templates_ui.help_button": {}  }
     ]
   },
 
@@ -94,7 +95,7 @@
     "layer": 1,
     "anchor_to": "top_left",
     "anchor_from": "top_left",
-    "grid_item_template": "world_templates_mcjava.world_template_item",
+    "grid_item_template": "world_templates_ui.world_template_item",
     "grid_dimension_binding": "#world_template_item_grid_dimension",
     "collection_name": "world_templates",
     "$collection_name": "world_templates",
@@ -115,7 +116,7 @@
     "layer": 1,
     "anchor_to": "top_left",
     "anchor_from": "top_left",
-    "grid_item_template": "world_templates_mcjava.world_template_item",
+    "grid_item_template": "world_templates_ui.world_template_item",
     "grid_dimension_binding": "#custom_world_template_item_grid_dimension",
     "collection_name": "custom_world_templates",
     "$collection_name": "custom_world_templates",
@@ -137,7 +138,7 @@
     "anchor_to": "top_left",
     "anchor_from": "top_left",
     "$ignore_version": true,
-    "grid_item_template": "world_templates_mcjava.world_template_item",
+    "grid_item_template": "world_templates_ui.world_template_item",
     "grid_dimension_binding": "#suggested_offers_item_grid_dimension",
     "collection_name": "#suggested_offers_collection",
     "$collection_name": "#suggested_offers_collection",
@@ -165,7 +166,7 @@
     "anchor_from": "top_left",
     "$ignore_version": true,
     "$is_realms_plus": true,
-    "grid_item_template": "world_templates_mcjava.world_template_item",
+    "grid_item_template": "world_templates_ui.world_template_item",
     "grid_dimension_binding": "#realms_plus_template_item_grid_dimension",
     "$world_template_description_binding_name": "#created_by_label",
     "$world_template_name_binding_name": "#title_label",
@@ -189,7 +190,7 @@
     "type": "panel",
     "size": ["100%", 36],
     "layer": 6,
-    "controls": [ { "world_template_item_content@world_templates_mcjava.world_template_item_content": {} } ]
+    "controls": [ { "world_template_item_content@world_templates_ui.world_template_item_content": {} } ]
   },
 
   "world_template_item_button_panel": {
@@ -199,8 +200,8 @@
     "anchor_to": "top_left",
     "layer": 6,
     "controls": [
-      { "@world_templates_mcjava.world_template_item_button": {} },
-      { "@world_templates_mcjava.world_template_hover_item_button": {}  }
+      { "@world_templates_ui.world_template_item_button": {} },
+      { "@world_templates_ui.world_template_hover_item_button": {}  }
     ]
   },
 
@@ -232,7 +233,7 @@
               }
             },
             {
-              "overlay@resource_packs_mcjava.overlay": {
+              "overlay@resource_packs_ui.overlay": {
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
                 "offset": "$overlay_offset",
@@ -240,7 +241,7 @@
               }
             },
             {
-              "select@resources.world_select_hover": {
+              "select@resources.world_select_default": {
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
                 "offset": "$overlay_offset",
@@ -255,7 +256,7 @@
           "type": "panel",
           "controls": [
             {
-              "overlay@resource_packs_mcjava.overlay": {
+              "overlay@resource_packs_ui.overlay": {
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
                 "offset": "$overlay_offset",
@@ -263,7 +264,7 @@
               }
             },
             {
-              "select@resources.world_select_hover": {
+              "select@resources.world_select_default": {
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
                 "offset": "$overlay_offset",
@@ -302,7 +303,7 @@
                 "layer": -6
               }
             },
-            { "overlay@resource_packs_mcjava.overlay": { "layer": 3 } },
+            { "overlay@resource_packs_ui.overlay": { "layer": 3 } },
             { "select@resources.world_select_hover": { "layer": 4 } }
           ]
         }
@@ -312,7 +313,7 @@
           "type": "panel",
           "size": [32, 32],
           "controls": [
-            { "overlay@resource_packs_mcjava.overlay": { "layer": 3 } },
+            { "overlay@resource_packs_ui.overlay": { "layer": 3 } },
             { "select@resources.world_select_hover": { "layer": 4 } }
           ]
         }
@@ -374,8 +375,8 @@
     "anchor_to": "center",
     "layer": 20,
     "controls": [
-      { "world_template_screenshot@world_templates_mcjava.world_template_screenshot": { "layer": 8 } },
-      { "world_template_item_button@world_templates_mcjava.world_template_item_button_panel": {}  },
+      { "world_template_screenshot@world_templates_ui.world_template_screenshot": { "layer": 8 } },
+      { "world_template_item_button@world_templates_ui.world_template_item_button_panel": {}  },
       {
         "text_panel": {
           "type": "panel",
@@ -384,7 +385,7 @@
           "anchor_to": "top_left",
           "offset": [34, 0],
           "layer": 10,
-          "controls": [ { "text_panel@world_templates_mcjava.world_template_item_text_panel": {} } ]
+          "controls": [ { "text_panel@world_templates_ui.world_template_item_text_panel": {} } ]
         }
       }
     ]
@@ -527,7 +528,7 @@
     ]
   },
 
-  "new_world_toggle@toggle_button_mcjava.toggle_button": {
+  "new_world_toggle@toggle_button_ui.toggle_button": {
     "size": [150, 20],
     "$toggle_button_name": "world_toggle",
     "$toggle_button_text": "worldTemplates.world",
@@ -542,7 +543,7 @@
     "$toggle_tts_toggle_off_text": ""
   },
 
-  "new_realm_toggle@toggle_button_mcjava.toggle_button": {
+  "new_realm_toggle@toggle_button_ui.toggle_button": {
     "size": [150, 20],
     "$toggle_button_name": "world_toggle",
     "$toggle_button_text": "worldTemplates.realm",
@@ -555,7 +556,7 @@
     "$toggle_tts_toggle_off_text": ""
   },
 
-  "generate_random_button@button_mcjava.button": {
+  "generate_random_button@button_ui.button": {
     "size": [150, 20],
     "$pressed_button_name": "button.generate_random",
     "anchor_from": "bottom_left",
@@ -572,7 +573,7 @@
     ]
   },
 
-  "help_button@button_mcjava.button": {
+  "help_button@button_ui.button": {
     "$pressed_button_name": "button.help",
     "$button_text": "worldTemplates.help",
     "anchor_from": "bottom_right",
@@ -583,7 +584,7 @@
     "$button_tts_header": "accessibility.worldTemplates.help"
   },
 
-  "cancel_button@button_mcjava.button": {
+  "cancel_button@button_ui.button": {
     "$pressed_button_name": "button.menu_exit",
     "size": [72, 20],
     "anchor_from": "bottom_right",

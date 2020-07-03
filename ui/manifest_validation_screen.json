@@ -1,0 +1,26 @@
+/* Version: 2.0.0 */
+{
+  "manifest_validation_screen@content.base_screen": {
+    "$screen_background": "content.dirt_background",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_tab_left",
+        "to_button_id": "button.menu_tab_left",
+        "mapping_type": "global",
+        "scope": "view"
+      },
+      {
+        "from_button_id": "button.menu_tab_right",
+        "to_button_id": "button.menu_tab_right",
+        "mapping_type": "global",
+        "scope": "view"
+      }
+    ],
+    "$screen_content": "manifest_validation_ui.manifest_validation_screen_content_panel"
+  }
+}

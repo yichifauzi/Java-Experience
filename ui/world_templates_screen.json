@@ -1,5 +1,6 @@
+/* Version: 2.0.0 */
 {
-  "world_templates_screen": {
+  "world_templates_screen@content.base_screen": {
     "button_mappings": [
       {
         "from_button_id": "button.menu_select",
@@ -12,7 +13,7 @@
         "mapping_type": "global"
       }
     ],
-    "$screen_content": "world_templates_mcjava.world_templates_content_panel",
+    "$screen_content": "world_templates_ui.world_templates_content_panel",
     "$screen_background": "content.dirt_background"
   }
 }

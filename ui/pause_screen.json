@@ -38,7 +38,7 @@
         "scope": "view"
       }
     ],
-    "$screen_content": "pause_menu_mcjava.pause_menu_screen_content_panel",
-    "$screen_background": "pause_menu_mcjava.screen_background"
+    "$screen_content": "pause_menu_ui.pause_menu_screen_content_panel",
+    "$screen_background": "pause_menu_ui.screen_background"
   }
 }

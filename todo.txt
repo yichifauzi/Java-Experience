@@ -1,56 +1,183 @@
-coin_purchase_screen
 comment_screen
 confirm_msa_unlink_screen
-convert_purchases_to_xbl_screen
 credits_screen
 edu_discovery_dialog
-emote_wheel_screen
 feed_screen
-game_tip_screen
-gamepad_disconnected
-gamepad_layout_screen
-global_pause_screen
+game_tip_screen/gamepad_disconnected
 hdr_calibration_screen
 how_to_play_screen
 immersive_reader
+invite
 item_detail_description_screen
 late_join_pregame_screen
 library_modal_screen
 local_world_picker_screen
 manage_feed_screen
-manifest_validation_screen
-non_xbl_user_management_screen
 npc_interact_screen
-pack_settings_screen
-pdp_screen
-pdp_screenshots_section
-perf_turtle
+pdp screens
 permissions_screen
 persona_screen
 play_screen
 portfolio_screen
 profile_card
-realms_create
-realms_pending_invitations
-realms_plus_ended_screen
-realmsPlus_screen
-realmsplus_upgrade_notice_screen
+realms_create/realms screens/realms_pending_invitations
+realmsPlus screens
 screenshot_picker_screen
 simple_inprogress_screen
-store
-store_details
-sync_iaps_to_xbl_screen
+store (coin_purchase_screen)
 tabbed_upsell_screen
 token_faq_screen
-trial_upsell_screen
-win10_trial_conversion_screen
+trial screens
 world_conversion_complete screens
-xbl_console screens
-gamepad helpers
+xbl screens (non_xbl_user_management_screen/convert_purchases_to_xbl_screen/sync_iaps_to_xbl_screen)
 update_version
-close button invs
+all langs
+add /**/
 
-Done: 63
-To do: 61
+Done: 74
+To do: 35
 
-68.2‬% - 28/6/2020 7:22
+67.9%
+
+[
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 1)", "$page_total_number": "1" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 2)", "$page_total_number": "1" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 3)", "$page_total_number": "1" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 4)", "$page_total_number": "1" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 5)", "$page_total_number": "1" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 6)", "$page_total_number": "1" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 7)", "$page_total_number": "1" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 8)", "$page_total_number": "1" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 9)", "$page_total_number": "1" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 10)", "$page_total_number": "1" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 11)", "$page_total_number": "1" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 12)", "$page_total_number": "1" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 13)", "$page_total_number": "1" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 14)", "$page_total_number": "1" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 15)", "$page_total_number": "1" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 16)", "$page_total_number": "1" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 17)", "$page_total_number": "1" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 18)", "$page_total_number": "1" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 19)", "$page_total_number": "1" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 20)", "$page_total_number": "1" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 21)", "$page_total_number": "2" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 22)", "$page_total_number": "2" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 23)", "$page_total_number": "2" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 24)", "$page_total_number": "2" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 25)", "$page_total_number": "2" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 26)", "$page_total_number": "2" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 27)", "$page_total_number": "2" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 28)", "$page_total_number": "2" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 29)", "$page_total_number": "2" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 30)", "$page_total_number": "2" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 32)", "$page_total_number": "2" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 32)", "$page_total_number": "2" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 33)", "$page_total_number": "2" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 34)", "$page_total_number": "2" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 35)", "$page_total_number": "2" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 36)", "$page_total_number": "2" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 37)", "$page_total_number": "2" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 38)", "$page_total_number": "2" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 39)", "$page_total_number": "2" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 40)", "$page_total_number": "3" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 41)", "$page_total_number": "3" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 42)", "$page_total_number": "3" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 43)", "$page_total_number": "3" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 44)", "$page_total_number": "3" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 45)", "$page_total_number": "3" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 46)", "$page_total_number": "3" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 47)", "$page_total_number": "3" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 48)", "$page_total_number": "3" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 49)", "$page_total_number": "3" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 50)", "$page_total_number": "3" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 51)", "$page_total_number": "3" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 52)", "$page_total_number": "3" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 53)", "$page_total_number": "3" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 54)", "$page_total_number": "3" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 55)", "$page_total_number": "3" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 56)", "$page_total_number": "3" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 57)", "$page_total_number": "3" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 58)", "$page_total_number": "3" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 59)", "$page_total_number": "3" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 60)", "$page_total_number": "4", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 61)", "$page_total_number": "4", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 62)", "$page_total_number": "4", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 63)", "$page_total_number": "4", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 64)", "$page_total_number": "4", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 65)", "$page_total_number": "4", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 66)", "$page_total_number": "4", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 67)", "$page_total_number": "4", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 68)", "$page_total_number": "4", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 69)", "$page_total_number": "4", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 70)", "$page_total_number": "4", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 71)", "$page_total_number": "4", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 72)", "$page_total_number": "4", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 73)", "$page_total_number": "4", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 74)", "$page_total_number": "4", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 75)", "$page_total_number": "4", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 76)", "$page_total_number": "4", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 77)", "$page_total_number": "4", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 78)", "$page_total_number": "4", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 79)", "$page_total_number": "4", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 80)", "$page_total_number": "4", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 81)", "$page_total_number": "5", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 82)", "$page_total_number": "5", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 83)", "$page_total_number": "5", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 84)", "$page_total_number": "5", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 85)", "$page_total_number": "5", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 86)", "$page_total_number": "5", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 87)", "$page_total_number": "5", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 88)", "$page_total_number": "5", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 89)", "$page_total_number": "5", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 90)", "$page_total_number": "5", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 91)", "$page_total_number": "5", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 92)", "$page_total_number": "5", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 93)", "$page_total_number": "5", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 94)", "$page_total_number": "5", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 95)", "$page_total_number": "5", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 96)", "$page_total_number": "5", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 97)", "$page_total_number": "5", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 98)", "$page_total_number": "5", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 99)", "$page_total_number": "5", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 100)", "$page_total_number": "5", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 101)", "$page_total_number": "6", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 102)", "$page_total_number": "6", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 103)", "$page_total_number": "6", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 104)", "$page_total_number": "6", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 105)", "$page_total_number": "6", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 106)", "$page_total_number": "6", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 107)", "$page_total_number": "6", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 108)", "$page_total_number": "6", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 109)", "$page_total_number": "6", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 110)", "$page_total_number": "6", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 111)", "$page_total_number": "6", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 112)", "$page_total_number": "6", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 113)", "$page_total_number": "6", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 114)", "$page_total_number": "6", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 115)", "$page_total_number": "6", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 116)", "$page_total_number": "6", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 117)", "$page_total_number": "6", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 119)", "$page_total_number": "6", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 119)", "$page_total_number": "6", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 120)", "$page_total_number": "6", "ignored": "($ignore_from_three)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 101)", "$page_total_number": "7", "ignored": "($ignore_from_three or $ignore_from_six)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 102)", "$page_total_number": "7", "ignored": "($ignore_from_three or $ignore_from_six)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 103)", "$page_total_number": "7", "ignored": "($ignore_from_three or $ignore_from_six)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 104)", "$page_total_number": "7", "ignored": "($ignore_from_three or $ignore_from_six)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 105)", "$page_total_number": "7", "ignored": "($ignore_from_three or $ignore_from_six)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 106)", "$page_total_number": "7", "ignored": "($ignore_from_three or $ignore_from_six)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 107)", "$page_total_number": "7", "ignored": "($ignore_from_three or $ignore_from_six)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 108)", "$page_total_number": "7", "ignored": "($ignore_from_three or $ignore_from_six)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 109)", "$page_total_number": "7", "ignored": "($ignore_from_three or $ignore_from_six)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 110)", "$page_total_number": "7", "ignored": "($ignore_from_three or $ignore_from_six)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 111)", "$page_total_number": "7", "ignored": "($ignore_from_three or $ignore_from_six)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 112)", "$page_total_number": "7", "ignored": "($ignore_from_three or $ignore_from_six)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 113)", "$page_total_number": "7", "ignored": "($ignore_from_three or $ignore_from_six)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 114)", "$page_total_number": "7", "ignored": "($ignore_from_three or $ignore_from_six)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 115)", "$page_total_number": "7", "ignored": "($ignore_from_three or $ignore_from_six)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 116)", "$page_total_number": "7", "ignored": "($ignore_from_three or $ignore_from_six)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 117)", "$page_total_number": "7", "ignored": "($ignore_from_three or $ignore_from_six)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 119)", "$page_total_number": "7", "ignored": "($ignore_from_three or $ignore_from_six)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 119)", "$page_total_number": "7", "ignored": "($ignore_from_three or $ignore_from_six)" } },
+  { "@recipes_ui.page_current_number": { "$binD": "(#recipe_book_total_items = 120)", "$page_total_number": "7", "ignored": "($ignore_from_three or $ignore_from_six)" } },
+]

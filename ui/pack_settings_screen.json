@@ -1,0 +1,14 @@
+/* Version: 2.0.0 */
+{
+  "screen@content.base_screen": {
+    "$screen_content": "pack_settings_ui.pack_settings_screen_content_panel",
+    "$screen_background": "content.dirt_background",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      }
+    ]
+  }
+}

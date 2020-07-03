@@ -8,8 +8,8 @@
         "mapping_type": "global"
       }
     ],
-    "$screen_content": "sign_mcjava.sign_screen_content_panel",
+    "$screen_content": "sign_ui.sign_screen_content_panel",
     "$screen_background": "content.screen_background",
-    "force_close_on_player_hurt": "$force_close_on_player_hurt"
+    "close_on_player_hurt": "$force_close_on_player_hurt"
   }
 }

@@ -10,157 +10,17 @@
       "Make more stuff"
     ]
   },
-  "pre3-2.0.0": {
-    "type": "pre",
-    "pre": 3,
+  "1.0.0-versions": {
+    "type": "list",
     "version": "2.0.0",
-    "start": "UNKNOWN",
-    "finished": "UNKNOWN",
-    "changelog": [
-      "(Realm) Players section.",
-      "Added \"$fast_recipe_book\".",
-      "Added \"$fast_settings_screen\".",
-      "Added \"$fast_play_screen\".",
-      "Added Perspetive button for touch devices.",
-      "Added default gamemode button.",
-      "Store item details.",
-      "Added Marketplace texture packs compatibility.",
-      "Fixed Store Home category selection.",
-      "Fixed Store filter and sort.",
-      "Fixed three buttons popup panel.",
-      "Fixed apply and remove pack button not responding on touch."
-    ]
-  },
-  "pre2-2.0.0": {
-    "type": "pre",
-    "pre": 2,
-    "version": "2.0.0",
-    "start": "UNKNOWN",
-    "finished": "UNKNOWN",
-    "changelog": [
-      "Added 1.16 Splash Texts",
-      "Unlocked (Realms) Players section. Not fully done.",
-      "Now \"See More\" (Custom Templates) shows on top right of the world templates screen.",
-      "Fixed Recipe Book pages",
-      "Fixed panorama_overlay opacity",
-      "Fixed version \"v\" text shadow still appearing."
-    ]
-  },
-  "pre1-2.0.0": {
-    "type": "pre",
-    "pre": 1,
-    "version": "2.0.0",
-    "start": "UNKNOWN",
-    "finished": "UNKNOWN",
-    "changelog": [
-      "Updated chat",
-      "Removed 'v.' from Game Version",
-      "Double click for worlds and servers",
-      "Screenshot",
-      "Changed backup warning from red to gold color",
-      "Updated cretive inventory to 1.15",
-      "Chat|Chat Settings",
-      "Fixed layers",
-      "Fixed villager trade2 images",
-      "Fixed creative inventory scroll",
-      "Fixed Realms buttons",
-      "Some small screens",
-      "Storage Managment",
-      "Fixed some UI[ERROR]s",
-      "...",
-      "Moved all block and items textures to \"assets/minecraft/textures/\"",
-      "Moved all items and items textures to \"assets/minecraft/textures/\"",
-      "Removed Safe Zone. However, you can enabled for hud in \"_global_variables.json\" (It'll be for gamepad tooltips)",
-      "Note: .tga images and glass pane top are in \"textures/block\" and \"textures/item\""
-    ]
-  },
-  "1.4.0": {
-    "type": "release",
-    "version": "1.4.0",
-    "start": "UNKNOWN",
-    "finished": "UNKNOWN",
-    "changelog": [
-      "Play",
-      "Store",
-      "Resolutions",
-      "Permissions",
-      "Invite",
-      "Realms Invitations"
-    ]
-  },
-  "1.3.0": {
-    "type": "release",
-    "version": "1.3.0",
-    "start": "UNKNOWN",
-    "finished": "UNKNOWN",
-    "changelog": [
-      "World Create and Edit",
-      "Settings",
-      "Custom Popups for every settings section and pause menu",
-      "Command Block",
-      "Structure Block",
-      "Pause Menu",
-      "Seed Picker",
-      "Content Log History",
-      "End Poema",
-      "Credits",
-      "World Templates",
-      "Create World Upsell"
-    ]
-  },
-  "1.2.0": {
-    "type": "release",
-    "version": "1.2.0",
-    "start": "UNKNOWN",
-    "finished": "UNKNOWN",
-    "changelog": [
-      "Add External Server",
-      "Book",
-      "Disconnect",
-      "Toast",
-      "Mob Effects",
-      "Chat",
-      "Beacon",
-      "Cartography Table",
-      "Enchanting Table",
-      "Loom",
-      "Stonecutter",
-      "Villager Trade 2 (and 1 ,-, idk why)"
-    ]
-  },
-  "1.1.0": {
-    "type": "release",
-    "version": "1.1.0",
-    "start": "UNKNOWN",
-    "finished": "UNKNOWN",
-    "changelog": [
-      "Purple Border like or as, who knows, Java Edition",
-      "Death",
-      "In Bed",
-      "Chests",
-      "Redstone (Dispenser, Dropper and Hopper)",
-      "Anvil",
-      "Horse",
-      "Furnace",
-      "Brewing Stand",
-      "Custom Popups for Main Menu and Death",
-      "Loadings"
-    ]
-  },
-  "1.0.0": {
-    "type": "release",
-    "version": "1.0.0",
-    "start": "UNKNOWN",
-    "finished": "UNKNOWN",
-    "changelog": [
-      "Font",
-      "Texts (Only English and Portuguese)",
-      "Splashes",
-      "Click and Enchant Sounds",
-      "Main Menu",
-      "Hud",
-      "Removed Beta Text",
-      "Sign"
+    "start": "1.0.0",
+    "finished": "1.4.0",
+    "list": [
+      "1.4.0",
+      "1.3.0",
+      "1.2.0",
+      "1.1.0",
+      "1.0.0"
     ]
   }
 }

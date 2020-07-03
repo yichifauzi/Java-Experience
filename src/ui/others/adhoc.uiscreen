@@ -1,5 +1,6 @@
+/* By @FMarquesPTO. All rights reserved. */
 {
-  "namespace": "adhoc_mcjava",
+  "namespace": "adhoc_ui",
 
   "adhoc_screen_content_panel": {
     "type": "panel",
@@ -9,19 +10,19 @@
     ]
   },
 
-  "adhoc_content@popup_mcjava.modal_with_buttons": {
-    "$title": "adhoc_mcjava.title",
-    "$description": "adhoc_mcjava.description",
-    "$button_panel": "adhoc_mcjava.buttons_panel"
+  "adhoc_content@popup_ui.modal_with_buttons": {
+    "$title": "adhoc_ui.title",
+    "$description": "adhoc_ui.description",
+    "$button_panel": "adhoc_ui.buttons_panel"
   },
 
-  "title@account_banned_mcjava.title": {
+  "title@account_banned_ui.title": {
     "text": "thirdPartyConsole.adhoc.title",
     "property_bag": {},
     "bindings": []
   },
 
-  "description@account_banned_mcjava.description": {
+  "description@account_banned_ui.description": {
     "text": "thirdPartyConsole.adhoc.desc"
   },
 
@@ -54,13 +55,13 @@
     ]
   },
 
-  "online_button@button_mcjava.button": {
+  "online_button@button_ui.button": {
     "size": [150, 20],
     "$pressed_button_name": "button.online_button",
     "$button_text": "thirdPartyConsole.adhoc.onlineNetwork"
   },
 
-  "local_button@button_mcjava.button": {
+  "local_button@button_ui.button": {
     "size": [150, 20],
     "$pressed_button_name": "button.local_button",
     "$button_text": "thirdPartyConsole.adhoc.localNetwork"
