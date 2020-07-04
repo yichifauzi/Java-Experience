@@ -18,54 +18,54 @@ map.position.agent=Agent XYZ: %s / %s / %s
 map.position=XYZ: %s / %s / %s
 
 ##Recipe Book
-gui.recipebook.search_hint=§oSearch...
-gui.recipebook.toggleRecipes.all=Showing all
-gui.recipebook.toggleRecipes.reset=Reset
-gui.recipebook.toggleRecipes.craftable=Showing craftable
+gui.recipebook.search_hint=§o搜尋...
+gui.recipebook.toggleRecipes.all=顯示全部
+gui.recipebook.toggleRecipes.reset=重置
+gui.recipebook.toggleRecipes.craftable=顯示可合成項目
 
 ##Containers
-merchant.trades=Trades
+merchant.trades=交易
 
 ##Menu
-menu.options=Options...
-menu.quit=Quit Game
-menu.playersMenu=Players
-menu.sendFeedback=Give Feedback
-menu.returnToMenu=Save and Quit to Title
-progressScreen.message.resourceLoading=Reading World Data
+menu.options=設定...
+menu.quit=離開遊戲
+menu.playersMenu=玩家
+menu.sendFeedback=反饋
+menu.returnToMenu=保存並離開到主畫面
+progressScreen.message.resourceLoading=讀取世界數據
 
 ##Command Block
-advMode.command=Console Command
-advMode.mode.sequence=Chain
-advMode.mode.auto=Repeat
-advMode.mode.redstone=Impulse
-advMode.mode.conditional=Conditional
-advMode.mode.unconditional=Unconditional
-advMode.mode.redstoneTriggered=Needs Redstone
-advMode.mode.autoexec.bat=Always Active
-advMode.execOnFirstTick=Execute on First Tick
+advMode.command=控制台命令
+advMode.mode.sequence=連鎖
+advMode.mode.auto=重複
+advMode.mode.redstone=脈衝
+advMode.mode.conditional=有條件的
+advMode.mode.unconditional=無條件的
+advMode.mode.redstoneTriggered=需要紅石
+advMode.mode.autoexec.bat=始終激活
+advMode.execOnFirstTick=第一刻執行
 
 ##Structure Block
-structure_block.position=Relative Position
-structure_block.size=Structure Size
-structure_block.show=Show Structure
-structure_block.hide=Hide Structure
-structure_block.detect_size=Detect structure size and position:
+structure_block.position=相對位置
+structure_block.size=結構尺寸
+structure_block.show=顯示結構
+structure_block.hide=隱藏結構
+structure_block.detect_size=檢測結構尺寸和位置:
 
 ##Settings
 options.fov.format=%s
-options.fov.toggle=Dynamic FOV
+options.fov.toggle=動態視場
 
-options.accessibility=Accessibility Settings...
-options.accessibility.title=Accessibility Settings
-options.perspective=Perspective
-options.perspective.firstPerson=First Person
-options.perspective.thirdBack=Third Per. Back
-options.perspective.thirdFront=Third Per. Front
-options.enableChatTextToSpeech=Narrator For Chat
-options.enableAutoPlatformTextToSpeech=Narrator For Text
-options.enableUITextToSpeech=Narrator For System
-options.enableOpenChatMessage=Can Chat Message
+options.accessibility=輔助功能設置...
+options.accessibility.title=輔助功能設置
+options.perspective=視角
+options.perspective.firstPerson=第一人稱
+options.perspective.thirdBack=第三人稱 背面
+options.perspective.thirdFront=第三人稱 正面
+options.enableChatTextToSpeech=聊天文字轉語音
+options.enableAutoPlatformTextToSpeech=文字轉語言
+options.enableUITextToSpeech=系統轉語言
+options.enableOpenChatMessage=可以聊天留言
 
 options.mouse=Mouse...
 options.touch=Touch...
